@@ -1,0 +1,26 @@
+.documentation {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-top: $header-top-height + $header-main-height;
+  }
+
+  main {
+    flex: 9
+  }
+
+  aside {
+    flex: 3;
+    position: relative;
+    padding-top: $header-top-height + $header-main-height;
+ 
+
+    nav {
+      position: fixed;
+
+      a {
+        display: block;
+      }
+    }
+  }
+}

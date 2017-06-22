@@ -1,0 +1,211 @@
+/****
+OLD STYLES
+
+/* BREAKPOINTS */
+$breakpoint-small:  350px;
+$breakpoint-medium: 770px;
+$breakpoint-large:  950px;
+
+/* EXAMPLE
+
+.element {
+  color: red;
+  @media (max-width: $breakpoint-large) {
+    color: blue;
+  }
+}
+
+*/
+
+/* /////// */
+/* COLORS */
+
+$color-background: rgba(255,255,255,1);
+
+/* /////// */
+/* PROTOTYPE COLORS */
+
+$color-base:                  rgb(57,63,68);
+// Text, Buttons, Icons
+
+$color-background:            rgb(255,255,255);
+// Primary Background color
+
+$color-background-highlight:  rgb(229,240,241);
+// Used to brighten backgrounds
+
+$color-background-shadow:     rgb(246,246,246);
+// Used to darken backgrounds
+
+/* ********** */
+/* TYPE */
+// body font set to 62.5%
+
+$font-size-xxsmall:           .875rem; //14px
+$font-size-xsmall:            .9375rem; //15px
+$font-size-small:             1rem; //16px
+
+$font-size-base:              1.25rem; //20px
+$font-size-medium:            1.5rem; //24px
+
+$font-size-large:             1.6875rem; //27px
+$font-size-xlarge:            1.8125rem; //29px
+$font-size-xxlarge:           2.0rem; //32px
+$font-size-xxxlarge:          2.5rem; //40px
+$font-size-ginormous:         3.75rem;
+
+$font-lineheight-xxsmall:     2.1429rem; //30px
+$font-lineheight-base:        2.1429rem; //30px
+$font-lineheight-medium:      3.504rem;//35.04px
+$font-lineheight-xlarge:      3.625rem; //36.25px
+$font-lineheight-xxlarge:     3.125rem; //50px
+$font-lineheight-xxxlarge:    3.125rem; //50px
+$font-lineheight-ginormous:   4.25rem; //84.96px
+
+/* LAYOUT */
+$header-top-height:           40px;  /* height of the top section of the header */
+$header-main-height:          100px; /* default height of the main section of the header */
+
+
+
+
+/*****
+
+Table of Contents
+
+1. Breakpoints
+2. Colors
+3. Font Sizes
+4. Line-heights
+5. Layout
+
+*****/
+/*****
+1. BREAKPOINTS
+
+ Example use:
+
+.element {
+  color: red;
+  @media (max-width: $breakpoint-large) {
+    color: blue;
+  }
+}
+
+*****/
+
+$breakpoint-small:  350px;
+$breakpoint-medium: 770px;
+$breakpoint-large:  950px;
+
+/*****
+
+2. COLORS
+
+*****/
+
+//highlight
+$color-highlight: rgba(255,196,0,1);//#ffc400
+
+//primary
+$color-primary: rgba(52,168,196,1);//#34a8c4
+
+//secondary
+$color-secondary-light: rgba(52,168,196,.15);//#34a8c4
+
+//dark
+$color-secondary-dark: rgba(14,134,150,1);//#0e8696
+
+//text
+$color-text:          rgba(55,63,63,1);//373f3f
+
+//navigation-highlight
+$color-navigation-highlight: rgba(164,241,248,1);//#a4f1f8
+
+//navigation
+$color-navigation:    rgba(104,218,242,1); //68daf2
+
+//gray
+$color-gray:          rgba(135,134,136,1);//#878688
+
+//light-gray
+$color-gray-light:    rgba(255,255,255,1);//#ededed
+
+$color-gray-blue:     rgba(231,241,242,1);
+
+//background
+$color-background:    rgba(255,255,255,1);
+
+/*****
+
+3. Font Sizes
+
+*****/
+
+//14
+$font-size-14:     .875rem;
+
+//16
+$font-size-16:     1rem;
+
+//18
+$font-size-18:     1.125rem;
+
+//22
+$font-size-22:     1.375rem;
+
+//24
+$font-size-24:     1.5rem;
+
+//26
+$font-size-26:     1.625rem;
+
+//28
+$font-size-28:     1.75rem;
+
+//30
+$font-size-30:     1.875rem;
+
+//32
+$font-size-32:     2rem;
+
+//40
+$font-size-40:     2.5rem;
+
+//52
+$font-size-52:     3.250rem;
+
+//54
+$font-size-54:     3.375rem; //40px
+
+//80
+$font-size-80:     5rem;
+
+/*****
+
+4. Line-heights
+
+*****/
+
+//18px
+$font-lineheight-code:        1.125rem;
+
+//21px
+$font-lineheight-list:        1.25rem;
+
+//24px
+$font-lineheight-base:        1.5rem;
+
+//32px
+$font-lineheight-blockquote:  2rem;
+
+
+
+/*****
+
+5. LAYOUT
+
+*****/
+
+$header-top-height:           29px;  /* height of the top section of the header */
+$header-main-height:          100px - $header-top-height; /* default height of the main section of the header */

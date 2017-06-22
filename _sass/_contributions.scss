@@ -1,0 +1,64 @@
+.contributions {
+  font-weight: normal;
+
+  h2 {
+    font-size: $font-size-xxlarge;
+    padding: 4rem 0;
+    background: $color-background-shadow;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+
+    span {
+      display: block;
+    }
+  }
+
+  h2:not(:first-child), h3, h4{
+    margin-top: 5rem;
+  }
+
+  h3 {
+    font-size: $font-size-xxlarge;
+    padding: 4rem 0 4rem 0;
+    background: $color-background-highlight;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+
+  h4, h5, p, ul, ol {
+    width: 80%;
+  }
+
+  h4 {
+    margin-bottom: 3rem;
+  }
+
+  h5 {
+    font-size: $font-size-40;
+    font-weight: 200;
+    padding: 3rem 0 1rem 0;
+    color: $color-primary;
+  }
+
+  p {
+    font-size: $font-size-16;
+    line-height: $font-lineheight-base;
+  }
+
+  .background-highlight {
+    background-color: $color-background-highlight
+  }
+
+  blockquote {
+    padding: 2.5rem;
+
+    p {
+      font-style: normal;
+      font-size: $font-size-28;
+      font-weight: 200;
+    }
+  }
+
+
+}

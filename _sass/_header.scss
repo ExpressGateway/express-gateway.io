@@ -1,0 +1,65 @@
+.site-header {
+    position: fixed;
+    z-index: 99;
+    top:0;
+    width:100%;
+    background: $color-background;
+    -webkit-box-shadow: 0px 7px 10px 0px rgba(71,118,119,.15);
+    -moz-box-shadow: 0px 7px 10px 0px rgba(71,118,119,.15);
+    box-shadow: 0px 7px 10px 0px rgba(71,118,119,.15);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    margin-bottom: 10.3125rem;
+
+    .wrapper-banner {
+      display: flex;
+      align-self: stretch;
+      justify-content: center;
+      background: $color-gray-blue;
+      font-size: $font-size-14;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $color-primary;
+      height: $header-top-height;
+
+      p {
+        margin-right: 2rem;
+        font-size: $font-size-14;
+      }
+
+      .wrapper {
+        justify-content: flex-end;
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      flex: 1;
+      svg {
+        width: 300px;
+        max-height: 50px;
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      width: 40%;
+      margin-left: auto;
+      justify-content: space-between;
+      height: $header-main-height;
+      font-weight: 200;
+
+      a {
+        padding: 1px;
+        color: $color-primary;
+
+      }
+    }
+}

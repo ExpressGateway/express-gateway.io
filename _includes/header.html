@@ -1,0 +1,20 @@
+<header class="site-header">
+  <section class="wrapper">
+    <a href="{{ site.baseurl }}" class="logo">
+      {% include gwe-logo.svg %}
+    </a>
+    <nav class="type-xxsmall">
+      <a href="{{ site.baseurl }}about" {% if page.url == "/about/" %}class="active"{% endif %}>About</a>
+      <a href="{{ site.baseurl }}getting-started" {% if page.url == "/getting-started/" %}class="active"{% endif %}>Getting Started</a>
+      <a href="{{ site.baseurl }}api" {% if page.url == "/api/" %}class="active"{% endif %}>Documentation</a>
+      <a href="{{ site.baseurl }}resources" {% if page.url == "/resources/" %}class="active"{% endif %}>Resources</a>
+      <a href="{{ site.baseurl }}blog" {% if page.url == "/blog/" %}class="active"{% endif %}>Blog</a>
+    </nav>
+  </section>
+  <section class="wrapper-banner">
+    <div class="wrapper">
+      <p class="github-label">Github Repo</p>
+      <a class="github-button" href="https://github.com/ExpressGateway/express-gateway" aria-label="Star ExpressGateway/express-gateway on GitHub">Star</a>
+    </div>
+  </section>
+</header>
