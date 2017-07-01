@@ -8,15 +8,21 @@
   main {
     flex: 9
   }
-
-  aside {
-    flex: 3;
+  .tocwrapperparent {
     position: relative;
+    flex: 3;
+  }
+
+  aside.tocwrapper {
+    position: fixed;
     padding-top: $header-top-height + $header-main-height;
 
-
+    &.tocwrapperstick {
+      bottom: 3rem;
+      position: absolute;
+    }
     nav {
-      position: fixed;
+
 
       a {
         display: block;
@@ -197,18 +203,20 @@
   }
 
   aside {
-    margin: 1.5rem 0;
+
     &.notice {
       background: $color-secondary-light;
       border: 2px solid $color-secondary-dark;
       padding: 1.5rem 1rem;
       color: $color-secondary-dark;
+      margin: 1.5rem 0;
     }
     &.warning {
       color: darken($color-highlight, 20%);
       background: lighten($color-highlight, 30%);
       border: 2px solid $color-highlight;
       padding: 1.5rem 1rem;
+      margin: 1.5rem 0;
     }
     &.error {
       background: rgb(255, 186, 186);
@@ -216,11 +224,13 @@
       padding: 1.5rem 1rem;
       font-weight: 900;
       color: rgb(216, 0, 12);
+      margin: 1.5rem 0;
     }
     &.success {
       background: rgb(223, 242, 191);
       border: 2px solid rgb(79, 138, 16);
       padding: 1.5rem 1rem;
+      margin: 1.5rem 0;
     }
   }
 

@@ -29,7 +29,7 @@ updateActiveNavItem(navItems);
 
 window.addEventListener('scroll', function(){
     updateActiveNavItem(navItems);
-
+    checkForFooter();
 });
 
 function getNavItems(items) {
@@ -89,6 +89,26 @@ const handleClick = (e) => {
 
 }
 
+
+
 tocmenu.forEach(node => {
   node.addEventListener('click', handleClick)
 });
+
+var toc = document.querySelector('.tocwrapper');
+var footer = document.querySelector('.footer');
+var wave = document.querySelector('.bottom-wave');
+
+function checkForFooter() {
+  function getRectTop(el){
+    var rect = el.getBoundingClientRect();
+    return rect.top;
+  }
+
+  console.log(getRectTop(wave))
+
+  if((getRectTop(toc) + document.body.scrollTop) + toc.offsetHeight >= (getRectTop(wave) + document.body.scrollTop) - 10)
+    toc.classList.add('tocwrapperstick');
+  if(document.body.scrollTop + window.innerHeight < (getRectTop(wave) + document.body.scrollTop))
+    toc.classList.remove('tocwrapperstick');
+}
