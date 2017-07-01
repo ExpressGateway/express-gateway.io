@@ -11,13 +11,13 @@
             <h2 class="toc-header">{{ page.title }}</h2>
             <div class="toclinkwrapper">
               {% for item in page.links %}
-                <a class="toclink" href="#{{ item.link }}">{{ item.display }}</a>
+                <a class="toclink original" href="#{{ item.link }}">{{ item.display }}</a>
               {% endfor %}
             </div>
           </nav>
         </aside>
         {% endif %}
-        <main class="markdown">
+        <main class="markdown" id="markdown">
             {{ content }}
         </main>
       </div>

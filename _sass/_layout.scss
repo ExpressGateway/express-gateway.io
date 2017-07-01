@@ -266,6 +266,7 @@ h2.description {
     line-height: $font-lineheight-list + 1;
     border-bottom: 1px solid $color-gray-light;
     position: relative;
+    text-transform: capitalize;
     &:last-child {
       border-bottom: none;
     }

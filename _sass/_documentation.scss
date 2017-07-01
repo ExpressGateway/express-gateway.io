@@ -36,6 +36,7 @@
     font-weight: 200;
     line-height: 3rem;
     color: $color-primary;
+
   }
 
   h3 {
@@ -43,6 +44,13 @@
     font-weight: 200;
     line-height: 2.75rem;
     color: $color-text;
+    &:before {
+      content: "";
+      height: $header-top-height + $header-main-height + 100;
+      display: block;
+      margin-top: -($header-top-height + $header-main-height + 100);
+
+    }
   }
 
   h4 {
