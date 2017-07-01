@@ -201,7 +201,7 @@ h2.description {
   padding: 2.5rem;
   text-align: center;
   background-color: $color-secondary-light;
-  color: $color-base;
+  color: $color-text;
   font-weight: 200;
   font-size: $font-size-18;
   .wrapper {
@@ -275,15 +275,15 @@ h2.description {
     }
     &:before {
       content: "";
-      color: $color-base;
+      color: $color-text;
       position: absolute;
       left: -1.5rem;
     }
     &.nav-active {
-      color: $color-base;
+      color: $color-text;
       &:before {
         content: "\27F6";
-        color: $color-base;
+        color: $color-text;
         position: absolute;
         left: -1.5rem;
       }

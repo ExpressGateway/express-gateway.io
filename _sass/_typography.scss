@@ -1,5 +1,5 @@
 body {
-  color: $color-base;
+  color: $color-text;
   font-family: “Helvetica Neue”, Helvetica, Open Sans, Lato, “Univers”, Arial, sans-serif;
   font-weight: 200;
 }
@@ -43,7 +43,7 @@ span {
 
 a {
   text-decoration: none;
-  color: $color-base;
+  color: $color-text;
 }
 
 blockquote {

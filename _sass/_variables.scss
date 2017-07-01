@@ -1,6 +1,3 @@
-/****
-OLD STYLES
-
 /* BREAKPOINTS */
 $breakpoint-small:  350px;
 $breakpoint-medium: 770px;
@@ -25,7 +22,7 @@ $color-background: rgba(255,255,255,1);
 /* /////// */
 /* PROTOTYPE COLORS */
 
-$color-base:                  rgb(57,63,68);
+$color-text:                  rgb(57,63,68);
 // Text, Buttons, Icons
 
 $color-background:            rgb(255,255,255);
@@ -65,9 +62,6 @@ $font-lineheight-ginormous:   4.25rem; //84.96px
 /* LAYOUT */
 $header-top-height:           40px;  /* height of the top section of the header */
 $header-main-height:          100px; /* default height of the main section of the header */
-
-
-
 
 /*****
 
@@ -160,6 +154,9 @@ $font-size-24:     1.5rem;
 //26
 $font-size-26:     1.625rem;
 
+//27
+$font-size-27:     1.6875rem;
+
 //28
 $font-size-28:     1.75rem;
 
@@ -179,6 +176,9 @@ $font-size-40:     2.5rem;
 
 //44
 $font-size-44:     2.75rem;
+
+//48
+$font-size-48:     3rem;
 
 //52
 $font-size-52:     3.250rem;
