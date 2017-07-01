@@ -3,30 +3,52 @@ layout: documentation
 title: Documentation
 permalink: /api/
 links:
-  - display: Configuration
-    link: configuration
-  - display: CLI Reference
-    link: cli-reference
-  - display: Admin API Reference
-    link: admin-api-reference
-  - display: Proxy Reference
-    link: proxy-reference
+  - display: Installing
+    link: installing
+  - display: Getting Started
+    link: getting-started
+  - display: Core Concepts Explained
+    link: core-concepts-explained
+  - display: Configuring
+    link: configuring
 ---
 
-## Express Gateway API Reference
+## Documentation
+
+Welcome to Express Gateway! The documentation for Express Gateway is written using Jekyll and Markdown. If you'd like to contribute, please see our [Github website repo](https://github.com/expressgateway/express-gateway.io)
+
+### Installing and Getting Started
+
+Express Gateway runs on Node.js. To get Node.js please visit the [Node.js Downloads Page](https://nodejs.org/en/download/).
+
+Once you have Node.js installed, check out the dedicated [Getting Started Guide]
+
+
+### Core Concepts 
+
+To better understand what Express Gateway is and how it works, check out the [About] page that provides the big picture. 
 
 ### Configuration
 
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words
+One of the key features of Express Gateway is that configuration is completely separate from static code used to run the gateway.  
 
-### CLI Reference
+All configuration is driven centrally and can be found in the `/config` directory of the main Express Gateway folder.
 
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
+Configuration is divided into different levels:
 
-### Admin API Reference
+- application configuration: `gateway.config.yml`
+- system level configuration: `system.config.yml`
+- metadata configuration: `model-configs`
 
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+The levels allow you to configure and manage Express Gateway without having to concern yourself with details that may not be relevant to you as a user, operator, administrator or developer.
 
-### Proxy Reference
+#### gateway.config.yml
+All of the application functionality is embodied in the [gateway.config.yml].  This config file describes the entire gateway's microservices and API operations at a glance.
 
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+gateway.config.yml is made up of the following:
+
+- http/https
+- apiEndpoints
+- serviceEndpoints
+- policies enabled
+- pipelines
