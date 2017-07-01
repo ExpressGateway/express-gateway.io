@@ -1,83 +1,220 @@
 ---
-layout: documentation
+layout: page
 title: Getting Started
 class: getting-started
 permalink: /getting-started/
-links:
-  - display: Installation
-    link: installation
-  - display: Five-Minute Quickstart
-    link: five-minute-quickstart
 ---
-
+<section class="page-section-normal">
+<div class="wrapper-flex">
+<div class="wrapper">
+<div class="flex-column shape-style" markdown="1">
 ## Installation
 
-1. Clone Express Gateway Repo &#10230; <span class="codeHighlight">git clone git@github.com:LunchBadger/express-gateway.git</span>
-2. Install the dependencies
-  Make sure you have git
-  Express Gateway runs with Node.js.  If you haven’t already installed Node.js, you can get it from their downloads page
-3. Install Express Gateway
+Installing Express Gateway is a simple 4-step process.
+
+1. <span class="li-main">Clone Express Gateway Repo</span><span class="codeHighlight">git clone git@github.com:LunchBadger/express-gateway.git</span>
+2. <span class="li-main">Install the dependencies</span>
+  - Make sure you have git
+  - Express Gateway runs with Node.js.  If you haven’t already installed Node.js, you can get it from their downloads page
+3. <span class="li-main">Install Express Gateway</span>
   <span class="codeHighlight">git clone git@github.com:LunchBadger/express-gateway.git</span>
   <span class="codeHighlight">cd express-gateway</span>
   <span class="codeHighlight">npm install</span>
-4. Run Express Gateway
+4. <span class="li-main">Run Express Gateway</span>
   <span class="codeHighlight">npm start</span>
 
   (The EG should have some kind of default test or something that runs)
 
-## Five-Minute Quickstart
+</div>
+</div>
+</div>
+</section>
 
-<span>Before you start: Make sure you've [installed the Express Gateway](#install) — It should only take a minute!</span>
+<div class="svg-fix">{% include wave-1.svg %}</div>
+<section class="page-section-blue">
+<div class="wrapper-flex">
+<div class="wrapper">
+<div class="flex-column quickstart" markdown="1">
+
+## 5-minute Getting Started Guide
+
+Before you start: Make sure you've [installed the Express Gateway](#installation) — It should only take a minute!
 
 In this quickstart guide, you’ll get the Express Gateway up and running and then…
 
 1. Specify a microservice and expose as an API
-2. Define an API consumer
+2. Define a consumer of your API
 3. Secure the API with Key Authorization
 
-### Specify a microservice
+</div>
+</div>
+</div>
+<div class="svg-fix">{% include wave-2.svg %}</div>
+</section>
 
-#### Step 1
+<section class="page-section-normal">
+<div class="wrapper-flex">
+<div class="wrapper">
+<div class="flex-column shape-style shape-style-large" >
 
-We’re going to specify an existing service[a] to proxy and manage as if it were our own originating from within the firewall. The service allows users to search for blah and returns back a JSON string as output. It’s freely public and we’re going to showcase the capabilities of the Express Gateway
+<ol class="">
+<li>
+<div class="shape-style-large-container" markdown="1">
+##### Specify a microservice and expose as an API
+###### Step 1
+We’re going to specify an existing service to proxy and manage as if it were our own originating from within the firewall. The service allows users to search for blah and returns back a JSON string as output. It’s freely public and we’re going to showcase the capabilities of the Express Gateway
+<ol>
+<li>Curl - https://service-url</li>
+<li>{% highlight javascript linenos %}
 
-1. Curl - https://service-url
-2. (JSON output in a codebox)/
+var rawr = ["r", "a", "w", "r"];
+function thishasareallylongnamesoleck(){
+  const that
+}
+function this(){
+  const that
+}
+function this(){
+  const that
+}
+{% endhighlight %}
 
-#### Step 2
+</li>
+</ol>
 
-The microservice will be specified as a service endpoint in the default pipeline in Express Gateway.  A pipeline is a set of policies.  One of the policies that Express Gateway supports is a proxy policy.  Using the proxy policy within the default pipeline, the gateway will now sit in front of the API and route external requests to the API
+###### Step 2
+The service will be specified as a private endpoint in the default pipeline in Express Gateway.  A pipeline is a set of policies.  One of the policies that Express Gateway supports is a proxy policy.  Using the proxy policy within the default pipeline, the gateway will now sit in front of the API and route external requests to the API
+<ol>
+<li>go to /config</li>
+<li>{% highlight javascript linenos %}
 
-1. go to /config
-2. (modify JSON codeblock)
+var rawr = ["r", "a", "w", "r"];
+function thishasareallylongnamesoleck(){
+  const that
+}
+function this(){
+  const that
+}
+function this(){
+  const that
+}
+{% endhighlight %}
 
-#### Step 3
+</li>
+</ol>
 
-We’re going to expose the microservice as an API endpoint. When the microservice is made public through a API endpoint, the API can be accessed externally.
+###### Step 3
+We’re going to expose the API as a public endpoint. When an API is made public through a public endpoint, the API can be accessed externally.
+<ol>
+<li>Goto /config</li>
+<li>{% highlight javascript linenos %}
 
-1. Goto /config
-2. (modify JSON codeblock)
+var rawr = ["r", "a", "w", "r"];
+function thishasareallylongnamesoleck(){
+  const that
+}
+function this(){
+  const that
+}
+function this(){
+  const that
+}
+{% endhighlight %}
 
-#### Step 4
+</li>
+</ol>
 
-Now that we have a API endpoint surfaced, we should be able to access it.
-
+###### Step 4
+Now that we have a public endpoint surfaced, we should be able to access the API.
 1. Type in public endpoint URL
 2. Access JSON
+</div>
+</li>
+<li>
+<div class="shape-style-large-container" markdown="1">
 
+##### Define API Consumer
+###### Step 1
 
-### DEFINE API CONSUMER
-
-#### Step 1
 
 To manage our API, we’re going to define authorized users known as “Consumers” that are allowed to utilize the API.
 
-1. Curl - https://service-url
-2. (JSON output in a codebox)/
+<ol>
+<li>Goto /config</li>
+<li>{% highlight javascript linenos %}
 
-#### Step 2
+var rawr = ["r", "a", "w", "r"];
+function thishasareallylongnamesoleck(){
+  const that
+}
+function this(){
+  const that
+}
+function this(){
+  const that
+}
+{% endhighlight %}
+
+</li>
+</ol>
+
+###### Step 2
 
 The service will be specified as a private endpoint in the default pipeline in Express Gateway.  A pipeline is a set of policies.  One of the policies that Express Gateway supports is a proxy policy.  Using the proxy policy within the default pipeline, the gateway will now sit in front of the API and route external requests to the API
 
-1. go to /config
-2. (modify JSON codeblock)
+<ol>
+<li>Curl - https://service-url</li>
+<li>{% highlight javascript linenos %}
+
+var rawr = ["r", "a", "w", "r"];
+function thishasareallylongnamesoleck(){
+  const that
+}
+function this(){
+  const that
+}
+function this(){
+  const that
+}
+{% endhighlight %}
+
+</li>
+</ol>
+</div>
+</li>
+<li>
+<div class="shape-style-large-container" markdown="1">
+
+##### Secure the API with Key Authorization
+
+Right now the API is fully exposed and accessible via its public endpoint. We’re now going to secure it with key authorization. To do so we’ll add the key authorization policy to the default pipeline.
+
+<ol>
+<li>Goto /config</li>
+<li>{% highlight javascript linenos %}
+
+var rawr = ["r", "a", "w", "r"];
+function thishasareallylongnamesoleck(){
+  const that
+}
+function this(){
+  const that
+}
+function this(){
+  const that
+}
+{% endhighlight %}
+
+</li>
+<li>Assign the key credential to Bob (eg create key bob)</li>
+<li>Curl API endpoint without credentials - FAIL</li>
+<li>Curl API endpoint with Bob and key credentials - SUCCESS!</li>
+</ol>
+</div>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</section>

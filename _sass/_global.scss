@@ -7,3 +7,15 @@
 .background-blue {
   background-color: $color-background-highlight;
 }
+
+.blackandwhite {
+  -webkit-filter: grayscale(1);
+ -webkit-filter: grayscale(100%);
+ filter: grayscale(100%);
+ filter: url(#greyscale);
+ filter: gray;
+}
+
+.bwconvert {
+  height: 0;
+}

@@ -4,11 +4,18 @@
       {% include gwe-logo.svg %}
     </a>
     <nav class="type-xxsmall">
-      <a href="{{ site.baseurl }}about" {% if page.url == "/about/" %}class="active"{% endif %}>About</a>
-      <a href="{{ site.baseurl }}getting-started" {% if page.url == "/getting-started/" %}class="active"{% endif %}>Getting Started</a>
-      <a href="{{ site.baseurl }}api" {% if page.url == "/api/" %}class="active"{% endif %}>Documentation</a>
-      <a href="{{ site.baseurl }}resources" {% if page.url == "/resources/" %}class="active"{% endif %}>Resources</a>
-      <a href="{{ site.baseurl }}blog" {% if page.url == "/blog/" %}class="active"{% endif %}>Blog</a>
+      <span {% if page.url == "/about/" %}class="active"{% endif %}><a href="{{ site.baseurl }}about">About</a></span>
+      <span {% if page.url == "/getting-started/" %}class="active"{% endif %}><a href="{{ site.baseurl }}getting-started">Getting Started</a></span>
+      <span {% if page.url == "/api/" ||  page.url == "/faq/" %}class="active"{% endif %}>
+        <a href="#" class="nav-sub-menu-trigger">Documentation</a>
+        <ul class="nav-sub-menu">
+          <li><a href="{{ site.baseurl }}api">API Reference</a></li>
+          <li><a href="{{ site.baseurl }}faq">FAQ</a></li>
+
+        </ul>
+      </span>
+      <span {% if page.url == "/resources/" %}class="active"{% endif %}><a href="{{ site.baseurl }}resources">Resources</a></span>
+      <span {% if page.url == "/blog/" %}class="active"{% endif %}><a href="{{ site.baseurl }}blog">Blog</a></span>
     </nav>
   </section>
   <section class="wrapper-banner">

@@ -50,16 +50,89 @@
     nav {
       display: flex;
       align-items: center;
-      width: 40%;
+      width: 45%;
       margin-left: auto;
       justify-content: space-between;
       height: $header-main-height;
       font-weight: 200;
 
-      a {
-        padding: 1px;
-        color: $color-primary;
+      span {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        font-size: $font-size-16;
+
+        a {
+          padding: 1px;
+          color: $color-primary;
+          display: block;
+        }
+
+        &.active {
+          a {
+            color: $color-navigation-highlight;
+          }
+          &:after {
+            bottom: 0;
+            right: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            z-index: 10;
+            pointer-events: none;
+            border-width: 0 15px 7px 15px;
+            border-color: transparent transparent $color-navigation-highlight transparent;
+            margin-right: -15px;
+          }
+        }
+
+      }
+
+    }
+    .nav-sub-menu-trigger {
+    	text-decoration:none;
+    	line-height:32px;
+    }
+
+    .nav-sub-menu {
+      display:none;
+    	position:absolute;
+      z-index: 15;
+    	top:75%;
+    	left:0;
+    	background:#fff;
+      border: 1px solid $color-gray-light;
+
+      li{
+        display: block;
+        a {
+          display: block;
+          padding:.70rem;
+        	width:200px;
+          border-bottom: 1px solid $color-gray-light;
+
+          &:hover {
+            background: $color-secondary-light;
+          }
+        }
+      }
+
+      &:hover {
+        display: block;
 
       }
     }
+
+    .nav-sub-menu-trigger:hover {
+      padding: 10px inherit;
+    }
+
+    .nav-sub-menu-trigger:hover + .nav-sub-menu {
+      display: block;
+
+    }
+
 }

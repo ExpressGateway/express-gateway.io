@@ -1,20 +1,21 @@
 {% include head.html %}
 
 
-<body>
+<body class="sticky">
   {% include header.html %}
-  <div class="container">
+  <div class="container sticky-flex">
 
     <main>
-      <section class="flex-row wrapper">
-        <div class="introduction flex-7">
-          <h2 class="large-header">A microservices API gateway built on EXPRESS.JS</h2>
-          {% include gwe-companion-mark.svg %}
-          <p class="subtitle">Fast, Flexible, and Community Driven</p>
-          <a href="{{ site.baseurl }}getting-started#five-minute-quickstart" class="button-large">Quickstart</a>
-        </div>
-        <div class="flex-5 flex-center type-center">
-          <p>img placeholder</p>
+      <section class="flex-column wrapper">
+        <h2 class="large-header description">A microservices API gateway built on EXPRESS.JS</h2>
+        <div class="introduction flex-row">
+          <div class="flex-center space-around">
+            <div class="home-cta">
+              <p class="subtitle">Fast, Flexible, and Community Driven</p>
+              <a href="{{ site.baseurl }}getting-started#five-minute-quickstart" class="button-large">Quickstart</a>
+            </div>
+            <img class="marchitecture" src="assets/img/marchitecture.png" />
+          </div>
         </div>
       </section>
       <section class="announcement flex-row flex-center type-center">
@@ -24,7 +25,7 @@
         <ul class="cards">
           <li>
               {% include simple.svg %}
-              <h3 class="font-size-medium">Simple</h3>
+              <h3>Simple</h3>
               <ul class="type-base">
                 <li>A single YAML to control it all (pipelines, policies, conditions, actions...)</li>
                 <li>Auto-detect and hot-reload configuration changes</li>
@@ -62,26 +63,38 @@
         </ul>
 
       <section class="get-started flex-column flex-center">
-        <h2 class="type-size-32">Get Started in 1 minute</h2>
+        <h2 class="type-size-32">Get Started in 5 minutes</h2>
         <ol class="wrapper flex-column type-medium">
           <li>
-            <h5>Specify a Microservice</h5>
+            Specify a Microservice
           </li>
           <li>
-            <h5>Expose as an API</h5>
+            Expose as an API
           </li>
           <li>
-            <h5>Secure API with key</h5>
+            Secure API with key
           </li>
         </ol>
+        <!-- {% include home-wave.svg %} -->
       </section>
       <section class="quote">
+        {% include blackandwhite.svg %}
         <div class="wrapper">
-          <div>
-            <img class="avatar" />
-            <p class="type-xsmall">Doug Wilson, maintainer of Express.js</p>
-          </div>
-          <blockquote>"An API gateway built around ExpressJS is long overdue and the perfect use case for the minimalist strengths of what Express is all about!"</blockquote>
+          <section class="testimonial flex-column">
+              <span class="avatar"><img class="blackandwhite" src="assets/img/Doug.jpg" /></span>
+              <blockquote>"An API gateway built around ExpressJS is long overdue and the perfect use case for the minimalist strengths of what Express is all about!"</blockquote>
+              <p>Doug Wilson, maintainer of Express.js</p>
+          </section>
+          <section class="testimonial flex-column">
+              <span class="avatar"><img class="blackandwhite" src="assets/img/Doug.jpg" /></span>
+              <blockquote>"An API gateway built around ExpressJS is long overdue and the perfect use case for the minimalist strengths of what Express is all about!"</blockquote>
+              <p>Doug Wilson, maintainer of Express.js</p>
+          </section>
+          <section class="testimonial flex-column">
+              <span class="avatar"><img class="blackandwhite" src="assets/img/Doug.jpg" /></span>
+              <blockquote>"An API gateway built around ExpressJS is long overdue and the perfect use case for the minimalist strengths of what Express is all about!"</blockquote>
+              <p>Doug Wilson, maintainer of Express.js</p>
+          </section>
         </div>
       </section>
     </main>

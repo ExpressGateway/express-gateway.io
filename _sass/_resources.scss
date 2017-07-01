@@ -1,0 +1,148 @@
+.resources {
+  .icon-list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: 10%;
+    border-bottom: 2px solid $color-secondary-light;
+    > li {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+
+      svg {
+        height: 72px;
+      }
+      &:after {
+        content: "";
+        height: 100px;
+        width: 2px;
+        background: $color-secondary-light;
+        position: absolute;
+        right: 0;
+        top: 5%;
+      }
+      &:last-child:after {
+        content: "";
+        height: 0;
+        width: 0;
+        background: transparent;
+      }
+
+      p {
+        padding: 0 0 2rem 0;
+      }
+    }
+
+    &.no-border {
+      border-bottom: none;
+    }
+  }
+
+  h3 {
+    background: transparent;
+    margin: 0;
+    padding: 2rem 0;
+    font-size: $font-size-24;
+  }
+
+  h4 {
+    margin-top: 2rem;
+  }
+
+  h5 {
+    padding: 0;
+  }
+
+  #security, #quality-of-service {
+    margin-left: 10%;
+  }
+
+  .res-contact {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .res-cta {
+
+    font-weight: 500;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $font-size-18;
+    padding: 2rem 0;
+    p {
+      width: 100%;
+      margin-top: 1rem;
+    }
+    a {
+      color: $color-gray;
+      text-decoration: none;
+    }
+  }
+
+  .community {
+    width: 100%;
+
+    h6 {
+      padding: 0 0 2rem;
+    }
+  }
+
+  .flex-row {
+    display: flex;
+    ul {
+      padding-top: 50px;
+    }
+    li {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      background: $color-background;
+      width: 250px;
+    	height: 125px;
+    	-moz-border-radius: 125px / 62.5px;
+    	-webkit-border-radius: 125px / 62.5px;
+    	border-radius: 125px / 62.5px;
+      text-align: center;
+      margin-top: -50px;
+      img {
+        max-height: 100px;
+        max-width: 200px;
+      }
+      svg {
+        width: 150px;
+      }
+      &:nth-child(even){
+        margin-left: auto;
+      }
+    }
+    .logo-cloud {
+      flex: 4;
+    }
+    .bug-block {
+      flex: 2;
+      padding: 0 0 2rem 2rem;
+      align-items: flex-start;
+
+      .bug-block-content {
+        text-align: center;
+        svg {
+          width: 40%;
+          margin: 0 auto;
+        }
+        background: $color-background;
+        border-radius: 10px;
+        padding: 2rem 1.25rem 2rem;
+
+        p {
+          color: $color-primary;
+          font-size: $font-size-18;
+          padding-top: 1.25rem;
+        }
+      }
+    }
+  }
+
+
+}

@@ -2,16 +2,19 @@
   font-weight: normal;
 
   h2 {
-    font-size: $font-size-xxlarge;
-    padding: 4rem 0;
-    background: $color-background-shadow;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 3rem;
+    font-size: $font-size-52;
+    font-weight: 200;
+    padding: 2rem 0 1rem;
+    text-align: left;
 
     span {
       display: block;
     }
+  }
+
+  a {
+    color: $color-primary;
+    text-decoration: underline;
   }
 
   h2:not(:first-child), h3, h4{
@@ -44,6 +47,7 @@
   p {
     font-size: $font-size-16;
     line-height: $font-lineheight-base;
+    font-weight: 200;
   }
 
   .background-highlight {
@@ -60,5 +64,165 @@
     }
   }
 
+  .shape-style {
+
+    > ol {
+      margin-top: 1rem;
+      counter-reset: installation;
+      padding-left: 55px;
+
+
+
+      & > li {
+        position: relative;
+        font-size: $font-size-18;
+        font-weight: 200;
+        color: $color-base;
+        margin: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+
+        &:before {
+
+          padding: 7px 13px 13px 13px;
+          line-height: 20px;
+          text-align: center;
+          margin: 0;
+          content: counter(installation);
+          counter-increment: installation;
+          position: absolute;
+          left: -55px;
+          top: -8px;
+          background: url(../img/list-bg.svg) no-repeat
+        }
+
+        ul li {
+          padding: .5rem 0 0;
+          line-height: 1.25rem;
+        }
+
+        span {
+          display: inline-block;
+
+
+          &.li-main {
+            font-size: $font-size-24;
+            font-weight: 200;
+            color: $color-gray;
+            margin-bottom: 1rem;
+          }
+
+          &.codeHighlight {
+            align-self: flex-start;
+            background-color: $color-gray-light;
+            color: $color-base;
+            padding: .5rem .75rem;
+            border-radius: 20px;
+            margin-bottom: .75rem;
+            font-family: 'Inconsolata', monospace;
+
+          }
+        }
+      }
+
+      .shape-style-large-container {
+
+        h5 {
+          padding: 0 0 1.5rem 0;
+        }
+
+        h6 {
+          color: $color-gray;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: $font-size-18;
+          padding: 0 0 1rem 0;
+          @extend .condensed;
+        }
+
+        p {
+          margin-bottom: 1.25rem;
+          font-weight: 400;
+        }
+        ol {
+          counter-reset: sub-installation;
+          margin: 1.5rem 0;
+
+          li {
+            padding: .75rem 0;
+            font-weight: 500;
+            display: flex;
+            &:before {
+              text-align: left;
+              margin: 0;
+              content: counter(sub-installation);
+              counter-increment: sub-installation;
+              padding: 0 1rem 0 0;
+              color: $color-primary;
+            }
+
+            figure {
+              border: 2px solid $color-gray-light;
+              border-radius: 10px;
+              .gutter {
+                background: $color-gray-light;
+                padding: .25rem;
+                font-weight: 200;
+              }
+
+              .code {
+                padding: .25rem .75rem;
+              }
+
+            }
+          }
+        }
+
+      }
+    }
+
+    &.shape-style-large ol {
+
+      > li:before {
+        top: 0;
+      }
+    }
+  }
+  .whatiseg {
+
+    .flex-column {
+      padding-left: 2rem;
+    }
+    svg {
+      width: 100%;
+    }
+
+    h4 {
+      margin: 0;
+      padding: 0 0 1.5rem 0;
+      font-size: $font-size-24;
+      font-weight: 200;
+    }
+
+    p {
+      width: 100%;
+    }
+  }
+
+  .quickstart {
+    padding-bottom: 2rem;
+
+    p {
+      line-height: 2rem;
+    }
+
+    li {
+      list-style: decimal;
+      margin-left: 1rem;
+      padding-left: 1rem;
+      line-height: 1.5rem;
+      font-weight: 100;
+    }
+  }
 
 }

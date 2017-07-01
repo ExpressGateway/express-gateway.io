@@ -18,3 +18,48 @@
 
   }
 }
+
+.get-started {
+  font-weight: 200;
+  text-align: left;
+  background: url(../img/home-wave-bg.svg) center center no-repeat;
+
+  ol {
+    list-style: none;
+    font-size: 1.5rem;
+    color: $color-primary;
+    counter-reset: get-started;
+    width: 700px;
+    margin: 0 auto;
+
+    li {
+      display: block;
+      padding: 1.75rem 0;
+      font-weight: 200;
+      &:before {
+        content: counter(get-started);
+        padding: 0;
+        margin: 0;
+        counter-increment: get-started;
+        position: relative;
+        left: 0;
+        top: 0;
+        font-size: 1.75rem;
+        padding: .75rem;
+      }
+
+    }
+  }
+
+  li:nth-child(even){
+    text-align: right;
+  }
+
+  li:last-child{
+    text-align: center;
+  }
+}
+
+.category-list {
+  text-transform: capitalize;
+}

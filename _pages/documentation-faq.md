@@ -2,23 +2,7 @@
 layout: documentation
 title: FAQ
 permalink: /faq/
-links:
-  - display: Why Express Gateway
-    link: why-did-we-build-express-gateway
-  - display: How Does It Work
-    link: how-does-it-work
-  - display: Pipeline
-    link: what-is-a-pipeline
-  - display: Policy
-    link: what-is-a-policy
-  - display: Datastores
-    link: which-datastores-are-supported
-  - display: Microservice/API Authentication
-    link: how-can-i-add-authentication-to-a-microserviceapi
-  - display: Clustered
-    link: can-the-express-gateway-run-clustered
-  - display: Get Help
-    link: where-can-i-get-help
+
 ---
 
 ## Express Gateway FAQ

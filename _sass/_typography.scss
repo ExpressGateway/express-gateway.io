@@ -1,7 +1,7 @@
 body {
   color: $color-base;
-  font-family: "Helvetica Neue", Helvetica, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, Arial, sans-serif;
-  font-weight: 100;
+  font-family: “Helvetica Neue”, Helvetica, Open Sans, Lato, “Univers”, Arial, sans-serif;
+  font-weight: 200;
 }
 
 h1 {
@@ -60,12 +60,12 @@ blockquote {
 
 .subtitle {
   font-size: $font-size-18;
-  color: $color-primary;
+  color: $color-navigation;
   font-weight: 200;
 }
 
 .large-header {
-  font-size: $font-size-40;
+  font-size: $font-size-44;
   line-height: $font-lineheight-base + 1
 }
 
@@ -78,39 +78,13 @@ blockquote {
   line-height: $font-lineheight-base;
 }
 
-.codeHighlight {
-  background-color: $color-background-highlight;
-}
-
-.toc {
-
-  border-left: 5px solid $color-gray-blue;
-  padding: 0 0 1rem 1rem;
-  a {
-    margin-left: .5rem;
-    font-size: $font-size-14;
-    color: $color-base;
-    line-height: $font-lineheight-list + .5;
-    &:hover {
-      color: $color-primary;
-    }
-  }
-
-  .toc-header {
-    color: $color-navigation;
-    font-weight: bold;
-    font-size: $font-size-16;
-    padding: 1rem 0 1.5rem;
-  }
-}
-
 .markdown {
 
   padding-bottom: 10rem;
 
   h2 {
     font-size: $font-size-52;
-    font-weight: 400;
+    font-weight: 100;
   }
 
   h5 {
@@ -121,6 +95,16 @@ blockquote {
   }
 
   p {
-
+    font-size: $font-size-16;
+    font-weight: 200;
+    line-height: $font-lineheight-base;
   }
+}
+
+.condensed {
+  font-family: 'Pragati Narrow', sans-serif;
+}
+
+.code {
+  font-family: 'Inconsolata', monospace;
 }
