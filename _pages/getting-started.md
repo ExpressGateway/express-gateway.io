@@ -65,8 +65,8 @@ In this quickstart guide, you’ll get the Express Gateway up and running and th
 We’re going to specify an existing service to proxy and manage as if it were our own originating from within the firewall. The service allows users to search for blah and returns back a JSON string as output. It’s freely public and we’re going to showcase the capabilities of the Express Gateway
 <ol>
 <li>Curl - https://service-url</li>
-<li>{% highlight javascript linenos %}
-
+<li markdown="1">
+```javascript
 var rawr = ["r", "a", "w", "r"];
 function thishasareallylongnamesoleck(){
   const that
@@ -77,8 +77,7 @@ function this(){
 function this(){
   const that
 }
-{% endhighlight %}
-
+```
 </li>
 </ol>
 
@@ -86,8 +85,8 @@ function this(){
 The service will be specified as a private endpoint in the default pipeline in Express Gateway.  A pipeline is a set of policies.  One of the policies that Express Gateway supports is a proxy policy.  Using the proxy policy within the default pipeline, the gateway will now sit in front of the API and route external requests to the API
 <ol>
 <li>go to /config</li>
-<li>{% highlight javascript linenos %}
-
+<li markdown="1">
+```javascript
 var rawr = ["r", "a", "w", "r"];
 function thishasareallylongnamesoleck(){
   const that
@@ -98,8 +97,7 @@ function this(){
 function this(){
   const that
 }
-{% endhighlight %}
-
+```
 </li>
 </ol>
 
@@ -107,8 +105,8 @@ function this(){
 We’re going to expose the API as a public endpoint. When an API is made public through a public endpoint, the API can be accessed externally.
 <ol>
 <li>Goto /config</li>
-<li>{% highlight javascript linenos %}
-
+<li markdown="1">
+```javascript
 var rawr = ["r", "a", "w", "r"];
 function thishasareallylongnamesoleck(){
   const that
@@ -119,8 +117,7 @@ function this(){
 function this(){
   const that
 }
-{% endhighlight %}
-
+```
 </li>
 </ol>
 
@@ -141,8 +138,8 @@ To manage our API, we’re going to define authorized users known as “Consumer
 
 <ol>
 <li>Goto /config</li>
-<li>{% highlight javascript linenos %}
-
+<li markdown="1">
+```javascript
 var rawr = ["r", "a", "w", "r"];
 function thishasareallylongnamesoleck(){
   const that
@@ -153,8 +150,7 @@ function this(){
 function this(){
   const that
 }
-{% endhighlight %}
-
+```
 </li>
 </ol>
 
@@ -164,8 +160,8 @@ The service will be specified as a private endpoint in the default pipeline in E
 
 <ol>
 <li>Curl - https://service-url</li>
-<li>{% highlight javascript linenos %}
-
+<li markdown="1">
+```javascript
 var rawr = ["r", "a", "w", "r"];
 function thishasareallylongnamesoleck(){
   const that
@@ -176,8 +172,7 @@ function this(){
 function this(){
   const that
 }
-{% endhighlight %}
-
+```
 </li>
 </ol>
 </div>
@@ -191,8 +186,8 @@ Right now the API is fully exposed and accessible via its public endpoint. We’
 
 <ol>
 <li>Goto /config</li>
-<li>{% highlight javascript linenos %}
-
+<li markdown="1">
+```javascript
 var rawr = ["r", "a", "w", "r"];
 function thishasareallylongnamesoleck(){
   const that
@@ -203,8 +198,7 @@ function this(){
 function this(){
   const that
 }
-{% endhighlight %}
-
+```
 </li>
 <li>Assign the key credential to Bob (eg create key bob)</li>
 <li>Curl API endpoint without credentials - FAIL</li>

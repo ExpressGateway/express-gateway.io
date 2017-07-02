@@ -31,6 +31,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+#syntax-highlighting
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  
 paginate: 5
 paginate_path: "/blog/page-:num/"
 
@@ -46,7 +51,6 @@ collections:
   categories:
     output: true
     permalink: /blog/:path/
-
 
 #Site specific config
 include: ["_pages"]

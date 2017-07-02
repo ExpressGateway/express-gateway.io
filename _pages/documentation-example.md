@@ -86,10 +86,9 @@ Row 2 col 1 | Row 2 col 2 | Row 2 col 3
 
 ### Code Snippets
 
-###### javascript with line numbers
+###### javascript
 
-{% highlight javascript linenos %}
-
+```javascript
 var rawr = ["r", "a", "w", "r"];
 function thishasareallylongnamesoleck(){
   const that
@@ -100,12 +99,11 @@ function this(){
 function this(){
   const that
 }
-{% endhighlight %}
+```
 
-###### YAML with line numbers
+###### YAML
 
-{% highlight yaml linenos %}
-
+```yaml
 --- !clarkevans.com/^invoice
 invoice: 34843
 date   : 2001-01-23
@@ -135,8 +133,12 @@ comments: >
     Late afternoon is best.
     Backup contact is Nancy
     Billsmer @ 338-4338.
+```
 
-{% endhighlight %}
+```shell
+$ bundle exec jekyll build
+$ bundle exec jekyll serve
+```
 
 ### Images
 

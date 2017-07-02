@@ -24,9 +24,9 @@ Express Gateway runs on Node.js. To get Node.js please visit the [Node.js Downlo
 Once you have Node.js installed, check out the dedicated [Getting Started Guide]
 
 
-### Core Concepts 
+### Core Concepts
 
-To better understand what Express Gateway is and how it works, check out the [About] page that provides the big picture. 
+To better understand what Express Gateway is and how it works, check out the [About] page that provides the big picture.
 
 ### Configuration
 
@@ -80,7 +80,7 @@ Express Gateway supports TLS, including SNI (domain specific TLS certificates). 
 The `default` key will be used if none of the other `tls` domain entries are matched or if SNI is not being used by the client.
 
 Usage:
-{% highlight yaml %}
+```yaml
 https:
   port: 9443 # EG will listen for https requests on port 9443
   tls:
@@ -93,19 +93,19 @@ https:
     - "default":                    # will be used if no match above or if SNI not used
         key: keys/eg.io.key.pem
         cert: keys/eg.io.cert.pem
-{% endhighlight %}
+```
 
 #### apiEndpoints
 API Endpoints are URLs that are exposed by the Express Gateway to listen to API requests.  They are specified in conjunction with the [http](#http) and [https](#https) sections.
 
 Usage: minimum
-{% highlight yaml %}
+```yaml
 apiEndpoints:
   api:                  # the name of the API endpoint
-{% endhighlight %}
+```
 
-Usage: 
-{% highlight yaml %}
+Usage:
+```yaml
 apiEndpoints:
   help: # name, used as reference in pipeline
     host: '*' # optional, by default accepts all hosts, same as '*'
@@ -120,7 +120,7 @@ apiEndpoints:
   example: # name, used as reference in pipeline
     host: 'example.com'
     paths: /v2/* # string or array of strings
-{% endhighlight %}
+```
 
 #### Host
 
@@ -177,7 +177,7 @@ Path examples: <TODO make this collapsible>
 The order of the API endpoints specified matters. It is possible to specifiy overlapping patterns through wildcards. More specific patterns should be specified first for evaluation before more general matching.
 
 Example:
-{% highlight yaml %}
+```yaml
 apiEndpoints:
   tabby:
     host: '*.tabby.cat.com'
@@ -186,13 +186,13 @@ apiEndpoints:
     host: '*.cat.com'
   com:
     host: '*.com'
-{% endhighlight %}
+```
 
 #### serviceEndpoints
-Express Gateway receive API request on apiEndpoints, process them and then proxy them to the underlying microservices. The serviceEndpoints section specifies the URLs of these proxied microservices. 
+Express Gateway receive API request on apiEndpoints, process them and then proxy them to the underlying microservices. The serviceEndpoints section specifies the URLs of these proxied microservices.
 
 Usage:
-{% highlight yaml %}
+```yaml
 serviceEndpoints: # urls to downstream microservices
   cats_service: # name, used as a reference in pipeline
     url: "http://localhost"
@@ -201,4 +201,4 @@ serviceEndpoints: # urls to downstream microservices
   dogs_service: # name, used as a reference in pipeline
     url: http://localhost
     port: 4000
-{% endhighlight %}
+```
