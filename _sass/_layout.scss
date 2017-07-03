@@ -273,6 +273,7 @@ h2.description {
     border-bottom: 1px solid $color-gray-light;
     position: relative;
     text-transform: capitalize;
+    text-decoration: none;
     &:last-child {
       border-bottom: none;
     }
