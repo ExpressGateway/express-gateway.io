@@ -135,6 +135,8 @@ comments: >
     Billsmer @ 338-4338.
 ```
 
+###### shell
+
 ```shell
 $ bundle exec jekyll build
 $ bundle exec jekyll serve
