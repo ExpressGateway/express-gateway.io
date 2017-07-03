@@ -385,42 +385,6 @@ h2.description {
   background: $color-primary;
 }
 
-.footer {
-  border-top: 1px solid $color-background-shadow;
-  padding: 1rem 0;
-  background: #0c6c7b; /* Old browsers */
-  background: -moz-linear-gradient(170deg, #0c6c7b 0%, #0c6c7b 45%, #37aedc 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(170deg, #0c6c7b 0%, #0c6c7b 45%,#37aedc 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(170deg, #0c6c7b 0%, #0c6c7b 45%,#37aedc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  font-size: $font-size-18;
-  color: $color-background;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c6c7b', endColorstr='#37aedc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  min-height: 240px;
-
-  .wrapper {
-    display: flex;
-    flex-direction: row;
-    padding-top: 1.5rem;
-  }
-
-  section {
-    flex: 1;
-  }
-  h1 {
-    font-size: $font-size-24;
-  }
-
-  h5, a, p {
-    font-size: $font-size-14;
-    color: $color-background;
-  }
-
-  h5 {
-    padding: .5rem 0 1rem;
-  }
-
-}
-
 .wrapper-flex {
   display: flex;
   flex-direction: row;
