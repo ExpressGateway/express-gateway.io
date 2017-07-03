@@ -130,7 +130,11 @@ main {
     // }
 
     h5 {
-      padding: 1.25rem 0;
+      font-size: $font-size-26;
+      font-weight: 200;
+      line-height: 2.5rem;
+      color: $color-primary;
+      padding: 1rem;
     }
 
     ul {
