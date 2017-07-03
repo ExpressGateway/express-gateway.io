@@ -10,7 +10,7 @@ permalink: /resources/
 <div class="flex-column" markdown="1">
 ## Resources
 
-##### Plugins
+### Plugins
 
 #### Authentication
 
