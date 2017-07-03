@@ -8,11 +8,11 @@ permalink: /about/
 <div class="wrapper-flex">
 <div class="wrapper">
 <div class="flex-column" markdown="1">
-##### Introduction
+## Introduction
 
-Developing monolithic applications doesn't work. Monolithic applications are being broken down into microservices. These microservices expose the application as set of APIs that can be consumed by anyone. 
+Developing monolithic applications doesn't work. Monolithic applications are being broken down into microservices. These microservices expose the application as set of APIs that can be consumed by anyone.
 
-Microservices and APIs is an architectural style that’s grabbing a lot of attention due an emphasis on sustainable development. 
+Microservices and APIs is an architectural style that’s grabbing a lot of attention due an emphasis on sustainable development.
 
 > At the heart of the microservices architecture is the API Gateway.
 
@@ -29,7 +29,7 @@ For a deeper look at microservices and the role of the API Gateway check out [Ma
 <div class="wrapper">
 <div class="flex-column" markdown="1">
 
-##### Why Express Gateway?
+## Why Express Gateway?
 
 If you’ve used Node.js, you’ve almost certainly come across Express.js.  Express.js (Express) remains one of the largest, most widely adopted, open source project in the world. Express is maintained by seasoned industry veterans. Bugs get fixed, issues get addressed and as more developers discover Express, we believe it could present a competitive asset in the future.
 
@@ -50,7 +50,7 @@ We believe that an Express based API Gateway will be a powerful enabler for deve
 <div class="wrapper-flex">
 <div class="wrapper">
 <div class="flex-column" markdown="1">
-##### What exactly *is* Express Gateway?
+## What exactly *is* Express Gateway?
 
 Express Gateway is a bunch of components which declaratively build around Express to meet the API Gateway use case. The Express Gateway harnesses the simplicity and the rich technology ecosystem around Express middleware.
 
@@ -64,7 +64,7 @@ Express Gateway is a bunch of components which declaratively build around Expres
 <div class="flex-one">
 <img src="{{ site.baseurl }}assets/img/Marchitecture_Express-As-We-Know-it_01.png" /></div>
 <div class="flex-column" markdown="1">
-#### Express as we know it, today
+### Express as we know it, today
 
 Within Express is its Router. The Router matches URLs and routes them to modules known as “middleware”.  Each middleware acts on a request coming into Express through the router and passes it onto the next piece of middleware as a chain.  This request, response and “next” flow is the foundation of how Express works and its simplicity is why its so popular.
 </div>
@@ -74,14 +74,14 @@ Within Express is its Router. The Router matches URLs and routes them to modules
 <img src="{{ site.baseurl }}assets/img/Marchitecture_ExpressGatewayCore_01.png" /></div>
 <div class="wrapper" markdown="1">
 
-##### Express Gateway Core
+### Express Gateway Core
 Express Gateway transforms Express into a dynamic runtime engine.  For example - you can easily hardcode routes statically through Express’ API. In Express Gateway, however, those values can continually change and are dynamically injected as parameters without having to alter the underlying code.
 
 Essentially, all of the core components within Express Gateway make Express more dynamic and declarative.
 </div>
 </div>
 <div class="wrapper border-top-blue" markdown="1">
-##### Core Components
+### Core Components
 
 <div class="wrapper-flex">
 <div class="wrapper">
@@ -108,7 +108,7 @@ Essentially, all of the core components within Express Gateway make Express more
 <div class="wrapper">
 <div class="flex-column infographics" markdown="1">
 
-##### How does Express Gateway work?
+#### How does Express Gateway work?
 Now that we’ve described what’s in Express Gateway and how it relates to Express, let’s go over how it works:
 <div class="wrapper flex-row" markdown="1">
 <img />

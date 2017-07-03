@@ -2,10 +2,7 @@
   font-weight: normal;
 
   h2 {
-    font-size: $font-size-52;
-    font-weight: 200;
-    padding: 2rem 0 1rem;
-    text-align: left;
+
 
     span {
       display: block;
@@ -17,16 +14,16 @@
     text-decoration: underline;
   }
 
-  h2:not(:first-child), h3, h4{
+  h2:not(:first-child), h4{
     margin-top: 5rem;
   }
 
-  h3 {
-    font-size: $font-size-40;
-    font-weight: 200;
-    padding: 3rem 0 1rem 0;
-    color: $color-primary;
-  }
+  // h3 {
+  //   font-size: $font-size-40;
+  //   font-weight: 200;
+  //   padding: 3rem 0 1rem 0;
+  //   color: $color-primary;
+  // }
 
   h4, h5, p, ul, ol {
     width: 80%;

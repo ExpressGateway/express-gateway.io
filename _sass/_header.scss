@@ -65,13 +65,17 @@
 
         a {
           padding: 1px;
-          color: $color-primary;
+          color: $color-secondary-dark;
           display: block;
+
+          &:hover {
+            color: $color-primary;
+          }
         }
 
         &.active {
           a {
-            color: $color-navigation-highlight;
+            color: $color-primary;
           }
           &:after {
             bottom: 0;
@@ -84,7 +88,7 @@
             z-index: 10;
             pointer-events: none;
             border-width: 0 15px 7px 15px;
-            border-color: transparent transparent $color-navigation-highlight transparent;
+            border-color: transparent transparent $color-primary transparent;
             margin-right: -15px;
           }
         }
