@@ -187,6 +187,7 @@ h2.description {
   width: 60%;
   font-weight: 200;
   line-height: $font-lineheight-base + 2;
+  color: $color-text;
 }
 
 .introduction {
@@ -324,6 +325,7 @@ h2.description {
   width: 50%;
   p {
     margin-left: 0;
+    color: $color-primary;
   }
 }
 
