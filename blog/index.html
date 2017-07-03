@@ -39,8 +39,8 @@ title: Blog
   <div class="article-list">
     <ul>
       {% for post in paginator.posts %}
-      <div class="post-excerpt">
-        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <li class="post-excerpt">
+        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
         <p class="author">
           <span class="date">{{ post.date | date: '%A %B %d, %Y' }}</span>
         </p>
@@ -48,7 +48,7 @@ title: Blog
           {{ post.excerpt }}
         </div>
         <a href="{{ site.baseurl }}{{ post.url }}" class="button-read-more">Read more</a>
-      </div>
+      </li>
       {% endfor %}
     </ul>
     <nav>
