@@ -184,10 +184,9 @@ main {
 
 h2.description {
   padding: 4rem 0 .5rem 0;
-  width: 60%;
   font-weight: 200;
   line-height: $font-lineheight-base + 2;
-  color: $color-text;
+  color: $color-primary;
 }
 
 .introduction {
@@ -199,10 +198,11 @@ h2.description {
 
   p {
     margin-left: 7%;
+    margin-top: 1rem;
   }
 
   .button-large {
-    margin: 2rem 0 4rem 0;
+    margin: 6rem 0 4rem 0;
   }
 }
 
@@ -314,14 +314,17 @@ h2.description {
 }
 
 .marchitecture {
-  width: 68%;
+  width: 60%;
   text-align: right;
   margin-left: auto;
   margin-bottom: 3rem;
+  padding-left: 10px;
 }
 
 .home-cta {
   align-self: flex-start;
+  flex: 1;
+  padding-right: 10px;
   width: 50%;
   p {
     margin-left: 0;
@@ -330,8 +333,8 @@ h2.description {
 }
 
 .button-large {
-  background-color: $color-navigation;
-  color: $color-secondary-dark;
+  background-color: $color-secondary-dark;
+  color: $color-navigation;
   width: 200px;
   padding: 1rem 0;
   font-size: $font-size-29;
