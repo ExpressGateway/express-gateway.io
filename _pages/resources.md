@@ -24,7 +24,7 @@ permalink: /resources/
 
 #### Security
 <ul class="icon-list">
-<li>{% include res-rabcl.svg %}<h3>RABCL</h3><p>Role Based Access Control</p></li>
+<!-- <li>{% include res-rabcl.svg %}<h3>RABCL</h3><p>Role Based Access Control</p></li> -->
 <li>{% include res-cors.svg %}<h3>CORS</h3><p>Cross Origin Resource Sharing</p></li>
 </ul>
 
@@ -68,7 +68,14 @@ permalink: /resources/
 <div class="flex-column" markdown="1">
 ## Contributing
 
-<span>We are looking for developers and technologists to add to our growing list of contributors.</span>
+<span>We are looking for community members to add to our growing list of contributors. There are a lot of ways to contibute:</span>
+<ul>
+    <li>address an open issue in the project</li>
+    <li>implement a feature sought after on the roadmap</li>
+    <li>help answer questions with your expertise</li>
+    <li>add examples and documentation so others can get onboard easier</li>
+<span>Big or small, every effort counts! For more information check out the <a href="https://github.com/ExpressGateway/express-gateway/blob/master/Contributing.md">Contributor's guide in the Express Gateway repo.</a></span>
+</ul>
 <div class="res-cta" markdown="1">
 <div class="svg-fix res-contact">{% include res-contact.svg %}</div>
 [Get In Touch](http://#)
