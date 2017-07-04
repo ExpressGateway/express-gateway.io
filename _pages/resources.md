@@ -47,9 +47,9 @@ permalink: /resources/
 ###### Get involved and join our community of developers, practitioners and technologists.
 <div class="flex-row">
 <ul class="logo-cloud">
-<li><img src="../assets/img/logo-googlegroups.png" /></li>
-<li><img src="../assets/img/logo-gitter.png" /></li>
-<li>{% include logo-stackoverflow.svg %}</li>
+<li><a href="https://groups.google.com/a/lunchbadger.com/d/forum/express-gateway" target="_blank"><img src="../assets/img/logo-googlegroups.png" /></a></li>
+<li><a href="https://gitter.im/ExpressGateway/express-gateway" target="_blank"><img src="../assets/img/logo-gitter.png" /></a></li>
+<li><a href="https://stackoverflow.com/questions/tagged/express-gateway" target="_blank">{% include logo-stackoverflow.svg %}</a></li>
 </ul>
 <div class="bug-block">
 <div class="bug-block-content" markdown="1">
