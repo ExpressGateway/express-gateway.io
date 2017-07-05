@@ -6,11 +6,13 @@
   }
 
   main {
-    flex: 9
+    flex: 9;
+    width: 60%;
   }
   .tocwrapperparent {
     position: relative;
     flex: 3;
+    width: 25%;
   }
 
   aside.tocwrapper {
