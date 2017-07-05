@@ -11,23 +11,31 @@ links:
     link: core-concepts-explained
   - display: Configuring
     link: configuring
+  - display: Policy Reference
+    link: policy-reference
+  - display: Consumer Management
+    link: consumer-management
+  - display: Credential Management
+    link: credential-management
+  - display: Runtime
+    link: runtime
 ---
 
 # Guide
 
-Welcome to Express Gateway! The documentation for Express Gateway is written using Jekyll and Markdown. If you'd like to contribute, please see our [Github website repo](https://github.com/expressgateway/express-gateway.io)
+Welcome to Express Gateway! Documentation for Express Gateway is written in Markdown. If you'd like to contribute, please see our [Github website repo](https://github.com/expressgateway/express-gateway.io)
 
 ### Installing
 
 Express Gateway runs on Node.js. To get Node.js please visit the [Node.js Downloads Page](https://nodejs.org/en/download/).
 
-Once you have Node.js, check out the [Getting Started](/getting-started) page on how to install Express Gateway and the 5-Minute Quick Start for a brief introduction on using it.
+Once you have Node.js, check out the [Getting Started](/getting-started) page on how to install Express Gateway and run through the 5-Minute Quick Start for a brief introduction.
 
 ---
 
 ### Core Concepts
 
-For an overview of Express Gateway and how it works, check out the [About](/about) page for a brief introduction.
+For an overview of Express Gateway and how it works, check out the [About](/about) page to familiarize yourself with the core entities within Express Gateway and how they are utilized.
 
 Express Gateway comes with the following core entities:
 
@@ -38,25 +46,29 @@ Express Gateway comes with the following core entities:
 - credentials
 
 #### endpoints
-Endpoints are URLs. Express Gateway exposes APIs through API endpoints. As a gateway, it proxies to microservices referenced in service endpoints.
+Endpoints are URLs. Express Gateway has two different types of endpoints:
+* API endpoints
+* Service endpoints
+
+Express Gateway expose APIs through API endpoints. As a gateway, it proxies API requests from API endpoints to microservices referenced in service endpoints.
 
 #### policies
-A policy is a set of conditions, action and parameters that are evaluated and act upon the API request and response flow within Express Gateway. Policies within Express Gateway utilize [Express middleware](http://expressjs.com/en/guide/using-middleware.html) at their core.
+A policy is a set of conditions, action and parameters that are evaluated and act on the API request and response flow within Express Gateway. Policies within Express Gateway utilize [Express middleware](http://expressjs.com/en/guide/using-middleware.html).
 
 #### pipelines
-A pipeline is a set of policies. Policies within a pipeline are evaluated and executed sequentially. API endpoints are linked to pipelines. An API request is received by the API endpoint and routed through the pipeline for policy execution. The last policy within a pipeline is often a proxy policy that will then ultimately route the request to a service endpoint.
+A pipeline is a set of policies linked to a set of API endpoints. Policies within a pipeline are evaluated and executed sequentially. An API request is received by the API endpoint and routed through the pipeline for policy execution. The last policy within a pipeline is often a proxy policy that will routes the request to a service endpoint.
 
 #### consumers
-A consumer makes API requests and consumes API responses. In Express Gateway, consumers are users and their apps.
+A consumer makes API requests and consumes API responses. In Express Gateway, consumers are users and their applications (apps). Express Gateway comes with a highly flexible [Consumer Management](#Consumer Management) module.
 
 #### credentials
-Credentials are types of authentication and authorizations. In Express Gateway, a consumer may be assigned one or more credentials. Each credential specifies a set of scopes that are used for authorizations.
+Credentials are types of authentication and authorizations. In Express Gateway, a consumer may be assigned one or more credentials. Each credential specifies a set of [scopes](#scopes) that are used for authorizations. Express Gateway comes with a simple yet powerful [Credential Management](#Credential Management) module.
 
 ---
 
 ### Configuration
 
-One of the key features of Express Gateway is that configuration is completely separate from static code used to run the gateway.  
+One key feature of Express Gateway is that configuration is completely separate from the static code used to run the gateway.  
 
 All configuration is centralized and can be found in the `/config` directory of the main Express Gateway folder.
 
@@ -71,7 +83,7 @@ Level          | Name           | File/Directory
 The levels allow you to configure and manage Express Gateway without having to concern yourself with details that may not be relevant to you as a user, operator, administrator or developer. The lower the level, the higher the complexity.
 
 #### gateway.config.yml
-All of the application functionality is embodied in gateway.config.yml.  This config file describes the entire gateway's microservices and API operations at a glance.
+All of the gateway's functionality is defined and described in `gateway.config.yml`.  This config file describes the entire gateway's microservices and API operations at a glance.
 
 gateway.config.yml is made up of the following sections:
 
@@ -82,7 +94,7 @@ gateway.config.yml is made up of the following sections:
 - policies 
 - pipelines
 
-Each section declares global named entities. These entities are then referenced within the pipeline section.
+Each section declares globally named entities. These entities are then referenced within the pipeline section.
 
 #### http
 The http section is used to configure HTTP. Express Gateway will listen on  the specified port for HTTP requests.
@@ -99,7 +111,7 @@ http:
 ```
 
 #### https
-The https section is used to configure HTTPS. Express Gateway will listen on the specififed port for HTTPS requests.
+The https section is used to configure HTTPS. Express Gateway will listen on the specified port for HTTPS requests.
 
 Options:
 - `port:` the port to listen on
@@ -127,8 +139,10 @@ https:
 
 ```
 
+Note: it is possible to configure and run `http` and `https` simultaneously on Express Gateway.
+
 #### apiEndpoints
-API Endpoints are URLs that are exposed by the Express Gateway to listen to API requests.  They are specified in conjunction with the [http](#http) and [https](#https) sections. An API endpoint can only be associated with one [pipeline](#pipeline) at time.
+API Endpoints are URLs that are exposed by the Express Gateway to listen to API requests.  They are specified in conjunction with the [http](#http) and [https](#https) sections. An API endpoint can only be linked to one [pipeline](#pipeline) at time.
 
 Usage: minimum
 ```yaml
@@ -138,7 +152,7 @@ apiEndpoints:
 
 ```
 
-Usage:
+Usage: typical
 ```yaml
 
 apiEndpoints:
@@ -162,95 +176,121 @@ apiEndpoints:
 
 The `host` value is a string that will be matched against the 'HOST' header of the request.
 
-Host examples: <TODO make this collapsible>
+Examples: 
+
+Any Domain and Path
 ```yaml
 apiEndpoints:
   help:
-    host: '*'            # will match any domain or if not HOST is provided
-                        # match: cdn.test.example.com test.example.com, example.com. 
+    host: '*'            
     paths: /help
 ```
 
-- \* - any domain will match cdn.test.example.com, test.example.com, example.com, etc. Will also work if no HOST header is provided
-- example.com - one domain match, will not match subdomains
-- \*.example.com -
-    - any subdomain will match. test.example.com
-    - example.com will not match
-    - deeper levels will not match cdn.test.example.com
-- \*.*.example.com
-    - will match 2nd level subdomains like cdn.test.example.com
-    - will not match example.com host
-    - will not match test.example.com host
+Match: cdn.test.example.com/help, example.com/help, no HOST header
+404: cdn.test.example.com, example.com/admin
 
-For host resolution Express Gateway relies on the "vhost" npm module. For more examples please see please refer to [https://www.npmjs.com/package/vhost](https://www.npmjs.com/package/vhost)
+One Domain with No Subdomains and Path
+```yaml
+apiEndpoints:
+  help:
+    host: 'example.com'            
+    paths: /help
+```
+
+Match: example.com/help
+404: test.example.com/help, example.com
+
+Any 1st Level Subdomain of One Domain and Path
+```yaml
+apiEndpoints:
+  help:
+    host: '*.example.com'            
+    paths: /help
+```
+
+Match: test.example.com/help, foo.example.com/help, bar.example.com/help
+404: example.com, cdn.test.example.com/help, test.example.com
+
+Any 2nd Level Subdomain of One Domain and Path
+```yaml
+apiEndpoints:
+  help:
+    host: '*.*.example.com'            
+    paths: /help
+```
+
+Match: cdn.test.example.com/help
+404: example.com/help, test.example.com/help
+
+Express Gateway utilizes the "vhost" npm module for host resolution. For more examples, please refer to [https://www.npmjs.com/package/vhost](https://www.npmjs.com/package/vhost)
 
 #### Paths
 Paths can be either a string or array of strings.  Wildcard patterns are supported.  Paths follow the ExpressJS routes conventions - [https://expressjs.com/en/4x/api.html#router](https://expressjs.com/en/4x/api.html#router)
 
 Examples:
 
-__Exact String Match__
+Exact String Match
 ```yaml
 paths: /admin           
 ```
 
-- __match__: /admin only
-- __404__: 
+- match: /admin only
+- 404: 
 - /admin/bob; /admin/charlie/1; /staff 
 
 ---
 
-__Deep Level Match without Parent__
+Deep Level Match without Parent
 ```yaml
 paths: /admin/*        
 ```
 
-- __match__: /admin/bob; /admin/charlie/1
-- __404__: /admin
+- match: /admin/bob; /admin/charlie/1
+- 404: /admin
 
 ---
 
-__Deep Level Match with Parent__
+Deep Level Match with Parent
 ```yaml
 paths: ['/admin','/admin/*']   
 ```
 
-- __match__: /admin; /admin/bob; /admin/charlie/1
-- __404__: /staff
+- match: /admin; /admin/bob; /admin/charlie/1
+- 404: /staff
 
 ---
 
-__One Level Match without Parent with Variable Assignment__
+One Level Match without Parent with Variable Assignment
 ```yaml
 paths: '/admin/:id'  
 ```
 
-- __match__: /admin/bob; /admin/charlie
-- __id__: bob; charlie
-- __404__: /admin; /staff
+- match: /admin/bob; /admin/charlie
+- id: bob; charlie
+- 404: /admin; /staff
 
 ---
 
-__Multi level Sub Dir Match without Parent with Variable Assignments__
+Multi level Sub Dir Match without Parent with Variable Assignments
 ```yaml
 paths: '/admin/:group/:id' 
 ```
-- __match__: /admin/ops/bob
-- __group__: ops
-- __id__: bob
-- __404__: /admin; /admin/bob; /admin/alex/bob/charlie
+- match: /admin/ops/bob
+- group: ops
+- id: bob
+- 404: /admin; /admin/bob; /admin/alex/bob/charlie
 
 ---
 
-__Multi Multiple Level Sub Dir Match without Parent__
+Multi Multiple Level Sub Dir Match without Parent
 ```yaml
 paths: ['/student/*', '/teacher/*','/admin/*']
 ```
-- __match__:
+- match:
       - /admin/... multi-level
       - /student/... multi-level
       - /teacher/... multi-level
-- __404__:
+- 404:
       - /
       - /admin; /teacher; /student
       - /staff
@@ -258,7 +298,7 @@ paths: ['/student/*', '/teacher/*','/admin/*']
 ---
 
 #### Overlapping
-The order of the API endpoints specified matters. It is possible to specifiy overlapping patterns through wildcards. More specific patterns should be specified first for evaluation before more general matching.
+The order of the API endpoints specified matters. It is possible to specifiy overlapping patterns through wildcards. More specific patterns should be specified first for prioritized evaluation before more general matching.
 
 Example:
 ```yaml
@@ -275,7 +315,7 @@ apiEndpoints:
 ```
 
 #### serviceEndpoints
-Express Gateway receive API request on apiEndpoints, process them and then proxy them to the underlying microservices. The serviceEndpoints section specifies the URLs of these proxied microservices.
+Express Gateway receive API requests on apiEndpoints, process them and then proxy them to downstream microservices. The serviceEndpoints section specifies the URLs of these proxied microservices.
 
 Usage:
 ```yaml
@@ -308,7 +348,7 @@ policies:
 ```
 
 #### Pipelines
-The pipelines section are the heart of Express Gateway's operations that tie together all entities declared in the sections above. 
+The pipelines section specify the core Express Gateway's operations by tying  together all entities declared in the sections above, through the request and response flow.
 
 Pipelines are an ordered list of policies that are executed for requests received from all linked apiEndpoints.
 
@@ -381,56 +421,59 @@ Each policy in the pipeline can have a list of condition/action objects:
 - `condition` - Optional. This condition is a rule that must be satisfied to trigger its corresponding action.
 - `action` - the name of the action to be executed.  This is the main module name of the Express middleware used within the policy.
 
-Each policy in the policies can have a list of condition\action objects: 
+Condition and actions each have their own list of parameters. Condition/action pairs are made unique with their own list of parameters.
 
-- `condition`. Optional. This condition is a check rule that must be satisfied to trigger the action.
-- `action`. The name of the action to execute.
-
-### Policy conditions
+##### Policy conditions
 
 Each Policy in a pipeline can be gated with a condition specification. Each
 condition specification is in the format:
 
+Usage
 ```yaml
   condition:
-    name: condition-name # examples: proxy; log;
-    some-param-1: p1 # if condition requires parameters this is where to put them
+    name: condition-name # examples: always; never;
+    some-param-1: p1 # if condition requires parameters they are listed here 
     some-param-2: p1 #
 ```
 
-The name specifies a condition function. This can be one of the following:
+The `name` specifies a condition function. This can be one of the following:
 
   - `always`: Always matches. If the condition is missing, it will default to
     this.
   - `never`: Never matches.
   - `pathExact`: Matches if the request's path is an exact match for the
-    parameter. Example:
-```yaml
-  condition:
-    name: pathExact
-    path: "/foo/bar"
-```
+    parameter. 
+
+    Example:
+    ```yaml
+      condition:
+        name: pathExact
+        path: "/foo/bar"
+    ```
   - `pathMatch`. Matches if the request's path matches the given regular
-    expression parameter. Example:
-```yaml
-  condition:
-    name: pathMatch
-    path: "/foo(/bar)?"
-```
+    expression parameter. 
+
+    Example:
+    ```yaml
+      condition:
+        name: pathMatch
+        path: "/foo(/bar)?"
+    ```
 
   - `method`. Matches if the request's method matches the `methods` parameter.
     Accepts can be either a string (e.g. 'GET') or an array of such strings.
   - `hostMatch`. Parameter should be a regular expression. Matches if the
     `Host` header passed with the request matches the parameter.
   - `expression`. Matches execution result of JS code provided in `expression` property. Code is executed in limited space that has access only to egContext
-  Example:
-```yaml
-  condition:
-    name: expression
-    expression: "req.url.length>5"
-    # will match for for path /long_path
-    # will not match /a
-```
+
+    Example:
+  ```yaml
+    condition:
+      name: expression
+      expression: "req.url.length>5"
+      # will match for for path /long_path
+      # will not match /a
+  ```
 
 In addition, several functions are provided that allow you to create logical
 combinations of conditions. The parameters to these functions should be other
@@ -440,7 +483,7 @@ condition statements:
   - `oneOf`: Matches if at least one of its parameters matches.
   - `not`: Matches only if its parameter does not.
 
-Example:
+Examples:
 
 ```json
 {
@@ -453,6 +496,7 @@ Example:
     ]
 }
 ```
+
 ```yml
 name: allOf
 conditions:
@@ -511,7 +555,7 @@ pipelines:
               serviceEndpoint: staff # see declaration above
 ```
 
-##### Api Endpoint based config (variant B)
+##### API Endpoint based config (variant B)
 ```yaml
 serviceEndpoints:
   admin: # will be referenced in proxy policy
@@ -548,7 +592,7 @@ pipelines:
 ```
 
 
-### Policies
+### Policy Reference
 
 Several Policies are available. Please note that the order of Policies
 is important.
@@ -573,9 +617,9 @@ Limit access by host name in order to provide different service plans for custom
 
 
 
-#### Usage Example
+Example:
 
-#####Consider full example to rate-limit based on passed host to 10 requests per 2 minutes interval:
+Rate-limit across all API hosts to 10 requests per 2 minutes interval:
 
 ```yml
 http:
@@ -605,7 +649,11 @@ pipeline1:
 
 ```
 
-###### Here is policy configuration only for specific domain to allow up to 500 requests per minute
+
+Example:
+
+Rate-limit established on a specific API host example.com for 500 requests per minute.
+
 ```yml
 policies:
   -
@@ -619,21 +667,28 @@ policies:
           max: 500 # limit to 500 req per default period windowMs=60000 (1 minute)
 ```
 
+Example:
+
+TODO: Rate-limit established by user 
+TODO: Rate-limit established by application
 
 
 #### Key Auth
-Key auth is efficient way of securing your API. 
+Key auth is an efficient way of securing your API. 
 Keys are generated for apps or users using CLI tool.
 
-##### Example Use case:
+Example Use case:
 Restricting access to api endpoints for applications
 
 
-EG API key has format of a key pair separated by colon: `1fa4Y52SWEhii7CmYiMOcv:4ToXczFz0ZyCgLpgKIkyxA` 
+The Express Gateway API key has format of a key pair separated by colon: `1fa4Y52SWEhii7CmYiMOcv:4ToXczFz0ZyCgLpgKIkyxA` 
 
-EG supports several ways to authenticate with api key:
+The pair is a UUID of the identity concatenated with a secret.
+
+Express Gateway supports several ways to authenticate with api key:
 ##### Using header (recommended)
-By default Authorization header is used and enforsed Schema is `apiKey`
+By default Authorization header is used and enforced Schema is `apiKey`
+
 Example:
 `'Authorization':'apiKey 1fa4Y52SWEhii7CmYiMOcv:4ToXczFz0ZyCgLpgKIkyxA'`
 
@@ -648,12 +703,15 @@ and to disable set
 This will make EG accept that format:
 'Authorization':'1fa4Y52SWEhii7CmYiMOcv:4ToXczFz0ZyCgLpgKIkyxA'
 
-You And to change header name use `apiKeyHeader:'MY-KEY-HEADER'`  
+It is also possible to change header name use `apiKeyHeader:'MY-KEY-HEADER'`  
 
 
-##### Using query paramter (common approach for browser apps to avoid CORS Options request)
-add `?apiKey=key:secret` to query params in url and it will be read by EG
+##### Using query parameter 
+Using a query parameter to specify the API key is a common approach for browser apps to avoid CORS Options request.
 
+`?apiKey=key:secret` is specified as a query parameter in the URL.
+
+Example:
 `https://example.com?q=search&apiKey=1fa4Y52SWEhii7CmYiMOcv:4ToXczFz0ZyCgLpgKIkyxA` 
 
 ##### Using in JSON body
@@ -747,8 +805,7 @@ pipelines:
 Enables Cross-origin resource sharing (CORS) in EG. 
 CORS defines a way in which a browser and server can interact to determine whether or not it is safe to allow the cross-origin request
 
-##### Config Example:
-
+Usage:
 ```yml
 ...
 policies:
@@ -760,7 +817,8 @@ policies:
           credentials: true
 }
 ```
-##### Full config example 
+
+Example: (full)
 ```yml 
   http: 
     port: 9089
@@ -855,7 +913,7 @@ req = { method:'GET', originalUrl:'/v1' }
 // will log "[EG:log-policy] GET /v1"
 ```
 
-### Full config example
+Example: full
 
 ```yaml
 http:
@@ -891,13 +949,14 @@ forwarded to `http://www.example.com`, while a request to
 `http://127.0.0.1:3000/google` will be forwarded to `http://www.google.com`.
 
 
-API Consumer Management
--------------
-Consumer management consists of managing users and applications.
+### Consumer Management
+---
+Express Gateway comes with a Consumer management system. An API consumer is either a user or application.
 
-### Users
-A user, in its base form, consisits of an ID and a username. You define additional user properties in the configuration like below:
+##### Users
+A user, in its base form, consists of an ID and a username. The user model in `model-configs` directory is schemaless and you define additional user properties.
 
+Example:
 ```
 Config: {
 ...
@@ -914,10 +973,12 @@ Config: {
 }
 ```
 
-### Applications
-An Application is another type of API consumer and is tied to a user.
-In its base form, an application consists of an Id and userId. You can define additional application perperties in configuration like below:
+##### Applications
+An Application is another type of API consumer and is always associated to a user. A user may have zero to many applications.
 
+In its base form, an application consists of an Id and userId. The `application` model in `model-configs directory is schemaless and you can define additional application properties.
+
+Example:
 ```
 Config: {
 ...
@@ -933,46 +994,72 @@ Config: {
 }
 ```
 
-API Credential Management
--------------
-Credential management consists of managing credentials associated with users and applications.
-Types of credentials may include username/password, id/secret and API-Key.
+### Credential Management
+---
+Express Gateway comes with a rich Credential Management module that provides a complete authentication and authorization system. The Credential Management module can also work alongside existign Authorization systems and providers. The system associates consumers (apps and user) with their set of credentials. 
 
-Any type of credential can be associated with a user or application.
+A credential is created for a consumer and its authentication and authorization type is set by one of the supported policies within Express Gateway (e.g. OAuth2, Key Auth, etc...)
 
-### Scope
-Scope is a pre-defined string that is used to associate a user's or application's permission to use an api endpoint.
+Credentials may include username/password, id/secret and/or API-Key.
 
-Scopes are assigned to credentials and need to be pre-defined before assignment.
+Credentials are used by authentication and authorization policies within Express Gateway.
 
-Hot Reload vs Manual Restart
--------------
+Bob is a user in Express Gateway.  Bob is associated with an app that he has created called "Dumb Ways to Code".
+
+Example:
+Bob as a Express Gateway `user` can have...
+- a basic challenge credential
+- an OAuth 2 credential 
+associated with his userid.
+
+"Dumb Ways to Code", an Expresss Gateway application, may also have its own set of credentials...
+- a Key Auth credential
+- an OAuth2 credential
+
+All credential types are capable of specifiying authorization by using scopes.
+
+
+##### Scope
+Scopes are the main entities for specifing authorizations within Express Gateway. A scope is a pre-defined string. API endpoints are secured by specifying scopes. To be authorized for an API endpoint that is secured by a scope, a consumer must have a credential containing the scope listed on the API endpoint.
+
+Example:
+1. Express Gateway exposes an "admin" API endpoint. The "admin" API endpoint has a scope "superuser" associated to it.
+
+2. The "admin" endpoint is linked and processed by the "default" pipeline that has a Key auth policy enabled.
+
+3. Bob, an Express Gateway user attempts to access the "admin" API endpoint passing an API key.
+
+4. The Consumer Management module identifies Bob.  Bob's credentials are searched for a Key auth credential matching the key passed by Bob. 
+
+5. Bob's key auth credential contains a list of scopes and "superuser" is one of them.
+
+6. Bob is granted access to the "admin" API endpoint and further processing of his request continues. 
+
+### Runtime 
+---
+
+##### Hot Reload vs Manual Restart
 Express gateway automatically monitors changes of the config file provided at start.
 Once the change is detected the system automatically reconfigures without shutdown and dropping requests.
 
 TBD: how to disable
 
 Hot Reload will work for:
-* Api Endpoints
+* API Endpoints
 * Service Endpoints
 * Pipeline
-* Plugins  (TBD: review after plugins impl)
-  + Custom Policy registration
-  + Plugin Configuration changes
-  + Enable/Disable
 
 Manual Restart is required for changes in:
 * http section (port)
 * https section (port and certificates)
-* consumer management configuration (schema, connection string details)
+* system.config.yml
+* model changes in `model-configs` 
 
 
-Troubleshooting
----------------
+##### Troubleshooting
 set env variable ```LOG_LEVEL=debug``` to see full logging
 
-Build and run
--------------
+##### Build and run
 
 ```bash
 # build
@@ -988,26 +1075,15 @@ npm test
 docker build -t gateway .
 ```
 
-Providing Configuration
------------------
-Express-Gateway requires application configuration to be passed during start.
-YML and JSON formats are supported.
-
-There are 2 main config files for main setup. And model configurations for fine-tuning:
-#### Gateway Config
-The config file where you define endpoints, pipelines, port settings for gateway
-
-#### System Config
-Here you can define dabase connections, custom schemes for user\application entities
-For the most cases default settings are good enough
-
+##### Providing Configuration
 The config files must be in one directory and this is how to point EG to it:
 
-##### Default
+**Default**
 If nothing is provided EG will use config in local config /lib/config
 
 use `npm start` to start Express-gateway
 
-##### Location to config folder in env variable EG\_CONFIG\_DIR
+**EG_CONFIG_DIR**
+Location to config folder in env variable EG\_CONFIG\_DIR
 example:
 EG\_CONFIG\_DIR=/some/path/config  npm start
