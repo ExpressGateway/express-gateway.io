@@ -1,0 +1,104 @@
+{% include head.html %}
+
+
+<body class="sticky">
+  {% include header.html %}
+  <div class="container sticky-flex">
+
+    <main>
+      <section class="flex-column wrapper">
+        <div class="introduction flex-row">
+          <div class="flex-center space-between">
+            <div class="home-cta">
+              <h2 class="large-header description">A microservices API gateway built on Express.js</h2>
+              <p class="subtitle">Fast, Flexible, and Community Driven</p>
+              <a href="{{ site.baseurl }}getting-started" class="button-large">Quick Start</a>
+            </div>
+            <img class="marchitecture" src="assets/img/marchitecture.png" />
+          </div>
+        </div>
+      </section>
+      <section class="announcement flex-row flex-center type-center">
+        <h3 class="flex-column">Express Gateway 0.10.1 has been released!</h3>
+      </section>
+
+        <ul class="cards">
+          <li>
+              {% include simple.svg %}
+              <h5>Simple</h5>
+              <ul class="type-base">
+                <li>A single config to control it all 
+                <li>Auto-detect and hot-reload config changes</li>
+                <li>Plugin architecture</li>
+              </ul>
+          </li>
+          <li>
+              {% include agnostic.svg %}
+              <h5>Agnostic</h5>
+              <ul class="type-base">
+                <li>A gateway for any language </li>
+                <li>A gateway for any framework </li>
+                <li>A gateway for all microservice use cases</li>
+              </ul>
+
+          </li>
+          <li>
+              {% include organic.svg %}
+              <h5>Organic</h5>
+              <ul class="type-base">
+                <li>Built on Express Middleware and Node</li>
+                <li>Pre-bundled with the most proven andpopular modules</li>
+                <li>Extend with any Express Middleware</li>
+              </ul>
+          </li>
+          <li>
+              {% include portable.svg %}
+              <h5>Portable</h5>
+              <ul class="type-base">
+                <li>Run anywhere with Docker in your public or private cloud</li>
+                <li>Works with any orchestrator and service mesh</li>
+                <li>Plug into your DevOps tooling </li>
+              </ul>
+          </li>
+        </ul>
+
+      <section class="get-started flex-column flex-center">
+        <h2 class="type-size-32">Get Started in 5 minutes</h2>
+        <ol class="wrapper flex-column type-medium">
+          <li>
+            Specify a Microservice
+          </li>
+          <li>
+            Expose as an API
+          </li>
+          <li>
+            Secure API with key
+          </li>
+        </ol>
+        <!-- {% include home-wave.svg %} -->
+      </section>
+      <section class="quote">
+        {% include blackandwhite.svg %}
+        <div class="wrapper">
+          <section class="testimonial flex-column">
+              <span class="avatar"><img class="blackandwhite" src="assets/img/Doug.jpg" /></span>
+              <blockquote>"Building upon Node.js + Express.js brings together the strengths, community and flexibility for a word-class API gateway"</blockquote>
+              <p>Doug Wilson, maintainer of Express.js</p>
+          </section>
+          <section class="testimonial flex-column">
+              <span class="avatar"><img class="blackandwhite" src="assets/img/Doug.jpg" /></span>
+              <blockquote>"An API gateway built around ExpressJS is long overdue and the perfect use case for the minimalist strengths of what Express is all about!"</blockquote>
+              <p>James Young, CTO of VidRoll</p>
+          </section>
+          <section class="testimonial flex-column">
+              <span class="avatar"><img class="blackandwhite" src="assets/img/Doug.jpg" /></span>
+              <blockquote>"An API gateway built around ExpressJS is long overdue and the perfect use case for the minimalist strengths of what Express is all about!"</blockquote>
+              <p>Amar Singh Rathor, Executive Director of Standard Chartered Studios</p>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+  {% include footer.html %}
+</body>
+</html>

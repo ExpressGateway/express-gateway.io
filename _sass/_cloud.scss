@@ -1,0 +1,28 @@
+.wave {
+  height: 50px;
+  position: relative;
+}
+.wave:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat;
+  height: 11px;
+  background-size: 20px 60px;
+  background-image: -webkit-radial-gradient(10px -5px circle, transparent 12px, maroon 13px);
+  background-image: radial-gradient(circle at 10px -5px, transparent 12px, maroon 13px);
+}
+.wave:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat;
+  height: 15px;
+  background-size: 40px 60px;
+  background-image: -webkit-radial-gradient(10px 15px circle, maroon 12px, transparent 13px);
+  background-image: radial-gradient(circle at 10px 15px, maroon 12px, transparent 13px);
+}

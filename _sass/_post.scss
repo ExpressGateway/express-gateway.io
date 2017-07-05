@@ -1,0 +1,126 @@
+.post {
+
+  padding: 3rem 0 5rem;
+
+  h1 {
+    padding: 0 0 3rem;
+    background: transparent;
+    text-align: left;
+    color: $color-primary;
+    font-weight: 200;
+  }
+
+  h2 {
+    font-size: $font-size-xxlarge;
+    padding: 2rem 0 0;
+    background: transparent;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+
+    span {
+      display: block;
+    }
+  }
+
+  h2:not(:first-child){
+    margin-top: 0;
+  }
+
+  h3 {
+    font-size: $font-size-xxlarge;
+    padding: 2rem 0 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    background: transparent;
+    text-transform: uppercase;
+
+  }
+
+  h4, h5, p, ul, ol {
+    width: 80%;
+  }
+
+  h4 {
+    padding: 2rem 0;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 2rem 0 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  h5 {
+    font-size: $font-size-40;
+    background: transparent;
+    text-transform: uppercase;
+    color: $color-primary;
+    padding: 2rem 0 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  h6 {
+    font-size: $font-size-24;
+    background: transparent;
+    text-transform: uppercase;
+    color: $color-primary;
+    padding: 2rem 0 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: $font-size-16;
+    line-height: $font-lineheight-base;
+    padding-bottom: $font-lineheight-base;
+  }
+
+  blockquote {
+    padding: 2.5rem;
+
+    p {
+      font-style: normal;
+      font-size: $font-size-28;
+      font-weight: 200;
+    }
+  }
+
+  ol, ul {
+    line-height: $font-lineheight-list
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  // .highlight {
+  //   border: 1px solid rgba($color-secondary-dark,.1);
+  //   background: rgba($color-secondary-light,.1);
+  //   display: block;
+  //   width: 80%;
+  //   padding: 1%;
+  //   margin-bottom: 1rem;
+  //
+  //   .lineno { color: #ccc; display:inline-block; padding: 0 5px; border-right:1px solid #ccc; }
+  //   pre code { display: block; white-space: pre; overflow-x: auto; word-wrap: normal; }
+  //
+  //
+  //   pre code tr {
+  //     display: flex;
+  //     .code {
+  //       padding-left: 15px;
+  //     }
+  //   }
+  //
+  //   code {
+  //     font-family: 'Inconsolata', monospace;
+  //   }
+  // }
+
+
+}
