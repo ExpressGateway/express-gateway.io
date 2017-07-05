@@ -25,7 +25,7 @@ links:
 
 Welcome to Express Gateway! Documentation for Express Gateway is written in Markdown. If you'd like to contribute, please see our [Github website repo](https://github.com/expressgateway/express-gateway.io)
 
-### Installing
+## Installing
 
 Express Gateway runs on Node.js. To get Node.js please visit the [Node.js Downloads Page](https://nodejs.org/en/download/).
 
@@ -33,7 +33,7 @@ Once you have Node.js, check out the [Getting Started](/getting-started) page on
 
 ---
 
-### Core Concepts
+## Core Concepts
 
 For an overview of Express Gateway and how it works, check out the [About](/about) page to familiarize yourself with the core entities within Express Gateway and how they are utilized.
 
@@ -45,28 +45,28 @@ Express Gateway comes with the following core entities:
 - consumers (users and apps)
 - credentials
 
-#### endpoints
+### endpoints
 Endpoints are URLs. Express Gateway has two different types of endpoints:
 * API endpoints
 * Service endpoints
 
 Express Gateway expose APIs through API endpoints. As a gateway, it proxies API requests from API endpoints to microservices referenced in service endpoints.
 
-#### policies
+### policies
 A policy is a set of conditions, action and parameters that are evaluated and act on the API request and response flow within Express Gateway. Policies within Express Gateway utilize [Express middleware](http://expressjs.com/en/guide/using-middleware.html).
 
-#### pipelines
+### pipelines
 A pipeline is a set of policies linked to a set of API endpoints. Policies within a pipeline are evaluated and executed sequentially. An API request is received by the API endpoint and routed through the pipeline for policy execution. The last policy within a pipeline is often a proxy policy that will routes the request to a service endpoint.
 
-#### consumers
+### consumers
 A consumer makes API requests and consumes API responses. In Express Gateway, consumers are users and their applications (apps). Express Gateway comes with a highly flexible [Consumer Management](#Consumer Management) module.
 
-#### credentials
+### credentials
 Credentials are types of authentication and authorizations. In Express Gateway, a consumer may be assigned one or more credentials. Each credential specifies a set of [scopes](#scopes) that are used for authorizations. Express Gateway comes with a simple yet powerful [Credential Management](#Credential Management) module.
 
 ---
 
-### Configuration
+## Configuration
 
 One key feature of Express Gateway is that configuration is completely separate from the static code used to run the gateway.  
 
@@ -82,7 +82,7 @@ Level          | Name           | File/Directory
 
 The levels allow you to configure and manage Express Gateway without having to concern yourself with details that may not be relevant to you as a user, operator, administrator or developer. The lower the level, the higher the complexity.
 
-#### gateway.config.yml
+### gateway.config.yml
 All of the gateway's functionality is defined and described in `gateway.config.yml`.  This config file describes the entire gateway's microservices and API operations at a glance.
 
 gateway.config.yml is made up of the following sections:
@@ -139,20 +139,6 @@ https:
 
 ```
 
-Note: it is possible to configure and run `http` and `https` simultaneously on Express Gateway.
-
-#### apiEndpoints
-API Endpoints are URLs that are exposed by the Express Gateway to listen to API requests.  They are specified in conjunction with the [http](#http) and [https](#https) sections. An API endpoint can only be linked to one [pipeline](#pipeline) at time.
-
-Usage: minimum
-```yaml
-
-apiEndpoints:
-  api:                  # the name of the API endpoint
-
-```
-
-Usage: typical
 ```yaml
 
 apiEndpoints:
@@ -297,7 +283,7 @@ paths: ['/student/*', '/teacher/*','/admin/*']
 
 ---
 
-#### Overlapping
+##### Overlapping
 The order of the API endpoints specified matters. It is possible to specifiy overlapping patterns through wildcards. More specific patterns should be specified first for prioritized evaluation before more general matching.
 
 Example:
@@ -381,6 +367,7 @@ pipelines:
 Example:
 
 Below is a `gateway.config.yml` that will start Express Gateway on `http` port 3000. It exposes an single apiEndpoint named 'api' that listens on all hosts at the root (/) path. There is one pipeline named 'default' that will process all requests for the 'api' 
+
 ```yaml
 http:
   port: 3000
@@ -600,22 +587,10 @@ is important.
 #### Rate-limit
 The rate limiter policy is used to limit the number of requests received and processed by the API endpoint. Limits are useful to prevent your system from being overwhelmed in both benign and malevolent situations where the number of requests processed can overwhelm your underlying APIs and supporting services. Rate limits are also useful to control the amount of API consumption to a known capacity of quantity.
 
-##### Example use case:
-Use to limit repeated requests to public APIs and/or endpoints such as password reset.
-Limit access by host name in order to provide different service plans for customers. 
+Sample use cases:
 
-#### Reference
-
-* `rateLimitBy`: The criteria that is used to limit the number of requests by. By default will limit based on IP address. Use JS template string to configure. Example "${req.ip}", "${req.hostname}" etc.
-* `windowMs`: milliseconds - how long to keep records of requests in memory. Defaults to 60000 (1 minute).
-* `max`: max number of connections during windowMs milliseconds before sending a 429 response. Defaults to 5. Set to 0 to disable.
-* `message`: Error message returned when max is exceeded. Defaults to 'Too many requests, please try again later.'
-* `statusCode`: HTTP status code returned when max is exceeded. Defaults to 429.
-* `headers`: Enable header to show request limit and current usage
-* `delayAfter`: max number of connections during windowMs before starting to delay responses. Defaults to 1. Set to 0 to disable delaying.
-* `delayMs`: milliseconds - how long to delay the response, multiplied by (number of recent hits - delayAfter). Defaults to 1000 (1 second). Set to 0 to disable delaying.
-
-
+- Use to limit repeated requests to public APIs and/or endpoints such as password reset.
+- Limit access by host name in order to provide different service plans for customers. 
 
 Example:
 
@@ -672,20 +647,31 @@ Example:
 TODO: Rate-limit established by user 
 TODO: Rate-limit established by application
 
+##### Options Reference
+
+* `rateLimitBy`: The criteria that is used to limit the number of requests by. By default will limit based on IP address. Use JS template string to configure. Example "${req.ip}", "${req.hostname}" etc.
+* `windowMs`: milliseconds - how long to keep records of requests in memory. Defaults to 60000 (1 minute).
+* `max`: max number of connections during windowMs milliseconds before sending a 429 response. Defaults to 5. Set to 0 to disable.
+* `message`: Error message returned when max is exceeded. Defaults to 'Too many requests, please try again later.'
+* `statusCode`: HTTP status code returned when max is exceeded. Defaults to 429.
+* `headers`: Enable header to show request limit and current usage
+* `delayAfter`: max number of connections during windowMs before starting to delay responses. Defaults to 1. Set to 0 to disable delaying.
+* `delayMs`: milliseconds - how long to delay the response, multiplied by (number of recent hits - delayAfter). Defaults to 1000 (1 second). Set to 0 to disable delaying.
+
 
 #### Key Auth
 Key auth is an efficient way of securing your API. 
 Keys are generated for apps or users using CLI tool.
 
-Example Use case:
+Sample use case:
 Restricting access to api endpoints for applications
-
 
 The Express Gateway API key has format of a key pair separated by colon: `1fa4Y52SWEhii7CmYiMOcv:4ToXczFz0ZyCgLpgKIkyxA` 
 
 The pair is a UUID of the identity concatenated with a secret.
 
 Express Gateway supports several ways to authenticate with api key:
+
 ##### Using header (recommended)
 By default Authorization header is used and enforced Schema is `apiKey`
 
@@ -723,7 +709,7 @@ Example:
 
 ```
 
-##### Reference 
+##### Options Reference 
 ```yml
 apiKeyHeader: 'Authorization', # name of the header that should contain api key 
 apiKeyHeaderScheme: 'apiKey', # Enforce schema in header.
@@ -735,7 +721,7 @@ disableBody: false # set to true to disable api key lookup in body
 ```
 
 
-Config Example
+Example:
 ```yaml
 http:
   port: 8790
@@ -771,9 +757,9 @@ pipelines:
 Forwards the request to a service endpoint.
 Accepts serviceEndpoint parameter that can be one of the names of serviceEndpoints section
 
-- `serviceEndpoint`: the name of the service endpoint to forward to.
+This type of policy should generally be placed last in the policies list within a pipeline.
 
-This Policy type should generally be placed last in the list.
+Example:
 ```yaml
 http: 
   port: 9091
@@ -801,11 +787,14 @@ pipelines:
             serviceEndpoint: example # reference to serviceEndpoints Section
 ```
 
+##### Options Reference
+- `serviceEndpoint`: the name of the service endpoint to forward to.
+
 #### CORS
 Enables Cross-origin resource sharing (CORS) in EG. 
 CORS defines a way in which a browser and server can interact to determine whether or not it is safe to allow the cross-origin request
 
-Usage:
+Example: simple
 ```yml
 ...
 policies:
@@ -818,7 +807,7 @@ policies:
 }
 ```
 
-Example: (full)
+Example: full
 ```yml 
   http: 
     port: 9089
@@ -851,7 +840,7 @@ Example: (full)
 
 ```
 
-##### Reference 
+##### Options Reference 
 * `origin`: Configures the `Access-Control-Allow-Origin` CORS header. Possible values:
   + Boolean - set origin to true to reflect the request origin, as defined by req.header('Origin'), or set it to false to disable CORS.
   + String - set origin to a specific origin. For example if you set it to "http://example.com" only requests from "http://example.com" will be allowed.
@@ -877,6 +866,8 @@ The default configuration is the equivalent of:
 
 #### Expression
 Execute JS code against EGContext.
+
+Example:
 ```yml
 pipelines:
   api:
@@ -887,6 +878,9 @@ pipelines:
               name: expression # action name
               jscode: 'req.url = "/new/url"; ' #  code to execute against EG Context
 ```
+
+##### Options Reference TODO
+* `jscode`:
 
 #### Logging
 
@@ -914,7 +908,6 @@ req = { method:'GET', originalUrl:'/v1' }
 ```
 
 Example: full
-
 ```yaml
 http:
   port: 3000
@@ -953,7 +946,7 @@ forwarded to `http://www.example.com`, while a request to
 ---
 Express Gateway comes with a Consumer management system. An API consumer is either a user or application.
 
-##### Users
+#### Users
 A user, in its base form, consists of an ID and a username. The user model in `model-configs` directory is schemaless and you define additional user properties.
 
 Example:
@@ -973,7 +966,7 @@ Config: {
 }
 ```
 
-##### Applications
+#### Applications
 An Application is another type of API consumer and is always associated to a user. A user may have zero to many applications.
 
 In its base form, an application consists of an Id and userId. The `application` model in `model-configs directory is schemaless and you can define additional application properties.
@@ -1019,7 +1012,7 @@ associated with his userid.
 All credential types are capable of specifiying authorization by using scopes.
 
 
-##### Scope
+#### Scope
 Scopes are the main entities for specifing authorizations within Express Gateway. A scope is a pre-defined string. API endpoints are secured by specifying scopes. To be authorized for an API endpoint that is secured by a scope, a consumer must have a credential containing the scope listed on the API endpoint.
 
 Example:
