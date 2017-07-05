@@ -76,6 +76,7 @@
         &.active {
           a {
             color: $color-primary;
+
           }
           &:after {
             bottom: 0;
@@ -114,7 +115,7 @@
         display: block;
         a {
           display: block;
-          padding:.70rem;
+          padding:.5750rem;
         	width:200px;
           border-bottom: 1px solid $color-gray-light;
 
