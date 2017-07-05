@@ -13,7 +13,6 @@ permalink: /resources/
 ### Plugins
 
 #### Authentication
-
 <ul class="icon-list">
 <li>{% include res-basic.svg %}<h3>Basic Auth</h3><p>Username and Password</p></li>
 <li>{% include res-key.svg %}<h3>Key Auth</h3><p>API keys for users and applications</p></li>

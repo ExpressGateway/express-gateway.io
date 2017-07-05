@@ -36,7 +36,16 @@ All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks 
     3. Add Four Spaces To Nest Lists
         - Nested UL
         - Four Spaces
+            - Additional list Styles
+            - Four Spaces
 3. Maybe it works
+
+- Top UL
+- Four Spaces
+    - Additional list Styles
+    - Four Spaces
+        - Additional list Styles
+        - Four Spaces
 
 #### Hexagon Lists require HTML
 
@@ -50,7 +59,19 @@ All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks 
 <li>Top Level Lists get Hexagon indication
 <ul>
 <li>Nested uL look like this</li>
-<li>Nested uL look like this</li>
+<li>Nested uL look like this
+<ul>
+<li>Third level list</li>
+<li>Third level list</li>
+<li>Third level list
+<ul>
+<li>Fourth level list</li>
+<li>Fourth level list</li>
+<li>Fourth level list</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>

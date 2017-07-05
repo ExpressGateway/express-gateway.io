@@ -204,6 +204,29 @@
         right: .5rem;
         font-size: 1rem;
       }
+
+      li {
+        list-style: none;
+        &::before {
+          content: "\00b0";
+          color: $color-gray;
+          position: relative;
+          right: .5rem;
+          font-size: 1rem;
+          top: 3px;
+        }
+        li {
+          list-style: none;
+          &::before {
+            content: "•";
+            color: $color-gray;
+            position: relative;
+            right: .5rem;
+            font-size: .5rem;
+            top: -3px;
+          }
+        }
+      }
     }
   }
 
@@ -261,7 +284,7 @@
     border-collapse: collapse;
     margin-bottom: 2rem;
     font-weight: 500;
-    
+
     tr{
       &:nth-of-type(odd) {
         background: $color-gray-blue;
