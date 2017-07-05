@@ -269,7 +269,7 @@ h2.description {
   a {
     margin-left: 1.5rem;
     font-size: $font-size-14;
-    color: $color-primary;
+    color: $color-secondary-dark;
     line-height: $font-lineheight-list + 1;
     border-bottom: 1px solid $color-gray-light;
     position: relative;
@@ -280,7 +280,6 @@ h2.description {
     }
     &:hover {
       color: $color-primary;
-      color: $color-navigation-highlight;
     }
     &:before {
       content: "";
@@ -289,18 +288,18 @@ h2.description {
       left: -1.5rem;
     }
     &.nav-active {
-      color: $color-text;
+      color: #34a8c4;
       &:before {
         content: "\27F6";
         color: $color-text;
         position: absolute;
-        left: -1.5rem;
+        left: -1.75rem;
       }
     }
   }
 
   .toc-header {
-    color: $color-navigation;
+    color: #34a8c4;
     font-weight: bold;
     font-size: $font-size-16;
     padding: 1rem 0 1.5rem;

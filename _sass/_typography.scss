@@ -56,8 +56,10 @@ a {
 }
 
 blockquote {
-  font-style: italic;
-  font-weight: 100;
+  p {
+    font-style: italic;
+    font-weight: 100;
+  }
 
   span.type-medium {
     width: 70%;

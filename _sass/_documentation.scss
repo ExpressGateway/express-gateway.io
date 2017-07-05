@@ -260,10 +260,12 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 2rem;
-
+    font-weight: 500;
+    
     tr{
       &:nth-of-type(odd) {
         background: $color-gray-blue;
+
       }
       &:hover {
         background: $color-secondary-light;
@@ -272,14 +274,17 @@
 
     td, th {
       padding: .75rem 1rem;
-      border: 1px solid $color-secondary-dark;
       text-align: left;
     }
 
     th {
-      background: $color-secondary-dark;
-      color: white;
-      font-weight: 100;
+      color: $color-secondary-dark-50;
+      background: $color-background;
+    }
+
+    td {
+      color: $color-primary;
+
     }
   }
 }
