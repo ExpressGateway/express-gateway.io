@@ -1,210 +1,210 @@
-.highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
-.highlight .c, .highlight .cd {
+.monokai .highlight table td { padding: 5px; }
+.monokai .highlight table pre { margin: 0; }
+.monokai .highlight .c, .monokai .highlight .cd {
   color: #75715e;
   font-style: italic;
 }
-.highlight .cm {
+.monokai .highlight .cm {
   color: #75715e;
   font-style: italic;
 }
-.highlight .c1 {
+.monokai .highlight .c1 {
   color: #75715e;
   font-style: italic;
 }
-.highlight .cp {
+.monokai .highlight .cp {
   color: #75715e;
   font-weight: bold;
 }
-.highlight .cs {
+.monokai .highlight .cs {
   color: #75715e;
   font-weight: bold;
   font-style: italic;
 }
-.highlight .err {
+.monokai .highlight .err {
   color: #960050;
   background-color: #1e0010;
 }
-.highlight .gi {
+.monokai .highlight .gi {
   color: #ffffff;
   background-color: #324932;
 }
-.highlight .gd {
+.monokai .highlight .gd {
   color: #ffffff;
   background-color: #493131;
 }
-.highlight .ge {
+.monokai .highlight .ge {
   color: #000000;
   font-style: italic;
 }
-.highlight .gr {
+.monokai .highlight .gr {
   color: #aa0000;
 }
-.highlight .gt {
+.monokai .highlight .gt {
   color: #aa0000;
 }
-.highlight .gh {
+.monokai .highlight .gh {
   color: #999999;
 }
-.highlight .go {
+.monokai .highlight .go {
   color: #888888;
 }
-.highlight .gp {
+.monokai .highlight .gp {
   color: #555555;
 }
-.highlight .gs {
+.monokai .highlight .gs {
   font-weight: bold;
 }
-.highlight .gu {
+.monokai .highlight .gu {
   color: #aaaaaa;
 }
-.highlight .k, .highlight .kv {
+.monokai .highlight .k, .monokai .highlight .kv {
   color: #66d9ef;
   font-weight: bold;
 }
-.highlight .kc {
+.monokai .highlight .kc {
   color: #66d9ef;
   font-weight: bold;
 }
-.highlight .kd {
+.monokai .highlight .kd {
   color: #66d9ef;
   font-weight: bold;
 }
-.highlight .kp {
+.monokai .highlight .kp {
   color: #66d9ef;
   font-weight: bold;
 }
-.highlight .kr {
+.monokai .highlight .kr {
   color: #66d9ef;
   font-weight: bold;
 }
-.highlight .kt {
+.monokai .highlight .kt {
   color: #66d9ef;
   font-weight: bold;
 }
-.highlight .kn {
+.monokai .highlight .kn {
   color: #f92672;
   font-weight: bold;
 }
-.highlight .ow {
+.monokai .highlight .ow {
   color: #f92672;
   font-weight: bold;
 }
-.highlight .o {
+.monokai .highlight .o {
   color: #f92672;
   font-weight: bold;
 }
-.highlight .mf {
+.monokai .highlight .mf {
   color: #ae81ff;
 }
-.highlight .mh {
+.monokai .highlight .mh {
   color: #ae81ff;
 }
-.highlight .il {
+.monokai .highlight .il {
   color: #ae81ff;
 }
-.highlight .mi {
+.monokai .highlight .mi {
   color: #ae81ff;
 }
-.highlight .mo {
+.monokai .highlight .mo {
   color: #ae81ff;
 }
-.highlight .m, .highlight .mb, .highlight .mx {
+.monokai .highlight .m, .monokai .highlight .mb, .monokai .highlight .mx {
   color: #ae81ff;
 }
-.highlight .se {
+.monokai .highlight .se {
   color: #ae81ff;
 }
-.highlight .sb {
+.monokai .highlight .sb {
   color: #e6db74;
 }
-.highlight .sc {
+.monokai .highlight .sc {
   color: #e6db74;
 }
-.highlight .sd {
+.monokai .highlight .sd {
   color: #e6db74;
 }
-.highlight .s2 {
+.monokai .highlight .s2 {
   color: #e6db74;
 }
-.highlight .sh {
+.monokai .highlight .sh {
   color: #e6db74;
 }
-.highlight .si {
+.monokai .highlight .si {
   color: #e6db74;
 }
-.highlight .sx {
+.monokai .highlight .sx {
   color: #e6db74;
 }
-.highlight .sr {
+.monokai .highlight .sr {
   color: #e6db74;
 }
-.highlight .s1 {
+.monokai .highlight .s1 {
   color: #e6db74;
 }
-.highlight .ss {
+.monokai .highlight .ss {
   color: #e6db74;
 }
-.highlight .s {
+.monokai .highlight .s {
   color: #e6db74;
 }
-.highlight .na {
+.monokai .highlight .na {
   color: #a6e22e;
 }
-.highlight .nc {
-  color: #a6e22e;
-  font-weight: bold;
-}
-.highlight .nd {
+.monokai .highlight .nc {
   color: #a6e22e;
   font-weight: bold;
 }
-.highlight .ne {
+.monokai .highlight .nd {
   color: #a6e22e;
   font-weight: bold;
 }
-.highlight .nf {
+.monokai .highlight .ne {
   color: #a6e22e;
   font-weight: bold;
 }
-.highlight .no {
+.monokai .highlight .nf {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.monokai .highlight .no {
   color: #66d9ef;
 }
-.highlight .bp {
+.monokai .highlight .bp {
   color: #f8f8f2;
 }
-.highlight .nb {
+.monokai .highlight .nb {
   color: #f8f8f2;
 }
-.highlight .ni {
+.monokai .highlight .ni {
   color: #f8f8f2;
 }
-.highlight .nn {
+.monokai .highlight .nn {
   color: #f8f8f2;
 }
-.highlight .vc {
+.monokai .highlight .vc {
   color: #f8f8f2;
 }
-.highlight .vg {
+.monokai .highlight .vg {
   color: #f8f8f2;
 }
-.highlight .vi {
+.monokai .highlight .vi {
   color: #f8f8f2;
 }
-.highlight .nv {
+.monokai .highlight .nv {
   color: #f8f8f2;
 }
-.highlight .w {
+.monokai .highlight .w {
   color: #f8f8f2;
 }
-.highlight .nl {
+.monokai .highlight .nl {
   color: #f8f8f2;
   font-weight: bold;
 }
-.highlight .nt {
+.monokai .highlight .nt {
   color: #f92672;
 }
-.highlight {
+.monokai .highlight {
   color: #f8f8f2;
   background-color: #49483e;
 }
