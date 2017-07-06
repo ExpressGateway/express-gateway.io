@@ -10,21 +10,30 @@ To run website locally:
 
 Note: highly recommend installing [rvm](https://rvm.io/rvm/install) to install and manage Ruby 
 
-2. `cd` to the repository directory and run the following command:
+2. Install Jekyll and other important Gems. `cd` to the repository directory and run the command:
+
+```
+$ bundle install
+```
+
+3. Now do a build (this is only needed if pushing to GH pages)
 
 ```
 $ bundle exec jekyll build
 ```
 
-3. Run Jekyll using the following command:
+4. Run Jekyll using the following command:
 
 ```
 $ bundle exec jekyll serve
 ```
 
-4. You'll need to override `_config.yml` with the `baseUrl` set to "/"
+5. You'll need to override `_config.yml` with the `baseUrl` set to "/"
 
-5. Load [http://localhost:4000/](http://localhost:4000/) on your browser.
+6. Load [http://localhost:4000/](http://localhost:4000/) on your browser.
+
+## Auto Regeneration
+By default, Jekyll will auto-regenerate the static pages if you change files through a built in filewatcher. You can simply refresh your browser to see the updates.
 
 ## Formatting
 
