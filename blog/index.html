@@ -40,14 +40,14 @@ title: Blog
     <ul>
       {% for post in paginator.posts %}
       <li class="post-excerpt">
-        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+        <h2><a href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a></h2>
         <p class="author">
           <span class="date">{{ post.date | date: '%A %B %d, %Y' }}</span>
         </p>
         <div class="content">
           {{ post.excerpt }}
         </div>
-        <a href="{{ site.baseurl }}{{ post.url }}" class="button-read-more">Read more</a>
+        <a href="{{ site.baseurl }}/{{ post.url }}" class="button-read-more">Read more</a>
       </li>
       {% endfor %}
     </ul>
@@ -56,7 +56,7 @@ title: Blog
       {% if paginator.total_pages > 1 %}
       <nav class="pagination">
         {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="prev paginator-active">Prev</a>
+          <a href="{{ site.baseurl }}{{ paginator.previous_page_path}}" class="prev paginator-active">Prev</a>
         {% else %}
           <span class="prev">Prev</span>
         {% endif %}
@@ -65,9 +65,9 @@ title: Blog
           {% if page == paginator.page %}
             <em class="pagecount">{{ page }}</em>
           {% elsif page == 1 %}
-            <a href="{{ paginator.previous_page_path | replace: '//', '/' }}" class="pagecount">{{ page }}</a>
+            <a href="{{ site.baseurl }}/{{ paginator.previous_page_path }}" class="pagecount">{{ page }}</a>
           {% else %}
-            <a href="{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}" class="pagecount">{{ page }}</a>
+            <a href="{{ site.baseurl }}/{{ site.paginate_path | replace: ':num', page }}" class="pagecount">{{ page }}</a>
           {% endif %}
         {% endfor %}
 
