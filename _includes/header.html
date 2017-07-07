@@ -1,21 +1,21 @@
 <header class="site-header">
   <section class="wrapper">
-    <a href="{{ site.baseurl }}" class="logo">
+    <a href="{{ site.baseurl }}/" class="logo">
       {% include gwe-logo.svg %}
     </a>
     <nav class="type-xxsmall">
-      <span {% if page.url == "/about/" %}class="active"{% endif %}><a href="{{ site.baseurl }}about">About</a></span>
-      <span {% if page.url == "/getting-started/" %}class="active"{% endif %}><a href="{{ site.baseurl }}getting-started">Getting Started</a></span>
-      <span {% if page.url == "/api/" ||  page.url == "/faq/" %}class="active"{% endif %}>
-        <a href="#" class="nav-sub-menu-trigger">Documentation</a>
+      <span {% if page.url == "/about/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/about">About</a></span>
+      <span {% if page.url == "/getting-started/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/getting-started">Getting Started</a></span>
+      <span {% if page.url contains "/docs/" %}class="active"{% endif %}>
+        <a href="{{ site.baseurl }}/docs" class="nav-sub-menu-trigger">Documentation</a>
         <ul class="nav-sub-menu">
-          <li><a href="{{ site.baseurl }}guide">Guide</a></li>
-          <li><a href="{{ site.baseurl }}faq">FAQ</a></li>
+          <li><a href="{{ site.baseurl }}/guide">Guide</a></li>
+          <li><a href="{{ site.baseurl }}/faq">FAQ</a></li>
 
         </ul>
       </span>
-      <span {% if page.url == "/resources/" %}class="active"{% endif %}><a href="{{ site.baseurl }}resources">Resources</a></span>
-      <span {% if page.url == "/blog/" %}class="active"{% endif %}><a href="{{ site.baseurl }}blog">Blog</a></span>
+      <span {% if page.url == "/resources/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/resources">Resources</a></span>
+      <span {% if page.url == "/blog/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/blog">Blog</a></span>
     </nav>
   </section>
   <section class="wrapper-banner">

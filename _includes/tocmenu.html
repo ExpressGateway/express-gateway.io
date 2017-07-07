@@ -1,0 +1,104 @@
+{% assign pages = site.pages | sort: 'order' %}
+
+{% assign parts = page.url | split: '/' %}
+{% assign root = '/' | append: parts[1] | append: '/' %}
+{% assign has_children = false %}
+{% for node in pages %}
+  {% if node.url contains root and node.url != root %}
+    {% assign has_children = true %}
+  {% endif %}
+{% endfor %}
+
+{% if has_children == true %}
+<nav class="sidebar-item sidebar-item-menu">
+  <h2>Menu</h2>
+
+  <ul>
+    {% for node in pages %}
+      {% if node.url contains root %}
+        {% assign node_parts = node.url | split: '/' %}
+        {% assign node_depth = node_parts | size %}
+
+        <!-- 2. Check our node depth -->
+        {% if node_depth == 3 %}
+          <li{% if page.url contains node.url %} class="active"{% endif %}>
+             <a href="{{site.baseurl}}{{ node.url }}">
+               {% if node.link %}
+                 {{ node.link }}
+               {% else %}
+                 {{ node.title }}
+               {% endif %}
+             </a>
+
+             {% assign sub_root = '/' | append: node_parts[1] | append: '/' | append: node_parts[2] | append: '/' %}
+             {% assign has_children = false %}
+             {% for subnode in pages %}
+               {% if subnode.url contains sub_root and subnode.url != sub_root %}
+                 {% assign has_children = true %}
+               {% endif %}
+             {% endfor %}
+
+            {% if has_children == true %}
+              <ul>
+              <!-- 5. Start our next pages loop -->
+              <!-- It's important that we use new variables for subnodes so we don't override the previous iterations -->
+              {% for subnode in pages %}
+
+                <!-- 6. Check that this is in fact a child of the parent node and also not the parent itself -->
+                {% if subnode.url contains sub_root and subnode.url != sub_root %}
+
+                  <!-- Since we're in a new page iteration, we need to find the depth and root in this context -->
+                  {% assign node_parts = subnode.url | split: '/' %}
+                  {% assign node_depth = node_parts | size %}
+
+                  {% if node_depth == 4 %}
+
+                    <li>
+                      <a href="{{site.baseurl}}{{ subnode.url }}">
+                        {% if subnode.link %}
+                          {{ subnode.link }}
+                        {% else %}
+                          {{ subnode.title }}
+                        {% endif %}
+                      </a>
+
+                      <!-- Repeat the process for each layer of menu depth -->
+                      {% assign tertiary_root = '/' | append: node_parts[1] | append: '/' | append: node_parts[2] | append: '/' | append: node_parts[3] | append: '/' %}
+                      {% assign has_children = false %}
+                      {% for tertiary in pages %}
+                        {% if tertiary.url contains tertiary_root and tertiary.url != tertiary_root %}
+                          {% assign has_children = true %}
+                        {% endif %}
+                      {% endfor %}
+
+                      {% if has_children == true %}
+                        <ul>
+                          {% for tertiary in pages %}
+                            {% if tertiary.url contains tertiary_root and tertiary.url != tertiary_root %}
+                              <li{% if page.url contains tertiary.url %} class="active"{% endif %}>
+                                <a href="{{site.baseurl}}{{ tertiary.url }}">
+                                  {% if tertiary.link %}
+                                    {{ tertiary.link }}
+                                  {% else %}
+                                    {{ tertiary.title }}
+                                  {% endif %}
+                                </a>
+                              </li>
+                            {% endif %}
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                      <!-- repeat end -->
+                    </li>
+                  {% endif %}<!-- End of subnode_depth if -->
+                {% endif %}<!-- End of subnode.url contains node_root if -->
+              {% endfor %}<!-- End of subnode in pages loop -->
+              </ul>
+            {% endif %}<!-- End of has_children if -->
+          </li>
+        {% endif %}<!-- End of node_depth if -->
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
+{% endif %}
