@@ -187,6 +187,7 @@ h2.description {
   font-weight: 200;
   line-height: $font-lineheight-base + 2;
   color: $color-secondary-dark-50;
+  letter-spacing: -2px;
 }
 
 .introduction {
@@ -313,7 +314,7 @@ h2.description {
 }
 
 .marchitecture {
-  width: 60%;
+  width: 62%;
   text-align: right;
   margin-left: auto;
   margin-bottom: 3rem;
