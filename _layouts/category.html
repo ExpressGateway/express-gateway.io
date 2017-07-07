@@ -6,7 +6,7 @@ layout: page
 <div class="wrapper">
 <div class="flex-column shape-style" markdown="1">
 <h2 class="blog-header">{{ page.title }}</h2>
-<a class="back" href="{{ site.baseurl}}blog">Back to article listing</a>
+<a class="back" href="{{ site.baseurl}}/blog">Back to article listing</a>
 <div class="article-list">
 <ul>
 {% for post in site.posts %}
@@ -14,14 +14,14 @@ layout: page
     {% if post_cat == page.category %}
             <li>
               <div class="post-excerpt">
-                <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+                <h1><a href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a></h1>
                 <p class="author">
                   <span class="date">{{ post.date | date: '%A %B %d, %Y' }}</span>
                 </p>
                 <div class="content">
                   {{ post.excerpt }}
                 </div>
-                <a href="{{ site.baseurl }}{{ post.url }}" class="button-read-more">Read more</a>
+                <a href="{{ site.baseurl }}/{{ post.url }}" class="button-read-more">Read more</a>
               </div>
             </li>
     {% endif %}
