@@ -56,7 +56,7 @@ title: Blog
       {% if paginator.total_pages > 1 %}
       <nav class="pagination">
         {% if paginator.previous_page %}
-          <a href="{{ site.baseurl }}{{ paginator.previous_page_path}}" class="prev paginator-active">Prev</a>
+          <a href="{{ site.baseurl }}/{{ paginator.previous_page_path}}" class="prev paginator-active">Prev</a>
         {% else %}
           <span class="prev">Prev</span>
         {% endif %}
@@ -72,7 +72,7 @@ title: Blog
         {% endfor %}
 
         {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path | replace: '//', '/' }}" class="next paginator-active">Next</a>
+          <a href="{{ site.baseurl }}/{{ paginator.next_page_path}}" class="next paginator-active">Next</a>
         {% else %}
           <span class="next">Next</span>
         {% endif %}
@@ -100,7 +100,7 @@ title: Blog
   {% assign prevyear = post.previous.date | date: "%B %Y" %}
   {% assign counter = counter | plus: 1 %}
   {% if thisyear != prevyear %}
-    <li><a href="{{ site.baseurl }}blog/{{ post.date | date:"%Y/%m" }}" class="sidebarnav">{{ thisyear }} ({{ counter }})</a></li>
+    <li><a href="{{ site.baseurl }}/blog/{{ post.date | date:"%Y/%m" }}" class="sidebarnav">{{ thisyear }} ({{ counter }})</a></li>
     {% assign counter = 0 %}
   {% endif %}
 {% endfor %}
