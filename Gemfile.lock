@@ -5,7 +5,6 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     colorator (1.1.0)
     ffi (1.9.18)
-    ffi (1.9.18-java)
     forwardable-extended (2.6.0)
     jekyll (3.4.3)
       addressable (~> 2.4)
@@ -42,14 +41,8 @@ GEM
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.24)
-    thread_safe (0.3.6-java)
-    tzinfo (1.2.3)
-      thread_safe (~> 0.1)
-    tzinfo-data (1.2017.2)
-      tzinfo (>= 1.0.0)
 
 PLATFORMS
-  java
   ruby
 
 DEPENDENCIES
@@ -58,9 +51,3 @@ DEPENDENCIES
   jekyll-paginate
   minima (~> 2.0)
   tzinfo-data
-
-RUBY VERSION
-   ruby 2.3.1p0 (jruby 9.1.6.0)
-
-BUNDLED WITH
-   1.13.7
