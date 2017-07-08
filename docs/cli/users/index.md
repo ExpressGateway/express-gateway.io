@@ -3,22 +3,27 @@ layout: doc-section
 title: eg users
 ---
 
-_Alias:_ `eg user`
-
-## Description
+### Description
 
 Manage users
 
-## Child commands
+### Usage
 
-| Command                           | Description                     |
-| ---                               | ---                             |
-| [eg users activate][activate]     | Activate one or more users.     |
-| [eg users create][create]         | Create one or more users.       |
-| [eg users deactivate][deactivate] | Deactivate one or more users.   |
-| [eg users info][info]             | Show details for a single user. |
-| [eg users list][list]             | List users.                     |
-| [eg users update][update]         | Update a single user.           |
+```shell
+eg users <command> [options]
+```
+
+### Child commands
+
+| Command                  | Description                     | Alias |
+| ---                      | ---                             | ---   |
+| [activate][activate]     | Activate one or more users.     |       |
+| [create][create]         | Create one or more users.       |       |
+| [deactivate][deactivate] | Deactivate one or more users.   |       |
+| [info][info]             | Show details for a single user. |       |
+| [list][list]             | List users.                     |       |
+| [remove][remove]         | Remove one or more users.       | rm    |
+| [update][update]         | Update a single user.           |       |
 
 
 [activate]: {{ site.baseurl }}{% link docs/cli/users/activate.md %}
@@ -26,4 +31,5 @@ Manage users
 [deactivate]: {{ site.baseurl }}{% link docs/cli/users/deactivate.md %}
 [info]: {{ site.baseurl }}{% link docs/cli/users/info.md %}
 [list]: {{ site.baseurl }}{% link docs/cli/users/list.md %}
+[remove]: {{ site.baseurl }}{% link docs/cli/users/remove.md %}
 [update]: {{ site.baseurl }}{% link docs/cli/users/update.md %}

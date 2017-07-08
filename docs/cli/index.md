@@ -3,11 +3,11 @@ layout: doc-section
 title: CLI Reference
 ---
 
-## Overview of eg
+### Overview of eg
 
 `eg` is a command-line interface (CLI) for executing commands against an Express Gateway instance.
 
-## Syntax
+### Syntax
 
 The `eg` CLI uses the following syntax to run commands:
 
