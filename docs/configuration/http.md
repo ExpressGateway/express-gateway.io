@@ -2,7 +2,6 @@
 layout: doc-section
 title:  "http"
 ---
-#### http
 The http section is used to configure HTTP. Express Gateway will listen on  the specified port for HTTP requests.
 
 Options:

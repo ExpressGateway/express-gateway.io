@@ -1,8 +1,7 @@
 ---
 layout: doc-section
-title:  "Paths"
+title:  "paths"
 ---
-#### Paths
 Paths can be either a string or array of strings.  Wildcard patterns are supported.  Paths follow the ExpressJS routes conventions - [https://expressjs.com/en/4x/api.html#router](https://expressjs.com/en/4x/api.html#router)
 
 Examples:

@@ -2,7 +2,6 @@
 layout: doc-section
 title:  "Policy Conditions"
 ---
-##### Policy conditions
 
 Each Policy in a pipeline can be gated with a condition specification. Each
 condition specification is in the format:

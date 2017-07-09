@@ -2,7 +2,6 @@
 layout: doc-section
 title:  "serviceEndpoints"
 ---
-#### serviceEndpoints
 Express Gateway receive API requests on apiEndpoints, process them and then proxy them to downstream microservices. The serviceEndpoints section specifies the URLs of these proxied microservices.
 
 Usage:
