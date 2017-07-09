@@ -2,7 +2,6 @@
 layout: doc-section
 title:  "Conditions Based Config A"
 ---
-##### Condition based config (variant A)
 ```yaml
 serviceEndpoints:
   admin: # will be referenced in proxy policy

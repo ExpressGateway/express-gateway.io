@@ -2,7 +2,6 @@
 layout: doc-section
 title:  "Configuration"
 ---
-## Configuration
 One key feature of Express Gateway is that configuration is completely separate from the static code used to run the gateway.  
 
 All configuration is centralized and can be found in the `/config` directory of the main Express Gateway folder.

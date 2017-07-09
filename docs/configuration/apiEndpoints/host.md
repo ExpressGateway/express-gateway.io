@@ -1,8 +1,7 @@
 ---
 layout: doc-section
-title:  "Host"
+title:  "host"
 ---
-#### Host
 
 The `host` value is a string that will be matched against the 'HOST' header of the request.
 

@@ -1,8 +1,7 @@
 ---
 layout: doc-section
-title:  "Pipelines"
+title:  "pipelines"
 ---
-#### Pipelines
 The pipelines section specify the core Express Gateway's operations by tying  together all entities declared in the sections above, through the request and response flow.
 
 Pipelines are an ordered list of policies that are executed for requests received from all linked apiEndpoints.

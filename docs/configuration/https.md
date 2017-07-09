@@ -2,7 +2,6 @@
 layout: doc-section
 title:  "http"
 ---
-#### https
 The https section is used to configure HTTPS. Express Gateway will listen on the specified port for HTTPS requests.
 
 Options:
@@ -28,24 +27,5 @@ https:
     - "default":                    # will be used if no match above or if SNI is not used
         key: keys/eg.io.key.pem
         cert: keys/eg.io.cert.pem
-
-```
-
-```yaml
-
-apiEndpoints:
-  help:                 # name, used as reference in pipeline
-    host: '*'           # optional, by default accepts all hosts, same as '*'
-    paths: /help        # optional, by default will serve all requests - same as *
-
-  api:                  # name, used as reference in pipeline
-    host: '*.com'       # wildcard pattern support
-    paths:
-      - '/v1/*'         # string or array of strings
-      - '/v2/*'
-
-  example:              # name, used as reference in pipeline
-    host: 'example.com'
-    paths: /v2/*        # string or array of strings
 
 ```
