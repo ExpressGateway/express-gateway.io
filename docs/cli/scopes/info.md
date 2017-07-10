@@ -16,3 +16,12 @@ eg scopes info [options] <scope>
 ### Options
 
 None.
+
+### Examples
+
+#### Get scope info
+
+```shell
+$ eg scopes info admin:write             
+admin:write
+```
