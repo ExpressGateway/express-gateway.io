@@ -17,7 +17,7 @@ Manual Restart is required for changes in:
 * http section (port)
 * https section (port and certificates)
 * system.config.yml
-* model changes in `model-configs` 
+* model changes in `model-configs`
 
 
 #### Troubleshooting

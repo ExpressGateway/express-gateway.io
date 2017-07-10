@@ -2,7 +2,7 @@
 layout: doc-section
 title:  "CORS"
 ---
-Enables Cross-origin resource sharing (CORS) in EG. 
+Enables Cross-origin resource sharing (CORS) in EG.
 CORS defines a way in which a browser and server can interact to determine whether or not it is safe to allow the cross-origin request
 
 Example: simple
@@ -19,25 +19,25 @@ policies:
 ```
 
 Example: full
-```yml 
-  http: 
+```yml
+  http:
     port: 9089
 
-  apiEndpoints: 
+  apiEndpoints:
     test_default:
-  
+
   serviceEndpoints:
   example: # will be referenced in proxy policy
     url: 'http://example.com'
 
-  pipelines: 
-    pipeline1: 
+  pipelines:
+    pipeline1:
       apiEndpoints: test_default
-      policies: 
-        - 
+      policies:
+        -
           cors:
             -
-              action: 
+              action:
                 name: cors
                 origin: 'http://www.example.com'
                 methods: 'HEAD,PUT,PATCH,POST,DELETE'
@@ -51,7 +51,7 @@ Example: full
 
 ```
 
-##### Options Reference 
+##### Options Reference
 * `origin`: Configures the `Access-Control-Allow-Origin` CORS header. Possible values:
   + Boolean - set origin to true to reflect the request origin, as defined by req.header('Origin'), or set it to false to disable CORS.
   + String - set origin to a specific origin. For example if you set it to "http://example.com" only requests from "http://example.com" will be allowed.

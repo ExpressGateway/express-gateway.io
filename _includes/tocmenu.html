@@ -1,4 +1,4 @@
-{% assign pages = site.pages | sort: 'order' %}
+{% assign pages = site.html_pages | sort: 'doc-order' %}
 
 {% assign parts = page.url | split: '/' %}
 {% assign root = '/' | append: parts[1] | append: '/' %}
@@ -22,7 +22,7 @@
         <!-- 2. Check our node depth -->
         {% if node_depth == 3 %}
           <li{% if page.url contains node.url %} class="active"{% endif %}>
-             <a href="{{site.baseurl}}{{ node.url }}">
+             {{ node.doc-order }} <a href="{{site.baseurl}}{{ node.url }}">
                {% if node.link %}
                  {{ node.link }}
                {% else %}
@@ -54,7 +54,7 @@
                   {% if node_depth == 4 %}
 
                     <li>
-                      <a href="{{site.baseurl}}{{ subnode.url }}">
+                       {{ node.doc-order }} <a href="{{site.baseurl}}{{ subnode.url }}">
                         {% if subnode.link %}
                           {{ subnode.link }}
                         {% else %}
@@ -73,14 +73,16 @@
 
                       {% if has_children == true %}
                         <ul>
-                          {% for tertiary in pages %}
-                            {% if tertiary.url contains tertiary_root and tertiary.url != tertiary_root %}
-                              <li{% if page.url contains tertiary.url %} class="active"{% endif %}>
+                          {% assign tertiarypages = site.html_pages | sort: 'list-order' %}
+
+                          {% for tertiarysorted in tertiarypages %}
+                            {% if tertiarysorted.url contains tertiary_root and tertiarysorted.url != tertiary_root %}
+                              {{ node.list-order }} <li{% if page.url contains tertiarysorted.url %} class="active"{% endif %}>
                                 <a href="{{site.baseurl}}{{ tertiary.url }}">
-                                  {% if tertiary.link %}
-                                    {{ tertiary.link }}
+                                  {% if tertiarysorted.link %}
+                                    {{ tertiarysorted.link }}
                                   {% else %}
-                                    {{ tertiary.title }}
+                                    {{ tertiarysorted.title }}
                                   {% endif %}
                                 </a>
                               </li>

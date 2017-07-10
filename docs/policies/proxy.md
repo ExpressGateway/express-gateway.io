@@ -9,7 +9,7 @@ This type of policy should generally be placed last in the policies list within 
 
 Example:
 ```yaml
-http: 
+http:
   port: 9091
 
 apiEndpoints:

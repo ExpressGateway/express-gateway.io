@@ -7,7 +7,7 @@ The rate limiter policy is used to limit the number of requests received and pro
 Sample use cases:
 
 - Use to limit repeated requests to public APIs and/or endpoints such as password reset.
-- Limit access by host name in order to provide different service plans for customers. 
+- Limit access by host name in order to provide different service plans for customers.
 
 Example:
 
@@ -31,7 +31,7 @@ pipeline1:
           action:
             name: 'rate-limit'
             max: 10
-            windowMs: 120000 
+            windowMs: 120000
             rateLimitBy: "${req.hostname}"
       - proxy:
         -
@@ -52,7 +52,7 @@ policies:
     rate-limiter:
       -
         condition: # will execute action only for host matching example.com
-          name: hostMatch, 
+          name: hostMatch,
           pattern: example.com
         action:
           name: rate-limit
@@ -61,7 +61,7 @@ policies:
 
 Example:
 
-TODO: Rate-limit established by user 
+TODO: Rate-limit established by user
 TODO: Rate-limit established by application
 
 ##### Options Reference

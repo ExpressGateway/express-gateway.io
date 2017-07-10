@@ -2,7 +2,7 @@
 layout: doc-section
 title:  "Credential Management"
 ---
-Express Gateway comes with a rich Credential Management module that provides a complete authentication and authorization system. The Credential Management module can also work alongside existign Authorization systems and providers. The system associates consumers (apps and user) with their set of credentials. 
+Express Gateway comes with a rich Credential Management module that provides a complete authentication and authorization system. The Credential Management module can also work alongside existign Authorization systems and providers. The system associates consumers (apps and user) with their set of credentials.
 
 A credential is created for a consumer and its authentication and authorization type is set by one of the supported policies within Express Gateway (e.g. OAuth2, Key Auth, etc...)
 
@@ -15,7 +15,7 @@ Bob is a user in Express Gateway.  Bob is associated with an app that he has cre
 Example:
 Bob as a Express Gateway `user` can have...
 - a basic challenge credential
-- an OAuth 2 credential 
+- an OAuth 2 credential
 associated with his userid.
 
 "Dumb Ways to Code", an Expresss Gateway application, may also have its own set of credentials...
@@ -31,6 +31,6 @@ Example:
 1. Express Gateway exposes an "admin" API endpoint. The "admin" API endpoint has a scope "superuser" associated to it.
 2. The "admin" endpoint is linked and processed by the "default" pipeline that has a Key auth policy enabled.
 3. Bob, an Express Gateway user attempts to access the "admin" API endpoint passing an API key.
-4. The Consumer Management module identifies Bob.  Bob's credentials are searched for a Key auth credential matching the key passed by Bob. 
+4. The Consumer Management module identifies Bob.  Bob's credentials are searched for a Key auth credential matching the key passed by Bob.
 5. Bob's key auth credential contains a list of scopes and "superuser" is one of them.
-6. Bob is granted access to the "admin" API endpoint and further processing of his request continues. 
+6. Bob is granted access to the "admin" API endpoint and further processing of his request continues.

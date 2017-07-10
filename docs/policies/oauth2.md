@@ -76,7 +76,7 @@ There are 3 distinct entities at play -
         * redirectUri
         * scopes
         * response_type
-        
+
 7. EG responds back with whether or not the client is authorized. If authorized, it returns an authorization code and redirect_uri.
 8. UI redirects the client app to the redirect_uri
 9. Client App will exchange the auth_code for an access token by making a POST to /oauth2/token
