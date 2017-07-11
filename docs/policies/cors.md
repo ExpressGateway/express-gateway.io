@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title:  "CORS"
+doc-order: 4.4
 ---
 Enables Cross-origin resource sharing (CORS) in EG.
 CORS defines a way in which a browser and server can interact to determine whether or not it is safe to allow the cross-origin request
