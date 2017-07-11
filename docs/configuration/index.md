@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title:  "Configuration"
+doc-order: 3.0
 ---
 One key feature of Express Gateway is that configuration is completely separate from the static code used to run the gateway.  
 
