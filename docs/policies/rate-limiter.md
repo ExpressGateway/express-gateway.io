@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title:  "Rate Limiter"
+doc-order: 4.5
 ---
 The rate limiter policy is used to limit the number of requests received and processed by the API endpoint. Limits are useful to prevent your system from being overwhelmed in both benign and malevolent situations where the number of requests processed can overwhelm your underlying APIs and supporting services. Rate limits are also useful to control the amount of API consumption to a known capacity of quantity.
 

@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title:  "Basic Authorization"
+doc-order: 4.1
 ---
 The EG Basic Authentication policy follows the RFC 7617 standard: https://tools.ietf.org/html/rfc7617
 
