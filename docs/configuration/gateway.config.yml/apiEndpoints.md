@@ -2,7 +2,7 @@
 layout: doc-section
 title:  "apiEndpoints"
 doc-order: 3.1
-list-order: .4
+list-order: .3
 ---
 Express Gateway exposes microservices as APIs through URLs known as apiEndpoints. API consumers may API requests through the API endpoints.
 
