@@ -1,6 +1,8 @@
 ---
 layout: doc-section
 title:  "https"
+doc-order: 3.1
+list-order: .2
 ---
 The https section is used to configure HTTPS. Express Gateway will listen on the specified port for HTTPS requests.
 
