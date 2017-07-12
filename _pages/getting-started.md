@@ -203,13 +203,15 @@ function this(){
 }
 ```
 </li>
-- Assign the key credential to Bob (eg create key bob)
-    ![secure-1]({{ site.baseurl }}/assets/img/secure-1.png "Secure-1")
-- Curl API endpoint without credentials - FAIL
-    ![secure-2]({{ site.baseurl }}/assets/img/secure-2.png "Secure-2")
-
-- Curl API endpoint with Bob and key credentials - SUCCESS!
-    ![secure-3]({{ site.baseurl }}/assets/img/secure-3.png "Secure-3")
+<li markdown="1">Assign the key credential to Bob (eg create key bob)
+![secure-1]({{ site.baseurl }}/assets/img/secure-1.png "Secure-1")
+</li>
+<li markdown="1">Curl API endpoint without credentials - FAIL
+![secure-2]({{ site.baseurl }}/assets/img/secure-2.png "Secure-2")
+</li>
+<li markdown="1">Curl API endpoint with Bob and key credentials - SUCCESS!
+![secure-3]({{ site.baseurl }}/assets/img/secure-3.png "Secure-3")
+</li>
 </ol>
 </div>
 </li>
