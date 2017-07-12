@@ -92,3 +92,12 @@
   font-family: 'Inconsolata', monospace;
   line-height: 1.35rem;
 }
+
+code.highlighter-rouge {
+  background-color: $color-gray-light;
+  color: $color-text;
+  padding: .3rem;
+  font-family: 'Inconsolata', monospace;
+  border-radius: 4px;
+  line-height: 1.35rem;
+}
