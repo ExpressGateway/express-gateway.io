@@ -1,7 +1,7 @@
 ---
 layout: doc-section
 title:  "Consumer Management"
-doc-order: 5.0
+doc-order: 6.0
 ---
 Express Gateway comes with a Consumer management system. An API consumer is either a user or application.
 

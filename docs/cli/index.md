@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title: CLI Reference
+doc-order: 4.0
 ---
 
 ### Overview of eg

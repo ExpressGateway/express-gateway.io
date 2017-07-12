@@ -1,7 +1,7 @@
 ---
 layout: doc-section
 title:  "Runtime"
-doc-order: 7.0
+doc-order: 8.0
 ---
 #### Hot Reload vs Manual Restart
 Express gateway automatically monitors changes of the config file provided at start.
