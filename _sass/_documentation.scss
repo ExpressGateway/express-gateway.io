@@ -15,6 +15,17 @@
     width: 25%;
   }
 
+  .sidebar-docs {
+    h2 {
+      a {
+        text-decoration: none;
+        font-size: $font-size-18;
+        color: $color-gray;
+        font-weight: bold;
+      }
+    }
+  }
+
   aside.tocwrapper {
     position: fixed;
     padding-top: $header-top-height + $header-main-height;
@@ -24,8 +35,6 @@
       position: absolute;
     }
     nav {
-
-
       a {
         display: block;
         text-decoration: none;
