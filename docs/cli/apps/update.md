@@ -20,6 +20,11 @@ eg apps update <app_id> [options]
 | `-p, --property` | `string`  |         | App property in the form [-p 'foo=bar'] |
 | `-q, --quiet`    | `boolean` | `false` | Only show app ID                        |
 
+### Extended description
+
+<!-- TODO: Link to app model config docs -->
+The properties associated with an app are specified in the model config.
+
 ### Examples
 
 #### Update an app with prompts

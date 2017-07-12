@@ -27,6 +27,9 @@ eg apps create [options]
 
 Either the `-u, --user` option or the `--stdin` option is required to run this command.
 
+<!-- TODO: Link to app model config docs -->
+The properties associated with an app are specified in the model config.
+
 ### Examples
 
 #### Create an app with prompts

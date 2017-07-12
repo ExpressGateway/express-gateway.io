@@ -20,6 +20,11 @@ eg users update <user_id|user_name> [options]
 | `-p, --property` | `string`  |         | User property in the form [-p 'foo=bar'] |
 | `-q, --quiet`    | `boolean` | `false` | Only show user ID                        |
 
+### Extended description
+
+<!-- TODO: Link to user model config docs -->
+The properties associated with a user are specified in the model config.
+
 ### Examples
 
 #### Update a user with prompts

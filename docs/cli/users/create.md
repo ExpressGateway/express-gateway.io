@@ -21,6 +21,11 @@ eg users create [options]
 | `--stdin`        | `boolean` | `false` | Import newline-delimited JSON via standard input |
 | `-q, --quiet`    | `boolean` | `false` | Only show user ID                                |
 
+### Extended description
+
+<!-- TODO: Link to user model config docs -->
+The properties associated with a user are specified in the model config.
+
 ### Examples
 
 #### Create a user with prompts
