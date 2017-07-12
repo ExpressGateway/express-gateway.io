@@ -433,17 +433,20 @@ h2.description {
     p {
 
       margin-bottom: 2rem;
-      flex: 1;
+      flex: 3;
       display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
       img {
-        width: 100%;
-        height: auto;
+        max-width: 100%;
+        max-height: auto;
         text-align: center;
         margin: 0 auto;
+
       }
     }
     ol {
-      flex: 1;
+      flex: 2;
       li {
         font-size: $font-size-18;
         padding: .75rem 0;

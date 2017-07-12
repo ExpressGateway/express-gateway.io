@@ -124,9 +124,9 @@ Now that we’ve described what’s in Express Gateway and how it relates to Exp
 1. Each policy has a set of conditions dynamically injected from the Centralized Config.
 2. If the set of conditions are met, a new process begins. An action is taken by the Express middleware at the heart of the Express Gateway policy. The request is passed onto the next policy within the pipeline and the process repeats for every policy within the pipeline.
 </div>
-<div class="wrapper flex-row" markdown="1">
+<div class="wrapper flex-row with-graphics" markdown="1">
 
-<img />
+![Pipelines]({{ site.baseurl }}/assets/img/Marchitecture_v6b_pipelines.png "Pipelines")
 
 1. After all of the policies in the pipeline are passed, the request is proxied to an underlying microservice which applies the business logic and sends out the response to the API consumer
 2. Policies can act on that response before it's forwarded to the API consumer.

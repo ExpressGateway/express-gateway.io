@@ -82,6 +82,7 @@ function this(){
 </ol>
 
 ###### Step 2
+![Specify Microservice]({{ site.baseurl }}/assets/img/Marchitecture_Specify-Microservice-Step-2.png "Specify Microservice")
 The service will be specified as a private endpoint in the default pipeline in Express Gateway.  A pipeline is a set of policies.  One of the policies that Express Gateway supports is a proxy policy.  Using the proxy policy within the default pipeline, the gateway will now sit in front of the API and route external requests to the API
 <ol>
 <li>go to /config</li>
@@ -102,6 +103,7 @@ function this(){
 </ol>
 
 ###### Step 3
+![Expose API]({{ site.baseurl }}/assets/img/Marchitecture_Specify-Microservice-Step-3.png "Expose API")
 We’re going to expose the API as a public endpoint. When an API is made public through a public endpoint, the API can be accessed externally.
 <ol>
 <li>Goto /config</li>
@@ -122,6 +124,7 @@ function this(){
 </ol>
 
 ###### Step 4
+![Access API]({{ site.baseurl }}/assets/img/Marchitecture_Specify-Microservice-Step-4.png "Access API")
 Now that we have a public endpoint surfaced, we should be able to access the API.
 1. Type in public endpoint URL
 2. Access JSON
