@@ -367,6 +367,11 @@ h2.description {
   .svg-fix {
     margin-top: 2rem;
   }
+  .with-graphics {
+    ol li {
+      list-style: decimal;
+    }
+  }
 }
 
 .page-section-white {
