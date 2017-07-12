@@ -107,7 +107,7 @@ Essentially, all of the core components within Express Gateway make Express more
 <div class="wrapper">
 <div class="flex-column infographics" markdown="1">
 
-#### How does Express Gateway work?
+## How does Express Gateway work?
 Now that we’ve described what’s in Express Gateway and how it relates to Express, let’s go over how it works:
 <div class="wrapper flex-row with-graphics" markdown="1">
 ![Core Injection]({{ site.baseurl }}/assets/img/Marchitecture_CoreInjection_01.png "Core Injection")
