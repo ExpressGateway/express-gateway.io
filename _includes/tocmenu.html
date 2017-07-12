@@ -11,7 +11,7 @@
 
 {% if has_children == true %}
 <nav class="sidebar-item sidebar-item-menu">
-  <h2>Menu</h2>
+  <h2>Documentation</h2>
 
   <ul>
     {% for node in pages %}
@@ -22,7 +22,7 @@
         <!-- 2. Check our node depth -->
         {% if node_depth == 3 %}
           <li{% if page.url contains node.url %} class="active"{% endif %}>
-             {{ node.doc-order }} <a href="{{site.baseurl}}{{ node.url }}">
+             <a href="{{site.baseurl}}{{ node.url }}">
                {% if node.link %}
                  {{ node.link }}
                {% else %}
@@ -54,7 +54,7 @@
                   {% if node_depth == 4 %}
 
                     <li>
-                       {{ node.doc-order }} <a href="{{site.baseurl}}{{ subnode.url }}">
+                      <a href="{{site.baseurl}}{{ subnode.url }}">
                         {% if subnode.link %}
                           {{ subnode.link }}
                         {% else %}
@@ -77,7 +77,7 @@
 
                           {% for tertiarysorted in tertiarypages %}
                             {% if tertiarysorted.url contains tertiary_root and tertiarysorted.url != tertiary_root %}
-                              {{ node.list-order }} <li{% if page.url contains tertiarysorted.url %} class="active"{% endif %}>
+                              <li{% if page.url contains tertiarysorted.url %} class="active"{% endif %}>
                                 <a href="{{site.baseurl}}{{ tertiarysorted.url }}">
                                   {% if tertiarysorted.link %}
                                     {{ tertiarysorted.link }}
