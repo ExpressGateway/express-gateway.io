@@ -309,8 +309,65 @@ h2.description {
 
 .announcement {
   background: $color-secondary-light;
-  padding: 1rem;
   font-weight: 300;
+
+  h3 {
+    padding: 1.75rem;
+  }
+  .emailform {
+    width: 100%;
+    display: flex;
+    background: #32a5c1; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #32a5c1 0%, #0f8696 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #32a5c1 0%,#0f8696 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #32a5c1 0%,#0f8696 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32a5c1', endColorstr='#0f8696',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    font-family: $font-family;
+
+    #mc_embed_signup {
+      background: transparent;
+      min-width: 60%;
+      padding: 1rem 0;
+      border-top: 6px solid $color-highlight;
+
+      form {
+        text-align: center;
+        padding: 0;
+        label[for="mce-EMAIL"] {
+          color: $color-background;
+          padding:0 0 .75rem;
+          font-weight: 300;
+          font-family: $font-family;
+        }
+
+      }
+      .email-form-inputs {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        width: 75%;
+        height: 2.5rem;
+        letter-spacing: normal;
+        #mce-EMAIL {
+          margin: 0 20px 0 0;
+          display: flex;
+          flex: 4;
+          font-family: $font-family;
+        }
+
+        #mc-embedded-subscribe {
+          display: flex;
+          flex: 2;
+          background: $color-highlight;
+          color: $color-text;
+          height: 100%;
+          margin: 0;
+          font-size: $font-size-18;
+          font-family: $font-family;
+        }
+      }
+    }
+  }
 }
 
 .marchitecture {
