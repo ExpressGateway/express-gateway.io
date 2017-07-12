@@ -60,18 +60,17 @@ Express Gateway is a bunch of components which declaratively build around Expres
 </div>
 </div>
 
-<div class="wrapper border-top-blue flex-row flex-center whatiseg" markdown="1">
-<div class="flex-one">
-<img src="{{ site.baseurl }}assets/img/Marchitecture_Express-As-We-Know-it_01.png" /></div>
+<div class="wrapper border-top-blue flex-row flex-center whatiseg with-graphics with-graphics" markdown="1">
+<img src="{{ site.baseurl }}/assets/img/Marchitecture_Express-As-We-Know-it_01.png" />
 <div class="flex-column" markdown="1">
 ### Express as we know it, today
 
 Within Express is its Router. The Router matches URLs and routes them to modules known as “middleware”.  Each middleware acts on a request coming into Express through the router and passes it onto the next piece of middleware as a chain.  This request, response and “next” flow is the foundation of how Express works and its simplicity is why its so popular.
 </div>
 </div>
-<div class="wrapper border-top-blue flex-row flex-row-reverse" markdown="1">
-<div class="flex-one">
-<img src="{{ site.baseurl }}assets/img/Marchitecture_ExpressGatewayCore_01.png" /></div>
+<div class="wrapper border-top-blue flex-row flex-row-reverse with-graphics" markdown="1">
+
+<img src="{{ site.baseurl }}/assets/img/Marchitecture_ExpressGatewayCore_01.png" />
 <div class="wrapper" markdown="1">
 
 ### Express Gateway Core
@@ -110,25 +109,24 @@ Essentially, all of the core components within Express Gateway make Express more
 
 #### How does Express Gateway work?
 Now that we’ve described what’s in Express Gateway and how it relates to Express, let’s go over how it works:
-<div class="wrapper flex-row" markdown="1">
-<img />
-
+<div class="wrapper flex-row with-graphics" markdown="1">
+![Core Injection]({{ site.baseurl }}/assets/img/Marchitecture_CoreInjection_01.png "Core Injection")
 1. Express Gateway YAML is read.
 2. Config parameters initialize Express and its middleware.
 3. A request comes in through an API endpoint and is received by the Router.
 4. The Router connects the API endpoint to a pipeline.
 5. Within each pipeline is a set of policies.
 </div>
-<div class="wrapper flex-row" markdown="1">
+<div class="wrapper flex-row with-graphics" markdown="1">
 
-<img />
+![Policies]({{ site.baseurl }}/assets/img/Marchitecture_v6a.png "Policies")
 
 1. Each policy has a set of conditions dynamically injected from the Centralized Config.
 2. If the set of conditions are met, a new process begins. An action is taken by the Express middleware at the heart of the Express Gateway policy. The request is passed onto the next policy within the pipeline and the process repeats for every policy within the pipeline.
 </div>
-<div class="wrapper flex-row" markdown="1">
+<div class="wrapper flex-row with-graphics" markdown="1">
 
-<img />
+![Pipelines]({{ site.baseurl }}/assets/img/Marchitecture_v6b_pipelines.png "Pipelines")
 
 1. After all of the policies in the pipeline are passed, the request is proxied to an underlying microservice which applies the business logic and sends out the response to the API consumer
 2. Policies can act on that response before it's forwarded to the API consumer.

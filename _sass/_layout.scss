@@ -426,28 +426,36 @@ h2.description {
 }
 
 .infographics {
-  .wrapper {
+
+  .wrapper.with-graphics {
     margin-bottom: 4rem;
-  }
 
-  p {
-    width: 100% !important;
-    margin-bottom: 2rem;
-  }
+    p {
 
-  ol {
-    li {
-      font-size: $font-size-18;
-      padding: .75rem 0;
+      margin-bottom: 2rem;
+      flex: 3;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      img {
+        max-width: 100%;
+        max-height: auto;
+        text-align: center;
+        margin: 0 auto;
+
+      }
     }
+    ol {
+      flex: 2;
+      li {
+        font-size: $font-size-18;
+        padding: .75rem 0;
+      }
+    }
+
   }
 
-  img {
-    background: $color-gray-light;
-    border: 1px solid black;
-    width: 95%;
-    height: 300px;
-    margin-right: 5%;
-    text-align: center;
-  }
+
+
+
 }
