@@ -1,0 +1,11 @@
+#subscribe-result {
+  width: 100%;
+  font-size: $font-size-14;
+  &.subscribe-error {
+    background: $color-highlight;
+  }
+}
+
+#mc_embed_signup {
+
+}
