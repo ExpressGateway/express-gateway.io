@@ -78,7 +78,7 @@
                           {% for tertiarysorted in tertiarypages %}
                             {% if tertiarysorted.url contains tertiary_root and tertiarysorted.url != tertiary_root %}
                               {{ node.list-order }} <li{% if page.url contains tertiarysorted.url %} class="active"{% endif %}>
-                                <a href="{{site.baseurl}}{{ tertiary.url }}">
+                                <a href="{{site.baseurl}}{{ tertiarysorted.url }}">
                                   {% if tertiarysorted.link %}
                                     {{ tertiarysorted.link }}
                                   {% else %}
