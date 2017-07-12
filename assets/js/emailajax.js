@@ -21,17 +21,17 @@ function register($form) {
     success: function (data) {
       $('#mc-embedded-subscribe').val('subscribe')
       if (data.result === 'success') {
-        // Yeahhhh Success
+        // Success
         console.log(data.msg)
         $('#mce-EMAIL').css('borderColor', '#ffffff')
-        $('#subscribe-result').css('color', 'rgb(53, 114, 210)')
-        $('#subscribe-result').html('<p>Thank you for subscribing. We have sent you a confirmation email.</p>')
+        $('#mc_embed_signup').addClass('subscribe-success')
+        $('#subscribe-success').html('<p>Thank you for subscribing. We have sent you a confirmation email.</p>')
         $('#mce-EMAIL').val('')
       } else {
         // Something went wrong, do something to notify the user.
         console.log(data.msg)
         $('#mce-EMAIL').css('borderColor', '#ff8282')
-        $('#subscribe-result').css('color', '#ff8282')
+        $('#subscribe-result').addClass('subscribe-error')
         $('#subscribe-result').html('<p>' + data.msg.substring(4) + '</p>')
       }
     }
