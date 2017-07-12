@@ -29,16 +29,17 @@
     flex-direction: column;
     padding-right: 2rem;
     flex-basis: 225px;
+    position: relative;
 
-    &.tocwrapperstick {
+  }
 
-      .sidebar-docs {
-      //  bottom: 3rem;
-        position: absolute;
-        background: red;
-        transition: all 2s;
-
-      }
+  .tocwrapperstick {
+    // background: green;
+    .sidebar-docs {
+      // bottom: 3rem;
+      //position: absolute;
+      transition: all 2s;
+      background: green;
     }
   }
 
@@ -46,7 +47,9 @@
 
     position: fixed;
     overflow-y: scroll;
-    //height: calc(100vh - (#{$header-top-height} + #{$header-main-height} + #{$footer-height}));
+    //height: calc(100vh - (#{$header-top-height} + #{$header-main-height}));
+    //height: auto !important;
+    top: $header-top-height + $header-main-height;
     padding-right: 2rem;
     h2 {
       a {

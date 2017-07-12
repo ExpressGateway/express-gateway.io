@@ -112,21 +112,17 @@ function checkForFooter() {
   var wavelocation = getRectTop(wave);
 
   if((getRectTop(toc) + document.body.scrollTop) + toc.offsetHeight >= (getRectTop(wave) + document.body.scrollTop) - 10)
-    toc.setAttribute("style","bottom: " + (wavelocation) + "px");
-    toc.classList.add('tocwrapperstick');
+    //tocwrapper.setAttribute("style","bottom: " + (wavelocation) + "px");
+    console.log("scroll point: ", (getRectTop(toc) + document.body.scrollTop) + toc.offsetHeight);
+    //toc.setAttribute("style","bottom: " + (wavelocation) + "px");
+    tocwrapper.classList.add('tocwrapperstick');
 
   if(document.body.scrollTop + window.innerHeight < (getRectTop(wave) + document.body.scrollTop))
+  //  tocwrapper.setAttribute("style","background-color: transparent");
+    console.log("not in footer");
     toc.classList.remove('tocwrapperstick');
 }
 
 window.addEventListener('scroll', function(){
     checkForFooter();
 });
-
-// var mainHeight = document.querySelector('.sticky-flex').offsetHeight;
-// var footerHeight = document.querySelector('.footer').offsetHeight;
-// var waveHeight = document.querySelector('.bottom-wave').offsetHeight;
-//
-// var newHeight = mainHeight + footerHeight + waveHeight;
-//
-// document.querySelector('.markdown').setAttribute("style","background-color: red; height: " + newHeight + "px");
