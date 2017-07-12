@@ -1,4 +1,10 @@
 .documentation {
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(left, #ffffff 39%, #f8fbfb 39%, #ffffff 39%, #f8fbfb 39%, #f8fbfb 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ffffff 39%,#f8fbfb 39%,#ffffff 39%,#f8fbfb 39%,#f8fbfb 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ffffff 39%,#f8fbfb 39%,#ffffff 39%,#f8fbfb 39%,#f8fbfb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8fbfb',GradientType=1 ); /* IE6-9 */
+
   .wrapper {
     display: flex;
     flex-direction: row;
@@ -7,15 +13,28 @@
 
   main {
     flex: 9;
-    width: 60%;
+    background: lighten($color-gray-blue, 5%);
+    padding-top: 25px;
   }
-  .tocwrapperparent {
-    position: relative;
-    flex: 3;
-    width: 25%;
+  .doc-wrapper {
+    width: 95%;
+    margin: 0 0 0 auto;
+    padding: 5%;
+    background: $color-background;
+    border-radius: 15px;
+  }
+
+  .toc-wrapper {
+    flex-direction: column;
+    padding-right: 2rem;
+    flex-basis: 225px;
   }
 
   .sidebar-docs {
+    position: fixed;
+    overflow-y: scroll;
+    height: calc(100vh - (#{$header-top-height} + #{$header-main-height}));
+    padding-right: 2rem;
     h2 {
       a {
         text-decoration: none;

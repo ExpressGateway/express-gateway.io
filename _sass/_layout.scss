@@ -17,6 +17,10 @@ main {
 .wrapper {
   width: 960px;
   margin: 0 auto;
+  &.full-width {
+    width: 100%;
+  } 
+
 }
 
 .flex-column {
