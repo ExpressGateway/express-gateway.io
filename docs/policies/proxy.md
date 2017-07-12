@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title:  "Proxy"
+doc-order: 4.8
 ---
 Forwards the request to a service endpoint.
 Accepts serviceEndpoint parameter that can be one of the names of serviceEndpoints section

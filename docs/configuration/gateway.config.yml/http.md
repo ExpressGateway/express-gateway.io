@@ -1,6 +1,8 @@
 ---
 layout: doc-section
 title:  "http"
+doc-order: 3.1
+list-order: .1
 ---
 The http section is used to configure HTTP. Express Gateway will listen on  the specified port for HTTP requests.
 

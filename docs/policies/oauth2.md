@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title:  "OAuth 2.0"
+doc-order: 4.3
 ---
 The EG oAuth 2.0 policy follows the RFC-6749 standard: https://tools.ietf.org/html/rfc6749
 

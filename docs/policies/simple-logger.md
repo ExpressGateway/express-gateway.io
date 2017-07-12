@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title:  "Simple Logger"
+doc-order: 4.6
 ---
 Provides capability for simple logging. The only parameter is `message`, with
 a string specifying the message to log. This can include placeholders using

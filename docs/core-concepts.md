@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title:  "Core Concepts"
+doc-order: 2.0
 ---
 For an overview of Express Gateway and how it works, check out the [About](/about) page to familiarize yourself with the core entities within Express Gateway and how they are utilized.
 

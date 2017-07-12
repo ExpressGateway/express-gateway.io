@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title:  "Key Authorization"
+doc-order: 4.2
 ---
 Key auth is an efficient way of securing your API.
 Keys are generated for apps or users using CLI tool.
