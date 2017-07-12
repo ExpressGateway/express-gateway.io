@@ -5,6 +5,7 @@
   background: linear-gradient(to right, #ffffff 39%,#f8fbfb 39%,#ffffff 39%,#f8fbfb 39%,#f8fbfb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8fbfb',GradientType=1 ); /* IE6-9 */
 
+
   .wrapper {
     display: flex;
     flex-direction: row;
@@ -28,12 +29,24 @@
     flex-direction: column;
     padding-right: 2rem;
     flex-basis: 225px;
+
+    &.tocwrapperstick {
+
+      .sidebar-docs {
+      //  bottom: 3rem;
+        position: absolute;
+        background: red;
+        transition: all 2s;
+
+      }
+    }
   }
 
   .sidebar-docs {
+
     position: fixed;
     overflow-y: scroll;
-    height: calc(100vh - (#{$header-top-height} + #{$header-main-height}));
+    //height: calc(100vh - (#{$header-top-height} + #{$header-main-height} + #{$footer-height}));
     padding-right: 2rem;
     h2 {
       a {
@@ -49,10 +62,7 @@
     position: fixed;
     padding-top: $header-top-height + $header-main-height;
 
-    &.tocwrapperstick {
-      bottom: 3rem;
-      position: absolute;
-    }
+
     nav {
       a {
         display: block;
