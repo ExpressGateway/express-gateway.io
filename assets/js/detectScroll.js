@@ -95,13 +95,13 @@
 //   node.addEventListener('click', handleClick)
 // });
 
-// docs-sidebar scroll placement
+// docs-sidebar scroll placement - original
+
 
 var tocwrapper = document.querySelector('.toc-wrapper');
 var toc = document.querySelector('.sidebar-docs');
-
 var footer = document.querySelector('.footer');
-var wave = document.querySelector('.bottom-wave');
+// var wave = document.querySelector('.bottom-wave');
 
 function checkForFooter() {
   function getRectTop(el){
@@ -109,19 +109,56 @@ function checkForFooter() {
     return rect.top;
   }
 
-  var wavelocation = getRectTop(wave);
+  console.log("left: ", (getRectTop(tocwrapper) + document.body.scrollTop) + tocwrapper.offsetHeight)
+  console.log("right: ", getRectTop(footer) + document.body.scrollTop)
 
-  if((getRectTop(toc) + document.body.scrollTop) + toc.offsetHeight >= (getRectTop(wave) + document.body.scrollTop) - 10)
-    //tocwrapper.setAttribute("style","bottom: " + (wavelocation) + "px");
-    console.log("scroll point: ", (getRectTop(toc) + document.body.scrollTop) + toc.offsetHeight);
-    //toc.setAttribute("style","bottom: " + (wavelocation) + "px");
+  var footerposition = getRectTop(footer);
+  if((getRectTop(toc) + document.body.scrollTop) + toc.offsetHeight >= (getRectTop(footer) + document.body.scrollTop)) {
+  //  tocwrapper.setAttribute("style", "background-color: transparent");
+
+    // toc.setAttribute("style", "bottom: " + (footer.offsetHeight) + "px");
+
     tocwrapper.classList.add('tocwrapperstick');
+  }
 
-  if(document.body.scrollTop + window.innerHeight < (getRectTop(wave) + document.body.scrollTop))
-  //  tocwrapper.setAttribute("style","background-color: transparent");
-    console.log("not in footer");
-    toc.classList.remove('tocwrapperstick');
+  if(document.body.scrollTop + window.innerHeight < (getRectTop(footer) + document.body.scrollTop))
+    {// toc.removeAttribute("style");
+    tocwrapper.classList.remove('tocwrapperstick');
+    }
 }
+
+// var tocwrapper = document.querySelector('.toc-wrapper');
+// var toc = document.querySelector('.sidebar-docs');
+//
+// var footer = document.querySelector('.footer');
+// var wave = document.querySelector('.bottom-wave');
+//
+// console.log("wave offset: ", wave.offsetHeight);
+// function checkForFooter() {
+//   function getRectTop(el){
+//     var rect = el.getBoundingClientRect();
+//     return rect.top;
+//   }
+//
+//   var wavelocation = getRectTop(wave);
+//   //console.log("wave + scrolltop: ", getRectTop(wave) + document.body.scrollTop);
+//   if((getRectTop(toc) + document.body.scrollTop) + toc.offsetHeight >= (getRectTop(wave) + document.body.scrollTop) - 100){
+//     //tocwrapper.setAttribute("style","bottom: " + (wavelocation) + "px");
+//     console.log("is this: ", (getRectTop(toc) + document.body.scrollTop) + toc.offsetHeight);
+//     console.log("greater than this: ", (getRectTop(wave) + document.body.scrollTop))
+//     //toc.setAttribute("style","bottom: " + (wavelocation) + "px");
+//     toc.classList.remove('tocwrapperstick');
+//
+//   } else {
+//   //  tocwrapper.setAttribute("style","background-color: transparent");
+//     tocwrapper.setAttribute("style","bottom: " + (wavelocation) + "px");
+//     console.log("====");
+//     console.log("is this: ", document.body.scrollTop + window.innerHeight)
+//     console.log("less than: ", (getRectTop(wave) + document.body.scrollTop))
+//
+//     toc.classList.add('tocwrapperstick');
+//   }
+// }
 
 window.addEventListener('scroll', function(){
     checkForFooter();
