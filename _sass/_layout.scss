@@ -113,7 +113,7 @@ main {
 
     }
     &:nth-child(even) {
-      padding-top: 10rem;
+      padding-top: 4rem;
     }
 
     svg {
@@ -146,22 +146,105 @@ main {
       line-height: 1.5rem;
 
       li {
-        padding-left: 1rem;
-        text-indent: -.5rem;
+        // padding-left: 1rem;
+        // text-indent: -.5rem;
         font-size: $font-size-16;
         line-height: $font-lineheight-list;
         padding-bottom: .75rem;
-        &::before {
-          content: "•";
-          color: $color-highlight;
-          position: relative;
-          right: .5rem;
-          font-size: 1rem;
+        margin-bottom: .75rem;
+        text-align: center;
+        // &::before {
+        //   content: "•";
+        //   color: $color-highlight;
+        //   position: relative;
+        //   right: .5rem;
+        //   font-size: 1rem;
+        // }
+        position: relative;
+        &:after {
+          content: "";
+          width: 40%;
+          height: 2px;
+          background: $color-secondary-light;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          margin-left: -20%;
+        }
+        &:last-child:after {
+          content: "";
+          width: 0;
+          height: 0;
+          background: transparent;
+          position: static;
+          bottom: auto;
+          left: auto;
+          margin-left: 0;
         }
       }
 
 
     }
+  }
+}
+
+.screencast-feature {
+  background: $color-secondary-light;
+  padding: 3rem 0;
+  position: relative;
+
+  .zindexflat {
+    z-index: 1
+  }
+  
+  #wave-video-bg {
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    z-index: 6;
+  }
+
+  #wave-video-single-bg {
+    position: absolute;
+    top: 80%;
+    margin-top: -100px;
+    z-index: 1;
+    transform: rotate(180deg);
+  }
+
+  .video-border {
+    width: 500px;
+    height: 281px;
+    margin: 0 auto;
+    position: relative;
+    background: transparent;
+    border: 3px solid $color-gray;
+    z-index: 8;
+    &:before {
+      content: "play";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: red;
+      right: 50%;
+      margin-right: -25px;
+      top: 50%;
+      margin-top: -25px;
+      z-index: 20;
+    }
+  }
+
+  .video-container {
+      background: $color-background;
+      width: 500px;
+      height: 281px;
+      position: absolute;
+      z-index: 4;
+      margin: 3rem auto 0;
+      top: 0;
+      left: 50%;
+      margin-left: -250px;
+
   }
 }
 
@@ -187,15 +270,17 @@ main {
 }
 
 h2.description {
-  padding: 4rem 0 .5rem 0;
-  font-weight: 200;
+  padding: 0 0 .5rem 0;
+  font-weight: 500;
   line-height: $font-lineheight-base + 2;
-  color: $color-secondary-dark-50;
+  color: $color-secondary-dark;
   letter-spacing: -2px;
 }
 
 .introduction {
-
+  .flex-center {
+    align-items: flex-start;
+  }
   svg {
     width: 5/7 * 100%;
     margin: 2rem 0 1.5rem;
@@ -204,10 +289,11 @@ h2.description {
   p {
     margin-left: 7%;
     margin-top: 1rem;
+
   }
 
   .button-large {
-    margin: 6rem 0 4rem 0;
+    margin: 2.5rem 0 4rem 0;
   }
 }
 
@@ -390,17 +476,18 @@ h2.description {
   p {
     margin-left: 0;
     color: $color-primary;
+    font-weight: 400;
   }
 }
 
 .button-large {
-  background-color: $color-secondary-dark;
-  color: $color-background;
+  background-color: $color-highlight;
+  color: $color-text;
   width: 200px;
   padding: 1rem 0;
   font-size: $font-size-29;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 40px;
   display: block;
 }
 
