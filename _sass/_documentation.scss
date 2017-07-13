@@ -89,7 +89,12 @@
           &:hover {
             background-color: #f8fbfb;
           }
+          &.active {
+              background-color: #f8fbfb;
+
+          }
         }
+
       }
     }
   }

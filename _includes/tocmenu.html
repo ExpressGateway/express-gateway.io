@@ -21,8 +21,8 @@
 
         <!-- 2. Check our node depth -->
         {% if node_depth == 3 %}
-          <li{% if page.url contains node.url %} class="active"{% endif %}>
-             <a href="{{site.baseurl}}{{ node.url }}">
+          <li>
+             <a {% if page.url == node.url %} class="active"{% endif %} href="{{site.baseurl}}{{ node.url }}">
                {% if node.link %}
                  {{ node.link }}
                {% else %}
@@ -54,7 +54,7 @@
                   {% if node_depth == 4 %}
 
                     <li>
-                      <a href="{{site.baseurl}}{{ subnode.url }}">
+                      <a {% if page.url == subnode.url %} class="active"{% endif %} href="{{site.baseurl}}{{ subnode.url }}">
                         {% if subnode.link %}
                           {{ subnode.link }}
                         {% else %}
@@ -77,8 +77,8 @@
 
                           {% for tertiarysorted in tertiarypages %}
                             {% if tertiarysorted.url contains tertiary_root and tertiarysorted.url != tertiary_root %}
-                              <li{% if page.url contains tertiarysorted.url %} class="active"{% endif %}>
-                                <a href="{{site.baseurl}}{{ tertiarysorted.url }}">
+                              <li class="active">
+                                <a {% if page.url == tertiarysorted.url %} class="active"{% endif %} href="{{site.baseurl}}{{ tertiarysorted.url }}">
                                   {% if tertiarysorted.link %}
                                     {{ tertiarysorted.link }}
                                   {% else %}
