@@ -15,27 +15,3 @@ system.config.yml is made up of the following sections:
 - authorizationCodes
 
 Each section declares global settings that are used for the entire Express Gateway instance.
-
-## db
-
-TODO
-
-## crypto
-
-TODO
-
-## session
-
-TODO
-
-## accessTokens
-
-TODO
-
-## refreshTokens
-
-TODO
-
-## authorizationCodes
-
-TODO
