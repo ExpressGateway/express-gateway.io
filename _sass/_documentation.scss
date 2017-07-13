@@ -86,15 +86,50 @@
           border-bottom: 2px solid #f8fbfb;
           display: block;
           padding: .75rem;
+          position: relative;
           &:hover {
             background-color: #f8fbfb;
           }
           &.active {
-              background-color: #f8fbfb;
+              &:before {
+                content: "\27F6";
+                color: $color-text;
+                position: absolute;
+                left: -1.75rem;
+              }
+          }
+        }
+        &.haschildren {
+
+          // display: flex;
+          // flex-direction: row;
+          .child-list {
+            transition: all .2s;
+          }
+
+          > ul.child-list  {
+            height: 0;
+            opacity: 0;
+            visibility: collapse;
+          }
+          > input {
+
+              &:checked ~ .child-list {
+                height: auto;
+                opacity: 1;
+                visibility: visible;
+              }
+
+              &:not(:checked) {
+                ~ .child-list .child-list {
+                  height: 0;
+                  opacity: 0;
+                  visibility: collapse;
+                }
+              }
 
           }
         }
-
       }
     }
   }
