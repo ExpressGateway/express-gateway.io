@@ -160,6 +160,11 @@ function checkForFooter() {
 //   }
 // }
 
+var urlcheck = document.getElementsByClassName('expanded')
+for(var i = 0, length = urlcheck.length; i < length; i++) {
+          urlcheck[i].checked = "true"
+    }
+
 window.addEventListener('scroll', function(){
     checkForFooter();
 });

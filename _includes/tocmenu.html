@@ -29,7 +29,7 @@
                  {% assign has_children = true %}
                {% endif %}
              {% endfor %}
-             {% if has_children == true %}<input class="accordian" type="checkbox">{% endif %}
+
              <a {% if page.url == node.url %} class="active"{% endif %} href="{{site.baseurl}}{{ node.url }}">
 
                {% if node.link %}
@@ -38,11 +38,16 @@
                  {{ node.title }}
                {% endif %}
              </a>
+             {% if has_children == true %}
+              <input id="cb-{{ node.title }}" class="accordian {% if page.url contains node.url %}expanded{% endif %}" type="checkbox">
+              <label class="menuicon" for="cb-{{ node.title }}">{% include icon-menu.svg %}</label>
+
+              {% endif %}
 
             {% if has_children == true %}
 
 
-            <ul class="child-list">
+            <ul class="child-list {% if page.url == node.url %}open{% endif %}">
 
               <!-- 5. Start our next pages loop -->
               <!-- It's important that we use new variables for subnodes so we don't override the previous iterations -->
@@ -66,7 +71,7 @@
                           {% assign has_children = true %}
                         {% endif %}
                       {% endfor %}
-                      {% if has_children == true %}<input class="accordian" type="checkbox">{% endif %}
+
                       <a {% if page.url == subnode.url %} class="active"{% endif %} href="{{site.baseurl}}{{ subnode.url }}">
 
 
@@ -76,11 +81,16 @@
                           {{ subnode.title }}
                         {% endif %}
                       </a>
+                      {% if has_children == true %}
+                        <input id="cb-{{ subnode.title }}" class="accordian {% if page.url contains subnode.url %}expanded{% endif %}" type="checkbox">
+                        <label class="menuicon menuicon-submenu" for="cb-{{ subnode.title }}">{% include icon-menu.svg %}</label>
+
+                      {% endif %}
 
                       {% if has_children == true %}
 
 
-                      <ul class="child-list">
+                      <ul class="child-list {% if page.url == tertiarysorted.url %}open{% endif %}">
                           {% assign tertiarypages = site.html_pages | sort: 'list-order' %}
 
                           {% for tertiarysorted in tertiarypages %}
