@@ -12,18 +12,19 @@ permalink: /getting-started/
 
 Installing Express Gateway is a simple 4-step process.
 
-1. <span class="li-main">Clone Express Gateway Repo</span><span class="codeHighlight">git clone git@github.com:LunchBadger/express-gateway.git</span>
-2. <span class="li-main">Install the dependencies</span>
-  - Make sure you have git
-  - Express Gateway runs with Node.js.  If you haven’t already installed Node.js, you can get it from their downloads page
-3. <span class="li-main">Install Express Gateway</span>
-  <span class="codeHighlight">git clone git@github.com:LunchBadger/express-gateway.git</span>
-  <span class="codeHighlight">cd express-gateway</span>
-  <span class="codeHighlight">npm install</span>
+1. <span class="li-main">Install Express Gateway</span><span class="codeHighlight">npm install -g express-gateway</span>
+2. <span class="li-main">Create an Express Gateway</span>
+  <span class="codeHighlight"> $ eg gateway create</span>
+3. <span class="li-main">Follow the prompts and choose key authorization</span>
+  <span class="codeHighlight"> ? What is the name of your Express Gateway? my-gateway</span>
+  <span class="codeHighlight"> ? What directory would you like to install your Express Gateway? my-gateway</span>
+  <span class="codeHighlight">? What type of Express Gateway do you want to create? (Use arrow keys)</span>
+  <span class="codeHighlight">  Gateway with Key Authorization</span>
+  <span class="codeHighlight">  Gateway with Basic Authorization</span>
+  <span class="codeHighlight">  Gateway with OAuth2 Authorization</span>
+  <span class="codeHighlight">  Basic Gateway Configuration</span>
 4. <span class="li-main">Run Express Gateway</span>
   <span class="codeHighlight">npm start</span>
-
-  (The EG should have some kind of default test or something that runs)
 
 </div>
 </div>
