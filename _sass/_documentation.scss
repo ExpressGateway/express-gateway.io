@@ -1,21 +1,63 @@
+.documentation, .documentation + div svg  {
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(left, #ffffff 39%,#f8fbfb 39%, #f8fbfb 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ffffff 39%,#f8fbfb 39%,#f8fbfb 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ffffff 39%,#f8fbfb 39%,#f8fbfb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8fbfb',GradientType=1 ); /* IE6-9 */
+
+}
+
 .documentation {
+
+
   .wrapper {
     display: flex;
     flex-direction: row;
     padding-top: $header-top-height + $header-main-height;
+    height: 100%;
   }
 
   main {
     flex: 9;
-    width: 60%;
+    background: lighten($color-gray-blue, 5%);
+    padding-top: 25px;
+    &.markdown {
+      padding-bottom: 1rem;
+    }
   }
-  .tocwrapperparent {
-    position: relative;
-    flex: 3;
-    width: 25%;
+
+  .doc-wrapper {
+    width: 95%;
+    margin: 0 0 0 auto;
+    padding: 5%;
+    background: $color-background;
+    border-radius: 15px;
+  }
+
+  .toc-wrapper {
+    flex-direction: column;
+    padding-right: 2rem;
+    flex-basis: 225px;
+    align-self: stretch;
+    height: calc(100vh - (#{$header-top-height} + #{$header-main-height} + #{$footer-height}));
+  }
+
+  .tocwrapperstick {
+    .sidebar-docs {
+      top: auto;
+      bottom: $footer-height;
+    }
   }
 
   .sidebar-docs {
+    transition: all .25s;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    overflow-y: scroll;
+    padding-right: 2%;
+    // height: calc(100vh - (#{$header-top-height} + #{$header-main-height} + #{$footer-height}));
+    height: calc(100vh - (#{$header-top-height} + #{$header-main-height}));;
     h2 {
       a {
         text-decoration: none;
@@ -24,20 +66,30 @@
         font-weight: bold;
       }
     }
-  }
+    ul {
+      width: 125%;
+      li {
+        padding-bottom: 0;
+        text-indent: 0;
 
-  aside.tocwrapper {
-    position: fixed;
-    padding-top: $header-top-height + $header-main-height;
+        ul {
+          padding: 0;
 
-    &.tocwrapperstick {
-      bottom: 3rem;
-      position: absolute;
-    }
-    nav {
-      a {
-        display: block;
-        text-decoration: none;
+        }
+
+        &:before {
+          content: "";
+
+        }
+        a {
+          text-decoration: none;
+          border-bottom: 2px solid #f8fbfb;
+          display: block;
+          padding: .75rem;
+          &:hover {
+            background-color: #f8fbfb;
+          }
+        }
       }
     }
   }
