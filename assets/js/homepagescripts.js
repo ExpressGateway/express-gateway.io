@@ -1,4 +1,12 @@
 $(document).ready(function () {
+
+  $(".video-container").click(function () {
+    $(this).append('<iframe src="https://player.vimeo.com/video/222706185?autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+    $('.moveback').addClass('zindexflat');
+    $('#icon-play-button, .video-container, .screencast-feature').addClass('videoplay');
+  });
+
+
   var $form = $('#mc-embedded-subscribe-form')
   if ($form.length > 0) {
     $('form input[type="submit"]').bind('click', function (event) {

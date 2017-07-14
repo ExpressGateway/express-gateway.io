@@ -71,48 +71,33 @@
           </li>
         </ul>
       <section class="screencast-feature">
-
-        <div class="video-border zindexflat">
+        {% include icon-play-button.svg %}
+        <div class="video-border moveback">
 
         </div>
         {% include wave-video-bg.svg %}
         <div class="video-container">
-          <!-- <iframe src="https://player.vimeo.com/video/222706185?autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><script src="https://player.vimeo.com/api/player.js"></script> -->
         </div>
         {% include wave-video-single-bg.svg %}
       </section>
-      <section class="get-started flex-column flex-center">
-        <h2 class="type-size-32">Get Started in 5 minutes</h2>
-        <ol class="wrapper flex-column type-medium">
-          <li>
-            Specify a Microservice
-          </li>
-          <li>
-            Expose as an API
-          </li>
-          <li>
-            Secure API with key
-          </li>
-        </ol>
-        <!-- {% include home-wave.svg %} -->
-      </section>
+
       <section class="quote">
         {% include blackandwhite.svg %}
         <div class="wrapper">
           <section class="testimonial flex-column">
               <span class="avatar"><img class="blackandwhite" src="assets/img/Doug.jpg" /></span>
               <blockquote>"Building upon Node.js + Express.js brings together the strengths, community and flexibility for a word-class API gateway"</blockquote>
-              <p>Doug Wilson, maintainer of Express.js</p>
+              <p><span>&mdash; Doug Wilson</span> maintainer of Express.js</p>
           </section>
           <section class="testimonial flex-column">
               <span class="avatar"><img class="blackandwhite" src="assets/img/james.png" /></span>
               <blockquote>"An API gateway built around ExpressJS is long overdue and the perfect use case for the minimalist strengths of what Express is all about!"</blockquote>
-              <p>James Young, CTO of VidRoll</p>
+              <p><span>&mdash; James Young</span> CTO of VidRoll</p>
           </section>
           <section class="testimonial flex-column">
               <span class="avatar"><img class="blackandwhite" src="assets/img/amar.jpg" /></span>
-              <blockquote>"An API gateway built around ExpressJS is long overdue and the perfect use case for the minimalist strengths of what Express is all about!"</blockquote>
-              <p>Amar Singh Rathor, Executive Director of Standard Chartered Studios</p>
+              <blockquote>"An API gateway built around ExpressJS is long overdue and the perfect use case for t"</blockquote>
+              <p><span>&mdash; Amar Singh Rathor</span> Executive Director of Standard Chartered Studios</p>
           </section>
         </div>
       </section>
@@ -120,6 +105,8 @@
   </div>
   {% include footer.html %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="{{ site.baseurl }}/assets/js/emailajax.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/homepagescripts.js"></script>
+
 </body>
 </html>
