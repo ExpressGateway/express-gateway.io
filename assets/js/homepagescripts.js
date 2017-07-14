@@ -38,7 +38,7 @@ function register($form) {
         // Success
         console.log(data.msg)
         $('#mce-EMAIL').css('borderColor', '#ffffff')
-        $('#subscribe-result').removeClass('subscribe-error')
+        $('#subscribe-result').html("").removeClass('subscribe-error')
         $('#mc_embed_signup').addClass('subscribe-success')
         $('.subscribe-success').html('<p>Thank you for subscribing. We have sent you a confirmation email.</p>')
         $('#mce-EMAIL').val('')
