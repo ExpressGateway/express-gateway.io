@@ -27,7 +27,7 @@
   }
 
   .doc-wrapper {
-    width: 95%;
+    width: 700px;
     margin: 0 0 0 auto;
     padding: 5%;
     background: $color-background;
@@ -423,7 +423,7 @@
     }
   }
 
-  .markdown > .doc-wrapper table {
+  .markdown > .doc-wrapper > table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 2rem;

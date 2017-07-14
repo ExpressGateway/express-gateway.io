@@ -1,16 +1,7 @@
 ---
-layout: documentation
-title: Documentation
-permalink: /docs-example/
-links:
-  - display: Configuration
-    link: configuration
-  - display: CLI Reference
-    link: cli-reference
-  - display: Admin API Reference
-    link: admin-api-reference
-  - display: Proxy Reference
-    link: proxy-reference
+layout: doc-section
+title:  "Styles"
+doc-order: 100.0
 ---
 # Heading 1
 ## Heading Two
@@ -110,16 +101,23 @@ Row 2 col 1 | Row 2 col 2 | Row 2 col 3
 ###### javascript
 
 ```javascript
-var rawr = ["r", "a", "w", "r"];
-function thishasareallylongnamesoleck(){
-  const that
-}
-function this(){
-  const that
-}
-function this(){
-  const that
-}
+$(document).ready(function () {
+
+  $(".video-container").click(function () {
+    $(this).append('<iframe src="https://player.vimeo.com/video/222" style="position:absolute;top:0;left:0;width:100%;height:100%;"frameborder="0" webkitallowfullscreen ></iframe>');
+    $('.moveback').addClass('zindexflat');
+    $('#icon-play-button, .video-container, .screencast-feature').addClass('videoplay');
+  });
+
+
+  var $form = $('#mc-embedded-subscribe-form')
+  if ($form.length > 0) {
+    $('form input[type="submit"]').bind('click', function (event) {
+      if (event) event.preventDefault()
+      register($form)
+    })
+  }
+})
 ```
 
 ###### YAML
@@ -171,56 +169,6 @@ Another image:
 
 ![inline image](/assets/img/Marchitecture_Express-As-We-Know-it_01.png)
 
-# Example Documentation
+# Gist Example
 ---
-
-## Rate-limit
-The rate limiter policy is used to limit the number of requests received and processed by the API endpoint. Limits are useful to prevent your system from being overwhelmed in both benign and malevolent situations where the number of requests processed can overwhelm your underlying APIs and supporting services. Rate limits are also useful to control the amount of API consumption to a known capacity of quantity.
-
-Example use case:
-Use to limit repeated requests to public APIs and/or endpoints such as password reset.
-
-#### Reference
-conditions: (list all valid conditions)
-action parameters:
-`max`
-`rateLimitBy`
-`windowMs`
-
-
-`max` - maximum number of requests
-
-`rateLimitBy` - the criteria that is used to limit the number of requests by
-The rate limit policy, by default will limit based on client IP address (req.ip).
-
-valid values: username, appID, etc...
-
-#### Usage Example
-
-
-Consider example to rate-limit based on passed host:
-{% highlight yaml linenos %}
-apiEndpoints:
-  example:
-    host: '*'
-serviceEndpoints:
-  backend:
-    url: 'http://www.example.com'
-pipeline1:
-    apiEndpoints:
-      - 'example',
-    policies:
-      - rate-limit:
-        -
-          action:
-            name: 'rate-limit'
-            max: 10
-            rateLimitBy: "${req.host}"
-      - proxy:
-        -
-          action:
-            name: proxy
-            serviceEndpoint: backend
-{% endhighlight %}
-
-The preceding example will impose a rate limit by the calling host.  If the hosts calling the API endpoint are "partnerApp.amce.org" and "partnerApp.widget.com" then each host will be limited to 10 requests per (what's the internval???)
+{% gist 14d86198f1c3b42724e262980b22356c %}
