@@ -32,7 +32,7 @@ Here we generate all the categories.
     <h5>Posts by Category</h5>
     <ul class="category-list">
       {% for ct in cats %}
-      <li><a href="{{ ct | slugify }}" class="sidebarnav" > {{ ct }} </a></li>
+      <li><a href="{{ site.baseurl}}/blog/{{ ct | slugify }}" class="sidebarnav" > {{ ct }} </a></li>
       {% endfor %}
     </ul>
   </section>
@@ -46,7 +46,7 @@ Here we generate all the categories.
 {% assign prevyear = post.previous.date | date: "%B %Y" %}
 {% assign counter = counter | plus: 1 %}
 {% if thisyear != prevyear %}
-  <li><a href="{{ site.baseurl }}blog/{{ post.date | date:"%Y/%m" }}" class="sidebarnav">{{ thisyear }} ({{ counter }})</a></li>
+  <li><a href="{{ site.baseurl }}/blog/{{ post.date | date:"%Y/%m" }}" class="sidebarnav">{{ thisyear }} ({{ counter }})</a></li>
   {% assign counter = 0 %}
 {% endif %}
 {% endfor %}
