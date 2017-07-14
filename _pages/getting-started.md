@@ -4,6 +4,13 @@ title: Getting Started
 class: getting-started
 permalink: /getting-started/
 ---
+<section class="screencast-feature">
+<div class="video-border moveback">
+</div>
+<div class="video-container">
+</div>
+{% include icon-play-button.svg %}
+</section>
 <section class="page-section-normal">
 <div class="wrapper-flex">
 <div class="wrapper">
