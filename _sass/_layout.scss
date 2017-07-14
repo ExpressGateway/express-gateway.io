@@ -261,7 +261,15 @@ main {
       top: 0;
       left: 50%;
       margin-left: -250px;
-      transition: all 1.25s;
+      transition: all 1.25s, background-color, .2s;
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:hover + #icon-play-button {
+        transform: scale(1.2);
+      }
+
       &.videoplay {
         transform: scale(1.2);
       }
@@ -432,18 +440,17 @@ h2.description {
   .emailform {
     width: 100%;
     display: flex;
-    background: #32a5c1; /* Old browsers */
-    background: -moz-linear-gradient(-45deg, #32a5c1 0%, #0f8696 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, #32a5c1 0%,#0f8696 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, #32a5c1 0%,#0f8696 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32a5c1', endColorstr='#0f8696',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    font-family: $font-family;
+    background-color: $color-background;
 
     #mc_embed_signup {
-      background: transparent;
+      background: #32a5c1; /* Old browsers */
+      background: -moz-linear-gradient(-45deg, #32a5c1 0%, #0f8696 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(-45deg, #32a5c1 0%,#0f8696 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(135deg, #32a5c1 0%,#0f8696 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32a5c1', endColorstr='#0f8696',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      font-family: $font-family;
       min-width: 60%;
       padding: 1rem 0;
-      border-top: 6px solid $color-highlight;
 
       form {
         text-align: center;
@@ -468,6 +475,26 @@ h2.description {
           display: flex;
           flex: 4;
           font-family: $font-family;
+          border-radius: 10px;
+          color: white;
+          background: rgba(225,225,225,.5);
+          border: none;
+          padding-left: 1.25rem;
+          &::-webkit-input-placeholder {
+            color: $color-background;
+          }
+          &::-moz-placeholder {
+            color: $color-background;
+          }
+          &:-ms-input-placeholder {
+            color: $color-background;
+          }
+          &:-moz-placeholder {
+            color: $color-background;
+          }
+          &::placeholder {
+            color: $color-background;
+          }
         }
 
         #mc-embedded-subscribe {
@@ -479,6 +506,7 @@ h2.description {
           margin: 0;
           font-size: $font-size-18;
           font-family: $font-family;
+          border-radius: 10px;
         }
       }
     }
