@@ -1,0 +1,56 @@
+<!-- category test -->
+{% comment%}
+Here we generate all the categories.
+{% endcomment%}
+
+{% assign rawcats = "" %}
+{% for post in site.posts %}
+{% assign tcats = post.category | join:'|' | append:'|' %}
+{% assign rawcats = rawcats | append:tcats %}
+{% endfor %}
+
+{% assign rawcats = rawcats | split:'|' | sort %}
+
+{% assign cats = "" %}
+
+{% for cat in rawcats %}
+{% if cat != "" %}
+
+{% if cats == "" %}
+{% assign cats = cat | split:'|' %}
+{% endif %}
+
+{% unless cats contains cat %}
+{% assign cats = cats | join:'|' | append:'|' | append:cat | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+<!-- year tests -->
+<aside class="blog-sidebar">
+
+  <section>
+    <h5>Posts by Category</h5>
+    <ul class="category-list">
+      {% for ct in cats %}
+      <li><a href="{{ ct | slugify }}" class="sidebarnav" > {{ ct }} </a></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h5>Posts by date</h5>
+    <ul>
+      {% assign counter = 0 %}
+{% for post in site.posts %}
+{% assign thisyear = post.date | date: "%B %Y" %}
+{% assign prevyear = post.previous.date | date: "%B %Y" %}
+{% assign counter = counter | plus: 1 %}
+{% if thisyear != prevyear %}
+  <li><a href="{{ site.baseurl }}blog/{{ post.date | date:"%Y/%m" }}" class="sidebarnav">{{ thisyear }} ({{ counter }})</a></li>
+  {% assign counter = 0 %}
+{% endif %}
+{% endfor %}
+    </ul>
+  </section>
+
+</aside>
