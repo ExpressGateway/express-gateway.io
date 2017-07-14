@@ -29,6 +29,10 @@
     width: 80%;
   }
 
+  .full-width ol {
+    width: 100%;
+  }
+
   h4 {
     margin-bottom: 3rem;
   }
@@ -45,6 +49,17 @@
     line-height: $font-lineheight-base;
     font-weight: 200;
     padding-bottom: .75rem;
+
+    span.codeHighlight {
+        align-self: flex-start;
+        background-color: $color-gray-light;
+        color: $color-text;
+        padding: 2px 4px;
+        border-radius: 5px;
+        margin-top: -2px;
+        margin-bottom: -2px;
+        font-family: 'Inconsolata', monospace;
+    }
   }
 
   .background-highlight {
@@ -114,12 +129,10 @@
             align-self: flex-start;
             background-color: $color-gray-light;
             color: $color-text;
-            padding: .5rem .75rem;
-            border-radius: 20px;
+            padding: 2px 4px;
             margin-bottom: .75rem;
             font-family: 'Inconsolata', monospace;
-
-
+            border-radius: 5px;
           }
         }
         div.codeHighlight {
@@ -128,8 +141,8 @@
             font-size: $font-size-14;
             background-color: $color-gray-light;
             color: $color-text;
-            padding: .5rem .75rem;
-            border-radius: 20px;
+            padding: 2px 4px;
+            border-radius: 5px;
             margin-bottom: .75rem;
             font-family: 'Inconsolata', monospace;
             border: none;

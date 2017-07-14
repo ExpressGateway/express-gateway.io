@@ -31,7 +31,7 @@ For a deeper look at microservices and the role of the API Gateway check out [Ma
 
 ## Why Express Gateway?
 
-If you’ve used Node.js, you’ve almost certainly come across Express.js.  Express.js (Express) remains one of the largest, most widely adopted, open source projects in the world. 
+If you’ve used Node.js, you’ve almost certainly come across Express.js.  Express.js (Express) remains one of the largest, most widely adopted, open source projects in the world.
 
 > Express’ greatest strengths are its simplicity and flexibility
 
@@ -84,7 +84,7 @@ Essentially, all of the core components within Express Gateway make Express more
 
 <div class="wrapper-flex">
 <div class="wrapper">
-<div class="flex-column shape-style" markdown="1">
+<div class="flex-column shape-style full-width" markdown="1">
 1. <span class="li-main">Centralized Declarative Config</span>
   - Express Gateway centralizes all of the application configuration for the API use case into one YAML(or JSON) file.  Within the YAML file is an easy to understand description of how and what is configured. Express Gateway utilizes this config to run Express as an API Gateway dynamically.   
 
