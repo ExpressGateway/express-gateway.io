@@ -119,6 +119,20 @@
             margin-bottom: .75rem;
             font-family: 'Inconsolata', monospace;
 
+
+          }
+        }
+        div.codeHighlight {
+          align-self: flex-start;
+          .highlighter-rouge pre.highlight {
+            font-size: $font-size-14;
+            background-color: $color-gray-light;
+            color: $color-text;
+            padding: .5rem .75rem;
+            border-radius: 20px;
+            margin-bottom: .75rem;
+            font-family: 'Inconsolata', monospace;
+            border: none;
           }
         }
       }

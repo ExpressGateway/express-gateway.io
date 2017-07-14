@@ -23,17 +23,22 @@ Installing Express Gateway is a simple 4-step process.
 2. <span class="li-main">Create an Express Gateway</span>
   <span class="codeHighlight"> $ eg gateway create</span>
 3. <span class="li-main">Follow the prompts and choose key authorization</span>
-  <span class="codeHighlight" markdown="1">
-  ```shell
-  ? What is the name of your Express Gateway? my-gateway
-  ? What directory would you like to install your Express Gateway? my-gateway
-  ? What type of Express Gateway do you want to create? (Use arrow keys)
-    Getting Started Demo
-    Gateway with Key Authorization
-    Gateway with Basic Authorization
-    Gateway with OAuth2 Authorization
-    Basic Gateway Configuration
-  ```
+<!--
+  div spaced 4 characters to render inside list.
+  code whitespace removed to avoid whitespace in snippet
+-->
+    <div class="codeHighlight" markdown="1">
+```shell
+? What is the name of your Express Gateway? my-gateway
+? What directory would you like to install your Express Gateway? my-gateway
+? What type of Express Gateway do you want to create? (Use arrow keys)
+Getting Started Demo
+Gateway with Key Authorization
+Gateway with Basic Authorization
+Gateway with OAuth2 Authorization
+Basic Gateway Configuration
+```
+    </div>
 4. <span class="li-main">Run Express Gateway</span>
   <span class="codeHighlight">cd my-gateway</span>
   <span class="codeHighlight">npm start</span>
