@@ -12,11 +12,14 @@ doc-order: 100.0
 
 This text is **bold**, this is *italic*, this is an `inline code block`.
 
+All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. This is an [internal link](#error-code-definitions), this is an [external link](http://google.com). The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words
+
+###### .codeHighlight
 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you <span class="codeHighlight">var inlineCodeExample = thisStyle(set)</span> need to be sure there isn't anything embarrassing hidden in the middle of text.
 
-> This is a blockquote. It will read centered and full length of the area it resides in.
+<span class="codeHighlight">var inlineCodeExample = thisStyle(set)</span>
 
-All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. This is an [internal link](#error-code-definitions), this is an [external link](http://google.com). The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words
+> This is a blockquote. It will read centered and full length of the area it resides in.
 
 ### List Styles
 

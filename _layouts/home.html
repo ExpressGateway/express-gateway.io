@@ -12,13 +12,14 @@
       </section>
       <section class="flex-column wrapper">
         <div class="introduction flex-row">
-          <div class="flex-center space-between">
+          <div class="flex-center space-between full-width">
             <div class="home-cta">
               <h2 class="large-header description">A microservices API gateway built on Express.js</h2>
               <p class="subtitle">Fast, Flexible, and Community Driven</p>
               <a href="{{ site.baseurl }}/getting-started" class="button-large">Quick Start</a>
             </div>
-            <img class="marchitecture" src="assets/img/marchitecture.png" />
+            <!-- <img class="marchitecture" src="assets/img/marchitecture.png" /> -->
+            <div class="marchitecture">{% include Home_marchitecturediagram.svg %}</div>
           </div>
         </div>
       </section>
@@ -105,6 +106,6 @@
     </main>
   </div>
   {% include footer.html %}
-  
+
 </body>
 </html>
