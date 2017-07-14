@@ -50,7 +50,7 @@
     nav {
       display: flex;
       align-items: center;
-      width: 45%;
+      width: 55%;
       margin-left: auto;
       justify-content: space-between;
       height: $header-main-height;
@@ -71,6 +71,10 @@
           &:hover {
             color: $color-primary;
           }
+        }
+
+        &.github-button-wrapper {
+          width: 51.5px;
         }
 
         &.active {
