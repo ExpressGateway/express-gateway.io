@@ -444,7 +444,19 @@ h2.description {
     width: 100%;
     display: flex;
     background-color: $color-background;
-
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 50%;
+      margin-right: -30px;
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-top: 15px solid #e1f2f6;
+    }
     #mc_embed_signup {
       background: #32a5c1; /* Old browsers */
       background: -moz-linear-gradient(-45deg, #32a5c1 0%, #0f8696 100%); /* FF3.6-15 */
@@ -453,7 +465,7 @@ h2.description {
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32a5c1', endColorstr='#0f8696',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
       font-family: $font-family;
       min-width: 60%;
-      padding: 1rem 0;
+      padding: 1.5rem 0 1rem;
 
       form {
         text-align: center;
@@ -463,6 +475,7 @@ h2.description {
           padding:0 0 .75rem;
           font-weight: 300;
           font-family: $font-family;
+          font-size: $font-size-18;
         }
 
       }
@@ -470,7 +483,7 @@ h2.description {
         display: flex;
         flex-direction: row;
         margin: 0 auto;
-        width: 75%;
+        width: 60%;
         height: 2.5rem;
         letter-spacing: normal;
         #mce-EMAIL {

@@ -12,7 +12,7 @@ doc-order: 100.0
 
 This text is **bold**, this is *italic*, this is an `inline code block`.
 
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you <span class="codeHighlight">var inlineCodeExample = thisStyle(set)</span> need to be sure there isn't anything embarrassing hidden in the middle of text.
 
 > This is a blockquote. It will read centered and full length of the area it resides in.
 
