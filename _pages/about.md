@@ -85,10 +85,10 @@ Essentially, all of the core components within Express Gateway make Express more
 <div class="wrapper-flex">
 <div class="wrapper">
 <div class="flex-column shape-style" markdown="1">
-1. <span class="li-main">Centralized Declarative Config (YAML/JSON)</span>
+1. <span class="li-main">Centralized Declarative Config</span>
   - Express Gateway centralizes all of the application configuration for the API use case into one YAML(or JSON) file.  Within the YAML file is an easy to understand description of how and what is configured. Express Gateway utilizes this config to run Express as an API Gateway dynamically.   
 
-2. <span class="li-main">Consumer Management Module</span>
+2. <span class="li-main">Consumer and Credentials Management Module</span>
   - Express Gateway comes with a component that registers consumers (users and apps) of APIs hosted by Express Gateway. This component is a highly extensible identity and authorization system out of the box for APIs. It can also be easily integrated with existing IAM service providers and systems of record. Consumers may have multiple credentials types and new credential types can be easily added to the system (e.g. SAML, Kerberos).
 
 3. <span class="li-main">Distributed Persistent Data Store</span>
