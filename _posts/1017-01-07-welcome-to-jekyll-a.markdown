@@ -61,7 +61,7 @@ Inline markup styles:
 
 Syntax highlighting can be used by wrapping your code in a liquid tag like so:
 
-{% highlight javascript linenos %}
+```javascript
 /* Some pointless Javascript */
 var rawr = ["r", "a", "w", "r"];
 
@@ -76,7 +76,7 @@ function this(){
 function this(){
   const that
 }
-{% endhighlight %}
+```
 
 Use two trailing spaces  
 on the right  
