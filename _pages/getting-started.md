@@ -23,16 +23,20 @@ Installing Express Gateway is a simple 4-step process.
 2. <span class="li-main">Create an Express Gateway</span>
   <span class="codeHighlight"> $ eg gateway create</span>
 3. <span class="li-main">Follow the prompts and choose key authorization</span>
-  <span class="codeHighlight"> ? What is the name of your Express Gateway? my-gateway</span>
-  <span class="codeHighlight"> ? What directory would you like to install your Express Gateway? my-gateway</span>
-  <span class="codeHighlight">? What type of Express Gateway do you want to create? (Use arrow keys)</span>
-  <span class="codeHighlight">  Gateway with Key Authorization</span>
-  <span class="codeHighlight">  Gateway with Basic Authorization</span>
-  <span class="codeHighlight">  Gateway with OAuth2 Authorization</span>
-  <span class="codeHighlight">  Basic Gateway Configuration</span>
+  <span class="codeHighlight" markdown="1">
+  ```shell
+  ? What is the name of your Express Gateway? my-gateway
+  ? What directory would you like to install your Express Gateway? my-gateway
+  ? What type of Express Gateway do you want to create? (Use arrow keys)
+    Getting Started Demo
+    Gateway with Key Authorization
+    Gateway with Basic Authorization
+    Gateway with OAuth2 Authorization
+    Basic Gateway Configuration
+  ```
 4. <span class="li-main">Run Express Gateway</span>
+  <span class="codeHighlight">cd my-gateway</span>
   <span class="codeHighlight">npm start</span>
-
 </div>
 </div>
 </div>
@@ -46,9 +50,9 @@ Installing Express Gateway is a simple 4-step process.
 
 ## 5-minute Getting Started Guide
 
-Before you start: Make sure you've [installed the Express Gateway](#installation) — It should only take a minute!
+Before you start: Make sure you've [installed the Express Gateway](#installation) and have it up running — It should only take a minute!
 
-In this quickstart guide, you’ll get the Express Gateway up and running and then…
+In this quick start guide, you’ll...
 
 1. Specify a microservice and expose as an API
 2. Define a consumer of your API
