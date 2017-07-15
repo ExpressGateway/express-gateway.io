@@ -16,11 +16,11 @@ $(document).ready(function () {
   }
 })
 
-hljs.configure({useBR: true});
-
-$('.highlighter-rouge').each(function(i, block) {
-  hljs.highlightBlock(block);
-});
+// hljs.configure({useBR: true});
+//
+// $('.highlighter-rouge').each(function(i, block) {
+//   hljs.highlightBlock(block);
+// });
 
 function register($form) {
   $('#mc-embedded-subscribe').val('Sending...');

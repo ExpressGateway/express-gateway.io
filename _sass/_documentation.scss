@@ -68,7 +68,7 @@
     overflow-y: scroll;
     padding-right: 2%;
     // height: calc(100vh - (#{$header-top-height} + #{$header-main-height} + #{$footer-height}));
-    height: calc(100vh - (#{$header-top-height} + #{$header-main-height}));;
+    height: calc(100vh - (#{$header-top-height} + #{$header-main-height}));
     h2 {
       a {
         text-decoration: none;
