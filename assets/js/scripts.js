@@ -1,12 +1,18 @@
-$(document).ready(function () {
+// docs sidebar toggle and url check
+var urlcheck = document.getElementsByClassName('expanded')
+for(var i = 0, length = urlcheck.length; i < length; i++) {
+          urlcheck[i].checked = "true"
+}
 
+$(document).ready(function () {
+  //video content swap
   $(".video-container").click(function () {
     $(this).append('<iframe src="https://player.vimeo.com/video/222706185?autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
     $('.moveback').addClass('zindexflat');
     $('#icon-play-button, .video-container, .screencast-feature').addClass('videoplay');
   });
 
-
+  //register email capture form
   var $form = $('#mc-embedded-subscribe-form')
   if ($form.length > 0) {
     $('form input[type="submit"]').bind('click', function (event) {
@@ -22,6 +28,7 @@ $(document).ready(function () {
 //   hljs.highlightBlock(block);
 // });
 
+//email capture form details
 function register($form) {
   $('#mc-embedded-subscribe').val('Sending...');
   $.ajax({
@@ -52,3 +59,30 @@ function register($form) {
     }
   })
 };
+
+//docs sidebar control
+
+
+// function sticky_relocate() {
+//     var window_top = $(window).scrollTop();
+//     var footer_top = $(".footer").offset().top;
+//     var div_top = $('#sb-sticky-anchor').offset().top;
+//     var div_height = $("#sb-sticky").height();
+//     var div_height_top = $("#sb-sticky").offset().top;
+//
+//     var padding = 95;  // tweak here or get from margins etc
+//
+//     if (window_top + div_height > footer_top - padding)
+//         $('#sb-sticky').css({top: (window_top + div_height - footer_top + padding)})
+//     else if (window_top > div_top) {
+//         $('#sb-sticky').addClass('stick');
+//         $('#sb-sticky').css({top: 0})
+//     } else {
+//         $('#sb-sticky').removeClass('stick');
+//     }
+// }
+
+$(function () {
+    $(window).scroll(sticky_relocate);
+    sticky_relocate();
+});

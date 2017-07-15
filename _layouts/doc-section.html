@@ -4,7 +4,7 @@
   {% include header.html %}
   <div class="container page documentation sticky-flex {{ page.class }}">
     <div class="wrapper">
-      <aside class="toc-wrapper">
+      <aside id="sb-sticky-anchor" class="toc-wrapper" role="complementary">
         {% include tocmenu.html %} <!-- .sidebar-docs -->
       </aside>
       <main class="markdown" id="markdown">
@@ -17,6 +17,5 @@
   </div>
   <!-- <div class="svg-fix bottom-wave">{% include wave-bottom-2.svg %}</div> -->
   {% include footer.html %}
-  <script src="{{site.baseurl}}/assets/js/detectScroll.js"></script>
 </body>
 </html>

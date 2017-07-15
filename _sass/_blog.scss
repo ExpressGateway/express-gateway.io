@@ -72,9 +72,9 @@
         color: $color-text;
         &:before {
           content: "";
-          height: $header-top-height + $header-main-height + 100;
+          height: $header-main-height + 100;
           display: block;
-          margin-top: -($header-top-height + $header-main-height + 100);
+          margin-top: -($header-main-height + 100);
 
         }
       }
