@@ -60,33 +60,21 @@
       position: relative;
       &::before {
         content: "";
-        // color: $color-highlight;
-        // position: relative;
-        // right: .5rem;
-        // font-size: 1rem;
       }
 
       li {
         list-style: none;
         position: relative;
+        font-size: $font-size-16;
         &::before {
           content: "";
-          // color: $color-gray;
-          // position: relative;
-          // right: .5rem;
-          // font-size: 1rem;
-          // top: 3px;
         }
         li {
           list-style: none;
           position: relative;
+          font-size: $font-size-14;
           &::before {
             content: "";
-            // color: $color-gray;
-            // position: relative;
-            // right: .5rem;
-            // font-size: .5rem;
-            // top: -3px;
           }
         }
       }
@@ -123,10 +111,15 @@
         }
         &.active {
             &:before {
-              content: "\27F6";
+              content: "";
+              width: 15px;
+              height: 15px;
               color: $color-text;
               position: absolute;
-              left: -1.75rem;
+              left: -15px;
+              top: 50%;
+              margin-top: -7px;
+              background: url('../img/icon-doc-arrow.svg') center center no-repeat;
             }
         }
       }
