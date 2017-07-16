@@ -43,14 +43,6 @@ Using a query parameter to specify the API key is a common approach for browser 
 Example:
 `https://example.com?q=search&apiKey=1fa4Y52SWEhii7CmYiMOcv:4ToXczFz0ZyCgLpgKIkyxA`
 
-##### Using in JSON body
-```json
-{
-  "name":"eg-customer",
-  "apiKey":"1fa4Y52SWEhii7CmYiMOcv:4ToXczFz0ZyCgLpgKIkyxA"
-}
-
-```
 
 ##### Options Reference
 ```yml
@@ -58,9 +50,8 @@ apiKeyHeader: 'Authorization', # name of the header that should contain api key
 apiKeyHeaderScheme: 'apiKey', # Enforce schema in header.
 disableHeaders: false # disable apikey lookup in headers
 disableHeadersScheme: false # disable verification of Scheme in header
-apiKeyField: 'apiKey', # name of field to check in query param or body
+apiKeyField: 'apiKey', # name of field to check in query parameter
 disableQueryParam: false # set to true to disable api key lookup in query string
-disableBody: false # set to true to disable api key lookup in body
 ```
 
 
@@ -85,7 +76,6 @@ pipelines:
         -
           action:
             name: keyauth
-            disableBody: true # do not look for api key in body
             apiKeyHeader: COMPANY-CUSTOM-API-KEY-HEADER # custom header name
             disableHeadersScheme: true # will accept "key:secret" format instead of "scheme key:secret"
       proxy: # name of the policy
