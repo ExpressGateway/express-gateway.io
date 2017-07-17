@@ -13,13 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Expess Gateway
-email: your-email@domain.com
-description: A Microservices API Gateway Built on EXPRESS.JS
+title: Express Gateway
+email: info@express-gateway.io
+description: A Microservices API Gateway Built on Express.JS
 baseurl: "" # dev = "/" temp-prod ="http://bybrandonbrown.com/expressgateway/"
 url: "http://bybrandonbrown.com/expressgateway" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: @xpressgateway
+github_username:  expressgateway
 
 # Build settings
 markdown: kramdown
