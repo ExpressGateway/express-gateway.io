@@ -28,14 +28,14 @@ Installing Express Gateway is a simple 4-step process.
   code whitespace removed to avoid whitespace in snippet
 -->
     <div class="codeHighlight" markdown="1">
-    ```shell
-    ➜ eg gateway create
-    ? What's the name of your Express Gateway? cool-gateway
-    ? Where would you like to install your Express Gateway? cool-gateway
-    ? What type of Express Gateway do you want to create? (Use arrow keys)
-    ❯ Getting Started with Express Gateway
-      Basic (default pipeline with proxy)
-    ```
+```shell
+➜ eg gateway create
+? What is the name of your Express Gateway? cool-gateway
+? Where would you like to install your Express Gateway? cool-gateway
+? What type of Express Gateway do you want to create? (Use arrow keys)
+❯ Getting Started with Express Gateway
+  Basic (default pipeline with proxy)
+```
     </div>
 4. <span class="li-main">Run Express Gateway</span>
   <span class="codeHighlight">cd my-gateway</span>

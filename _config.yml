@@ -16,10 +16,11 @@
 title: Express Gateway
 email: info@express-gateway.io
 description: A Microservices API Gateway Built on Express.JS
-baseurl: "http://bybrandonbrown.com/expressgateway" # dev = "/" temp-prod ="http://bybrandonbrown.com/expressgateway/"
+baseurl: "" # dev = "/" temp-prod ="http://bybrandonbrown.com/expressgateway/"
 url: "http://bybrandonbrown.com/expressgateway" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: xpressgateway
 github_username:  expressgateway
+encoding: UTF-8
 
 # Build settings
 markdown: kramdown
