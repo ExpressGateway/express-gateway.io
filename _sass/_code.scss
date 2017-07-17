@@ -1,6 +1,6 @@
-.highlight {
-  background: $color-background;
-  padding: 1rem;
+.highlight, .hljs {
+  //background: $color-background;
+  padding: 0 1rem;
   line-height: 1.25rem;
   font-family: 'Inconsolata', monospace;
   border: 1px solid rgb(225,229,230);
