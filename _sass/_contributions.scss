@@ -59,6 +59,7 @@
         margin-top: -2px;
         margin-bottom: -2px;
         font-family: 'Inconsolata', monospace;
+        line-height: 1rem;
 
         + span.codeHighlight {
           margin-top: .75rem;
@@ -137,6 +138,7 @@
             // margin-bottom: .75rem;
             font-family: 'Inconsolata', monospace;
             border-radius: 5px;
+            line-height: 1rem;
 
             + .codeHighlight {
               margin-top: .75rem;
