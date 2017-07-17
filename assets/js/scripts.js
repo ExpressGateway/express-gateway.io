@@ -22,6 +22,8 @@ $(document).ready(function () {
   }
 })
 
+// hljs.initHighlightingOnLoad();
+
 // hljs.configure({useBR: true});
 //
 // $('.highlighter-rouge').each(function(i, block) {
@@ -82,7 +84,7 @@ function register($form) {
 //     }
 // }
 
-$(function () {
-    $(window).scroll(sticky_relocate);
-    sticky_relocate();
-});
+// $(function () {
+//     $(window).scroll(sticky_relocate);
+//     sticky_relocate();
+// });
