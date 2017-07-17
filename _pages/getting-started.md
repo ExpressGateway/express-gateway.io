@@ -33,8 +33,8 @@ Installing Express Gateway is a simple 4-step process.
     ? What's the name of your Express Gateway? cool-gateway
     ? Where would you like to install your Express Gateway? cool-gateway
     ? What type of Express Gateway do you want to create? (Use arrow keys)
-    ❯ Getting Started with Express Gateway 
-      Basic (default pipeline with proxy) 
+    ❯ Getting Started with Express Gateway
+      Basic (default pipeline with proxy)
     ```
     </div>
 4. <span class="li-main">Run Express Gateway</span>
@@ -114,7 +114,7 @@ Via: 1.1 vegur
 The service will be specified as a private endpoint in the default pipeline in Express Gateway.  A pipeline is a set of policies.  One of the policies that Express Gateway supports is a proxy policy.  Using the proxy policy within the default pipeline, the gateway will now sit in front of the API and route external requests to the API
 <ol>
 <li><span class="codeHighlight">cd my-gateway/config</span></li>
-<li>in <span class="codeHighlight">gateway.config.yml</span> find the <span class="codeHighlight"> serviceEndpoints</span> section where a service endpoint named "httpbin" has been defined</li>
+<li><p>in <span class="codeHighlight">gateway.config.yml</span> find the <span class="codeHighlight"> serviceEndpoints</span> section where a service endpoint named "httpbin" has been defined</p></li>
 <li markdown="1">
 ```yaml
 serviceEndpoints:
@@ -122,13 +122,13 @@ serviceEndpoints:
     url: 'https://httpbin.org'
 ```
 </li>
-<li>in <span class="codeHighlight">gateway.config.yml</span> find the "httpbin" serviceEndpoint in the proxy policy of the default pipeline</li>
+<li><p>in <span class="codeHighlight">gateway.config.yml</span> find the "httpbin" serviceEndpoint in the proxy policy of the default pipeline</p></li>
 <li markdown="1">
 ```yaml
 ...
  - proxy:
           - action:
-              serviceEndpoint: httpbin 
+              serviceEndpoint: httpbin
               changeOrigin: true
 ...
 ```
@@ -139,7 +139,7 @@ serviceEndpoints:
 ![Expose API]({{ site.baseurl }}/assets/img/Marchitecture_Specify-Microservice-Step-3.png "Expose API")
 We’re going to expose the httpbin service as an API endpoint through Express Gateway. When an API is made public through an API endpoint, the API can be accessed externally.
 <ol>
-<li>in <span class="codeHighlight">gateway.config.yml</span> find the <span class="codeHighlight"> apiEndpoints</span> section where an API endpoint named "api" has been defined</li>
+<li><p>in <span class="codeHighlight">gateway.config.yml</span> find the <span class="codeHighlight"> apiEndpoints</span> section where an API endpoint named "api" has been defined</p></li>
 <li markdown="1">
 ```yaml
 apiEndpoints:
@@ -186,35 +186,35 @@ INSERT NEW BOB DIAGRAM HERE
 Right now the API is fully exposed and accessible via its API endpoint. We’re now going to secure it with key authorization. To do so we’ll add the key authorization policy to the default pipeline.
 
 <ol>
-<li>in <span class="codeHighlight">gateway.config.yml</span> find the <span class="codeHighlight"> pipelines</span> section where the "default" pipeline  has been defined</li>
+<li><p>in <span class="codeHighlight">gateway.config.yml</span> find the <span class="codeHighlight"> pipelines</span> section where the "default" pipeline  has been defined</p></li>
 <li markdown="1">
 ```yaml
 pipelines:
-  - name: getting-started 
+  - name: getting-started
     apiEndpoints:
       - api
     policies:
       - key-auth:
       - proxy:
           - action:
-              serviceEndpoint: httpbin 
+              serviceEndpoint: httpbin
               changeOrigin: true
 ```
 </li>
-<li markdown="1">
+<li markdown="1" class="flex-column">
 ![secure-1]({{ site.baseurl }}/assets/img/secure-1.png "Secure-1")
-Assign the key credential to Bob
-<span class="codeHighlight">eg credential bob --type key</span> 
+<p>Assign the key credential to Bob
+<span class="codeHighlight">eg credential bob --type key</span></p>
 </li>
-<li markdown="1">
+<li markdown="1" class="flex-column">
 ![secure-2]({{ site.baseurl }}/assets/img/secure-2.png "Secure-2")
-Curl API endpoint as Bob without credentials - FAIL
-<span class="codeHighlight">curl -i -X GET --url http://localhost/api</span>
+<p>Curl API endpoint as Bob without credentials - FAIL
+<span class="codeHighlight">curl -i -X GET --url http://localhost/api</span></p>
 </li>
-<li markdown="1"> 
+<li markdown="1" class="flex-column">
 ![secure-3]({{ site.baseurl }}/assets/img/secure-3.png "Secure-3")
-Curl API endpoint as Bob with key credentials - SUCCESS!
-<span class="codeHighlight">curl -i -X GET --url http://localhost/api</span>
+<p>Curl API endpoint as Bob with key credentials - SUCCESS!
+<span class="codeHighlight">curl -i -X GET --url http://localhost/api</span></p>
 </li>
 </ol>
 </div>

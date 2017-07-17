@@ -59,6 +59,10 @@
         margin-top: -2px;
         margin-bottom: -2px;
         font-family: 'Inconsolata', monospace;
+
+        + span.codeHighlight {
+          margin-top: .75rem;
+        }
     }
   }
 
@@ -130,9 +134,13 @@
             background-color: $color-gray-light;
             color: $color-text;
             padding: 2px 4px;
-            margin-bottom: .75rem;
+            // margin-bottom: .75rem;
             font-family: 'Inconsolata', monospace;
             border-radius: 5px;
+
+            + .codeHighlight {
+              margin-top: .75rem;
+            }
           }
         }
         div.codeHighlight {
