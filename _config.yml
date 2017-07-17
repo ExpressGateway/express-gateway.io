@@ -16,7 +16,7 @@
 title: Express Gateway
 email: info@express-gateway.io
 description: A Microservices API Gateway Built on Express.JS
-baseurl: "" # dev = "/" temp-prod ="http://bybrandonbrown.com/expressgateway/"
+baseurl: "http://bybrandonbrown.com/expressgateway" # dev = "/" temp-prod ="http://bybrandonbrown.com/expressgateway/"
 url: "http://bybrandonbrown.com/expressgateway" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: xpressgateway
 github_username:  expressgateway
@@ -36,7 +36,8 @@ exclude:
 #syntax-highlighting
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    disable : true
 
 paginate: 5
 paginate_path: "/blog/page-:num/"
