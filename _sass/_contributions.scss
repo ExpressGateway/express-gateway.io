@@ -107,7 +107,7 @@
           counter-increment: installation;
           position: absolute;
           left: -55px;
-          top: -8px;
+          top: -5px;
           background: url(../img/list-bg.svg) no-repeat
         }
 
@@ -207,7 +207,7 @@
               padding: 0 1rem 0 0;
               color: $color-primary;
               position: absolute;
-              top: 1rem;
+              top: 0.875rem;
               left: -1rem;
 
             }
@@ -235,7 +235,9 @@
     &.shape-style-large ol {
 
       > li:before {
-        top: 0;
+        > li:before {
+          top: 0px;
+        }
       }
     }
   }
