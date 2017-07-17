@@ -279,3 +279,32 @@
   }
 
 }
+
+.getting-started-wrapper {
+  .pseudo-wrapper {
+    width: 100%;
+    padding: 0 15.5%;
+    // position: relative;
+    // &:before {
+    //   content: "";
+    //   width: 12.5%;
+    // }
+    // &:after {
+    //   content: "";
+    //   width: 12.5%;
+    // }
+
+    &.quickstart {
+      padding-bottom: 2rem;
+    }
+
+    > li {
+      > h5 {
+        font-size: 1.5rem;
+        font-weight: 200;
+        color: red !important;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

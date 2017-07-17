@@ -29,6 +29,7 @@ Installing Express Gateway is a simple 4-step process.
 -->
     <div class="codeHighlight" markdown="1">
 ```shell
+$ test
 ➜ eg gateway create
 ? What is the name of your Express Gateway? my-gateway
 ? Where would you like to install your Express Gateway? my-gateway
@@ -79,7 +80,7 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
 <div class="shape-style-large-container" markdown="1">
 ##### Specify a microservice and expose as an API
 ###### Step 1
-We’re going to specify an existing service - <a href="http://httpbin.org/ip" _target="new">http://httpbin.org/ip</a> to proxy and manage as if it were our own originating from within the firewall. The service allows users to do get a GET and returns back a JSON string as output. It’s freely available and we’re going to showcase the capabilities of the Express Gateway
+We’re going to specify an existing service - [http://httpbin.org/ip](http://httpbin.org/ip) to proxy and manage as if it were our own originating from within the firewall. The service allows users to do get a GET and returns back a JSON string as output. It’s freely available and we’re going to showcase the capabilities of the Express Gateway
 <ol>
 <li markdown="1">
 <span class="codeHighlight">curl http://httpbin.org/ip</span>
@@ -122,7 +123,7 @@ serviceEndpoints:
 We’re going to expose the httpbin service as an API endpoint through Express Gateway. When an API is made public through an API endpoint, the API can be accessed externally.
 
 <ol>
-<li>open <span class="codeHighlight">gateway.config.yml</span></li>
+<li><p>open <span class="codeHighlight">gateway.config.yml</span></p></li>
 <li markdown="1">find the <span class="codeHighlight"> apiEndpoints</span> section where an API endpoint named "api" has been defined
 ```yaml
 apiEndpoints:
@@ -160,8 +161,8 @@ $ eg users create
 ? Enter username [required]: bob
 ? Enter firstname [required]: Bob
 ? Enter lastname [required]: Smith
-? Enter email: 
-? Enter redirectUri: 
+? Enter email:
+? Enter redirectUri:
 ✔ Created bob
 ```
 </li>
