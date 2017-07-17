@@ -28,16 +28,14 @@ Installing Express Gateway is a simple 4-step process.
   code whitespace removed to avoid whitespace in snippet
 -->
     <div class="codeHighlight" markdown="1">
-```shell
-? What is the name of your Express Gateway? my-gateway
-? What directory would you like to install your Express Gateway? my-gateway
-? What type of Express Gateway do you want to create? (Use arrow keys)
-Getting Started Demo
-Gateway with Key Authorization
-Gateway with Basic Authorization
-Gateway with OAuth2 Authorization
-Basic Gateway Configuration
-```
+    ```shell
+    ➜ eg gateway create
+    ? What's the name of your Express Gateway? cool-gateway
+    ? Where would you like to install your Express Gateway? cool-gateway
+    ? What type of Express Gateway do you want to create? (Use arrow keys)
+    ❯ Getting Started with Express Gateway 
+      Basic (default pipeline with proxy) 
+    ```
     </div>
 4. <span class="li-main">Run Express Gateway</span>
   <span class="codeHighlight">cd my-gateway</span>
@@ -55,7 +53,7 @@ Basic Gateway Configuration
 
 ## 5-minute Getting Started Guide
 
-Before you start: Make sure you've [installed the Express Gateway](#installation) and have it up running — It should only take a minute!
+Before you start: Make sure you've [installed the Express Gateway](#installation) and have it up running with the Getting Started server template — It should only take a minute!
 
 In this quick start guide, you’ll...
 
@@ -79,20 +77,33 @@ In this quick start guide, you’ll...
 <div class="shape-style-large-container" markdown="1">
 ##### Specify a microservice and expose as an API
 ###### Step 1
-We’re going to specify an existing service to proxy and manage as if it were our own originating from within the firewall. The service allows users to search for blah and returns back a JSON string as output. It’s freely public and we’re going to showcase the capabilities of the Express Gateway
+We’re going to specify an existing service - <a href="http://httpbin.org/get" _target="new">http://httpbin.org/get</a> to proxy and manage as if it were our own originating from within the firewall. The service allows users to do get a GET and returns back a JSON string as output. It’s freely public and we’re going to showcase the capabilities of the Express Gateway
 <ol>
-<li>Curl - https://service-url</li>
+<li><span class="codeHighlight">curl -i -X GET --url http://httpbin.org/get</span></li>
 <li markdown="1">
-```javascript
-var rawr = ["r", "a", "w", "r"];
-function thishasareallylongnamesoleck(){
-  const that
-}
-function this(){
-  const that
-}
-function this(){
-  const that
+```shell
+HTTP/1.1 200 OK
+Connection: keep-alive
+Server: meinheld/0.6.1
+Date: Mon, 17 Jul 2017 03:59:33 GMT
+Content-Type: application/json
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+X-Powered-By: Flask
+X-Processed-Time: 0.000699996948242
+Content-Length: 212
+Via: 1.1 vegur
+
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Connection": "close",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/7.51.0"
+  },
+  "origin": "73.92.47.31",
+  "url": "http://httpbin.org/get"
 }
 ```
 </li>
@@ -102,49 +113,46 @@ function this(){
 ![Specify Microservice]({{ site.baseurl }}/assets/img/Marchitecture_Specify-Microservice-Step-2.png "Specify Microservice")
 The service will be specified as a private endpoint in the default pipeline in Express Gateway.  A pipeline is a set of policies.  One of the policies that Express Gateway supports is a proxy policy.  Using the proxy policy within the default pipeline, the gateway will now sit in front of the API and route external requests to the API
 <ol>
-<li>go to /config</li>
+<li><span class="codeHighlight">cd my-gateway/config</span></li>
+<li>in <span class="codeHighlight">gateway.config.yml</span> find the <span class="codeHighlight"> serviceEndpoints</span> section where a service endpoint named "httpbin" has been defined</li>
 <li markdown="1">
-```javascript
-var rawr = ["r", "a", "w", "r"];
-function thishasareallylongnamesoleck(){
-  const that
-}
-function this(){
-  const that
-}
-function this(){
-  const that
-}
+```yaml
+serviceEndpoints:
+  httpbin:
+    url: 'https://httpbin.org'
+```
+</li>
+<li>in <span class="codeHighlight">gateway.config.yml</span> find the "httpbin" serviceEndpoint in the proxy policy of the default pipeline</li>
+<li markdown="1">
+```yaml
+...
+ - proxy:
+          - action:
+              serviceEndpoint: httpbin 
+              changeOrigin: true
+...
 ```
 </li>
 </ol>
 
 ###### Step 3
 ![Expose API]({{ site.baseurl }}/assets/img/Marchitecture_Specify-Microservice-Step-3.png "Expose API")
-We’re going to expose the API as a public endpoint. When an API is made public through a public endpoint, the API can be accessed externally.
+We’re going to expose the httpbin service as an API endpoint through Express Gateway. When an API is made public through an API endpoint, the API can be accessed externally.
 <ol>
-<li>Goto /config</li>
+<li>in <span class="codeHighlight">gateway.config.yml</span> find the <span class="codeHighlight"> apiEndpoints</span> section where an API endpoint named "api" has been defined</li>
 <li markdown="1">
-```javascript
-var rawr = ["r", "a", "w", "r"];
-function thishasareallylongnamesoleck(){
-  const that
-}
-function this(){
-  const that
-}
-function this(){
-  const that
-}
+```yaml
+apiEndpoints:
+  api:
+    host: '*'
 ```
 </li>
 </ol>
 
 ###### Step 4
 ![Access API]({{ site.baseurl }}/assets/img/Marchitecture_Specify-Microservice-Step-4.png "Access API")
-Now that we have a public endpoint surfaced, we should be able to access the API.
-1. Type in public endpoint URL
-2. Access JSON
+Now that we have a API endpoint surfaced, we should be able to access the API through Express Gateway.
+1. <span class="codeHighlight">curl -i -X GET --url http://localhost/api</span>
 </div>
 </li>
 <li>
@@ -156,78 +164,57 @@ Now that we have a public endpoint surfaced, we should be able to access the API
 
 To manage our API, we’re going to define authorized users known as “Consumers” that are allowed to utilize the API.
 
-<ol>
-<li>Goto /config</li>
-<li markdown="1">
-```javascript
-var rawr = ["r", "a", "w", "r"];
-function thishasareallylongnamesoleck(){
-  const that
-}
-function this(){
-  const that
-}
-function this(){
-  const that
-}
-```
-</li>
-</ol>
-
-###### Step 2
-
-The service will be specified as a private endpoint in the default pipeline in Express Gateway.  A pipeline is a set of policies.  One of the policies that Express Gateway supports is a proxy policy.  Using the proxy policy within the default pipeline, the gateway will now sit in front of the API and route external requests to the API
+INSERT NEW BOB DIAGRAM HERE
 
 <ol>
-<li>Curl - https://service-url</li>
+<li><span class="codeHighlight">cd my-gateway</span></li>
+<li><span class="codeHighlight">eg user create</span></li>
 <li markdown="1">
-```javascript
-var rawr = ["r", "a", "w", "r"];
-function thishasareallylongnamesoleck(){
-  const that
-}
-function this(){
-  const that
-}
-function this(){
-  const that
-}
+```shell
+? insert create user output here
 ```
 </li>
 </ol>
 </div>
 </li>
+
 <li>
 <div class="shape-style-large-container" markdown="1">
 
 ##### Secure the API with Key Authorization
 
-Right now the API is fully exposed and accessible via its public endpoint. We’re now going to secure it with key authorization. To do so we’ll add the key authorization policy to the default pipeline.
+Right now the API is fully exposed and accessible via its API endpoint. We’re now going to secure it with key authorization. To do so we’ll add the key authorization policy to the default pipeline.
 
 <ol>
-<li>Goto /config</li>
+<li>in <span class="codeHighlight">gateway.config.yml</span> find the <span class="codeHighlight"> pipelines</span> section where the "default" pipeline  has been defined</li>
 <li markdown="1">
-```javascript
-var rawr = ["r", "a", "w", "r"];
-function thishasareallylongnamesoleck(){
-  const that
-}
-function this(){
-  const that
-}
-function this(){
-  const that
-}
+```yaml
+pipelines:
+  - name: getting-started 
+    apiEndpoints:
+      - api
+    policies:
+      - key-auth:
+      - proxy:
+          - action:
+              serviceEndpoint: httpbin 
+              changeOrigin: true
 ```
 </li>
-<li markdown="1">Assign the key credential to Bob (eg create key bob)
+<li markdown="1">
 ![secure-1]({{ site.baseurl }}/assets/img/secure-1.png "Secure-1")
+Assign the key credential to Bob
+<span class="codeHighlight">eg credential bob --type key</span> 
 </li>
-<li markdown="1">Curl API endpoint without credentials - FAIL
+<li markdown="1">
 ![secure-2]({{ site.baseurl }}/assets/img/secure-2.png "Secure-2")
+Curl API endpoint as Bob without credentials - FAIL
+<span class="codeHighlight">curl -i -X GET --url http://localhost/api</span>
 </li>
-<li markdown="1">Curl API endpoint with Bob and key credentials - SUCCESS!
+<li markdown="1"> 
 ![secure-3]({{ site.baseurl }}/assets/img/secure-3.png "Secure-3")
+Curl API endpoint as Bob with key credentials - SUCCESS!
+<span class="codeHighlight">curl -i -X GET --url http://localhost/api</span>
 </li>
 </ol>
 </div>
