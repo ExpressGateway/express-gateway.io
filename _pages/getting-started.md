@@ -79,8 +79,8 @@ In this quick start guide, you’ll...
 ###### Step 1
 We’re going to specify an existing service - <a href="http://httpbin.org/get" _target="new">http://httpbin.org/get</a> to proxy and manage as if it were our own originating from within the firewall. The service allows users to do get a GET and returns back a JSON string as output. It’s freely public and we’re going to showcase the capabilities of the Express Gateway
 <ol>
-<li><span class="codeHighlight">curl -i -X GET --url http://httpbin.org/get</span></li>
 <li markdown="1">
+<span class="codeHighlight">curl -i -X GET --url http://httpbin.org/get</span>
 ```shell
 HTTP/1.1 200 OK
 Connection: keep-alive

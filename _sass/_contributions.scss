@@ -50,7 +50,7 @@
     font-weight: 200;
     padding-bottom: .75rem;
 
-    span.codeHighlight {
+    > span.codeHighlight {
         align-self: flex-start;
         background-color: $color-gray-light;
         color: $color-text;
@@ -60,10 +60,6 @@
         margin-bottom: -2px;
         font-family: 'Inconsolata', monospace;
         line-height: 1rem;
-
-        + span.codeHighlight {
-          margin-top: .75rem;
-        }
     }
   }
 
@@ -99,6 +95,7 @@
         margin: 1.5rem 0;
         display: flex;
         flex-direction: column;
+
 
         &:before {
 
@@ -145,6 +142,17 @@
             }
           }
         }
+        p span.codeHighlight {
+          margin-top: -2px;
+          + .codeHighlight {
+            margin-top: -2px;
+          }
+        }
+
+        p:first-child:last-child {
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
         div.codeHighlight {
           align-self: flex-start;
           .highlighter-rouge pre.highlight {
@@ -182,18 +190,26 @@
         ol {
           counter-reset: sub-installation;
           margin: 1.5rem 0;
+          padding-left: 1rem;
 
           li {
             padding: .75rem 0;
             font-weight: 500;
             display: flex;
+            position: relative;
+            flex-direction: column;
+
             &:before {
-              text-align: left;
+              text-align: right;
               margin: 0;
               content: counter(sub-installation);
               counter-increment: sub-installation;
               padding: 0 1rem 0 0;
               color: $color-primary;
+              position: absolute;
+              top: 1rem;
+              left: -1rem;
+
             }
 
             figure {
