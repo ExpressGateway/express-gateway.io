@@ -668,6 +668,16 @@ h2.description {
 
       }
     }
+
+    svg {
+      // max-width: 100%;
+      // max-height: auto;
+      text-align: center;
+      margin: 0 auto;
+      width: 50%;
+      height: auto;
+    }
+
     ol {
       flex: 2;
       li {

@@ -71,7 +71,7 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
         ```
 
     - ###### Step 2
-    - ![Specify Microservice]({{ site.baseurl }}/assets/img/Marchitecture_Specify-Microservice-Step-2.png "Specify Microservice")
+    - {% include getting-started/gs-1-2.svg %}
     - The service will be specified as a service endpoint in the default pipeline in Express Gateway.  A pipeline is a set of policies.  Express Gateway has a proxy policy.  Using the proxy policy within the default pipeline, the gateway will now sit in front of the [http://httpbin/ip](http://httpbin/ip) service and route external requests to it as a service endpoint
     1. <span class="codeHighlight">cd my-gateway/config</span>
     2. <p>open <span class="codeHighlight">gateway.config.yml</span> and find the <span class="codeHighlight"> serviceEndpoints</span> section where a service endpoint named <span class="codeHighlight">httpbin</span> has been defined</p>
@@ -92,7 +92,7 @@ serviceEndpoints:
         ```
 
     -  ###### Step 3
-    - ![Expose API]({{ site.baseurl }}/assets/img/Marchitecture_Specify-Microservice-Step-3.png "Expose API")
+    - {% include getting-started/gs-1-3.svg %}
     We’re going to expose the httpbin service as an API endpoint through Express Gateway. When an API is made public through an API endpoint, the API can be accessed externally.
     1. <p>open <span class="codeHighlight">gateway.config.yml</span></p>
     2. <p>find the <span class="codeHighlight"> apiEndpoints</span> section where an API endpoint named "api" has been defined</p>
@@ -105,15 +105,16 @@ serviceEndpoints:
     Note: the path of the API request is appended to the service endpoint by default by the proxy policy
 
     - ###### Step 4
-    - ![Access API]({{ site.baseurl }}/assets/img/Marchitecture_Specify-Microservice-Step-4.png "Access API")
+    - {% include getting-started/gs-1-4.svg %}
     - Now that we have a API endpoint surfaced, we should be able to access the API through Express Gateway.
     - <span class="codeHighlight">curl http://localhost:8080/ip</span>
 
 2. ##### Define API Consumer
     - ###### Step 1
     - To manage our API, we’re going to define authorized users known as “Consumers” that are allowed to utilize the API.
-    - INSERT NEW BOB DIAGRAM HERE
+    - {% include getting-started/gs-2-1.svg %}
     1. <span class="codeHighlight">cd my-gateway</span>
+        - {% include getting-started/gs-2-2.svg %}
     2. <span class="codeHighlight">eg user create</span>
     ```shell
     $ eg users create
@@ -144,7 +145,7 @@ serviceEndpoints:
         ```
 
     - ###### Step 2
-    - ![secure-1]({{ site.baseurl }}/assets/img/secure-1.png "Secure-1")
+    - {% include getting-started/gs-3-3.svg %}
     - Assign the key credential to Bob
     - <span class="codeHighlight">eg credential -c bob -t key-auth -q</span>
 
@@ -152,7 +153,7 @@ serviceEndpoints:
         $ output of the key
         ```
     - ###### Step 3
-    - ![secure-2]({{ site.baseurl }}/assets/img/secure-2.png "Secure-2")
+    - {% include getting-started/gs-3-4.svg %}
     - Curl API endpoint without credentials - FAIL
     - <span class="codeHighlight">curl http://localhost:8080/ip</span>
 
@@ -160,7 +161,7 @@ serviceEndpoints:
         $ output of the failed url
         ```
     - ###### Step 4
-    -   ![secure-3]({{ site.baseurl }}/assets/img/secure-3.png "Secure-3")
+    - {% include getting-started/gs-3-5.svg %}
     - Curl API endpoint as Bob with key credentials - SUCCESS!
     - <span class="codeHighlight">curl `-H "Authorization: apiKey ${keyId}:${keySecret}"` http://localhost:8080/ip</span>
         ```shell
