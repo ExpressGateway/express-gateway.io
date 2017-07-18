@@ -60,8 +60,9 @@ permalink: /resources/
 </div>
 </div>
 </div>
-<div class="svg-fix">{% include wave-2.svg %}</div>
 </section>
+<div class="svg-fix">{% include wave-2.svg %}</div>
+
 <section class="page-section-normal">
 <div class="wrapper">
 <div class="flex-column" markdown="1">

@@ -61,7 +61,7 @@ Express Gateway is a bunch of components which declaratively build around Expres
 </div>
 
 <div class="wrapper border-top-blue flex-row flex-center whatiseg with-graphics with-graphics" markdown="1">
-<img src="{{ site.baseurl }}/assets/img/Marchitecture_Express-As-We-Know-it_01.png" />
+{% include quickstart/whatiseg.svg %}
 <div class="flex-column" markdown="1">
 ### Express as we know it, today
 
@@ -70,7 +70,7 @@ Within Express is its Router. The Router matches URLs and routes them to modules
 </div>
 <div class="wrapper border-top-blue flex-row flex-row-reverse with-graphics" markdown="1">
 
-<img src="{{ site.baseurl }}/assets/img/Marchitecture_ExpressGatewayCore_01.png" />
+{% include quickstart/egcore.svg %}
 <div class="wrapper" markdown="1">
 
 ### Express Gateway Core
@@ -110,7 +110,7 @@ Essentially, all of the core components within Express Gateway make Express more
 ## How does Express Gateway work?
 Now that we’ve described what’s in Express Gateway and how it relates to Express, let’s go over how it works:
 <div class="wrapper flex-row with-graphics" markdown="1">
-![Core Injection]({{ site.baseurl }}/assets/img/Marchitecture_CoreInjection_01.png "Core Injection")
+{% include quickstart/qs-1.svg %}
 1. Express Gateway YAML is read.
 2. Config parameters initialize Express and its middleware.
 3. A request comes in through an API endpoint and is received by the Router.
