@@ -6,5 +6,9 @@
   // border: 1px solid rgb(225,229,230);
   width: 100%;
   overflow-x: scroll;
-  margin-bottom: 1.25rem;
+  margin: 1.25rem 0;
+}
+
+pre {
+  font-size: $font-size-16;
 }

@@ -63,11 +63,12 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
     - We’re going to specify an existing service - [http://httpbin.org/ip](http://httpbin.org/ip) to proxy and manage as if it were our own originating from within the firewall. The service allows users to do get a GET and returns back a JSON string as output. It’s freely available and we’re going to showcase the capabilities of the Express Gateway
 
     1. <span class="codeHighlight">curl http://httpbin.org/ip</span>
-    ```shell
-    {
-      "origin": "73.92.47.31" # this will be your own IP address
-    }
-    ```
+
+        ```shell
+        {
+          "origin": "73.92.47.31" # this will be your own IP address
+        }
+        ```
 
     - ###### Step 2
     - ![Specify Microservice]({{ site.baseurl }}/assets/img/Marchitecture_Specify-Microservice-Step-2.png "Specify Microservice")
@@ -75,20 +76,20 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
     1. <span class="codeHighlight">cd my-gateway/config</span>
     2. <p>open <span class="codeHighlight">gateway.config.yml</span> and find the <span class="codeHighlight"> serviceEndpoints</span> section where a service endpoint named <span class="codeHighlight">httpbin</span> has been defined</p>
     ```yaml
-    serviceEndpoints:
-      httpbin:
-        url: 'https://httpbin.org'
+serviceEndpoints:
+  httpbin:
+    url: 'https://httpbin.org'
     ```
     3. <p>next find the <span class="codeHighlight">httpbin serviceEndpoint</span> in the <span class="codeHighlight">proxy</span> policy of the <span class="codeHighlight">default</span> pipeline</p>
 
-    ```yaml
-    ...
-     - proxy:
-              - action:
-                  serviceEndpoint: httpbin
-                  changeOrigin: true
-    ...
-    ```
+        ```yaml
+...
+ - proxy:
+          - action:
+              serviceEndpoint: httpbin
+              changeOrigin: true
+...
+        ```
 
     -  ###### Step 3
     - ![Expose API]({{ site.baseurl }}/assets/img/Marchitecture_Specify-Microservice-Step-3.png "Expose API")
