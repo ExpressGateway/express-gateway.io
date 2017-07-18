@@ -43,8 +43,8 @@ We believe that an Express based API Gateway will be a powerful enabler for deve
 </div>
 </div>
 </div>
-<div class="svg-fix">{% include wave-2.svg %}</div>
 </section>
+<div class="svg-fix">{% include wave-2.svg %}</div>
 
 <section class="page-section-white">
 <div class="wrapper-flex">

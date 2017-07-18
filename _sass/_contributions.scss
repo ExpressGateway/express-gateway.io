@@ -68,12 +68,13 @@
   }
 
   blockquote {
-    padding: 2.5rem;
-
+    padding: 2.5rem 8rem;
+    text-align: center;
+    color: $color-gray;
     p {
-      font-style: italic;
+      font-style: normal;
       font-size: $font-size-28;
-      font-weight: 200;
+      font-weight: 100;
       line-height: 1.95rem;
     }
   }
