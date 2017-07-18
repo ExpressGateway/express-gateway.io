@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title: eg users
+doc-order: 4.2
 ---
 
 ### Description

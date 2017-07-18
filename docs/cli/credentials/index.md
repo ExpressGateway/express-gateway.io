@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title: eg credentials
+doc-order: 4.4
 ---
 
 ### Description
