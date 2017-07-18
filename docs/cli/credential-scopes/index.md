@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title: eg credential:scopes
+doc-order: 4.5
 ---
 
 ### Description

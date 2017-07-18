@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title: eg tokens
+doc-order: 4.7
 ---
 
 ### Description
