@@ -128,45 +128,46 @@ serviceEndpoints:
 3. ##### Secure the API with Key Authorization
     - ###### Step 1
     - Right now the API is fully exposed and accessible via its API endpoint. We’re now going to secure it with key authorization. To do so we’ll add the key authorization policy to the default pipeline.
-    - <p>In <span class="codeHighlight">gateway.config.yml</span> find the <span class="codeHighlight"> pipelines</span> section where the "default" pipeline  has been defined</p>
+    - In <span class="codeHighlight">gateway.config.yml</span> find the <span class="codeHighlight"> pipelines</span> section where the "default" pipeline has been defined
 
-    ```yaml
-    pipelines:
-      - name: getting-started
-        apiEndpoints:
-          - api
-        policies:
-          - key-auth:
-          - proxy:
-              - action:
-                  serviceEndpoint: httpbin
-                  changeOrigin: true
-    ```
+        ```yaml
+        pipelines:
+          - name: getting-started
+            apiEndpoints:
+              - api
+            policies:
+              - key-auth:
+              - proxy:
+                  - action:
+                      serviceEndpoint: httpbin
+                      changeOrigin: true
+        ```
+        
     - ###### Step 2
     - ![secure-1]({{ site.baseurl }}/assets/img/secure-1.png "Secure-1")
     - Assign the key credential to Bob
     - <span class="codeHighlight">eg credential -c bob -t key-auth -q</span>
 
-    ```shell
-    $ output of the key
-    ```
+        ```shell
+        $ output of the key
+        ```
     - ###### Step 3
     - ![secure-2]({{ site.baseurl }}/assets/img/secure-2.png "Secure-2")
     - Curl API endpoint without credentials - FAIL
     - <span class="codeHighlight">curl http://localhost:8080/ip</span>
 
-    ```shell
-    $ output of the failed url
-    ```
+        ```shell
+        $ output of the failed url
+        ```
     - ###### Step 4
     -   ![secure-3]({{ site.baseurl }}/assets/img/secure-3.png "Secure-3")
     - Curl API endpoint as Bob with key credentials - SUCCESS!
     - <span class="codeHighlight">curl `-H "Authorization: apiKey ${keyId}:${keySecret}"` http://localhost:8080/ip</span>
-    ```shell
-    {
-      "origin": "73.92.47.31"
-    }
-    ```
+        ```shell
+        {
+          "origin": "73.92.47.31"
+        }
+        ```
 
 </section>
 </article>
