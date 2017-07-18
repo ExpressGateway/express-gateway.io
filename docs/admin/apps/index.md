@@ -1,7 +1,7 @@
 ---
 layout: doc-section
 title: Apps
-doc-order: 4.2
+doc-order: 10.2
 ---
 
 ### Overview Apps API

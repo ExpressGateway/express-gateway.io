@@ -1,7 +1,7 @@
 ---
 layout: doc-section
 title: Users
-doc-order: 4.1
+doc-order: 10.1
 ---
 
 ### Overview Users

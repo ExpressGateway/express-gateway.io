@@ -1,7 +1,7 @@
 ---
 layout: doc-section
 title: Admin API Reference
-doc-order: 4.1
+doc-order: 10.0
 ---
 
 ### Overview Admin API
