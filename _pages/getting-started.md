@@ -24,18 +24,18 @@ Installing Express Gateway is a simple 4-step process.
 2. ##### Create an Express Gateway
   <span class="codeHighlight"> $ eg gateway create</span>
 3. ##### Follow the prompts and choose the Getting Started server template
-```shell
-$ test
-➜ eg gateway create
-? What is the name of your Express Gateway? my-gateway
-? Where would you like to install your Express Gateway? my-gateway
-? What type of Express Gateway do you want to create? (Use arrow keys)
-❯ Getting Started with Express Gateway
-  Basic (default pipeline with proxy)
-```
+
+    ```shell
+    ➜ eg gateway create
+    ? What is the name of your Express Gateway? my-gateway
+    ? Where would you like to install your Express Gateway? my-gateway
+    ? What type of Express Gateway do you want to create? (Use arrow keys)
+    ❯ Getting Started with Express Gateway
+      Basic (default pipeline with proxy)
+    ```
+
 4. ##### Run Express Gateway
-  <span class="codeHighlight">cd my-gateway</span>
-  <span class="codeHighlight">npm start</span>
+  <span class="codeHighlight">cd my-gateway && npm start</span>
 
 
 </section>
@@ -44,7 +44,7 @@ $ test
 
 ## 5-minute Getting Started Guide
 
-Before you start: Make sure you've [installed the Express Gateway](#installation) and have it up running with the Getting Started server template — It should only take a minute!
+Before you start: Make sure you've [installed the Express Gateway](#installation) and have it up running with the Getting Started server template. 
 
 In this quick start guide, you’ll...
 
@@ -62,7 +62,8 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
     - ###### Step 1
     - We’re going to specify an existing service - [http://httpbin.org/ip](http://httpbin.org/ip) to proxy and manage as if it were our own originating from within the firewall. The service allows users to do get a GET and returns back a JSON string as output. It’s freely available and we’re going to showcase the capabilities of the Express Gateway
 
-    1. <p><span class="codeHighlight">curl http://httpbin.org/ip</span></p>
+    1. <p>open another terminal window
+    2. <p><span class="codeHighlight">curl http://httpbin.org/ip</span></p>
 
         ```shell
         {
@@ -75,20 +76,22 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
     - The service will be specified as a service endpoint in the default pipeline in Express Gateway.  A pipeline is a set of policies.  Express Gateway has a proxy policy.  Using the proxy policy within the default pipeline, the gateway will now sit in front of the [http://httpbin/ip](http://httpbin/ip) service and route external requests to it as a service endpoint
     1. <p><span class="codeHighlight">cd my-gateway/config</span></p>
     2. <p>open <span class="codeHighlight">gateway.config.yml</span> and find the <span class="codeHighlight"> serviceEndpoints</span> section where a service endpoint named <span class="codeHighlight">httpbin</span> has been defined</p>
-    ```yaml
-serviceEndpoints:
-  httpbin:
-    url: 'https://httpbin.org'
-    ```
+
+        ```yaml
+        serviceEndpoints:
+        httpbin:
+        url: 'https://httpbin.org'
+        ```
+
     3. <p>next find the <span class="codeHighlight">httpbin serviceEndpoint</span> in the <span class="codeHighlight">proxy</span> policy of the <span class="codeHighlight">default</span> pipeline</p>
 
         ```yaml
-...
- - proxy:
+        ...
+          - proxy:
           - action:
               serviceEndpoint: httpbin
               changeOrigin: true
-...
+        ...
         ```
 
     -  ###### Step 3
@@ -96,12 +99,14 @@ serviceEndpoints:
     We’re going to expose the httpbin service as an API endpoint through Express Gateway. When an API is made public through an API endpoint, the API can be accessed externally.
     1. <p>open <span class="codeHighlight">gateway.config.yml</span></p>
     2. <p>find the <span class="codeHighlight"> apiEndpoints</span> section where an API endpoint named "api" has been defined</p>
+
     ```yaml
     apiEndpoints:
       api:
         host: 'localhost'
         paths: '/ip'
     ```
+
     Note: the path of the API request is appended to the service endpoint by default by the proxy policy
 
     - ###### Step 4
@@ -116,15 +121,16 @@ serviceEndpoints:
     1. <p><span class="codeHighlight">cd my-gateway</span></p>
         - {% include getting-started/gs-2-2.svg %}
     2. <p><span class="codeHighlight">eg user create</span></p>
-    ```shell
-    $ eg users create
-    ? Enter username [required]: bob
-    ? Enter firstname [required]: Bob
-    ? Enter lastname [required]: Smith
-    ? Enter email:
-    ? Enter redirectUri:
-    ✔ Created bob
-    ```
+
+        ```shell
+        $ eg users create
+        ? Enter username [required]: bob
+        ? Enter firstname [required]: Bob
+        ? Enter lastname [required]: Smith
+        ? Enter email:
+        ? Enter redirectUri:
+        ✔ Created bob
+        ```
 
 3. ##### Secure the API with Key Authorization
     - ###### Step 1
@@ -146,25 +152,33 @@ serviceEndpoints:
 
     - ###### Step 2
     - {% include getting-started/gs-3-3.svg %}
-    - Assign the key credential to Bob
+    - <p>Assign the key credential to Bob</p>
     - <p><span class="codeHighlight">eg credential -c bob -t key-auth -q</span></p>
 
         ```shell
-        $ output of the key
+        $ eg credential create -c bob -t key-auth -q
+        0Er0Ldv5EHSUE364Dj9Gv:2Yzq1Pngs1JYaB2my9Ge4u
         ```
+
+    Note: the -q option above, limits the output to just the API key, making it easier for copying and pasting. 
+
     - ###### Step 3
     - {% include getting-started/gs-3-4.svg %}
-    - Curl API endpoint without credentials - FAIL
+    - <p>Curl API endpoint without credentials - FAIL</p>
     - <p><span class="codeHighlight">curl http://localhost:8080/ip</span></p>
 
         ```shell
-        $ output of the failed url
+        $ curl http://localhost:8080/ip
+          Forbidden
         ```
+
     - ###### Step 4
     - {% include getting-started/gs-3-5.svg %}
-    - Curl API endpoint as Bob with key credentials - SUCCESS!
+    - <p>Curl API endpoint as Bob with key credentials - SUCCESS!</p>
     - <p><span class="codeHighlight">curl `-H "Authorization: apiKey ${keyId}:${keySecret}"` http://localhost:8080/ip</span></p>
+
         ```shell
+        $ curl -H "Authorization: apiKey 0Er0Ldv5EHSUE364Dj9Gv:2Yzq1Pngs1JYaB2my9Ge4u" http://localhost:8080/ip
         {
           "origin": "73.92.47.31"
         }
