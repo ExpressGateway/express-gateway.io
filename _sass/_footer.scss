@@ -55,12 +55,13 @@
     }
   }
   .sponsors {
+
     a {
       display: block;
       margin-bottom: .5rem;
-      max-width: 80%;
+      width: 80%;
       &:last-child {
-        max-width: 50%
+        width: 50%
       }
     }
 
