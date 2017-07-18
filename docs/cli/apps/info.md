@@ -1,6 +1,7 @@
 ---
 layout: doc-section
 title: eg apps info
+doc-order: 4.3
 ---
 
 ### Description
