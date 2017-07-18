@@ -1,22 +1,3 @@
-/**
-
-.sticky {
-  position: fixed;
-  top: 10px;
-  right:18px;
-  margin: 0;
-  width:calc(33.33% - 25px);
-}
-
-.abs {
-  position: absolute;
-  bottom: 10px;
-  right:10px;
-  width:calc(33.33% - 20px);
-}
-
-**/
-
 
 // variables
   var topPosition = $('.floating-div').offset().top - 10;
