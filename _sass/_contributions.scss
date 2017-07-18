@@ -274,7 +274,11 @@
     padding-bottom: 2rem;
 
     p {
-      line-height: 2rem;
+      line-height: 1.25rem;
+    }
+
+    &.page-section-blue {
+      ol { margin-bottom: 1rem;}
     }
 
     li {
