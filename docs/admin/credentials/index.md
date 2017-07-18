@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title: Credentials API Reference
+title: Credentials
 doc-order: 10.3
 ---
 

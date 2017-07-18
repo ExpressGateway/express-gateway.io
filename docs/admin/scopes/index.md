@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title: Scopes API Reference
+title: Scopes
 doc-order: 10.4
 ---
 
