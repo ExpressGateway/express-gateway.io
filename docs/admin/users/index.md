@@ -7,6 +7,9 @@ doc-order: 4.1
 ### Overview Users
 
 This part of the API is responsible for managing User entities 
+User is the main entity in the system.
+User can have multiple Apps 
+
 
 ### Create a User
 ##### Request: `POST /users`

@@ -6,88 +6,80 @@ doc-order: 4.1
 
 ### Overview Apps API
 
-This part of the API is responsible for managing User entities 
+This part of the API is responsible for managing Apps entities 
+User is the main entity. User can have multiple Apps
+Main purpose of App is to be container for Credentials
 
 ### Create an App
 ##### Request: `POST /apps`
 
 ```json
 {
-  "username": "steve",    //Unique identifier of user
-  "firstname": "Steve", // required by default 
-  "lastname": "Brown",  // required by default 
-  "email": "steve@example.com", // optional
-  "redirectUri": "http://example.com" // optional, Oauth2 related  
+  "userId": "steve",
+  "name": "my-app",
+  "redirectUri": "http://example.com"
 }
 ```
 ##### Response:
 ```json
 {
-  "username": "steve",
-  "id": "47bc9fa2-f245-4b47-9cb4-29b8ccb49728", // Unique identifier, 1-1 relation to username
-  "email": "steve@example.com",
-  "firstname": "Steve",
-  "lastname": "Brown",
-  "isActive": true, 
+  "name": "my-app",
+  "id": "0e13a310-0319-4780-bf66-d10788e08d8a",
+  "userId": "steve",
+  "isActive": true,
   "redirectUri": "http://example.com",
-  "createdAt": "Sun Jul 16 2017 00:06:17 GMT+0300 (EEST)",
-  "updatedAt": "Sun Jul 16 2017 00:06:17 GMT+0300 (EEST)"
+  "createdAt": "Tue Jul 18 2017 17:04:06 GMT+0300 (EEST)",
+  "updatedAt": "Tue Jul 18 2017 17:04:06 GMT+0300 (EEST)"
 }
 ```
 
-### View User info
+### View App info
 
 ##### Request: `GET /apps/{id}` 
-`GET /apps/steve` 
+`GET /apps/0e13a310-0319-4780-bf66-d10788e08d8a` 
 
 ##### Response:
 ```json
 {
-  "username": "steve",
-  "id": "47bc9fa2-f245-4b47-9cb4-29b8ccb49728", 
-  "email": "steve@example.com",
-  "firstname": "Steve",
-  "lastname": "Brown",
-  "isActive": true, 
+  "name": "my-app",
+  "id": "0e13a310-0319-4780-bf66-d10788e08d8a",
+  "userId": "steve",
+  "isActive": true,
   "redirectUri": "http://example.com",
-  "createdAt": "Sun Jul 16 2017 00:06:17 GMT+0300 (EEST)",
-  "updatedAt": "Sun Jul 16 2017 00:06:17 GMT+0300 (EEST)"
+  "createdAt": "Tue Jul 18 2017 17:04:06 GMT+0300 (EEST)",
+  "updatedAt": "Tue Jul 18 2017 17:04:06 GMT+0300 (EEST)"
 }
 ```
 
-### List all Users
+### List all Apps
 
 ##### Request: `GET /apps`
 
 ##### Response: 
 ```json
 {
-  "users": [  // Array of users
+  "apps": [  // Array of apps
     {
-      "username": "steve",  
-      "id": "47bc9fa2-f245-4b47-9cb4-29b8ccb49728",
-      "email": "steve@example.com",
-      "firstname": "Steve",
-      "lastname": "Brown",
-      "isActive": "true or false",
+      "name": "my-app",
+      "id": "0e13a310-0319-4780-bf66-d10788e08d8a",
+      "userId": "steve",
+      "isActive": true,
       "redirectUri": "http://example.com",
-      "createdAt": "Sun Jul 16 2017 00:06:17 GMT+0300 (EEST)",
-      "updatedAt": "Sun Jul 16 2017 00:06:17 GMT+0300 (EEST)"
+      "createdAt": "Tue Jul 18 2017 17:04:06 GMT+0300 (EEST)",
+      "updatedAt": "Tue Jul 18 2017 17:04:06 GMT+0300 (EEST)"
     }
   ],
   "nextKey": 0  
 }
 ```
 
-### Update User info
+### Update App info
 
-##### Request: `PUT /apps/{id|username}` 
-`PUT /apps/steve` 
+##### Request: `PUT /apps/{id}` 
+`PUT /apps/0e13a310-0319-4780-bf66-d10788e08d8a` 
 ```json
 {
-  "email": "steve.brown@example.com",
-  "firstname": "Steve",
-  "lastname": "Brown",
+  "name": "my-app-2",
   "redirectUri": "http://example.com"
 }
 ```
@@ -95,22 +87,20 @@ This part of the API is responsible for managing User entities
 ##### Response:
 ```json
 {
-  "username": "steve",
-  "id": "47bc9fa2-f245-4b47-9cb4-29b8ccb49728", 
-  "email": "steve.brown@example.com",
-  "firstname": "Steve",
-  "lastname": "Brown",
-  "isActive": true, 
+  "name": "my-app-2",
+  "id": "0e13a310-0319-4780-bf66-d10788e08d8a",
+  "userId": "steve",
+  "isActive": true,
   "redirectUri": "http://example.com",
-  "createdAt": "Sun Jul 16 2017 00:06:17 GMT+0300 (EEST)",
-  "updatedAt": "Sun Jul 16 2017 00:06:17 GMT+0300 (EEST)"
+  "createdAt": "Tue Jul 18 2017 17:04:06 GMT+0300 (EEST)",
+  "updatedAt": "Tue Jul 18 2017 17:34:07 GMT+0300 (EEST)"
 }
 ```
 
 ### Delete App
 
 ##### Request: `DELETE /apps/{id}` 
-`DELETE /apps/steve` 
+`DELETE /apps/0e13a310-0319-4780-bf66-d10788e08d8a` 
 
 ##### Response: 200 (204)
 
