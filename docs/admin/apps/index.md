@@ -1,7 +1,7 @@
 ---
 layout: doc-section
 title: Apps
-doc-order: 4.1
+doc-order: 4.2
 ---
 
 ### Overview Apps API
@@ -102,7 +102,7 @@ Main purpose of App is to be container for Credentials
 ##### Request: `DELETE /apps/{id}` 
 `DELETE /apps/0e13a310-0319-4780-bf66-d10788e08d8a` 
 
-##### Response: 200 (204)
+##### Response: 204
 
 ### Activate/Deactivate App
 ##### Request: `DELETE /apps/{id}/status`

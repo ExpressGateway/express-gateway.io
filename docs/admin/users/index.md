@@ -115,7 +115,7 @@ User can have multiple Apps
 ##### Request: `DELETE /users/{id|username}` 
 `DELETE /users/steve` 
 
-##### Response: 200 (204)
+##### Response: 204
 
 
 ### Activate/Deactivate User

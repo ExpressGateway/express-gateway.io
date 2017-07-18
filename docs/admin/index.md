@@ -13,7 +13,7 @@ CLI is using Admin API
 ### Core Entities
 
 ##### User
-Main item in the system. Typically would be used to represent person in Express Gateway.
+Main item in the system. Typically would be used to represent a person in Express Gateway.
 User can have multiple Applications (Apps) and Credentials
 
 In minimal configuration you would need User with Credential to secure endpoints 
