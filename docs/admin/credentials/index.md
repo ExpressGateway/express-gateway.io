@@ -110,6 +110,25 @@ Any API Consumer (User\App) can have one credential of `basic-auth` and `oauth2`
 }
 ```
 
+### Get Credential info 
+##### Request: `GET /credentials/{type}/{credentialId}`
+
+##### Response:
+```json
+{
+    "keyId": "55tEGsilJkhKoWMS3kkipH", // only for key-auth 
+    "keySecret": "5BNegGCfqW4rhqqCz3A3sM", // only for key-auth
+    "consumerId": "47bc9fa2-f245-4b47-9cb4-29b8ccb49728",
+    "password": "47bc9fa2-f245-4b47-9cb4-29b8ccb49728", // for basic-auth
+    "secret": "47bc9fa2-f245-4b47-9cb4-29b8ccb49728", // for oauth2
+    "type": "basic-auth", //or key-auth or oauth2
+    "isActive": true,
+    "createdAt": "Tue Jul 18 2017 17:04:06 GMT+0300 (EEST)",
+    "updatedAt": "Tue Jul 18 2017 17:04:06 GMT+0300 (EEST)"
+    
+}
+```
+
 ### Activate/Deactivate Credential
 ##### Request: `DELETE /credential/{type}/{credentialId}/status`
 ```json
@@ -124,7 +143,26 @@ Any API Consumer (User\App) can have one credential of `basic-auth` and `oauth2`
   "status": "Activated"  // Active, Deactivated, Inactive
 }
 ```
-##### Note: 
-credentialId for `basic-auth` and `oauth2` is `consumerId` and for `key-auth` it is `keyId`
 
 
+### Set scopes for Credential 
+##### Request: `PUT /credentials/{type}/{credentialId}/scopes`
+```json
+{
+  "scopes": [
+    "admin"
+  ] 
+}
+```
+##### Response: 204
+
+### Add scope to Credential scopes 
+##### Request: `PUT /credentials/{type}/{credentialId}/scopes/{scope}`
+##### Response: 204
+
+### Remove scope from Credential scopes 
+##### Request: `DELETE /credentials/{type}/{credentialId}/scopes/{scope}`
+##### Response: 204
+
+### Note: 
+`credentialId` for `basic-auth` and `oauth2` is `consumerId` and for `key-auth` it is `keyId`
