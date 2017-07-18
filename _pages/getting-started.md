@@ -62,7 +62,7 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
     - ###### Step 1
     - We’re going to specify an existing service - [http://httpbin.org/ip](http://httpbin.org/ip) to proxy and manage as if it were our own originating from within the firewall. The service allows users to do get a GET and returns back a JSON string as output. It’s freely available and we’re going to showcase the capabilities of the Express Gateway
 
-    1. <span class="codeHighlight">curl http://httpbin.org/ip</span>
+    1. <p><span class="codeHighlight">curl http://httpbin.org/ip</span></p>
 
         ```shell
         {
@@ -73,7 +73,7 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
     - ###### Step 2
     - {% include getting-started/gs-1-2.svg %}
     - The service will be specified as a service endpoint in the default pipeline in Express Gateway.  A pipeline is a set of policies.  Express Gateway has a proxy policy.  Using the proxy policy within the default pipeline, the gateway will now sit in front of the [http://httpbin/ip](http://httpbin/ip) service and route external requests to it as a service endpoint
-    1. <span class="codeHighlight">cd my-gateway/config</span>
+    1. <p><span class="codeHighlight">cd my-gateway/config</span></p>
     2. <p>open <span class="codeHighlight">gateway.config.yml</span> and find the <span class="codeHighlight"> serviceEndpoints</span> section where a service endpoint named <span class="codeHighlight">httpbin</span> has been defined</p>
     ```yaml
 serviceEndpoints:
@@ -107,15 +107,15 @@ serviceEndpoints:
     - ###### Step 4
     - {% include getting-started/gs-1-4.svg %}
     - Now that we have a API endpoint surfaced, we should be able to access the API through Express Gateway.
-    - <span class="codeHighlight">curl http://localhost:8080/ip</span>
+    - <p><span class="codeHighlight">curl http://localhost:8080/ip</span></p>
 
 2. ##### Define API Consumer
     - ###### Step 1
     - To manage our API, we’re going to define authorized users known as “Consumers” that are allowed to utilize the API.
     - {% include getting-started/gs-2-1.svg %}
-    1. <span class="codeHighlight">cd my-gateway</span>
+    1. <p><span class="codeHighlight">cd my-gateway</span></p>
         - {% include getting-started/gs-2-2.svg %}
-    2. <span class="codeHighlight">eg user create</span>
+    2. <p><span class="codeHighlight">eg user create</span></p>
     ```shell
     $ eg users create
     ? Enter username [required]: bob
@@ -147,7 +147,7 @@ serviceEndpoints:
     - ###### Step 2
     - {% include getting-started/gs-3-3.svg %}
     - Assign the key credential to Bob
-    - <span class="codeHighlight">eg credential -c bob -t key-auth -q</span>
+    - <p><span class="codeHighlight">eg credential -c bob -t key-auth -q</span></p>
 
         ```shell
         $ output of the key
@@ -155,7 +155,7 @@ serviceEndpoints:
     - ###### Step 3
     - {% include getting-started/gs-3-4.svg %}
     - Curl API endpoint without credentials - FAIL
-    - <span class="codeHighlight">curl http://localhost:8080/ip</span>
+    - <p><span class="codeHighlight">curl http://localhost:8080/ip</span></p>
 
         ```shell
         $ output of the failed url
@@ -163,7 +163,7 @@ serviceEndpoints:
     - ###### Step 4
     - {% include getting-started/gs-3-5.svg %}
     - Curl API endpoint as Bob with key credentials - SUCCESS!
-    - <span class="codeHighlight">curl `-H "Authorization: apiKey ${keyId}:${keySecret}"` http://localhost:8080/ip</span>
+    - <p><span class="codeHighlight">curl `-H "Authorization: apiKey ${keyId}:${keySecret}"` http://localhost:8080/ip</span></p>
         ```shell
         {
           "origin": "73.92.47.31"

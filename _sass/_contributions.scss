@@ -59,7 +59,7 @@
         margin-top: -2px;
         margin-bottom: -2px;
         font-family: 'Inconsolata', monospace;
-        line-height: 1rem;
+        // line-height: 1rem;
     }
   }
 
@@ -114,7 +114,7 @@
         }
 
         ul li {
-          padding: .5rem 0 0;
+          // padding: .5rem 0 0;
           line-height: 1.25rem;
 
           img {
@@ -141,7 +141,7 @@
             margin-bottom: 1.25rem;
             font-family: 'Inconsolata', monospace;
             border-radius: 5px;
-            line-height: 1rem;
+            // line-height: 1rem;
 
             + .codeHighlight {
               margin-top: .75rem;
@@ -355,7 +355,8 @@
           padding: 0 1rem 0 0;
           color: $color-primary;
           position: absolute;
-          top: 6px;
+          //top: 6px;
+          line-height: 1.5rem;
           left: -1rem;
           font-size: $font-size-14;
           font-weight: bold;
