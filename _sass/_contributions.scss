@@ -116,6 +116,10 @@
         ul li {
           padding: .5rem 0 0;
           line-height: 1.25rem;
+
+          img {
+            width: 100%;
+          }
         }
 
         span {
@@ -334,6 +338,10 @@
         margin: 1.5rem 0;
         display: flex;
         flex-direction: column;
+
+        img {
+
+        }
 
         &:before {
           text-align: right;
