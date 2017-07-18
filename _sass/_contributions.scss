@@ -325,6 +325,7 @@
     ol li > ol {
       counter-reset: sub-installation;
       padding-left: 1rem;
+      width: 100%;
       > li {
         position: relative;
         font-size: $font-size-18;
@@ -361,6 +362,15 @@
             color: $color-text;
             margin-bottom: 1rem;
           }
+        }
+      }
+      ol {
+        > li:first-child {
+
+            > ol {
+                width: 80%;
+            }
+
         }
       }
     }
