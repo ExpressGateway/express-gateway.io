@@ -40,7 +40,7 @@ User can have multiple Apps
 
 ### View User info
 
-##### Request: `GET /users/{id|username}` 
+##### Request: `GET /users/{id or username}` 
 `GET /users/steve` 
 
 ##### Response:
@@ -84,7 +84,7 @@ User can have multiple Apps
 
 ### Update User info
 
-##### Request: `PUT /users/{id|username}` 
+##### Request: `PUT /users/{id or username}` 
 `PUT /users/steve` 
 ```json
 {
@@ -112,14 +112,14 @@ User can have multiple Apps
 
 ### Delete User
 
-##### Request: `DELETE /users/{id|username}` 
+##### Request: `DELETE /users/{id or username}` 
 `DELETE /users/steve` 
 
 ##### Response: 204
 
 
 ### Activate/Deactivate User
-##### Request: `DELETE /users/{id|username}/status`
+##### Request: `PUT /users/{id or username}/status`
 ```json
 {
   "status": true  // use false to deactivate

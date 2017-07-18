@@ -130,7 +130,7 @@ Any API Consumer (User\App) can have one credential of `basic-auth` and `oauth2`
 ```
 
 ### Activate/Deactivate Credential
-##### Request: `DELETE /credential/{type}/{credentialId}/status`
+##### Request: `PUT /credential/{type}/{credentialId}/status`
 ```json
 {
   "status": true  // use false to deactivate

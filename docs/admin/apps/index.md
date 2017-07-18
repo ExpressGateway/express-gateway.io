@@ -105,7 +105,7 @@ Main purpose of App is to be container for Credentials
 ##### Response: 204
 
 ### Activate/Deactivate App
-##### Request: `DELETE /apps/{id}/status`
+##### Request: `PUT /apps/{id}/status`
 ```json
 {
   "status": true  // use false to deactivate
