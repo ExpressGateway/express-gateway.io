@@ -163,7 +163,7 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
           0Er0Ldv5EHSUE364Dj9Gv:2Yzq1Pngs1JYaB2my9Ge4u
           ```
 
-    Note: the -q option above, limits the output to just the API key, making it easier for copying and pasting.
+      - Note: the -q option above, limits the output to just the API key, making it easier for copying and pasting.
 
     - ###### Step 3
       - {% include getting-started/gs-3-4.svg %}
@@ -177,15 +177,15 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
 
     - ###### Step 4
       - {% include getting-started/gs-3-5.svg %}
-      - <p>Curl API endpoint as Bob with key credentials - SUCCESS!</p>
-      - <p><span class="codeHighlight">curl `-H "Authorization: apiKey ${keyId}:${keySecret}"` http://localhost:8080/ip</span></p>
+    - <p>Curl API endpoint as Bob with key credentials - SUCCESS!</p>
+    - <p><span class="codeHighlight">curl `-H "Authorization: apiKey ${keyId}:${keySecret}"` http://localhost:8080/ip</span></p>
 
-            ```shell
-            $ curl -H "Authorization: apiKey 0Er0Ldv5EHSUE364Dj9Gv:2Yzq1Pngs1JYaB2my9Ge4u" http://localhost:8080/ip
-            {
-              "origin": "73.92.47.31"
-            }
-            ```
+        ```shell
+        $ curl -H "Authorization: apiKey 0Er0Ldv5EHSUE364Dj9Gv:2Yzq1Pngs1JYaB2my9Ge4u" http://localhost:8080/ip
+        {
+          "origin": "73.92.47.31"
+        }
+        ```
 
 </section>
 </article>
