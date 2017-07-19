@@ -20,15 +20,21 @@ $(document).ready(function () {
       register($form)
     })
   }
+
+  $('.header-menu-icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with-sidebar');
+		});
+
+  $('#site-cache').click(function(e){
+    $('body').removeClass('with-sidebar');
+  });
+
+  $('.toc-responsive-menu-icon').click(function(e){
+			$('.toc-wrapper').toggleClass('toc-wrapper-height');
+		});
+
 })
-
-// hljs.initHighlightingOnLoad();
-
-// hljs.configure({useBR: true});
-//
-// $('.highlighter-rouge').each(function(i, block) {
-//   hljs.highlightBlock(block);
-// });
 
 //email capture form details
 function register($form) {
@@ -61,30 +67,3 @@ function register($form) {
     }
   })
 };
-
-//docs sidebar control
-
-
-// function sticky_relocate() {
-//     var window_top = $(window).scrollTop();
-//     var footer_top = $(".footer").offset().top;
-//     var div_top = $('#sb-sticky-anchor').offset().top;
-//     var div_height = $("#sb-sticky").height();
-//     var div_height_top = $("#sb-sticky").offset().top;
-//
-//     var padding = 95;  // tweak here or get from margins etc
-//
-//     if (window_top + div_height > footer_top - padding)
-//         $('#sb-sticky').css({top: (window_top + div_height - footer_top + padding)})
-//     else if (window_top > div_top) {
-//         $('#sb-sticky').addClass('stick');
-//         $('#sb-sticky').css({top: 0})
-//     } else {
-//         $('#sb-sticky').removeClass('stick');
-//     }
-// }
-
-// $(function () {
-//     $(window).scroll(sticky_relocate);
-//     sticky_relocate();
-// });

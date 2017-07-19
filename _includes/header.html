@@ -1,9 +1,11 @@
+<div class="site-pusher">
+<a href="#" class="header-menu-icon"><span></span></a>
 <header class="site-header">
   <section class="wrapper">
     <a href="{{ site.baseurl }}/" class="logo">
       {% include gwe-logo.svg %}
     </a>
-    <nav class="type-xxsmall">
+    <nav class="menu">
       <span {% if page.url == "/about/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/about">About</a></span>
       <span {% if page.url == "/getting-started/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/getting-started">Getting Started</a></span>
       <span {% if page.url contains "/docs/" %}class="active"{% endif %}>

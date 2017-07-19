@@ -3,7 +3,7 @@
 
   h2 {
 
-
+    display: inline-block;
     span {
       display: block;
     }
@@ -72,6 +72,10 @@
     text-align: center;
     color: $color-gray;
 
+    @include size(small){
+      padding: 2.5rem 3rem;
+    }
+
     p {
       font-style: normal;
       font-size: $font-size-28;
@@ -87,7 +91,9 @@
       counter-reset: installation;
       padding-left: 55px;
 
-
+      @include size(small){
+        padding-left: 0;
+      }
 
       & > li {
         position: relative;
@@ -98,6 +104,9 @@
         display: flex;
         flex-direction: column;
 
+        @include size(small){
+          margin-top: 5rem;
+        }
 
         &:before {
 
@@ -110,7 +119,17 @@
           position: absolute;
           left: -55px;
           top: -5px;
-          background: url(../img/list-bg.svg) no-repeat
+          background: url(../img/list-bg.svg) no-repeat;
+
+          @include size(small){
+            left: 50%;
+            margin-left: -45px;
+            top: -3rem;
+          }
+        }
+
+        ul {
+          width: 100%;
         }
 
         ul li {
@@ -253,16 +272,19 @@
 
     .flex-column {
       padding-left: 2rem;
+      @include size(small){
+        padding-left: 0;
+      }
     }
     svg {
       width: 100%;
     }
 
-    h4 {
-      margin: 0;
-      padding: 0 0 1.5rem 0;
-      font-size: $font-size-24;
-      font-weight: 200;
+    @include size(small){
+      h3 {
+        line-height: 1.75rem;
+        padding: 1rem 0;
+      }
     }
 
     p {
@@ -306,6 +328,19 @@
     //   width: 12.5%;
     // }
 
+    @include size(small){
+      width: 85%;
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    &.page-section-blue {
+      @include size(small){
+        width: 100%;
+        padding: 7.5%;
+        margin: 0 auto;
+      }
+    }
     &.quickstart {
       padding-bottom: 2rem;
     }
@@ -315,12 +350,17 @@
     }
 
     > ol {
+      @include size(small){width: 100%;}
       > li {
+
+        &:before {
+          @include size(small){margin-left: -25px;}
+        }
         > h5 {
           font-size: 1.5rem;
           font-weight: 200;
           color: $color-gray;
-          margin-bottom: 1rem;
+          @include size(small){margin: 0 auto 1rem;}
         }
       }
     }

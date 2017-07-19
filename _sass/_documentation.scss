@@ -26,6 +26,10 @@
     flex-direction: row;
     padding-top: $header-main-height;
     min-height: calc(100vh);
+
+    @include size(small){
+      flex-direction: column;
+    }
   }
 
   main {
@@ -44,12 +48,21 @@
     background: $color-background;
     border-radius: 15px;
 
+    @include size(small){
+      width: 100%;
+      margin: 0 auto;
+    }
 
       h1 {
         font-size: $font-size-48;
         font-weight: 100;
         color: $color-text;
         line-height: 5rem;
+
+        @include size(small){
+          font-size: $font-size-40;
+        }
+
       }
 
       h2 {

@@ -14,7 +14,7 @@ h2 {
 }
 
 // h2 {
-//   font-size: $font-size-xxlarge;
+//   font-size: $font-size-32;
 // }
 
 h3 {
@@ -25,29 +25,29 @@ h3 {
 }
 
 h4 {
-  font-size: $font-size-large;
+  font-size: $font-size-27;
   font-weight: 100;
 }
 
 h5 {
-  font-size: $font-size-medium;
+  font-size: $font-size-24;
 }
 
 p {
-  font-size: $font-size-base;
+  font-size: $font-size-16;
   line-height: $font-lineheight-base;
 }
 
 ul {
-  font-size: $font-size-small
+  font-size: $font-size-16
 }
 
 ol {
-  font-size: $font-size-xsmall;
+  font-size: $font-size-16;
 }
 
 span {
-  font-size: $font-size-xxsmall;
+  font-size: $font-size-14;
 }
 
 a {
@@ -85,7 +85,7 @@ blockquote {
 }
 
 .type-base {
-  font-size: $font-size-base;
+  font-size: $font-size-16;
   line-height: $font-lineheight-base;
 }
 
