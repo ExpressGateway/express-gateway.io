@@ -9,6 +9,7 @@ gateway.config.yml is made up of the following sections:
 
 - http
 - https
+- admin
 - apiEndpoints
 - serviceEndpoints
 - policies
