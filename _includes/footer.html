@@ -1,0 +1,36 @@
+<section class="footer">
+  <div class="wrapper">
+    <section>
+      <h1>Express Gateway</h1>
+    </section>
+    <section>
+      <h5>Contact</h5>
+      <a href="mailto:info@express-gateway.com">info@express-gateway.io</a>
+    </section>
+    <section class="social-links">
+      <h5>Follow</h5>
+      <nav>
+        <a href="https://medium.com/@lunchbadger">{% include social-medium.svg %}</a>
+        <a href="https://twitter.com/express_gateway">{% include social-twitter.svg %}</a>
+        <a href="https://facebook.com/expressjsgateway">{% include social-facebook.svg %}</a>
+        <a href="https://github.com/ExpressGateway/express-gateway">{% include social-github.svg %}</a>
+      </nav>
+    </section>
+    <section class="sponsors">
+      <h5>Proudly Sponsored by</h5>
+      <a href="http://www.lunchbadger.com/">{% include logo-lunchbadger.svg %}</a>
+      <a href="https://www.joyent.com/">{% include logo-joyent.svg %}</a>
+    </section>
+  </div>
+  <p class="copyright">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+
+</section>
+<div class="site-cache" id="site-cache"></div>
+</div>
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script> -->
+<script src="{{ site.baseurl }}/assets/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
+{% include insert-to-body-end.html %}

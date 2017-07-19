@@ -1,0 +1,80 @@
+<section id="archive">
+  {% assign line = 0 %}
+  {%for post in site.posts %}
+    {% capture spaceless %}
+
+      {% assign year   = post.date | date: '%Y' %}
+      {% assign month  = post.date | date: '%m' %}
+
+      {% assign n_year  = 2000 %}
+      {% assign p_year  = 2025 %}
+      {% assign n_month = 0 %}
+      {% assign p_month = 13 %}
+
+      {% if post.next %}
+        {% assign n_year  = post.next.date | date: '%Y' %}
+        {% assign n_month = post.next.date | date: '%m' %}
+      {% endif %}
+
+      {% if post.previous %}
+        {% assign p_year  = post.previous.date | date: '%Y' %}
+        {% assign p_month = post.previous.date | date: '%m' %}
+      {% endif %}
+
+      {% assign year_text = nil %}
+      {% if post.next %}
+        {% if year != n_year %}
+          {% assign year_text = year %}
+        {% endif %}
+      {% else %}
+        {% assign year_text = year | append: " (this year's posts)" %}
+      {% endif %}
+
+      {% if month != n_month %}
+        {% assign line = 0 %}
+      {% endif %}
+
+      {% assign mod = line | modulo: 2 %}
+      {% if mod == 1 %}
+        {% assign li_class='odd' %}
+      {% else %}
+        {% assign li_class='even' %}
+      {% endif %}
+
+      {% assign line = line | plus: 1 %}
+    {% endcapture %}
+
+    {% if year_text %}
+      <div class ="anchor-target archive-year"
+           id="{{ year }}">{{ year_text }}</div>
+    {% endif %}
+
+    {% if year != n_year %}
+    <ul class="archive-month">
+    {% endif %}
+
+    {% if month != n_month %}
+      <li class="list-month">
+        <span class ="anchor-target archive-month"
+              id="{{ year }}-{{ month }}">
+              {{ post.date | date: '%B %Y' }}</span>
+          <ul class="archive-item">
+    {% endif %}
+          <li class="list-content {{ li_class }}">
+            <time class="pull-right">{{ post.date | date:"%d %b" }}&nbsp;
+        <span class="fa fa-calendar"></span></time>
+            <a href="{{ post.url }}">
+              {{ post.title }}
+            </a>
+          </li>
+    {% if month != p_month %}
+          </ul>
+      </li>
+    {% endif %}
+
+    {% if year != p_year %}
+    </ul>
+    {% endif %}
+
+  {% endfor %}
+</section>

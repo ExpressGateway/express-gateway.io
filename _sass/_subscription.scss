@@ -1,0 +1,26 @@
+#subscribe-result {
+  width: 60%;
+  font-size: 34px;
+  position: absolute;
+  top: 100%;
+  padding: .5rem;
+
+  p {
+    font-size: $font-size-14;
+  }
+  &.subscribe-error {
+    background: $color-highlight;
+  }
+}
+
+.subscribe-success {
+  background: $color-navigation-highlight;
+  p {
+    color: $color-background;
+    padding: 1.5rem 0;
+  }
+}
+
+#mc_embed_signup {
+
+}

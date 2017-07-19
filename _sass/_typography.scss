@@ -1,0 +1,121 @@
+body {
+  color: $color-text;
+  font-family: “Helvetica Neue”, Helvetica, Open Sans, Lato, “Univers”, Arial, sans-serif;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: $font-size-36;
+  font-weight: 200;
+  line-height: 3rem;
+  color: $color-primary;
+  padding-top: 2rem;
+  display: inherit
+}
+
+// h2 {
+//   font-size: $font-size-32;
+// }
+
+h3 {
+  font-size: $font-size-27;
+  font-weight: 200;
+  line-height: 2.75rem;
+  color: $color-text;
+}
+
+h4 {
+  font-size: $font-size-27;
+  font-weight: 100;
+}
+
+h5 {
+  font-size: $font-size-24;
+}
+
+p {
+  font-size: $font-size-16;
+  line-height: $font-lineheight-base;
+}
+
+ul {
+  font-size: $font-size-16
+}
+
+ol {
+  font-size: $font-size-16;
+}
+
+span {
+  font-size: $font-size-14;
+}
+
+a {
+  text-decoration: none;
+  color: $color-text;
+}
+
+blockquote {
+  p {
+    font-style: italic;
+    font-weight: 100;
+  }
+
+  span.type-medium {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    line-height: 1.75rem;
+  }
+}
+
+.subtitle {
+  font-size: $font-size-18;
+  color: $color-navigation;
+  font-weight: 200;
+}
+
+.large-header {
+  font-size: $font-size-44;
+  line-height: $font-lineheight-base + 1
+}
+
+.type-center {
+  text-align: center;
+}
+
+.type-base {
+  font-size: $font-size-16;
+  line-height: $font-lineheight-base;
+}
+
+.markdown {
+
+  padding-bottom: 10rem;
+
+  h2 {
+    font-size: $font-size-52;
+    font-weight: 100;
+  }
+
+  h5 {
+    font-size: $font-size-40;
+    color: $color-primary;
+    font-weight: 200;
+    padding: 2rem 0 1.5rem;
+  }
+
+  p {
+    font-size: $font-size-16;
+    font-weight: 200;
+    line-height: $font-lineheight-base;
+  }
+}
+
+.condensed {
+  font-family: 'Pragati Narrow', sans-serif;
+}
+
+.code {
+  font-family: 'Inconsolata', monospace;
+}

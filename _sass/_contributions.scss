@@ -1,0 +1,431 @@
+.contributions {
+  font-weight: normal;
+
+  h2 {
+
+    display: inline-block;
+    span {
+      display: block;
+    }
+  }
+
+  a {
+    color: $color-primary;
+    text-decoration: underline;
+  }
+
+  h2:not(:first-child), h4{
+    margin-top: 5rem;
+  }
+
+  // h3 {
+  //   font-size: $font-size-40;
+  //   font-weight: 200;
+  //   padding: 3rem 0 1rem 0;
+  //   color: $color-primary;
+  // }
+
+  h4, h5, p, ul, ol {
+    width: 80%;
+  }
+
+  .full-width ol {
+    width: 100%;
+  }
+
+  h4 {
+    margin-bottom: 3rem;
+  }
+
+  // h5 {
+  //   font-size: $font-size-40;
+  //   font-weight: 200;
+  //   padding: 3rem 0 1rem 0;
+  //   color: $color-primary;
+  // }
+
+  p {
+    font-size: $font-size-16;
+    line-height: $font-lineheight-base;
+    font-weight: 200;
+    padding-bottom: .75rem;
+    width: 100%;
+    > span.codeHighlight {
+        align-self: flex-start;
+        background-color: $color-gray-light;
+        color: $color-text;
+        padding: 2px 4px;
+        border-radius: 5px;
+        margin-top: -2px;
+        margin-bottom: -2px;
+        font-family: 'Inconsolata', monospace;
+        // line-height: 1rem;
+    }
+  }
+
+  .background-highlight {
+    background-color: $color-background-highlight
+  }
+
+  blockquote {
+    padding: 2.5rem 8rem;
+    text-align: center;
+    color: $color-gray;
+
+    @include size(smalltomedium){
+      padding: 2.5rem 3rem;
+    }
+
+    p {
+      font-style: normal;
+      font-size: $font-size-28;
+      font-weight: 100;
+      line-height: 1.95rem;
+    }
+  }
+
+  .shape-style {
+
+    > ol {
+      margin-top: 1rem;
+      counter-reset: installation;
+      padding-left: 55px;
+
+      @include size(smalltomedium){
+        padding-left: 0;
+      }
+
+      & > li {
+        position: relative;
+        font-size: $font-size-18;
+        font-weight: 200;
+        color: $color-text;
+        margin: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+
+        @include size(smalltomedium){
+          margin-top: 5rem;
+        }
+
+        &:before {
+
+          padding: 7px 13px 13px 13px;
+          line-height: 20px;
+          text-align: center;
+          margin: 0;
+          content: counter(installation);
+          counter-increment: installation;
+          position: absolute;
+          left: -55px;
+          top: -5px;
+          background: url(../img/list-bg.svg) no-repeat;
+
+          @include size(smalltomedium){
+            left: 50%;
+            margin-left: -45px;
+            top: -3rem;
+          }
+        }
+
+        ul {
+          width: 100%;
+        }
+
+        ul li {
+          // padding: .5rem 0 0;
+          line-height: 1.25rem;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        span {
+          display: inline-block;
+
+
+          &.li-main {
+            font-size: $font-size-24;
+            font-weight: 200;
+            color: $color-gray;
+            margin-bottom: 1rem;
+          }
+
+          &.codeHighlight {
+            align-self: flex-start;
+            background-color: $color-gray-light;
+            color: $color-text;
+            padding: 2px 4px;
+            margin-bottom: 1.25rem;
+            font-family: 'Inconsolata', monospace;
+            border-radius: 5px;
+            // line-height: 1rem;
+
+            + .codeHighlight {
+              margin-top: .75rem;
+            }
+          }
+        }
+        p span.codeHighlight {
+          margin-top: -2px;
+          margin-bottom: 0;
+          + .codeHighlight {
+            margin-top: -2px;
+            margin-bottom: 0;
+          }
+        }
+
+        p:first-child:last-child {
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+        div.codeHighlight {
+          align-self: flex-start;
+          .highlighter-rouge pre.highlight {
+            font-size: $font-size-14;
+            background-color: $color-gray-light;
+            color: $color-text;
+            padding: 2px 4px;
+            border-radius: 5px;
+            margin-bottom: .75rem;
+            font-family: 'Inconsolata', monospace;
+            border: none;
+          }
+        }
+      }
+
+      .shape-style-large-container {
+
+        h5 {
+          padding: 0 0 1.5rem 0;
+        }
+
+        h6 {
+          color: $color-gray;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: $font-size-18;
+          padding: 0 0 1rem 0;
+          @extend .condensed;
+        }
+
+        p {
+          margin-bottom: 1.25rem;
+          font-weight: 100;
+        }
+        ol {
+          counter-reset: sub-installation;
+          margin: 1.5rem 0;
+          padding-left: 1rem;
+
+          li {
+            padding: .75rem 0;
+            font-weight: 500;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+
+            &:before {
+              text-align: right;
+              margin: 0;
+              content: counter(sub-installation);
+              counter-increment: sub-installation;
+              padding: 0 1rem 0 0;
+              color: $color-primary;
+              position: absolute;
+              top: 0.875rem;
+              left: -1rem;
+
+            }
+
+            figure {
+              border: 2px solid $color-gray-light;
+              border-radius: 10px;
+              .gutter {
+                background: $color-gray-light;
+                padding: .25rem;
+                font-weight: 200;
+              }
+
+              .code {
+                padding: .25rem .75rem;
+              }
+
+            }
+          }
+        }
+
+      }
+    }
+
+    &.shape-style-large ol {
+
+      > li:before {
+        > li:before {
+          top: 0px;
+        }
+      }
+    }
+  }
+  .whatiseg {
+
+    .flex-column {
+      padding-left: 2rem;
+      @include size(smalltomedium){
+        padding-left: 0;
+      }
+    }
+    svg {
+      width: 100%;
+    }
+
+    @include size(smalltomedium){
+      h3 {
+        line-height: 1.75rem;
+        padding: 1rem 0;
+      }
+    }
+
+    p {
+      width: 100%;
+    }
+  }
+
+  .quickstart {
+    padding-bottom: 2rem;
+
+    p {
+      line-height: 1.25rem;
+    }
+
+    &.page-section-blue {
+      ol { margin-bottom: 1rem;}
+    }
+
+    li {
+      list-style: decimal;
+      margin-left: 1rem;
+      padding-left: 1rem;
+      line-height: 1.5rem;
+      font-weight: 100;
+    }
+  }
+
+}
+
+.getting-started-wrapper {
+  .pseudo-wrapper {
+    width: 100%;
+    padding: 0 15.5%;
+    // position: relative;
+    // &:before {
+    //   content: "";
+    //   width: 12.5%;
+    // }
+    // &:after {
+    //   content: "";
+    //   width: 12.5%;
+    // }
+
+    @include size(smalltomedium){
+      width: 85%;
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    &.page-section-blue {
+      @include size(smalltomedium){
+        width: 100%;
+        padding: 7.5%;
+        margin: 0 auto;
+      }
+    }
+    &.quickstart {
+      padding-bottom: 2rem;
+    }
+
+    svg {
+      margin-bottom: 1.25rem;
+    }
+
+    > ol {
+      @include size(smalltomedium){width: 100%;}
+      > li {
+
+        &:before {
+          @include size(smalltomedium){margin-left: -25px;}
+        }
+        > h5 {
+          font-size: 1.5rem;
+          font-weight: 200;
+          color: $color-gray;
+          @include size(smalltomedium){margin: 0 auto 1rem;}
+        }
+      }
+    }
+
+    ul li > h6 {
+      color: $color-gray;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: $font-size-18;
+      padding: 0 0 .5rem 0;
+      @extend .condensed;
+    }
+
+    ol li > ol {
+      counter-reset: sub-installation;
+      padding-left: 1rem;
+      width: 100%;
+      > li {
+        position: relative;
+        font-size: $font-size-18;
+        font-weight: 200;
+        color: $color-text;
+        margin: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+
+        &:before {
+          text-align: right;
+          margin: 0;
+          content: counter(sub-installation);
+          counter-increment: sub-installation;
+          padding: 0 1rem 0 0;
+          color: $color-primary;
+          position: absolute;
+          //top: 6px;
+          line-height: 1.5rem;
+          left: -1rem;
+          font-size: $font-size-14;
+          font-weight: bold;
+        }
+      }
+    }
+
+
+    &.shape-style-large {
+      > ol {
+        width: 100%;
+        > li {
+          > h5 {
+            font-size: 1.5rem;
+            font-weight: 200;
+            color: $color-text;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+      ol {
+        > li:first-child {
+
+            > ol {
+                width: 80%;
+            }
+
+        }
+      }
+    }
+  }
+}

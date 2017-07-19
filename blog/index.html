@@ -1,0 +1,55 @@
+---
+layout: page
+title: Blog
+---
+
+
+<section class="blog wrapper">
+  <!-- This loops through the paginated posts -->
+  <div class="article-list">
+    <ul>
+      {% for post in paginator.posts %}
+      <li class="post-excerpt">
+        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+        <p class="author">
+          <span class="date">{{ post.date | date: '%A %B %d, %Y' }}</span>
+        </p>
+        <div class="content">
+          {{ post.excerpt }}
+        </div>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="button-read-more">Read more</a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <!-- This creates the pagination navigation elements -->
+      {% if paginator.total_pages > 1 %}
+      <nav class="pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ site.baseurl }}{{ paginator.previous_page_path}}" class="prev paginator-active">Prev</a>
+        {% else %}
+          <span class="prev">Prev</span>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <em class="pagecount">{{ page }}</em>
+          {% elsif page == 1 %}
+            <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="pagecount">{{ page }}</a>
+          {% else %}
+            <a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', page }}" class="pagecount">{{ page }}</a>
+          {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+          <a href="{{ site.baseurl }}{{ paginator.next_page_path}}" class="next paginator-active">Next</a>
+        {% else %}
+          <span class="next">Next</span>
+        {% endif %}
+      </nav>
+      {% endif %}
+
+  </div>
+  {% include blogsidebar.html %}
+  
+</section>

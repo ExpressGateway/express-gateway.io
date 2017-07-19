@@ -1,0 +1,178 @@
+
+/*
+Table of Contents
+
+1. Breakpoints
+2. Colors
+3. Font Sizes
+4. Line-heights
+5. Layout
+
+*****/
+/*****
+1. BREAKPOINTS
+
+ Example use:
+
+*****/
+
+$breakpoint-small:  410px;
+$breakpoint-large:  960px;
+
+@mixin size($media) {
+  @if $media == small {
+    @media only screen and (max-width: $breakpoint-small) { @content; }
+  }
+  @if $media == smalltomedium {
+    @media only screen and (max-width: $breakpoint-large) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $breakpoint-small + 1) and (max-width: $breakpoint-large - 1) { @content; }
+  }
+  @else if $media == large {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+/*****
+
+2. COLORS
+
+*****/
+
+//highlight
+$color-highlight: rgba(255,196,0,1);//#ffc400
+
+//primary
+$color-primary: rgba(52,168,196,1);//#34a8c4
+
+//secondary
+$color-secondary-light: rgba(52,168,196,.15);//#34a8c4
+
+//dark
+$color-secondary-dark: rgba(14,134,150,1);//#0e8696
+
+//dark
+$color-secondary-dark-50: rgba(14,134,150,.5);//#0e8696
+
+//text
+$color-text:          rgba(55,63,63,1);//373f3f
+
+//navigation-highlight
+$color-navigation-highlight: rgba(164,241,248,1);//#a4f1f8
+
+//navigation
+$color-navigation:    rgba(104,218,242,1); //68daf2
+
+//gray
+$color-gray:          rgba(135,134,136,1);//#878688
+
+//light-gray
+$color-gray-light:    rgba(238,238,238,1);//#ededed
+
+$color-gray-blue:     rgba(231,241,242,1);
+
+//background
+$color-background:    rgba(255,255,255,1);
+
+$color-background-highlight:  rgb(229,240,241);
+// Used to brighten backgrounds
+
+$color-background-shadow:     rgb(246,246,246);
+// Used to darken backgrounds
+
+/*****
+
+3. Font Sizes
+
+*****/
+
+$font-family:   “Helvetica Neue”, Helvetica, Open Sans, Lato, “Univers”, Arial, sans-serif;
+
+//12
+$font-size-12:     .75rem;
+
+//14
+$font-size-14:     .875rem;
+
+//16
+$font-size-16:     1rem;
+
+//18
+$font-size-18:     1.125rem;
+
+//22
+$font-size-22:     1.375rem;
+
+//24
+$font-size-24:     1.5rem;
+
+//26
+$font-size-26:     1.625rem;
+
+//27
+$font-size-27:     1.6875rem;
+
+//28
+$font-size-28:     1.75rem;
+
+//29
+$font-size-29:     1.8125rem;
+//30
+$font-size-30:     1.875rem;
+
+//32
+$font-size-32:     2rem;
+
+//36
+$font-size-36:     2.25rem;
+
+//40
+$font-size-40:     2.5rem;
+
+//44
+$font-size-44:     2.75rem;
+
+//48
+$font-size-48:     3rem;
+
+//52
+$font-size-52:     3.250rem;
+
+//54
+$font-size-54:     3.375rem; //40px
+
+//65
+$font-size-65:     4.0625rem;
+
+//80
+$font-size-80:     5rem;
+
+/*****
+
+4. Line-heights
+
+*****/
+
+//18px
+$font-lineheight-code:        1.125rem;
+
+//21px
+$font-lineheight-list:        1.25rem;
+
+//24px
+$font-lineheight-base:        1.5rem;
+
+//32px
+$font-lineheight-blockquote:  2rem;
+
+
+
+/*****
+
+5. LAYOUT
+
+*****/
+
+$header-top-height:           29px;  /* height of the top section of the header */
+$header-main-height:          100px - $header-top-height; /* default height of the main section of the header */
+$footer-height:               240px;

@@ -1,0 +1,339 @@
+.documentation, .documentation + div svg  {
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(left, #ffffff 39%,#f8fbfb 39%, #f8fbfb 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ffffff 39%,#f8fbfb 39%,#f8fbfb 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ffffff 39%,#f8fbfb 39%,#f8fbfb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8fbfb',GradientType=1 ); /* IE6-9 */
+
+}
+
+.documentation {
+
+  .codeHighlight, p code, table td code {
+    align-self: flex-start;
+    background-color: $color-gray-light;
+    color: $color-text;
+    padding: 2px 4px;
+    border-radius: 5px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+    font-family: 'Inconsolata', monospace;
+  }
+
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-top: $header-main-height;
+    min-height: calc(100vh);
+
+    @include size(smalltomedium){
+      flex-direction: column;
+    }
+  }
+
+  main {
+    flex: 9;
+    background: lighten($color-gray-blue, 5%);
+    padding-top: 25px;
+    &.markdown {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .doc-wrapper {
+    width: 700px;
+    margin: 0 0 0 auto;
+    padding: 5%;
+    background: $color-background;
+    border-radius: 15px;
+
+    @include size(smalltomedium){
+      width: 100%;
+      margin: 0 auto;
+    }
+
+      h1 {
+        font-size: $font-size-48;
+        font-weight: 100;
+        color: $color-text;
+        line-height: 5rem;
+
+        @include size(smalltomedium){
+          font-size: $font-size-40;
+        }
+
+      }
+
+      h2 {
+        font-size: $font-size-36;
+        font-weight: 200;
+        line-height: 3rem;
+        color: $color-primary;
+        margin-bottom: 0.9375rem;
+      }
+
+      h3 {
+        margin-top: 1.625rem;
+        font-size: $font-size-27;
+        font-weight: 200;
+        line-height: 2.75rem;
+        color: $color-text;
+        &:before {
+          content: "";
+          height: $header-main-height + 100;
+          display: block;
+          margin-top: -($header-main-height + 100);
+
+        }
+      }
+
+      h4 {
+        font-size: $font-size-22;
+        font-weight: 600;
+        line-height: 2.75rem;
+        color: #7a7a7a;
+      }
+
+      h5 {
+        font-size: $font-size-16;
+        font-weight: 600;
+        line-height: 2.5rem;
+        color: #686868;
+        padding: 0;
+      }
+
+      h6 {
+        font-family: 'Pragati Narrow', sans-serif;
+        color: $color-gray;
+        text-transform: uppercase;
+        line-height: 1.5rem;
+      }
+
+      p {
+        font-size: $font-size-16;
+        font-weight: 200;
+        line-height: $font-lineheight-base;
+        padding-bottom: 1.75rem;
+      }
+
+      a {
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: underline;
+
+        &:hover {
+          color: $color-navigation;
+        }
+      }
+
+      em {
+        font-style: italic;
+        font-weight: 100;
+      }
+
+      strong {
+        font-weight: 900;
+      }
+
+      blockquote {
+         p {
+           font-size: $font-size-28;
+           font-style: italic;
+           line-height: $font-lineheight-base + 1.5;
+           text-align: center;
+         }
+      }
+
+      .inlinecode{
+        background-color: $color-gray-light;
+        color: $color-text;
+        padding: .5rem .75rem;
+        border-radius: 20px;
+        font-family: 'Inconsolata', monospace;
+      }
+
+      ol {
+        counter-reset: olcount;
+        li {
+          padding-left: 1rem;
+          text-indent: -.5rem;
+          font-size: $font-size-16;
+          line-height: $font-lineheight-list;
+          padding-bottom: .75rem;
+          &::before {
+            content: counter(olcount);
+            counter-increment: olcount;
+            color: $color-primary;
+            position: relative;
+            right: .5rem;
+            font-size: 1rem;
+          }
+        }
+
+        &.hexagon-list {
+          counter-reset: hexlist;
+          padding-left: 55px;
+
+            & > li {
+              position: relative;
+              display: flex;
+              flex-direction: column;
+
+              font-size: $font-size-24;
+              font-weight: 200;
+              color: $color-gray;
+              margin: 1rem 0;
+
+              &:before {
+                content: counter(hexlist);
+                counter-increment: hexlist;
+                position: absolute;
+                left: -55px;
+                top: -8px;
+                right: 100%;
+
+                padding: 11px 9px 9px 6px;
+                line-height: 20px;
+                text-align: center;
+                margin: 0;
+
+                background: url(../img/list-bg.svg) no-repeat;
+
+                font-size: $font-size-18;
+                font-weight: 200;
+                color: $color-text;
+              }
+          }
+        }
+
+        ol, ul {
+          padding-top: 1rem;
+        }
+    }
+
+    ul {
+      ol, ul {
+        padding-top: 1rem;
+      }
+      li {
+        padding-left: 1rem;
+        text-indent: -.5rem;
+        font-size: $font-size-16;
+        line-height: $font-lineheight-list;
+        padding-bottom: .75rem;
+        &::before {
+          content: "•";
+          color: $color-highlight;
+          position: relative;
+          right: .5rem;
+          font-size: 1rem;
+        }
+
+        li {
+          list-style: none;
+          &::before {
+            content: "\00b0";
+            color: $color-gray;
+            position: relative;
+            right: .5rem;
+            font-size: 1rem;
+            top: 3px;
+          }
+          li {
+            list-style: none;
+            &::before {
+              content: "•";
+              color: $color-gray;
+              position: relative;
+              right: .5rem;
+              font-size: .5rem;
+              top: -3px;
+            }
+          }
+        }
+      }
+    }
+
+    aside {
+
+      &.notice {
+        background: $color-secondary-light;
+        border: 2px solid $color-secondary-dark;
+        padding: 1.5rem 1rem;
+        color: $color-secondary-dark;
+        margin: 1.5rem 0;
+      }
+      &.warning {
+        color: darken($color-highlight, 20%);
+        background: lighten($color-highlight, 30%);
+        border: 2px solid $color-highlight;
+        padding: 1.5rem 1rem;
+        margin: 1.5rem 0;
+      }
+      &.error {
+        background: rgb(255, 186, 186);
+        border: 2px solid rgb(216, 0, 12);
+        padding: 1.5rem 1rem;
+        font-weight: 900;
+        color: rgb(216, 0, 12);
+        margin: 1.5rem 0;
+      }
+      &.success {
+        background: rgb(223, 242, 191);
+        border: 2px solid rgb(79, 138, 16);
+        padding: 1.5rem 1rem;
+        margin: 1.5rem 0;
+      }
+    }
+
+    figure.highlight {
+      border: 2px solid $color-gray-light;
+      border-radius: 10px;
+      margin: 1rem 0 2rem;
+      .gutter {
+        background: $color-gray-light;
+        padding: .25rem;
+        font-weight: 200;
+        font-family: 'Inconsolata', monospace;
+        font-size: 0.875rem;
+        line-height: 1rem;
+      }
+      .code {
+        padding: .25rem .75rem;
+      }
+    }
+  }
+}
+
+main.markdown > .doc-wrapper > table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  font-weight: 500;
+
+  tr{
+    &:nth-of-type(odd) {
+      background: $color-gray-blue;
+
+    }
+    &:hover {
+      background: $color-secondary-light;
+    }
+  }
+
+  td, th {
+    padding: .75rem 1rem;
+    text-align: left;
+  }
+
+  th {
+    color: $color-secondary-dark-50;
+    background: $color-background;
+  }
+
+  td {
+    color: $color-primary;
+
+  }
+}
