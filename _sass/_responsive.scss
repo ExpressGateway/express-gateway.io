@@ -112,7 +112,13 @@ $menu-width: 250px!default;
       position: relative;
     }
 
-    .site-header nav.menu {}
+    .site-header nav.menu {
+      &.resize {
+        @include size(medium){
+          margin-top: 0;
+        }
+      }
+    }
 
     /* example 5 */
     .header-menu-icon span {

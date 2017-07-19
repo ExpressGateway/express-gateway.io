@@ -25,17 +25,7 @@ $(document).ready(function () {
   $('.header-menu-icon').click(function(e){
 			e.preventDefault();
 			$('body').toggleClass('with-sidebar');
-      //fix off canvas menu on scroll
-      var screenheight = parseInt($(document).height());
-       var scrolledpx = parseInt($("body").scrollTop());
-       var sum = screenheight-scrolledpx;
-       console.log("screenheight=" + screenheight);
-       console.log("scrolledpx body=" + scrolledpx);
-       console.log("sum=" + sum);
-       $(".site-header nav.menu").css({
-         "margin-top":scrolledpx,
-         "height:":screenheight
-       });
+      sidebarpadding()
 		});
 
   // site click back
@@ -48,9 +38,33 @@ $(document).ready(function () {
 			$('.toc-wrapper').toggleClass('toc-wrapper-height');
 		});
 
+  $(window).on('resize',sidebarpadding);
 
+  function sidebarpadding(){
+    //fix off canvas menu on scroll
+     var screenheight = parseInt($(document).height());
+     var windowWidth = $( window ).width();
+     var scrolledpx = parseInt($("body").scrollTop());
+     var sum = screenheight-scrolledpx;
+     console.log("screenheight=" + screenheight);
+     console.log("scrolledpx body=" + scrolledpx);
+     console.log("sum=" + sum);
+
+     if(windowWidth <= 960){
+       $(".with-sidebar nav.menu").css({
+         "margin-top":scrolledpx,
+         "height:":screenheight
+       });
+     } else {
+       $("nav.menu").css({
+         "margin-top":"0px",
+         "height:":"71px"
+       });
+     }
+     console.log("resized margin: ",  scrolledpx)
+     console.log("resized height: ", screenheight)
+  }
 })
-
 //email capture form details
 function register($form) {
   $('#mc-embedded-subscribe').val('Sending...');
