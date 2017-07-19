@@ -2,9 +2,14 @@
 layout: doc-section
 title:  "apiEndpoints"
 doc-order: 3.1
-list-order: .3
+list-order: .4
 ---
+
+### Description
+
 Express Gateway exposes microservices as APIs through URLs known as apiEndpoints. API consumers may API requests through the API endpoints.
+
+### Usage
 
 ```yaml
 
@@ -25,10 +30,17 @@ apiEndpoints:
 
 ```
 
-## Host
+### Options
+
+| Name    | Description                        |
+|---      |---                                 |
+| `host`  | the hostname to accept requests on |
+| `paths` | an array of paths                  |
+
+#### Host
 The `host` value is a string that will be matched against the 'HOST' header of the request.
 
-Examples:
+##### Examples:
 
 Any Domain and Path
 ```yaml
@@ -60,10 +72,10 @@ apiEndpoints:
     paths: /help
 ```
 
-## Paths
+#### Paths
 Paths can be either a string or array of strings.  Wildcard patterns are supported.  Paths follow the ExpressJS routes conventions - [https://expressjs.com/en/4x/api.html#router](https://expressjs.com/en/4x/api.html#router)
 
-Examples:
+##### Examples:
 
 Exact String Match
 ```yaml
@@ -133,7 +145,7 @@ paths: ['/student/*', '/teacher/*','/admin/*']
 
 ---
 
-## Overlapping
+#### Overlapping
 The order of the API endpoints specified matters. It is possible to specifiy overlapping patterns through wildcards. More specific patterns should be specified first for prioritized evaluation before more general matching.
 
 Example:

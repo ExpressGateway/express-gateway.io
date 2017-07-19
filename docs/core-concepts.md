@@ -12,6 +12,7 @@ Express Gateway comes with the following core entities:
 - pipelines
 - consumers (users and apps)
 - credentials
+- scopes
 
 ### endpoints
 Endpoints are URLs. Express Gateway has two different types of endpoints:
@@ -31,3 +32,6 @@ A consumer makes API requests and consumes API responses. In Express Gateway, co
 
 ### credentials
 Credentials are types of authentication and authorizations. In Express Gateway, a consumer may be assigned one or more credentials. Each credential specifies a set of [scopes](#scopes) that are used for authorizations. Express Gateway comes with a simple yet powerful [Credential Management](#Credential Management) module.
+
+### scopes
+Scopes are labels used to assign authorizations. Scopes are defined globally and then assigned to API endpoints and credentials. If an API Consumer tries to acccess an API endpoint tagged with a scope, the authorization policy protecting the endpoint looks up the credentials to make sure the consumer has the corresponding scope.

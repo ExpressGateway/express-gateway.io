@@ -2,13 +2,17 @@
 layout: doc-section
 title:  "pipelines"
 doc-order: 3.1
-list-order: .6
+list-order: .7
 ---
+
+### Description
+
 The pipelines section specify the core Express Gateway's operations by tying  together all entities declared in the sections above, through the request and response flow.
 
 Pipelines are an ordered list of policies that are executed for requests received from all linked apiEndpoints.
 
-Usage:
+### Usage
+
 ```yaml
 pipelines:
   pipeline_1                   # name of pipeline
@@ -34,7 +38,7 @@ pipelines:
   .
 ```
 
-Example:
+### Example
 
 Below is a `gateway.config.yml` that will start Express Gateway on `http` port 3000. It exposes an single apiEndpoint named 'api' that listens on all hosts at the root (/) path. There is one pipeline named 'default' that will process all requests for the 'api'
 
@@ -73,19 +77,24 @@ pipelines:
               serviceEndpoint: example # see declaration above
 ```
 
-Each policy in the pipeline can have a list of condition/action objects:
+### Options
 
-- `condition` - Optional. This condition is a rule that must be satisfied to trigger its corresponding action.
-- `action` - the name of the action to be executed.  This is the main module name of the Express middleware used within the policy.
+| Name         | Required | Description                                                                                                             |
+| ------------ | -------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `condition ` | Optional | A rule that must be satisfied to trigger its corresponding action                                                       |
+| `action `    |          | The name of the action to be executed, usually this is the main module of the Express middleware used within the policy |
+
+Each policy in the pipeline can have a list of condition/action objects
 
 Condition and actions each have their own list of parameters. Condition/action pairs are made unique with their own list of parameters.
 
-## Policy Conditions
+#### Policy Conditions
 
 Each Policy in a pipeline can be gated with a condition specification. Each
 condition specification is in the format:
 
-Usage
+##### Usage
+
 ```yaml
   condition:
     name: condition-name # examples: always; never;
@@ -101,16 +110,19 @@ The `name` specifies a condition function. This can be one of the following:
   - `pathExact`: Matches if the request's path is an exact match for the
     parameter.
 
-    Example:
+##### Example
+
     ```yaml
       condition:
         name: pathExact
         path: "/foo/bar"
     ```
+
   - `pathMatch`. Matches if the request's path matches the given regular
     expression parameter.
 
-    Example:
+##### Example
+
     ```yaml
       condition:
         name: pathMatch
@@ -123,7 +135,8 @@ The `name` specifies a condition function. This can be one of the following:
     `Host` header passed with the request matches the parameter.
   - `expression`. Matches execution result of JS code provided in `expression` property. Code is executed in limited space that has access only to egContext
 
-    Example:
+##### Example
+
   ```yaml
     condition:
       name: expression
@@ -140,7 +153,7 @@ condition statements:
   - `oneOf`: Matches if at least one of its parameters matches.
   - `not`: Matches only if its parameter does not.
 
-Examples:
+##### Examples
 
 ```json
 {
@@ -173,11 +186,12 @@ conditions:
 The above will match only if the exact request path is "/foo/bar" and the
 request is *not* a POST or HEAD.
 
-Best Practise Note: While it is possible to build quite complicated condition tree, huge trees could greatly affect readability of your EG configuration. In such cases it could be better to have multiple api endpoints and pipelines
+Best Practice Note: While it is possible to build quite complicated condition tree, huge trees could greatly affect readability of your EG configuration. In such cases it could be better to have multiple api endpoints and pipelines
 
 The following two configs are equivalent, however we believe variant B is easier to read.
 
-## Conditions Based Config - Variant A
+##### Conditions Based Config - Variant A
+
 ```yaml
 serviceEndpoints:
   admin: # will be referenced in proxy policy
@@ -212,7 +226,8 @@ pipelines:
               serviceEndpoint: staff # see declaration above
 ```
 
-## Conditions Based Config - Variant B
+##### Conditions Based Config - Variant B
+
 ```yaml
 serviceEndpoints:
   admin: # will be referenced in proxy policy
