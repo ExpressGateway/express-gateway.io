@@ -21,18 +21,33 @@ $(document).ready(function () {
     })
   }
 
+  //opens main navigation sidebar
   $('.header-menu-icon').click(function(e){
 			e.preventDefault();
 			$('body').toggleClass('with-sidebar');
+      //fix off canvas menu on scroll
+      var screenheight = parseInt($(document).height());
+       var scrolledpx = parseInt($("body").scrollTop());
+       var sum = screenheight-scrolledpx;
+       console.log("screenheight=" + screenheight);
+       console.log("scrolledpx body=" + scrolledpx);
+       console.log("sum=" + sum);
+       $(".site-header nav.menu").css({
+         "margin-top":scrolledpx,
+         "height:":screenheight
+       });
 		});
 
+  // site click back
   $('#site-cache').click(function(e){
     $('body').removeClass('with-sidebar');
   });
 
+  // toc menu
   $('.toc-responsive-menu-icon').click(function(e){
 			$('.toc-wrapper').toggleClass('toc-wrapper-height');
 		});
+
 
 })
 
