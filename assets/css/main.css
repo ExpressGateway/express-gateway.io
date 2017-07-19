@@ -418,6 +418,12 @@ main {
       transform: scale(1.2); }
     .screencast-feature .video-container.videoplay {
       transform: scale(1.2); }
+    .screencast-feature .video-container svg {
+      display: block;
+      position: absolute;
+      top: 18px;
+      width: 94%;
+      padding: 3%; }
 
 h2.description {
   padding: 0 0 .5rem 0;

@@ -7,7 +7,7 @@ for(var i = 0, length = urlcheck.length; i < length; i++) {
 $(document).ready(function () {
   //video content swap
   $(".video-container").click(function () {
-    $(this).append('<iframe src="https://player.vimeo.com/video/222706185?autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+    $(this).append('<iframe src="https://player.vimeo.com/video/226182256?autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
     $('.moveback').addClass('zindexflat');
     $('#icon-play-button, .video-container, .screencast-feature').addClass('videoplay');
   });
