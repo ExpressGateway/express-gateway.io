@@ -13,17 +13,24 @@
   align-self: stretch;
   position: relative;
   //height: calc(100vh - (#{$header-top-height} + #{$header-main-height} + #{$footer-height}));
-
+  &.toc-wrapper-height {
+    height: auto;
+  }
   @include size(small){
     position: fixed;
-    top: 71px;
-    margin-left: -3%;
+    /* margin-left: -3%; */
     padding: 0;
     flex: none;
     width: 100%;
     height: 3rem;
-    background: $color-primary;
-    color: $color-background;
+    background: #34a8c4;
+    color: white;
+    z-index: 50;
+    top: 71px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
   }
 
 }
@@ -39,6 +46,7 @@
   display: hidden;
   order: 2;
   @include size(small){
+    pointer-events: all;
     position: relative;
     padding: 12px;
     margin-right: 1rem;
@@ -63,6 +71,7 @@
       	display: block;
         background-color: $color-background-highlight;
         border-radius: 1.5px;
+
       }
       &:before {
         margin-top: -6px;
@@ -95,6 +104,7 @@
     display: flex;
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
+    pointer-events: none;
   }
   h2 {
     padding-top: 0;
@@ -102,6 +112,7 @@
     @include size(small){
       order: 3;
       width: 80%;
+      pointer-events: all;
     }
     a {
       text-decoration: none;
@@ -113,7 +124,15 @@
         color: white;
         align-self: stretch;
         width: 100%;
+        pointer-events: all;
       }
+    }
+
+  }
+
+  nav > ul {
+    @include size(small){
+      overflow-y: scroll;
     }
   }
 
@@ -121,10 +140,13 @@
 
 
   ul {
-    visibility: collapse;
-    order: 4;
-    width: 100%;
-    overflow-y: scroll;
+    @include size(small){
+      visibility: collapse;
+      order: 4;
+      width: 100%;
+
+      pointer-events: all;
+    }
     ol, ul {
       padding-top: 1rem;
     }
@@ -171,10 +193,48 @@
 
       @include size(small){
         &:checked + ul {
-
+          background: $color-secondary-dark;
           visibility: visible;
           order: 4;
           width: 100%;
+          z-index: 90;
+        }
+        &:not(:checked) {
+          ~ ul, ul ul {
+            height: 0;
+            opacity: 0;
+            visibility: collapse;
+          }
+        }
+        &:checked ~ label{
+          span {
+          	-webkit-transition-duration: 0s; transition-duration: 0s;
+          	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+          }
+          span {
+          	background-color: rgba(0,0,0,0.0);
+          	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+          }
+          span {
+          	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+          	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+          	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+          }
+          span:before {
+          	margin-top: 0;
+          	-webkit-transform: rotate(45deg); transform: rotate(45deg);
+          	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+          }
+          span:after {
+          	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+          	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+          	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+          }
+          span:after {
+          	margin-top: 0;
+          	-webkit-transform: rotate(-45deg); transform: rotate(-45deg);
+          	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+          }
         }
 
       }
@@ -202,8 +262,16 @@
         padding: .75rem;
         position: relative;
         color: $color-primary;
+
+        @include size(small) {
+          color: white;
+          border-bottom: 2px solid $color-secondary-light;
+        }
         &:hover {
           background-color: #f8fbfb;
+          @include size(small) {
+            background-color: $color-secondary-light;
+          }
         }
         &.active {
             &:before {
@@ -239,7 +307,15 @@
           height: 0;
           opacity: 0;
           visibility: collapse;
+          @include size(small){
+            background: darken($color-secondary-dark, 10%);
+          }
 
+          > li li {
+            @include size(small){
+              background: darken($color-secondary-dark, 20%);
+            }
+          }
         }
         > label {
           width: 17px;

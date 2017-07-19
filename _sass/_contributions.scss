@@ -334,6 +334,13 @@
       margin: 0 auto;
     }
 
+    &.page-section-blue {
+      @include size(small){
+        width: 100%;
+        padding: 7.5%;
+        margin: 0 auto;
+      }
+    }
     &.quickstart {
       padding-bottom: 2rem;
     }
@@ -345,7 +352,7 @@
     > ol {
       @include size(small){width: 100%;}
       > li {
-        
+
         &:before {
           @include size(small){margin-left: -25px;}
         }
