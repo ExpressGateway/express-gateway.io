@@ -5,6 +5,12 @@
     width: 100%;
     margin-left: 10%;
     border-bottom: 2px solid $color-secondary-light;
+
+    @include size(smalltomedium){
+        flex-direction: column;
+        margin-left: 0;
+    }
+
     > li {
       flex: 1;
       padding: 10px;
@@ -22,6 +28,15 @@
         position: absolute;
         right: 0;
         top: 5%;
+        @include size(smalltomedium){
+          right: auto;
+          top: auto;
+          bottom: 15px;
+          width: 40%;
+          height: 2px;
+          left: 50%;
+          margin-left: -20%;
+        }
       }
       &:last-child:after {
         content: "";
@@ -54,6 +69,9 @@
 
   #authentication, #security, #quality-of-service {
     margin-left: 10%;
+    @include size(smalltomedium){
+      margin-left: 0;
+    }
   }
 
   .res-contact {
@@ -90,12 +108,34 @@
     h6 {
       padding: 0 0 2rem;
     }
+
+    .flex-row {
+      @include size(smalltomedium){
+        flex-direction: column;
+
+        ul.logo-cloud {
+          width: 100%;
+
+          li {
+            width: 170px;
+            height: 90px;
+
+            img {
+              max-height: 80px;
+              max-width: 130px;
+            }
+
+          }
+        }
+      }
+    }
   }
 
   .flex-row {
     display: flex;
     ul {
       padding-top: 50px;
+      margin-bottom: 1rem;
     }
     li {
       align-items: center;
@@ -109,6 +149,7 @@
     	border-radius: 125px / 62.5px;
       text-align: center;
       margin-top: -50px;
+      margin-bottom: 1rem;
       img {
         max-height: 100px;
         max-width: 200px;
@@ -127,6 +168,11 @@
       flex: 2;
       padding: 0 0 2rem 2rem;
       align-items: flex-start;
+
+      @include size(smalltomedium){
+        padding: 0;
+        margin-bottom: 2rem;
+      }
 
       .bug-block-content {
         text-align: center;

@@ -4,7 +4,10 @@ title:  "Introducing Express Gateway"
 date:   2017-07-16 08:00:01 -0400
 category: announcements
 author: "Al Tsang"
-
+#
+# Please remember to update ~/_archives-month, ~/_archives-year
+# and ~/_categories with any necessary archive needs
+#
 ---
 
 Today has been a long, long time coming. It's a culmination of listening to countless accounts from community folks with all types of different backgrounds - from startups to large enterprises and everything in between.

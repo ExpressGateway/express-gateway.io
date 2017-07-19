@@ -76,7 +76,7 @@ This is an [internal link](#error-code-definitions), this is an [external link](
 
 ### Warnings and Notifications
 
-<aside class="notice" mardown="1">
+<aside class="notice" markdown="1">
 File `meowmeowmeow.exe` is updating.
 </aside>
 
