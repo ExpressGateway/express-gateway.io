@@ -32,6 +32,8 @@
     left: 0;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+    min-width: 0;
+    min-height: 0;
   }
 
 }
@@ -99,13 +101,15 @@
     top: auto;
     bottom: auto;
     right: auto;
-    overflow-y: auto;
+    overflow: hidden;
     padding: 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     pointer-events: none;
+    min-height:0;
+    min-width: 0;
   }
   h2 {
     padding-top: 0;
@@ -135,6 +139,8 @@
     @include size(smalltomedium){
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
+      min-height:0;
+      min-width: 0;
     }
   }
 
