@@ -9,7 +9,7 @@
 
 .documentation {
 
-  .codeHighlight, p code {
+  .codeHighlight, p code, table td code {
     align-self: flex-start;
     background-color: $color-gray-light;
     color: $color-text;
