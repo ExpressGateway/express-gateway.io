@@ -31,6 +31,7 @@
     bottom: 0;
     left: 0;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 
 }
@@ -133,6 +134,7 @@
   nav > ul {
     @include size(small){
       overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
     }
   }
 
