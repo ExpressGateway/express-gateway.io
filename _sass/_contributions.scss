@@ -80,7 +80,7 @@
       font-style: normal;
       font-size: $font-size-28;
       font-weight: 100;
-      line-height: 1.95rem;
+      line-height: calc(3px + #{1.95rem});
     }
   }
 
