@@ -8,8 +8,8 @@
 title: Express Gateway
 email: info@express-gateway.io
 description: A Microservices API Gateway Built on Express.JS
-baseurl: "http://www.express-gateway.io"
-url: "http://www.express-gateway.io"
+baseurl: "http://www.express-gateway.io" #http://www.express-gateway.io
+url: "http://www.express-gateway.io" #http://www.express-gateway.io
 twitter_username: express_gateway
 encoding: UTF-8
 
