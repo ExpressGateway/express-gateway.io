@@ -328,6 +328,12 @@
     //   width: 12.5%;
     // }
 
+    @include size(small){
+      width: 85%;
+      padding: 0;
+      margin: 0 auto;
+    }
+
     &.quickstart {
       padding-bottom: 2rem;
     }
@@ -337,12 +343,17 @@
     }
 
     > ol {
+      @include size(small){width: 100%;}
       > li {
+        
+        &:before {
+          @include size(small){margin-left: -25px;}
+        }
         > h5 {
           font-size: 1.5rem;
           font-weight: 200;
           color: $color-gray;
-          margin-bottom: 1rem;
+          @include size(small){margin: 0 auto 1rem;}
         }
       }
     }
