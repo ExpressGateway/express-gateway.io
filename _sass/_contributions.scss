@@ -72,7 +72,7 @@
     text-align: center;
     color: $color-gray;
 
-    @include size(small){
+    @include size(smalltomedium){
       padding: 2.5rem 3rem;
     }
 
@@ -91,7 +91,7 @@
       counter-reset: installation;
       padding-left: 55px;
 
-      @include size(small){
+      @include size(smalltomedium){
         padding-left: 0;
       }
 
@@ -104,7 +104,7 @@
         display: flex;
         flex-direction: column;
 
-        @include size(small){
+        @include size(smalltomedium){
           margin-top: 5rem;
         }
 
@@ -121,7 +121,7 @@
           top: -5px;
           background: url(../img/list-bg.svg) no-repeat;
 
-          @include size(small){
+          @include size(smalltomedium){
             left: 50%;
             margin-left: -45px;
             top: -3rem;
@@ -272,7 +272,7 @@
 
     .flex-column {
       padding-left: 2rem;
-      @include size(small){
+      @include size(smalltomedium){
         padding-left: 0;
       }
     }
@@ -280,7 +280,7 @@
       width: 100%;
     }
 
-    @include size(small){
+    @include size(smalltomedium){
       h3 {
         line-height: 1.75rem;
         padding: 1rem 0;
@@ -328,14 +328,14 @@
     //   width: 12.5%;
     // }
 
-    @include size(small){
+    @include size(smalltomedium){
       width: 85%;
       padding: 0;
       margin: 0 auto;
     }
 
     &.page-section-blue {
-      @include size(small){
+      @include size(smalltomedium){
         width: 100%;
         padding: 7.5%;
         margin: 0 auto;
@@ -350,17 +350,17 @@
     }
 
     > ol {
-      @include size(small){width: 100%;}
+      @include size(smalltomedium){width: 100%;}
       > li {
 
         &:before {
-          @include size(small){margin-left: -25px;}
+          @include size(smalltomedium){margin-left: -25px;}
         }
         > h5 {
           font-size: 1.5rem;
           font-weight: 200;
           color: $color-gray;
-          @include size(small){margin: 0 auto 1rem;}
+          @include size(smalltomedium){margin: 0 auto 1rem;}
         }
       }
     }

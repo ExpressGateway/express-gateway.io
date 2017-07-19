@@ -20,7 +20,7 @@ main {
   &.full-width {
     width: 100%;
   }
-  @include size(small){
+  @include size(smalltomedium){
     width: 94%;
   }
 }
@@ -37,7 +37,7 @@ main {
 .flex-row {
   display: flex;
   flex-direction: row;
-  @include size(small) {
+  @include size(smalltomedium) {
     &.with-graphics {
       flex-direction: column;
       width: 85%;
@@ -49,7 +49,7 @@ main {
   display: flex;
   flex-direction: row-reverse;
     &.with-graphics {
-      @include size(small){
+      @include size(smalltomedium){
         svg {
           width: 100%;
           margin: 0 auto;
@@ -121,7 +121,7 @@ main {
   min-width: 0;
   min-height: 0;
 
-  @include size(small){
+  @include size(smalltomedium){
     width: 90%;
     margin: 0 auto 4rem;
     flex-direction: column;
@@ -150,7 +150,7 @@ main {
       }
     }
 
-    @include size(small){
+    @include size(smalltomedium){
       padding: 4rem 2% 0;
     }
     // h3 {
@@ -251,7 +251,7 @@ main {
     margin-top: -100px;
     z-index: 6;
     pointer-events: none;
-    @include size(small){
+    @include size(smalltomedium){
         margin-top: -8%;
     }
     &.zindexflat {
@@ -273,7 +273,7 @@ main {
     position: relative;
     margin: 0 auto;
 
-    @include size(small){
+    @include size(smalltomedium){
         width: 85%;
     }
   }
@@ -331,7 +331,7 @@ h2.description {
 .introduction {
   .flex-center {
     align-items: flex-start;
-    @include size(small){
+    @include size(smalltomedium){
       flex-direction: column-reverse;
       align-items: center;
 
@@ -391,7 +391,7 @@ h2.description {
     align-items: flex-start;
     width: 960px;
 
-    @include size(small){
+    @include size(smalltomedium){
       width: 100%;
       flex-direction: column;
       align-items: center;
@@ -497,7 +497,7 @@ h2.description {
 
   h3 {
     padding: 1.75rem;
-    @include size(small) {
+    @include size(smalltomedium) {
       line-height: 2rem;
       padding: 1rem;
       font-size: $font-size-18;
@@ -539,7 +539,7 @@ h2.description {
           font-weight: 300;
           font-family: $font-family;
           font-size: $font-size-18;
-          @include size(small){
+          @include size(smalltomedium){
             font-size: $font-size-18;
             line-height: 1.25rem;
           }
@@ -553,7 +553,7 @@ h2.description {
         width: 60%;
         height: 2.5rem;
         letter-spacing: normal;
-        @include size(small){
+        @include size(smalltomedium){
           width: 90%
         }
         #mce-EMAIL {
@@ -691,7 +691,7 @@ h2.description {
   width: 900px;
   margin: 0 auto;
 
-  @include size(small) {
+  @include size(smalltomedium) {
     width: 85%;
   }
 
@@ -701,7 +701,7 @@ h2.description {
     flex: 10;
     width: auto;
 
-    @include size(small) {
+    @include size(smalltomedium) {
       width: 100%;
 
       .flex-column {
@@ -719,7 +719,7 @@ h2.description {
       // width: 100%;
       // flex: 1;
       padding: 20px;
-      @include size(small) {
+      @include size(smalltomedium) {
         padding: 0;
       }
     }
@@ -767,7 +767,7 @@ h2.description {
       max-width: 45%;
       padding-right: 5%;
 
-      @include size(small){
+      @include size(smalltomedium){
         max-width: 85%;
       }
 
@@ -781,7 +781,7 @@ h2.description {
       }
     }
 
-    @include size(small){
+    @include size(smalltomedium){
       margin: 0;
       width: 100%;
 

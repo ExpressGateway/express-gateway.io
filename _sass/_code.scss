@@ -9,7 +9,7 @@
   margin: 1.25rem 0;
   font-size: $font-size-14;
 
-  @include size(small){
+  @include size(smalltomedium){
     text-align: left;
   }
 }

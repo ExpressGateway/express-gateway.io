@@ -16,7 +16,7 @@
   &.toc-wrapper-height {
     height: auto;
   }
-  @include size(small){
+  @include size(smalltomedium){
     position: fixed;
     /* margin-left: -3%; */
     padding: 0;
@@ -46,7 +46,7 @@
 .toc-responsive-menu-icon {
   display: hidden;
   order: 2;
-  @include size(small){
+  @include size(smalltomedium){
     pointer-events: all;
     position: relative;
     padding: 12px;
@@ -94,7 +94,7 @@
   width: 225px;
   //height: calc(100vh - (#{$header-main-height} + #{$footer-height}));
   // height: calc(100vh - (#{$header-top-height} + #{$header-main-height}));
-  @include size(small){
+  @include size(smalltomedium){
     position: static;
     top: auto;
     bottom: auto;
@@ -110,7 +110,7 @@
   h2 {
     padding-top: 0;
     font-size: 0;
-    @include size(small){
+    @include size(smalltomedium){
       order: 3;
       width: 80%;
       pointer-events: all;
@@ -121,7 +121,7 @@
       color: $color-gray;
       font-weight: bold;
 
-      @include size(small){
+      @include size(smalltomedium){
         color: white;
         align-self: stretch;
         width: 100%;
@@ -132,7 +132,7 @@
   }
 
   nav > ul {
-    @include size(small){
+    @include size(smalltomedium){
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
     }
@@ -142,7 +142,7 @@
 
 
   ul {
-    @include size(small){
+    @include size(smalltomedium){
       visibility: collapse;
       order: 4;
       width: 100%;
@@ -160,7 +160,7 @@
       padding-bottom: .75rem;
       position: relative;
 
-      @include size(small){
+      @include size(smalltomedium){
         padding-left: 0;
       }
       &::before {
@@ -193,7 +193,7 @@
         position: absolute;
         order: 1;
 
-      @include size(small){
+      @include size(smalltomedium){
         &:checked + ul {
           background: $color-secondary-dark;
           visibility: visible;
@@ -265,13 +265,13 @@
         position: relative;
         color: $color-primary;
 
-        @include size(small) {
+        @include size(smalltomedium) {
           color: white;
           border-bottom: 2px solid $color-secondary-light;
         }
         &:hover {
           background-color: #f8fbfb;
-          @include size(small) {
+          @include size(smalltomedium) {
             background-color: $color-secondary-light;
           }
         }
@@ -309,12 +309,12 @@
           height: 0;
           opacity: 0;
           visibility: collapse;
-          @include size(small){
+          @include size(smalltomedium){
             background: darken($color-secondary-dark, 10%);
           }
 
           > li li {
-            @include size(small){
+            @include size(smalltomedium){
               background: darken($color-secondary-dark, 20%);
             }
           }
