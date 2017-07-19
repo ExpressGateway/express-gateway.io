@@ -37,11 +37,26 @@ main {
 .flex-row {
   display: flex;
   flex-direction: row;
+  @include size(small) {
+    &.with-graphics {
+      flex-direction: column;
+      width: 85%;
+    }
+  }
 }
 
 .flex-row-reverse {
   display: flex;
   flex-direction: row-reverse;
+    &.with-graphics {
+      @include size(small){
+        svg {
+          width: 100%;
+          margin: 0 auto;
+          margin-left: 0;
+        }
+    }
+  }
 }
 
 .flex-one {
@@ -649,8 +664,8 @@ h2.description {
 
 .page-section-white {
   em {
-    padding: 0 .3rem;
-    display: block;
+    margin: 0 0 0 -.2rem;
+    display: inline-block;
     font-style: italic;
   }
 
@@ -676,11 +691,23 @@ h2.description {
   width: 900px;
   margin: 0 auto;
 
+  @include size(small) {
+    width: 85%;
+  }
+
   .wrapper {
     display: flex;
     flex-direction: row;
     flex: 10;
     width: auto;
+
+    @include size(small) {
+      width: 100%;
+
+      .flex-column {
+        width: 100%;
+      }
+    }
 
     h5, p {
       width: 100%;
@@ -692,6 +719,9 @@ h2.description {
       // width: 100%;
       // flex: 1;
       padding: 20px;
+      @include size(small) {
+        padding: 0;
+      }
     }
 
   }
@@ -702,6 +732,7 @@ h2.description {
   margin: 2rem auto;
   border-top: 2px solid $color-secondary-light;
 }
+
 
 .infographics {
 
@@ -735,6 +766,11 @@ h2.description {
       height: 300px;
       max-width: 45%;
       padding-right: 5%;
+
+      @include size(small){
+        max-width: 85%;
+      }
+
     }
 
     ol {
@@ -744,7 +780,23 @@ h2.description {
         padding: .75rem 0;
       }
     }
+
+    @include size(small){
+      margin: 0;
+      width: 100%;
+
+      svg {
+        width: 85%;
+        padding: 0;
+      }
+
+      ol {
+        width: 85%;
+        margin-bottom: 2rem;
+      }
+    }
   }
+
 }
 
 .flex-row-reverse {
