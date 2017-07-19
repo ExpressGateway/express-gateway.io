@@ -136,7 +136,7 @@ main {
     align-items: center;
 
     &:nth-child(even) {
-      padding-top: 4rem;
+      padding-top: 5.25rem;
     }
 
     svg {
@@ -331,9 +331,11 @@ main {
 h2.description {
   padding: 0 0 .5rem 0;
   font-weight: 500;
-  line-height: $font-lineheight-base + 2;
+  line-height: 2.5rem;
   color: $color-secondary-dark;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
+  opacity: .8;
+  font-size: $font-size-34;
 }
 
 .introduction {
@@ -347,12 +349,6 @@ h2.description {
         width: 90%;
         margin: 0 auto;
         text-align: center;
-
-        h2.description {
-          font-size: $font-size-36;
-          line-height: 2.5rem;
-
-        }
 
         .button-large {
           margin: 1rem auto 3rem;
