@@ -317,6 +317,14 @@ main {
         transform: scale(1.2);
       }
 
+      svg {
+        display: block;
+        position: absolute;
+        top: 18px;
+        width: 94%;
+        padding: 3%
+      }
+
   }
 }
 
