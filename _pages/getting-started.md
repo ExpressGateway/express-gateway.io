@@ -5,11 +5,14 @@ class: getting-started
 permalink: /getting-started/
 ---
 <section class="screencast-feature">
-  <div class="video-border moveback">
+  <div class="video-aspect-ratio">
+    <div class="video-border moveback">
+    </div>
+    <div class="video-container">
+    {% include video_atrest.svg %}
+    </div>
+    {% include icon-play-button.svg %}
   </div>
-  <div class="video-container">
-  </div>
-  {% include icon-play-button.svg %}
 </section>
 
 <article class="getting-started-wrapper">

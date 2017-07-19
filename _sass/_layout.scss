@@ -20,6 +20,9 @@ main {
   &.full-width {
     width: 100%;
   }
+  @include size(smalltomedium){
+    width: 94%;
+  }
 }
 
 .full-width {
@@ -34,11 +37,26 @@ main {
 .flex-row {
   display: flex;
   flex-direction: row;
+  @include size(smalltomedium) {
+    &.with-graphics {
+      flex-direction: column;
+      width: 85%;
+    }
+  }
 }
 
 .flex-row-reverse {
   display: flex;
   flex-direction: row-reverse;
+    &.with-graphics {
+      @include size(smalltomedium){
+        svg {
+          width: 100%;
+          margin: 0 auto;
+          margin-left: 0;
+        }
+    }
+  }
 }
 
 .flex-one {
@@ -103,6 +121,11 @@ main {
   min-width: 0;
   min-height: 0;
 
+  @include size(smalltomedium){
+    width: 90%;
+    margin: 0 auto 4rem;
+    flex-direction: column;
+  }
 
   & > li {
     padding: 2%;
@@ -112,9 +135,6 @@ main {
     flex-direction: column;
     align-items: center;
 
-    .grid-content {
-
-    }
     &:nth-child(even) {
       padding-top: 4rem;
     }
@@ -128,6 +148,10 @@ main {
         width: 50%;
         margin-left: -23%;
       }
+    }
+
+    @include size(smalltomedium){
+      padding: 4rem 2% 0;
     }
     // h3 {
     //   text-align: center;
@@ -196,6 +220,7 @@ main {
   padding: 3rem 0;
   position: relative;
   transition: all 2s;
+
   &.videoplay {
     background: $color-secondary-dark;
   }
@@ -226,6 +251,9 @@ main {
     margin-top: -100px;
     z-index: 6;
     pointer-events: none;
+    @include size(smalltomedium){
+        margin-top: -8%;
+    }
     &.zindexflat {
       z-index: 1
     }
@@ -240,9 +268,20 @@ main {
     pointer-events: none;
   }
 
-  .video-border {
+  .video-aspect-ratio {
     width: 500px;
-    height: 281px;
+    position: relative;
+    margin: 0 auto;
+
+    @include size(smalltomedium){
+        width: 85%;
+    }
+  }
+
+  .video-border {
+    width: 100%;
+    padding-top: 56.25%;
+    position: relative; /* If you want text inside of it */
     margin: 0 auto;
     position: relative;
     background: transparent;
@@ -252,18 +291,19 @@ main {
     &.zindexflat {
       z-index: 1
     }
+
   }
 
   .video-container {
       background: $color-background;
-      width: 500px;
-      height: 281px;
+      width: 100%;
+      padding-top: 56.25%;
       position: absolute;
       z-index: 4;
-      margin: 3rem auto 0;
+      margin: 0 auto 0;
       top: 0;
-      left: 50%;
-      margin-left: -250px;
+      // left: 50%;
+      // margin-left: -250px;
       transition: all 1.25s, background-color, .2s;
       &:hover {
         cursor: pointer;
@@ -276,27 +316,15 @@ main {
       &.videoplay {
         transform: scale(1.2);
       }
-  }
-}
 
-.grid-three {
-  margin: 50px auto;
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  grid-column-gap: 3%;
+      svg {
+        display: block;
+        position: absolute;
+        top: 18px;
+        width: 94%;
+        padding: 3%;
+      }
 
-  li {
-    background-color: $color-background-shadow;
-
-    h5 {
-      padding: 2rem 0;
-    }
-
-    // .code {
-    //   border: 1px solid $color-background-shadow;
-    //   background: white;
-    //   height: 200px;
-    // }
   }
 }
 
@@ -311,6 +339,36 @@ h2.description {
 .introduction {
   .flex-center {
     align-items: flex-start;
+    @include size(smalltomedium){
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .home-cta {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+
+        h2.description {
+          font-size: $font-size-36;
+          line-height: 2.5rem;
+
+        }
+
+        .button-large {
+          margin: 1rem auto 3rem;
+        }
+
+      }
+
+      .marchitecture {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto 0;
+        text-align: center;
+      }
+
+
+    }
   }
   svg {
     // width: 5/7 * 100%;
@@ -340,6 +398,13 @@ h2.description {
     flex-direction: row;
     align-items: flex-start;
     width: 960px;
+
+    @include size(smalltomedium){
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
     .testimonial {
       display: flex;
@@ -440,6 +505,11 @@ h2.description {
 
   h3 {
     padding: 1.75rem;
+    @include size(smalltomedium) {
+      line-height: 2rem;
+      padding: 1rem;
+      font-size: $font-size-18;
+    }
   }
   .emailform {
     width: 100%;
@@ -477,6 +547,10 @@ h2.description {
           font-weight: 300;
           font-family: $font-family;
           font-size: $font-size-18;
+          @include size(smalltomedium){
+            font-size: $font-size-18;
+            line-height: 1.25rem;
+          }
         }
 
       }
@@ -487,6 +561,9 @@ h2.description {
         width: 60%;
         height: 2.5rem;
         letter-spacing: normal;
+        @include size(smalltomedium){
+          width: 90%
+        }
         #mce-EMAIL {
           margin: 0 20px 0 0;
           display: flex;
@@ -512,6 +589,7 @@ h2.description {
           &::placeholder {
             color: $color-background;
           }
+
         }
 
         #mc-embedded-subscribe {
@@ -594,8 +672,8 @@ h2.description {
 
 .page-section-white {
   em {
-    padding: 0 .3rem;
-    display: block;
+    margin: 0 0 0 -.2rem;
+    display: inline-block;
     font-style: italic;
   }
 
@@ -621,11 +699,23 @@ h2.description {
   width: 900px;
   margin: 0 auto;
 
+  @include size(smalltomedium) {
+    width: 85%;
+  }
+
   .wrapper {
     display: flex;
     flex-direction: row;
     flex: 10;
     width: auto;
+
+    @include size(smalltomedium) {
+      width: 100%;
+
+      .flex-column {
+        width: 100%;
+      }
+    }
 
     h5, p {
       width: 100%;
@@ -637,6 +727,9 @@ h2.description {
       // width: 100%;
       // flex: 1;
       padding: 20px;
+      @include size(smalltomedium) {
+        padding: 0;
+      }
     }
 
   }
@@ -647,6 +740,7 @@ h2.description {
   margin: 2rem auto;
   border-top: 2px solid $color-secondary-light;
 }
+
 
 .infographics {
 
@@ -680,6 +774,11 @@ h2.description {
       height: 300px;
       max-width: 45%;
       padding-right: 5%;
+
+      @include size(smalltomedium){
+        max-width: 85%;
+      }
+
     }
 
     ol {
@@ -689,7 +788,23 @@ h2.description {
         padding: .75rem 0;
       }
     }
+
+    @include size(smalltomedium){
+      margin: 0;
+      width: 100%;
+
+      svg {
+        width: 85%;
+        padding: 0;
+      }
+
+      ol {
+        width: 85%;
+        margin-bottom: 2rem;
+      }
+    }
   }
+
 }
 
 .flex-row-reverse {

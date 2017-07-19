@@ -7,7 +7,7 @@ for(var i = 0, length = urlcheck.length; i < length; i++) {
 $(document).ready(function () {
   //video content swap
   $(".video-container").click(function () {
-    $(this).append('<iframe src="https://player.vimeo.com/video/222706185?autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+    $(this).append('<iframe src="https://player.vimeo.com/video/226182256?autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
     $('.moveback').addClass('zindexflat');
     $('#icon-play-button, .video-container, .screencast-feature').addClass('videoplay');
   });
@@ -20,16 +20,51 @@ $(document).ready(function () {
       register($form)
     })
   }
+
+  //opens main navigation sidebar
+  $('.header-menu-icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with-sidebar');
+      sidebarpadding()
+		});
+
+  // site click back
+  $('#site-cache').click(function(e){
+    $('body').removeClass('with-sidebar');
+  });
+
+  // toc menu
+  $('.toc-responsive-menu-icon').click(function(e){
+			$('.toc-wrapper').toggleClass('toc-wrapper-height');
+		});
+
+  $(window).on('resize',sidebarpadding);
+
+  function sidebarpadding(){
+    //fix off canvas menu on scroll
+     var screenheight = parseInt($(document).height());
+     var windowWidth = $( window ).width();
+     var scrolledpx = parseInt($("body").scrollTop());
+     var sum = screenheight-scrolledpx;
+     console.log("screenheight=" + screenheight);
+     console.log("scrolledpx body=" + scrolledpx);
+     console.log("sum=" + sum);
+
+     if(windowWidth <= 960){
+       $(".with-sidebar nav.menu").css({
+         "margin-top":scrolledpx,
+         "height:":screenheight
+       });
+     } else {
+       $("nav.menu").css({
+         "margin-top":"0px",
+         "height:":"71px"
+       });
+     }
+     console.log("resized margin: ",  scrolledpx)
+     console.log("resized height: ", screenheight)
+  }
 })
-
-// hljs.initHighlightingOnLoad();
-
-// hljs.configure({useBR: true});
-//
-// $('.highlighter-rouge').each(function(i, block) {
-//   hljs.highlightBlock(block);
-// });
-
 //email capture form details
 function register($form) {
   $('#mc-embedded-subscribe').val('Sending...');
@@ -61,30 +96,3 @@ function register($form) {
     }
   })
 };
-
-//docs sidebar control
-
-
-// function sticky_relocate() {
-//     var window_top = $(window).scrollTop();
-//     var footer_top = $(".footer").offset().top;
-//     var div_top = $('#sb-sticky-anchor').offset().top;
-//     var div_height = $("#sb-sticky").height();
-//     var div_height_top = $("#sb-sticky").offset().top;
-//
-//     var padding = 95;  // tweak here or get from margins etc
-//
-//     if (window_top + div_height > footer_top - padding)
-//         $('#sb-sticky').css({top: (window_top + div_height - footer_top + padding)})
-//     else if (window_top > div_top) {
-//         $('#sb-sticky').addClass('stick');
-//         $('#sb-sticky').css({top: 0})
-//     } else {
-//         $('#sb-sticky').removeClass('stick');
-//     }
-// }
-
-// $(function () {
-//     $(window).scroll(sticky_relocate);
-//     sticky_relocate();
-// });

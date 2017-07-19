@@ -7,6 +7,12 @@
   &.wrapper {
     display: flex;
     flex-direction: row;
+
+    @include size(smalltomedium){
+      flex-direction: column;
+      padding: 2rem 0;
+      width: 85%;
+    }
   }
 
   .article-list {
@@ -42,6 +48,11 @@
         color: $color-text;
         line-height: 5rem;
         padding-bottom: 0rem;
+
+        @include size(smalltomedium){
+          line-height: 3.5rem;
+          padding-bottom: 1rem;
+        }
       }
 
       .post-meta {
@@ -62,6 +73,9 @@
         line-height: 3rem;
         color: $color-primary;
         margin-bottom: 0.9375rem;
+        @include size(smalltomedium){
+          line-height: 2.5rem;
+        }
       }
 
       h3 {
@@ -299,6 +313,9 @@
   .blog-sidebar {
     flex: 3;
     margin-left: 5rem;
+    @include size(smalltomedium){
+      margin-left: 0;
+    }
     h3 {
       margin: 0;
       padding: .5rem .25rem;

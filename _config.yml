@@ -1,25 +1,16 @@
 # Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
+# bundle exec jekyll serve
 #
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# bundle exec jekyll build
+#
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Express Gateway
 email: info@express-gateway.io
 description: A Microservices API Gateway Built on Express.JS
-baseurl: "" # dev = "/" temp-prod ="http://bybrandonbrown.com/expressgateway/"
-url: "http://bybrandonbrown.com/expressgateway" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: xpressgateway
-github_username:  expressgateway
+baseurl: "" #https://www.express-gateway.io
+url: "" #https://www.express-gateway.io
+twitter_username: express_gateway
 encoding: UTF-8
 
 # Build settings

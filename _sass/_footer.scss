@@ -16,10 +16,17 @@
     display: flex;
     flex-direction: row;
     padding-top: 1.5rem;
+
+    @include size(smalltomedium){
+      flex-direction: column;
+    }
   }
 
   section {
     flex: 1;
+    @include size(smalltomedium){
+      margin-bottom: 2rem;
+    }
   }
 
   h1 {
@@ -71,5 +78,10 @@
     margin: 0 auto;
     color: #a6a8ab;
     font-size: 12px;
+
+    @include size(smalltomedium){
+      text-align: center;
+      width: 100%
+    }
   }
 }

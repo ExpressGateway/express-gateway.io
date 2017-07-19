@@ -1,6 +1,6 @@
 .site-header {
     position: fixed;
-    z-index: 99;
+    z-index: 50;
     top:0;
     width:100%;
     background: $color-background;
@@ -13,30 +13,13 @@
     flex-direction: column-reverse;
     margin-bottom: 10.3125rem;
 
-    .wrapper-banner {
-      display: flex;
-      align-self: stretch;
-      justify-content: center;
-      background: $color-gray-blue;
-      font-size: $font-size-14;
-      text-transform: uppercase;
-      font-weight: bold;
-      color: $color-primary;
-      height: $header-top-height;
-
-      p {
-        margin-right: 2rem;
-        font-size: $font-size-14;
-      }
-
-      .wrapper {
-        justify-content: flex-end;
-      }
-    }
-
     .wrapper {
       display: flex;
       align-items: center;
+
+      @include size(smalltomedium){
+        width: 94%;
+      }
     }
 
     .logo {
@@ -44,6 +27,13 @@
       svg {
         width: 300px;
         max-height: 50px;
+        @include size(smalltomedium) {
+          width: 250px;
+        }
+      }
+      @include size(smalltomedium) {
+        display: inline-block;
+        flex: initial
       }
     }
 
@@ -143,6 +133,8 @@
       display: block;
 
     }
+
+
 }
 
 .hero {
@@ -161,6 +153,10 @@
     padding: 6rem 0;
     color: $color-background;
     display: block;
+    @include size(smalltomedium){
+      padding: 3rem 2rem;
+      font-size: $font-size-32;
+    }
   }
 
 }
