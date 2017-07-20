@@ -124,7 +124,7 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
     - To manage our API, we’re going to define authorized users known as “Consumers” that are allowed to utilize the API.
       1. <p><span class="codeHighlight">cd my-gateway</span></p>
           - {% include getting-started/gs-2-2.svg %}
-      2. <p><span class="codeHighlight">eg user create</span></p>
+      2. <p><span class="codeHighlight">eg users create</span></p>
 
           ```shell
           $ eg users create
@@ -160,7 +160,7 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
       - `eg credentials create  -c bob -t key-auth -q`
 
           ```shell
-          $ eg credential create -c bob -t key-auth -q
+          $ eg credentials create -c bob -t key-auth -q
           0Er0Ldv5EHSUE364Dj9Gv:2Yzq1Pngs1JYaB2my9Ge4u
           ```
 
