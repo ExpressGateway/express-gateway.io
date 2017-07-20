@@ -1,12 +1,12 @@
 ---
 layout: doc-section
-title:  "Key Authorization"
+title:  "Key Auth"
 doc-order: 4.2
 ---
 
 ### Description
 
-The Key Authorization policy is an efficient way of securing restricting access to your API endpoints for applications through API keys.
+The Key Auth policy is an efficient way of securing restricting access to your API endpoints for applications through API keys.
 The Express Gateway API key is a key pair separated by colon. The first part of the key pair is a UUID representing the identity of the consumer.
 The second part of the key pair is a UUID representing the secret.
 
@@ -15,12 +15,12 @@ Example: `1fa4Y52SWEhii7CmYiMOcv:4ToXczFz0ZyCgLpgKIkyxA`
 
 ### Usage
 
-In order to use the Key Authorization policy, consumers must be created and `key-auth` credentials created for them.
+In order to use the Key Auth policy, consumers must be created and `key-auth` credentials created for them.
 
 To create consumers (user and apps): use the [CLI][cli] and [create user][users-create] or [create app][apps-create] command.
 To create a `key-auth` credential for an user or app: use the [CLI][cli] and [create credential][credentials-create] command with type `key-auth`.
 
-To enable the Key Authorization policy, add `key-auth` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
+To enable the Key Auth policy, add `key-auth` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
 
 ```yaml
 
