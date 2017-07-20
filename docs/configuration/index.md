@@ -13,6 +13,6 @@ Configuration is divided into different levels:
 | ------- | ------- | -------------------------- |
 | 1 (top) | gateway | /config/gateway.config.yml |
 | 2       | system  | /config/system.config.yml  |
-| 3       | data    | /config/model-configs      |
+| 3       | data    | /config/models      |
 
 The levels allow you to configure and manage Express Gateway without having to concern yourself with details that may not be relevant to you as a user, operator, administrator or developer. The lower the level, the higher the complexity.
