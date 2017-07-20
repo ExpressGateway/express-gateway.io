@@ -53,6 +53,8 @@ admin:
 ```
 
 ### Security
+To disable Admin API remove `admin` section from the `gateway.config.yml`
+
 The raw Admin API should not be publically available for security reasons.
 
 If you decide to expose Admin API you need to secure it. 
