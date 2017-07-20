@@ -36,6 +36,7 @@ $(document).ready(function () {
   // toc menu
   $('.toc-responsive-menu-icon').click(function(e){
 			$('.toc-wrapper').toggleClass('toc-wrapper-height');
+      $('body').toggleClass('noscroll');
 		});
 
   $(window).on('resize',sidebarpadding);

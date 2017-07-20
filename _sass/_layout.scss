@@ -882,3 +882,7 @@ li code:only-child {
   margin: 1.25rem 0;
   display: inline-block;
 }
+
+.noscroll {
+  overflow: hidden;
+}
