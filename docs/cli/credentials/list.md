@@ -5,7 +5,7 @@ title: eg credentials list
 
 ### Description
 
-Show all credential for consumer
+List all credentials for consumer
 
 ### Usage
 
@@ -22,7 +22,7 @@ eg credentials list -c <consumerId> [options]
 
 ### Examples
 
-#### Show details for all credential of consumer
+#### List all credentials of consumer
 
 ```shell
 $ eg credentials list -c oauth2 2e90e145-bc4b-4ff1-a63a-a097644ba360
