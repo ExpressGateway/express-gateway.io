@@ -15,15 +15,18 @@ Config: {
   User: {
   ...
     properties: {
-      username:   { type: 'string', isMutable: false, isRequired: true}, #default, can be overridden
-      firstName:  { type: 'string', isMutable: true, isRequired: true},
-      lastName:   { type: 'string', isMutable: true, isRequired: true}
+      username:   { isMutable: false, isRequired: true}, #default, can be overridden
+      firstName:  { isMutable: true, isRequired: true},
+      lastName:   { isMutable: true, isRequired: true}
       ...
     }
   }
 ...
 }
 ```
+
+Note: 
+`username` property is used by Express Gateway. Please avoid changing it since it may cause unexpected behaviour
 
 #### Applications
 An Application is another type of API consumer and is always associated to a user. A user may have zero to many applications.
@@ -37,8 +40,8 @@ Config: {
   Application: {
   ...
     properties: {
-      name:   { type: 'string', isMutable: false, isRequired: true},
-      group:  { type: 'string', isMutable: true, isRequired: false},
+      name:   { isMutable: false, isRequired: true},
+      group:  { isMutable: true, isRequired: false},
       ...
     }
   }
@@ -46,7 +49,37 @@ Config: {
 }
 ```
 
-New Properties can be defined or some can be removed. Also properties are configurable:   
+#### Credentials
+A Credential is a container for secret authentication info. Always associated to a Consumer (User or App)
+
+```js
+{
+  'basic-auth': {    
+    passwordKey: 'password',
+    autoGeneratePassword: true,
+    properties: {
+      scopes: { isRequired: false }
+    }
+  },
+  'key-auth': {
+    properties: {
+      scopes: { isRequired: false }
+    }
+  },
+  oauth2: {
+    passwordKey: 'secret',
+    autoGeneratePassword: true,
+    properties: {
+      scopes: { isRequired: false }
+    }
+  }
+}
+```
+
+Note: 
+`scopes` property is used by Express Gateway Autorization engine. Please avoid changing it since it may cause Autorization to work incorrectly
+
+Properties can be introduced or removed. Also properties are configurable:   
 
 ##### Example
 ```js
