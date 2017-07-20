@@ -157,7 +157,7 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
     - ###### Step 2
       - {% include getting-started/gs-3-3.svg %}
       - Assign the key credential to Bob
-      - `eg credentials create  -c bob -t key-auth -q`
+      - `eg credentials create -c bob -t key-auth -q`
 
           ```shell
           $ eg credentials create -c bob -t key-auth -q
