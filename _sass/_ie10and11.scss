@@ -146,8 +146,28 @@
      }
      @include group;
    }
+   .about,
+   .getting-started,
+   .notfound {
+     padding-top: 71px;
+     min-height: 100vh;
+   }
 
-
+   .documentation {
+     background: $color-background;
+     > .wrapper {
+       aside.toc-wrapper {
+         float: left;
+         width: 225px;
+         min-height: 100vh;
+       }
+       main {
+         float: right;
+         background: $color-background;
+       }
+       @include group;
+     }
+   }
 
 
 }
