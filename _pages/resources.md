@@ -46,14 +46,14 @@ permalink: /resources/
 ###### Get involved and join our community of developers, practitioners and technologists.
 <div class="flex-row">
 <ul class="logo-cloud">
-<li><a href="https://groups.google.com/a/lunchbadger.com/d/forum/express-gateway" target="_blank"><img src="../assets/img/logo-googlegroups.png" /></a></li>
+<li><a href="https://groups.google.com/a/express-gateway.io/forum/#!forum/discuss" target="_blank"><img src="../assets/img/logo-googlegroups.png" /></a></li>
 <li><a href="https://gitter.im/ExpressGateway/express-gateway" target="_blank"><img src="../assets/img/logo-gitter.png" /></a></li>
 <li><a href="https://stackoverflow.com/questions/tagged/express-gateway" target="_blank">{% include logo-stackoverflow.svg %}</a></li>
 </ul>
 <div class="bug-block">
 <div class="bug-block-content" markdown="1">
   {% include res-bug.svg %}
-  If you have come across what you think is a bug, or just want to make a feature request, [open a ticket](http://#) in the issue queue.
+  If you have come across what you think is a bug, or just want to make a feature request, [open a ticket](https://github.com/ExpressGateway/express-gateway/issues/new) in the issue queue.
 </div>
 </div>
 </div>
@@ -71,14 +71,14 @@ permalink: /resources/
 <span>We are looking for community members to add to our growing list of contributors. There are a lot of ways to contribute:</span>
 <ul class="contribute">
     <li>Address an open issue in the project</li>
-    <li>Implement a feature sought after on the roadmap</li>
+    <li>Implement a feature sought after on the <a href="https://waffle.io/ExpressGateway/express-gateway" target="_blank">roadmap</a></li>
     <li>Help answer questions with your expertise</li>
     <li>Add examples and documentation so others can get onboard easier</li>
-<span>Big or small, every effort counts! For more information check out the <a href="https://github.com/ExpressGateway/express-gateway/blob/master/Contributing.md">Contributor's guide in the Express Gateway repo.</a></span>
+<span>Big or small, every effort counts! For more information check out the <a href="https://github.com/ExpressGateway/express-gateway/blob/master/Contributing.md" target="_blank">Contributor's guide in the Express Gateway repo.</a></span>
 </ul>
 <div class="res-cta" markdown="1">
 <div class="svg-fix res-contact">{% include res-contact.svg %}</div>
-[Get In Touch](http://#)
+[Get In Touch](mailto:info@express-gateway.io)
 </div>
 </div>
 </div>
