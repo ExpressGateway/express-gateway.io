@@ -20,7 +20,7 @@ policies:
 ```
 
 #### egContext Object
-EgContext is a special sandbox that can be used to implement non standard scenarious.
+egContext is a special sandbox that can be used to implement non-standard scenarios.
 It contains the following properties that can be used:
 
 * `req`:  
