@@ -653,7 +653,7 @@ h2.description {
         }
 
         #mc-embedded-subscribe {
-          
+
           flex: 2;
           background: $color-highlight;
           color: $color-text;
@@ -917,4 +917,30 @@ p code, table td code, li > code {
     font-size: 14px;
     font-weight: 300;
     line-height: 2rem;
+}
+
+.notfound {
+  text-align: center;
+  padding: 0 0 4rem;
+  background: lighten($color-secondary-light, 10%);
+
+  main {
+    background: transparent;
+  }
+  svg:first-of-type {
+    transform: rotate(-5deg) scale(1.5);
+    opacity: .5;
+    margin: 0 !important;
+  }
+
+  ul {
+    width: 100% !important;
+    li {
+      a {
+        display: block;
+        text-align: center;
+        padding: .75rem;
+      }
+    }
+  }
 }
