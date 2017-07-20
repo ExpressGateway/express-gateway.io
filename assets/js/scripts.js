@@ -46,10 +46,6 @@ $(document).ready(function () {
      var windowWidth = $( window ).width();
      var scrolledpx = parseInt($("body").scrollTop());
      var sum = screenheight-scrolledpx;
-     console.log("screenheight=" + screenheight);
-     console.log("scrolledpx body=" + scrolledpx);
-     console.log("sum=" + sum);
-
      if(windowWidth <= 960){
        $(".with-sidebar nav.menu").css({
          "margin-top":scrolledpx,
@@ -61,8 +57,6 @@ $(document).ready(function () {
          "height:":"71px"
        });
      }
-     console.log("resized margin: ",  scrolledpx)
-     console.log("resized height: ", screenheight)
   }
 })
 //email capture form details
@@ -80,7 +74,6 @@ function register($form) {
       $('#mc-embedded-subscribe').val('subscribe')
       if (data.result === 'success') {
         // Success
-        console.log(data.msg)
         $('#mce-EMAIL').css('borderColor', '#ffffff')
         $('#subscribe-result').html("").removeClass('subscribe-error')
         $('#mc_embed_signup').addClass('subscribe-success')
@@ -88,10 +81,9 @@ function register($form) {
         $('#mce-EMAIL').val('')
       } else {
         // Something went wrong, do something to notify the user.
-        console.log(data.msg)
         $('#mce-EMAIL').css('borderColor', '#ff8282')
         $('#subscribe-result').addClass('subscribe-error')
-        $('#subscribe-result').html('<p>' + data.msg.substring(4) + '</p>')
+        $('#subscribe-result').html('<p>' + data.msg + '</p>')
       }
     }
   })
