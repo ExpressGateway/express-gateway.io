@@ -1,19 +1,49 @@
 @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   * {position: relative; zoom: 1;}
-   body {
+
      .site-header {
        height: $header-main-height;
 
-       &:after {
-         content: "";
-         clear: both;
-       }
+       .wrapper {
+         .logo {
+           float: left;
+           margin-top: 10px;
+         }
+         nav.menu {
+           float: right;
+           text-align: right;
+           width: 65%;
+           span {
+             display: inline-block;
+             margin-left: 1.5rem;
+             margin-top: 15px;
+           }
+           @include group;
+         }
 
-       nav.menu {
-         background: green;
+         @include group;
        }
-
      }
 
+   .hero {
+     h1 {
+       margin-top: 2rem;
+     }
+     .svg-fix {
+        @include iesvgcontainer(100, 126.8, 1000.5);
+       svg {
+         @include iesvgfix;
+       }
+     }
    }
+
+   .introduction {
+     .marchitecture {
+       @include iesvgcontainer(62, 265.21, 501);
+       svg {
+         @include iesvgfix;
+       }
+     }
+   }
+
 }
