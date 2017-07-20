@@ -269,20 +269,27 @@
 
     .flex-column {
       padding-left: 2rem;
-      // @include size(smalltomedium){
-      //   padding-left: 0;
-      // }
+      @include size(smalltomedium){
+        padding-left: 0;
+      }
     }
     svg {
       width: 100%;
+      @include size(smalltomedium){
+        max-width: 300px;
+        margin-bottom: 2rem;
+      }
     }
 
-    // @include size(smalltomedium){
-    //   h3 {
-    //     line-height: 1.75rem;
-    //     padding: 1rem 0;
-    //   }
-    // }
+    @include size(small){
+      h3 {
+        font-size: 1.6875rem;
+        font-weight: 200;
+        line-height: 2rem;
+        color: #373f3f;
+        margin-bottom: 1rem;
+      }
+    }
 
     p {
       width: 100%;
@@ -347,6 +354,9 @@
       max-width: 500px;
       margin: 0 auto 1.25rem;
       display: block;
+      @include size(small){
+        margin-bottom: 2rem;
+      }
     }
 
     > ol {

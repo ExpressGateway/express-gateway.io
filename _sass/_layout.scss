@@ -821,6 +821,10 @@ h2.description {
       @include size(smalltomedium){
         max-width: 85%;
       }
+      @include size(small){
+        max-width: 100%;
+        width: 100%;
+      }
 
     }
 
