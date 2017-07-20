@@ -269,6 +269,7 @@
 
     .flex-column {
       padding-left: 2rem;
+      width: 70%;
       @include size(smalltomedium){
         padding-left: 0;
       }
