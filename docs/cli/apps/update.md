@@ -22,8 +22,9 @@ eg apps update <app_id> [options]
 
 ### Extended description
 
-<!-- TODO: Link to app model config docs -->
 The properties associated with an app are specified in the model config.
+See detailed description here:
+[Consumer Management](../../consumer-management) 
 
 ### Examples
 
