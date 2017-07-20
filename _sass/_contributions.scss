@@ -21,6 +21,14 @@
     }
   }
 
+  &.about {
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+
+
   a {
     color: $color-primary;
     text-decoration: underline;
