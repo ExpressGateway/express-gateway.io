@@ -1,3 +1,32 @@
+.svg-fix.svg-diagram {
+  &.svg-about-1 {
+    @include iesvgcontainer(40, 183.1, 193.82);
+  }
+  &.svg-about-2 {
+    left: -10%;
+    margin-left: 2rem;
+    @include iesvgcontainer(25, 147, 116.5);
+  }
+  &.svg-about-3 {
+    @include iesvgcontainer(60, 385.54, 679);
+  }
+  &.svg-about-4 {
+    @include iesvgcontainer(60, 384.8, 679);
+  }
+  &.svg-about-5 {
+    @include iesvgcontainer(60, 384.9, 679);
+  }
+  svg {
+    @include iesvgfix;
+  }
+}
+.svg-diagram + .wrapper,
+.svg-diagram + .flex-column {
+  width: 70%;
+}
+
+
+
 @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   * {position: relative; zoom: 1;}
 
@@ -268,18 +297,21 @@
    }
 
    .with-graphics {
-     div.svg-fix {
+     .svg-diagram {
        float: left;
+       &.svg-about-1 {
+         @include iesvgcontainer(25, 183.1, 193.82);
+       }
      }
-     div.wrapper {
+     div.wrapper, div.flex-column {
        float: right;
-       width: 60%;
+
      }
      &.flex-row-reverse {
-       svg {
+       .svg-diagram {
          float: right;
        }
-       div {
+       div.wrapper, div.flex-column {
          float: left;
        }
      }
@@ -287,25 +319,4 @@
    }
 
 
-}
-
-.svg-fix.svg-diagram {
-  &.svg-about-1 {
-    @include iesvgcontainer(40, 184.17, 194.9);
-  }
-  &.svg-about-2 {
-    @include iesvgcontainer(25, 147, 116.5);
-  }
-  &.svg-about-3 {
-    @include iesvgcontainer(60, 385.54, 679);
-  }
-  &.svg-about-4 {
-    @include iesvgcontainer(60, 384.8, 679);
-  }
-  &.svg-about-5 {
-    @include iesvgcontainer(60, 384.9, 679);
-  }
-  svg {
-    @include iesvgfix;
-  }
 }
