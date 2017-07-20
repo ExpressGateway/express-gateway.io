@@ -122,7 +122,6 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
 2. ##### Define API Consumer
     - ###### Step 1
     - To manage our API, we’re going to define authorized users known as “Consumers” that are allowed to utilize the API.
-    - {% include getting-started/gs-2-1.svg %}
       1. <p><span class="codeHighlight">cd my-gateway</span></p>
           - {% include getting-started/gs-2-2.svg %}
       2. <p><span class="codeHighlight">eg user create</span></p>

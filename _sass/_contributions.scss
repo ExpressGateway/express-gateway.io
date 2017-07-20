@@ -27,13 +27,6 @@
     margin-top: 5rem;
   }
 
-  // h3 {
-  //   font-size: $font-size-40;
-  //   font-weight: 200;
-  //   padding: 3rem 0 1rem 0;
-  //   color: $color-primary;
-  // }
-
   h4, h5, p, ul, ol {
     width: 80%;
   }
@@ -45,13 +38,6 @@
   h4 {
     margin-bottom: 3rem;
   }
-
-  // h5 {
-  //   font-size: $font-size-40;
-  //   font-weight: 200;
-  //   padding: 3rem 0 1rem 0;
-  //   color: $color-primary;
-  // }
 
   p {
     font-size: $font-size-16;
@@ -100,9 +86,9 @@
       counter-reset: installation;
       padding-left: 55px;
 
-      @include size(smalltomedium){
-        padding-left: 0;
-      }
+      // @include size(smalltomedium){
+      //   padding-left: 0;
+      // }
 
       & > li {
         position: relative;
@@ -113,9 +99,9 @@
         display: flex;
         flex-direction: column;
 
-        @include size(smalltomedium){
-          margin-top: 5rem;
-        }
+        // @include size(smalltomedium){
+        //   margin-top: 5rem;
+        // }
 
         &:before {
 
@@ -130,11 +116,11 @@
           top: -5px;
           background: url(../img/list-bg.svg) no-repeat;
 
-          @include size(smalltomedium){
-            left: 50%;
-            margin-left: -45px;
-            top: -3rem;
-          }
+          // @include size(smalltomedium){
+          //   left: 50%;
+          //   margin-left: -45px;
+          //   top: -3rem;
+          // }
         }
 
         ul {
@@ -283,20 +269,20 @@
 
     .flex-column {
       padding-left: 2rem;
-      @include size(smalltomedium){
-        padding-left: 0;
-      }
+      // @include size(smalltomedium){
+      //   padding-left: 0;
+      // }
     }
     svg {
       width: 100%;
     }
 
-    @include size(smalltomedium){
-      h3 {
-        line-height: 1.75rem;
-        padding: 1rem 0;
-      }
-    }
+    // @include size(smalltomedium){
+    //   h3 {
+    //     line-height: 1.75rem;
+    //     padding: 1rem 0;
+    //   }
+    // }
 
     p {
       width: 100%;
@@ -368,14 +354,17 @@
       > li {
 
         &:before {
-          @include size(smalltomedium){margin-left: -25px;}
+          // @include size(smalltomedium){margin-left: -25px;}
         }
         > h5 {
           font-size: 1.5rem;
           font-weight: 200;
           color: $color-gray;
           margin-bottom: .75rem;
-          @include size(smalltomedium){margin: 0 auto 1rem;}
+          @include size(smalltomedium){
+            margin: 0 auto 1rem;
+            width: 100%;
+          }
         }
       }
     }
@@ -425,6 +414,13 @@
       > ol {
         width: 80%;
         margin: 0 auto;
+
+        @include size(smalltomedium){
+          width: 100%;
+          padding: 0;
+          padding-left: 55px;
+        }
+
         > li {
           &:nth-child(2){
             margin-top: 3.5rem;
