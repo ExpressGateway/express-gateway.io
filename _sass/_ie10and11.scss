@@ -38,12 +38,116 @@
    }
 
    .introduction {
+     .home-cta {
+       float: left;
+       width: 35%;
+     }
      .marchitecture {
+       float: right;
        @include iesvgcontainer(62, 265.21, 501);
        svg {
          @include iesvgfix;
        }
+
+     }
+     @include group;
+   }
+
+   .email-form-inputs {
+     #mce-EMAIL {
+       float: left;
+     }
+     #mc-embedded-subscribe {
+       float: right;
+       position:absolute;
+       right: 0;
+     }
+     @include group;
+   }
+
+   .cards {
+     > li {
+       float: left;
+       width: 23%;
+       margin-left: 2%;
+       text-align: center;
+       &:first-child {
+         margin-left: 0;
+       }
+     }
+     @include group;
+   }
+
+   .screencast-feature {
+     .video-container {
+       svg {
+         top: 0;
+       }
+     }
+     #wave-video-bg {
+       top: 15%
+     }
+
+     #wave-video-single-bg {
+       top: 50%;
      }
    }
+
+   .quote {
+    .wrapper {
+      .testimonial {
+      float: left;
+      width: 28%;
+      margin-left:2%;
+      &:first-child{
+        margin-left: 0;
+      }
+
+        .blockquote {
+          margin-top: 20px;
+        }
+         .avatar {
+            border-top-left-radius:50px;
+            border-top-right-radius:50px;
+            border-bottom-left-radius:50px;
+            border-bottom-right-radius:50px;
+            width: auto; height: auto;
+            border: none;
+            img {
+              border-top-left-radius:50px;
+              border-top-right-radius:50px;
+              border-bottom-left-radius:50px;
+              border-bottom-right-radius:50px;
+              border: 3px solid $color-secondary-dark;
+
+            }
+         }
+       }
+       @include group;
+     }
+   }
+   .footer {
+     section {
+       float: left;
+       width: 25%;
+
+       nav {
+         a {
+           float: left;
+           width: 20%;
+           margin-right: 2%;
+           height: 30px;
+         }
+         @include group;
+       }
+       &.sponsors a {
+         height: 30px;
+       }
+     }
+     @include group;
+   }
+
+
+
 
 }

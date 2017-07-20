@@ -210,7 +210,7 @@ $footer-height:               240px;
 @mixin iesvgcontainer($width, $svg-height, $svg-width){
   display:block;
   height: 0;             /* collapse the container's height */
-  width: $width;    /* specify any width you want (a percentage value, basically) */
-  padding-top: ($svg-height / $svg-width) * $width;
+  width: $width * 1%;    /* specify any width you want (a percentage value, basically) */
+  padding-top: (($svg-height / $svg-width) * $width) * 1%;
   position: relative;
 }
