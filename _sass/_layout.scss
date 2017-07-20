@@ -121,9 +121,17 @@ main {
   min-width: 0;
   min-height: 0;
 
-  @include size(smalltomedium){
+  @include size(medium){
     width: 90%;
-    margin: 0 auto 4rem;
+    margin: 3rem auto 4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+  @include size(small){
+    width: 90%;
+    margin: 3rem auto 4rem;
     flex-direction: column;
   }
 
@@ -137,10 +145,16 @@ main {
 
     &:nth-child(even) {
       padding-top: 5.25rem;
+      @include size(medium){
+        padding-top: 2%;
+      }
     }
 
     svg {
       width: 30%;
+      @include size(medium){
+        min-height: 100px;
+      }
     }
 
     &:nth-child(3){
@@ -150,8 +164,14 @@ main {
       }
     }
 
+    @include size(medium){
+      flex-basis: 48%;
+    }
     @include size(smalltomedium){
-      padding: 4rem 2% 0;
+      // padding: 4rem 2% 0;
+    }
+    @include size(small){
+      // padding: 4rem 2% 0;
     }
     // h3 {
     //   text-align: center;
@@ -369,17 +389,28 @@ h2.description {
         .button-large {
           margin: 1rem auto 3rem;
         }
+      }
+    }
+    .marchitecture {
+      width: 62%;
+      text-align: right;
+      margin-left: auto;
+      margin-bottom: 3rem;
+      padding-left: 10px;
 
+      @include size(medium){
+          width: 70%;
+          padding: 0;
+          margin: 0 auto 0;
+          text-align: center;
       }
 
-      .marchitecture {
-        width: 100%;
-        padding: 0;
-        margin: 0 auto 0;
-        text-align: center;
+      @include size(small){
+          width: 100%;
+          padding: 0;
+          margin: 0 auto 0;
+          text-align: center;
       }
-
-
     }
   }
   svg {
@@ -447,6 +478,11 @@ h2.description {
     line-height: $font-lineheight-base;
     min-height: 8.5rem;
     padding-bottom: 1rem;
+    @include size(medium){
+      min-height: 0;
+      width: 60%;
+      margin: -50px auto 0;
+    }
   }
 
   .avatar {
@@ -618,14 +654,6 @@ h2.description {
       }
     }
   }
-}
-
-.marchitecture {
-  width: 62%;
-  text-align: right;
-  margin-left: auto;
-  margin-bottom: 3rem;
-  padding-left: 10px;
 }
 
 .home-cta {
