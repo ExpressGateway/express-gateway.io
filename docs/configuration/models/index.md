@@ -12,3 +12,5 @@ The core model config files are the following:
 - credentials.js
 
 Each model config file describe the metadata and properties for each of the entities used to populate Express Gateway application data.
+
+See detailed description here: &nbsp; [Consumer Management](../../consumer-management) 

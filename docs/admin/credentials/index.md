@@ -8,7 +8,7 @@ doc-order: 10.3
 Credential is a container for authentican\authorization secrets of API Consumer (User\App)
 At this point Credential can store:
 - basic-auth (password)
-- oauth2 (client secret or user password) [TBD: REF to Oauth2]
+- oauth2 (client secret or user password)    &nbsp; [OAuth 2.0 policy](../../policies/oauth2)
 - key-auth (key pair id:secret )
 
 Any API Consumer (User\App) can have one credential of `basic-auth` and `oauth2` types and multiple `key-auth`

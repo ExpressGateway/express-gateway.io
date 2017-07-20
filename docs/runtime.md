@@ -7,7 +7,7 @@ doc-order: 20.0
 Express gateway automatically monitors changes of the config file provided at start.
 Once the change is detected the system automatically reconfigures without shutdown and dropping requests.
 
-TBD: how to disable
+Set `EG_DISABLE_CONFIG_WATCH` env variable to false to disable Hot Reload
 
 Hot Reload will work for:
 * API Endpoints
