@@ -1,6 +1,17 @@
 .contributions {
   font-weight: normal;
 
+  p code, table td code {
+    align-self: flex-start;
+    background-color: $color-gray-light;
+    color: $color-text;
+    padding: 2px 4px;
+    border-radius: 5px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+    font-family: 'Inconsolata', monospace;
+  }
+
   h2 {
 
     display: inline-block;
@@ -60,7 +71,7 @@
         margin-top: -2px;
         margin-bottom: -2px;
         font-family: 'Inconsolata', monospace;
-        // line-height: 1rem;
+        line-height: 1rem;
     }
   }
 
@@ -136,6 +147,7 @@
         ul li {
           // padding: .5rem 0 0;
           line-height: 1.25rem;
+          //margin-bottom: 2rem;
 
           img {
             width: 100%;
@@ -200,6 +212,7 @@
 
         h5 {
           padding: 0 0 1.5rem 0;
+
         }
 
         h6 {
@@ -348,6 +361,9 @@
 
     svg {
       margin-bottom: 1.25rem;
+      max-width: 500px;
+      margin: 0 auto 1.25rem;
+      display: block;
     }
 
     > ol {
@@ -361,6 +377,7 @@
           font-size: 1.5rem;
           font-weight: 200;
           color: $color-gray;
+          margin-bottom: .75rem;
           @include size(smalltomedium){margin: 0 auto 1rem;}
         }
       }
@@ -372,6 +389,7 @@
       font-weight: 500;
       font-size: $font-size-18;
       padding: 0 0 .5rem 0;
+      margin-top: 3rem;
       @extend .condensed;
     }
 
@@ -408,13 +426,18 @@
 
     &.shape-style-large {
       > ol {
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
         > li {
+          &:nth-child(2){
+            margin-top: 3.5rem;
+          }
           > h5 {
             font-size: 1.5rem;
             font-weight: 200;
             color: $color-text;
-            margin-bottom: 1rem;
+            margin-bottom: -2rem;
+            width: 100%;
           }
         }
       }

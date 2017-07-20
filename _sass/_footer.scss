@@ -67,8 +67,14 @@
       display: block;
       margin-bottom: .5rem;
       width: 80%;
+
       &:last-child {
         width: 50%
+
+      }
+
+      @include size(smalltomedium){
+        max-width: 200px;
       }
     }
 

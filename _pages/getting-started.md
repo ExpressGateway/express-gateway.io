@@ -13,6 +13,8 @@ permalink: /getting-started/
     </div>
     {% include icon-play-button.svg %}
   </div>
+  {% include wave-video-bg.svg %}
+  {% include wave-video-single-bg.svg %}
 </section>
 
 <article class="getting-started-wrapper">
@@ -155,8 +157,8 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
 
     - ###### Step 2
       - {% include getting-started/gs-3-3.svg %}
-      - <p>Assign the key credential to Bob</p>
-      - <p><span class="codeHighlight">eg credential -c bob -t key-auth -q</span></p>
+      - Assign the key credential to Bob
+      - `eg credential -c bob -t key-auth -q`
 
           ```shell
           $ eg credential create -c bob -t key-auth -q
