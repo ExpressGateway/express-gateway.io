@@ -117,7 +117,7 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
     - ###### Step 4
       - {% include getting-started/gs-1-4.svg %}
       - Now that we have a API endpoint surfaced, we should be able to access the API through Express Gateway.
-      - <p><span class="codeHighlight">curl http://localhost:8080/ip</span></p>
+      - `curl http://localhost:8080/ip`
 
 2. ##### Define API Consumer
     - ###### Step 1

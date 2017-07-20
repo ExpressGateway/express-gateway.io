@@ -7,7 +7,7 @@ doc-order: 4.1
 ### Description
 
 The Basic Authorization policy follows the [RFC-7617 standard][rfc-7617-standard].
-From the standard, if a user agent wanted to send the user-id "Aladdin" and password "open sesame", it would use the following HTTP header. 
+From the standard, if a user agent wanted to send the user-id "Aladdin" and password "open sesame", it would use the following HTTP header.
 
 Example: `Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==`
 
@@ -31,16 +31,16 @@ policies:
 
 ```yaml
 
-pipelines: 
- pipeline1: 
-  apiEndpoints: 
+pipelines:
+ pipeline1:
+  apiEndpoints:
     - authorizedEndpoint
-  policies: 
-    - 
-      basic-auth: 
-    - 
-      proxy: 
-        action: 
+  policies:
+    -
+      basic-auth:
+    -
+      proxy:
+        action:
           serviceEndpoint: backend
 
 ```

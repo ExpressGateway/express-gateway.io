@@ -831,3 +831,20 @@ h2.description {
     margin-left: 100px;
   }
 }
+
+p code, table td code, li > code {
+  align-self: flex-start;
+  background-color: $color-gray-light;
+  color: $color-text;
+  padding: 2px 4px;
+  border-radius: 5px;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  font-family: 'Inconsolata', monospace;
+  font-size: $font-size-14;
+}
+
+li code:only-child {
+  margin: 1.25rem 0;
+  display: inline-block;
+}
