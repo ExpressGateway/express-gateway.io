@@ -24,6 +24,7 @@ eg <command>
 | [credentials][credentials]             | Manage credentials            | credential       |
 | [credential:scopes][credential:scopes] | Manage scopes for credentials | credential:scope |
 | [tokens][tokens]                       | Manage tokens                 | token            |
+| [gateway][gateway]                     | Manage a gateway              |                  |
 
 [users]: {{ site.baseurl }}{% link docs/cli/users/index.md %}
 [apps]: {{ site.baseurl }}{% link docs/cli/apps/index.md %}
@@ -31,3 +32,4 @@ eg <command>
 [credentials]: {{ site.baseurl }}{% link docs/cli/credentials/index.md %}
 [credential:scopes]: {{ site.baseurl }}{% link docs/cli/credential-scopes/index.md %}
 [tokens]: {{ site.baseurl }}{% link docs/cli/tokens/index.md %}
+[gateway]: {{ site.baseurl }}{% link docs/cli/gateway/index.md %}
