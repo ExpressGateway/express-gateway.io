@@ -878,10 +878,10 @@ p code, table td code, li > code {
   font-size: $font-size-14;
 }
 
-li code:only-child {
-  margin: 1.25rem 0;
-  display: inline-block;
-}
+// li code:only-child {
+//   margin: 1.25rem 0;
+//   display: inline-block;
+// }
 
 .noscroll {
   overflow: hidden;
