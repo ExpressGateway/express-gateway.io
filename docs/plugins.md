@@ -6,18 +6,17 @@ doc-order: 25.0
 ### Plugins (Coming soon)
 
 Plugin is the way Express Gateway can be extended. 
-This feature has a top priority in our Roadmap.
+This feature has a top priority in our [Roadmap](https://waffle.io/ExpressGateway/express-gateway).
 
 ### Plugin Structure
 At this point we have all policies, condition etc. built into Express Gateway core. 
 
 So Plugin can have all or some of those:
-* Policies
-* Conditions
-* Models for new Entities
+* Policies (&nbsp; [Policy Reference](./policies))
+* Conditions [Pipeline and Conditions Reference](./configuration/policies))
+* Models for new Entities &nbsp; [Consumer Management](./consumer-management))
 * Custom route handlers 
 * Authentication\Authorization providers
-
 
 
 ### Installing a Plugin (Draft)
@@ -25,7 +24,7 @@ So Plugin can have all or some of those:
 #### Well known plugin 
 
 In Express Gateway you need to whitelist policies that are allowed to use in pipelines.
-[Whitelist Policies Configuration](./configuration/policies)
+[Policies Configuration](./configuration/policies)
 
 With plugin System Express Gateway will try to find and install package that follows convention `express-gateway-plugin-${policy_name}` 
 
