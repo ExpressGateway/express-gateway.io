@@ -5,11 +5,13 @@ doc-order: 4.3
 ---
 
 ### Description
-The OAuth 2.0 policy follows the RFC-6749 standard: https://tools.ietf.org/html/rfc6749
+The OAuth 2.0 policy follows the [RFC-6749 standard][rfc-6749-standard].
 
-Express Gateway plays the role of both resource server and authorization server. In order to use the basic authentication policy, there must be consumers registered and an oauth credential created for them.
+Express Gateway plays the role of both resource server and authorization server. In order to use this policy, consumers must be created and an `oauth2` credential created for them.
 
-OAuth 2.0 policy will listen on the following endpoints:
+
+
+The OAuth 2.0 policy will listen on the following endpoints:
 
 * /oauth2/authorize
     * Endpoint to provision authorization codes for the Authorization Code flow, or the access token for the Implicit Grant flow. Only POST is supported.
@@ -48,7 +50,7 @@ The following headers will be passed downstream to proxied service endpoints.
 #### OAuth 2.0 Flows
 There are 3 distinct entities at play -
 1. Client app (client or application that is registered on Express Gateway that wants to act on behalf of user)
-2. Express Gateway's web UI (can be configured by you)
+2. Express Gateway's web UI (can be configured customized by you)
 3. Express Gateway
 
 ##### Authorization Code
@@ -57,7 +59,7 @@ There are 3 distinct entities at play -
 3. UI makes a GET to `/oauth2/authorize` and Express Gateway ensures user is logged in.
 4. If user is not logged in, he/she logs in on the Express Gateway's UI. For this login, Express GAteway acts as an authorization server for the user.
 
-**Note**: The user will need basic auth credentials to be able to login.
+**Note**: The user will need `basic-auth` credentials to be able to login.
 
 5. Express Gateway's Web app prompts user to allow client access to specific scopes, to which the user grants access.
 6. Express Gateway's UI again makes a call to `/oauth2/authorize` with the following data to request an auth code:
@@ -81,6 +83,11 @@ Implicit grant is the same as authorization code grant, except we return a token
 Client credentials grant will follow the standard RFC documentation.
 
 ### Usage
+
+In order to use the OAuth2 Authorization policy, consumers must be created and `oauth2` credentials created for them.
+
+To create consumers (users and apps): use the [CLI][cli] and [create user][users-create] or [create app][apps-create] command.
+To create an `oauth2` credential for a user or app: use the [CLI][cli] and [create credential][credentials-create] command with type `oauth2`.
 
 To enable the OAuth2 policy, add `oauth2` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
 
@@ -111,7 +118,14 @@ pipelines:
 ```
 
 ### Customizing the UI
-The basic implementation of the UI for the OAuth2 policy is found in `/lib/policies/oauth2/views`. Here, you can modify the code to suit your needs.
+The basic implementation of the UI for the OAuth2 policy is found in `/lib/policies/oauth2/views`. In this directory, you can customize the code to suit your needs.
 
+[rfc-6749-standard]: https://tools.ietf.org/html/rfc6749
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
+[basic-auth]:{{ site.baseurl }}{% link docs/policies/basic-authorization.md %}
+[cli]: {{ site.baseurl }}{% link docs/cli/index.md %}
+[users-create]: {{ site.baseurl }}{% link docs/cli/users/create.md %}
+[apps-create]: {{ site.baseurl }}{% link docs/cli/apps/create.md %}
+[credentials-create]: {{ site.baseurl }}{% link docs/cli/credentials/create.md %}
+[credentials-create]: {{ site.baseurl }}{% link docs/cli/credentials/create.md %}
