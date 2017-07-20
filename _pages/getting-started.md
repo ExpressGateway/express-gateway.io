@@ -57,7 +57,7 @@ In this quick start guide, you’ll...
 2. Define a consumer of your API
 3. Secure the API with Key Authorization
 
-Note: Express Gateway comes with an in-memory database.  All config file changes done as part of the guide will not require you to restart Express Gateway.  The [hot reload feature]{{ site.baseurl }}{% link docs/runtime.md %} will take of this automatically without a restart.
+Note: Express Gateway comes with an in-memory database.  All config file changes done as part of the guide will not require you to restart Express Gateway.  The [hot reload feature]({{ site.baseurl }}{% link docs/runtime.md %}) will take of this automatically without a restart.
 </section>
 <div class="svg-fix">{% include wave-2.svg %}</div>
 
@@ -157,7 +157,7 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
     - ###### Step 2
       - {% include getting-started/gs-3-3.svg %}
       - Assign the key credential to Bob
-      - `eg credential -c bob -t key-auth -q`
+      - `eg credentials create  -c bob -t key-auth -q`
 
           ```shell
           $ eg credential create -c bob -t key-auth -q
