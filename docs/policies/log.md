@@ -1,18 +1,18 @@
 ---
 layout: doc-section
-title:  "Simple Logger"
+title:  "Log"
 doc-order: 4.6
 ---
 ### Description
 
-The Simpler Logger policy provides capability for logging with basic message output.
+The Log policy provides capability for logging with basic message output.
 the JavaScript [ES6 template literal syntax][es6-template-literal-syntax]
 
 This policy allows you to dump any and all parameters of the [EG Context object][eg-context-object].
 
 ### Usage
 
-To enable the Simple Logger policy, add `log` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
+To enable the Log policy, add `log` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
 
 ```yaml
 
@@ -28,7 +28,7 @@ policies:
 pipelines:
   api:
     policies:
-      simple-logger: # policy name
+      log: # policy name
         - action:    # array of condition/actions objects
             name: log
             message: ${req.method} ${req.originalUrl} # parameter for log action
