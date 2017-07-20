@@ -1,0 +1,13 @@
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   body {
+     .site-header {
+       height: $header-main-height;
+
+       nav.menu {
+         background: green;
+       }
+
+     }
+
+   }
+}
