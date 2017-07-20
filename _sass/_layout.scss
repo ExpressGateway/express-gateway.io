@@ -228,6 +228,11 @@ main {
     z-index: 1
   }
 
+  .button-large {
+    margin: 3rem auto 0;
+
+  }
+
   #icon-play-button {
     position: absolute;
     width: 100px;
@@ -248,7 +253,7 @@ main {
   #wave-video-bg {
     position: absolute;
     top: 50%;
-    margin-top: -100px;
+    margin-top: -120px;
     z-index: 6;
     pointer-events: none;
     @include size(smalltomedium){
@@ -262,7 +267,7 @@ main {
   #wave-video-single-bg {
     position: absolute;
     top: 80%;
-    margin-top: -100px;
+    margin-top: -236px;
     z-index: 1;
     transform: rotate(180deg);
     pointer-events: none;
@@ -328,8 +333,19 @@ main {
   }
 }
 
+.contributions {
+  #wave-video-bg {
+    margin-top: -70px;
+  }
+}
+.contributions {
+  #wave-video-single-bg {
+    margin-top: -120px;
+  }
+}
+
 h2.description {
-  padding: 0 0 .5rem 0;
+  padding: 2rem 0 .5rem 0;
   font-weight: 500;
   line-height: 2.5rem;
   color: $color-secondary-dark;
