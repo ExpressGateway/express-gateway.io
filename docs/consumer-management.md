@@ -45,3 +45,23 @@ Config: {
 ...
 }
 ```
+
+New Properties can be defined or some can be removed. Also properties are configurable:   
+
+##### Example
+```js
+newProperty: { 
+    isRequired: true, 
+    isMutable: true 
+}
+```
+
+* `isRequired`
+    - If true, CLI and Admin API will force validation if value is not provided
+
+* `isMutable`
+    - If true, Express Gateway will not allow modification of this property after creation
+
+References:
+* &nbsp; [Admin API](../../admin)
+* &nbsp; [CLI](../../cli)
