@@ -1,12 +1,12 @@
 ---
 layout: doc-section
-title:  "Rate Limiter"
+title:  "Rate Limit"
 doc-order: 4.5
 ---
 
 ### Description
 
-The Rate Limiter policy is used to limit the number of requests received and processed by the API endpoint. Limits are useful to prevent your system from being overwhelmed in both benign and malevolent situations where the number of requests processed can overwhelm your underlying APIs and supporting services. Rate limits are also useful to control the amount of API consumption to a known capacity of quantity.
+The Rate Limit policy is used to limit the number of requests received and processed by the API endpoint. Limits are useful to prevent your system from being overwhelmed in both benign and malevolent situations where the number of requests processed can overwhelm your underlying APIs and supporting services. Rate limits are also useful to control the amount of API consumption to a known capacity of quantity.
 
 Sample use cases:
 
@@ -15,7 +15,7 @@ Sample use cases:
 
 ### Usage
 
-To enable the Rate Limiter policy, add `rate-limit` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
+To enable the Rate Limit policy, add `rate-limit` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
 
 ```yaml
 
@@ -65,7 +65,7 @@ Rate-limit established on a specific API host example.com for 500 requests per m
 
 policies:
   -
-    rate-limiter:
+    rate-limit:
       -
         condition: # will execute action only for host matching example.com
           name: hostMatch,
