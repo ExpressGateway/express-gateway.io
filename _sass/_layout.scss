@@ -886,3 +886,11 @@ p code, table td code, li > code {
 .noscroll {
   overflow: hidden;
 }
+
+.contribute {
+  list-style: circle;
+    margin-left: 1.25rem;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 2rem;
+}
