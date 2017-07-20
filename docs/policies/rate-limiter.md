@@ -3,18 +3,33 @@ layout: doc-section
 title:  "Rate Limiter"
 doc-order: 4.5
 ---
-The rate limiter policy is used to limit the number of requests received and processed by the API endpoint. Limits are useful to prevent your system from being overwhelmed in both benign and malevolent situations where the number of requests processed can overwhelm your underlying APIs and supporting services. Rate limits are also useful to control the amount of API consumption to a known capacity of quantity.
+
+### Description
+
+The Rate Limiter policy is used to limit the number of requests received and processed by the API endpoint. Limits are useful to prevent your system from being overwhelmed in both benign and malevolent situations where the number of requests processed can overwhelm your underlying APIs and supporting services. Rate limits are also useful to control the amount of API consumption to a known capacity of quantity.
 
 Sample use cases:
 
 - Use to limit repeated requests to public APIs and/or endpoints such as password reset.
 - Limit access by host name in order to provide different service plans for customers.
 
-Example:
+### Usage
+
+To enable the Rate Limiter policy, add `rate-limit` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
+
+```yaml
+
+policies:
+  -name: rate-limit
+
+```
+
+### Example: all hosts
 
 Rate-limit across all API hosts to 10 requests per 2 minutes interval:
 
-```yml
+```yaml
+
 http:
   port: 9090
 apiEndpoints:
@@ -42,12 +57,12 @@ pipeline1:
 
 ```
 
-
-Example:
+### Example: specific API host
 
 Rate-limit established on a specific API host example.com for 500 requests per minute.
 
-```yml
+```yaml
+
 policies:
   -
     rate-limiter:
@@ -58,14 +73,14 @@ policies:
         action:
           name: rate-limit
           max: 500 # limit to 500 req per default period windowMs=60000 (1 minute)
+
 ```
 
-Example:
+### Example: user TODO
 
-TODO: Rate-limit established by user
-TODO: Rate-limit established by application
+### Example: application TODO
 
-##### Options Reference
+### Options Reference
 
 * `rateLimitBy`: The criteria that is used to limit the number of requests by. By default will limit based on IP address. Use JS template string to configure. Example "${req.ip}", "${req.hostname}" etc.
 * `windowMs`: milliseconds - how long to keep records of requests in memory. Defaults to 60000 (1 minute).
@@ -75,3 +90,6 @@ TODO: Rate-limit established by application
 * `headers`: Enable header to show request limit and current usage
 * `delayAfter`: max number of connections during windowMs before starting to delay responses. Defaults to 1. Set to 0 to disable delaying.
 * `delayMs`: milliseconds - how long to delay the response, multiplied by (number of recent hits - delayAfter). Defaults to 1000 (1 second). Set to 0 to disable delaying.
+
+[gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
+[policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
