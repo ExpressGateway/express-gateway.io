@@ -99,48 +99,48 @@
       }
 
     }
-    .nav-sub-menu-trigger {
-    	text-decoration:none;
-    	line-height:32px;
-    }
-
-    .nav-sub-menu {
-      display:none;
-    	position:absolute;
-      z-index: 15;
-    	top:75%;
-    	left:0;
-    	background:#fff;
-      border: 1px solid $color-gray-light;
-
-      li{
-        display: block;
-        a {
-          display: block;
-          padding:.5750rem;
-        	width:200px;
-          border-bottom: 1px solid $color-gray-light;
-
-          &:hover {
-            background: $color-secondary-light;
-          }
-        }
-      }
-
-      &:hover {
-        display: block;
-
-      }
-    }
-
-    .nav-sub-menu-trigger:hover {
-      padding: 10px inherit;
-    }
-
-    .nav-sub-menu-trigger:hover + .nav-sub-menu {
-      display: block;
-
-    }
+    // .nav-sub-menu-trigger {
+    // 	text-decoration:none;
+    // 	line-height:32px;
+    // }
+    //
+    // .nav-sub-menu {
+    //   display:none;
+    // 	position:absolute;
+    //   z-index: 15;
+    // 	top:75%;
+    // 	left:0;
+    // 	background:#fff;
+    //   border: 1px solid $color-gray-light;
+    //
+    //   li{
+    //     display: block;
+    //     a {
+    //       display: block;
+    //       padding:.5750rem;
+    //     	width:200px;
+    //       border-bottom: 1px solid $color-gray-light;
+    //
+    //       &:hover {
+    //         background: $color-secondary-light;
+    //       }
+    //     }
+    //   }
+    //
+    //   &:hover {
+    //     display: block;
+    //
+    //   }
+    // }
+    //
+    // .nav-sub-menu-trigger:hover {
+    //   padding: 10px inherit;
+    // }
+    //
+    // .nav-sub-menu-trigger:hover + .nav-sub-menu {
+    //   display: block;
+    //
+    // }
 
 
 }

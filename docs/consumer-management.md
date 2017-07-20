@@ -6,7 +6,7 @@ doc-order: 6.0
 Express Gateway comes with a Consumer management system. An API consumer is either a user or application.
 
 #### Users
-A user, in its base form, consists of an ID and a username. The user model in `model-configs` directory is schemaless and you define additional user properties.
+A user, in its base form, consists of an ID and a username. The user model in `models` directory is schemaless and you define additional user properties.
 
 Example:
 ```
@@ -31,7 +31,7 @@ Note:
 #### Applications
 An Application is another type of API consumer and is always associated to a user. A user may have zero to many applications.
 
-In its base form, an application consists of an Id and userId. The `application` model in `model-configs directory is schemaless and you can define additional application properties.
+In its base form, an application consists of an Id and userId. The `application` model in `models` directory is schemaless and you can define additional application properties.
 
 Example:
 ```

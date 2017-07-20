@@ -37,7 +37,7 @@ permalink: /resources/
 </div>
 </section>
 
-<div class="svg-fix">{% include wave-1.svg %}</div>
+<div class="svg-fix wave-1">{% include wave-1.svg %}</div>
 <section class="page-section-blue">
 <div class="wrapper-flex">
 <div class="wrapper">
@@ -61,7 +61,7 @@ permalink: /resources/
 </div>
 </div>
 </section>
-<div class="svg-fix">{% include wave-2.svg %}</div>
+<div class="svg-fix wave-2">{% include wave-2.svg %}</div>
 
 <section class="page-section-normal">
 <div class="wrapper">
