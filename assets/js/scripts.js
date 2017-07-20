@@ -72,7 +72,7 @@ function register($form) {
     contentType: 'application/json; charset=utf-8',
     error: function (err) { alert('Could not connect to the registration server. Please try again later.') },
     success: function (data) {
-      $('#mc-embedded-subscribe').val('subscribe')
+      $('#mc-embedded-subscribe').val('Subscribe')
       if (data.result === 'success') {
         // Success
         $('#mce-EMAIL').css('borderColor', '#ffffff')
