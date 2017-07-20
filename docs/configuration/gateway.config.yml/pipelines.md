@@ -200,7 +200,10 @@ serviceEndpoints:
 
 apiEndpoints:
   api:
-    paths: \*
+    host: '*'
+    paths: 
+      - /admin
+      - /staff
 
 pipelines:
   api:
@@ -236,8 +239,10 @@ serviceEndpoints:
 
 apiEndpoints:
   admin:
+    host: '*'
     paths: /admin
   staff:
+    host: '*'
     paths: /staff
 
 pipelines:
