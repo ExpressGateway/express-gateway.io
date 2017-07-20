@@ -760,22 +760,24 @@ h2.description {
     margin: 2rem 0;
     align-items: center;
     justify-content: space-between;
-
-    p {
-
-      margin-bottom: 2rem;
-      flex: 3;
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      img {
-        max-width: 100%;
-        max-height: auto;
-        text-align: center;
-        margin: 0 auto;
-
-      }
-    }
+    display: flex;
+    //
+    // p {
+    //
+    //   margin-bottom: 2rem;
+    //   flex: 3;
+    //   display: flex;
+    //   flex-flow: row nowrap;
+    //   align-items: center;
+    //
+    //   img {
+    //     max-width: 100%;
+    //     max-height: auto;
+    //     text-align: center;
+    //     margin: 0 auto;
+    //
+    //   }
+    // }
 
     svg {
       // max-width: 100%;
@@ -784,8 +786,9 @@ h2.description {
       margin: 0 auto;
       width: auto;
       height: 300px;
-      max-width: 45%;
+      //max-width: 45%;
       padding-right: 5%;
+      flex: 6.5;
 
       @include size(smalltomedium){
         max-width: 85%;
@@ -794,10 +797,13 @@ h2.description {
     }
 
     ol {
-      width: 40%;
+      // width: 40%;
+      flex: 3;
       li {
         font-size: $font-size-16;
         padding: .75rem 0;
+        list-style: none;
+        font-weight: 300;
       }
     }
 
