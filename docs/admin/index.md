@@ -28,7 +28,7 @@ Consumer is User or App. Generic term that represent some client of API endpoint
 A container for authentican\authorization secrets of API Consumer (User\App)
 At this point Credential can store:
 - basic-auth (password)
-- oauth2 (client secret or user password) [TBD: REF to Oauth2]
+- oauth2 (client secret or user password)    &nbsp; [OAuth 2.0 policy](../../policies/oauth2)
 - key-auth (key pair id:secret )
 
 Any API Consumer (User\App) can have one credential of `basic-auth` and `oauth2` types and multiple `key-auth`
@@ -37,7 +37,7 @@ Any API Consumer (User\App) can have one credential of `basic-auth` and `oauth2`
 Permission system in Express Gateway is based on scopes. 
 Scope is a tag you can use to mark API Endpoint and tag Consumers with.
 Scopes can be used with any credential types
-[TBD More Details about Security]
+[Credentials and Scopes Management](../../credential-management)
 
 ##### Token (OAuth 2.0 specific)
 Standard access token you would expect from OAuth 2.0
@@ -53,6 +53,8 @@ admin:
 ```
 
 ### Security
+To disable Admin API remove `admin` section from the `gateway.config.yml`
+
 The raw Admin API should not be publically available for security reasons.
 
 If you decide to expose Admin API you need to secure it. 

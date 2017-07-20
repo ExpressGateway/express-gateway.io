@@ -23,8 +23,9 @@ eg users create [options]
 
 ### Extended description
 
-<!-- TODO: Link to user model config docs -->
 The properties associated with a user are specified in the model config.
+See detailed description here:
+[Consumer Management](../../consumer-management) 
 
 ### Examples
 
