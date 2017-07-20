@@ -23,7 +23,7 @@ For a deeper look at microservices and the role of the API Gateway check out [Ma
 </div>
 </div>
 </section>
-<div class="svg-fix">{% include wave-1.svg %}</div>
+<div class="svg-fix wave-1">{% include wave-1.svg %}</div>
 <section class="page-section-blue">
 <div class="wrapper-flex">
 <div class="wrapper">
@@ -44,7 +44,7 @@ We believe that an Express based API Gateway will be a powerful enabler for deve
 </div>
 </div>
 </section>
-<div class="svg-fix">{% include wave-2.svg %}</div>
+<div class="svg-fix wave-2">{% include wave-2.svg %}</div>
 
 <section class="page-section-white">
 <div class="wrapper-flex">
@@ -61,7 +61,7 @@ Express Gateway is a bunch of components which declaratively build around Expres
 </div>
 
 <div class="wrapper border-top-blue flex-row flex-center whatiseg with-graphics with-graphics" markdown="1">
-{% include quickstart/whatiseg.svg %}
+<div class="svg-fix svg-about-1 svg-diagram">{% include quickstart/whatiseg.svg %}</div>
 <div class="flex-column" markdown="1">
 ### Express as we know it, today
 
@@ -70,7 +70,7 @@ Within Express is its Router. The Router matches URLs and routes them to modules
 </div>
 <div class="wrapper border-top-blue flex-row flex-row-reverse with-graphics" markdown="1">
 
-{% include quickstart/egcore.svg %}
+<div class="svg-fix svg-about-2 svg-diagram">{% include quickstart/egcore.svg %}</div>
 <div class="wrapper" markdown="1">
 
 ### Express Gateway Core
@@ -102,7 +102,7 @@ Essentially, all of the core components within Express Gateway make Express more
 </div>
 </section>
 
-<div class="svg-fix">{% include wave-1.svg %}</div>
+<div class="svg-fix wave-1">{% include wave-1.svg %}</div>
 <section class="page-section-blue">
 <div class="wrapper">
 <div class="flex-column infographics" markdown="1">
@@ -110,7 +110,7 @@ Essentially, all of the core components within Express Gateway make Express more
 ## How does Express Gateway work?
 Now that we’ve described what’s in Express Gateway and how it relates to Express, let’s go over how it works:
 <div class="wrapper flex-row with-graphics" markdown="1">
-{% include quickstart/qs-1.svg %}
+<div class="svg-fix svg-about-3 svg-diagram">{% include quickstart/qs-1.svg %}</div>
 1. Express Gateway YAML is read.
 2. Config parameters initialize Express and its middleware.
 3. A request comes in through an API endpoint and is received by the Router.
@@ -119,20 +119,20 @@ Now that we’ve described what’s in Express Gateway and how it relates to Exp
 </div>
 <div class="wrapper flex-row with-graphics" markdown="1">
 
-{% include How-does-Express-Gateway-Work-Part-2.svg %}
+<div class="svg-fix svg-about-4 svg-diagram">{% include How-does-Express-Gateway-Work-Part-2.svg %}</div>
 
 1. Each policy has a set of conditions dynamically injected from the Centralized Config.
 2. If a condition is met its correponding action is taken by the Express middleware at the heart of the Express Gateway policy. The request is passed onto the next policy within the pipeline and the process repeats for every policy within the pipeline.
 </div>
 <div class="wrapper flex-row with-graphics" markdown="1">
 
-{% include How-does-Express-Gateway-Work-Part-3.svg %}
+<div class="svg-fix svg-about-5 svg-diagram">{% include How-does-Express-Gateway-Work-Part-3.svg %}</div>
 
 1. After all of the policies in the pipeline are passed, the request is usually proxied to an underlying microservice which applies the business logic and sends out the response to the API consumer
 2. Policies can act on that response before it's forwarded to the API consumer.
 </div>
 </div>
 </div>
-<div class="svg-fix">{% include wave-bottom-2.svg %}</div>
+<div class="svg-fix wave-bottom">{% include wave-bottom-2.svg %}</div>
 
 </section>

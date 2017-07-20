@@ -17,6 +17,8 @@
              display: inline-block;
              margin-left: 1.5rem;
              margin-top: 15px;
+             height: auto;
+             padding-bottom: 31px;
            }
            @include group;
          }
@@ -113,6 +115,8 @@
             border-bottom-right-radius:50px;
             width: auto; height: auto;
             border: none;
+            display: inline-block;
+            padding: 3px;
             img {
               border-top-left-radius:50px;
               border-top-right-radius:50px;
@@ -147,10 +151,13 @@
      @include group;
    }
    .about,
-   .getting-started,
    .notfound {
      padding-top: 71px;
      min-height: 100vh;
+   }
+
+   .getting .screencast-feature {
+     margin-top: 71px;
    }
 
    .documentation {
@@ -169,5 +176,136 @@
      }
    }
 
+   .resources {
+     &.page {
+       margin-top: 71px;
+     }
+     .icon-list {
+       text-align: center;
+       li {
+         display: inline-block;
 
+         width: 28%;
+         margin-left: 2%;
+         &:first-child{
+           margin-left: 0;
+         }
+
+         &:only-child{
+
+           width: 30%;
+           margin: 0 auto;
+         }
+       }
+     }
+     .community .flex-row {
+       .logo-cloud {
+         float: left;
+         width: 60%;
+
+         li {
+           position: relative;;
+
+           a {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+           }
+         }
+       }
+       .bug-block {
+         float: right;
+         width: 35%;
+       }
+       @include group;
+     }
+
+     @include group;
+   }
+
+   main .blog {
+
+     .article-list {
+       float: left;
+       width: 65%;
+
+       article.post {
+         margin-top: 3rem;
+         h1 {
+           line-height: 3.5rem;
+         }
+       }
+     }
+     .blog-sidebar {
+       float: right;
+       width: 30%;
+       margin-left: 0;
+       margin-top: 3rem;
+     }
+     @include group;
+   }
+
+   .svg-fix.wave-1 {
+     @include iesvgcontainer(100, 50, 1020.4);
+      svg {
+        @include iesvgfix;
+      }
+   }
+
+   .svg-fix.wave-2 {
+     @include iesvgcontainer(100, 65.2, 1020);
+      svg {
+        @include iesvgfix;
+      }
+   }
+
+   .svg-fix.wave-bottom {
+      @include iesvgcontainer(100, 126.8, 1000.5);
+     svg {
+       @include iesvgfix;
+     }
+   }
+
+   .with-graphics {
+     div.svg-fix {
+       float: left;
+     }
+     div.wrapper {
+       float: right;
+       width: 60%;
+     }
+     &.flex-row-reverse {
+       svg {
+         float: right;
+       }
+       div {
+         float: left;
+       }
+     }
+     @include group;
+   }
+
+
+}
+
+.svg-fix.svg-diagram {
+  &.svg-about-1 {
+    @include iesvgcontainer(40, 184.17, 194.9);
+  }
+  &.svg-about-2 {
+    @include iesvgcontainer(25, 147, 116.5);
+  }
+  &.svg-about-3 {
+    @include iesvgcontainer(60, 385.54, 679);
+  }
+  &.svg-about-4 {
+    @include iesvgcontainer(60, 384.8, 679);
+  }
+  &.svg-about-5 {
+    @include iesvgcontainer(60, 384.9, 679);
+  }
+  svg {
+    @include iesvgfix;
+  }
 }

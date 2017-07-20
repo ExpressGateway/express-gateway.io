@@ -44,7 +44,7 @@ Installing Express Gateway is a simple 4-step process.
 
 
 </section>
-<div class="svg-fix">{% include wave-1.svg %}</div>
+<div class="svg-fix wave-1">{% include wave-1.svg %}</div>
 <section class="page-section-blue flex-column pseudo-wrapper quickstart" markdown="1">
 
 ## 5-minute Getting Started Guide
@@ -59,7 +59,7 @@ In this quick start guide, you’ll...
 
 Note: Express Gateway comes with an in-memory database.  All config file changes done as part of the guide will not require you to restart Express Gateway.  The [hot reload feature]({{ site.baseurl }}{% link docs/runtime.md %}) will take of this automatically without a restart.
 </section>
-<div class="svg-fix">{% include wave-2.svg %}</div>
+<div class="svg-fix wave-2">{% include wave-2.svg %}</div>
 
 <section class="page-section-normal shape-style shape-style-large flex-column pseudo-wrapper" markdown="1">
 
