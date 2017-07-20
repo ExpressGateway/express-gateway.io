@@ -1,5 +1,5 @@
 ---
-layout: documentation
+layout: doc-section
 title: "FAQ"
 doc-order: 30.0
 ---
