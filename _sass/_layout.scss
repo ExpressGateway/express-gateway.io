@@ -821,6 +821,10 @@ h2.description {
       @include size(smalltomedium){
         max-width: 85%;
       }
+      @include size(small){
+        max-width: 100%;
+        width: 100%;
+      }
 
     }
 
@@ -878,11 +882,19 @@ p code, table td code, li > code {
   font-size: $font-size-14;
 }
 
-li code:only-child {
-  margin: 1.25rem 0;
-  display: inline-block;
-}
+// li code:only-child {
+//   margin: 1.25rem 0;
+//   display: inline-block;
+// }
 
 .noscroll {
   overflow: hidden;
+}
+
+.contribute {
+  list-style: circle;
+    margin-left: 1.25rem;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 2rem;
 }
