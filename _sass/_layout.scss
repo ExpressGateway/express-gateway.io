@@ -37,10 +37,21 @@ main {
 .flex-row {
   display: flex;
   flex-direction: row;
-  @include size(smalltomedium) {
+  @include size(small) {
     &.with-graphics {
       flex-direction: column;
       width: 85%;
+    }
+  }
+  @include size(medium){
+    .flex-column {
+      width: 60%;
+      margin-left: 10%;
+
+      h3 {
+        line-height: 2rem;
+        margin-bottom: 1rem;
+      }
     }
   }
 }
@@ -49,11 +60,12 @@ main {
   display: flex;
   flex-direction: row-reverse;
     &.with-graphics {
-      @include size(smalltomedium){
+      @include size(small){
         svg {
           width: 100%;
           margin: 0 auto;
           margin-left: 0;
+          margin-bottom: 2rem;
         }
     }
   }
@@ -754,6 +766,8 @@ h2.description {
 
       .flex-column {
         width: 100%;
+
+
       }
     }
 
@@ -831,6 +845,12 @@ h2.description {
     ol {
       // width: 40%;
       flex: 3;
+      @include size(medium){
+        flex: none;
+        width: 40%;
+        margin-bottom: 2rem;
+        margin-left: 5%;
+      }
       li {
         font-size: $font-size-16;
         padding: .75rem 0;
@@ -849,10 +869,10 @@ h2.description {
       }
 
       ol {
-        width: 85%;
         margin-bottom: 2rem;
       }
     }
+
   }
 
 }
