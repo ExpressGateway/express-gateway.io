@@ -15,7 +15,7 @@ Express Gateway exposes microservices as APIs through URLs known as apiEndpoints
 
 apiEndpoints:
   help:                 # name, used as reference in pipeline
-    host: '*'           # optional, by default accepts all hosts, same as '*'
+    host: '*'           # required, '*' will not check for host name
     paths: /help        # optional, by default will serve all requests - same as *
 
   api:                  # name, used as reference in pipeline

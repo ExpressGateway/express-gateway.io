@@ -45,14 +45,12 @@ pipeline1:
       - rate-limit:
         -
           action:
-            name: 'rate-limit'
             max: 10
             windowMs: 120000
             rateLimitBy: "${req.hostname}"
       - proxy:
         -
           action:
-            name: proxy
             serviceEndpoint: backend
 
 ```
@@ -71,14 +69,38 @@ policies:
           name: hostMatch,
           pattern: example.com
         action:
-          name: rate-limit
           max: 500 # limit to 500 req per default period windowMs=60000 (1 minute)
 
 ```
 
-### Example: user TODO
 
-### Example: application TODO
+### Example: Ratelimit by authenticated users
+
+```yml
+http:
+  port: 9090
+apiEndpoints:
+  example:
+    host: '*'
+serviceEndpoints:
+  backend:
+    url: 'http://www.example.com'
+pipeline1:
+    apiEndpoints:
+      - 'example',
+    policies:
+      - key-auth:   # force key-auth for all requests in this pipeliene
+      - rate-limit:
+        -
+          action:              # allow
+            max: 10            # max 10 request 
+            windowMs: 120000   # per 120 seconds
+            rateLimitBy: "${user.id}" # EgContext.user.id 
+      - proxy:
+        -
+          action:
+            serviceEndpoint: backend
+```
 
 ### Options Reference
 

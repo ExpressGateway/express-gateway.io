@@ -67,13 +67,11 @@ pipelines:
               name: pathExact
               paths: /v1
             action:
-              name: log
               message: "${method} ${originalUrl}"
       -  
         proxy: # policy name
           -    # array of objects with condition\action properties
             action:
-              name: proxy
               serviceEndpoint: example # see declaration above
 ```
 
@@ -112,28 +110,29 @@ The `name` specifies a condition function. This can be one of the following:
 
 ##### Example
 
-    ```yaml
-      condition:
-        name: pathExact
-        path: "/foo/bar"
-    ```
+```yaml
+  condition:
+    name: pathExact
+    path: "/foo/bar"
+```
 
   - `pathMatch`. Matches if the request's path matches the given regular
     expression parameter.
 
 ##### Example
 
-    ```yaml
-      condition:
-        name: pathMatch
-        path: "/foo(/bar)?"
-    ```
+```yml
+  condition:
+    name: pathMatch
+    path: "/foo(/bar)?"
+```
 
   - `method`. Matches if the request's method matches the `methods` parameter.
     Accepts can be either a string (e.g. 'GET') or an array of such strings.
   - `hostMatch`. Parameter should be a regular expression. Matches if the
     `Host` header passed with the request matches the parameter.
-  - `expression`. Matches execution result of JS code provided in `expression` property. Code is executed in limited space that has access only to egContext
+  - `expression`. Matches execution result of JS code provided in `expression` property. Code is executed in limited space that has access only to egContext. See more info about EgContext in 
+  &nbsp; [Expression policy](../../policies/expression)
 
 ##### Example
 
@@ -201,7 +200,10 @@ serviceEndpoints:
 
 apiEndpoints:
   api:
-    paths: \*
+    host: '*'
+    paths: 
+      - /admin
+      - /staff
 
 pipelines:
   api:
@@ -237,8 +239,10 @@ serviceEndpoints:
 
 apiEndpoints:
   admin:
+    host: '*'
     paths: /admin
   staff:
+    host: '*'
     paths: /staff
 
 pipelines:

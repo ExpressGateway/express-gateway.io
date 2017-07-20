@@ -10,7 +10,7 @@ Scope is a tag you can use to mark API Endpoint and tag Consumers with.
 Scopes can be used with any credential types
 
 This API is for Creation Scopes in Express Gateway, so they can be referenced in credentials
-[TBD More Details about Security]
+[Credentials and Scopes Management](../../credential-management)
 
 ### Create Scopes
 ##### Request: `POST /scopes`
