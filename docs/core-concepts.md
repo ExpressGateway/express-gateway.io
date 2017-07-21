@@ -7,12 +7,12 @@ For an overview of Express Gateway and how it works, check out the [About](/abou
 
 Express Gateway comes with the following core entities:
 
-- endpoints (API and service)
-- policies
-- pipelines
-- consumers (users and apps)
-- credentials
-- scopes
+- [endpoints (API and service)](#endpoints)
+- [policies](#policies)
+- [pipelines](#pipelines)
+- [consumers (users and apps)](#consumers)
+- [credentials](#credentials)
+- [scopes](#scopes)
 
 ### endpoints
 Endpoints are URLs. Express Gateway has two different types of endpoints:

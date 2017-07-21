@@ -7,11 +7,18 @@ System level configuration for the gateway and global parameters are defined and
 
 system.config.yml is made up of the following sections:
 
-- db
-- crypto
-- session
-- accessTokens
-- refreshTokens
-- authorizationCodes
+- [db][db]
+- [crypto][crypto]
+- [session][session]
+- [accessTokens][accessTokens]
+- [refreshTokens][refreshTokens]
+- [authorizationCodes][authorizationCodes]
 
 Each section declares global settings that are used for the entire Express Gateway instance.
+
+[db]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/db.md %}
+[crypto]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/crypto.md %}
+[session]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/session.md %}
+[accessTokens]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/accessTokens.md %}
+[refreshTokens]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/refreshTokens.md %}
+[authorizationCodes]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/authorizationCodes.md %}
