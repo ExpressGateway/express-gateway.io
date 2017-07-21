@@ -7,12 +7,20 @@ All of the gateway's functionality is defined and described in `gateway.config.y
 
 gateway.config.yml is made up of the following sections:
 
-- http
-- https
-- admin
-- apiEndpoints
-- serviceEndpoints
-- policies
-- pipelines
+- [http][http]
+- [https][https]
+- [admin][admin]
+- [apiEndpoints][apiEndpoints]
+- [serviceEndpoints][serviceEndpoints]
+- [policies][policies]
+- [pipelines][pipelines]
 
 Each section declares globally named entities. These entities are then referenced within the pipeline section.
+
+[http]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/http.md %}
+[https]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/https.md %}
+[admin]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/admin.md %}
+[apiEndpoints]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/apiEndpoints.md %}
+[serviceEndpoints]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/serviceEndpoints.md %}
+[policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
+[pipelines]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/pipelines.md %}
