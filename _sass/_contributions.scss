@@ -296,7 +296,15 @@
     p {
       width: 100%;
     }
+
+    &.with-graphics.flex-row {
+      @include size(medium600){
+        flex-direction: column;
+      }
+    }
   }
+
+
 
   .quickstart {
     padding-bottom: 2rem;
@@ -318,6 +326,30 @@
     }
   }
 
+}
+
+.with-graphics.flex-row.flex-row-reverse {
+  @include size(medium600){
+    flex-direction: column;
+  }
+}
+
+.wrapper.flex-row.with-graphics {
+  @include size(medium600){
+    flex-direction: column;
+    .svg-diagram {
+      width: 80%;
+      margin-bottom: 5rem;
+    }
+
+    .svg-fix {
+      margin-top: 0;
+    }
+
+    ol {
+      width: 100%;
+    }
+  }
 }
 
 .getting-started-wrapper {

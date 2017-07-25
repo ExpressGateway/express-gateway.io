@@ -17,12 +17,16 @@ Table of Contents
 
 *****/
 
-$breakpoint-small:  410px;
-$breakpoint-large:  960px;
+$breakpoint-small:          410px;
+$breakpoint--about--medium: 600px;
+$breakpoint-large:          960px;
 
 @mixin size($media) {
   @if $media == small {
     @media only screen and (max-width: $breakpoint-small) { @content; }
+  }
+  @if $media == medium600 {
+    @media only screen and (max-width: $breakpoint--about--medium) { @content; }
   }
   @else if $media == medium {
     @media only screen and (min-width: $breakpoint-small + 1) and (max-width: $breakpoint-large - 1) { @content; }

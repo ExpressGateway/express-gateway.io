@@ -835,7 +835,8 @@ h2.description {
       flex: 6.5;
 
       @include size(smalltomedium){
-        max-width: 85%;
+        max-width: 100%;
+        height: auto;
       }
       @include size(small){
         max-width: 100%;
