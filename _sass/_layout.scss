@@ -761,6 +761,7 @@ h2.description {
     flex-direction: row;
     flex: 10;
     width: auto;
+    padding-bottom: 4rem;
 
     @include size(smalltomedium) {
       width: 100%;
@@ -857,6 +858,7 @@ h2.description {
         padding: .75rem 0;
         list-style: none;
         font-weight: 300;
+        line-height: 1.5rem;
       }
     }
 

@@ -129,7 +129,7 @@
 
         ul li {
           // padding: .5rem 0 0;
-          line-height: 1.25rem;
+          line-height: 1.5rem;
           //margin-bottom: 2rem;
 
           img {
@@ -222,6 +222,7 @@
             display: flex;
             position: relative;
             flex-direction: column;
+
 
             &:before {
               text-align: right;
