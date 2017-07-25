@@ -5,13 +5,13 @@ doc-order: 10.3
 ---
 
 ### Overview Credentials API
-Credential is a container for authentican\authorization secrets of API Consumer (User\App)
-At this point Credential can store:
+A Credential is a container for authentican\authorization secrets of API Consumer (User\App)
+There are three credential types provided by the Express Gateway authorization policies:
 - basic-auth (password)
-- oauth2 (client secret or user password)    &nbsp; [OAuth 2.0 policy](../../policies/oauth2)
 - key-auth (key pair id:secret )
+- oauth2 (client secret or user password)    &nbsp; [OAuth 2.0 policy](../../policies/oauth2)
 
-Any API Consumer (User\App) can have one credential of `basic-auth` and `oauth2` types and multiple `key-auth`
+Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` and `oauth2`. However, an API Consumer may have multiple `key-auth` credentials.
 
 ### Create Credential (basic-auth)
 ##### Request: `POST /credentials`
@@ -34,30 +34,6 @@ Any API Consumer (User\App) can have one credential of `basic-auth` and `oauth2`
   "updatedAt": "Tue Jul 18 2017 21:57:16 GMT+0300 (EEST)",
   "id": "steve",
   "password": "03cc5161-cf05-4b83-b7a2-f5c81354731f"
-}
-```
-
-### Create Credential (oauth2)
-##### Request: `POST /credentials`
-```json
-{
-  "credential": { //optional
-    "scopes": [
-      "admin"
-    ]
-  },
-  "consumerId": "steve",
-  "type": "oauth2" 
-}
-```
-##### Response 
-```json
- {
-  "isActive": true,
-  "createdAt": "Tue Jul 18 2017 21:57:16 GMT+0300 (EEST)",
-  "updatedAt": "Tue Jul 18 2017 21:57:16 GMT+0300 (EEST)",
-  "id": "steve",
-  "secret": "03cc5161-cf05-4b83-b7a2-f5c81354731f"
 }
 ```
 
@@ -84,6 +60,30 @@ Any API Consumer (User\App) can have one credential of `basic-auth` and `oauth2`
   "keySecret": "5uGr8Qqhp1fnpCjiynqNhJ", // part 2 of API key
   "scopes": null,
   "consumerId": "steve"
+}
+```
+
+### Create Credential (oauth2)
+##### Request: `POST /credentials`
+```json
+{
+  "credential": { //optional
+    "scopes": [
+      "admin"
+    ]
+  },
+  "consumerId": "steve",
+  "type": "oauth2" 
+}
+```
+##### Response 
+```json
+ {
+  "isActive": true,
+  "createdAt": "Tue Jul 18 2017 21:57:16 GMT+0300 (EEST)",
+  "updatedAt": "Tue Jul 18 2017 21:57:16 GMT+0300 (EEST)",
+  "id": "steve",
+  "secret": "03cc5161-cf05-4b83-b7a2-f5c81354731f"
 }
 ```
 

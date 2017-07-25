@@ -5,12 +5,11 @@ doc-order: 10.4
 ---
 
 ### Overview Scopes API
-Permission system in Express Gateway is based on scopes. 
-Scope is a tag you can use to mark API Endpoint and tag Consumers with.
-Scopes can be used with any credential types
+Express Gateway utilizes scopes for permissions and basic authorization.
+A scope is a tag you can use to mark API Endpoints and matching Consumer credentials.
+Scopes can be used within any credential type. [Credentials and Scopes Management](../../credential-management) describes how scopes are declared within credentials
 
-This API is for Creation Scopes in Express Gateway, so they can be referenced in credentials
-[Credentials and Scopes Management](../../credential-management)
+Scopes must be declared within Express Gateway before they are used by credentials or specified on API endpoints.
 
 ### Create Scopes
 ##### Request: `POST /scopes`

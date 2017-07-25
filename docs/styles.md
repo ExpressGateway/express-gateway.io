@@ -1,8 +1,11 @@
 ---
 layout: doc-section
-title:  "Styles"
+title:  "Doc Styles"
 doc-order: 100.0
 ---
+
+The following is the style guide for writing Express Gateway documentation.
+
 # Heading 1
 ## Heading Two
 ### Heading Three
