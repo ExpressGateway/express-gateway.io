@@ -6,7 +6,7 @@ doc-order: 4.8
 
 ### Description
 
-Manage a gateway 
+Manage a gateway
 
 ### Usage
 
