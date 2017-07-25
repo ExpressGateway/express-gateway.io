@@ -350,6 +350,21 @@
       width: 100%;
     }
   }
+  @include size(small){
+    .wrapper {
+      width: 94%;
+    }
+    .flex-column {
+      width: 94%;
+    }
+    .svg-diagram.svg-fix {
+      height: auto;
+    }
+    &.border-top-blue .svg-diagram.svg-fix {
+      height: 300px;
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 .getting-started-wrapper {
