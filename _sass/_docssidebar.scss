@@ -51,15 +51,16 @@ overflow-y: scroll;
     background: #92cfd6;
     border-right: 1px solid #0c6c7b;
     span {
-      transition: transform 2.0s;
+      transition: rotate, .33s;
       width: 0;
       height: 0;
       border-left: 15px solid transparent;
       border-right: 15px solid transparent;
       border-top: 15px solid #0c6c7b;
       position: relative;
-      top: 90%;
-
+      top: 50%;
+      display: block;
+      margin-top: -7.5px;
     }
   }
 }
@@ -178,7 +179,7 @@ overflow-y: scroll;
         order: 1;
 
       @include size(smalltomedium){
-        &:checked + ul {
+        &:checked ~ ul {
           background: #d7f0f4;
           visibility: visible;
           order: 4;
@@ -192,8 +193,13 @@ overflow-y: scroll;
             visibility: collapse;
           }
         }
-        &:checked + label{
+        &:checked + label {
           background: #d7f0f4;
+          span {
+            transform: rotate(180deg);
+            display: block;
+            transition: rotate, .33s;
+          }
         }
 
       }

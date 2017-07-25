@@ -27,8 +27,8 @@ $menu-width: 250px!default;
     	position: relative;
     	top: 12px;
       width: 30px;
-      height: 3px;
-      background-color: $color-navigation;
+      height: 2px;
+      background-color: #34a9c5;
       display: block;
       border-radius: 1.5px;
 
@@ -36,16 +36,16 @@ $menu-width: 250px!default;
       	position: absolute;
       	content: '';
         width: 30px;
-      	height: 3px;
+      	height: 2px;
       	display: block;
-        background-color: $color-navigation;
+        background-color: #34a9c5;
         border-radius: 1.5px;
       }
       &:before {
-        margin-top: -6px;
+        margin-top: -8px;
       }
       &:after {
-        margin-top: 6px;
+        margin-top: 8px;
       }
     }
   }
