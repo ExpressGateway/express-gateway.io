@@ -16,14 +16,10 @@ Express Gateway receive API requests on apiEndpoints, process them and then prox
 serviceEndpoints:             # downstream microservices
   cats:                       # name, used as a reference in pipeline
     url: "http://cats1.example.com"
-    port: 3000
-    paths: /                  # optional, defaults to /
   dogs:                       # name, used as a reference in pipeline
     urls:                     # multiple urls can be used with load balancing
       - "http://dogs1.example.com"
       - "http://dogs2.example.com"
-    port: 4000
-
 ```
 
 ### Options
