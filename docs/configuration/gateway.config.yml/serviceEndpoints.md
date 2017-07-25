@@ -13,13 +13,15 @@ Express Gateway receive API requests on apiEndpoints, process them and then prox
 
 ```yaml
 
-serviceEndpoints:             # urls to downstream microservices
-  cats_service:               # name, used as a reference in pipeline
-    url: "http://localhost"
+serviceEndpoints:             # downstream microservices
+  cats:                       # name, used as a reference in pipeline
+    url: "http://cats1.example.com"
     port: 3000
     paths: /                  # optional, defaults to /
-  dogs_service:               # name, used as a reference in pipeline
-    url: http://localhost
+  dogs:                       # name, used as a reference in pipeline
+    urls:                     # multiple urls can be used with load balancing
+      - "http://dogs1.example.com"
+      - "http://dogs2.example.com"
     port: 4000
 
 ```
@@ -29,5 +31,10 @@ serviceEndpoints:             # urls to downstream microservices
 | Name    | Description                                    |
 |---      |---                                             |
 | `url`   | the protocol and hostname to proxy requests to |
+| `urls`  | an array of URLs, used with load balancing     |
 | `port`  | the port to send proxied requests to           |
 | `paths` | the paths to send proxied requests to          |
+
+### Description
+
+A `serviceEndpoint` must have either a `url` property with a single string or a `urls` property with an array of strings.
