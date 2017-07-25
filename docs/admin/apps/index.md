@@ -6,8 +6,8 @@ doc-order: 10.2
 
 ### Overview Apps API
 
-This part of the API is responsible for managing Apps entities 
-User is the main entity. User can have multiple Apps
+This part of the API is responsible for managing Apps (Applications) entities.
+A User is the main API Consumer entity. User can have multiple Apps.
 Main purpose of App is to be container for Credentials
 
 ### Create an App

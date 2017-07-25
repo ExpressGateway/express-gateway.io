@@ -6,9 +6,8 @@ doc-order: 10.1
 
 ### Overview Users
 
-This part of the API is responsible for managing User entities 
-User is the main entity in the system.
-User can have multiple Apps 
+A User is a the main consumer entity in Express Gateway. Typically, it would be used to represent a person in Express Gateway.
+User can have multiple Applications  and Credentials.
 
 
 ### Create a User

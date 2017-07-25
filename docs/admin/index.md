@@ -4,64 +4,67 @@ title: Admin API Reference
 doc-order: 10.0
 ---
 
-### Overview Admin API
+### Overview 
 
-Express Gateway Admin API is a RESTful interface to manage resourses such as Users, Applications, Credenitials, Scopes, Oauth2 tokens and relation between them  
+The Express Gateway Admin API is a REST interface to manage internal entities such as Users, Applications, Credenitials, Scopes, OAuth2 tokens and the relationships among such entities.
 
-CLI is using Admin API
+Note: in the future the Admin API will also allow configuration of gateway entities such as pipeline and policy configuration dynamically.
+
+The Express Gateway [CLI](./cli) utilizes the Admin API.
 
 ### Core Entities
 
-##### User
-Main item in the system. Typically would be used to represent a person in Express Gateway.
-User can have multiple Applications (Apps) and Credentials
-
-In minimal configuration you would need User with Credential to secure endpoints 
-
-##### App (Application)
-This entity is designed to represent non human consumers of API endpoints, such as mobile application
-
 ##### API Consumer
-Consumer is User or App. Generic term that represent some client of API endpoints exposed by Express Gateway.     
+An API Consumer is a User or an Application. Generic term that represent some client of API endpoints exposed by Express Gateway.
+
+##### User
+A User is a the main consumer entity in Express Gateway. Typically, it would be used to represent a person in Express Gateway.
+User can have multiple Applications  and Credentials.
+
+##### Application (App)
+An App is a API Consumer entity designed to represent non human consumers of API endpoints, such as mobile application. Apps always belong to a User.
 
 ##### Credential
-A container for authentican\authorization secrets of API Consumer (User\App)
-At this point Credential can store:
+A container for authentican\authorization secrets of API Consumer (Users/Apps)
+There are three credential types provided by the Express Gateway authorization policies:
 - basic-auth (password)
-- oauth2 (client secret or user password)    &nbsp; [OAuth 2.0 policy](../../policies/oauth2)
 - key-auth (key pair id:secret )
+- oauth2 (client secret or user password)    &nbsp; [OAuth 2.0 policy](../../policies/oauth2)
 
-Any API Consumer (User\App) can have one credential of `basic-auth` and `oauth2` types and multiple `key-auth`
+Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` and `oauth2`. However, an API Consumer may have multiple `key-auth` credentials.
 
 ##### Scope
-Permission system in Express Gateway is based on scopes. 
-Scope is a tag you can use to mark API Endpoint and tag Consumers with.
-Scopes can be used with any credential types
-[Credentials and Scopes Management](../../credential-management)
+Express Gateway utilizes scopes for permissions and basic authorization.
+A scope is a tag you can use to mark API Endpoints and matching Consumer credentials.
+Scopes can be used within any credential types. [Credentials and Scopes Management](../../credential-management) describes how scopes are declared within credentials.
 
 ##### Token (OAuth 2.0 specific)
-Standard access token you would expect from OAuth 2.0
+Express Gateway supports access and refresh tokens as part of the OAuth 2.0 standard.
 
 ### Default Configuration
-By Default Admin API starts on port 9876 using HTTP protocol.
-This can be changed in the gateway.config.yml 
+By default, the Admin API starts on port 9876 using HTTP protocol.
+This can be changed in the [gateway.config.yml](./configuration/gateway.config.yml)
 
 ```yml
+
 admin:
   port: 9876
   hostname: localhost
+
 ```
 
-### Security
-To disable Admin API remove `admin` section from the `gateway.config.yml`
+### Security Measures
+To disable Admin API remove `admin` section from `gateway.config.yml`
 
 The raw Admin API should not be publically available for security reasons.
 
-If you decide to expose Admin API you need to secure it. 
+Should you decide to expose Admin API you should secure it.
 One of the ways is to use Express Gateway.
 
-Example Config 
+#### Example `gateway.config.yml`
+
 ```yml
+
 apiEndpoints:
   api:
     host: '*'
