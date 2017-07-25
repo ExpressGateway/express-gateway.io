@@ -28,8 +28,6 @@ serviceEndpoints:             # downstream microservices
 |---      |---                                             |
 | `url`   | the protocol and hostname to proxy requests to |
 | `urls`  | an array of URLs, used with load balancing     |
-| `port`  | the port to send proxied requests to           |
-| `paths` | the paths to send proxied requests to          |
 
 ### Description
 
