@@ -63,6 +63,12 @@ pipelines:
 * `strategy`:
   - Assigns a load-balancing strategy for `serviceEndpoint` declarations that have more than one URL, defaults to `round-robin`.
 
+#### Load balancing strategies
+
+* `round-robin`: This strategy routes each client request to a URL assigned in the `urls` array for a `serviceEndpoint`, starting at the first URL, moving through the last URL, and finally looping back to the start.
+
+*More strategies may be implemented in the future.*
+
 Note: more complex proxy rules will be introduced to do wilcard based matching similar to Express routing rules
 
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
