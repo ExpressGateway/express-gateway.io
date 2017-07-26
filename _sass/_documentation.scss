@@ -117,6 +117,10 @@
         font-weight: 200;
         line-height: $font-lineheight-base;
         padding-bottom: 1.75rem;
+
+        + pre {
+          margin-top: -1.75rem;
+        }
       }
 
       a {

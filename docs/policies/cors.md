@@ -76,7 +76,7 @@ policies:
   - Array: set origin to an array of valid origins. Each origin can be a String or RegExp.  example: `[http://foobar1.com", /\.foobar2.com$]` will accept any request from "http://foobar1.com" or from any subdomain of "foobar2.com"
 * `methods`:
   - configures the `Access-Control-Allow-Methods` CORS header.
-  - expects a comma-delimited string (ex: `'GET,PUT,POST'`) or an array (ex: `['GET', 'PUT', 'POST']`). |
+  - expects a comma-delimited string (ex: `'GET,PUT,POST'`) or an array (ex: `['GET', 'PUT', 'POST']`).
 * `allowedHeaders`:
   - configures the `Access-Control-Allow-Headers` CORS header.
   - expects a comma-delimited string (ex: `'Content-Type,Authorization'`) or an array (ex: `['Content-Type', 'Authorization']`).
