@@ -71,7 +71,7 @@ permalink: /resources/
 <span>We are looking for community members to add to our growing list of contributors. There are a lot of ways to contribute:</span>
 <ul class="contribute">
     <li>Address an open issue in the project</li>
-    <li>Implement a feature sought after on the <a href="https://waffle.io/ExpressGateway/express-gateway" target="_blank">roadmap</a></li>
+    <li>Implement a feature sought after on the <a href="https://waffle.io/ExpressGateway/express-gateway" target="_blank">task board</a> and <a href="https://github.com/ExpressGateway/express-gateway/wiki/Express-Gateway-Roadmap" target="_blank">roadmap</a></li>
     <li>Help answer questions with your expertise</li>
     <li>Add examples and documentation so others can get onboard easier</li>
 <span>Big or small, every effort counts! For more information check out the <a href="https://github.com/ExpressGateway/express-gateway/blob/master/Contributing.md" target="_blank">Contributor's guide in the Express Gateway repo.</a></span>
