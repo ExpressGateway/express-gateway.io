@@ -20,6 +20,7 @@ gems:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-gist
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
