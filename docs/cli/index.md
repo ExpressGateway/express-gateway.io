@@ -21,3 +21,20 @@ eg [TYPE] [command] [flags]
 * `flags`: Flags can be optional or required depending on the command.  See the individual command's help text or documentation.
 
 If help is needed, just run `eg -h` from your terminal.
+
+### Admin API Connection
+CLI uses Admin API to execute commands. 
+
+`system.config.yml` contains url that points to Admin API
+
+##### Default CLI config:
+```yml
+cli:   
+  url: http://localhost:9876
+```
+##### Environment variable 
+Alternative is to set `EG_ADMIN_URL` env variable to Admin API URL
+
+#### Troubleshooting
+Use `-v` flag for verbose output. It will show Method, URL, HTTP headers, body that is sent to Admin API 
+
