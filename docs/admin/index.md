@@ -61,13 +61,17 @@ The raw Admin API should not be publically available for security reasons.
 Should you decide to expose Admin API you should secure it.
 One of the ways is to use Express Gateway.
 
-#### Example `gateway.config.yml`
+### Secure Admin API with Express Gateway
+
+Change the `gateway.config.yml` like in the following example:
+
+##### Example `gateway.config.yml` with temporary disabled key-auth
 
 ```yml
 
 apiEndpoints:
-  api:
-    host: '*'
+  adminAPI:
+    host: 'admin.domain.com' # domain where admin API is exposed 
 
 https:  #  run Express Gateway in HTTPS mode
   port: 8443
@@ -77,10 +81,10 @@ https:  #  run Express Gateway in HTTPS mode
         cert: './path/to/cert.pem',
 admin:
   port: 9876
-  hostname: localhost
+  hostname: localhost  # listening on localhost only
 
 serviceEndpoints:
-  backend:
+  adminBackend:
     url: 'http://localhost:9876' # this is EG admin API
 policies: # whitelist of policies allowed to use in pipelines
   - proxy
@@ -88,11 +92,123 @@ policies: # whitelist of policies allowed to use in pipelines
 pipelines:
   - name: adminAPI
     apiEndpoints:
-      - api
+      - adminAPI
     policies:
-      - key-auth:
+    #  - key-auth: # this is intentionaly disabled to allow temporary access 
       - proxy:
           - action:
-              serviceEndpoint: backend
+              serviceEndpoint: adminBackend
 
 ```
+
+#### Accessing Protected Admin API with CLI 
+Express Gateway CLI uses special config section in system.config.yml  
+
+##### Default CLI config:
+```yml
+cli:   
+  url: http://localhost:9876
+```
+
+##### Config to point CLI to Secured Admin API 
+```yml
+cli:
+  url: https://admin.domain.com:8443  # domain name of exposed API
+```
+
+#### Create Key-auth Credentials
+This is why we have `key-auth` policy disabled for now. We need create user and credential
+
+##### Start Express Gateway 
+`npm start`
+
+##### Create admin User 
+`eg user create`
+
+Follow the promts and check the output
+```
+? Enter username [required]: admin
+? Enter firstname [required]: admin
+? Enter lastname [required]: admin
+? Enter email:
+? Enter redirectUri:
+```
+`✔ Created 048e4213-8493-401a-b814-e4107c39ec39`
+
+```json
+{
+  "firstname": "admin",
+  "lastname": "admin",
+  "isActive": true,
+  "username": "admin",
+  "id": "048e4213-8493-401a-b814-e4107c39ec39",
+  "createdAt": "Fri Jul 28 2017 16:56:48 GMT+0300 (EEST)",
+  "updatedAt": "Fri Jul 28 2017 16:56:48 GMT+0300 (EEST)"
+```
+##### Create key-auth credential for admin user
+`eg credentials create -c admin -t key-auth`
+```json
+✔ Created 2YvpwOURTnNB0mDFhOpnxj
+{
+  "isActive": true,
+  "createdAt": "Fri Jul 28 2017 16:58:28 GMT+0300 (EEST)",
+  "updatedAt": "Fri Jul 28 2017 16:58:28 GMT+0300 (EEST)",
+  "keyId": "2YvpwOURTnNB0mDFhOpnxj",
+  "keySecret": "08o0ZHLD1pGAIiG61tXc9S",
+  "scopes": null,
+  "consumerId": "admin"
+}
+```
+
+##### Enable Key Auth
+Now we have user and credential. 
+Turn on Key Auth by uncommenting line 
+
+`- key-auth: # this is intentionaly disabled to allow temporary access`
+
+NOTE: Express Gateway will hot-reload so no need for restart.
+This is especially important if you run not Redis but InMemory datastore. In this case restart will clear all users and credentials.  
+
+```yml
+pipelines:
+  - name: adminAPI
+    apiEndpoints:
+      - adminAPI
+    policies:
+      - key-auth: 
+      - proxy:
+          - action:
+              serviceEndpoint: adminBackend
+```
+
+##### Check that acess is not allowed 
+`eg users list`
+
+It should return Unauthorized error
+
+##### Add HTTP Header to get access to Admin API
+In previous steps we have generated key-auth credential for user
+
+It has important part:
+```json
+  "keyId": "2YvpwOURTnNB0mDFhOpnxj", 
+  "keySecret": "08o0ZHLD1pGAIiG61tXc9S"
+```
+These properties combined using colon ('keyId:keySecret') are an API key required buy Key Auth
+
+run 
+
+`eg users list -H "Authorization:apikey 2YvpwOURTnNB0mDFhOpnxj:08o0ZHLD1pGAIiG61tXc9S"` 
+
+```json
+{
+  "createdAt": "Fri Jul 28 2017 16:56:48 GMT+0300 (EEST)",
+  "firstname": "admin",
+  "id": "048e4213-8493-401a-b814-e4107c39ec39",
+  "isActive": true,
+  "lastname": "admin",
+  "updatedAt": "Fri Jul 28 2017 16:56:48 GMT+0300 (EEST)",
+  "username": "admin"
+}
+```
+
