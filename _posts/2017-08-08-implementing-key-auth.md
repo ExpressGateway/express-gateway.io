@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Implementing Key Authentication in Express Gateway"
-date:   2017-08-08 00:00:00 -0400
+date:   2017-08-08 12:00:00 -0400
 category: guides
 author: "Jordan Kasper"
 #
