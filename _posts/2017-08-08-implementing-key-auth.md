@@ -214,4 +214,4 @@ After performing this action, the given `keyId` will no longer be authenticated 
 
 ### Wrapping Up
 
-One of the biggest things an API gateway can do for you is centralize the authentication for your various microservices. And Express Gateway makes this process extremely straight forward. Take a look at the [documentation](http://www.express-gateway.io/documentation) and give it a try!
+One of the biggest things an API gateway can do for you is centralize the authentication for your various microservices. And Express Gateway makes this process extremely straight forward. Take a look at the [documentation](http://www.express-gateway.io/docs) and give it a try!
