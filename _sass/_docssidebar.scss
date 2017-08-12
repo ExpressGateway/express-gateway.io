@@ -44,23 +44,25 @@ overflow-y: scroll;
   @include size(smalltomedium){
     pointer-events: all;
     position: relative;
-    padding: 12px;
+    padding: 12px 15px;
     margin-right: 1rem;
   	display:  inline-block;
     z-index: 99;
     background: #92cfd6;
     border-right: 1px solid #0c6c7b;
+
     span {
       transition: rotate, .33s;
       width: 0;
       height: 0;
-      border-left: 15px solid transparent;
-      border-right: 15px solid transparent;
-      border-top: 15px solid #0c6c7b;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #0c6c7b;
       position: relative;
-      top: 50%;
+      top: 8px;
       display: block;
-      margin-top: -7.5px;
+      // margin-top: -7.5px;
+
     }
   }
 }
@@ -101,11 +103,11 @@ overflow-y: scroll;
     a {
       text-decoration: none;
       font-size: $font-size-18;
-      color: $color-text;
-      font-weight: bold;
+      color: #373f3f;
+      // font-weight: bold;
 
       @include size(smalltomedium){
-        color: white;
+        color: #373f3f;
         align-self: stretch;
         width: 100%;
         pointer-events: all;
@@ -235,7 +237,7 @@ overflow-y: scroll;
         &:hover {
           background-color: #f8fbfb;
           @include size(smalltomedium) {
-            background-color: $color-gray-light;
+            background-color: #60c2cc;
           }
         }
         &.active {
