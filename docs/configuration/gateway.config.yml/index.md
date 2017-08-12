@@ -7,6 +7,7 @@ All of the gateway's functionality is defined and described in `gateway.config.y
 
 gateway.config.yml is made up of the following sections:
 
+<nav markdown="1">
 - [http][http]
 - [https][https]
 - [admin][admin]
@@ -14,6 +15,7 @@ gateway.config.yml is made up of the following sections:
 - [serviceEndpoints][serviceEndpoints]
 - [policies][policies]
 - [pipelines][pipelines]
+</nav>
 
 Each section declares globally named entities. These entities are then referenced within the pipeline section.
 
