@@ -3,11 +3,12 @@
 
   h2 {
 
-    display: inline-block;
+    display: block;
     //margin-bottom: 1.5rem;
     span {
       display: block;
     }
+
   }
 
   &.about {
@@ -368,9 +369,22 @@
 }
 
 .getting-started-wrapper {
+
+  section:first-child > h2 {
+    &:before {
+      content: "";
+      height: 200px;
+      margin-top: -150px;
+      display: block;
+      // visibility: visible;
+      position: relative;
+      vertical-align: top;
+    }
+  }
+
   .pseudo-wrapper {
     width: 100%;
-    padding: 0 15.5%;
+    padding: 0 15.5% 50px;
     // position: relative;
     // &:before {
     //   content: "";
@@ -400,7 +414,7 @@
 
     svg {
       margin-bottom: 1.25rem;
-      max-width: 500px;
+      max-width: 600px;
       margin: 0 auto 1.25rem;
       display: block;
       @include size(small){
