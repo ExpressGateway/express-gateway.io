@@ -761,7 +761,7 @@ h2.description {
     flex-direction: row;
     flex: 10;
     width: auto;
-    padding-bottom: 4rem;
+    //padding-bottom: 4rem;
 
     @include size(smalltomedium) {
       width: 100%;
@@ -792,8 +792,8 @@ h2.description {
 }
 
 .border-top-blue {
-  padding: 2.5rem 0;
-  margin: 2rem auto;
+  padding: 2.5rem 0 0;
+  margin: 2rem auto 0;
   border-top: 2px solid $color-secondary-light;
 }
 

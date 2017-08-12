@@ -261,6 +261,27 @@
       }
     }
 
+    nav {
+      padding-bottom: 1rem;
+      li {
+        padding-left: 0;
+        text-indent: 0;
+
+        &:before {
+          content: "";
+
+        }
+
+        a {
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+      }
+    }
+
     aside {
 
       &.notice {
