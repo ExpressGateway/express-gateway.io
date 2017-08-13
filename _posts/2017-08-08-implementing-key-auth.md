@@ -9,7 +9,7 @@ author: "Jordan Kasper"
 # and ~/_categories with any necessary archive needs
 #
 ---
-You've probably used it before: key authentication. The basic idea is simple, to authenticate your app or client with a given service you send a key to identify (and authorize) yourself. This is not intended for individual users necessarily, but rather for systems talking to each other. (Just to be clear, for users authenticating themselves you might want to look into OAuth2, something Express Gateway also offers.)
+You've probably used it before: key authentication. The basic idea is simple, to authenticate your app or client with a given service you send a key to identify (and authorize) yourself. This is not intended for individual users necessarily, but rather for systems talking to each other. 
 
 <!--excerpt-->
 
