@@ -52,6 +52,10 @@
 
     &.no-border {
       border-bottom: none;
+
+      li:nth-child(2){
+        flex: 1.25
+      }
     }
   }
 
