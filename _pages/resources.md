@@ -30,6 +30,7 @@ permalink: /resources/
 #### Quality of Service
 <ul class="icon-list no-border">
 <li>{% include res-simplelogger.svg %}<h3>Simple Logger</h3><p>Logging Format and Output</p></li>
+<li>{% include res-lbproxy.svg %}<h3>Load Balancer Proxy</h3><p>Load Balance and Proxy to Services</p></li>
 <li>{% include res-rate.svg %}<h3>Rate Limiter</h3><p>Throttle API Requests</p></li>
 </ul>
 </div>
