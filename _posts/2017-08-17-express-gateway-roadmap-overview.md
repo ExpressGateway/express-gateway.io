@@ -1,11 +1,17 @@
-
---
+---
 layout: post
 title: "Express Gateway Roadmap Overview"
 date:   2017-08-17 12:00:00 -0400
 category: announcements
 author: "Al Tsang"
+#
+# Please remember to update ~/_archives-month, ~/_archives-year
+# and ~/_categories with any necessary archive needs
+#
+---
+Fast, Flexible and Community Driven. When we say community driven - it's not a tagline, it's a commitment. Given its use case, There are so many features that _could_ be built for Express Gateway, the big question is - _what_ first? 
 
+<!--excerpt-->
 ### Community Driven - What it Means
 Fast, Flexible and Community Driven. When we say community driven - it's not a tagline, it's a commitment. Given its use case, There are so many features that _could_ be built for Express Gateway, the big question is - _what_ first?  As developers and technical practitioners, we're firm believers in building what the developer community actually _needs_ not what we or anyone thinks they want.
 
