@@ -16,13 +16,13 @@ The https section is used to configure HTTPS. Express Gateway will listen on the
 https:
   port: 9443
   tls:
-    - "*.demo.io":
+    "*.demo.io":
         key: example/keys/demo.io.key.pem
         cert: example/keys/demo.io.cert.pem
-    - "api.acme.com":
+    "api.acme.com":
         key: example/keys/acme.com.key.pem
         cert: example/keys/acme.com.cert.pem
-    - "default":
+    "default":
         key: example/keys/eg.io.key.pem
         cert: example/keys/eg.io.cert.pem
 
