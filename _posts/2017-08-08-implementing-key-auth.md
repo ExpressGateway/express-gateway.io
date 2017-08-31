@@ -11,13 +11,14 @@ author: "Jordan Kasper"
 ---
 You've probably used it before: key authentication. The basic idea is simple, to authenticate your app or client with a given service you send a key to identify (and authorize) yourself. This is not intended for individual users necessarily, but rather for systems talking to each other.
 <!--excerpt-->
+
 ![Implementing Key Authentication in Express Gateway](/assets/img/implement-key-auth.png)
 
 In this article I'll be showing you how to get up and running with key authentication quickly and easily with Express Gateway (EG). We'll talk about setting up and configuring your gateway, creating credentials, and sending authenticated requests. This is a brief introduction, so be sure to read the documentation and test things before you deploy your API gateway!
 
 ### Creating and Configuring the Gateway
 
-Your first step might be to generate a new Express Gateway instance. (Feel free to skip this step if you've already done this.) You'll want to first install the `express-gateway` package and then generate a new gateway:
+Your first step might be to generate a new Express Gateway instance. (Feel free to skip this step if you've already done this.) You'll want to first install the [express-gateway package](https://www.npmjs.com/package/express-gateway) and then generate a new gateway:
 
 ```
 ~$ npm i -g express-gateway
