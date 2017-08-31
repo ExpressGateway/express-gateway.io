@@ -9,15 +9,9 @@ author: "Jordan Kasper"
 # and ~/_categories with any necessary archive needs
 #
 ---
-You've probably used it before: key authentication. The basic idea is simple, to authenticate your app or client with a given service you send a key to identify (and authorize) yourself. This is not intended for individual users necessarily, but rather for systems talking to each other. 
-
+You've probably used it before: key authentication. The basic idea is simple, to authenticate your app or client with a given service you send a key to identify (and authorize) yourself. This is not intended for individual users necessarily, but rather for systems talking to each other.
 <!--excerpt-->
-
-_Originally posted on [www.lunchbadger.com](https://www.lunchbadger.com)._
-
 ![Implementing Key Authentication in Express Gateway](/assets/img/implement-key-auth.png)
-
-You've probably used it before: key authentication. The basic idea is simple, to authenticate your app or client with a given service you send a key to identify (and authorize) yourself. This is not intended for individual users necessarily, but rather for systems talking to each other. (Just to be clear, for users authenticating themselves you might want to look into OAuth2, something Express Gateway also offers.)
 
 In this article I'll be showing you how to get up and running with key authentication quickly and easily with Express Gateway (EG). We'll talk about setting up and configuring your gateway, creating credentials, and sending authenticated requests. This is a brief introduction, so be sure to read the documentation and test things before you deploy your API gateway!
 
@@ -218,3 +212,5 @@ After performing this action, the given `keyId` will no longer be authenticated 
 ### Wrapping Up
 
 One of the biggest things an API gateway can do for you is centralize the authentication for your various microservices. And Express Gateway makes this process extremely straight forward. Take a look at the [documentation](http://www.express-gateway.io/docs) and give it a try!
+
+_Originally posted on [www.lunchbadger.com](https://www.lunchbadger.com)._
