@@ -78,7 +78,7 @@ pipelines:
               changeOrigin: true
 ```
 
-Once you turn on OAuth2, you should see an 'Unauthorized' error when you visit [http://localhost:3000/ip](http://localhost:3000/ip). You need to restart the server for config changes to take effect, so if you ran npm start be sure to kill the process and then re-run npm start.
+Once you turn on OAuth2, you should see an 'Unauthorized' error when you visit [http://localhost:3000/ip](http://localhost:3000/ip). You need to restart the server for config changes to take effect, so if you ran npm start be sure to kill the process and then re-run `npm start`.
 The next step is to create a new Express Gateway [user](http://www.express-gateway.io/docs/consumer-management#users).
 
 Users and [applications](http://www.express-gateway.io/docs/consumer-management#applications) have a one-to-many relationship, so you must create a user before you create an application.
@@ -170,7 +170,7 @@ To get started, you need to visit the `/oauth2/authorize` endpoint and specify t
 
 So, here's how the full URL looks:
 
-[http://localhost:8080/oauth2/authorize?response_type=token&client_id=803b1da9-879d-44b5-8d77-5199c4e11fba&redirect_uri=http://localhost:8080/ip] (http://localhost:8080/oauth2/authorize?response_type=token&client_id=803b1da9-879d-44b5-8d77-5199c4e11fba&redirect_uri=http://localhost:8080/ip)
+[http://localhost:8080/oauth2/authorize?response_type=token&client_id=803b1da9-879d-44b5-8d77-5199c4e11fba&redirect_uri=http://localhost:8080/ip](http://localhost:8080/oauth2/authorize?response_type=token&client_id=803b1da9-879d-44b5-8d77-5199c4e11fba&redirect_uri=http://localhost:8080/ip)
 
 When you go to this URL, you should be redirected to a login screen. You can configure the UI later, and so for this article you'll just use Express Gateway's minimal built-in login screen.
 
