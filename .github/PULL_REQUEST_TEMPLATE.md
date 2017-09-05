@@ -8,5 +8,5 @@ Please see the checklist below and thanks again for your contribution!
   - example) "fixes typo with OAuth2 policy - connect #103"
 - [ ] branch naming prefix:
   - bugfix/branch-name (for bugs)
-  - doc/branch-name (for docs)
+  - doc/branch-name (for doc additions)
 - [ ] squash commits and/or rebase
