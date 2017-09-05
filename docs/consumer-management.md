@@ -96,5 +96,8 @@ newProperty: {
     - If true, Express Gateway will not allow modification of this property after creation
 
 References:
-* &nbsp; [Admin API](../../admin)
-* &nbsp; [CLI](../../cli)
+* &nbsp; [Admin API][admin]
+* &nbsp; [CLI][cli]
+
+[cli]: {{ site.baseurl }}{% link docs/cli/index.md %}
+[admin]: {{ site.baseurl }}{% link docs/admin/index.md %}

@@ -10,7 +10,7 @@ The Express Gateway Admin API is a REST interface to manage internal entities su
 
 Note: in the future the Admin API will also allow configuration of gateway entities such as pipeline and policy configuration dynamically.
 
-The Express Gateway [CLI](./cli) utilizes the Admin API.
+The Express Gateway [CLI][cli] utilizes the Admin API.
 
 ### Core Entities
 
@@ -29,21 +29,21 @@ A container for authentican\authorization secrets of API Consumer (Users/Apps)
 There are three credential types provided by the Express Gateway authorization policies:
 - basic-auth (password)
 - key-auth (key pair id:secret )
-- oauth2 (client secret or user password)    &nbsp; [OAuth 2.0 policy](../../policies/oauth2)
+- oauth2 (client secret or user password)    &nbsp; [OAuth 2.0 policy][oauth2]
 
 Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` and `oauth2`. However, an API Consumer may have multiple `key-auth` credentials.
 
 ##### Scope
 Express Gateway utilizes scopes for permissions and basic authorization.
 A scope is a tag you can use to mark API Endpoints and matching Consumer credentials.
-Scopes can be used within any credential types. [Credentials and Scopes Management](../../credential-management) describes how scopes are declared within credentials.
+Scopes can be used within any credential types. [Credentials and Scopes Management][credential_management] describes how scopes are declared within credentials.
 
 ##### Token (OAuth 2.0 specific)
 Express Gateway supports access and refresh tokens as part of the OAuth 2.0 standard.
 
 ### Default Configuration
 By default, the Admin API starts on port 9876 using HTTP protocol.
-This can be changed in the [gateway.config.yml](./configuration/gateway.config.yml)
+This can be changed in the [gateway.config.yml][gw_config]
 
 ```yml
 
@@ -212,3 +212,8 @@ run
 }
 ```
 
+[cli]: {{ site.baseurl }}{% link docs/cli/index.md %}
+[oauth2]: {{ site.baseurl }}{% link docs/policies/oauth2.md %}
+[credential_management]: {{ site.baseurl }}{% link docs/credential-management.md %}
+[consumer_management]: {{ site.baseurl }}{% link docs/consumer-management.md %}
+[gw_config]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
