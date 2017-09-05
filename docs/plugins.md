@@ -14,9 +14,9 @@ The extraction of the existing plugins and the enablement of the plugin framewor
 An Express Gateway plugin contains entities. You can think of a plugin as a container of Express Gateway entities that extend the core and dynamically installed.
 
 A plugin can contain one or more of the following:
-* Policies (&nbsp; [Policy Reference](./policies))
-* Conditions [Pipeline and Conditions Reference](./configuration/policies))
-* Models for new Entities &nbsp; [Consumer Management](./consumer-management))
+* Policies ([Policy Reference](./policies))
+* Conditions ([Pipeline and Conditions Reference](./configuration/policies))
+* Models for new Entities ([Consumer Management](./consumer-management))
 * Custom route handlers
 
 ### General Plugin Installation
