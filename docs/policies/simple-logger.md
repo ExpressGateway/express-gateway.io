@@ -5,8 +5,7 @@ doc-order: 4.6
 ---
 ### Description
 
-The Simpler Logger policy provides capability for logging with basic message output.
-the JavaScript [ES6 template literal syntax][es6-template-literal-syntax]
+The Simpler Logger policy provides capability for logging with basic message output. JavaScript [ES6 template literal syntax][es6-template-literal-syntax] is supported.
 
 This policy allows you to dump any and all parameters of the [EG Context object][eg-context-object].
 
@@ -43,5 +42,5 @@ pipelines:
 
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
-[es6-template-literal-sytnax]: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Template_literals
+[es6-template-literal-syntax]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 [eg-context-object]: {{ site.baseurl }}{% link docs/policies/expression.md %}#eg-context-object
