@@ -83,8 +83,7 @@ paths: /admin
 ```
 
 - match: /admin only
-- 404:
-- /admin/bob; /admin/charlie/1; /staff
+- 404: /admin/bob; /admin/charlie/1; /staff
 
 ---
 
