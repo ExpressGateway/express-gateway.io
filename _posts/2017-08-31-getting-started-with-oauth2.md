@@ -78,7 +78,7 @@ pipelines:
               changeOrigin: true
 ```
 
-Once you turn on OAuth2, you should see an 'Unauthorized' error when you visit [http://localhost:3000/ip](http://localhost:3000/ip). You need to restart the server for config changes to take effect, so if you ran npm start be sure to kill the process and then re-run `npm start`.
+Once you turn on OAuth2, you should see an 'Unauthorized' error when you visit [http://localhost:8080/ip](http://localhost:8080/ip). You need to restart the server for config changes to take effect, so if you ran npm start be sure to kill the process and then re-run `npm start`.
 The next step is to create a new Express Gateway [user](http://www.express-gateway.io/docs/consumer-management#users).
 
 Users and [applications](http://www.express-gateway.io/docs/consumer-management#applications) have a one-to-many relationship, so you must create a user before you create an application.
