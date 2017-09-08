@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title:  "Development guide"
+title:  "Policy Development guide"
 doc-order: 25.3
 ---
 ### Development guide 

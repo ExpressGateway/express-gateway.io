@@ -5,7 +5,7 @@ doc-order: 25.0
 ---
 ### Plugins
 
-Express Gateway comes with a plugin framework used to extend the Express Gateway core. 
+Express Gateway v1.2.0+ comes with a plugin framework used to extend the Express Gateway core. 
 While some policies are currently bundled into the core itself we intend to release future policies as plugins. 
 
 Another important part is it provides a way to tailor or create a policy for your specific needs or use community driven policies.  
