@@ -67,7 +67,7 @@ Express Gateway is a thin layer on top of ExpressJS Node.JS framework and uses a
 To understand when different parts of plugin are registered and loaded check the [Express Gateway Boot Sequence explanation]({{ site.baseurl}} {% link docs/plugins/boot-sequence.md %})
 
 All extension points are covered in the
-[Developing Guide]({{ site.baseurl}} {% link docs/plugins/development-guide.md %})
+[Development Guide]({{ site.baseurl}} {% link docs/plugins/development-guide.md %})
 
 Here is [Example Plugin](https://github.com/ExpressGateway/express-gateway-plugin-example) with all extension points utilized 
 
