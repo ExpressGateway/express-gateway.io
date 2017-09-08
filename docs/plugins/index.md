@@ -6,7 +6,20 @@ doc-order: 25.0
 ### Plugins
 
 Express Gateway comes with a plugin framework used to extend the Express Gateway core. 
-While some policies are currently bundled into the core itself we intend to release future policies as plugins. Also with growing community support it should be a lot of new plugins in the nearest future  
+While some policies are currently bundled into the core itself we intend to release future policies as plugins. 
+
+Another important part is it provides a way to tailor or create a policy for your specific needs or use community driven policies.  
+
+### Plugin Structure
+
+An Express Gateway plugin contains entities and allows event subscription. You can think of a plugin as a container of Express Gateway entities that extend the core and event handlers.
+
+A plugin can contain one or more of the following:
+* Policies ([Policy Reference](./policies))
+* Conditions ([Pipeline and Conditions Reference](./configuration/policies))
+* Custom route and middlewares for admin and gateway servers
+
+Also it exposes Event Bus and can react to events in Express Gateway life cycle
 
 ### General Plugin Installation
 
@@ -14,7 +27,7 @@ Plugins are bundled as [Node](http://www.nodejs.org) modules and installed throu
 
 After that plugin have to be declared in [system.config.yml](./configuration/system.config.yml) in order to be used. 
 
-Express Gateway CLI is a convenient way to install and enable plugin. 
+Express Gateway CLI is a convenient way to install and enable plugins. 
 `eg plugin install __name__`
 TBD: actual CLI command 
 
@@ -49,20 +62,13 @@ plugins:
 ```
 
 ### Developing a plugin
+Express Gateway is a thin layer on top of ExpressJS Node.JS framework and uses a lot of concepts from it. So it is good to have some idea of it, especially the [Middleware](http://expressjs.com/en/guide/writing-middleware.html)
 
-REF to boot sequence 
-developing guide 
+To understand when different parts of plugin are registered and loaded check the [Express Gateway Boot Sequence explanation]({{ site.baseurl}} {% link docs/plugins/boot-sequence.md %})
 
-link to example plugin 
+All extension points are covered in the
+[Developing Guide]({{ site.baseurl}} {% link docs/plugins/development-guide.md %})
 
+Here is [Example Plugin](https://github.com/ExpressGateway/express-gateway-plugin-example) with all extension points utilized 
 
-### Plugin Structure
-
-An Express Gateway plugin contains entities and allows event subscription. You can think of a plugin as a container of Express Gateway entities that extend the core and event handlers.
-
-A plugin can contain one or more of the following:
-* Policies ([Policy Reference](./policies))
-* Conditions ([Pipeline and Conditions Reference](./configuration/policies))
-* Custom route and middlewares for admin and gateway servers
-
-Also it exposes Event Bus that can be used for subscription 
+And if you want to write only custom policy this is [Policy Developing Guide]({{ site.baseurl}} {% link docs/plugins/policy-development-guide.md %})

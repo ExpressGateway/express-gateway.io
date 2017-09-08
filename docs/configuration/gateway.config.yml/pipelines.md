@@ -15,7 +15,7 @@ Pipelines are an ordered list of policies that are executed for requests receive
 
 ```yaml
 pipelines:
-  pipeline_1                   # name of pipeline
+  pipeline_1:                   # name of pipeline
     apiEndpoints:              # API endpoints referenced by name
       - api1                   # example apiEndpoint names
       - api2
