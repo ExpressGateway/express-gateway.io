@@ -5,7 +5,7 @@ doc-order: 25.1
 ---
 ## Express Gateway boot sequence
 
-Here is high level overview of what is happening inside Express Gateway and what are possible extension points
+Here is high level overview of what is happening inside Express Gateway and what are possible extension points (Plugin Engine v1.0)
 
 <img src="../../assets/img/boot-sequence-eg-diagram.png" />
 
@@ -13,7 +13,7 @@ Here is high level overview of what is happening inside Express Gateway and what
 #### Config Loading
 Express Gateway loads config files (gateway.config.yml, system.config.yml etc). 
 #### Plugin registration 
-Based on “plugins” section in `system.config.yml` EG builds a list of plugins to load.
+Based on “plugins” section in [system.config.yml]({{ site.baseurl}} {% link docs/configuration/system.config.yml/index.md %}) EG builds a list of plugins to load.
 
 For each of the plugins it loads the plugin using Node.JS `require` function. 
 
