@@ -8,6 +8,7 @@ list-order: .1
 This section defines plugins for Express Gateway.
 If you are installing\managing plugins with EG CLI this section will be taken care of.
 
+YML
 ```yml
 plugins:
   example:
@@ -15,6 +16,7 @@ plugins:
     param1: 'this is plugin initialization parameter'
 ```
 
+JSON
 ```json
 {
     "plugins":{
