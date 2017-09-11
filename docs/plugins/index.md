@@ -14,7 +14,8 @@ Another important part is it provides a way to tailor or create a policy for you
 
 An Express Gateway plugin contains entities and allows event subscription. You can think of a plugin as a container of Express Gateway entities that extend the core and event handlers.
 
-A plugin can contain one or more of the following:
+For the first iteration of the framework, these entities are supported, for future extension points please refer to the [Plugin Spec](https://docs.google.com/document/d/1jSDul2n_xbeKNtnek69M79-geur6aTWShAcBZ9evD0E/edit)  
+
 * Policies ([Policy Reference](./policies))
 * Conditions ([Pipeline and Conditions Reference](./configuration/policies))
 * Custom route and middlewares for admin and gateway servers
