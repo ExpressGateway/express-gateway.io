@@ -9,6 +9,7 @@ system.config.yml is made up of the following sections:
 
 <nav markdown="1">
 - [db][db]
+- [plugins][plugins]
 - [crypto][crypto]
 - [session][session]
 - [accessTokens][accessTokens]
@@ -19,6 +20,7 @@ system.config.yml is made up of the following sections:
 Each section declares global settings that are used for the entire Express Gateway instance.
 
 [db]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/db.md %}
+[plugins]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/plugins.md %}
 [crypto]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/crypto.md %}
 [session]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/session.md %}
 [accessTokens]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/accessTokens.md %}
