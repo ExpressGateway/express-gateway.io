@@ -282,7 +282,7 @@ module.exports = {
 ```
 
 ### Events 
-Express Gateway exposes serval events. 
+Express Gateway exposes several events. 
 This is how to subscribe: 
 
 ```js
