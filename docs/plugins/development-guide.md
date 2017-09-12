@@ -86,200 +86,28 @@ package.json - contains plugin name and dependencies
 
 All the rest is completely optional. Still, some structure may help. That is why the example plugin contains individual folders for each extension type 
 
-#### Index.js File overview
-In a nutshell the plugin interface is straight forward 
+#### Index.js File overview (Plugin Manifest)
+In a nutshell the plugin interface\manifest is straightforward 
 ```js
 module.exports = {
   version: 'v1.0',
   init: function (pluginContext) {
     // pluginContext.registerX calls 
+  },
+  policies:['example'], 
+  options:{
+
   }
 }
 ```
 - version - Hint for the Plugin System how to process plugin, 'v1.0' only at this point
 - init - Function that will be called right after Express Gateway will `require` the plugin package
+- policies - list of policies to be added to the whitelist (requires confirmation from user)
+- options - JSON schema for support plugin options. Will be used for prompting during CLI execution 
 
-### Declaring policy 
-
-The policy is a wrapper around ExpressJS middleware
-
-```js
-// content of ./policies/example-policy.js file
-module.exports = {
-  name: 'example',
-  policy: (actionParams) => {
-    return (req, res, next) => {
-      console.log('executing policy-from-example-plugin with params', actionParams);
-      next() // calling next policy
-      // or write response:  res.json({result: "this is the response"})
-    };
-  }
-};
-```
-
-- name - Name of the policy, this is how it can be referenced in pipeline
-- policy - Function that returns ExpressJS middleware. The function accepts actionParams. And actionParams is all configuration options in the pipeline for this policy
-
-#### Action Params
-Let say you have pipeline defined as:
-```yml
-pipelines:
-  apiPipeline:
-    apiEndpoints:
-      - api
-    policies:
-      - example:
-          - action:  # everything under the action will be actionParams
-              baseUrl: 'https://example.com'
-```   
-In this case when pipeline will be constructed your policy will have `actionParams` as 
-```
-{
-    baseUrl:'https://example.com'
-}
-```
-#### Exporting Policy with plugin
-Now it is time to register the policy during plugin initialization: 
-This is done in index.js `init` function
-```js
-module.exports = {
-  version: 'v1.0',
-  init: function (pluginContext) {
-     let policy = require('./policies/example-policy') 
-     pluginContext.registerPolicy(policy) 
-  }
-}
-```
-#### Policy registration and execution sequence  
-
-Combined we see 3 major components of policy in the plugin:
-- `pluginContext.registerPolicy` - to register the policy as part of plugin
-- `(actionParams) => ExpressJS_Middleware_Function` - wrapper to provide parameters from pipeline config
-- `(req,res,next) => { ... }` - Standard ExpressJS middleware
-
-The main difference is when these parts are executed:
-
-##### `pluginContext.registerPolicy`  
-- Executes at Express Gateway start. Before pipeline engine and before http server start.
-- Executes only one time  
-
-##### `(actionParams) => ExpressJS_Middleware_Function` Wrapper  
-- Executes when the Pipeline Engine is converting yml to ExpressJS middlewares. 
-- Executes on each configuration change (hot-reload of gateway.config file)  
-
-##### `(req,res,next) => { ... }` Middleware
-- Executes on each request in current pipeline
-
-### Declaring Condition
-Approach is quite similar to Policy
-
-Code of `url-match` condition:
-```js
-// content of conditions/url-match.js file
-module.exports = {
-  name: 'url-match',
-  handler: function (req, conditionConfig) {
-    return (conditionConfig.expected === req.url);
-  }
-};
-```
-
-- name - Name of the condition, this is how it can be referenced in pipeline
-- handler - Function that returns true\false. The function accepts ExpressJS Request object and condition parameters. And conditionParams is all configuration options in the pipeline for this condition
-
-#### Condition Params
-Let say you have pipeline defined as:
-```yml
-pipelines:
-  apiPipeline:
-    apiEndpoints:
-      - api
-    policies:
-      - example:
-          - 
-            condition:
-                name: 'url-match'
-                expected: '/test'
-            action:  # everything under the action will be actionParams
-              baseUrl: 'https://example.com'
-```   
-In this case during request example policy will only be executed in `url-match` condition is met. And inside the condition `conditionParams` will be 
-```
-{
-    expected:'/test'
-}
-```
-
-#### Exporting Condition with plugin
-This is done in index.js `init` function
-```js
-module.exports = {
-  version: 'v1.0',
-  init: function (pluginContext) {
-     let condition = require('./conditions/url-match.js') 
-     pluginContext.registerCondition(condition) 
-  }
-}
-```
-
-
-
-
-#### Condition registration and execution sequence  
-
-Condition has 2 major components:
-- `pluginContext.registerCondition` - to register the condition as part of plugin
-- `function (req, conditionConfig) => true/false` - handler function
-
-##### `pluginContext.registerPolicy`  
-- Executes at Express Gateway start. Before pipeline engine and before http server start.
-- Executes only one time  
-
-##### `function (req, conditionConfig) => true/false` Handler  
-- Executes on each request in current pipeline. If not matched will prevent policy from being fired 
-
-### Route and Middleware extension for Admin API and Gateway
-Express Gateway runs 2 ExpressJS applications:
-- Admin API
-- Gateway
-
-You can add Standard ExpressJS middleware or route to any of those applications.
-
-#### Declaration of Gateway Extension 
-```js
-// content of gateway-extensions/hello-eg.js file 
-module.exports = function (gatewayExpressApp) {
-  gatewayExpressApp.get('/hello', (req, res) => {
-    res.json({hello: 'Express-Gateway'});
-  });
-};
-```
-It exports a function that accepts ExpressJS application. 
-Treat it like regular ExpressJS project (`.get`, `.use`, `.all`, etc. methods are there)
-
-#### Exporting Gateway Extension to plugin
-
-```js
-module.exports = {
-  version: 'v1.0',
-  init: function (pluginContext) {
-    pluginContext.registerGatewayExtension(require('./gateway-extensions/hello-eg'));
-  }
-}
-```
-#### Declaration of Admin API Extension 
-Same as for Gateway Extension 
-
-#### Exporting Admin Extension to plugin
-
-```js
-module.exports = {
-  version: 'v1.0',
-  init: function (pluginContext) {
-    pluginContext.registerAdminExtension(require('./admin-extensions/hello-eg'));
-  }
-}
-```
+[Policy Development guide]({{ site.baseurl}} {% link docs/plugins/policy-development-guide.md %})
+[Condition Development guide]({{ site.baseurl}} {% link docs/plugins/condition-development-guide.md %})
+[Gateway and Admin Extensions Development guide]({{ site.baseurl}} {% link docs/plugins/gateway-admin-extensions-development-guide.md %})
 
 ### Events 
 Express Gateway exposes several events. 
@@ -290,9 +118,8 @@ module.exports = {
   version: 'v1.0',
   init: function (pluginContext) {
     pluginContext.eventBus.on('hot-reload', function ({ type, newConfig }) {
-      // type is gateway or system
+      // "type" is gateway or system
       // depends on what file was changed 
-
       // newConfig - is newly loaded configuration of ExpressGateway  
       console.log('hot-reload', type, newConfig);
     });
