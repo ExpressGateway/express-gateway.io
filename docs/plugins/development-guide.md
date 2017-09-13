@@ -81,12 +81,14 @@ registering condition url-match
 The `express-gateway-plugin-example` plugin is an npm package.
 
 Main components are:
-index.js file - contains and exports plugin definition 
+manifest.js file - contains and exports plugin definition 
 package.json - contains plugin name and dependencies 
 
-All the rest is completely optional. Still, some structure may help. That is why the example plugin contains individual folders for each extension type 
+All the rest is completely optional. Still, some structure may help. That is why the example plugin contains individual folders for each extension type
 
-#### Index.js File overview (Plugin Manifest)
+Note: `manifest.js` naming is just a convention. The name of this file is configured in `main` property of `package.json`. Node.JS standard naming is index.js  
+
+#### Manifest.js File overview (Plugin Manifest)
 In a nutshell the plugin interface\manifest is straightforward 
 ```js
 module.exports = {

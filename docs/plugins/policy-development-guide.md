@@ -45,7 +45,7 @@ In this case when pipeline will be constructed your policy will have `actionPara
 ```
 #### Exporting Policy with plugin
 Now it is time to register the policy during plugin initialization: 
-This is done in index.js `init` function
+This is done in manifest.js `init` function
 ```js
 module.exports = {
   version: 'v1.0',
