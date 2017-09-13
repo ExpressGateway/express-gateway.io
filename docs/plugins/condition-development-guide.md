@@ -46,7 +46,7 @@ In this case during request example policy will only be executed in `url-match` 
 ```
 
 #### Exporting Condition with plugin
-This is done in index.js `init` function
+This is done in manifest.js `init` function
 ```js
 module.exports = {
   version: 'v1.0',
