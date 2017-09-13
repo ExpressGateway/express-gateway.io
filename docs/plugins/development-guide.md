@@ -65,7 +65,7 @@ LOG_LEVEL=debug npm start
 Here are some of output lines we expect to see if everything is ok. 
 
 ```
-Loading plugins. Plugin engine version: v1.0
+Loading plugins. Plugin engine version: 1.2.0
 ...
 Loaded plugin express-gateway-plugin-example using from package express-gateway-plugin-example
 ...
@@ -92,7 +92,7 @@ Note: `manifest.js` naming is just a convention. The name of this file is config
 In a nutshell the plugin interface\manifest is straightforward 
 ```js
 module.exports = {
-  version: 'v1.0',
+  version: '1.2.0',
   init: function (pluginContext) {
     // pluginContext.registerX calls 
   },
@@ -105,7 +105,7 @@ module.exports = {
   }
 }
 ```
-- version - Hint for the Plugin System how to process plugin, 'v1.0' only at this point
+- version - Hint for the Plugin System how to process plugin, '1.2.0' only at this point
 - init - Function that will be called right after Express Gateway will `require` the plugin package
 - policies - list of policies to be added to the whitelist (requires confirmation from user)
 - options - JSON schema for support plugin options. Will be used for prompting during CLI execution. Note: at this point only simple types: `boolean`, `string` and `number` are supported. Full featured JSON Schema validation is planned for future releases
@@ -120,7 +120,7 @@ This is how to subscribe:
 
 ```js
 module.exports = {
-  version: 'v1.0',
+  version: '1.2.0',
   init: function (pluginContext) {
     pluginContext.eventBus.on('hot-reload', function ({ type, newConfig }) {
       // "type" is gateway or system

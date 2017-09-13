@@ -48,7 +48,7 @@ Now it is time to register the policy during plugin initialization:
 This is done in manifest.js `init` function
 ```js
 module.exports = {
-  version: 'v1.0',
+  version: '1.2.0',
   init: function (pluginContext) {
      let policy = require('./policies/example-policy') 
      pluginContext.registerPolicy(policy) 

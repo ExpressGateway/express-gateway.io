@@ -27,7 +27,7 @@ Treat it like regular ExpressJS project (`.get`, `.use`, `.all`, etc. methods ar
 
 ```js
 module.exports = {
-  version: 'v1.0',
+  version: '1.2.0',
   init: function (pluginContext) {
     pluginContext.registerGatewayExtension(require('./gateway-extensions/hello-eg'));
   }
@@ -40,7 +40,7 @@ Same as for Gateway Extension
 
 ```js
 module.exports = {
-  version: 'v1.0',
+  version: '1.2.0',
   init: function (pluginContext) {
     pluginContext.registerAdminExtension(require('./admin-extensions/hello-eg'));
   }
