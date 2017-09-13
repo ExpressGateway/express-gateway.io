@@ -5,7 +5,7 @@ doc-order: 25.1
 ---
 ## Express Gateway boot sequence
 
-Here is high level overview of what is happening inside Express Gateway and what are possible extension points (Plugin Engine v1.0)
+Here is high level overview of what is happening inside Express Gateway and what are possible extension points (Plugin Engine v1.2.0)
 
 <img src="../../assets/img/boot-sequence-eg-diagram.png" />
 

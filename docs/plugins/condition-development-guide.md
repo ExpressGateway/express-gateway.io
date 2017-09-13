@@ -49,7 +49,7 @@ In this case during request example policy will only be executed in `url-match` 
 This is done in manifest.js `init` function
 ```js
 module.exports = {
-  version: 'v1.0',
+  version: '1.2.0',
   init: function (pluginContext) {
      let condition = require('./conditions/url-match.js') 
      pluginContext.registerCondition(condition) 
