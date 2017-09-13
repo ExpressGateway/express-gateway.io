@@ -96,14 +96,17 @@ module.exports = {
   },
   policies:['example'], 
   options:{
-
+    param1: {
+      type: 'string',
+      required: true
+    }
   }
 }
 ```
 - version - Hint for the Plugin System how to process plugin, 'v1.0' only at this point
 - init - Function that will be called right after Express Gateway will `require` the plugin package
 - policies - list of policies to be added to the whitelist (requires confirmation from user)
-- options - JSON schema for support plugin options. Will be used for prompting during CLI execution 
+- options - JSON schema for support plugin options. Will be used for prompting during CLI execution. Note: at this point only simple types: `boolean`, `string` and `number` are supported. Full featured JSON Schema validation is planned for future releases
 
 [Policy Development guide]({{ site.baseurl}} {% link docs/plugins/policy-development-guide.md %})
 [Condition Development guide]({{ site.baseurl}} {% link docs/plugins/condition-development-guide.md %})
