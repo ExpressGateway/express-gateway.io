@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title:  "Boot sequence"
+<!--title:  "Boot sequence"-->
 doc-order: 20.10
 ---
 
