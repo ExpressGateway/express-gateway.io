@@ -22,7 +22,6 @@ The actual require statement is `require('plugin-name')(pluginContext)`.
 As the result Express Gateway will know about all extensions (policies, conditions etc.) plugin provides
 
 Plugins provide a list of contents through the `PluginContext`. 
-<!--Details about `PluginContext` can be found in the [Plugin Development Guide]({{ site.baseurl}} {% link docs/plugins/development-guide.md %})-->
 
 *Note:* At this stage no policies or conditions or middlewares are executed. As well as there are no http servers that can accept connections. Express Gateway is just collecting information about extensions.
 
@@ -53,5 +52,3 @@ Admin Routes and middlewares registered in the system are now initialized and ca
 Admin ExpressJS application is now exposed by node.js servers and start listening on configured port. Admin API is now ready to process requests
 #### Events  
 - `admin-ready` - emitted once Admin API server starts listening on the port 
-
-<!--[plugins]: {{ site.baseurl }}{% link docs/plugins/index.md %}-->
