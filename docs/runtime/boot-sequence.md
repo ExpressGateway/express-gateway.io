@@ -1,10 +1,12 @@
 ---
 layout: doc-section
-<!--title:  "Boot sequence"-->
+title:  "Boot Sequence"
 doc-order: 20.10
 ---
 
-The following depiction provides a high level overview of the initializaiton and bootstrap process within Express Gateway and its extension points made possible through [plugins][plugins].
+The following depiction provides a high level overview of the initializaiton and bootstrap process within Express Gateway and its extension points made possible through plugins.
+
+Note: the plugin framework described here is coming in the `1.2.0` release
 
 <img src="../../assets/img/boot-sequence-eg-diagram.png" />
 
@@ -19,9 +21,10 @@ Each plugins it loaded using the Node.JS `require` function.
 The actual require statement is `require('plugin-name')(pluginContext)`.
 As the result Express Gateway will know about all extensions (policies, conditions etc.) plugin provides
 
-Plugins provide a list of contents through the `PluginContext`. Details about `PluginContext` can be found in the [Plugin Development Guide]({{ site.baseurl}} {% link docs/plugins/development-guide.md %})
+Plugins provide a list of contents through the `PluginContext`. 
+<!--Details about `PluginContext` can be found in the [Plugin Development Guide]({{ site.baseurl}} {% link docs/plugins/development-guide.md %})-->
 
-*Note:* At this stage no policies or conditions or middlewares are executed. As well as there is no http servers that can accept connections. Express Gateway is just collecting information about extensions.
+*Note:* At this stage no policies or conditions or middlewares are executed. As well as there are no http servers that can accept connections. Express Gateway is just collecting information about extensions.
 
 ## Gateway initialization 
 #### Gateway ExpressJS server initialize
@@ -51,4 +54,4 @@ Admin ExpressJS application is now exposed by node.js servers and start listenin
 #### Events  
 - `admin-ready` - emitted once Admin API server starts listening on the port 
 
-[plugins]: {{ site.baseurl }}{% link docs/plugins/index.md %}
+<!--[plugins]: {{ site.baseurl }}{% link docs/plugins/index.md %}-->
