@@ -19,14 +19,14 @@ In the first iteration of the plugin framework, the following entities are suppo
 * [Conditions][conditions]
 * Custom routes and middleware for admin and gateway servers
 
-For future extension points please refer to the [Plugin Spec](https://docs.google.com/document/d/1jSDul2n_xbeKNtnek69M79-geur6aTWShAcBZ9evD0E/edit).
+For all extension points under consideration please refer to the [Express Gateway Plugin Specification](https://docs.google.com/document/d/1jSDul2n_xbeKNtnek69M79-geur6aTWShAcBZ9evD0E/edit).
 
 The plugin framework exposes an Event Bus and can react to events in the Express Gateway lifecycle.
 
 ### Automated Plugin Installation
 
 Plugins are bundled as [Node](http://www.nodejs.org) modules and distributed through [npm](https://www.npmjs.com).
-The Express Gateway [CLI][]cli] is used to [install][plugin-install] and [configure][plugin-configure] plugins.
+The Express Gateway [CLI][cli] is used to [install][plugin-install] and [configure][plugin-configure] plugins.
 
 Installed plugins are declared in the [system.config.yml][system-config-yml] and are then ready to be used.
 
@@ -71,9 +71,6 @@ plugins:
 
 [cli]: {{ site.baseurl }}{% link docs/cli/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/policies/index.md %}
-[condition]: {{ site.baseurl }}{% link docs/policies/index.md %}
+[conditions]: {{ site.baseurl }}{% link docs/policies/index.md %}
 [system-config-yml]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/index.md %}
 [plugins-section]: {{ site.basurl }}{% link docs/configuration/system.config.yml/plugins.md %}
-[express-gateway-plugin-example-npm]: http://www.npmjs.com/express-gateway-plugin-example
-[expressjs]: http://www.expressj.com
-[express-middleware]: http://expressjs.com/en/guide/writing-middleware.html
