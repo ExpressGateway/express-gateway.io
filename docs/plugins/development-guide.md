@@ -3,8 +3,16 @@ layout: doc-section
 title:  "Development guide"
 doc-order: 25.2
 ---
-## Development guide 
+Many Express Gateway plugins will be built utilizing [Express Middleware][express-middleware] as a starting point. Express Gateway is built using [ExpressJS][expressjs] and borrows many concepts from it. Building familiarity with it, especially the concept of [Middleware][express-middleware] will help with understanding Express Gateway plugin development.
 
+To understand when different parts of plugin are registered and loaded check the [Express Gateway Boot Sequence explanation]({{ site.baseurl}} {% link docs/runtime/boot-sequence.md %})
+
+All extension points are covered in the
+[Development Guide]({{ site.baseurl}} {% link docs/plugins/development-guide.md %})
+
+Here is [Example Plugin](https://github.com/ExpressGateway/express-gateway-plugin-example) with all extension points utilized
+
+And if you want to write only custom policy this is [Policy Developing Guide]({{ site.baseurl}} {% link docs/plugins/policy-development-guide.md %})
 ### Example
 
 Here is [Example Plugin](https://github.com/ExpressGateway/express-gateway-plugin-example) with all extension points utilized. 
