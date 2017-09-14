@@ -1,26 +1,25 @@
 ---
 layout: doc-section
 title:  "Boot sequence"
-doc-order: 25.1
+doc-order: 20.10
 ---
-## Express Gateway boot sequence
 
-Here is high level overview of what is happening inside Express Gateway and what are possible extension points (Plugin Engine v1.2.0)
+The following depiction provides a high level overview of the initializaiton and bootstrap process within Express Gateway and its extension points made possible through [plugins][plugins].
 
 <img src="../../assets/img/boot-sequence-eg-diagram.png" />
 
 ## Initial phase
 #### Config Loading
-Express Gateway loads config files (gateway.config.yml, system.config.yml etc). 
+Express Gateway loads config files (gateway.config.yml, system.config.yml etc).
 #### Plugin registration 
-Based on “plugins” section in [system.config.yml]({{ site.baseurl}} {% link docs/configuration/system.config.yml/index.md %}) EG builds a list of plugins to load.
+Based on “plugins” section in [system.config.yml]({{ site.baseurl}} {% link docs/configuration/system.config.yml/index.md %}) Express Gateway builds a list of plugins to load.
 
-For each of the plugins it loads the plugin using Node.JS `require` function. 
+Each plugins it loaded using the Node.JS `require` function.
 
-Technically it would be like `require('plugin-name')(pluginContext)`.
+The actual require statement is `require('plugin-name')(pluginContext)`.
 As the result Express Gateway will know about all extensions (policies, conditions etc.) plugin provides
 
-Details about `PluginContext` see in the [Development Guide]({{ site.baseurl}} {% link docs/plugins/development-guide.md %})
+Plugins provide a list of contents through the `PluginContext`. Details about `PluginContext` can be found in the [Plugin Development Guide]({{ site.baseurl}} {% link docs/plugins/development-guide.md %})
 
 *Note:* At this stage no policies or conditions or middlewares are executed. As well as there is no http servers that can accept connections. Express Gateway is just collecting information about extensions.
 
@@ -28,7 +27,7 @@ Details about `PluginContext` see in the [Development Guide]({{ site.baseurl}} {
 #### Gateway ExpressJS server initialize
 Creates ExpressJS instance that will handle all requests to Express Gateway
 #### Loading extensions for Gateway
-Conditions, Policies, Routes and Middlewares registered in the system are now been initialized and can be used during request processing. 
+Conditions, Policies, Routes and Middlewares registered in the system have now been initialized and can be used during request processing.
 
 For example:
 - Routes and Middlewares are mounted onto ExpressJS Gateway application.
@@ -51,3 +50,5 @@ Admin Routes and middlewares registered in the system are now initialized and ca
 Admin ExpressJS application is now exposed by node.js servers and start listening on configured port. Admin API is now ready to process requests
 #### Events  
 - `admin-ready` - emitted once Admin API server starts listening on the port 
+
+[plugins]: {{ site.baseurl }}{% link docs/plugins/index.md %}
