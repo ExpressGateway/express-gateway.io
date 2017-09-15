@@ -110,9 +110,9 @@ module.exports = {
 - policies - list of policies to be added to the whitelist (requires confirmation from user)
 - options - JSON schema for support plugin options. Will be used for prompting during CLI execution. Note: at this point only simple types: `boolean`, `string` and `number` are supported. Full featured JSON Schema validation is planned for future releases
 
-[Policy Development guide]({{ site.baseurl}} {% link docs/plugins/policy-development-guide.md %})
-[Condition Development guide]({{ site.baseurl}} {% link docs/plugins/condition-development-guide.md %})
-[Gateway and Admin Extensions Development guide]({{ site.baseurl}} {% link docs/plugins/gateway-admin-extensions-development-guide.md %})
+[Policy Development guide]({{ site.baseurl}} {% link docs/plugins/policy-development.md %})
+[Condition Development guide]({{ site.baseurl}} {% link docs/plugins/condition-development.md %})
+[Gateway and Admin Route Development guide]({{ site.baseurl}} {% link docs/plugins/route-development.md %})
 
 ### Events 
 Express Gateway exposes several events. 
