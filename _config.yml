@@ -21,10 +21,11 @@ gems:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-sitemap
-
+  - algoliasearch-jekyll
 exclude:
   - Gemfile
   - Gemfile.lock
+  - [vendor]
 
 #syntax-highlighting
 kramdown:
@@ -52,3 +53,8 @@ collections:
 
 #Site specific config
 include: ["_pages"]
+
+#algolia settings
+algolia:
+  application_id: 'TTH78X0SUT'
+  index_id: 'prod_expressgateway'
