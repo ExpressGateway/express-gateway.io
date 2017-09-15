@@ -31,4 +31,4 @@ General Information about plugins:
 [Plugin Installation Guide]({{ site.baseurl}} {% link docs/plugins/index.md %})
 
 And Plugin Development guide:
-[Development Guide]({{ site.baseurl}} {% link docs/plugins/development-guide.md %})
+[Development Guide]({{ site.baseurl}} {% link docs/plugins/plugin-development.md %})

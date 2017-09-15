@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title:  "Condition Development guide"
+title:  "Condition Development"
 doc-order: 25.4
 ---
 
@@ -31,14 +31,14 @@ pipelines:
       - api
     policies:
       - example:
-          - 
+          -
             condition:
                 name: 'url-match'
                 expected: '/test'
             action:  # everything under the action will be actionParams
               baseUrl: 'https://example.com'
-```   
-In this case during request example policy will only be executed in `url-match` condition is met. And inside the condition `conditionParams` will be 
+```
+In this case during request example policy will only be executed in `url-match` condition is met. And inside the condition `conditionParams` will be
 ```
 {
     expected:'/test'
@@ -51,8 +51,8 @@ This is done in manifest.js `init` function
 module.exports = {
   version: '1.2.0',
   init: function (pluginContext) {
-     let condition = require('./conditions/url-match.js') 
-     pluginContext.registerCondition(condition) 
+     let condition = require('./conditions/url-match.js')
+     pluginContext.registerCondition(condition)
   }
 }
 ```
@@ -60,15 +60,15 @@ module.exports = {
 
 
 
-#### Condition registration and execution sequence  
+#### Condition registration and execution sequence
 
 Condition has 2 major components:
 - `pluginContext.registerCondition` - to register the condition as part of plugin
 - `function (req, conditionConfig) => true/false` - handler function
 
-##### `pluginContext.registerPolicy`  
+##### `pluginContext.registerPolicy`
 - Executes at Express Gateway start. Before pipeline engine and before http server start.
-- Executes only one time  
+- Executes only one time
 
-##### `function (req, conditionConfig) => true/false` Handler  
-- Executes on each request in current pipeline. If not matched will prevent policy from being fired 
+##### `function (req, conditionConfig) => true/false` Handler
+- Executes on each request in current pipeline. If not matched will prevent policy from being fired
