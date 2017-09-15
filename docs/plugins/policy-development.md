@@ -1,10 +1,10 @@
 ---
 layout: doc-section
-title:  "Policy Development guide"
+title:  "Policy Development"
 doc-order: 25.3
 ---
 
-### Declaring policy 
+### Declaring policy
 
 The policy is a wrapper around ExpressJS middleware
 
@@ -36,26 +36,26 @@ pipelines:
       - example:
           - action:  # everything under the action will be actionParams
               baseUrl: 'https://example.com'
-```   
-In this case when pipeline will be constructed your policy will have `actionParams` as 
+```
+In this case when pipeline will be constructed your policy will have `actionParams` as
 ```
 {
     baseUrl:'https://example.com'
 }
 ```
 #### Exporting Policy with plugin
-Now it is time to register the policy during plugin initialization: 
+Now it is time to register the policy during plugin initialization:
 This is done in manifest.js `init` function
 ```js
 module.exports = {
   version: '1.2.0',
   init: function (pluginContext) {
-     let policy = require('./policies/example-policy') 
-     pluginContext.registerPolicy(policy) 
+     let policy = require('./policies/example-policy')
+     pluginContext.registerPolicy(policy)
   }
 }
 ```
-#### Policy registration and execution sequence  
+#### Policy registration and execution sequence
 
 Combined we see 3 major components of policy in the plugin:
 - `pluginContext.registerPolicy` - to register the policy as part of plugin
@@ -64,16 +64,15 @@ Combined we see 3 major components of policy in the plugin:
 
 The main difference is when these parts are executed:
 
-##### `pluginContext.registerPolicy`  
+##### `pluginContext.registerPolicy`
 - Executes at Express Gateway start. Before pipeline engine and before http server start.
-- Executes only one time  
+- Executes only one time
 
-##### `(actionParams) => ExpressJS_Middleware_Function` Wrapper  
-- Executes when the Pipeline Engine is converting yml to ExpressJS middlewares. 
-- Executes on each configuration change (hot-reload of gateway.config file)  
+##### `(actionParams) => ExpressJS_Middleware_Function` Wrapper
+- Executes when the Pipeline Engine is converting yml to ExpressJS middlewares.
+- Executes on each configuration change (hot-reload of gateway.config file)
 
 ##### `(req,res,next) => { ... }` Middleware
 - Executes on each request in current pipeline
 
 
- 

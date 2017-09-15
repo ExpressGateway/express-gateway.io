@@ -21,7 +21,7 @@ Each plugins it loaded using the Node.JS `require` function.
 The actual require statement is `require('plugin-name')(pluginContext)`.
 As the result Express Gateway will know about all entity extensions (policies, conditions etc.) that the plugin provides.
 
-Plugins provide a list of contents through the `PluginContext`. Details about `PluginContext` can be found in the [Plugin Development Guide]({{ site.baseurl}} {% link docs/plugins/development-guide.md %}).
+Plugins provide a list of contents through the `PluginContext`. Details about `PluginContext` can be found in the [Plugin Development Guide]({{ site.baseurl}} {% link docs/plugins/plugin-development.md %}).
 
 *Note:* At this stage no policies or conditions or middlewares are executed. As well as there are no http servers that can accept connections. Express Gateway is just collecting information about extensions.
 

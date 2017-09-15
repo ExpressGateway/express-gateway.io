@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title:  "Development guide"
+title:  "Plugin Development"
 doc-order: 25.2
 ---
 ### Background Resources
@@ -20,7 +20,7 @@ Express Gateway plugins are automatically istalled using the CLI.  Normally, thi
 
 run the CLI command `eg gateway create` to create Express Gateway instance
 
-``` 
+```
 > eg gateway create
 ? What's the name of your Express Gateway? example-gateway
 ? Where would you like to install your Express Gateway? example-gateway
@@ -38,30 +38,30 @@ npm i --save express-gateway-plugin-example
 
 Now edit the `./config/system.config.yml` file
 
-Find the following section: 
+Find the following section:
 
 ```yml
 plugins:
   # express-gateway-plugin-example:
-  #   param1: 'param from system.config' 
+  #   param1: 'param from system.config'
 ```
 Uncomment the `express-gateway-plugin-example` plugin declaration
 
 ```yml
 plugins:
     express-gateway-plugin-example:
-        param1: 'param from system.config' 
+        param1: 'param from system.config'
 ```
-If your configuration is specified in JSON, the equivalent JSON configuration would look like the following: 
+If your configuration is specified in JSON, the equivalent JSON configuration would look like the following:
 ```json
 "plugins": {
     "express-gateway-plugin-example": {
         "param1": "param from system.config"
     }
-} 
+}
 ```
 
-#### Running the Example plugin 
+#### Running the Example plugin
 
 Run Express Gateway with debugging turned on
 ```
@@ -100,9 +100,9 @@ An example of the plugin manifest is provided below:
 module.exports = {
   version: '1.2.0',
   init: function (pluginContext) {
-    // pluginContext.registerX calls 
+    // pluginContext.registerX calls
   },
-  policies:['example'], 
+  policies:['example'],
   options:{
     param1: {
       type: 'string',
@@ -116,7 +116,7 @@ module.exports = {
 - policies - list of policies to be added to the whitelist (requires confirmation from user)
 - options - JSON schema for support plugin options. Will be used for prompting during CLI execution. Note: at this point only simple types: `boolean`, `string` and `number` are supported. Full featured JSON Schema validation is planned for future releases
 
-### Events 
+### Events
 Express Gateway exposes several events that plugins can subscribe to to cooordinate loading.
 
 #### Example
@@ -126,8 +126,8 @@ module.exports = {
   init: function (pluginContext) {
     pluginContext.eventBus.on('hot-reload', function ({ type, newConfig }) {
       // "type" is gateway or system
-      // depends on what file was changed 
-      // newConfig - is newly loaded configuration of ExpressGateway  
+      // depends on what file was changed
+      // newConfig - is newly loaded configuration of ExpressGateway
       console.log('hot-reload', type, newConfig);
     });
     pluginContext.eventBus.on('http-ready', function ({ httpServer }) {
@@ -142,12 +142,12 @@ module.exports = {
   }
 }
 ```
-### Extension Point Development Guides
+### Extension Entities Development Guides
 The following guides describe how to create Express Gateway entities that can be bundled into a plugin to extend Express Gateway:
 <nav markdown="1">
-- [Policy Development guide]({{ site.baseurl}} {% link docs/plugins/policy-development-guide.md %})
-- [Condition Development guide]({{ site.baseurl}} {% link docs/plugins/condition-development-guide.md %})
-- [Gateway and Admin Extensions Development guide]({{ site.baseurl}} {% link docs/plugins/gateway-admin-extensions-development-guide.md %}) 
+- [Policy Development guide]({{ site.baseurl}} {% link docs/plugins/policy-development.md %})
+- [Condition Development guide]({{ site.baseurl}} {% link docs/plugins/condition-development.md %})
+- [Route Development guide]({{ site.baseurl}} {% link docs/plugins/route-development.md %})
 </nav>
 
 [express-gateway-installation]: {{ site.baseurl }}{% link docs/installation.md %}
