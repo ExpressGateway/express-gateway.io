@@ -75,4 +75,49 @@ The main difference is when these parts are executed:
 ##### `(req,res,next) => { ... }` Middleware
 - Executes on each request in current pipeline
 
+### Use cases
 
+#### Rewrite Policy 
+Let say you want to change urls that will be proxied to downstream services. 
+
+Incoming: `/api/users`
+Result: `/api/v2/users`
+```js
+// content of potential ./policies/rewrite-policy.js file
+module.exports = {
+  name: 'rewrite',
+  policy: (actionParams) => {
+    return (req, res, next) => {
+      req.url = req.url.replace('/api/', '/api/v2/');
+      next() // calling next policy
+    };
+  }
+};
+```
+It is reasonable to make those magic strings configurable 
+```js
+module.exports = {
+  name: 'rewrite',
+  policy: (actionParams) => {
+    return (req, res, next) => {
+      req.url = req.url.replace(actionParams.search, actionParams.replace);
+      next() // calling next policy
+    };
+  }
+};
+```
+Now in the pipeline configuration:
+```yml
+apiPipeline:
+  policies:
+    - rewrite:   # this is policy declaration
+        - action:   # policy can have multiple steps (condition/action pairs) 
+            search: /api/   # goes as "actionParams.search"
+            replace: /api/v2/ # becomes "actionParams.replace"
+        - action:   # step 2 
+            search: /old-api/
+            replace: /api/v1/ 
+    - proxy:
+        - action:
+              serviceEndpoint: backend
+```
