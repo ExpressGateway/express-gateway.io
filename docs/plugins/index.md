@@ -29,7 +29,7 @@ Plugins are bundled as [Node](http://www.nodejs.org) modules and distributed thr
 The Express Gateway [CLI][cli] is used to [install][plugin-install] and [configure][plugin-configure] plugins.
 
 Installed plugins are declared in the [system.config.yml][system-config-yml] and are then ready to be used.
-Express Gateway CLI is a convenient way to install and enable plugins. 
+Express Gateway CLI is a convenient way to install and enable plugins.
 `eg plugin install __name__`
 [Plugins CLI commands]({{ site.baseurl}} {% link docs/cli/plugins/index.md %})
 
@@ -78,9 +78,9 @@ Express Gateway is a thin layer on top of ExpressJS Node.JS framework and uses a
 To understand when different parts of plugin are registered and loaded check the [Express Gateway Boot Sequence explanation]({{ site.baseurl}} {% link docs/runtime/boot-sequence.md %})
 
 All extension points are covered in the
-[Development Guide]({{ site.baseurl}} {% link docs/plugins/development-guide.md %})
+[Development Guide]({{ site.baseurl}} {% link docs/plugins/plugin-development.md %})
 
-Here is [Example Plugin](https://github.com/ExpressGateway/express-gateway-plugin-example) with all extension points utilized 
+Here is [Example Plugin](https://github.com/ExpressGateway/express-gateway-plugin-example) with all extension points utilized
 
 And if you want to write only custom policy this is [Policy Developing Guide]({{ site.baseurl}} {% link docs/plugins/policy-development.md %})
 
