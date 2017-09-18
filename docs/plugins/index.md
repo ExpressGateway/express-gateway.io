@@ -72,11 +72,6 @@ plugins:
 
 ```
 
-[cli]: {{ site.baseurl }}{% link docs/cli/index.md %}
-[policies]: {{ site.baseurl }}{% link docs/policies/index.md %}
-[conditions]: {{ site.baseurl }}{% link docs/policies/index.md %}
-[system-config-yml]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/index.md %}
-[plugins-section]: {{ site.basurl }}{% link docs/configuration/system.config.yml/plugins.md %}
 ### Developing a plugin
 Express Gateway is a thin layer on top of ExpressJS Node.JS framework and uses a lot of concepts from it. So it is good to have some idea of it, especially the [Middleware](http://expressjs.com/en/guide/writing-middleware.html)
 
@@ -88,3 +83,13 @@ All extension points are covered in the
 Here is [Example Plugin](https://github.com/ExpressGateway/express-gateway-plugin-example) with all extension points utilized 
 
 And if you want to write only custom policy this is [Policy Developing Guide]({{ site.baseurl}} {% link docs/plugins/policy-development.md %})
+
+[cli]: {{ site.baseurl }}{% link docs/cli/index.md %}
+[policies]: {{ site.baseurl }}{% link docs/policies/index.md %}
+[conditions]: {{ site.baseurl }}{% link docs/policies/index.md %}
+[system-config-yml]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/index.md %}
+[plugins-section]: {{ site.basurl }}{% link docs/configuration/system.config.yml/plugins.md %}
+[plugin-install]: {{ site.baseurl }}{% link docs/cli/plugins/install.md %}
+[plugin-configure]: {{ site.baseurl }}{% link docs/cli/plugins/configure.md %}
+[express-gateway-plugin-example-npm]: https://npmjs.com/package/express-gateway-plugin-example
+[private-npm-registry]: https://docs.npmjs.com/misc/registry#can-i-run-my-own-private-registry

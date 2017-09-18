@@ -13,7 +13,7 @@ Installs a plugin
 eg plugins install [options] <package>
 ```
 Notes: 
-- package is any valid npm link like `ExpressGateway/express-gateway-plugin-example#master`
+- `<package>` is any valid npm package specifier (e.g., `ExpressGateway/express-gateway-plugin-example#master`)
 ### Options
 
 | Name, longform | Type      | Default | Description      | Required |
@@ -24,10 +24,10 @@ Notes:
 
 ### Examples
 
-#### Install the Example plugin by name (example -> express-gateway-plugin-example)
+#### Install the example plugin from npm
 
 ```shell
-$ eg plugin install example
+$ eg plugin install express-gateway-plugin-example
 ? Set value for baseUrl: http://example.com
 ? Set value for maxRequestsPerSecond: 234
 ? Would you like to enable this plugin in system config? Yes
@@ -35,7 +35,7 @@ $ eg plugin install example
 Plugin installed!
 ```
 
-#### Install the Example plugin from github 
+#### Install the example plugin from GitHub 
 
 ```shell
 eg plugin install ExpressGateway/express-gateway-plugin-example
