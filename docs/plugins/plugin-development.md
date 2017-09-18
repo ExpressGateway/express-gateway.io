@@ -11,10 +11,10 @@ To understand how different entities within a plugin are registered and loaded c
 Plugins extend Express Gateway entities as points of extension. These extension points and the plugin framework development plan are specified within the [Express Gateway Plugin Specification](https://docs.google.com/document/d/1jSDul2n_xbeKNtnek69M79-geur6aTWShAcBZ9evD0E/edit).
 
 ### The Express Gateway Example Plugin
-The Express Gateway Plugin Example [npm package][express-gateway-plugin-example-npm] and its [code on GitHub][express-gateway-plugin-eaxmple-github] serves as a guide for how plugins are structured.  The example contains examples of all extension points supported at the time of the [plugin framework development plan][plugin-development-plan-post].
+The Express Gateway Plugin Example [npm package][express-gateway-plugin-example-npm] and its [code on GitHub][express-gateway-plugin-example-github] serves as a guide for how plugins are structured.  The example contains examples of all extension points supported at the time of the [plugin framework development plan][plugin-development-plan-post].
 
 #### Manually Installing the Example plugin
-Express Gateway plugins are automatically istalled using the CLI.  Normally, this example plugin would be installed using the command `eg plug install example`. For the purpose of getting a better understanding of the mechanics, this section walks through what is normally automated.
+Express Gateway plugins are automatically istalled using the CLI.  Normally, this example plugin would be installed using the command `eg plugin install express-gateway-plugin-example`. For the purpose of getting a better understanding of the mechanics, this section walks through what is normally automated.
 
 [Install][express-gateway-installation] Express Gateway
 

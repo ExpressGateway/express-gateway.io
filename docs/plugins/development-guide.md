@@ -21,7 +21,7 @@ run CLI command `eg gateway create` to create Express Gateway instance
 ? Where would you like to install your Express Gateway? example-gateway
 ? What type of Express Gateway do you want to create? Basic (default pipeline with proxy)
 ```
-While CLI command (`eg plugin install example`) can speedup installation of the plugin, let's do it in 'manual' way to understand mechanics: 
+While using the CLI command (`eg plugin install express-gateway-plugin-example`) can speedup installation of the plugin, let's do it the manual way to understand mechanics: 
 - go to instance folder
 - npm install the example package
 - edit `./config/system.config.yml` file and enable plugin
@@ -141,4 +141,4 @@ module.exports = {
 }
 ``` 
 
-[install]({{ site.baseurl}} {% link docs/installation.md %})
+[install]: {{ site.baseurl}} {% link docs/installation.md %}
