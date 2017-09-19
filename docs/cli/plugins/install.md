@@ -10,7 +10,7 @@ Installs a plugin
 ### Usage
 
 ```shell
-eg plugins install [options] <package>
+eg plugin install [options] <package>
 ```
 Notes: 
 - `<package>` is any valid npm package specifier (e.g., `ExpressGateway/express-gateway-plugin-example#master`)
