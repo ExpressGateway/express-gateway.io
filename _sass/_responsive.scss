@@ -22,6 +22,11 @@ $menu-width: 250px!default;
   	width: 30px;
   	height: 30px;
     z-index: 99;
+    margin-top: 80px;
+    transition: margin-top 200ms;
+    @include size(medium600) {
+      margin-top: 60px;
+    }
     span {
     	margin: 0 auto;
     	position: relative;
