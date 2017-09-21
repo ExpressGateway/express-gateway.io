@@ -4,7 +4,15 @@ for(var i = 0, length = urlcheck.length; i < length; i++) {
           urlcheck[i].checked = "true"
 }
 
+var isStorageSupported = typeof(Storage) !== 'undefined';
+
 $(document).ready(function () {
+  // display Welcome Banner if not closed earlier
+  if (isStorageSupported) {
+    if (!localStorage.getItem('welcomeBannerHidden')) {
+      $('html').toggleClass('without-welcome-banner');
+    }
+  }
   //video content swap
   $(".video-container").click(function () {
     $(this).append('<iframe src="https://player.vimeo.com/video/226182256?autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
@@ -37,6 +45,14 @@ $(document).ready(function () {
   $('.toc-responsive-menu-icon').click(function(e){
 			$('.toc-wrapper').toggleClass('toc-wrapper-height');
       $('body').toggleClass('noscroll');
+		});
+
+  // hide Welcome banner
+  $('.welcome-banner-close').click(function(e){
+			$('html').toggleClass('without-welcome-banner');
+      if (isStorageSupported) {
+        localStorage.setItem('welcomeBannerHidden', true);
+      }
 		});
 
   $(window).on('resize',sidebarpadding);
