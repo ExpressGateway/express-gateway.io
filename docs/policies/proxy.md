@@ -17,7 +17,7 @@ To enable the Proxy policy, add `proxy` in [gateway.config.yml][gateway.config.y
 ```yaml
 
 policies:
-  -name: proxy
+  - proxy
 
 ```
 
@@ -47,7 +47,6 @@ pipelines:
             name: pathExact
             path: /admin
           action:
-            name: proxy # proxy policy has one action - "proxy"
             serviceEndpoint: example # reference to serviceEndpoints Section
 
 ```

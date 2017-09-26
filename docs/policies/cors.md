@@ -12,15 +12,14 @@ CORS defines a way in which a browser and server can interact and determine whet
 ### Usage
 
 To enable the CORS policy, add `cors` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
-
 ```yaml
-
 policies:
-  -name: cors
-
+  - cors
+  # other policies
 ```
 
-### Example: simple
+
+### Example: excerpt
 
 ```yml
 ...
@@ -28,7 +27,6 @@ policies:
   - cors:
       -
         action:
-          name: cors
           origin: http://www.example.com
           credentials: true
 }
@@ -54,7 +52,6 @@ policies:
           cors:
             -
               action:
-                name: cors
                 origin: 'http://www.example.com'
                 methods: 'HEAD,PUT,PATCH,POST,DELETE'
                 allowedHeaders: 'X-TEST'
@@ -62,7 +59,6 @@ policies:
           proxy:
             -
               action:
-                name: proxy  
                 serviceEndpoint: example  
 
 ```

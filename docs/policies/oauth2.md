@@ -94,7 +94,7 @@ To enable the OAuth2 policy, add `oauth2` in [gateway.config.yml][gateway.config
 ```yaml
 
 policies:
-  -name: oauth2
+  - oauth2
 
 ```
 
