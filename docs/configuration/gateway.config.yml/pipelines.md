@@ -65,9 +65,9 @@ pipelines:
           -   # array of objects with condition\action properties
             condition: #optional,; defaults to always execute
               name: pathExact
-              paths: /v1
+              path: /v1
             action:
-              message: "${method} ${originalUrl}"
+              message: "${req.method} ${req.originalUrl}"
       -  
         proxy: # policy name
           -    # array of objects with condition\action properties
@@ -75,196 +75,50 @@ pipelines:
               serviceEndpoint: example # see declaration above
 ```
 
-### Options
+### Condition/Action Objects in Policy
+
+Policy contains a list of actions with parameters. Each action can be gated by a  condition.  
 
 | Name         | Required | Description                                                                                                             |
 | ------------ | -------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `condition ` | Optional | A rule that must be satisfied to trigger its corresponding action                                                       |
-| `action `    |          | The name of the action to be executed, usually this is the main module of the Express middleware used within the policy |
+| `action `    |          | Action Parameters for for this specific step  |
 
-Each policy in the pipeline can have a list of condition/action objects
 
-Condition and actions each have their own list of parameters. Condition/action pairs are made unique with their own list of parameters.
+[Condition][conditions] and actions each have their own list of parameters. 
+Each Condition/action pair is executed independently of others.
+The order of execution is the same as declaration in policy
 
-#### Policy Conditions
-
-Each Policy in a pipeline can be gated with a condition specification. Each
-condition specification is in the format:
-
-##### Usage
-
-```yaml
-  condition:
-    name: condition-name # examples: always; never;
-    some-param-1: p1 # if condition requires parameters they are listed here
-    some-param-2: p1 #
-```
-
-The `name` specifies a condition function. This can be one of the following:
-
-  - `always`: Always matches. If the condition is missing, it will default to
-    this.
-  - `never`: Never matches.
-  - `pathExact`: Matches if the request's path is an exact match for the
-    parameter.
-
-##### Example
-
-```yaml
-  condition:
-    name: pathExact
-    path: "/foo/bar"
-```
-
-  - `pathMatch`. Matches if the request's path matches the given regular
-    expression parameter.
-
-##### Example
-
+#### Example
 ```yml
-  condition:
-    name: pathMatch
-    path: "/foo(/bar)?"
-```
-
-  - `method`. Matches if the request's method matches the `methods` parameter.
-    Accepts can be either a string (e.g. 'GET') or an array of such strings.
-  - `hostMatch`. Parameter should be a regular expression. Matches if the
-    `Host` header passed with the request matches the parameter.
-  - `expression`. Matches execution result of JS code provided in `expression` property. Code is executed in limited space that has access only to egContext. See more info about EgContext in 
-  &nbsp; [Expression policy](../../policies/expression)
-
-##### Example
-
-  ```yaml
-    condition:
-      name: expression
-      expression: "req.url.length>5"
-      # will match for for path /long_path
-      # will not match /a
-  ```
-
-In addition, several functions are provided that allow you to create logical
-combinations of conditions. The parameters to these functions should be other
-condition statements:
-
-  - `allOf`: Matches only if all of its parameters match.
-  - `oneOf`: Matches if at least one of its parameters matches.
-  - `not`: Matches only if its parameter does not.
-
-##### Examples
-
-```json
-{
-  "name" :"allOf",
-    "conditions": [
-      {"name":"pathExact", "path": "/foo/bar"},
-      { "name":"not",
-        "condition":{ "name":"method", "methods": ["POST", "HEAD"]}
-      }
-    ]
-}
-```
-
-```yml
-name: allOf
-conditions:
-    -
-        name: pathExact
-        path: /foo/bar
-    -
-        name: not
-        condition:
-            name: method
-            methods:
-                - POST
-                - HEAD
-
-```
-
-The above will match only if the exact request path is "/foo/bar" and the
-request is *not* a POST or HEAD.
-
-Best Practice Note: While it is possible to build quite complicated condition tree, huge trees could greatly affect readability of your EG configuration. In such cases it could be better to have multiple api endpoints and pipelines
-
-The following two configs are equivalent, however we believe variant B is easier to read.
-
-##### Conditions Based Config - Variant A
-
-```yaml
-serviceEndpoints:
-  admin: # will be referenced in proxy policy
-    url: 'http://admin.com'
-  staff: # will be referenced in proxy policy
-    url: 'http://staff.com'
-
-apiEndpoints:
-  api:
-    host: '*'
-    paths: 
-      - /admin
-      - /staff
-
 pipelines:
-  api:
+  default:
     apiEndpoints:
       - api
     policies:
       -
-        proxy:
-          -
-            condition:
+        simple-logger: # policy name
+          -   # array of Actions optionally gated by a condition
+            condition: # this action is executed only if path is exactly /v1
               name: pathExact
-              paths: /admin
+              path: /v1
             action:
-              name: proxy
-              serviceEndpoint: admin # see declaration above
-          -
-            condition:
+              message: "V1: ${req.originalUrl}"
+          -  # executed only after previous action is completed   
+            condition: # this action is executed only if path is exactly /v2
               name: pathExact
-              paths: /staff
+              path: /v2
             action:
-              name: proxy
-              serviceEndpoint: staff # see declaration above
-```
-
-##### Conditions Based Config - Variant B
-
-```yaml
-serviceEndpoints:
-  admin: # will be referenced in proxy policy
-    url: 'http://admin.com'
-  staff: # will be referenced in proxy policy
-    url: 'http://staff.com'
-
-apiEndpoints:
-  admin:
-    host: '*'
-    paths: /admin
-  staff:
-    host: '*'
-    paths: /staff
-
-pipelines:
-  admin:
-    apiEndpoints:
-      - admin
-    policies:
-      proxy:
-        -   # note: no condition at all
-          action:
-            name: proxy
-            serviceEndpoint: admin
-  staff:
-    apiEndpoints:
-      - staff
-    policies:
-      -
-        proxy:
-          -   # note: no condition at all
+              message: "V2: ${req.originalUrl}"
+          -  # executed only after previous two actions are completed   
+            action: # no condition, always executed
+              message: "GENERIC: ${req.method}"
+      -  
+        proxy: # policy name
+          -    # array of objects with condition\action properties
             action:
-              name: proxy
-              serviceEndpoint: staff
+              serviceEndpoint: example 
 ```
 
 
+[conditions]: {{ site.baseurl }}{% link docs/policies/conditions.md %}

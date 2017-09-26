@@ -20,7 +20,7 @@ To enable the Rate Limiter policy, add `rate-limit` in [gateway.config.yml][gate
 ```yaml
 
 policies:
-  -name: rate-limit
+  - rate-limit
 
 ```
 

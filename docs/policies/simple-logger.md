@@ -16,7 +16,7 @@ To enable the Simple Logger policy, add `log` in [gateway.config.yml][gateway.co
 ```yaml
 
 policies:
-  -name: log
+  - log
 
 ```
 
@@ -29,7 +29,6 @@ pipelines:
     policies:
       simple-logger: # policy name
         - action:    # array of condition/actions objects
-            name: log
             message: ${req.method} ${req.originalUrl} # parameter for log action
 
 ```

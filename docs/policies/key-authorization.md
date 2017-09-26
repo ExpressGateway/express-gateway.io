@@ -23,10 +23,9 @@ To create a `key-auth` credential for an user or app: use the [CLI][cli] and [cr
 To enable the Key Authorization policy, add `key-auth` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
 
 ```yaml
-
 policies:
-  -name: cors
-
+  - key-auth
+  # other policies
 ```
 
 ### Example
@@ -48,16 +47,14 @@ pipelines:
     apiEndpoints:   # process all request matching "api" apiEndpoint
       - api
     policies:
-      keyauth: # secure API with key auth
+      key-auth: # secure API with key auth
         -
           action:
-            name: keyauth
             apiKeyHeader: COMPANY-CUSTOM-API-KEY-HEADER # custom header name
             disableHeadersScheme: true # will accept "key:secret" format instead of "scheme key:secret"
       proxy: # name of the policy
         -   # list of actions
           action:
-            name: proxy # proxy policy has one action - "proxy"
             serviceEndpoint: example # reference to serviceEndpoints Section
 
 ```
