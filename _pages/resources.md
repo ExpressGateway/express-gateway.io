@@ -27,6 +27,12 @@ permalink: /resources/
 <li>{% include res-cors.svg %}<h3>CORS</h3><p>Cross Origin Resource Sharing</p></li>
 </ul>
 
+#### Utilities
+
+<ul class="icon-list">
+<li>{% include res-rewrite.svg %}<h3>Rewrite</h3><p>Rewrite an URL or redirect your users</p></li>
+</ul>
+
 #### Quality of Service
 <ul class="icon-list no-border">
 <li>{% include res-simplelogger.svg %}<h3>Simple Logger</h3><p>Logging Format and Output</p></li>
