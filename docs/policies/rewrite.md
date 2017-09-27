@@ -54,7 +54,8 @@ policies:
 #### Policy
 
 * `rewrite`:
-  - Express Path or RegExp corresponding to the url pattern to rewrite. The format should match the one used in the condition.
+  - [Express Path](https://expressjs.com/en/guide/routing.html) or RegExp corresponding to the url pattern to rewrite.
+    The format should match the one used in the condition.
 * `redirect`:
    - When set to a number, it'll redirect the request with the provided status code. If omitted, a rewrite action will
    be performed. You're responsibile for the returned status code - there's no validation.
