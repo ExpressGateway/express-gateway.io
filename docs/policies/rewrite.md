@@ -18,7 +18,7 @@ To enable the Rewrite policy, add `rewrite` in [gateway.config.yml][gateway.conf
 ```yaml
 
 policies:
-  -name: rewrite
+  - rewrite
 
 ```
 
