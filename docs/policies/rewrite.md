@@ -32,7 +32,7 @@ policies:
       -
         condition:
           name: pathmatch
-          match: /tina/:code
+          match: /tina/:code # Express Path
         action:
           rewrite: /status/:code
           redirect: 302
@@ -48,7 +48,7 @@ policies:
 
 #### Condition
 
-* `pathmatch`: Express Path corresponding to the url pattern to look for
+* `pathmatch`: [Express Path](https://expressjs.com/en/guide/routing.html) corresponding to the url pattern to look for
 * `regexpmatch`: RegExp corresponding to the url pattern to look for
 
 #### Policy
