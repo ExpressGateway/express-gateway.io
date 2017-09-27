@@ -48,13 +48,13 @@ policies:
 
 #### Condition
 
-* `pathmatch`: [Express Path](https://expressjs.com/en/guide/routing.html) corresponding to the url pattern to look for
+* `pathmatch`: [Express Path](https://expressjs.com/en/guide/routing.html#route-paths) corresponding to the url pattern to look for
 * `regexpmatch`: RegExp corresponding to the url pattern to look for
 
 #### Policy
 
 * `rewrite`:
-  - [Express Path](https://expressjs.com/en/guide/routing.html) or RegExp corresponding to the url pattern to rewrite.
+  - [Express Path](https://expressjs.com/en/guide/routing.html#route-paths) or RegExp corresponding to the url pattern to rewrite.
     The format should match the one used in the condition.
 * `redirect`:
    - When set to a number, it'll redirect the request with the provided status code. If omitted, a rewrite action will
