@@ -1,7 +1,1 @@
-<svg id="menu-closed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.96 34">
-  <title>Untitled-1</title>
-  <rect width="6.96" height="6.96"/>
-  <rect y="13.52" width="6.96" height="6.96"/>
-  <rect y="27.04" width="6.96" height="6.96"/>
-  <rect class="single-item" width="6.96" height="34"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.96 34"><title>Untitled-1</title><path d="M0 0h6.96v6.96H0zM0 13.52h6.96v6.96H0zM0 27.04h6.96V34H0z"/><path class="single-item" d="M0 0h6.96v34H0z"/></svg>
