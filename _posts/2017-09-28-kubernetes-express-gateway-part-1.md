@@ -51,7 +51,7 @@ In our demo, we demonstrated how to deploy a cloud agnostic, scalable API manage
 ### Coming Up Next - Demo Tear Down
 Stay tuned for the second part of this series where we walkthrough a step by step demo on how to deploy Express Gateway in Kubernetes on Triton manage it using Kubernetes resources like ConfigMaps, Deployments, Service Discovery. We'll provide code snippets, advice and answer the tough questions.
 
-[challenge-of-microservices]: https://www.lunchbadger.com/microservices-and-api-design/
+[challenges-of-microservices]: https://www.lunchbadger.com/microservices-and-api-design/
 [kubernetes]: https://kubernetes.io/
 [cncf]: https://www.cncf.io/
 [joyent-triton-cloud]: https://www.joyent.com/why
