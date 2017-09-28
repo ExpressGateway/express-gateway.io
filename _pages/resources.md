@@ -30,7 +30,7 @@ permalink: /resources/
 #### Utilities
 
 <ul class="icon-list">
-<li>{% include res-rewrite.svg %}<h3>Rewrite</h3><p>Rewrite an URL or redirect your users</p></li>
+<li>{% include res-rewrite.svg %}<h3>Rewrite</h3><p>Rewrite URL or Redirect Requests</p></li>
 </ul>
 
 #### Quality of Service
