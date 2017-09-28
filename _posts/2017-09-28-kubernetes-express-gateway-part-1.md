@@ -92,7 +92,7 @@ The webinar was _very_ well received because we were able to show that ANYONE...
 ### Coming Up Next
 Now that we've covered why we did this past Tuesday's webinar - stay tuned for the second part of this series for a walkthrough on what we did and just how easy it was to stand up Express Gateway in Kubernetes on Triton AND how easy it is to manage it using Kubernetes resources like ConfigMaps, Deployments, Service Discovery and more!
 
-[challenge-of-microservices]: https://www.lunchbadger.com/microservices-and-api-design/
+[challenges-of-microservices]: https://www.lunchbadger.com/microservices-and-api-design/
 [kubernetes]: https://kubernetes.io/
 [cncf]: https://www.cncf.io/
 [joyent-triton-cloud]: https://www.joyent.com/why
