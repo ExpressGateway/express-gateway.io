@@ -92,10 +92,10 @@ pipeline1:
       - key-auth:   # force key-auth for all requests in this pipeliene
       - rate-limit:
         -
-          action:              # allow
-            max: 10            # max 10 request 
-            windowMs: 120000   # per 120 seconds
-            rateLimitBy: "${user.id}" # EgContext.user.id 
+          action:                         # allow
+            max: 10                       # max 10 request 
+            windowMs: 120000              # per 120 seconds
+            rateLimitBy: "${req.user.id}" # EgContext.req.user.id 
       - proxy:
         -
           action:
