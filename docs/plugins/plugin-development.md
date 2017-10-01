@@ -3,18 +3,32 @@ layout: doc-section
 title:  "Plugin Development"
 doc-order: 25.2
 ---
+
 ### Background Resources
-Many Express Gateway plugins will be built utilizing [Express Middleware][express-middleware] as a starting point. Express Gateway is built using [ExpressJS][expressjs] and borrows many concepts from it. Building familiarity with it, especially the concept of [Middleware][express-middleware] will help with understanding Express Gateway plugin development.
 
-To understand how different entities within a plugin are registered and loaded checkout the [Express Gateway Boot Sequence]({{ site.baseurl}} {% link docs/runtime/boot-sequence.md %}).
+Many Express Gateway plugins will be built utilizing [Express Middleware][express-middleware] as a starting point.
+Express Gateway is built using [ExpressJS][expressjs] and borrows many concepts from it. Building familiarity with it,
+especially the concept of [Middleware][express-middleware] will help with understanding Express Gateway plugin
+development.
 
-Plugins extend Express Gateway entities as points of extension. These extension points and the plugin framework development plan are specified within the [Express Gateway Plugin Specification](https://docs.google.com/document/d/1jSDul2n_xbeKNtnek69M79-geur6aTWShAcBZ9evD0E/edit).
+To understand how different entities within a plugin are registered and loaded checkout the
+ [Express Gateway Boot Sequence]({{ site.baseurl}} {% link docs/runtime/boot-sequence.md %}).
+
+Plugins extend Express Gateway entities as points of extension. These extension points and the plugin framework
+development plan are specified within the
+[Express Gateway Plugin Specification](https://docs.google.com/document/d/1jSDul2n_xbeKNtnek69M79-geur6aTWShAcBZ9evD0E/edit).
 
 ### The Express Gateway Example Plugin
-The Express Gateway Plugin Example [npm package][express-gateway-plugin-example-npm] and its [code on GitHub][express-gateway-plugin-example-github] serves as a guide for how plugins are structured.  The example contains examples of all extension points supported at the time of the [plugin framework development plan][plugin-development-plan-post].
+
+The Express Gateway Plugin Example [npm package][express-gateway-plugin-example-npm] and its
+[code on GitHub][express-gateway-plugin-example-github] serves as a guide for how plugins are structured.
+The example contains examples of all extension points supported at the time of the
+[plugin framework development plan][plugin-development-plan-post].
 
 #### Manually Installing the Example plugin
-Express Gateway plugins are automatically istalled using the CLI.  Normally, this example plugin would be installed using the command `eg plugin install express-gateway-plugin-example`. For the purpose of getting a better understanding of the mechanics, this section walks through what is normally automated.
+Express Gateway plugins are automatically istalled using the CLI.  Normally, this example plugin would be installed
+using the command `eg plugin install express-gateway-plugin-example`. For the purpose of getting a better understanding
+of the mechanics, this section walks through what is normally automated.
 
 [Install][express-gateway-installation] Express Gateway
 
@@ -90,12 +104,15 @@ Its Main components are:
 - manifest.js file - contains and exports plugin definition
 - package.json - contains plugin name and dependencies
 
-All the rest is completely optional. Still, some structure may help. That is why the example plugin contains individual folders for each extension type
+All the rest is completely optional. Still, some structure may help. That is why the example plugin contains individual
+folders for each extension type
 
-Note: `manifest.js` naming is just a convention used to be more descriptive. The name of this file is configured in `main` property of `package.json`. Node.js standard naming is index.js.
+Note: `manifest.js` naming is just a convention used to be more descriptive. The name of this file is configured in
+`main` property of `package.json`. Node.js standard naming is index.js.
 
 #### Manifest.js File overview (Plugin Manifest)
 An example of the plugin manifest is provided below:
+
 ```js
 module.exports = {
   version: '1.2.0',
@@ -111,15 +128,22 @@ module.exports = {
   }
 }
 ```
-- version - Hint for the Plugin System how to process plugin, '1.2.0' only at this point
-- init - Function that will be called right after Express Gateway will `require` the plugin package
-- policies - list of policies to be added to the whitelist (requires confirmation from user)
-- options - JSON schema for support plugin options. Will be used for prompting during CLI execution. Note: at this point only simple types: `boolean`, `string` and `number` are supported. Full featured JSON Schema validation is planned for future releases
+
+##### Parameters
+
+- `version` - _optional_ - Hint for the Plugin System how to process plugin, '1.2.0' only at this point
+- `init` - _mandatory_ - Function that will be called right after Express Gateway will `require` the plugin package
+- `policies` - _optional_ - list of policies to be added to the whitelist (requires confirmation from user)
+- `options` - _optional_ - JSON schema for support plugin options. Will be used for prompting during CLI execution.
+  Note: at this point only simple types: `boolean`, `string` and `number` are supported. Full featured JSON Schema
+  validation is planned for future releases
 
 ### Events
+
 Express Gateway exposes several events that plugins can subscribe to to cooordinate loading.
 
 #### Example
+
 ```js
 module.exports = {
   version: '1.2.0',
@@ -143,7 +167,10 @@ module.exports = {
 }
 ```
 ### Extension Entities Development Guides
-The following guides describe how to create Express Gateway entities that can be bundled into a plugin to extend Express Gateway:
+
+The following guides describe how to create Express Gateway entities that can be bundled into a plugin to extend Express
+Gateway:
+
 <nav markdown="1">
 - [Policy Development guide]({{ site.baseurl}} {% link docs/plugins/policy-development.md %})
 - [Condition Development guide]({{ site.baseurl}} {% link docs/plugins/condition-development.md %})
