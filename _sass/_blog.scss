@@ -55,6 +55,7 @@
         }
       }
 
+
       .post-meta {
         p, span {
           font-size: $font-size-16;
@@ -120,6 +121,9 @@
         font-weight: 200;
         line-height: $font-lineheight-base;
         padding-bottom: 1.75rem;
+        img {
+          max-width: 100%;
+        }
       }
 
       a {
