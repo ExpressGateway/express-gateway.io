@@ -68,7 +68,7 @@ pipelines:
               path: /v1
             action:
               message: "${req.method} ${req.originalUrl}"
-      -  
+      -
         proxy: # policy name
           -    # array of objects with condition\action properties
             action:
@@ -77,7 +77,7 @@ pipelines:
 
 ### Condition/Action Objects in Policy
 
-Policy contains a list of actions with parameters. Each action can be gated by a  condition.  
+Policy contains a list of actions with parameters. Each action can be gated by a  condition.
 
 | Name         | Required | Description                                                                                                             |
 | ------------ | -------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -85,7 +85,7 @@ Policy contains a list of actions with parameters. Each action can be gated by a
 | `action `    |          | Action Parameters for for this specific step  |
 
 
-[Condition][conditions] and actions each have their own list of parameters. 
+[Condition][conditions] and actions each have their own list of parameters.
 Each Condition/action pair is executed independently of others.
 The order of execution is the same as declaration in policy
 
@@ -104,21 +104,21 @@ pipelines:
               path: /v1
             action:
               message: "V1: ${req.originalUrl}"
-          -  # executed only after previous action is completed   
+          -  # executed only after previous action is completed
             condition: # this action is executed only if path is exactly /v2
               name: pathExact
               path: /v2
             action:
               message: "V2: ${req.originalUrl}"
-          -  # executed only after previous two actions are completed   
+          -  # executed only after previous two actions are completed
             action: # no condition, always executed
               message: "GENERIC: ${req.method}"
-      -  
+      -
         proxy: # policy name
           -    # array of objects with condition\action properties
             action:
-              serviceEndpoint: example 
+              serviceEndpoint: example
 ```
 
 
-[conditions]: {{ site.baseurl }}{% link docs/policies/conditions.md %}
+[conditions]: {{ site.baseurl }}{% link docs/policies/customization/conditions.md %}

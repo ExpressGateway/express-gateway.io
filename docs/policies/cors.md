@@ -1,7 +1,7 @@
 ---
 layout: doc-section
 title:  "CORS"
-doc-order: 4.4
+doc-order: 5.50
 ---
 
 ### Description
@@ -59,7 +59,7 @@ policies:
           proxy:
             -
               action:
-                serviceEndpoint: example  
+                serviceEndpoint: example
 
 ```
 

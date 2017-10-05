@@ -1,22 +1,23 @@
 ---
 layout: doc-section
 title:  "egContext"
-doc-order: 4.80
+doc-order: 5.5
+list-order: .10
 ---
 
 ### Description
 
-The JavaScript sandbox Object that will be used to execute JavaScript code in Expression Policy and Condition. It can be used to implement non-standard scenarios.
+The JavaScript sandbox Object that will be used to execute JavaScript code in Conditions, Actions, and the Expression Policy. It can be used to implement non-standard scenarios.
 
-All Node.JS global variables like `process`, `require` etc. will not be available for security reasons
+All Node.JS global variables like `process`, `require` etc. will not be available for security reasons.
 
-It contains the following properties that can be used:
+The egContext contains the following properties that can be used:
 
 * `req`: [ExpressJS Request Object](https://expressjs.com/en/4x/api.html#req)
 * `res`: [ExpressJS Response Object](https://expressjs.com/en/4x/api.html#res)
-* `apiEndpoint`: Configuration or API Endpoint that is executing.  
-For example, `apiEndpoint.scopes` will provide all configured scopes for endpoint 
-* `user`: Information about authenticated and authorized user 
+* `apiEndpoint`: Configuration or API Endpoint that is executing.
+For example, `apiEndpoint.scopes` will provide all configured scopes for endpoint
+* `user`: Information about authenticated and authorized user
 
 ### Example
 

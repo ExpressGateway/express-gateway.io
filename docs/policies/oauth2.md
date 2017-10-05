@@ -1,7 +1,7 @@
 ---
 layout: doc-section
 title:  "OAuth 2.0"
-doc-order: 4.3
+doc-order: 5.40
 ---
 
 ### Description
@@ -102,17 +102,17 @@ policies:
 
 ```yaml
 
-pipelines: 
- pipeline1: 
-  apiEndpoints: 
-   - 
+pipelines:
+ pipeline1:
+  apiEndpoints:
+   -
    authorizedEndpoint
-  policies: 
-   - 
-   oauth2: 
-   - 
-   proxy: 
-     action: 
+  policies:
+   -
+   oauth2:
+   -
+   proxy:
+     action:
       serviceEndpoint: backend
 
 ```

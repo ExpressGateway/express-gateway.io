@@ -1,7 +1,7 @@
 ---
 layout: doc-section
 title:  "Key Authorization"
-doc-order: 4.2
+doc-order: 5.30
 ---
 
 ### Description
@@ -108,7 +108,7 @@ Keys may also be passed as a query parameter. Using a query parameter to specify
   - false
   - disable apikey lookup in headers
 * `disableHeadersScheme`:
-  - false 
+  - false
   - disable verification of scheme in header
 * `apiKeyField`:
   - 'apiKey'

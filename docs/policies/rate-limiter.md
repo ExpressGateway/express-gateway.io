@@ -1,7 +1,7 @@
 ---
 layout: doc-section
 title:  "Rate Limiter"
-doc-order: 4.5
+doc-order: 5.60
 ---
 
 ### Description
@@ -93,9 +93,9 @@ pipeline1:
       - rate-limit:
         -
           action:                         # allow
-            max: 10                       # max 10 request 
+            max: 10                       # max 10 request
             windowMs: 120000              # per 120 seconds
-            rateLimitBy: "${req.user.id}" # EgContext.req.user.id 
+            rateLimitBy: "${req.user.id}" # EgContext.req.user.id
       - proxy:
         -
           action:

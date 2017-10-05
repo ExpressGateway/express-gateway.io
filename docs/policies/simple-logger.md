@@ -1,7 +1,7 @@
 ---
 layout: doc-section
 title:  "Simple Logger"
-doc-order: 4.6
+doc-order: 5.70
 ---
 ### Description
 
@@ -35,7 +35,7 @@ pipelines:
 
 ### Options Reference
 
-* `message`: 
+* `message`:
   - string specifiying the message to log
   - can include placeholders using the JavaScript [ES6 template literal syntax][es6-template-literal-sytnax]
 

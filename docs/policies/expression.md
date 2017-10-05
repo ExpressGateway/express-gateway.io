@@ -1,12 +1,12 @@
 ---
 layout: doc-section
 title:  "Expression"
-doc-order: 4.80
+doc-order: 5.70
 ---
 
 ### Description
 
-The Expression policy allows you to execute arbitrary JavaScript code in secured Sandbox.
+The Expression policy allows you to execute arbitrary JavaScript code in secured shared memory or "sandbox".
 
 ### Usage
 
@@ -17,7 +17,7 @@ policies:
   - expression
   # other policies
 ```
- 
+
 ### Example
 
 ```yml
@@ -32,8 +32,8 @@ pipelines:
 
 ### Options Reference
 * `jscode`:
-  - Valid JS code to execute. Note that [EgContext][egcontext] will be used as global object for code. All Node.JS global variables like `process`, `require` etc. will not be available for security reasons
+  - Valid JS code to execute. Note that [egContext object][eg-context] will be used as global object for code. All Node.JS global variables like `process`, `require` etc. will not be available for security reasons
 
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
-[egcontext]: {{ site.baseurl }}{% link docs/policies/eg-context.md %}
+[eg-context]: {{ site.baseurl }}{% link docs/policies/customization/eg-context.md %}
