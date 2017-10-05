@@ -1,7 +1,7 @@
 ---
 layout: doc-section
 title:  "Basic Authorization"
-doc-order: 4.1
+doc-order: 5.20
 ---
 
 ### Description
@@ -20,7 +20,7 @@ To create consumers (users and apps): use the [CLI][cli] and [create user][users
 To create a `basic-auth` credential for an app or user: use the [CLI][cli] and [create credential][credentials-create] command with type `basic-auth`.
 
 To enable the Basic Authorization policy, add `basic-auth` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
- 
+
 ```yaml
 policies:
   - basic-auth

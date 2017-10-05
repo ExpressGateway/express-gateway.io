@@ -1,12 +1,13 @@
 ---
 layout: doc-section
 title:  "Conditions"
-doc-order: 4.5
+doc-order: 5.5
+list-order: .20
 ---
 
+Express Gateway comes with a core set of conditions. These conditions can be used throughout all policies in Express Gateway.  Additional conditions may also be added through Express Gateway plugins.
 
 #### Action Conditions
-
 Each Policy Action in a pipeline can be gated with a condition specification. Each
 condition specification is in the format:
 
@@ -33,20 +34,20 @@ pipelines:
               path: /v1
             action:
               message: "V1: ${req.originalUrl}"
-          -  # executed only after previous action is completed   
+          -  # executed only after previous action is completed
             condition: # this action is executed only if path is exactly /v2
               name: pathExact
               path: /v2
             action:
               message: "V2: ${req.originalUrl}"
-          -  # executed only after previous two actions are completed   
+          -  # executed only after previous two actions are completed
             action: # no condition, always executed
               message: "GENERIC: ${req.method}"
-      -  
+      -
         proxy: # policy name
           -    # array of objects with condition\action properties
             action:
-              serviceEndpoint: example 
+              serviceEndpoint: example
 ```
 ### Conditions Reference
 ##### pathExact
@@ -65,7 +66,7 @@ Matches if the request's path matches the given regular expression parameter.
     path: "/foo(/bar)?"
 ```
 
-##### method 
+##### method
 Matches if the request's method matches the `methods` parameter.
 The parameter can be either a string (e.g. 'GET') or an array of such strings.
 ```yml
@@ -76,23 +77,23 @@ The parameter can be either a string (e.g. 'GET') or an array of such strings.
 ```yml
   condition:
     name: method
-    methods: 
+    methods:
       - GET
       - POST
 ```
 
 ##### hostMatch
 Matches if the `Host` header passed with the request matches the parameter.
-Parameter `pattern` should be a wildcard\string expression. 
+Parameter `pattern` should be a wildcard\string expression.
 ```yml
   condition:
     name: hostMatch
-    pattern: '*.example.com' 
+    pattern: '*.example.com'
 ```
 
-##### expression 
+##### expression
 Matches execution result of JS code provided in `expression` property.
-Code is executed in limited space that has access only to egContext. 
+Code is executed in limited space that has access only to egContext.
 
 
   ```yaml
@@ -102,9 +103,8 @@ Code is executed in limited space that has access only to egContext.
       # will match for for path /long_path
       # will not match /a
   ```
-See more info about [egContext][egcontext]
-Also check [Expression policy][expressionpolicy]
-
+See more info about [egContext][eg-context]
+Also check [Expression policy][expression-policy]
 
 In addition, several Conditions are provided that allow you to create logical
 combinations of conditions. The parameters to these conditions should be other
@@ -186,7 +186,7 @@ request is *not* a POST or HEAD.
 
 ##### not
 Invert condition result
-```yml 
+```yml
 condition:
   name: not
     condition: # negates the condition
@@ -214,7 +214,7 @@ serviceEndpoints:
 apiEndpoints:
   api:
     host: '*'
-    paths: 
+    paths:
       - /admin
       - /staff
 
@@ -278,10 +278,7 @@ pipelines:
               serviceEndpoint: staff
 ```
 
-
-
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
-
-[expressionpolicy]: {{ site.baseurl }}{% link docs/policies/expression.md %}
-[egcontext]: {{ site.baseurl }}{% link docs/policies/eg-context.md %}
+[expression-policy]: {{ site.baseurl }}{% link docs/policies/expression.md %}
+[eg-context]: {{ site.baseurl }}{% link docs/policies/customization/eg-context.md %}
