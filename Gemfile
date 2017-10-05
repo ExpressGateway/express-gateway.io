@@ -24,6 +24,7 @@ group :jekyll_plugins do
    gem "jekyll-paginate"
    gem 'jekyll-gist'
    gem 'jekyll-sitemap'
+   gem 'algoliasearch-jekyll', '~> 0.8.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

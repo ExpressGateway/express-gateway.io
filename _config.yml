@@ -21,10 +21,11 @@ gems:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-sitemap
-
+  - algoliasearch-jekyll
 exclude:
   - Gemfile
   - Gemfile.lock
+  - [vendor]
 
 #syntax-highlighting
 kramdown:
