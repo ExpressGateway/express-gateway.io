@@ -55,5 +55,9 @@ collections:
     output: true
     permalink: /blog/:path/
 
-#Site specific config
+# Site specific config
 include: ["_pages"]
+
+algolia:
+  application_id: 'TTH78X0SUT'
+  index_name:     'prod_expressgateway'
