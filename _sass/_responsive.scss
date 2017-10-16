@@ -8,7 +8,7 @@ $menu-width: 250px!default;
 }
 
 @include size(smalltomedium) {
-  .site-pusher{
+  .site-pusher {
     height: 100%;
     display: flex;
     min-height: 100vh;
