@@ -21,7 +21,7 @@
       display: flex;
       align-items: center;
 
-      @include size(smalltomedium){
+      @include size(smalltomedium) {
         width: 94%;
       }
     }
@@ -53,7 +53,6 @@
       span {
         display: flex;
         align-items: center;
-        height: 100%;
         position: relative;
         font-size: $font-size-16;
 
@@ -68,14 +67,14 @@
         }
 
         &.github-button-wrapper {
-          width: 51.5px;
-          @include size(smalltomedium){
+          height: 51.5px;
+          @include size(smalltomedium) {
             margin-left: 10px;
           }
         }
 
         &.search-button {
-          @include size(smalltomedium){
+          @include size(smalltomedium) {
             order: 10;
           }
         }
@@ -83,7 +82,7 @@
         &.active {
           a {
             color: $color-primary;
-            @include size(smalltomedium){
+            @include size(smalltomedium) {
               background: $color-gray-blue;
             }
           }
@@ -100,7 +99,7 @@
             border-width: 0 15px 7px 15px;
             border-color: transparent transparent $color-primary transparent;
             margin-right: -15px;
-            @include size(smalltomedium){
+            @include size(smalltomedium) {
               border: none;
             }
           }
@@ -172,7 +171,7 @@
     padding: 6rem 0;
     color: $color-background;
     display: block;
-    @include size(smalltomedium){
+    @include size(smalltomedium) {
       padding: 3rem 2rem;
       font-size: $font-size-32;
     }
