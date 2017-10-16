@@ -74,6 +74,12 @@
           }
         }
 
+        &.search-button {
+          @include size(smalltomedium){
+            order: 10;
+          }
+        }
+
         &.active {
           a {
             color: $color-primary;
