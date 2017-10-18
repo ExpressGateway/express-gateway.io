@@ -50,6 +50,32 @@
       height: $header-main-height;
       font-weight: 200;
 
+      .search-button-wrapper {
+        position: relative;
+      }
+
+      .search-icon {
+        cursor: pointer;
+        user-select: none;
+      }
+
+      #search-check-box {
+        display: none;
+      }
+
+      .search-text-box {
+        display: none;
+      }
+
+      input[type=checkbox]:checked + span > .search-text-box {
+        display: initial;
+      }
+
+      .algolia-autocomplete {
+        position: absolute;
+        top: 10px;
+      }
+
       span {
         display: flex;
         align-items: center;
