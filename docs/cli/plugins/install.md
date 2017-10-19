@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title: eg plugins install <name>
+title: eg plugin install <name>
 ---
 
 ### Description
@@ -12,7 +12,7 @@ Installs a plugin
 ```shell
 eg plugin install [options] <package>
 ```
-Notes: 
+Notes:
 - `<package>` is any valid npm package specifier (e.g., `ExpressGateway/express-gateway-plugin-example#master`)
 ### Options
 
@@ -35,7 +35,7 @@ $ eg plugin install express-gateway-plugin-example
 Plugin installed!
 ```
 
-#### Install the example plugin from GitHub 
+#### Install the example plugin from GitHub
 
 ```shell
 eg plugin install ExpressGateway/express-gateway-plugin-example
