@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Intro to the Rate Limiting Policy"
-date:   2017-10-17 12:00:00 -0400
+date:   2017-10-19 12:00:00 -0400
 category: guides
 author: "Valeri Karpov"
 #
@@ -16,6 +16,7 @@ author: "Valeri Karpov"
 endpoints. Express Gateway has a lot of tuneable options for configuring throttling: you can throttle requests on a
 per user, per endpoint, or per pipeline basis. In this article, I'll walk you through a "Hello, World" example of
 using Express Gateway's rate limiting policy, and then show a practical use case of rate limiting based on user API keys.
+<!--excerpt-->
 
 Intro to the Rate Limiting Policy
 ---------------------------------
@@ -101,7 +102,7 @@ Too many requests, please try again later.$ {
 }
 
 [1]+  Done                    curl http://localhost:8080/ip
-$ 
+$
 ```
 
 You can configure the HTTP error status and error message using the `statusCode` and `message` options to the
@@ -134,7 +135,7 @@ Can't let you do that, Star Fox!$ {
 }
 ^C
 [1]+  Done                    curl http://localhost:8080/ip
-$ 
+$
 ```
 
 As configured, this gateway will only allow 1 request per second to the `/ip` endpoint. So even if two different
@@ -199,12 +200,12 @@ $ {
 [1]+  Done                    curl http://localhost:8080/ip
 $ curl http://localhost:8080/ip
 Too many requests, please try again later.
-$ 
+$
 ```
 
 You can get more sophisticated and throttle by both hostname and IP address. Automatically testing throttling by
 IP is tricky because spoofing an IP address is difficult. But throttling by IP address is similar to throttling
-by request headers, just replace `req.headers.test` with `req.ip`. 
+by request headers, just replace `req.headers.test` with `req.ip`.
 
 ```
 http:
@@ -253,7 +254,7 @@ $ curl -H "test=hi" http://localhost:8080/ip
 }
 $ curl -H "test=hi" http://localhost:8080/ip
 Too many requests, please try again later.
-$ 
+$
 ```
 
 There's also a `headers` option available for the `rate-limit` policy. This option will add 2 headers,
@@ -269,7 +270,7 @@ more importantly, the number of requests they have left before they start gettin
               rateLimitBy: "${req.hostname} ${req.headers.test}"
               # Adds the following headers:
               #   X-RateLimit-Limit (# of requests allowed)
-              #   X-RateLimit-Remaining (# of requests before hitting limit)        
+              #   X-RateLimit-Remaining (# of requests before hitting limit)
               headers: true
 ```
 
@@ -366,7 +367,7 @@ $ eg users create
 ? Enter firstname [required]: val
 ? Enter lastname [required]: karpov
 ? Enter email: val@karpov.io
-? Enter redirectUri: 
+? Enter redirectUri:
 ✔ Created a430b589-6d9c-4f9f-ad0a-64f324182c0c
 {
   "firstname": "val",
@@ -413,7 +414,7 @@ $ eg users create
 ? Enter firstname [required]: val
 ? Enter lastname [required]: karpov
 ? Enter email: val@karpov.io
-? Enter redirectUri: 
+? Enter redirectUri:
 ✔ Created 51394975-f0bb-4392-adcd-2cb79f7e732d
 {
   "firstname": "val",
