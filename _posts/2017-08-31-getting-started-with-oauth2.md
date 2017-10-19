@@ -78,14 +78,14 @@ pipelines:
               changeOrigin: true
 ```
 
-Once you turn on OAuth2, you should see an 'Unauthorized' error when you visit [http://localhost:8080/ip](http://localhost:8080/ip). You need to restart the server for config changes to take effect, so if you ran npm start be sure to kill the process and then re-run `npm start`.
-The next step is to create a new Express Gateway [user](http://www.express-gateway.io/docs/consumer-management#users).
+Once you turn on OAuth2, you should see an 'Unauthorized' error when you visit [http://localhost:8080/ip](). You need to restart the server for config changes to take effect, so if you ran npm start be sure to kill the process and then re-run `npm start`.
+The next step is to create a new Express Gateway [user](https://www.express-gateway.io/docs/consumer-management#users).
 
-Users and [applications](http://www.express-gateway.io/docs/consumer-management#applications) have a one-to-many relationship, so you must create a user before you create an application.
+Users and [applications](https://www.express-gateway.io/docs/consumer-management#applications) have a one-to-many relationship, so you must create a user before you create an application.
 
 _Make sure you do not restart the Express Gateway server after creating a user._
 
-Unless you have already set up a [data store](http://www.express-gateway.io/docs/faq#which-data-stores-are-supported), Express Gateway will use an in-memory data store and all your users will be deleted if your process is killed.
+Unless you have already set up a [data store](https://www.express-gateway.io/docs/faq#which-data-stores-are-supported), Express Gateway will use an in-memory data store and all your users will be deleted if your process is killed.
 
 ```shell
 $ eg users create
@@ -93,7 +93,7 @@ $ eg users create
 ? Enter firstname [required]: Valeri
 ? Enter lastname [required]: Karpov
 ? Enter email: val@karpov.io
-? Enter redirectUri: 
+? Enter redirectUri:
 ✔ Created c25fe037-30bb-42f7-9f3a-0264dcd60d14
 {
   "firstname": "val",
@@ -107,7 +107,7 @@ $ eg users create
 }
 ```
 
-Now that you have done that, you need to create 2 [credentials](http://www.express-gateway.io/docs/credential-management) for this user:
+Now that you have done that, you need to create 2 [credentials](https://www.express-gateway.io/docs/credential-management) for this user:
 an OAuth2 credential, and
 a basic-auth (password) credential.
 
@@ -158,7 +158,7 @@ $ eg apps create -u val
 ### Let's Walk Through the OAuth2 Flow
 
 You've set up the necessary objects, now let's talk a walk through the actual OAuth2 flow using Chrome and [cURL](https://en.wikipedia.org/wiki/CURL).
-You'll notice that if you visit [http://localhost:8080/ip](http://localhost:8080/ip) in Chrome you'll get an _'Unauthorized'_ error message as shown below.
+You'll notice that if you visit [http://localhost:8080/ip]() in Chrome you'll get an _'Unauthorized'_ error message as shown below.
 
 ![Unauthorized Page in OAuth2 in Express Gateway](/assets/img/oauth2-unauthorized-1.png)
 
@@ -170,7 +170,7 @@ To get started, you need to visit the `/oauth2/authorize` endpoint and specify t
 
 So, here's how the full URL looks:
 
-[http://localhost:8080/oauth2/authorize?response_type=token&client_id=803b1da9-879d-44b5-8d77-5199c4e11fba&redirect_uri=http://localhost:8080/ip](http://localhost:8080/oauth2/authorize?response_type=token&client_id=803b1da9-879d-44b5-8d77-5199c4e11fba&redirect_uri=http://localhost:8080/ip)
+[http://localhost:8080/oauth2/authorize?response_type=token&client_id=803b1da9-879d-44b5-8d77-5199c4e11fba&redirect_uri=http://localhost:8080/ip]()
 
 When you go to this URL, you should be redirected to a login screen. You can configure the UI later, and so for this article you'll just use Express Gateway's minimal built-in login screen.
 
