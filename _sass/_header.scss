@@ -55,13 +55,16 @@
 
         .algolia-autocomplete {
           position: absolute !important;
-          top: 20px;
+          top: 40px;
         }
       }
 
       .search-icon {
         cursor: pointer;
         user-select: none;
+        width: 26px;
+        height: 26px;
+        background-image: url('../img/mag-glass.svg');
       }
 
       #search-check-box {
@@ -72,9 +75,9 @@
         display: none;
         border-radius: 10px;
         border: 1px solid #0E8696;
-        width: 200px;
+        width: 220px;
         height: 20px;
-        padding: 5px;
+        padding: 5px 10px;
       }
 
       input[type=checkbox]:checked + span > .search-text-box {
