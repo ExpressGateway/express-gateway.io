@@ -109,7 +109,7 @@ pipeline1:
 * `max`: max number of connections during windowMs milliseconds before sending a 429 response. Defaults to 5. Set to 0 to disable.
 * `message`: Error message returned when max is exceeded. Defaults to 'Too many requests, please try again later.'
 * `statusCode`: HTTP status code returned when max is exceeded. Defaults to 429.
-* `headers`: Enable header to show request limit and current usage
+* `headers`: Enable header to show request limit (`X-RateLimit-Limit`) and current usage (`X-RateLimit-Remaining`) headers
 * `delayAfter`: max number of connections during windowMs before starting to delay responses. Defaults to 1. Set to 0 to disable delaying.
 * `delayMs`: milliseconds - how long to delay the response, multiplied by (number of recent hits - delayAfter). Defaults to 1000 (1 second). Set to 0 to disable delaying.
 
