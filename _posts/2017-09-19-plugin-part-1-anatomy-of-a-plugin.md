@@ -154,7 +154,7 @@ policies:
   - example  # this is the new entry entered by the CLI
 ```
 
-[plugin-dev-overview]: http://www.express-gateway.io/plugin-development-plan
+[plugin-dev-overview]: {{ site.baseurl }}{% link _posts/2017-09-07-plugin-development-plan.md %}
 [gateway-config-yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [system-config-yml]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/index.md %}
 [eg-plugin-install]: {{ site.baseurl }}{% link docs/cli/plugins/install.md %}

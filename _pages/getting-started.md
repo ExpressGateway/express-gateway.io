@@ -65,7 +65,7 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
 
 1. ##### Specify a microservice and expose as an API
     - ###### Step 1
-      - We’re going to specify an existing service - [https://httpbin.org/ip](http://httpbin.org/ip) to proxy and manage as if it were our own originating from within the firewall. The service allows users to do get a GET and returns back a JSON string as output. It’s freely available and we’re going to showcase the capabilities of the Express Gateway
+      - We’re going to specify an existing service - [https://httpbin.org/ip](https://httpbin.org/ip) to proxy and manage as if it were our own originating from within the firewall. The service allows users to do get a GET and returns back a JSON string as output. It’s freely available and we’re going to showcase the capabilities of the Express Gateway
 
       1. <p>open another terminal window
       2. <p><span class="codeHighlight">curl http://httpbin.org/ip</span></p>

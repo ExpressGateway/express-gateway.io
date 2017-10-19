@@ -28,7 +28,7 @@ The Plugin Framework will support the following extension points for Express Gat
 * Conditions
 * Policies
 * Routes
-* Services + DAO for supporting database other than redis  
+* Services + DAO for supporting database other than redis
 * Credential types
 * Models
 * Admin REST API routes
@@ -57,13 +57,13 @@ At this point, plugins can be installed that utilize existing Express Gateway en
 * new models
 * CLI (additional Yeoman generators)
 
-By enabling these extension points, more complex plugins can add functionality and data that is not included as part of the EG core. 
+By enabling these extension points, more complex plugins can add functionality and data that is not included as part of the EG core.
 
 ### Iteration 3: Real Middleware Plugin Example
 After the community has seen the reference example for a plugin, the team will take an existing Express middleware that has been highly sought after - JWT Authentication and chronicle a “how to” of taking a middleware and transforming it into an Express Gateway plugin.
 
 ### Wrapping Up
-Have an Express middleware that you'd like to see "plugged" into Express Gateway to take advantage of it dynamically? [Come join us](http://www.express-gateway.io/resources/#community) - we're looking for contributors and could use all the help we can get!
+Have an Express middleware that you'd like to see "plugged" into Express Gateway to take advantage of it dynamically? [Come join us](https://www.express-gateway.io/resources/#community) - we're looking for contributors and could use all the help we can get!
 
 _Originally posted on [www.lunchbadger.com](https://www.lunchbadger.com)._
 

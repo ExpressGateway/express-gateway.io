@@ -35,7 +35,7 @@ Next, it's time to get to work! So, larger feature sets for the next release are
 Once the epic is articulated, prioritized items in the "Backlog" move on over into the "In Progress" column. Then, the magic happens!
 
 ### Introducing Express Gateway Feathub
-As we began focusing on a more in depth developer experience, it was getting harder to track community need and feedback. So we looked for a better solution and we landed on [Feathub](https://www.feathub.com). Feathub is _exactly_ what we've seen happening in the wild with Github by +1'ing issues that describe new features or enhancements.
+As we began focusing on a more in depth developer experience, it was getting harder to track community need and feedback. So we looked for a better solution and we landed on [Feathub](https://feathub.com). Feathub is _exactly_ what we've seen happening in the wild with Github by +1'ing issues that describe new features or enhancements.
 
 _So what is it?_
 

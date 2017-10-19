@@ -180,6 +180,6 @@ Gateway:
 [express-gateway-installation]: {{ site.baseurl }}{% link docs/installation.md %}
 [express-gateway-plugin-example-npm]: https://npmjs.com/express-gateway-plugin-example
 [express-gateway-plugin-example-github]: https://github.com/ExpressGateway/express-gateway-plugin-example
-[expressjs]: http://www.expressj.com
-[express-middleware]: http://expressjs.com/en/guide/writing-middleware.html
+[expressjs]: https://www.expressjs.com
+[express-middleware]: https://expressjs.com/en/guide/writing-middleware.html
 [plugin-development-plan-post]: {{ site.baseurl }}/plugin-development-plan

@@ -1,6 +1,6 @@
 # express-gateway.io
 
-This is the repository of the website [express-gateway.io](http://express-gateway.io). It is hosted directly from the repository as a [GitHub Pages](https://pages.github.com/) website.
+This is the repository of the website [express-gateway.io](https://express-gateway.io). It is hosted directly from the repository as a [GitHub Pages](https://pages.github.com/) website.
 
 ## Local Setup
 
@@ -30,7 +30,7 @@ $ bundle exec jekyll serve
 
 5. You'll need to override `_config.yml` with the `baseUrl` set to "/"
 
-6. Load [http://localhost:4000/](http://localhost:4000/) on your browser.
+6. Load [http://localhost:4000/](https://localhost:4000/) on your browser.
 
 ## Auto Regeneration
 
@@ -38,11 +38,11 @@ By default, Jekyll will auto-regenerate the static pages if you change files thr
 
 ## Formatting
 
-Jekyll uses a variant of Markdown known as [Kramdown](http://kramdown.gettalong.org/quickref.html).
+Jekyll uses a variant of Markdown known as [Kramdown](https://kramdown.gettalong.org/quickref.html).
 
-Jekyll uses the [Liquid template engine](http://liquidmarkup.org/) for templating.
+Jekyll uses the [Liquid template engine](https://liquidmarkup.org/) for templating.
 
-You can use [GFM](http://kramdown.gettalong.org/parser/gfm.html) fenced code blocks.
+You can use [GFM](https://kramdown.gettalong.org/parser/gfm.html) fenced code blocks.
 
 Examples:
 

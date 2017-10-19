@@ -42,4 +42,4 @@ pipelines:
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
 [es6-template-literal-syntax]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-[eg-context-object]: {{ site.baseurl }}{% link docs/policies/customization/eg-context.md %}#
+[eg-context-object]: {{ site.baseurl }}{% link docs/policies/customization/eg-context.md %}
