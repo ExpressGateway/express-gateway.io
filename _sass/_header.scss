@@ -78,13 +78,14 @@
         width: 220px;
         height: 20px;
         padding: 5px 10px;
+        user-select: none;
       }
 
       input[type=checkbox]:checked + span > .search-text-box {
         display: initial;
       }
 
-      span {
+      .nav-element {
         display: flex;
         align-items: center;
         position: relative;
