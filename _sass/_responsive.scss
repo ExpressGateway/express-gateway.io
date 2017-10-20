@@ -1,8 +1,14 @@
 /* VARIABLES */
 $menu-width: 250px!default;
 /* Side Menu */
+
+.site-pusher {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
 @include size(smalltomedium) {
-  .site-pusher{
+  .site-pusher {
     height: 100%;
     display: flex;
     min-height: 100vh;
@@ -79,7 +85,6 @@ $menu-width: 250px!default;
       align-self: stretch;
       display: flex;
       align-items: center;
-      height: auto;
         a {
           align-self: stretch;
           line-height: 2rem;
@@ -93,8 +98,6 @@ $menu-width: 250px!default;
 
   .with-sidebar {
     .site-pusher {
-      -webkit-transition-duration: 0.3s;
-      transition-duration: 0.3s;
       -webkit-transform: translateX(-$menu-width);
       transform: translateX(-$menu-width);
       overflow-x: visible;

@@ -21,7 +21,7 @@
       display: flex;
       align-items: center;
 
-      @include size(smalltomedium){
+      @include size(smalltomedium) {
         width: 94%;
       }
     }
@@ -44,16 +44,50 @@
     nav {
       display: flex;
       align-items: center;
-      width: 55%;
+      width: 60%;
       margin-left: auto;
       justify-content: space-between;
       height: $header-main-height;
       font-weight: 200;
 
-      span {
+      .search-button-wrapper {
+        position: relative;
+
+        .algolia-autocomplete {
+          position: absolute !important;
+          top: 40px;
+        }
+      }
+
+      .search-icon {
+        cursor: pointer;
+        user-select: none;
+        width: 26px;
+        height: 26px;
+        background-image: url('../img/mag-glass.svg');
+      }
+
+      #search-check-box {
+        display: none;
+      }
+
+      .search-text-box {
+        display: none;
+        border-radius: 10px;
+        border: 1px solid #0E8696;
+        width: 220px;
+        height: 20px;
+        padding: 5px 10px;
+        user-select: none;
+      }
+
+      input[type=checkbox]:checked + span > .search-text-box {
+        display: initial;
+      }
+
+      .nav-element {
         display: flex;
         align-items: center;
-        height: 100%;
         position: relative;
         font-size: $font-size-16;
 
@@ -68,16 +102,22 @@
         }
 
         &.github-button-wrapper {
-          width: 51.5px;
-          @include size(smalltomedium){
+          height: 51.5px;
+          @include size(smalltomedium) {
             margin-left: 10px;
+          }
+        }
+
+        &.search-button {
+          @include size(smalltomedium) {
+            order: 10;
           }
         }
 
         &.active {
           a {
             color: $color-primary;
-            @include size(smalltomedium){
+            @include size(smalltomedium) {
               background: $color-gray-blue;
             }
           }
@@ -94,59 +134,14 @@
             border-width: 0 15px 7px 15px;
             border-color: transparent transparent $color-primary transparent;
             margin-right: -15px;
-            @include size(smalltomedium){
+            @include size(smalltomedium) {
               border: none;
             }
           }
         }
 
       }
-
     }
-    // .nav-sub-menu-trigger {
-    // 	text-decoration:none;
-    // 	line-height:32px;
-    // }
-    //
-    // .nav-sub-menu {
-    //   display:none;
-    // 	position:absolute;
-    //   z-index: 15;
-    // 	top:75%;
-    // 	left:0;
-    // 	background:#fff;
-    //   border: 1px solid $color-gray-light;
-    //
-    //   li{
-    //     display: block;
-    //     a {
-    //       display: block;
-    //       padding:.5750rem;
-    //     	width:200px;
-    //       border-bottom: 1px solid $color-gray-light;
-    //
-    //       &:hover {
-    //         background: $color-secondary-light;
-    //       }
-    //     }
-    //   }
-    //
-    //   &:hover {
-    //     display: block;
-    //
-    //   }
-    // }
-    //
-    // .nav-sub-menu-trigger:hover {
-    //   padding: 10px inherit;
-    // }
-    //
-    // .nav-sub-menu-trigger:hover + .nav-sub-menu {
-    //   display: block;
-    //
-    // }
-
-
 }
 
 .hero {
@@ -166,7 +161,7 @@
     padding: 6rem 0;
     color: $color-background;
     display: block;
-    @include size(smalltomedium){
+    @include size(smalltomedium) {
       padding: 3rem 2rem;
       font-size: $font-size-32;
     }
