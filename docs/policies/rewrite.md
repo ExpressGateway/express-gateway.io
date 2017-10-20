@@ -63,7 +63,7 @@ policies:
 ### Notes
 
 In case you're using Express Path as expression, you can use
-[route parameters](http://expressjs.com/en/guide/routing.html#route-parameters) as well as multi segment matches: they
+[route parameters](https://expressjs.com/en/guide/routing.html#route-parameters) as well as multi segment matches: they
 will be forwarded correctly.
 
 ```yaml

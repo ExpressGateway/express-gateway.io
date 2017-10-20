@@ -25,7 +25,7 @@ The plugin framework exposes an Event Bus and can react to events in the Express
 
 ### Automated Plugin Installation
 
-Plugins are bundled as [Node](http://www.nodejs.org) modules and distributed through [npm](https://www.npmjs.com).
+Plugins are bundled as [Node](https://www.nodejs.org) modules and distributed through [npm](https://www.npmjs.com).
 The Express Gateway [CLI][cli] is used to [install][plugin-install] and [configure][plugin-configure] plugins.
 
 Installed plugins are declared in the [system.config.yml][system-config-yml] and are then ready to be used.
@@ -73,7 +73,7 @@ plugins:
 ```
 
 ### Developing a plugin
-Express Gateway is a thin layer on top of ExpressJS Node.JS framework and uses a lot of concepts from it. So it is good to have some idea of it, especially the [Middleware](http://expressjs.com/en/guide/writing-middleware.html)
+Express Gateway is a thin layer on top of ExpressJS Node.JS framework and uses a lot of concepts from it. So it is good to have some idea of it, especially the [Middleware](https://expressjs.com/en/guide/writing-middleware.html)
 
 To understand when different parts of plugin are registered and loaded check the [Express Gateway Boot Sequence explanation]({{ site.baseurl}} {% link docs/runtime/boot-sequence.md %})
 
