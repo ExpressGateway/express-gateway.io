@@ -10,9 +10,9 @@ author: "Valeri Karpov"
 #
 ---
 
-[Express Gateway](http://www.express-gateway.io/) has a lot of powerful features beyond just
-[auth](http://www.express-gateway.io/getting-started-with-oauth2). Another important feature is
-[rate limiting](http://www.express-gateway.io/docs/policies/rate-limiter), which throttles requests to one or more
+[Express Gateway](https://www.express-gateway.io/) has a lot of powerful features beyond just
+[auth](https://www.express-gateway.io/getting-started-with-oauth2). Another important feature is
+[rate limiting](https://www.express-gateway.io/docs/policies/rate-limiter), which throttles requests to one or more
 endpoints. Express Gateway has a lot of tuneable options for configuring throttling: you can throttle requests on a
 per user, per endpoint, or per pipeline basis. In this article, I'll walk you through a "Hello, World" example of
 using Express Gateway's rate limiting policy, and then show a practical use case of rate limiting based on user API keys.
@@ -85,9 +85,9 @@ pipelines:
               changeOrigin: true
 ```
 
-As a refresher, an [endpoint](http://www.express-gateway.io/docs/core-concepts#endpoints) is a URL
-that your gateway makes available, a [policy](http://www.express-gateway.io/docs/core-concepts#policies) is an
-action you can take on a request, and a [pipeline](http://www.express-gateway.io/docs/core-concepts#pipelines)
+As a refresher, an [endpoint](https://www.express-gateway.io/docs/core-concepts#endpoints) is a URL
+that your gateway makes available, a [policy](https://www.express-gateway.io/docs/core-concepts#policies) is an
+action you can take on a request, and a [pipeline](https://www.express-gateway.io/docs/core-concepts#pipelines)
 combines multiple endpoints and multiple policies to determine what your gateway will do with a given request.
 
 With this config, if you `curl http://localhost:8080/ip` twice at the same time you'll get an
@@ -315,7 +315,7 @@ rate limit each developer to 1 request every 6 hours.
 Here's the gateway config. First, note that the `rate-limit` policy uses `req.user.id` for `rateLimitBy`. That's the
 id of the user. Also, note that there's an `expression` policy that attaches the actual secret key for Open Exchange
 Rates to the request, so developers don't have access to the actual Open Exchanges Rates key, only their Express
-Gateway key. [Read more about Express Gateway expressions here](http://www.express-gateway.io/docs/policies/expression).
+Gateway key. [Read more about Express Gateway expressions here](https://www.express-gateway.io/docs/policies/expression).
 
 ```
 http:
