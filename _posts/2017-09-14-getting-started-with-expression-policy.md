@@ -12,7 +12,7 @@ author: "Valeri Karpov"
 [Express Gateway](https://www.npmjs.com/package/express-gateway) comes with a lot of powerful features baked in,
 like [OAuth2](https://www.lunchbadger.com/how-to-implement-oauth-in-express-gateway/) and
 [key auth](https://www.lunchbadger.com/implement-key-authentication-express-gateway/). When built-in features aren't
-enough, Express Gateway has an [expression policy](http://www.express-gateway.io/docs/policies/expression), which lets
+enough, Express Gateway has an [expression policy](https://www.express-gateway.io/docs/policies/expression), which lets
 you execute arbitrary JavaScript to modify the request and response. In this article, I'll show you how the expression
 policy works with several sample use cases.
 <!--excerpt-->
@@ -75,13 +75,13 @@ pipelines:
                   res.status(400).send('Can\'t let you do that, Star Fox!');
 ```
 
-This config uses 3 of Express Gateway's core concepts: [endpoints](http://www.express-gateway.io/docs/core-concepts#endpoints), [policies](http://www.express-gateway.io/docs/core-concepts#policies), and [pipelines](http://www.express-gateway.io/docs/core-concepts#pipelines). An endpoint is a URL that your
+This config uses 3 of Express Gateway's core concepts: [endpoints](https://www.express-gateway.io/docs/core-concepts#endpoints), [policies](https://www.express-gateway.io/docs/core-concepts#policies), and [pipelines](https://www.express-gateway.io/docs/core-concepts#pipelines). An endpoint is a URL that your
 gateway will make available, a policy is an action you can take on a request, and a pipeline combines one or more
 endpoints with one or more policies to define what your gateway will do with a given request. This config has 1 endpoint,
 `/test` that the config internally calls 'protected', several policies from the default config, and one pipeline that
 executes an expression policy when you visit the 'protected' endpoint.
 
-The expression policy has access to an [Express response object](http://expressjs.com/en/4x/api.html#res) that you can
+The expression policy has access to an [Express response object](https://expressjs.com/en/4x/api.html#res) that you can
 access with `res`. This pipeline sends back an HTTP 400 error with a custom hard coded error message. You should see the
 below error if you visit `http://localhost:8080`.
 
@@ -90,11 +90,11 @@ below error if you visit `http://localhost:8080`.
 # Accessing the Request Object
 
 In the previous example, you saw that you can use an Express response object to craft an HTTP response in your expressions.
-You can also access the [Express request object](http://expressjs.com/en/4x/api.html#req) `req` in your expressions, to
+You can also access the [Express request object](https://expressjs.com/en/4x/api.html#req) `req` in your expressions, to
 make changes based on the request.
 
 Before you get too excited about implementing everything using expression policies, be aware of the fact that
-[Node.js globals are not available in the expression policy](http://www.express-gateway.io/docs/policies/expression#options-reference).
+[Node.js globals are not available in the expression policy](https://www.express-gateway.io/docs/policies/expression#options-reference).
 You can't `require()`, `process.exit()`, or even `console.log()` in your expression `jscode`.
 
 One thing you can do is access the HTTP request, which is `req` in the `jscode` context. For example, Express Gateway
@@ -138,7 +138,7 @@ pipelines:
 ```
 
 The `req.method` property contains the HTTP method, like `GET` or `POST`. You can see a full list of available
-[request object properties on the Express docs](http://expressjs.com/en/4x/api.html#req). If you use
+[request object properties on the Express docs](https://expressjs.com/en/4x/api.html#req). If you use
 [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) to send an HTTP
 request, you should see the below output for a `GET` request:
 
@@ -204,4 +204,4 @@ In the interest of security, my actual KeenIO project id is replaced with the st
 
 # Moving On
 
-Expressions are a catch-all policy that allow you to write arbitrary code. With expressions, you can use Express Gateway to enforce HTTPS redirects, consolidate API keys, and perform other transformations on HTTP requests. Express Gateway has several other [built-in policies](http://www.express-gateway.io/docs/policies/), so make sure you check for ones that already exist before trying to re-invent the wheel with the expression policy.
+Expressions are a catch-all policy that allow you to write arbitrary code. With expressions, you can use Express Gateway to enforce HTTPS redirects, consolidate API keys, and perform other transformations on HTTP requests. Express Gateway has several other [built-in policies](https://www.express-gateway.io/docs/policies/), so make sure you check for ones that already exist before trying to re-invent the wheel with the expression policy.

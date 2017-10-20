@@ -9,11 +9,11 @@ author: "Valeri Karpov"
 # and ~/_categories with any necessary archive needs
 #
 ---
-You've read all about [Express Gateway](http://www.express-gateway.io), now we're going to walk through some very important aspects of how to build faster and more sustainably.
+You've read all about [Express Gateway](https://www.express-gateway.io), now we're going to walk through some very important aspects of how to build faster and more sustainably.
 
 Did you know that Express Gateway gives you the ability to spin up your own [OAuth2 provider](https://stormpath.com/blog/what-the-heck-is-oauth#the-authorization-code-grant-type) from the command line?
 <!--excerpt-->
-In case you're new to OAuth2, one key aspect is that OAuth2 enables your users to delegate API endpoints to various [apps](http://www.express-gateway.io/docs/cli/apps/) via [scopes](http://www.express-gateway.io/docs/core-concepts#scopes). In this getting started guide, you'll learn how to implement OAuth2 in Express Gateway.
+In case you're new to OAuth2, one key aspect is that OAuth2 enables your users to delegate API endpoints to various [apps](https://www.express-gateway.io/docs/cli/apps/) via [scopes](https://www.express-gateway.io/docs/core-concepts#scopes). In this getting started guide, you'll learn how to implement OAuth2 in Express Gateway.
 
 ### First, How to Configure the API Gateway
 To get started, you will need to create a new gateway using the Express Gateway generator.
@@ -42,7 +42,7 @@ To start Express Gateway instance you scaffolded in the oauth directory, run the
 $   cd oauth && npm start
 ```
 
-Then, edit the `config/gateway.config.yml` file and enable OAuth2 for the default [pipeline](http://www.express-gateway.io/docs/core-concepts#pipelines) as shown below.
+Then, edit the `config/gateway.config.yml` file and enable OAuth2 for the default [pipeline](https://www.express-gateway.io/docs/core-concepts#pipelines) as shown below.
 ```yaml
 http:
   port: 8080
@@ -78,14 +78,14 @@ pipelines:
               changeOrigin: true
 ```
 
-Once you turn on OAuth2, you should see an 'Unauthorized' error when you visit [http://localhost:8080/ip](http://localhost:8080/ip). You need to restart the server for config changes to take effect, so if you ran npm start be sure to kill the process and then re-run `npm start`.
-The next step is to create a new Express Gateway [user](http://www.express-gateway.io/docs/consumer-management#users).
+Once you turn on OAuth2, you should see an 'Unauthorized' error when you visit [http://localhost:8080/ip](). You need to restart the server for config changes to take effect, so if you ran npm start be sure to kill the process and then re-run `npm start`.
+The next step is to create a new Express Gateway [user](https://www.express-gateway.io/docs/consumer-management#users).
 
-Users and [applications](http://www.express-gateway.io/docs/consumer-management#applications) have a one-to-many relationship, so you must create a user before you create an application.
+Users and [applications](https://www.express-gateway.io/docs/consumer-management#applications) have a one-to-many relationship, so you must create a user before you create an application.
 
 _Make sure you do not restart the Express Gateway server after creating a user._
 
-Unless you have already set up a [data store](http://www.express-gateway.io/docs/faq#which-data-stores-are-supported), Express Gateway will use an in-memory data store and all your users will be deleted if your process is killed.
+Unless you have already set up a [data store](https://www.express-gateway.io/docs/faq#which-data-stores-are-supported), Express Gateway will use an in-memory data store and all your users will be deleted if your process is killed.
 
 ```shell
 $ eg users create
@@ -93,7 +93,7 @@ $ eg users create
 ? Enter firstname [required]: Valeri
 ? Enter lastname [required]: Karpov
 ? Enter email: val@karpov.io
-? Enter redirectUri: 
+? Enter redirectUri:
 ✔ Created c25fe037-30bb-42f7-9f3a-0264dcd60d14
 {
   "firstname": "val",
@@ -107,7 +107,7 @@ $ eg users create
 }
 ```
 
-Now that you have done that, you need to create 2 [credentials](http://www.express-gateway.io/docs/credential-management) for this user:
+Now that you have done that, you need to create 2 [credentials](https://www.express-gateway.io/docs/credential-management) for this user:
 an OAuth2 credential, and
 a basic-auth (password) credential.
 
@@ -158,11 +158,11 @@ $ eg apps create -u val
 ### Let's Walk Through the OAuth2 Flow
 
 You've set up the necessary objects, now let's talk a walk through the actual OAuth2 flow using Chrome and [cURL](https://en.wikipedia.org/wiki/CURL).
-You'll notice that if you visit [http://localhost:8080/ip](http://localhost:8080/ip) in Chrome you'll get an _'Unauthorized'_ error message as shown below.
+You'll notice that if you visit [http://localhost:8080/ip]() in Chrome you'll get an _'Unauthorized'_ error message as shown below.
 
 ![Unauthorized Page in OAuth2 in Express Gateway](/assets/img/oauth2-unauthorized-1.png)
 
-Your [gateway.config.yml](http://www.express-gateway.io/docs/configuration/gateway.config.yml) file protects the `/ip` endpoint behind OAuth2 middleware, so you need to get an access token by walking through the [Express Gateway OAuth2 flow](http://www.express-gateway.io/docs/policies/oauth2#oauth-20-flows).
+Your [gateway.config.yml](https://www.express-gateway.io/docs/configuration/gateway.config.yml) file protects the `/ip` endpoint behind OAuth2 middleware, so you need to get an access token by walking through the [Express Gateway OAuth2 flow](https://www.express-gateway.io/docs/policies/oauth2#oauth-20-flows).
 To get started, you need to visit the `/oauth2/authorize` endpoint and specify the following parameters in the URL query string:
 - response_type: String containing either 'bearer' or 'token'. For this example you'll use 'token'.
 - client_id: String containing the id of your app from the output of eg apps create -u val. In this case, '84828eee-2832-4ecd-8155-008fbea0f485', but it will be different for you.
@@ -170,7 +170,7 @@ To get started, you need to visit the `/oauth2/authorize` endpoint and specify t
 
 So, here's how the full URL looks:
 
-[http://localhost:8080/oauth2/authorize?response_type=token&client_id=803b1da9-879d-44b5-8d77-5199c4e11fba&redirect_uri=http://localhost:8080/ip](http://localhost:8080/oauth2/authorize?response_type=token&client_id=803b1da9-879d-44b5-8d77-5199c4e11fba&redirect_uri=http://localhost:8080/ip)
+[http://localhost:8080/oauth2/authorize?response_type=token&client_id=803b1da9-879d-44b5-8d77-5199c4e11fba&redirect_uri=http://localhost:8080/ip]()
 
 When you go to this URL, you should be redirected to a login screen. You can configure the UI later, and so for this article you'll just use Express Gateway's minimal built-in login screen.
 
@@ -179,7 +179,7 @@ When you go to this URL, you should be redirected to a login screen. You can con
 Enter in the username and password you entered when you ran `eg users create`. (If you're following this article exactly, the username will be "val" and the password will be "bacon".)
 Then, you will get redirected to a page that asks you to authorize your app 'testapp' to access your account.
 
-In some other more advanced applications, this is also where Express Gateway will ask for other permissions ([scopes](http://www.express-gateway.io/docs/credential-management#scopes)).
+In some other more advanced applications, this is also where Express Gateway will ask for other permissions ([scopes](https://www.express-gateway.io/docs/credential-management#scopes)).
 
 ![Authorization Page in Express Gateway](/assets/img/oauth2-authorize.png)
 
@@ -220,6 +220,6 @@ This means that you can add OAuth2 permissions on top of any API. Now you can re
 
 ### Wrapping Up
 
-One of the biggest things an API gateway can do for you is centralize the authentication for your various microservices. And Express Gateway makes this process extremely straight forward. Take a look at the [documentation](http://www.express-gateway.io/docs) and give it a try!
+One of the biggest things an API gateway can do for you is centralize the authentication for your various microservices. And Express Gateway makes this process extremely straight forward. Take a look at the [documentation](https://www.express-gateway.io/docs) and give it a try!
 
 _Originally posted on [www.lunchbadger.com](https://www.lunchbadger.com)._

@@ -13,7 +13,7 @@ author: "Valeri Karpov"
 like [OAuth2](https://www.lunchbadger.com/how-to-implement-oauth-in-express-gateway/) and
 [key auth](https://www.lunchbadger.com/implement-key-authentication-express-gateway/). On top of these authentication
 mechanisms, Express Gateway supports restricting access to certain endpoints to certain users using the notion of
-[scopes](http://www.express-gateway.io/docs/credential-management#scopes). In this article, I'll provide a "Hello, World"
+[scopes](https://www.express-gateway.io/docs/credential-management#scopes). In this article, I'll provide a "Hello, World"
 example of using scopes and then dive into a more realistic example of using scopes to protect access to an external API.
 <!--excerpt-->
 
@@ -44,11 +44,11 @@ To start widget-factory, run the following commands:
 ```
 
 Next, do `cd scopes` and change the `config/gateway.config.yml` file to the below. This config file defines 2
-API endpoints that both proxy out to [httpbin.org](http://httpbin.org/): one called 'ip' that gets your IP address,
+API endpoints that both proxy out to [httpbin.org](https://httpbin.org/): one called 'ip' that gets your IP address,
 and one called 'get' that gets your IP address and whatever headers your browser sent. These endpoints are not
 very useful or sophisticated, but they're sufficient for this rudimentary exercise. The 'get' endpoint has an
 associated list of scopes that contains one element, 'admin'. This means that only users that are admins based on
-[key-auth](http://www.express-gateway.io/implementing-key-auth) will be able to access this endpoint.
+[key-auth](https://www.express-gateway.io/implementing-key-auth) will be able to access this endpoint.
 
 ```yml
 http:
@@ -131,7 +131,7 @@ $ eg scopes create admin
 
 The key difference between scopes and the user roles you might be used to in other frameworks is that scopes are
 associated with **credentials**, not **users**. In Express Gateway, a user has one or more
-[credentials](http://www.express-gateway.io/docs/credential-management) that enable them to authenticate against
+[credentials](https://www.express-gateway.io/docs/credential-management) that enable them to authenticate against
 the gateway using different mechanisms, like OAuth2 or key auth. A credential then has one or more scopes. This means
 that a user may have access to different endpoints based on which key they use or whether they logged in with OAuth2 or not.
 
