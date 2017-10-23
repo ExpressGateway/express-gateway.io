@@ -93,25 +93,25 @@ Keys may also be passed as a query parameter. Using a query parameter to specify
 ##### Options Reference
 
 * `apiKeyheader`:
-  - 'Authorization'
+  - default value: `Authorization`
   - the name of the header that should contain the API key
 * `apiKeyHeaderScheme`:
-  - 'apiKey'
+  - default value: `apiKey`
   - the enforced scheme in the header
 * `apiKeyHeader`:
-  - 'Authorization'
+  - default value: `Authorization`
   - name of the header that should contain api key
 * `disableHeaders`:
-  - false
+  - default value: `false`
   - disable apikey lookup in headers
 * `disableHeadersScheme`:
-  - false
+  - default value: `false`
   - disable verification of scheme in header
 * `apiKeyField`:
-  - 'apiKey'
+  - default value: `apiKey`
   - name of field to check in query parameter
 * `disableQueryParam`:
-  - false
+  - default value: `false`
   - set to true to disable api key lookup in query string
 
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
