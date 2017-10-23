@@ -12,11 +12,7 @@
     align-items: flex-start;
     flex-direction: column-reverse;
     margin-bottom: 10.3125rem;
-    margin-top: 80px;
-    transition: margin-top 200ms;
-    @include size(medium600) {
-      margin-top: 60px;
-    }
+
     .wrapper {
       display: flex;
       align-items: center;
@@ -167,87 +163,4 @@
     }
   }
 
-}
-
-.welcome-banner {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background-color: #32a5c1;
-  z-index: 51;
-  text-align: center;
-  color: #FFF;
-  overflow: hidden;
-  transition: height 200ms;
-  @include size(medium600) {
-    height: 60px;
-  }
-  @include size(medium) {
-    z-index: 0;
-  };
-  .wrapper {
-    position: relative;
-    .welcome-banner-close {
-      position: absolute;
-      top: -5px;
-      right: -5px;
-      font-size: 15px;
-      color: #FFF;
-      width: 20px;
-      height: 20px;
-      text-align: center;
-      cursor: pointer;
-      background-color: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      border-radius: 50%;
-    }
-  }
-  .welcome-banner-title {
-    width: 100%;
-    font-weight: 600;
-    margin: 15px 0 10px;
-    font-size: $font-size-18;
-    @include size(medium600) {
-      margin: 10px 0 5px;
-      font-size: 0.8rem;
-    }
-    span {
-      font-size: $font-size-22;
-      @include size(medium600) {
-        font-size: $font-size-18;
-      }
-    }
-  }
-  .welcome-banner-text {
-    width: 100%;
-    font-weight: 300;
-    @include size(medium600) {
-      font-size: 0.7rem;
-    }
-    a {
-      color: inherit;
-      text-decoration: underline;
-    }
-  }
-}
-.welcome-banner-filler {
-  margin-top: 80px;
-  transition: margin-top 200ms;
-  @include size(medium600) {
-    margin-top: 60px;
-  }
-}
-
-.without-welcome-banner {
-  .welcome-banner {
-    transition: height 200ms;
-    height: 0;
-  }
-  .site-header,
-  .header-menu-icon,
-  .welcome-banner-filler {
-    transition: margin-top 200ms;
-    margin-top: 0;
-  }
 }
