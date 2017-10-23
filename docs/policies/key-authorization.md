@@ -101,9 +101,6 @@ Keys may also be passed as a query parameter. Using a query parameter to specify
 * `apiKeyHeader`:
   - 'Authorization'
   - name of the header that should contain api key
-* `apiKeyHeaderScheme`:
-  - 'apiKey'
-  - enforce a schema in the header
 * `disableHeaders`:
   - false
   - disable apikey lookup in headers
