@@ -7,7 +7,8 @@ list-order: .4
 
 ### Description
 
-Express Gateway exposes microservices as APIs through URLs known as apiEndpoints. API consumers may API requests through the API endpoints.
+Express Gateway exposes microservices as APIs through URLs known as apiEndpoints. API consumers may make API requests
+through the API endpoints.
 
 ### Usage
 
@@ -46,7 +47,7 @@ Any Domain and Path
 ```yaml
 apiEndpoints:
   help:
-    host: '*'            
+    host: '*'
     paths: /help
 ```
 
@@ -57,7 +58,7 @@ One Domain with No Subdomains and Path
 ```yaml
 apiEndpoints:
   help:
-    host: 'example.com'            
+    host: 'example.com'
     paths: /help
 ```
 
@@ -68,7 +69,7 @@ Any 1st Level Subdomain of One Domain and Path
 ```yaml
 apiEndpoints:
   help:
-    host: '*.example.com'            
+    host: '*.example.com'
     paths: /help
 ```
 
@@ -79,7 +80,7 @@ Paths can be either a string or array of strings.  Wildcard patterns are support
 
 Exact String Match
 ```yaml
-paths: /admin           
+paths: /admin
 ```
 
 - match: /admin only
@@ -89,7 +90,7 @@ paths: /admin
 
 Deep Level Match without Parent
 ```yaml
-paths: /admin/*        
+paths: /admin/*
 ```
 
 - match: /admin/bob; /admin/charlie/1
@@ -99,7 +100,7 @@ paths: /admin/*
 
 Deep Level Match with Parent
 ```yaml
-paths: ['/admin','/admin/*']   
+paths: ['/admin','/admin/*']
 ```
 
 - match: /admin; /admin/bob; /admin/charlie/1
@@ -109,7 +110,7 @@ paths: ['/admin','/admin/*']
 
 One Level Match without Parent with Variable Assignment
 ```yaml
-paths: '/admin/:id'  
+paths: '/admin/:id'
 ```
 
 - match: /admin/bob; /admin/charlie
