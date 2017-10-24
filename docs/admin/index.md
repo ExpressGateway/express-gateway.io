@@ -38,6 +38,11 @@ Express Gateway utilizes scopes for permissions and basic authorization.
 A scope is a tag you can use to mark API Endpoints and matching Consumer credentials.
 Scopes can be used within any credential types. [Credentials and Scopes Management][credential_management] describes how scopes are declared within credentials.
 
+##### Schema
+Express Gateway utilizes schemas to validate all the options provided by the configurations files. This mechanism prevents
+the gateway from starting if some required parameters are missing or incorrect. You can query the schemas through the
+API and provide new ones using [plugins][plugins]
+
 ##### Token (OAuth 2.0 specific)
 Express Gateway supports access and refresh tokens as part of the OAuth 2.0 standard.
 
@@ -217,3 +222,4 @@ run
 [credential_management]: {{ site.baseurl }}{% link docs/credential-management.md %}
 [consumer_management]: {{ site.baseurl }}{% link docs/consumer-management.md %}
 [gw_config]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
+[plugins]: {{ site.baseurl }}{% link docs/plugins/index.md %}
