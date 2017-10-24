@@ -12,10 +12,12 @@ API and provide new ones using [plugins][plugins]
 Express Gateway ships with some built-in schemas for [policies][policies], [conditions][conditions] — [plugins][plugins]
 can eventually define other personal schemas to validate the provided options.
 
-### Get All Schemas
+### Get Schemas (All, by type, by type and name)
 ##### Request: `GET /schemas/:type/:name`
 
-With `type: condition` and `name: oneOf`
+#### Example: Get the `endOf` schema in the `condition` group
+
+##### Request: `GET /schemas/condition/oneOf`
 
 ##### Response: 200
 ```json
