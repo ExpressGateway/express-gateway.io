@@ -4,11 +4,13 @@ title: Admin API Reference
 doc-order: 10.0
 ---
 
-### Overview 
+### Overview
 
-The Express Gateway Admin API is a REST interface to manage internal entities such as Users, Applications, Credenitials, Scopes, OAuth2 tokens and the relationships among such entities.
+The Express Gateway Admin API is an HTTP interface to manage internal entities such as Users, Applications, Credenitials,
+Scopes, OAuth2 tokens and the relationships among such entities.
 
-Note: in the future the Admin API will also allow configuration of gateway entities such as pipeline and policy configuration dynamically.
+Note: in the future the Admin API will also allow configuration of gateway entities such as pipeline and policy
+configuration dynamically.
 
 The Express Gateway [CLI][cli] utilizes the Admin API.
 
@@ -22,7 +24,8 @@ A User is a the main consumer entity in Express Gateway. Typically, it would be 
 User can have multiple Applications  and Credentials.
 
 ##### Application (App)
-An App is a API Consumer entity designed to represent non human consumers of API endpoints, such as mobile application. Apps always belong to a User.
+An App is a API Consumer entity designed to represent non human consumers of API endpoints, such as mobile application.
+Apps always belong to a User.
 
 ##### Credential
 A container for authentican\authorization secrets of API Consumer (Users/Apps)
@@ -31,12 +34,19 @@ There are three credential types provided by the Express Gateway authorization p
 - key-auth (key pair id:secret )
 - oauth2 (client secret or user password)    &nbsp; [OAuth 2.0 policy][oauth2]
 
-Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` and `oauth2`. However, an API Consumer may have multiple `key-auth` credentials.
+Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` and `oauth2`. However, an API Consumer
+may have multiple `key-auth` credentials.
 
 ##### Scope
 Express Gateway utilizes scopes for permissions and basic authorization.
 A scope is a tag you can use to mark API Endpoints and matching Consumer credentials.
-Scopes can be used within any credential types. [Credentials and Scopes Management][credential_management] describes how scopes are declared within credentials.
+Scopes can be used within any credential types. [Credentials and Scopes Management][credential_management]
+describes how scopes are declared within credentials.
+
+##### Schema
+Express Gateway utilizes schemas to validate all the options provided by the configurations files. This mechanism prevents
+the gateway from starting if some required parameters are missing or incorrect. You can query the schemas through the
+API and provide new ones using [plugins][plugins]
 
 ##### Token (OAuth 2.0 specific)
 Express Gateway supports access and refresh tokens as part of the OAuth 2.0 standard.
@@ -71,13 +81,13 @@ Change the `gateway.config.yml` like in the following example:
 
 apiEndpoints:
   adminAPI:
-    host: 'admin.domain.com' # domain where admin API is exposed 
+    host: 'admin.domain.com' # domain where admin API is exposed
 
 https:  #  run Express Gateway in HTTPS mode
   port: 8443
-  tls: 
-    'domain.com': 
-        key: './path/to/key.pem', 
+  tls:
+    'domain.com':
+        key: './path/to/key.pem',
         cert: './path/to/cert.pem',
 admin:
   port: 9876
@@ -94,23 +104,23 @@ pipelines:
     apiEndpoints:
       - adminAPI
     policies:
-    #  - key-auth: # this is intentionaly disabled to allow temporary access 
+    #  - key-auth: # this is intentionaly disabled to allow temporary access
       - proxy:
           - action:
               serviceEndpoint: adminBackend
 
 ```
 
-#### Accessing Protected Admin API with CLI 
-Express Gateway CLI uses special config section in system.config.yml  
+#### Accessing Protected Admin API with CLI
+Express Gateway CLI uses special config section in system.config.yml
 
 ##### Default CLI config:
 ```yml
-cli:   
+cli:
   url: http://localhost:9876
 ```
 
-##### Config to point CLI to Secured Admin API 
+##### Config to point CLI to Secured Admin API
 ```yml
 cli:
   url: https://admin.domain.com:8443  # domain name of exposed API
@@ -119,10 +129,10 @@ cli:
 #### Create Key-auth Credentials
 This is why we have `key-auth` policy disabled for now. We need create user and credential
 
-##### Start Express Gateway 
+##### Start Express Gateway
 `npm start`
 
-##### Create admin User 
+##### Create admin User
 `eg user create`
 
 Follow the promts and check the output
@@ -161,13 +171,14 @@ Follow the promts and check the output
 ```
 
 ##### Enable Key Auth
-Now we have user and credential. 
-Turn on Key Auth by uncommenting line 
+Now we have user and credential.
+Turn on Key Auth by uncommenting line
 
 `- key-auth: # this is intentionaly disabled to allow temporary access`
 
 NOTE: Express Gateway will hot-reload so no need for restart.
-This is especially important if you run not Redis but InMemory datastore. In this case restart will clear all users and credentials.  
+This is especially important if you run not Redis but InMemory datastore. In this case restart will clear all users and
+credentials.
 
 ```yml
 pipelines:
@@ -175,13 +186,13 @@ pipelines:
     apiEndpoints:
       - adminAPI
     policies:
-      - key-auth: 
+      - key-auth:
       - proxy:
           - action:
               serviceEndpoint: adminBackend
 ```
 
-##### Check that acess is not allowed 
+##### Check that acess is not allowed
 `eg users list`
 
 It should return Unauthorized error
@@ -191,14 +202,14 @@ In previous steps we have generated key-auth credential for user
 
 It has important part:
 ```json
-  "keyId": "2YvpwOURTnNB0mDFhOpnxj", 
+  "keyId": "2YvpwOURTnNB0mDFhOpnxj",
   "keySecret": "08o0ZHLD1pGAIiG61tXc9S"
 ```
 These properties combined using colon ('keyId:keySecret') are an API key required buy Key Auth
 
-run 
+run
 
-`eg users list -H "Authorization:apikey 2YvpwOURTnNB0mDFhOpnxj:08o0ZHLD1pGAIiG61tXc9S"` 
+`eg users list -H "Authorization:apikey 2YvpwOURTnNB0mDFhOpnxj:08o0ZHLD1pGAIiG61tXc9S"`
 
 ```json
 {
@@ -217,3 +228,4 @@ run
 [credential_management]: {{ site.baseurl }}{% link docs/credential-management.md %}
 [consumer_management]: {{ site.baseurl }}{% link docs/consumer-management.md %}
 [gw_config]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
+[plugins]: {{ site.baseurl }}{% link docs/plugins/index.md %}

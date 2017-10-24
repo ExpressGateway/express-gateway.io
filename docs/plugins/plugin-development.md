@@ -166,6 +166,45 @@ module.exports = {
   }
 }
 ```
+
+### Typescript support
+Express Gateway is shipped with plugin typings. Therefore, if you're using Typescript to author your plugin or even
+Javascript with an appropriate IDE such as [VSCode](https://code.visualstudio.com), you can use those to have type check
+as well as intellisense during your development.
+
+#### Typescript
+
+Import the typings and use them. They're put in the global namespace as `ExpressGateway` object.
+
+```javascript
+import * as Eg from 'express-gateway';
+const plugin : ExpressGateway.Plugin = {…};
+```
+
+#### Javascript + VSCode (or another IDE)
+
+- Inform your source file that you'd like to enable typings
+
+```javascript
+// @ts-check
+/// <reference path="./node_modules/express-gateway/index.d.ts" />
+```
+- Create a new object and assign it a type using comments
+
+```javascript
+/** @type {ExpressGateway.Plugin} */
+const plugin = {/*…*/};
+```
+
+- Export the plugin as usual
+
+```javascript
+module.exports = plugin;
+```
+
+For a complete example using this approach, check the
+[Rewrite plugin](https://github.com/ExpressGateway/express-gateway-plugin-rewrite)
+
 ### Extension Entities Development Guides
 
 The following guides describe how to create Express Gateway entities that can be bundled into a plugin to extend Express
