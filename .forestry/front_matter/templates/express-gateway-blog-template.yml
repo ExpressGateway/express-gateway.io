@@ -10,7 +10,7 @@ fields:
   label: Title
   type: text
   hidden: false
-  default: Dellaena'e new Blog Post Title
+  default: Blog Post Title
 - name: date
   label: Date
   type: datetime
@@ -20,9 +20,11 @@ fields:
   label: Author
   type: text
   hidden: false
-  default: Vincenzo Chianese
+  default: insert author here
 - name: categories
   label: Categories
   type: tag_list
   hidden: false
-  default: ''
+  default:
+  - announcements
+  - technology
