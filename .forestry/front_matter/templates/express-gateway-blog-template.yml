@@ -5,22 +5,22 @@ fields:
   label: Layout
   type: text
   hidden: false
-  default: ''
+  default: post
 - name: title
   label: Title
   type: text
   hidden: false
-  default: ''
+  default: Dellaena'e new Blog Post Title
 - name: date
   label: Date
   type: datetime
   hidden: false
-  default: ''
+  default: 2017-11-08 00:00:00 -0800
 - name: author
   label: Author
   type: text
   hidden: false
-  default: ''
+  default: Vincenzo Chianese
 - name: categories
   label: Categories
   type: tag_list
