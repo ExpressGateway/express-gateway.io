@@ -1,13 +1,9 @@
 ---
 layout: post
-title: "Getting Started with OAuth2"
-date:   2017-08-31 12:00:00 -0400
-category: guides
-author: "Valeri Karpov"
-#
-# Please remember to update ~/_archives-month, ~/_archives-year
-# and ~/_categories with any necessary archive needs
-#
+title: Getting Started with OAuth2
+date: 2017-08-31 16:00:00 +0000
+author: Valeri Karpov
+categories: guides
 ---
 You've read all about [Express Gateway](https://www.express-gateway.io), now we're going to walk through some very important aspects of how to build faster and more sustainably.
 

@@ -1,5 +1,6 @@
 ---
 layout: category
 title: Announcements
-category: announcements
+categories: announcements
+date: 2017-11-14 20:25:51 +0000
 ---

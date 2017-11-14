@@ -1,8 +1,8 @@
 ---
 layout: doc-section
-title:  "db"
+title: db
 doc-order: 3.2
-list-order: .1
+list-order: 0.1
 ---
 
 This section defines how Express Gateway stores it data.

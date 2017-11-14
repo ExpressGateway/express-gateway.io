@@ -1,8 +1,8 @@
 ---
 layout: doc-section
-title:  "refreshTokens"
+title: refreshTokens
 doc-order: 3.2
-list-order: .5
+list-order: 0.5
 ---
 
 OAuth 2.0 related config.

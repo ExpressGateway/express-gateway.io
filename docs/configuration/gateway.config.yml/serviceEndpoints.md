@@ -1,8 +1,8 @@
 ---
 layout: doc-section
-title:  "serviceEndpoints"
+title: serviceEndpoints
 doc-order: 3.1
-list-order: .5
+list-order: 0.5
 ---
 
 ### Description

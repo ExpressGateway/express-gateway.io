@@ -1,5 +1,6 @@
 ---
 layout: category
 title: Guides
-category: guides
+categories: guides
+date: 2017-11-14 20:25:51 +0000
 ---

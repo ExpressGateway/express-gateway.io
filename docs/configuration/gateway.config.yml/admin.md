@@ -1,8 +1,8 @@
 ---
 layout: doc-section
-title:  "admin"
+title: admin
 doc-order: 3.1
-list-order: .3
+list-order: 0.3
 ---
 
 ### Description

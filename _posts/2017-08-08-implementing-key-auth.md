@@ -1,13 +1,9 @@
 ---
 layout: post
-title: "Implementing Key Authentication in Express Gateway"
-date:   2017-08-08 12:00:00 -0400
-category: guides
-author: "Jordan Kasper"
-#
-# Please remember to update ~/_archives-month, ~/_archives-year
-# and ~/_categories with any necessary archive needs
-#
+title: Implementing Key Authentication in Express Gateway
+date: 2017-08-08 16:00:00 +0000
+author: Jordan Kasper
+categories: guides
 ---
 You've probably used it before: key authentication. The basic idea is simple, to authenticate your app or client with a given service you send a key to identify (and authorize) yourself. This is not intended for individual users necessarily, but rather for systems talking to each other.
 <!--excerpt-->

@@ -1,7 +1,7 @@
 ---
 layout: doc-section
-title:  "Rate Limiter"
-doc-order: 5.60
+title: Rate Limiter
+doc-order: 5.6
 ---
 
 ### Description

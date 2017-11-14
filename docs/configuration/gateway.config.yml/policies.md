@@ -1,8 +1,8 @@
 ---
 layout: doc-section
-title:  "policies"
+title: policies
 doc-order: 3.1
-list-order: .6
+list-order: 0.6
 ---
 
 ### Description

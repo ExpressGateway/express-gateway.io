@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resources
-permalink: /resources/
+permalink: "/resources/"
 ---
 <div class="resources" markdown="1">
 <section class="page-section-normal">

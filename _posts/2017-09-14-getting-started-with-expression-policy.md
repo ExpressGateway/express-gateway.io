@@ -1,13 +1,9 @@
 ---
 layout: post
-title: "Getting Started with the Expression Policy"
-date:   2017-09-14 12:00:00 -0400
-category: guides
-author: "Valeri Karpov"
-#
-# Please remember to update ~/_archives-month, ~/_archives-year
-# and ~/_categories with any necessary archive needs
-#
+title: Getting Started with the Expression Policy
+date: 2017-09-14 16:00:00 +0000
+author: Valeri Karpov
+categories: guides
 ---
 [Express Gateway](https://www.npmjs.com/package/express-gateway) comes with a lot of powerful features baked in,
 like [OAuth2](https://www.lunchbadger.com/how-to-implement-oauth-in-express-gateway/) and

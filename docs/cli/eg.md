@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title: eg (base command) 
+title: eg (base command)
 doc-order: 4.1
 ---
 

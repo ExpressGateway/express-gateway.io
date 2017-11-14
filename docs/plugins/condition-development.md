@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title:  "Condition Development"
+title: Condition Development
 doc-order: 25.4
 ---
 

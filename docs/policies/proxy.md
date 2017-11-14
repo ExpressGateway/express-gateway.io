@@ -1,7 +1,7 @@
 ---
 layout: doc-section
-title:  "Proxy"
-doc-order: 5.80
+title: Proxy
+doc-order: 5.8
 ---
 
 ### Description

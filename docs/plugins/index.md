@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title:  "Plugins"
+title: Plugins
 doc-order: 25.0
 ---
 

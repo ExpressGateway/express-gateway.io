@@ -1,13 +1,9 @@
 ---
 layout: post
-title: "Express Gateway Roadmap Overview"
-date:   2017-08-17 12:00:00 -0400
-category: announcements
-author: "Al Tsang"
-#
-# Please remember to update ~/_archives-month, ~/_archives-year
-# and ~/_categories with any necessary archive needs
-#
+title: Express Gateway Roadmap Overview
+date: 2017-08-17 16:00:00 +0000
+author: Al Tsang
+categories: announcements
 ---
 Fast, Flexible and Community Driven. When we say community driven - it's not a tagline, it's a commitment. Given its use case, There are so many features that _could_ be built for Express Gateway, the big question is - _what_ first?
 <!--excerpt-->

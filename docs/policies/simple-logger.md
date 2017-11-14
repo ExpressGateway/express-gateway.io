@@ -1,7 +1,7 @@
 ---
 layout: doc-section
-title:  "Simple Logger"
-doc-order: 5.70
+title: Simple Logger
+doc-order: 5.7
 ---
 ### Description
 

@@ -1,13 +1,9 @@
 ---
 layout: post
-title: "Part1: Anatomy of a Plugin"
-date:   2017-09-19 12:00:00 -0400
-category: guides
-author: "Serhii Kuts"
-#
-# Please remember to update ~/_archives-month, ~/_archives-year
-# and ~/_categories with any necessary archive needs
-#
+title: 'Part1: Anatomy of a Plugin'
+date: 2017-09-19 16:00:00 +0000
+author: Serhii Kuts
+categories: guides
 ---
 _“Give a man a fish, and you feed him for a day. Teach a main to fish, and you feed him for a lifetime.”_
 

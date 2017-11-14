@@ -1,8 +1,8 @@
 ---
 layout: doc-section
-title:  "pipelines"
+title: pipelines
 doc-order: 3.1
-list-order: .7
+list-order: 0.7
 ---
 
 ### Description

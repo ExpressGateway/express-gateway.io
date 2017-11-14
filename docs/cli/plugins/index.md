@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title: eg plugins 
+title: eg plugins
 doc-order: 4.6
 ---
 

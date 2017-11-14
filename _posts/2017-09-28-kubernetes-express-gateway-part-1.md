@@ -1,13 +1,9 @@
 ---
 layout: post
-title: "Express Gateway and Kubernetes: Part 1"
-date:   2017-09-28 12:00:00 -0400
-category: announcements
-author: "Al Tsang"
-#
-# Please remember to update ~/_archives-month, ~/_archives-year
-# and ~/_categories with any necessary archive needs
-#
+title: 'Express Gateway and Kubernetes: Part 1'
+date: 2017-09-28 16:00:00 +0000
+author: Al Tsang
+categories: announcements
 ---
 It's no secret that cloud native applications are designed to maximize resilience through predictable behaviors.  Several factors, including API exposure and application design, play key roles in the successful deployment of cloud native applications.
 For instance, API exposure and providing internal or external access via standardized methods can fundamentally change your growth trajectory. You can create new services, integrations and expose customer insights.

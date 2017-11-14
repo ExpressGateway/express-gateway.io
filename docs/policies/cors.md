@@ -1,7 +1,7 @@
 ---
 layout: doc-section
-title:  "CORS"
-doc-order: 5.50
+title: CORS
+doc-order: 5.5
 ---
 
 ### Description

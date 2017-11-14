@@ -1,8 +1,8 @@
 ---
 layout: doc-section
-title:  "accessTokens"
+title: accessTokens
 doc-order: 3.2
-list-order: .4
+list-order: 0.4
 ---
 
 OAuth 2.0 related config.

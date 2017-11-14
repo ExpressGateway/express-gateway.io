@@ -1,8 +1,8 @@
 ---
 layout: doc-section
-title:  "apiEndpoints"
+title: apiEndpoints
 doc-order: 3.1
-list-order: .4
+list-order: 0.4
 ---
 
 ### Description

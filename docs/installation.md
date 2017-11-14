@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title:  "Installation"
+title: Installation
 doc-order: 1.0
 ---
 Express Gateway runs on Node.js. To get Node.js please visit the [Node.js Downloads Page](https://nodejs.org/en/download/).

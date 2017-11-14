@@ -1,8 +1,8 @@
 ---
 layout: doc-section
-title:  "Conditions"
+title: Conditions
 doc-order: 5.5
-list-order: .20
+list-order: 0.2
 ---
 
 Express Gateway comes with a core set of conditions. These conditions can be used throughout all policies in Express Gateway.  Additional conditions may also be added through Express Gateway plugins.

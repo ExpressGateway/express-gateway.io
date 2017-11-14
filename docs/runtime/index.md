@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title:  "Runtime"
+title: Runtime
 doc-order: 20.0
 ---
 #### Hot Reload vs Manual Restart

@@ -1,8 +1,8 @@
 ---
 layout: doc-section
-title:  "session"
+title: session
 doc-order: 3.2
-list-order: .3
+list-order: 0.3
 ---
 
 OAuth 2.0 related config.

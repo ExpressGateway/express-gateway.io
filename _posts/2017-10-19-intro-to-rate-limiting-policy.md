@@ -1,13 +1,9 @@
 ---
 layout: post
-title: "Intro to the Rate Limiting Policy"
-date:   2017-10-19 12:00:00 -0400
-category: guides
-author: "Valeri Karpov"
-#
-# Please remember to update ~/_archives-month, ~/_archives-year
-# and ~/_categories with any necessary archive needs
-#
+title: Intro to the Rate Limiting Policy
+date: 2017-10-19 16:00:00 +0000
+author: Valeri Karpov
+categories: guides
 ---
 
 [Express Gateway](https://www.express-gateway.io/) has a lot of powerful features beyond just

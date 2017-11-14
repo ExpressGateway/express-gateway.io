@@ -1,8 +1,8 @@
 ---
 layout: doc-section
-title:  "crypto"
+title: crypto
 doc-order: 3.2
-list-order: .2
+list-order: 0.2
 ---
 
 Express gateway does not store passwords in plain text. It converts hashes them.

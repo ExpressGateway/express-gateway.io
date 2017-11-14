@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title: eg gateway 
+title: eg gateway
 doc-order: 4.8
 ---
 

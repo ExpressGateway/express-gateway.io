@@ -1,8 +1,8 @@
 ---
 layout: doc-section
-title:  "authorizationCodes"
+title: authorizationCodes
 doc-order: 3.2
-list-order: .6
+list-order: 0.6
 ---
 
 OAuth 2.0 Related config

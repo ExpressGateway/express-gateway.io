@@ -1,7 +1,7 @@
 ---
 layout: doc-section
-title:  "OAuth 2.0"
-doc-order: 5.40
+title: OAuth 2.0
+doc-order: 5.4
 ---
 
 ### Description

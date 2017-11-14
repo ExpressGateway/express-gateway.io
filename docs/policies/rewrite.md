@@ -1,7 +1,7 @@
 ---
 layout: doc-section
-title:  "Rewrite"
-doc-order: 5.80
+title: Rewrite
+doc-order: 5.8
 ---
 
 ### Description

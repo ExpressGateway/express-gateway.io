@@ -1,13 +1,9 @@
 ---
 layout: post
-title: "How to Use Scopes to Secure Your API"
-date:   2017-10-04 12:00:00 -0400
-category: guides
-author: "Valeri Karpov"
-#
-# Please remember to update ~/_archives-month, ~/_archives-year
-# and ~/_categories with any necessary archive needs
-#
+title: How to Use Scopes to Secure Your API
+date: 2017-10-04 16:00:00 +0000
+author: Valeri Karpov
+categories: guides
 ---
 [Express Gateway](https://www.npmjs.com/package/express-gateway) has built-in support for numerous authentication mechanisms,
 like [OAuth2](https://www.lunchbadger.com/how-to-implement-oauth-in-express-gateway/) and

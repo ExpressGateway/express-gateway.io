@@ -1,7 +1,7 @@
 ---
 layout: doc-section
-title:  "Boot Sequence"
-doc-order: 20.10
+title: Boot Sequence
+doc-order: 20.1
 ---
 
 The following depiction provides a high level overview of the initializaiton and bootstrap process within Express Gateway and its extension points made possible through [plugins][plugins].
