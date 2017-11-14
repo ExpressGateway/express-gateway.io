@@ -2,6 +2,12 @@
 
 This is the repository of the website [express-gateway.io](https://express-gateway.io). It is hosted directly from the repository as a [GitHub Pages](https://pages.github.com/) website.
 
+The main branch for this repository if `dev`.
+
+The live site is published off `gh-pages`.
+
+Please note: we use [forestry.io](https://forestry.io) as a CMS around this jekyll based site, changes that are committed to `dev` may be published automatically through content pushes through [forestry.io](https://forestry.io).
+
 ## Local Setup
 
 To run website locally:
