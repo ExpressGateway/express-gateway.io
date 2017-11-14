@@ -2,7 +2,7 @@
 
 This is the repository of the website [express-gateway.io](https://express-gateway.io). It is hosted directly from the repository as a [GitHub Pages](https://pages.github.com/) website.
 
-The main branch for this repository if `dev`.
+The main branch for this repository is `dev`.
 
 The live site is published off `gh-pages`.
 
