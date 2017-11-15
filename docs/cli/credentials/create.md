@@ -23,7 +23,7 @@ eg credentials create [options]
 | `--stdin`        | `boolean` | `false` | Import newline-delimited JSON via standard input                  |
 | `-t, --type`     | `string`  |         | Type of credential: can be one of: oauth2, basic-auth, key-auth   |
 
-### Example
+### Examples
 
 #### Creating an OAuth2 credential for an app
 
