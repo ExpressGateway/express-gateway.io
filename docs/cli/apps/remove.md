@@ -10,7 +10,7 @@ Remove one or more apps.
 ### Usage
 
 ```shell
-eg apps remove [options] <app_id..>
+eg apps remove [options] <app_id|app_name>
 ```
 
 ### Options

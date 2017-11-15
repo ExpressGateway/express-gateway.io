@@ -10,7 +10,7 @@ Deactivate one or more apps.
 ### Usage
 
 ```shell
-eg apps deactivate [options] <app_id..>
+eg apps deactivate [options] <app_id|app_name>
 ```
 
 ### Options

@@ -10,7 +10,7 @@ Update a single app.
 ### Usage
 
 ```shell
-eg apps update <app_id> [options]
+eg apps update <app_id|app_name> [options]
 ```
 
 ### Options
@@ -24,7 +24,7 @@ eg apps update <app_id> [options]
 
 The properties associated with an app are specified in the model config.
 See detailed description here:
-[Consumer Management](../../consumer-management) 
+[Consumer Management](../../consumer-management)
 
 ### Examples
 
