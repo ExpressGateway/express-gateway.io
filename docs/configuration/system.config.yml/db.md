@@ -39,4 +39,4 @@ db:
 ```
 
 All options available are listed here:
-[Redis Connection Options](https://www.npmjs.com/package/redis#options-object-properties)
+[Redis Connection Options](https://github.com/luin/ioredis/blob/master/API.md#new-redisport-host-options)
