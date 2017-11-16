@@ -1,4 +1,6 @@
 ---
+pages:
+- _posts/what-is-an-api-gateway-for-iot.md
 hide_body: false
 fields:
 - name: layout
