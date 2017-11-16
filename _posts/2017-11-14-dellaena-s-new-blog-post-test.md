@@ -2,7 +2,7 @@
 title: What is an API Gateway for IoT?
 layout: post
 date: 2017-11-07 00:00:00 +0000
-author: insert author here
+author: Al Tsang
 categories:
 - technology
 ---
