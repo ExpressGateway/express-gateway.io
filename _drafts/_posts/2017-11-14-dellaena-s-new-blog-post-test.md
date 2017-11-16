@@ -7,7 +7,7 @@ categories:
 - announcements
 - technology
 ---
-In this post, we'll cover the basic components of an IoT backend using an API Gateway to sustainably build a backend to your IoT applications. We'll provide new concepts, as well as helpful tips to get you off to a great start. 
+Learn more about how an API Gateway can help you sustainably build a backend to your IoT applications. In this post, we'll cover the basic components of an IoT backend, API Gateways and we'll provide new concepts, as well as helpful tips to get you off to a great start. 
 
 ## What is an IoT Backend?
 
