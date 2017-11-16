@@ -6,7 +6,11 @@ author: Al Tsang
 categories:
 - technology
 ---
-Learn more about how an API Gateway can help you sustainably build a backend to your IoT applications. In this post, we'll cover the basic components of an IoT backend, API Gateways and we'll provide new concepts, as well as helpful tips to get you off to a great start. 
+Learn more about how an API Gateway can help you sustainably build a backend to your IoT applications. In this post, we'll cover the basic components of an IoT backend, API Gateways and we'll provide new concepts, as well as helpful tips to get you off to a great start.
+
+<!--excerpt tag-->
+
+Let's start with the basics. How an API Gateway can help you sustainably build a backend to your IoT applications? In this post, we'll cover the basic components of an IoT backend, API Gateways and we'll provide new concepts, as well as helpful tips to get you off to a great start.
 
 ## What is an IoT Backend?
 
@@ -44,19 +48,19 @@ IoT Backends have special needs because they service devices, applications and c
 
 Because the API Gateway is at the heart of Microservices, understanding this aspect of your tech stack will continue to play an important part in your IoT Backend.
 
-### Do you have a relatable IoT project with an Express Gateway implementation that you would like showcased? 
+### Do you have a relatable IoT project with an Express Gateway implementation that you would like showcased?
 
 We are currently looking for special use cases, applications and current implementations so we can get feedback on the project and more accurately understand the challenges developers are facing.
 
 ## Key Takeaways
 
-* Building an IoT backend contains 4 main components: **Data Storage**, **Protocols**, **Analytics**, and **Services** 
+* Building an IoT backend contains 4 main components: **Data Storage**, **Protocols**, **Analytics**, and **Services**
 
-* An API Gateway helps route the clients of a Microservices-based application and provides access the individual services. 
+* An API Gateway helps route the clients of a Microservices-based application and provides access the individual services.
 
 * Express Gateway gives you API gateway capabilities
 
-* You can pull together Docker/Kubernetes (Runtime) and an open source API gateway, like Express Gateway, into an easy to use tech stack that helps you conserve resources at the Enterprise level to maximize productivity 
+* You can pull together Docker/Kubernetes (Runtime) and an open source API gateway, like Express Gateway, into an easy to use tech stack that helps you conserve resources at the Enterprise level to maximize productivity
 
 ## Moving On
 
