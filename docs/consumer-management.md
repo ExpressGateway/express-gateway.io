@@ -25,11 +25,14 @@ Config: {
 }
 ```
 
-Note: 
+Note:
 `username` property is used by Express Gateway. Please avoid changing it since it may cause unexpected behaviour
 
 #### Applications
-An Application is another type of API consumer and is always associated to a user. A user may have zero to many applications.
+An Application is another type of API consumer and is always associated to a user.
+
+An user may have zero to many applications, whose names must be unique among the same user. This does not prevent
+having multiple applications, all with the same names, but bound to different users.
 
 In its base form, an application consists of an Id and userId. The `application` model in `models` directory is schemaless and you can define additional application properties.
 
@@ -54,7 +57,7 @@ A Credential is a container for secret authentication info. Always associated to
 
 ```js
 {
-  'basic-auth': {    
+  'basic-auth': {
     passwordKey: 'password',
     autoGeneratePassword: true,
     properties: {
@@ -76,16 +79,16 @@ A Credential is a container for secret authentication info. Always associated to
 }
 ```
 
-Note: 
+Note:
 `scopes` property is used by Express Gateway Autorization engine. Please avoid changing it since it may cause Autorization to work incorrectly
 
-Properties can be introduced or removed. Also properties are configurable:   
+Properties can be introduced or removed. Also properties are configurable:
 
 ##### Example
 ```js
-newProperty: { 
-    isRequired: true, 
-    isMutable: true 
+newProperty: {
+    isRequired: true,
+    isMutable: true
 }
 ```
 
