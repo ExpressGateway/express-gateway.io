@@ -6,7 +6,7 @@ author: Al Tsang
 categories:
 - technology
 ---
-earn more about how an API Gateway can help you sustainably build a backend to your IoT applications. Let's cover the basic components of an IoT backend, API Gateways and we'll provide new concepts, as well as helpful tips to get you off to a great start.<!--excerpt-->
+Learn more about how an API Gateway can help you sustainably build a backend to your IoT applications. Let's cover the basic components of an IoT backend, API Gateways and we'll provide new concepts, as well as helpful tips to get you off to a great start.<!--excerpt-->
 
 How an API Gateway can help you sustainably build a backend to your IoT applications? In this post, we'll cover the basic components of an IoT backend, API Gateways and we'll provide new concepts, as well as helpful tips to get you off to a great start.
 
@@ -45,7 +45,6 @@ Our vision behind this project is provide a s_imple, flexible and community driv
 IoT Backends have special needs because they service devices, applications and can affect everything from our connected cars to connected door locks. So expectations around the Security, Privacy and Consumer Experience are much higher. Additionally, there is an added layer of complexity when you introduce both software and hardware components.
 
 Because the API Gateway is at the heart of Microservices, understanding this aspect of your tech stack will continue to play an important part in your IoT Backend.
-
 ### Do you have a relatable IoT project with an Express Gateway implementation that you would like showcased?
 
 We are currently looking for special use cases, applications and current implementations so we can get feedback on the project and more accurately understand the challenges developers are facing.
