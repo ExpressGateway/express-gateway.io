@@ -35,25 +35,15 @@ Because the API Gateway is at the heart of Microservices, understanding this asp
 We are currently looking for special use cases, applications and current implementations so we can get feedback on the project and more accurately understand the challenges developers are facing.
 ## Key Takeaways
 * Building an IoT backend contains 4 main components: **Data Storage**, **Protocols**, **Analytics**, and **Services**
-
 * An API Gateway helps route the clients of a Microservices-based application and provides access the individual services.
-
 * Express Gateway gives you API gateway capabilities
-
 * You can pull together Docker/Kubernetes (Runtime) and an open source API gateway, like Express Gateway, into an easy to use tech stack that helps you conserve resources at the Enterprise level to maximize productivity
-
 ## Moving On
-
 We're excited to make this important aspect of your tech stack easier, more flexible and with a little love from open source tools like  [Express Gateway](http://www.express-gateway.io), an open source API gateway built entirely on Express.js. If you have a special use case or feedback, we'd love to hear from you! Additionally, we've been making some noise with the co-sponsor of  [Express Gateway](http://www.express-gateway.io), Joyent. You may have seen the slides, but this demo was featured at the Samsung Developer's conference to a packed crowd of hungry devs. We received critical feedback and, based on that feedback, **we're launching a few great features in the next few weeks so stay tuned for the next release 1.4.0!
 
 ### More Resources:
-
 * Subscribe to the  [Express Gateway Newsletter](http://eepurl.com/cVOqd5 "Express Gateway Newsletter")
-
 * Upvote features on  [Feathub](https://feathub.com/ExpressGateway/express-gateway "Express Gateway on Feathub")  - your feedback helps prioritize our roadmap with the most value realized within the shortest amount of time
-
 * Learn about the   [project's milestones ](https://github.com/ExpressGateway/express-gateway/milestones "Express Gateway Project Roadmap")and check out the latest [Project Roadmap](https://github.com/ExpressGateway/express-gateway/milestones "Express Gateway Project Roadmap").
-
 * Join the   [community discussion over on Gitter](https://gitter.im/ExpressGateway/express-gateway "Express Gateway Gitter Community").
-
 * If you're interested in more of these topics, join the live discussion on twitter  [**(@express_gateway).**](https://twitter.com/express_gateway)
