@@ -37,8 +37,8 @@ We're excited to make this important aspect of your tech stack easier, more flex
 Additionally, we've been making some noise with the co-sponsor of  [Express Gateway](http://www.express-gateway.io), Joyent. You may have seen the slides, but this demo was featured at the Samsung Developer's conference to a packed crowd of hungry devs. We received critical feedback and, based on that feedback, **we're launching a few great features in the next few weeks so stay tuned for the next release 1.4.0!**
 ---
 ### **More Resources:**
-* Subscribe to the [Express Gateway Newsletter](http://eepurl.com/cVOqd5 "Express Gateway Newsletter")
-* Upvote features on [Feathub](https://feathub.com/ExpressGateway/express-gateway "Express Gateway on Feathub")  - your feedback helps prioritize our roadmap with the most value realized within the shortest amount of time
-* Learn about the  [project's milestones ](https://github.com/ExpressGateway/express-gateway/milestones "Express Gateway Project Roadmap")and check out the latest [Project Roadmap](https://github.com/ExpressGateway/express-gateway/milestones "Express Gateway Project Roadmap").
-* Join the  [community discussion over on Gitter](https://gitter.im/ExpressGateway/express-gateway "Express Gateway Gitter Community").
+* Subscribe to the  [Express Gateway Newsletter](http://eepurl.com/cVOqd5 "Express Gateway Newsletter")
+* Upvote features on  [Feathub](https://feathub.com/ExpressGateway/express-gateway "Express Gateway on Feathub")  - your feedback helps prioritize our roadmap with the most value realized within the shortest amount of time
+* Learn about the   [project's milestones ](https://github.com/ExpressGateway/express-gateway/milestones "Express Gateway Project Roadmap")and check out the latest [Project Roadmap](https://github.com/ExpressGateway/express-gateway/milestones "Express Gateway Project Roadmap").
+* Join the   [community discussion over on Gitter](https://gitter.im/ExpressGateway/express-gateway "Express Gateway Gitter Community").
 * If you're interested in more of these topics, join the live discussion on twitter  [**(@express_gateway).**](https://twitter.com/express_gateway)
