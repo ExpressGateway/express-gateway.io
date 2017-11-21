@@ -64,8 +64,6 @@ pipelines:
 
 #### Load balancing strategies
 
-* `static`: This strategy routes each client request to the fixed assigned `url`
-
 * `round-robin`: This strategy routes each client request to a URL assigned in the `urls` array for a `serviceEndpoint`, starting at the first URL, moving through the last URL, and finally looping back to the start.
 
 
