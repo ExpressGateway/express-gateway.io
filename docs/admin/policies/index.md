@@ -25,7 +25,7 @@ Express Gateway's Admin API supports querying, enabling and disabling available 
 ]
 ```
 
-### Enables a policiy
+### Enables a policy
 
 ##### Request: `PUT /policies/:policy`
 

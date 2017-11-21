@@ -16,7 +16,7 @@ Two ways possible for now: In Memory and Redis.
 - Data is reset on each process restart
 - Data is intact during Hot Reload operation
 - No need for Redis instance
-- Ideal for development
+- Ideal for development and demos
 - Should not be used in production
 
 ```yml
