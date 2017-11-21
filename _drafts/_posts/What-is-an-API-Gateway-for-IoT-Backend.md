@@ -32,7 +32,7 @@ For example, you use Node.js that will help you hire quickly or maintain a flexi
 
 Even if you're primarily focused on other aspects of your IoT backend, you can still achieve seamless API development.
 
-Here's a master image that we've included from the [Getting Started Guide](http://www.express-gateway.io/getting-started/ "Express Gateway Getting Started Guide") so you can see the big picture:
+Here's a master image that we've included from the [Getting Started Guide](https://www.express-gateway.io/getting-started/ "Express Gateway Getting Started Guide") so you can see the big picture:
 
 ![](/assets/img/secure-2.png)
 
@@ -62,15 +62,15 @@ We are currently looking for special use cases, applications and current impleme
 
 ## Moving On
 
-We're excited to make this important aspect of your tech stack easier, more flexible and with a little love from open source tools like [Express Gateway](http://www.express-gateway.io), an open source API gateway built entirely on Express.js. If you have a special use case or feedback, we'd love to hear from you!
+We're excited to make this important aspect of your tech stack easier, more flexible and with a little love from open source tools like [Express Gateway](https://www.express-gateway.io), an open source API gateway built entirely on Express.js. If you have a special use case or feedback, we'd love to hear from you!
 
-Additionally, we've been making some noise with the co-sponsor of [Express Gateway](http://www.express-gateway.io), Joyent. You may have seen the slides, but this demo was featured at the Samsung Developer's conference to a packed crowd of hungry devs. We received critical feedback and, based on that feedback, **we're launching a few great features in the next few weeks so stay tuned for the next release 1.4.0!**
+Additionally, we've been making some noise with the co-sponsor of [Express Gateway](https://www.express-gateway.io), Joyent. You may have seen the slides, but this demo was featured at the Samsung Developer's conference to a packed crowd of hungry devs. We received critical feedback and, based on that feedback, **we're launching a few great features in the next few weeks so stay tuned for the next release 1.4.0!**
 
 ---
 
 ### **More Resources:**
 
-* [Subscribe to the Express Gateway Newsletter](http://eepurl.com/cVOqd5 "Express Gateway Newsletter")
+* [Subscribe to the Express Gateway Newsletter](https://eepurl.com/cVOqd5 "Express Gateway Newsletter")
 
 * [Upvote features on Feathub](https://feathub.com/ExpressGateway/express-gateway "Express Gateway on Feathub") - your feedback helps prioritize our roadmap with the most value realized within the shortest amount of time
 
