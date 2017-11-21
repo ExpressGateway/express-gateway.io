@@ -186,6 +186,7 @@ request is *not* a POST or HEAD.
 
 ##### not
 Invert condition result
+
 ```yml
 condition:
   name: not
@@ -196,6 +197,24 @@ condition:
             - HEAD
 ```
 Will match only if method is other than POST and HEAD
+
+##### authenticated
+
+Matches if the current request is authenticated.
+
+```yml
+condition:
+  name: authenticated
+```
+
+##### anonymous
+
+Matches if the current request is **not** authenticated.
+
+```yml
+condition:
+  name: anonymous
+```
 
 #### Best Practice Note
 While it is possible to build quite complicated condition tree, huge trees could greatly affect readability of your EG configuration. In such cases it could be better to have multiple api endpoints and pipelines
