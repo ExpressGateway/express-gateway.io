@@ -20,6 +20,7 @@ can eventually define other personal schemas to validate the provided options.
 ##### Request: `GET /schemas/condition/oneOf`
 
 ##### Response: 200
+
 ```json
 {
   "type": "condition",

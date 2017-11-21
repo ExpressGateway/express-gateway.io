@@ -1,7 +1,7 @@
 ---
 layout: doc-section
 title: Proxy
-doc-order: 5.8
+doc-order: 5.9
 ---
 
 ### Description
@@ -65,6 +65,7 @@ pipelines:
 #### Load balancing strategies
 
 * `round-robin`: This strategy routes each client request to a URL assigned in the `urls` array for a `serviceEndpoint`, starting at the first URL, moving through the last URL, and finally looping back to the start.
+
 
 *More strategies may be implemented in the future.*
 

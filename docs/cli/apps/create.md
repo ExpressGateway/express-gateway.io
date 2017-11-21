@@ -27,9 +27,11 @@ eg apps create [options]
 
 Either the `-u, --user` option or the `--stdin` option is required to run this command.
 
+Multiple applications with the same name can exist — as long these are all bound to different users.
+
 The properties associated with an app are specified in the model config.
 See detailed description here:
-[Consumer Management](../../consumer-management) 
+[Consumer Management](../../consumer-management)
 
 ### Examples
 
@@ -45,7 +47,7 @@ $ eg apps create -u ksmith
 #### Create an app with properties
 
 ```shell
-$ eg apps create -u ksmith -p 'name=appy' -p 'redirectUri=https://appy.example.com/cb' 
+$ eg apps create -u ksmith -p 'name=appy' -p 'redirectUri=https://appy.example.com/cb'
 ✔ Created e1107337-8a09-447d-8a44-020846bb4353
 ```
 

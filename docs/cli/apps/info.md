@@ -11,7 +11,7 @@ Show details for a single app.
 ### Usage
 
 ```shell
-eg apps info [options] <app_id>
+eg apps info [options] <app_id|app_name>
 ```
 
 ### Options

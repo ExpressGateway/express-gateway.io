@@ -10,7 +10,7 @@ Activate one or more apps.
 ### Usage
 
 ```shell
-eg apps activate [options] <app_id..>
+eg apps activate [options] <app_id|app_name>
 ```
 
 ### Options

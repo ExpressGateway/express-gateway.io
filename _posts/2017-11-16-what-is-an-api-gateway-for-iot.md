@@ -8,7 +8,7 @@ categories:
 ---
 Learn more about how an API Gateway can help you sustainably build a backend to your IoT applications. Let's cover the basic components of an IoT backend, API Gateways and we'll provide new concepts, as well as helpful tips to get you off to a great start.<!--excerpt-->
 How an API Gateway can help you sustainably build a backend to your IoT applications? In this post, we'll cover the basic components of an IoT backend, API Gateways and we'll provide new concepts, as well as helpful tips to get you off to a great start.
-## First Up: What is an IoT Backend? 
+## First Up: What is an IoT Backend?
 There are a few primary components to constructing the backend of an IoT application.
 * **Data Storage** - _You need the right tools to manage your machine data can make the difference between success and failure._
 * **Protocols** - _Devices or "things" communicate through more compact and efficient the payloads We're talking about protocol support just as MQTT and CoAP in addition to standard JSON over REST._
@@ -31,9 +31,9 @@ We are currently looking for special use cases, applications and current impleme
 * Express Gateway gives you API gateway capabilities
 * You can pull together Docker/Kubernetes (Runtime) and an open source API gateway, like Express Gateway, into an easy to use tech stack that helps you conserve resources at the Enterprise level to maximize productivity
 ## Moving On
-We're excited to make this important aspect of your tech stack easier, more flexible and with a little love from open source tools like   [Express Gateway](http://www.express-gateway.io), an open source API gateway built entirely on Express.js. If you have a special use case or feedback, we'd love to hear from you! Additionally, we've been making some noise with the co-sponsor of   [Express Gateway](http://www.express-gateway.io), Joyent. You may have seen the slides, but this demo was featured at the Samsung Developer's conference to a packed crowd of hungry devs. We received critical feedback and, based on that feedback, \*\*we're launching a few great features in the next few weeks so stay tuned for the next release 1.4.0!
+We're excited to make this important aspect of your tech stack easier, more flexible and with a little love from open source tools like   [Express Gateway](https://www.express-gateway.io), an open source API gateway built entirely on Express.js. If you have a special use case or feedback, we'd love to hear from you! Additionally, we've been making some noise with the co-sponsor of   [Express Gateway](https://www.express-gateway.io), Joyent. You may have seen the slides, but this demo was featured at the Samsung Developer's conference to a packed crowd of hungry devs. We received critical feedback and, based on that feedback, \*\*we're launching a few great features in the next few weeks so stay tuned for the next release 1.4.0!
 ### More Resources:
-* **Subscribe** to the   [Express Gateway Newsletter](http://eepurl.com/cVOqd5 "Express Gateway Newsletter")
+* **Subscribe** to the   [Express Gateway Newsletter](https://eepurl.com/cVOqd5 "Express Gateway Newsletter")
 * **Upvote** features on   [Feathub](https://feathub.com/ExpressGateway/express-gateway "Express Gateway on Feathub")  - your feedback helps prioritize our roadmap with the most value realized within the shortest amount of time
 * **Learn** about the  [project's milestones ](https://github.com/ExpressGateway/express-gateway/milestones "Express Gateway Project Roadmap")and check out the latest [Project Roadmap](https://github.com/ExpressGateway/express-gateway/milestones "Express Gateway Project Roadmap").
 * **Join** the  [community discussion over on Gitter](https://gitter.im/ExpressGateway/express-gateway "Express Gateway Gitter Community").
