@@ -73,7 +73,7 @@ We have acknowledged all of them in our changelog, however we want to praise the
 
 [**@dotBits**](https://github.com/dotBits) — drafted the initial implementation for auto checking code styles for all our files.
 
-### Thanks so much for your support and we look forward to building more amazing tech and solving hard problems with you!
+Thanks so much for your support and we look forward to building more amazing tech and solving hard problems with you!
 
 ### Moving On
 
