@@ -9,7 +9,7 @@ categories:
 ---
 # **Welcome Express Gateway 1.4.0!**
 
-Always be shipping code! Open source projects are no exception. In the latest 1.4.0 release, we’ve got a set of brand new features and crushed some pesky bugs. In case you’ve been following along at home, you’ll notice that several of the features and bugs that have been included were direct recommendations or contributions from the community. Thank you for the ongoing support.
+Always be shipping code! Open source projects are no exception. In the latest 1.4.0 release, we’ve got a set of brand new features and crushed some pesky bugs. In case you’ve been following along at home, you’ll notice that several of the features and bugs that have been included were direct recommendations or contributions from the community. Thank you for the ongoing support. <!--excerpt-->
 
 **_Now — on to the good stuff!_**
 
@@ -67,7 +67,7 @@ In this release we have received multiple external contributions from you, our a
 
 We have acknowledged all of them in our changelog, however we want to praise them here as well:
 
-[**@stipsan **](https://github.com/stipsan)— for improving his library (that’s a dependency for the gateway) and being extremely responsive on our requests
+[\*\*@stipsan \*\*](https://github.com/stipsan)— for improving his library (that’s a dependency for the gateway) and being extremely responsive on our requests
 
 [**@srcnix**](https://github.com/srcnix) — provided the support for certificate and key files for the Redis connector
 
