@@ -1,6 +1,6 @@
 ---
 layout: doc-section
-title: npx migrate
+title: migrate
 doc-order: 4.99
 ---
 
