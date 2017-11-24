@@ -24,6 +24,44 @@ To create consumers (user and apps): use the [CLI][cli] and [create user][users-
 To create a `jwt` credential for an user or app: use the [CLI][cli] and [create credential][credentials-create]
 command with type `jwt`. You can also use the [Admin API][admin_api] to do the same thing
 
+Once you create a token, you will get a key pair: `keyId` and `keySecret`.
+
+`keyId` one **must** be placed in the `sub` field of your JWT. Otherwise, the Gateway will not be able to verify
+the consumer bound to it, and it will refuse the request.
+
+`keySecret` is a password you can use to sign your tokens. Therefore you should put this one in your policy configuration.
+Anyway, you're free to select your own `secret`, if required.
+
+#### Using RS256
+
+You can also use a public/private key and leverage RS256 to sign and verify your tokens.
+
+First of all, generate a new public/private key using openssl:
+
+```shell
+$ openssl genrsa -out private.pem 2048
+```
+
+Keep the private key in a super-secure place (under your bed might be a good place) in your system.
+
+Then extract the public key from it:
+```shell
+$ openssl rsa -in private.pem -outform PEM -pubout -out public.pem
+```
+
+Now you have the public key in `public.pem` and the private one in `private.pem`.
+
+Use the private key to sign your tokens, and give the public key to Express Gateway using the `secretFile` parameter,
+so it can verify your tokens are correct.
+
+#### Verify external tokens
+
+You don't have to be the one issuing and signin the tokens. You can also leverage thirthy party providers, such as
+[Auth0](https://auth0.com) or [oAuth.io](https://oauth.io) by downloading their public certificate and provide them
+to the gateway.
+
+#### Installation
+
 To enable the JWT policy, add `jwt` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
 
 ```yaml
@@ -32,7 +70,7 @@ policies:
   # other policies
 ```
 
-### Example
+#### Example
 
 ```yaml
 
@@ -79,12 +117,12 @@ The JWT scheme and header are not standardized, therefore they can be overriden 
 
 ##### Options Reference
 
-* `secret`:
+* `secretOrPubKey`:
   - the secret used to verify the incoming token
-  - required unless `secretFile` is provided
-* `secretFile`:
+  - required unless `secretOrPubKeyFile` is provided
+* `secretOrPubKeyFile`:
   - a public key file used to verify the token signature. This can be provided from a thirty party service as well.
-  - required unless `secret` is provided
+  - required unless `secretOrPubKey` is provided
 * `jwtExtractor`:
   - the strategy used to extract the token from the request
   - default value: `authBearer`
@@ -94,8 +132,9 @@ The JWT scheme and header are not standardized, therefore they can be overriden 
   - Not required for `authBearer` strategy
 * `audience`:
   - if provided, the `aud` claim will be verified against this value
-
-### A complete flow example
+* `checkCredentialExistence`:
+  - determines whether the gateway should check for the credential existence in the system, looking at the `sub` claim.
+  - default value: `true`
 
 
 [rfc-jwt]: https://tools.ietf.org/html/rfc7519
