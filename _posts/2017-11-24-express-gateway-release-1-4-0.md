@@ -27,7 +27,7 @@ In addition to ease of use, we wanted to make it easier to contribute to the pro
 
 Additionally, we wanted to give back to our community of supporters and project contributors that would make their life a little easier when they commit code. So, we have added _lint-staged_ to check and fix all code before it’s committed to the git repository. This makes it easier for the supporters and contributors of Express Gateway who are making the code magic happen.
 
-We have replaced our internal Redis client from node-redis to ioredis. This brings to us a lot of improvements (for example, it’s Promise based by default so we do not have to monkey patch its methods) and it also supports a lot of features the community has been asking for, such as Sentiel (Redis’ built in high availabilty solution) and cluster connections. Please refer to our[**documentation**](http://www.express-gateway.io/docs/configuration/system.config.yml/db) to learn how to leverage those changes.
+We have replaced our internal Redis client from node-redis to ioredis. This brings to us a lot of improvements (for example, it’s Promise based by default so we do not have to monkey patch its methods) and it also supports a lot of features the community has been asking for, such as Sentiel (Redis’ built in high availabilty solution) and cluster connections. Please refer to our[**documentation**](https://www.express-gateway.io/docs/configuration/system.config.yml/db) to learn how to leverage those changes.
 
 ### More Authentication in that Framework
 
