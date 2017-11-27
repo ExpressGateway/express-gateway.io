@@ -8,7 +8,7 @@ categories:
 - technology
 ---
 # **Welcome Express Gateway 1.4.0!**
-
+<!--excerpt-->
 Always be shipping code! Open source projects are no exception. In the latest 1.4.0 release, we’ve got a set of brand new features and crushed some pesky bugs. In case you’ve been following along at home, you’ll notice that several of the features and bugs that have been included were direct recommendations or contributions from the community. Thank you for the ongoing support. <!--excerpt-->
 
 **_Now — on to the good stuff!_**
