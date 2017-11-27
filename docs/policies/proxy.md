@@ -61,15 +61,59 @@ pipelines:
   - Changes the origin of the host header to the target URL, defaults to `false`.
 * `strategy`:
   - Assigns a load-balancing strategy for `serviceEndpoint` declarations that have more than one URL, defaults to `round-robin`.
+* `proxyUrl`: 
+  - Address of the intermediate proxy . Example: `http://corporate.proxy:3128`. See more details below.
 
 #### Load balancing strategies
 
 * `round-robin`: This strategy routes each client request to a URL assigned in the `urls` array for a `serviceEndpoint`, starting at the first URL, moving through the last URL, and finally looping back to the start.
 
+```yaml
+serviceEndpoints:
+  backend: # will be referenced in proxy policy
+    urls:
+      - http://srv1.example.com
+      - http://srv2.example.com
+
+pipelines:
+  example-pipeline:
+    apiEndpoints:   
+      - api
+    policies:
+      proxy: 
+        - action:
+            serviceEndpoint: backend
+```
 
 *More strategies may be implemented in the future.*
 
 Note: more complex proxy rules will be introduced to do wilcard based matching similar to Express routing rules
+
+
+### Service Enpoints behind intermediate proxy
+Some corporation allow access to internet only through proxy. 
+In this case you need to specifically tell Express-Gateway to use proxy to forward requests
+
+Request flow will look like this:
+
+Request -> Express Gateway with Proxy policy -> Corporate proxy -> Target Service Endpoint
+
+This can be done done using `http_proxy` env variable. 
+
+`http_proxy=http://corporate.proxy:3128 npm start`
+
+Another way is to set `proxyUrl` in the proxy policy itself
+```yaml
+pipelines:
+  example-pipeline:
+    apiEndpoints:   # process all request matching "api" apiEndpoint
+      - api
+    policies:
+      proxy: # name of the policy
+        - action:
+            serviceEndpoint: example
+            proxyUrl: http://corporate.proxy:3128
+```
 
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
