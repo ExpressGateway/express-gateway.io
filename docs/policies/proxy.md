@@ -62,7 +62,7 @@ pipelines:
 * `strategy`:
   - Assigns a load-balancing strategy for `serviceEndpoint` declarations that have more than one URL, defaults to `round-robin`.
 * `proxyUrl`: 
-  - Address of the intermediate proxy . Example: `http://corporate.proxy:3128`. See more details below.
+  - Address of the intermediate proxy. Example: `http://corporate.proxy:3128`. See more details below.
 
 #### Load balancing strategies
 
