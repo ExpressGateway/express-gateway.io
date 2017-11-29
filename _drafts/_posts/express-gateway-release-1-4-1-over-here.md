@@ -15,7 +15,7 @@ categories:
 
 Can you handle it? Well, now the API Gateway correctly handles the HTTP_PROXY environment variable. This fix allows usage service endpoints behind a corporate proxy.  Hang tight, we're still working on having good standards for that code style.
 
-Additionally, we've updated [ioredis-mock](https://www.npmjs.com/package/ioredis-mock) to the latest version(**3.4.2** ). So this version adds a layer of polish. We had to workaround a few areas in the previous release in order to complete the client switch. Now it's fired up and ready to go so definitely worth checking out.
+Additionally, we've updated [ioredis-mock](https://www.npmjs.com/package/ioredis-mock) to the latest version(**3.4.2** ). So this version adds a layer of polish and shine. We had to workaround a few areas in the previous release in order to complete the client switch. Now it's fired up and ready to go so definitely worth checking out.
 
 In addition to fixing, we've also be reformatting.
 
