@@ -17,7 +17,7 @@ Can you handle it? Well, now the API Gateway correctly handles [the HTTP_PROXY e
 
 Hang tight, we're still working on having good standards for that code style such as more rules around enforcing consistent code formatting. It's internal to the codebase so there's no real impact on users. However; we wanted to share because this project is maturing and transparency is important to us and to our community, like you.
 
-Additionally, we've updated [ioredis-mock](https://www.npmjs.com/package/ioredis-mock) to the latest version(**3.4.2** ). So this version adds a layer of polish and shine. We had to workaround a few areas in the previous release in order to complete the client switch. Now it's fired up and ready to go so definitely worth checking out.
+Additionally, we've updated [ioredis-mock](https://www.npmjs.com/package/ioredis-mock) to the latest version(**3.4.2** ). So this version adds a layer of polish and shine. We had to workaround a few areas in the previous release in order to complete the client switch. The ioredis-mock update is the last part of adding finishing touches to our support for Redis Sentinel, a feature we released with 1.4.  Again, the changes here have little impact on end users, but now it's fired up and ready to go so definitely worth checking out.
 
 In addition to fixing, we've also be reformatting.
 
