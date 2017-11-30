@@ -7,8 +7,6 @@ categories:
 - announcements
 - technology
 ---
-# Express Gateway Release 1.4.1 over here!
-
 We're back with brand new fixes, changes, updates and..PROGRESS! Who's ready for 1.4.1? Let's kick it off! <!--excerpt-->
 
 ## An Update with all the Fixins'
