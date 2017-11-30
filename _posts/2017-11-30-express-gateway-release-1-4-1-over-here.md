@@ -9,11 +9,11 @@ categories:
 ---
 # Express Gateway Release 1.4.1 over here!
 
-<excerpt--->We're back with brand new fixes, changes, updates and..PROGRESS! Who's ready for 1.4.1? Let's kick it off! <---/excerpt>
+We're back with brand new fixes, changes, updates and..PROGRESS! Who's ready for 1.4.1? Let's kick it off! <!--excerpt-->
 
 ## An Update with all the Fixins'
 
-Can you handle it? Well, now the API Gateway correctly handles [the HTTP_PROXY environment variable](https://www.express-gateway.io/docs/policies/proxy#service-enpoints-behind-intermediate-proxy). This fix allows developers to use service endpoints behind a corporate proxy. 
+Can you handle it? Well, now the API Gateway correctly handles [the HTTP_PROXY environment variable](https://www.express-gateway.io/docs/policies/proxy#service-enpoints-behind-intermediate-proxy). This fix allows developers to use service endpoints behind a corporate proxy.
 
 Hang tight, we're still working on having good standards for that code style such as more rules around enforcing consistent code formatting. It's internal to the codebase so there's no real impact on users. However; we wanted to share because this project is maturing and transparency is important to us and to our community, like you.
 
