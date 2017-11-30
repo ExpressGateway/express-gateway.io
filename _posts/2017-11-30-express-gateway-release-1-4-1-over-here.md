@@ -7,7 +7,7 @@ categories:
 - announcements
 - technology
 ---
-We're back with brand new fixes, changes, updates and..PROGRESS! Who's ready for 1.4.1? Let's kick it off! <!--excerpt-->
+We're back with brand new fixes, changes, updates and..PROGRESS! Thanks to everyone (you) for making all of this possible. We're excited to see the project mature. Who's ready for 1.4.1? Let's kick it off! <!--excerpt-->
 
 ## An Update with all the Fixins'
 
