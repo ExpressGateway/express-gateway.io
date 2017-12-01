@@ -42,6 +42,7 @@ Finally ExpressJS applications is starting and is exposed by 2 node.js servers: 
 #### Events
 - `http-ready` - emitted once HTTP server starts listening on port
 - `https-ready` - emitted once HTTPS server starts listening on port
+Now plugins can subsctibe to actual node.js server events (like `upgrade` required for websockets)
 
 ## Admin API initialization
 #### Admin ExpressJS server initialize
