@@ -48,9 +48,11 @@ to protect.
 
 ### Can the Express Gateway run clustered?
 
-Not fully. Express Gateway utilizes Redis as a distributed data store. All application data can be namespaced globally
-across all Express Gateway instances.  We're working on making the config the same way. Once we do so, we’ll be adding
-in the capability to cluster Express Gateway instances horizontally.
+Not fully. Express Gateway can run clustered, but not all capabilities are cluster aware. For example, there are no
+global counters. On the other hand, given it utilizes Redis as a distributed data store, all application data can be
+namespaced globally across all Express Gateway instances.
+We're working on making the config the same way. Once we do so, we’ll be adding in the capability to cluster Express
+Gateway instances horizontally.
 
 ### Can I easily deploy a Gateway instance on the web without having to set up my own server or pay for it?
 
