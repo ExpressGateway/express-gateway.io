@@ -15,7 +15,7 @@ A token can then be passed through the Authorization header or in the request's 
 will either proxy the request to your upstream services if the token's signature is verified, or discard the request if
 not.
 
-Express Gateway can also verify on some of the registered claims of RFC 7519 (`exp` and `nbf`).
+Express Gateway can also verify on some of the registered claims of RFC 7519 (such as `exp` and `nbf`).
 
 ### Usage
 
@@ -23,17 +23,18 @@ In order to use the JWT policy, consumers must have a `jwt` credential associate
 
 To create consumers (user and apps): use the [CLI][cli] and [create user][users-create] or [create app][apps-create]
 command.
+
 To create a `jwt` credential for an user or app: use the [CLI][cli] and [create credential][credentials-create]
 command with type `jwt`. You can also use the [Admin API][admin_api] to do the same thing
 
 Once you create a token, you will get a key pair: `keyId` and `keySecret`.
 
-`keyId` one **must** be placed in the `sub` field of your JWT. Otherwise, the Gateway will not be able to verify
-the consumer bound to it, and it will refuse the request. You can skip this check setting the
-`checkCredentialExistence` to `false`.
+`keyId` **must** be placed in the `sub` field of your JWT. Otherwise, the Gateway will not be able to verify
+the consumer bound to it, and it will refuse the request. You can skip this check setting (although we do not recommend it)
+the `checkCredentialExistence` to `false`.
 
-`keySecret` is a password you can use to sign your tokens. Therefore you should put this one in your policy configuration.
-Anyway, you're free to select your own `secret`, if required.
+`keySecret` is a suggested password you can use to sign your tokens — so you should put this one in your policy
+configuration. Anyway, you're free to select your own `secret`, if required.
 
 #### Using RS256
 
@@ -54,8 +55,8 @@ $ openssl rsa -in private.pem -outform PEM -pubout -out public.pem
 
 Now you have the public key in `public.pem` and the private one in `private.pem`.
 
-Use the private key to sign your tokens, and give the public key to Express Gateway using the `secretFile` parameter,
-so it can verify your tokens are correct.
+Use the private key to sign your tokens, and give the public key to Express Gateway using the `secretOrPrivateKeyFile`
+parameter, so it can verify your tokens are correct.
 
 #### Verify external tokens
 
@@ -105,6 +106,7 @@ Express Gateway supports several ways to locate your Json Web Token in your requ
 ### Locating the JWT token
 
 #### Using Authorization header (recommended)
+
 By default the `Authorization` header with `Bearer` is used to locate your token.
 
 The JWT scheme and header are not standardized, therefore they can be overriden if required.
