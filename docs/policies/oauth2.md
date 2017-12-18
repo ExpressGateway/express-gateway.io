@@ -8,18 +8,23 @@ doc-order: 5.4
 
 The OAuth 2.0 policy follows the [RFC-6749 standard][rfc-6749-standard].
 
-Express Gateway plays the role of both resource server and authorization server. In order to use this policy, consumers must be created and an `oauth2` credential created for them.
+Express Gateway plays the role of both resource server and authorization server. In order to use this policy, consumers
+must be created and an `oauth2` credential created for them.
 
 The OAuth 2.0 policy will listen on the following global endpoints:
 
 * `/oauth2/authorize`
-    * Endpoint to provision authorization codes for the Authorization Code flow, or the access token for the Implicit Grant flow. Only POST is supported.
+    * Endpoint to provision authorization codes for the Authorization Code flow, or the access token for the Implicit
+    Grant flow. Only POST is supported.
 
 * `/oauth2/token`
-    * Endpoint to provision access tokens to support the Client Credentials and Password Credentials Grant flows. Only POST is supported.
+    * Endpoint to provision access tokens to support the Client Credentials and Password Credentials Grant flows.
+    Only POST is supported.
 
 
-When a client has been authenticated and authorized, Express Gateway will append property and authentication headers to the request before proxying it to the downstream service, so that you can identify the consumer and the end-user in your service:
+When a client has been authenticated and authorized, Express Gateway will append property and authentication headers to
+the request before proxying it to the downstream service, so that you can identify the consumer and the end-user in
+your service:
 
 #### Post authentication/authorization headers
 
@@ -53,7 +58,8 @@ authorization server for the user.
         * `scopes`
         * `response_type`
 
-7. Express Gateway responds back with whether or not the client is authorized. If authorized, it returns an authorization code and redirect_uri.
+7. Express Gateway responds back with whether or not the client is authorized. If authorized, it returns an
+   authorization code and redirect_uri.
 8. UI redirects the client app to the redirect_uri
 9. Client App will exchange the `auth_code` for an access token by making a POST to `/oauth2/token`
 
@@ -70,10 +76,13 @@ Client credentials grant will follow the standard RFC documentation.
 
 In order to use the OAuth2 Authorization policy, consumers must be created and `oauth2` credentials created for them.
 
-To create consumers (users and apps): use the [CLI][cli] and [create user][users-create] or [create app][apps-create] command.
-To create an `oauth2` credential for a user or app: use the [CLI][cli] and [create credential][credentials-create] command with type `oauth2`.
+To create consumers (users and apps): use the [CLI][cli] and [create user][users-create] or [create app][apps-create]
+command.
+To create an `oauth2` credential for a user or app: use the [CLI][cli] and [create credential][credentials-create]
+command with type `oauth2`.
 
-To enable the OAuth2 policy, add `oauth2` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
+To enable the OAuth2 policy, add `oauth2` in [gateway.config.yml][gateway.config.yml] in the [policies][policies]
+section.
 
 ```yaml
 
@@ -128,7 +137,8 @@ You can see a live example on [Glitch](https://glitch.com/edit/#!/express-gatewa
 
 ### Customizing the UI
 
-The basic implementation of the UI for the OAuth2 policy is found in `/lib/policies/oauth2/views`. In this directory, you can customize the code to suit your needs.
+The basic implementation of the UI for the OAuth2 policy is found in `/lib/policies/oauth2/views`. In this directory,
+you can customize the code to suit your needs.
 
 [rfc-6749-standard]: https://tools.ietf.org/html/rfc6749
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
