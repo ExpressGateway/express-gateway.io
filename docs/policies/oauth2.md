@@ -151,4 +151,3 @@ you can customize the code to suit your needs.
 [users-create]: {{ site.baseurl }}{% link docs/cli/users/create.md %}
 [apps-create]: {{ site.baseurl }}{% link docs/cli/apps/create.md %}
 [credentials-create]: {{ site.baseurl }}{% link docs/cli/credentials/create.md %}
-[credentials-create]: {{ site.baseurl }}{% link docs/cli/credentials/create.md %}
