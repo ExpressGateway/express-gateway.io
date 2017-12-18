@@ -12,7 +12,8 @@ The JWT policy can verify requests containing HS256 or RS256 signed JSON Web Tok
 Each of your Consumers will have JWT credentials (public and secret keys) which must be used to sign their JWTs.
 
 A token can then be passed through the Authorization header or in the request's URI or even in the body and the gateway
-will either proxy the request to your upstream services if the token's signature is verified, or discard the request if not.
+will either proxy the request to your upstream services if the token's signature is verified, or discard the request if
+not.
 
 Express Gateway can also verify on some of the registered claims of RFC 7519 (`exp` and `nbf`).
 
@@ -20,14 +21,16 @@ Express Gateway can also verify on some of the registered claims of RFC 7519 (`e
 
 In order to use the JWT policy, consumers must have a `jwt` credential associated with them.
 
-To create consumers (user and apps): use the [CLI][cli] and [create user][users-create] or [create app][apps-create] command.
+To create consumers (user and apps): use the [CLI][cli] and [create user][users-create] or [create app][apps-create]
+command.
 To create a `jwt` credential for an user or app: use the [CLI][cli] and [create credential][credentials-create]
 command with type `jwt`. You can also use the [Admin API][admin_api] to do the same thing
 
 Once you create a token, you will get a key pair: `keyId` and `keySecret`.
 
 `keyId` one **must** be placed in the `sub` field of your JWT. Otherwise, the Gateway will not be able to verify
-the consumer bound to it, and it will refuse the request.
+the consumer bound to it, and it will refuse the request. You can skip this check setting the
+`checkCredentialExistence` to `false`.
 
 `keySecret` is a password you can use to sign your tokens. Therefore you should put this one in your policy configuration.
 Anyway, you're free to select your own `secret`, if required.
