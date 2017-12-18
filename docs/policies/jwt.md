@@ -117,12 +117,12 @@ The JWT scheme and header are not standardized, therefore they can be overriden 
 
 ##### Options Reference
 
-* `secretOrPubKey`:
+* `secretOrPublicKey`:
   - the secret used to verify the incoming token
-  - required unless `secretOrPubKeyFile` is provided
-* `secretOrPubKeyFile`:
+  - required unless `secretOrPublicKeyFile` is provided
+* `secretOrPublicKeyFile`:
   - a public key file used to verify the token signature. This can be provided from a thirty party service as well.
-  - required unless `secretOrPubKey` is provided
+  - required unless `secretOrPublicKey` is provided
 * `jwtExtractor`:
   - the strategy used to extract the token from the request
   - default value: `authBearer`
