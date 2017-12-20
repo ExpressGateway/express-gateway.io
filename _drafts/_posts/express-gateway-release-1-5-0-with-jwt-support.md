@@ -7,9 +7,19 @@ categories:
 - announcements
 - technology
 ---
-You asked - we listened. That's what open source projects should be all about. In the latest release of Express Gateway 1.5.0, we've included support for JWT,  Let's go! <!--excerpt-->
+You asked - we listened. That's what open source projects should be all about. In the latest release of Express Gateway 1.5.0, we've included support for  JSON Web Tokens (JWT). Let's go! <!--excerpt-->
 
-## A sneek peek at the JWT policy
+## What is a JSON Web Token?
+
+A JSON Web Token (JWT)  was the most requested feature from the Express Gateway community on Feathub. 
+
+Described as "an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object."  This info can be verified and you can trust it because it is signed digitally. 
+
+_How do JWTs get signed digitally?_
+
+JWTs are signed using a secret key pair (with the HMAC algorithm) or you can also use a public/private key pair using RSA, a public-key cryptosystem that is widely used for secure data transmission.
+
+## A sneek peek at the JWT policy in Express Gateway
 
 The JWT policy can verify requests containing HS256 or RS256 signed JSON Web Tokens (as specified in \[RFC 7519\]\[rfc-jwt\])
 
@@ -74,15 +84,15 @@ Express Gateway supports several ways to locate your Json Web Token in your requ
 
 **Big Change.** _Small Release._ In an effort to help developers, we lowered the minimal level of severity for a log in order to be printed on the standard output. We lowered it from error to warn. This should (hopefully) help you to reveal issues at a more granular level. When something is going sideways, now you can understand what's going on in a more clear and concise way.
 
-<iframe width="560" height="315" src="[https://www.youtube.com/embed/y-U4Llg3kmM](https://www.youtube.com/embed/y-U4Llg3kmM "https://www.youtube.com/embed/y-U4Llg3kmM")" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/y-U4Llg3kmM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
 ### Moving On
 
-_What's up next? So kind of you to ask!_ Check out the rest of the project milestones.
+_What's up next? So kind of you to ask!_ Check out the [**rest of the project milestones**](https://github.com/ExpressGateway/express-gateway/milestones)**.**
 
-We would [love your support in making it happen](https://github.com/ExpressGateway/express-gateway) and if you’re interested in becoming a maintainer or contributor, now’s the time!
+We would [**love your support in making it happen **](https://github.com/ExpressGateway/express-gateway)and if you’re interested in becoming a maintainer or contributor, now’s the time!
 
-[Hit up Gitter](https://gitter.im/ExpressGateway/express-gateway) and join the rest of the developer community.
+[**Hit up Gitter **](https://gitter.im/ExpressGateway/express-gateway)and join the rest of the developer community.
 
 **_Not quite ready? That’s ok!_**
 
