@@ -1,8 +1,9 @@
 ---
 pages:
+- _posts/express-gateway-release-1-5-0-with-jwt-support.md
 - _posts/2017-11-30-express-gateway-release-1-4-1-over-here.md
-- _posts/2017-11-24-express-gateway-release-1-4-0.md
 - _posts/2017-11-16-what-is-an-api-gateway-for-iot.md
+- _posts/2017-11-24-express-gateway-release-1-4-0.md
 hide_body: false
 fields:
 - name: layout
