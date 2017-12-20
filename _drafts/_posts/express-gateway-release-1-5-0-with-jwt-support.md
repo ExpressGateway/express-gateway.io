@@ -7,7 +7,7 @@ categories:
 - announcements
 - technology
 ---
-We're back with brand new fixes, changes, updates and..PROGRESS! Thanks to everyone (you) for making all of this possible. We're excited to see the project mature. Who's ready for 1.4.1? Let's kick it off! <!--excerpt-->
+You asked - we listened. That's what open source projects should be all about. In the latest release of Express Gateway 1.5.0, we've included support for JWT,  Let's go! <!--excerpt-->
 
 ## An Update with all the Fixins'
 
