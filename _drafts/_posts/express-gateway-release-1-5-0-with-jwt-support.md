@@ -9,24 +9,64 @@ categories:
 ---
 You asked - we listened. That's what open source projects should be all about. In the latest release of Express Gateway 1.5.0, we've included support for JWT,  Let's go! <!--excerpt-->
 
-## An Update with all the Fixins'
+## A sneek peek at the JWT policy
 
-Can you handle it? Well, now the API Gateway correctly handles [the HTTP_PROXY environment variable](https://www.express-gateway.io/docs/policies/proxy#service-enpoints-behind-intermediate-proxy). This fix allows developers to use service endpoints behind a corporate proxy.
+The JWT policy can verify requests containing HS256 or RS256 signed JSON Web Tokens (as specified in \[RFC 7519\]\[rfc-jwt\])
 
-Hang tight, we're still working on having good standards for that code style such as more rules around enforcing consistent code formatting. It's internal to the codebase so there's no real impact on users. However; we wanted to share because this project is maturing and transparency is important to us and to our community, like you.
+**_Important:_** _Each of your Consumers will have JWT credentials (public and secret keys) which must be used to sign their JWTs._
 
-Additionally, we've updated [ioredis-mock](https://www.npmjs.com/package/ioredis-mock) to the latest version(**3.4.2** ). So this version adds a layer of polish and shine. We had to workaround a few areas in the previous release in order to complete the client switch. The ioredis-mock update is the last part of adding finishing touches to our support for Redis Sentinel, a feature we released with 1.4.  Again, the changes here have little impact on end users, but now it's fired up and ready to go so definitely worth checking out.
+Then a token can be passed through the Authorization header or in the request's URI or even in the body and the Gateway. This policy will either proxy the request to your upstream services if the token's signature is verified, or discard the request if not.
 
-In addition to fixing, we've also be reformatting.
+Additionally, Express Gateway can also verify on some of the registered claims of RFC 7519 (`exp` and `nbf`).
 
-_They go together, right?_
+## Get Started with the JWT Policy in Express Gateway
 
-We've just updated our [ESLint version](https://www.npmjs.com/package/eslint) and made it scan the whole codebase. In case you are not sure what ESLint is all about, it's a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. You may have already seen JSLint and JSHint, but there are some exceptions with how ESLint works.
+In order to use the JWT policy, consumers must have a `jwt` credential associated with them.
+\+
+\+To create consumers (user and apps): use the \[CLI\]\[cli\] and \[create user\]\[users-create\] or \[create app\]\[apps-create\] command.
+\+To create a `jwt` credential for an user or app: use the \[CLI\]\[cli\] and \[create credential\]\[credentials-create\]
+Use command with type `jwt`. You can also use the \[Admin API\]\[admin_api\] to do the same thing
 
-* ESLint uses [**Espree**](https://github.com/eslint/espree) for JavaScript parsing and an AST to evaluate patterns in code.
-* ESLint is completely pluggable, every single rule is a plugin and you can add more at runtime.
+To enable the JWT policy, add `jwt` in \[gateway.config.yml\]\[gateway.config.yml\] in the \[policies\]\[policies\] section. + +\`\`\`yaml +policies: jwt
 
-In addition to all of this, we also took some time to kick the crap out of a small bug that triggered hot reloading mechanism twice on gateway start. However; no files were changed because the root problem was a misconfiguration in chokidar.
+other policies
+
+`### Example `
+
+yaml  
+
+http:
+
+* port: 8790 
+  * serviceEndpoints:
+* example: # will be referenced in proxy policy
+* url: 'http://example.com'
+
+apiEndpoints:
+
+* api:
+* path: '\*'
+
+pipelines:
+
+* example-pipeline:
+* apiEndpoints:   # process all request matching "api" apiEndpoint
+
+       api
+* policies:
+
+       jwt: # secure API with key auth
+
+         - action:
+
+       proxy: # name of the policy
+
+         - action:
+* 
+
+             serviceEndpoint: example # reference to serviceEndpoints Section
+
+Express Gateway supports several ways to locate your Json Web Token in your request.
 
 #### More info and breakdown on all of this in the [**shiny documentation section**](https://www.express-gateway.io/docs/)**.**
 
