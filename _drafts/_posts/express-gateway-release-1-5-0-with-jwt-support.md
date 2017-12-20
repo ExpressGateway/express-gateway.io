@@ -30,13 +30,15 @@ In addition to all of this, we also took some time to kick the crap out of a sma
 
 #### More info and breakdown on all of this in the [**shiny documentation section**](https://www.express-gateway.io/docs/)**.**
 
-## Ch-Ch-Changes
+## Time for a Demo!
 
 **Big Change.** _Small Release._ In an effort to help developers, we lowered the minimal level of severity for a log in order to be printed on the standard output. We lowered it from error to warn. This should (hopefully) help you to reveal issues at a more granular level. When something is going sideways, now you can understand what's going on in a more clear and concise way.
 
+<iframe width="560" height="315" src="[https://www.youtube.com/embed/y-U4Llg3kmM](https://www.youtube.com/embed/y-U4Llg3kmM "https://www.youtube.com/embed/y-U4Llg3kmM")" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
 ### Moving On
 
-_Ooooooo!_ **1.5.0** is almost here. [_We’re excited_](https://github.com/ExpressGateway/express-gateway/milestone/6)_. Check out why!_
+_What's up next? So kind of you to ask!_ Check out the rest of the project milestones.
 
 We would [love your support in making it happen](https://github.com/ExpressGateway/express-gateway) and if you’re interested in becoming a maintainer or contributor, now’s the time!
 
