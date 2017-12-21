@@ -11,9 +11,9 @@ You asked - we listened. That's what open source projects should be all about. I
 
 ## What is a JSON Web Token?
 
-A JSON Web Token (JWT)  was the most requested feature from the Express Gateway community on Feathub. 
+A JSON Web Token (JWT)  was the most requested feature from the Express Gateway community on Feathub.
 
-Described as "an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object."  This info can be verified and you can trust it because it is signed digitally. 
+Described as "an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object."  This info can be verified and you can trust it because it is signed digitally.
 
 _How do JWTs get signed digitally?_
 
@@ -31,68 +31,73 @@ Additionally, Express Gateway can also verify on some of the registered claims o
 
 ## Get Started with the JWT Policy in Express Gateway
 
-In order to use the JWT policy, consumers must have a `jwt` credential associated with them.
-\+
-\+To create consumers (user and apps): use the \[CLI\]\[cli\] and \[create user\]\[users-create\] or \[create app\]\[apps-create\] command.
-\+To create a `jwt` credential for an user or app: use the \[CLI\]\[cli\] and \[create credential\]\[credentials-create\]
+In order to use the JWT policy, consumers must have a `jwt` credential associated with them. In order to create consumers (user and apps): use the \[CLI\]\[cli\] and \[create user\]\[users-create\] or \[create app\]\[apps-create\] command. 
+
+Then, to create a `jwt` credential for an user or app: use the \[CLI\]\[cli\] and \[create credential\]\[credentials-create\]
+
 Use command with type `jwt`. You can also use the \[Admin API\]\[admin_api\] to do the same thing
 
-To enable the JWT policy, add `jwt` in \[gateway.config.yml\]\[gateway.config.yml\] in the \[policies\]\[policies\] section. + +\`\`\`yaml +policies: jwt
+Next, enable the JWT policy: add `jwt` in \[gateway.config.yml\]\[gateway.config.yml\] in the \[policies\]\[policies\] section. 
+
+\`\`\`yaml 
+
+policies: 
+
+- jwt
 
 other policies
 
-`### Example `
+## Quick Example\`
 
-yaml  
+yaml
 
 http:
 
-* port: 8790 
-  * serviceEndpoints:
-* example: # will be referenced in proxy policy
-* url: 'http://example.com'
+  port: 8790
+
+serviceEndpoints:
+
+  example: # will be referenced in proxy policy
+
+    url: 'http://example.com'
 
 apiEndpoints:
 
-* api:
-* path: '\*'
+  api:
+
+    path: '\*'
 
 pipelines:
 
 * example-pipeline:
-* apiEndpoints:   # process all request matching "api" apiEndpoint
+  * apiEndpoints:   # process all request matching "api" apiEndpoint
+    api
+  * policies:
 
-       api
-* policies:
+    jwt: # secure API with key auth
+    action:
 
-       jwt: # secure API with key auth
-
-         - action:
-
-       proxy: # name of the policy
-
-         - action:
-* 
-
-             serviceEndpoint: example # reference to serviceEndpoints Section
+    proxy: # name of the policy
+    action:
+    - serviceEndpoint: example # reference to serviceEndpoints Section
 
 Express Gateway supports several ways to locate your Json Web Token in your request.
 
-#### More info and breakdown on all of this in the [**shiny documentation section**](https://www.express-gateway.io/docs/)**.**
+#### Check out [more documentation right over here.](https://github.com/ExpressGateway/express-gateway.io/pull/175/commits/3c6ee52113876b803f29687f7d2b0ec3df33531d)
 
-## Time for a Demo!
+## D is for Demo
 
-**Big Change.** _Small Release._ In an effort to help developers, we lowered the minimal level of severity for a log in order to be printed on the standard output. We lowered it from error to warn. This should (hopefully) help you to reveal issues at a more granular level. When something is going sideways, now you can understand what's going on in a more clear and concise way.
+We've recorded a special demo to help you get started with the JWT support in Express Gateway.  Presented by Vincenzo Chianese, Engineer at LunchBadger and maintainer of Express Gateway.
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/y-U4Llg3kmM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+## [Check it out!](https://youtu.be/y-U4Llg3kmM)
 
 ### Moving On
 
 _What's up next? So kind of you to ask!_ Check out the [**rest of the project milestones**](https://github.com/ExpressGateway/express-gateway/milestones)**.**
 
-We would [**love your support in making it happen **](https://github.com/ExpressGateway/express-gateway)and if you’re interested in becoming a maintainer or contributor, now’s the time!
+We would [\*\*love your support in making it happen \*\*](https://github.com/ExpressGateway/express-gateway)and if you’re interested in becoming a maintainer or contributor, now’s the time!
 
-[**Hit up Gitter **](https://gitter.im/ExpressGateway/express-gateway)and join the rest of the developer community.
+[\*\*Hit up Gitter \*\*](https://gitter.im/ExpressGateway/express-gateway)and join the rest of the developer community.
 
 **_Not quite ready? That’s ok!_**
 
