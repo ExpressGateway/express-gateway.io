@@ -76,11 +76,11 @@ Check out [more documentation right over here](https://www.express-gateway.io/do
 
 We've recorded a special demo to help you get started with the JWT support in Express Gateway.  Presented by Vincenzo Chianese, Engineer at LunchBadger and maintainer of Express Gateway.
 
-[Check it out](https://youtu.be/y-U4Llg3kmM)!
+[Check it out](https://www.youtube.com/watch?v=1tjzFVzk24s)!
 
 ### Moving On
 
-_What's up next? So kind of you to ask!_ Check out the **\[rest of the project milestones\]**(https://github.com/ExpressGateway/express-gateway/milestones).
+_What's up next? So kind of you to ask!_ Check out the [**rest of the project milestones**.](https://github.com/ExpressGateway/express-gateway/milestones)
 
 We would [**love your support in making it happen**](https://github.com/ExpressGateway/express-gateway) and if you’re interested in becoming a maintainer or contributor, now’s the time!
 
