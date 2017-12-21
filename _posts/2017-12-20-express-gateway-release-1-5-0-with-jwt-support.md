@@ -70,7 +70,7 @@ pipelines:
 
 Express Gateway supports several ways to locate your JSON Web Token in your request.
 
-Check out [more documentation right over here](https://github.com/ExpressGateway/express-gateway.io/pull/175/commits/3c6ee52113876b803f29687f7d2b0ec3df33531d).
+Check out [more documentation right over here](https://www.express-gateway.io/docs/policies/jwt).
 
 ## D is for Demo
 
