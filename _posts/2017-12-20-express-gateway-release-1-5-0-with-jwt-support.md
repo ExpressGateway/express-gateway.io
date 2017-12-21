@@ -91,11 +91,3 @@ We would [**love your support in making it happen**](https://github.com/Express
 * [**Upvote features on Feathub**](https://feathub.com/ExpressGateway/express-gateway). Then, we roll up the most popular or interesting features ([Docker images \*nudge\*nudge\*](https://www.lunchbadger.com/official-docker-images-for-express-gateway/)) will then make it over to the  [**Express Gateway roadmap**](https://github.com/ExpressGateway/express-gateway/milestones).
 * Join the  [**Express Gateway Newsletter**](https://eepurl.com/cVOqd5) update list
 * [Follow along on **Twitter**](https://twitter.com/express_gateway)
-
-\[cli\]: {{ site.baseurl }}{% link docs/cli/index.md %}
-\[users-create\]: {{ site.baseurl }}{% link docs/cli/users/create.md %}
-\[apps-create\]: {{ site.baseurl }}{% link docs/cli/apps/create.md %}
-\[credentials-create\]: {{ site.baseurl }}{% link docs/cli/credentials/create.md %}
-\[admin-api\]: {{ site.baseurl }}{% link docs/admin/index.md %}
-\[gateway.config.yml\]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
-\[policies\]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
