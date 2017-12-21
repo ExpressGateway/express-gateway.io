@@ -31,13 +31,13 @@ Additionally, Express Gateway can also verify on some of the registered claims o
 
 ## Get Started with the JWT Policy in Express Gateway
 
-In order to use the JWT policy, consumers must have a `jwt` credential associated with them. In order to create consumers (user and apps): use the [CLI ](http://www.express-gateway.io/docs/cli/)and create user or create app command.
+In order to use the JWT policy, consumers must have a `jwt` credential associated with them. In order to create consumers (user and apps): use the [CLI ](http://www.express-gateway.io/docs/cli/)and [create user](http://www.express-gateway.io/docs/cli/credentials/create) or create app command.
 
-Then, to create a `jwt` credential for an user or app: use the [CLI ](http://www.express-gateway.io/docs/cli/)and [create credentials](http://www.express-gateway.io/docs/credential-management)
+Then, to create a `jwt` credential for an user or app: use the [CLI ](http://www.express-gateway.io/docs/cli/)and [create credentials](http://www.express-gateway.io/docs/cli/credentials/create)
 
 Use command with type `jwt`. You can also use the [Admin API ](http://www.express-gateway.io/docs/admin/)to do the same thing
 
-Next, enable the JWT policy: add `jwt` in gateway.config.yml in the [policies](http://www.express-gateway.io/docs/policies/) section.
+Next, enable the JWT policy: add `jwt` in [gateway.config.yml](http://www.express-gateway.io/docs/configuration/gateway.config.yml/) in the [policies](http://www.express-gateway.io/docs/configuration/gateway.config.yml/policies) section.
 
 ```yaml 
 policies: 
