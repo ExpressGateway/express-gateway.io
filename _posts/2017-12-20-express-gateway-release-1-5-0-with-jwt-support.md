@@ -39,8 +39,8 @@ Use command with type `jwt`. You can also use the [Admin API ](http://www.expres
 
 Next, enable the JWT policy: add `jwt` in [gateway.config.yml](http://www.express-gateway.io/docs/configuration/gateway.config.yml/) in the [policies](http://www.express-gateway.io/docs/configuration/gateway.config.yml/policies) section.
 
-```yaml 
-policies: 
+```yaml
+policies:
   - jwt
 ```
 
@@ -80,7 +80,7 @@ We've recorded a special demo to help you get started with the JWT support in Ex
 
 ### Moving On
 
-_What's up next? So kind of you to ask!_ Check out the [**rest of the project milestones**.](https://github.com/ExpressGateway/express-gateway/milestones)
+_What's up next? So kind of you to ask!_ Check out the [rest of the project milestones](https://github.com/ExpressGateway/express-gateway/milestones)
 
 We would [**love your support in making it happen**](https://github.com/ExpressGateway/express-gateway) and if you’re interested in becoming a maintainer or contributor, now’s the time!
 
@@ -88,6 +88,6 @@ We would [**love your support in making it happen**](https://github.com/Express
 
 **_Not quite ready? That’s ok!_**
 
-* [**Upvote features on Feathub**](https://feathub.com/ExpressGateway/express-gateway). Then, we roll up the most popular or interesting features ([Docker images \*nudge\*nudge\*](https://www.lunchbadger.com/official-docker-images-for-express-gateway/)) will then make it over to the  [**Express Gateway roadmap**](https://github.com/ExpressGateway/express-gateway/milestones).
+* [**Upvote features on Feathub**](https://feathub.com/ExpressGateway/express-gateway). Then, we roll up the most popular or interesting features ([Docker images](https://www.lunchbadger.com/official-docker-images-for-express-gateway/)) will then make it over to the  [**Express Gateway roadmap**](https://github.com/ExpressGateway/express-gateway/milestones).
 * Join the  [**Express Gateway Newsletter**](https://eepurl.com/cVOqd5) update list
 * [Follow along on **Twitter**](https://twitter.com/express_gateway)
