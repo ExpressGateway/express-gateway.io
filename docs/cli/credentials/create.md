@@ -21,7 +21,7 @@ eg credentials create [options]
 | `-c, --consumer` | `string`  |         | Consumer ID: can be User ID or username or app ID                 |
 | `-p, --property` | `string`  |         | App property in the form [-p 'foo=bar']                           |
 | `--stdin`        | `boolean` | `false` | Import newline-delimited JSON via standard input                  |
-| `-t, --type`     | `string`  |         | Type of credential: can be one of: oauth2, basic-auth, key-auth   |
+| `-t, --type`     | `string`  |         | Type of credential: can be one of: oauth2, basic-auth, key-auth, jwt   |
 
 ### Examples
 
