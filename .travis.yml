@@ -8,7 +8,7 @@ addons:
 cache: bundler
 script:
   - bundle exec jekyll build
-  - bundle exec htmlproofer _site/ --alt-ignore '/.*/' --assume-extension --allow-hash-href --enforce-https --url-ignore /microservices\.io/,/semver\.org/
+  - bundle exec htmlproofer _site/ --alt-ignore '/.*/' --assume-extension --allow-hash-href --enforce-https --url-ignore /microservices\.io/,/semver\.org/,/jsonschema\.org/
 rvm:
  - 2.4
 
