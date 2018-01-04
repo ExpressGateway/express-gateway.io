@@ -62,6 +62,11 @@ instance.
 [Glitch](https://glitch.com) is one of those. It lets you deploy a gateway instance in seconds for free. You can find
 a live example [here](https://glitch.com/edit/#!/express-gateway-test)
 
+Note: Glitch is _usually_ listening on port `3000`. However, this port is passed by an _environment variable_, so it
+could differ. As Express Gateway cannot use environment variables on configuration files yet, you'll need to discover
+the port first, and then hard code it into the `gateway.config.yml` file.
+
 ### Where can I get help?
 
-Express Gateway is a community driven and supported project. Check out the resources section of the website for more information on how to engage.
+Express Gateway is a community driven and supported project. Check out the resources section of the website for more
+information on how to engage.
