@@ -21,7 +21,7 @@ An API Consumer is a User or an Application. Generic term that represent some cl
 
 ##### User
 A User is a the main consumer entity in Express Gateway. Typically, it would be used to represent a person in Express Gateway.
-User can have multiple Applications  and Credentials.
+User can have multiple Applications and Credentials.
 
 ##### Application (App)
 An App is a API Consumer entity designed to represent non human consumers of API endpoints, such as mobile application.
@@ -31,8 +31,8 @@ Apps always belong to a User.
 A container for authentican\authorization secrets of API Consumer (Users/Apps)
 There are three credential types provided by the Express Gateway authorization policies:
 - basic-auth (password)
-- key-auth (key pair id:secret )
-- oauth2 (client secret or user password)    &nbsp; [OAuth 2.0 policy][oauth2]
+- key-auth (key pair id:secret)
+- oauth2 (client secret or user password) — [OAuth 2.0 policy][oauth2]
 
 Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` and `oauth2`. However, an API Consumer
 may have multiple `key-auth` credentials.
