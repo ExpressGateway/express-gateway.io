@@ -3,10 +3,16 @@ layout: doc-section
 title: Consumer Management
 doc-order: 6.0
 ---
-Express Gateway comes with a Consumer management system. An API consumer is either a user or application.
+Express Gateway comes with a Consumer management system with three fundamental parts in game: **Users**,
+**Applications** and **Credentials**.
+
+An API consumer is either a _user_ or _application_.
+
+In order to ensure flexibility in your system, models are defined through [JSON Schema][json-schema]
 
 #### Users
-A user, in its base form, consists of an ID and a username. The user model in `models` directory is schemaless and you define additional user properties.
+A user, in its base form, consists of an ID and a username. The user model in `models` directory is schemaless and you
+define additional user properties.
 
 Example:
 ```
@@ -82,25 +88,25 @@ A Credential is a container for secret authentication info. Always associated to
 Note:
 `scopes` property is used by Express Gateway Autorization engine. Please avoid changing it since it may cause Autorization to work incorrectly
 
-Properties can be introduced or removed. Also properties are configurable:
+#### Customizing the models
+
+Model properties can be introduced or removed. The full [JSON Schema][json-schema] specification is supported, so you
+different validation rules such as [required fields][required] or [property dependencies][dependencies].
 
 ##### Example
-```js
-newProperty: {
-    isRequired: true,
-    isMutable: true
+
+```json
+"secondaryEmail": {
+    "type": "string",
+    "format": "email"
 }
 ```
-
-* `isRequired`
-    - If true, CLI and Admin API will force validation if value is not provided
-
-* `isMutable`
-    - If true, Express Gateway will not allow modification of this property after creation
-
 References:
-* &nbsp; [Admin API][admin]
-* &nbsp; [CLI][cli]
+* [Admin API][admin]
+* [CLI][cli]
 
 [cli]: {{ site.baseurl }}{% link docs/cli/index.md %}
 [admin]: {{ site.baseurl }}{% link docs/admin/index.md %}
+[json-schema]: http://json-schema.org/
+[dependencies]: http://json-schema.org/latest/json-schema-validation.html#rfc.section.6.5.7
+[required]: http://json-schema.org/latest/json-schema-validation.html#rfc.section.6.5.3
