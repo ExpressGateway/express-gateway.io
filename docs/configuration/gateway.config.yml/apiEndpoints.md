@@ -33,10 +33,12 @@ apiEndpoints:
 
 ### Options
 
-| Name    | Description                        |
-|---      |---                                 |
-| `host`  | the hostname to accept requests on |
-| `paths` | an array of paths                  |
+| Name     | Description                                         |
+|----------|-----------------------------------------------------|
+| `host`   | the hostname to accept requests on                  |
+| `paths`  | an array of paths                                   |
+| `scopes` | an array of scopes required to access such resource |
+
 
 #### Host
 The `host` value is a string that will be matched against the 'HOST' header of the request.
@@ -161,3 +163,22 @@ apiEndpoints:
     host: '*.com'
 
 ```
+
+#### Scopes
+The `scopes` value is an array of strings that specifies the required scopes that the current credential needs to have
+in order to access the resource.
+
+##### Example
+
+```yaml
+apiEndpoints:
+  tabby:
+    host: '*.tabby.cat.com'
+    paths: '*'
+    scopes:
+      - read
+      - write
+      - delete
+```
+
+The following api endpoint will be accesible only if the current user has `read`, `write` and `delete` scopes.
