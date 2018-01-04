@@ -11,28 +11,42 @@ An API consumer is either a _user_ or _application_.
 In order to ensure flexibility in your system, models are defined through [JSON Schema][json-schema]
 
 #### Users
-A user, in its base form, consists of an ID and a username. The user model in `models` directory is schemaless and you
-define additional user properties.
+A user, in its base form, consists of an ID and a username. The user model in `models` directory has some basic
+properties. You can enrich it to meet your needs.
 
-Example:
-```
-Config: {
-...
-  User: {
-  ...
-    properties: {
-      username:   { isMutable: false, isRequired: true}, #default, can be overridden
-      firstName:  { isMutable: true, isRequired: true},
-      lastName:   { isMutable: true, isRequired: true}
-      ...
+```json
+{
+  "$id": "http://express-gateway.io/models/users.json",
+  "type": "object",
+  "properties": {
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "redirectUri": {
+      "type": "string",
+      "format": "uri"
     }
-  }
-...
+  },
+  "required": [
+    "username",
+    "firstname",
+    "lastname"
+  ]
 }
 ```
 
 Note:
-`username` property is used by Express Gateway. Please avoid changing it since it may cause unexpected behaviour
+`username` property is used by Express Gateway. Please avoid changing it since it may cause unexpected behaviour.
 
 #### Applications
 An Application is another type of API consumer and is always associated to a user.
@@ -40,53 +54,47 @@ An Application is another type of API consumer and is always associated to a use
 An user may have zero to many applications, whose names must be unique among the same user. This does not prevent
 having multiple applications, all with the same names, but bound to different users.
 
-In its base form, an application consists of an Id and userId. The `application` model in `models` directory is schemaless and you can define additional application properties.
+In its base form, an application consists of an Id and userId. The `application` model in `models` directory provides
+some basic properties. You can enrich it to meet your needs.
 
 Example:
-```
-Config: {
-...
-  Application: {
-  ...
-    properties: {
-      name:   { isMutable: false, isRequired: true},
-      group:  { isMutable: true, isRequired: false},
-      ...
+
+```json
+{
+  "$id": "http://express-gateway.io/models/applications.json",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "redirectUri": {
+      "type": "string",
+      "format": "uri"
     }
-  }
-...
+  },
+  "required": [
+    "name"
+  ]
 }
 ```
 
 #### Credentials
-A Credential is a container for secret authentication info. Always associated to a Consumer (User or App)
+A Credential is a container for secret authentication info. Always associated to a Consumer (User or App).
+We do support the following credential types:
 
-```js
-{
-  'basic-auth': {
-    passwordKey: 'password',
-    autoGeneratePassword: true,
-    properties: {
-      scopes: { isRequired: false }
-    }
-  },
-  'key-auth': {
-    properties: {
-      scopes: { isRequired: false }
-    }
-  },
-  oauth2: {
-    passwordKey: 'secret',
-    autoGeneratePassword: true,
-    properties: {
-      scopes: { isRequired: false }
-    }
-  }
-}
-```
+- `basic-auth`: UserID and Password tuple
+- `key-auth`: An API Key identifying the consumer that is usually placed in an _HTTP Header_
+- `oauth2`: A _ClienID_ and _ClientSecret_ tuple that identifies the client willing to connect. Users will be
+            recognised using `basic-auth`
+- `jwt`: A _KeyID_ and _KeySecret_ that are used to identify a JWT Issuer
 
-Note:
-`scopes` property is used by Express Gateway Autorization engine. Please avoid changing it since it may cause Autorization to work incorrectly
+If you're interested to lear more about these, check out their respective pages in the *Policies* documentation section.
+
+Credentials are also defined with a JSON Schema, but there are not customization options for that. In other word,
+modifying the schema and add a new credential type or even a property won't work, as the gateway would need to be changed
+in order to handle the new credential. You can modify the existing properties, though.
+
+We are working on this in order to plug your own credential type.
 
 #### Customizing the models
 
@@ -95,12 +103,19 @@ different validation rules such as [required fields][required] or [property depe
 
 ##### Example
 
+Let's say we want to add an optional secondary email to our user model. We just need to past this in the `properties`
+object.
+
 ```json
 "secondaryEmail": {
     "type": "string",
     "format": "email"
 }
 ```
+
+Now the gateway is aware of this property and will be prompted in the CLI as well as validated when inserted in the
+system.
+
 References:
 * [Admin API][admin]
 * [CLI][cli]
