@@ -17,7 +17,7 @@ permalink: "/resources/"
 <li>{% include res-basic.svg %}<h3>Basic Auth</h3><p>Username and Password</p></li>
 <li>{% include res-key.svg %}<h3>Key Auth</h3><p>API keys for users and applications</p></li>
 <li>{% include res-oauth.svg %}<h3>OAuth2</h3><p>Authentications and Authorization Flows</p></li>
-<!-- <li>{% include res-jwt.svg %}<h3>JWT</h3><p>JSON Web Token</p></li> -->
+<li>{% include res-jwt.svg %}<h3>JWT</h3><p>JSON Web Token validation and issuing</p></li>
 </ul>
 
 
@@ -31,6 +31,8 @@ permalink: "/resources/"
 
 <ul class="icon-list">
 <li>{% include res-rewrite.svg %}<h3>Rewrite</h3><p>Rewrite URL or Redirect Requests</p></li>
+<li>{% include res-terminate.svg %}<h3>Terminate</h3><p>Terminate the request with a status code and message</p></li>
+<li>{% include res-headers.svg %}<h3>Headers</h3><p>Set any header to the response message</p></li>
 </ul>
 
 #### Quality of Service
