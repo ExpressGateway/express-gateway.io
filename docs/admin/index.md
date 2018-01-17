@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Admin API Reference
+layout: doc-section
 doc-order: 10.0
 ---
 

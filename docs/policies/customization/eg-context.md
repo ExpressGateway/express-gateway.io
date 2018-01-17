@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: egContext
+layout: doc-section
 doc-order: 5.5
 list-order: 0.1
 ---

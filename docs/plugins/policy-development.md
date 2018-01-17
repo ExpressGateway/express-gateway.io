@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Policy Development
+layout: doc-section
 doc-order: 25.3
 ---
 

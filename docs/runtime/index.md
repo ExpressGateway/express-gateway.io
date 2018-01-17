@@ -1,8 +1,9 @@
 ---
-layout: doc-section
 title: Runtime
+layout: doc-section
 doc-order: 20.0
 ---
+
 #### Hot Reload vs Manual Restart
 Express gateway automatically monitors changes of the config file provided at start.
 Once the change is detected the system automatically reconfigures without shutdown and dropping requests.

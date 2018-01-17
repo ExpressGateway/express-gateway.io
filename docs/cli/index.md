@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: CLI Reference
+layout: doc-section
 doc-order: 4.0
 ---
 

@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg apps remove
+layout: doc-section
 ---
 
 ### Description

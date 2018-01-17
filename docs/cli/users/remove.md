@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg users remove
+layout: doc-section
 ---
 
 ### Description

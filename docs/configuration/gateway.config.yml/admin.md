@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: admin
+layout: doc-section
 doc-order: 3.1
 list-order: 0.3
 ---

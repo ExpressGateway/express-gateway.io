@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg users create
+layout: doc-section
 ---
 
 ### Description

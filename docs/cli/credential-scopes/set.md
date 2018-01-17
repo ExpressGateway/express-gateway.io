@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg credential:scopes set
+layout: doc-section
 ---
 
 ### Description

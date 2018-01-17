@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Expression
+layout: doc-section
 doc-order: 5.7
 ---
 

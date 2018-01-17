@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg credential:scopes remove
+layout: doc-section
 ---
 
 ### Description

@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Project Directory
+layout: doc-section
 doc-order: 20.5
 ---
 

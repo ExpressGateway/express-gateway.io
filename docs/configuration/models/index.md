@@ -1,8 +1,9 @@
 ---
-layout: doc-section
 title: models
+layout: doc-section
 doc-order: 3.3
 ---
+
 The `models` directory contain model config files that describe the JSON Schema of Express Gateway entities that are
 customizable and extensible.
 

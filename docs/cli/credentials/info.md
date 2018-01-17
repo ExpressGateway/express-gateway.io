@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg credentials info
+layout: doc-section
 ---
 
 ### Description

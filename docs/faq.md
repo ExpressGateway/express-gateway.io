@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: FAQ
+layout: doc-section
 doc-order: 30.0
 ---
 

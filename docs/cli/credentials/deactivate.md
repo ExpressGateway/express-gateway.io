@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg credentials deactivate
+layout: doc-section
 ---
 
 ### Description

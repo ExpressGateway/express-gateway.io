@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Basic Authorization
+layout: doc-section
 doc-order: 5.2
 ---
 

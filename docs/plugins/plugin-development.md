@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Plugin Development
+layout: doc-section
 doc-order: 25.2
 ---
 

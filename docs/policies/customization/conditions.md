@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Conditions
+layout: doc-section
 doc-order: 5.5
 list-order: 0.2
 ---

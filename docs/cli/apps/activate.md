@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg apps activate
+layout: doc-section
 ---
 
 ### Description

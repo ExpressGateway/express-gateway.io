@@ -1,9 +1,10 @@
 ---
-layout: page
 title: Getting Started
-class: getting-started
 permalink: "/getting-started/"
+layout: page
+class: getting-started
 ---
+
 <section class="screencast-feature">
   <div class="video-aspect-ratio">
     <div class="video-border moveback">

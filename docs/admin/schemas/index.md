@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Schemas
+layout: doc-section
 doc-order: 10.5
 ---
 

@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg apps create
+layout: doc-section
 ---
 
 ### Description

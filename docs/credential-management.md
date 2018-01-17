@@ -1,8 +1,9 @@
 ---
-layout: doc-section
 title: Credential Management
+layout: doc-section
 doc-order: 7.0
 ---
+
 Express Gateway comes with a rich Credential Management module that provides a complete authentication and authorization system. The Credential Management module can also work alongside existign Authorization systems and providers. The system associates consumers (apps and user) with their set of credentials.
 
 A credential is created for a consumer and its authentication and authorization type is set by one of the supported policies within Express Gateway (e.g. OAuth2, Key Auth, etc...)

@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Policies
+layout: doc-section
 doc-order: 10.6
 ---
 

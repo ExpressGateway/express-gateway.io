@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: pipelines
+layout: doc-section
 doc-order: 3.1
 list-order: 0.7
 ---

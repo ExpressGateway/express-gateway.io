@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Proxy
+layout: doc-section
 doc-order: 5.9
 ---
 

@@ -1,7 +1,7 @@
 ---
-layout: page
 title: About
 permalink: "/about/"
+layout: page
 ---
 
 <section class="page-section-normal">

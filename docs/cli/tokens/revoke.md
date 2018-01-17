@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg tokens revoke
+layout: doc-section
 ---
 
 ### Description

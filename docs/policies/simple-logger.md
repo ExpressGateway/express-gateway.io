@@ -1,8 +1,9 @@
 ---
-layout: doc-section
 title: Simple Logger
+layout: doc-section
 doc-order: 5.7
 ---
+
 ### Description
 
 The Simpler Logger policy provides capability for logging with basic message output. JavaScript [ES6 template literal syntax][es6-template-literal-syntax] is supported.

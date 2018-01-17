@@ -1,10 +1,12 @@
 ---
-layout: post
 title: 'Express Gateway and Kubernetes: Part 1'
-date: 2017-09-28 16:00:00 +0000
+date: 2017-09-28 16:00:00 Z
+categories:
+- announcements
+layout: post
 author: Al Tsang
-categories: announcements
 ---
+
 It's no secret that cloud native applications are designed to maximize resilience through predictable behaviors.  Several factors, including API exposure and application design, play key roles in the successful deployment of cloud native applications.
 For instance, API exposure and providing internal or external access via standardized methods can fundamentally change your growth trajectory. You can create new services, integrations and expose customer insights.
 As an important area of growth, designing your application also plays a critical role. Are you designing with microservices in mind? Breaking down monolithic applications with containers? For example, cloud native technologies like Docker give you the ability to decompose your once monolithic applications into sustainable microservices.  If you're building the next generation of cloud native applications, where what does that roadmap look like?

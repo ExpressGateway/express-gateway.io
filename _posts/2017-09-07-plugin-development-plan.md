@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Plugin Framework Overview and Plan
-date: 2017-09-07 16:00:00 +0000
+date: 2017-09-07 16:00:00 Z
+categories:
+- announcements
+layout: post
 author: Al Tsang
-categories: announcements
 ---
+
 One of the key reason why we built Express Gateway on ExpressJS is because of an existing rich ecosystem of 3,000+ middleware modules that is already being used out of the box with Express.  Not all Express modules are relevant to the API gateway use case - but many are. Said a different way - almost all API gateway use cases can be covered by utilizing an existing Express module.
 <!--excerpt-->
 

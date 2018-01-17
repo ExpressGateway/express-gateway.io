@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg scopes list
+layout: doc-section
 ---
 
 ### Description

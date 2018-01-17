@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: db
+layout: doc-section
 doc-order: 3.2
 list-order: 0.1
 ---

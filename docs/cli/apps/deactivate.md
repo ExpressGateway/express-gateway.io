@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg apps deactivate
+layout: doc-section
 ---
 
 ### Description

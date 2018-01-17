@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Credentials
+layout: doc-section
 doc-order: 10.3
 ---
 

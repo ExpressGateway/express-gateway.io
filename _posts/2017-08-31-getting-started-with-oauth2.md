@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Getting Started with OAuth2
-date: 2017-08-31 16:00:00 +0000
+date: 2017-08-31 16:00:00 Z
+categories:
+- guides
+layout: post
 author: Valeri Karpov
-categories: guides
 ---
+
 You've read all about [Express Gateway](https://www.express-gateway.io), now we're going to walk through some very important aspects of how to build faster and more sustainably.
 
 Did you know that Express Gateway gives you the ability to spin up your own [OAuth2 provider](https://stormpath.com/blog/what-the-heck-is-oauth#the-authorization-code-grant-type) from the command line?

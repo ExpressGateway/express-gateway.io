@@ -1,7 +1,8 @@
 ---
-layout: doc-section
 title: eg plugin configure
+layout: doc-section
 ---
+
 ### Description
 Configure a plugin.
 ### Usage

@@ -1,10 +1,12 @@
 ---
-layout: post
 title: 'Part1: Anatomy of a Plugin'
-date: 2017-09-19 16:00:00 +0000
+date: 2017-09-19 16:00:00 Z
+categories:
+- guides
+layout: post
 author: Serhii Kuts
-categories: guides
 ---
+
 _“Give a man a fish, and you feed him for a day. Teach a main to fish, and you feed him for a lifetime.”_
 
 This old saying is the premise behind what we were thinking of building next based on community feedback of what we had released initially with Express Gateway.

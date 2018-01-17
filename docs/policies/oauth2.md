@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: OAuth 2.0
+layout: doc-section
 doc-order: 5.4
 ---
 

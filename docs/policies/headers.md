@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Headers
+layout: doc-section
 doc-order: 5.1
 ---
 

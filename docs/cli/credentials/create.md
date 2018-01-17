@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg credentials create
+layout: doc-section
 ---
 
 ### Description

@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg users
+layout: doc-section
 doc-order: 4.2
 ---
 

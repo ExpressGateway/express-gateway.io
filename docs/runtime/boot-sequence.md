@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Boot Sequence
+layout: doc-section
 doc-order: 20.1
 ---
 

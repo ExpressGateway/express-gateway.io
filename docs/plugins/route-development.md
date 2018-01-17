@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Route Development
+layout: doc-section
 doc-order: 25.5
 ---
 

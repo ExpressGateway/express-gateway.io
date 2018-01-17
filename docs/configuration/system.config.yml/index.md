@@ -1,8 +1,9 @@
 ---
-layout: doc-section
 title: system.config.yml
+layout: doc-section
 doc-order: 3.2
 ---
+
 System level configuration for the gateway and global parameters are defined and described in `system.config.yml`.  This config file describes infrastructure settings that are used to run the gateway.
 
 system.config.yml is made up of the following sections:

@@ -1,8 +1,9 @@
 ---
-layout: page
 title: Resources
 permalink: "/resources/"
+layout: page
 ---
+
 <div class="resources" markdown="1">
 <section class="page-section-normal">
 <div class="wrapper-flex">

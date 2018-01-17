@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: serviceEndpoints
+layout: doc-section
 doc-order: 3.1
 list-order: 0.5
 ---

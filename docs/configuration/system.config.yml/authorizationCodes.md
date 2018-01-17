@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: authorizationCodes
+layout: doc-section
 doc-order: 3.2
 list-order: 0.6
 ---

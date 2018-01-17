@@ -1,12 +1,13 @@
 ---
 title: Express Gateway Release 1.4.1 over here!
-layout: post
-date: 2017-11-29 00:00:00 +0000
-author: Al Tsang
+date: 2017-11-29 00:00:00 Z
 categories:
 - announcements
 - technology
+layout: post
+author: Al Tsang
 ---
+
 We're back with brand new fixes, changes, updates and..PROGRESS! Thanks to everyone (you) for making all of this possible. We're excited to see the project mature. Who's ready for 1.4.1? Let's kick it off! <!--excerpt-->
 
 ## An Update with all the Fixins'

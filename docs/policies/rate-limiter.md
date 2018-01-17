@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Rate Limiter
+layout: doc-section
 doc-order: 5.5
 ---
 

@@ -1,8 +1,9 @@
 ---
-layout: doc-section
 title: Policies Reference
+layout: doc-section
 doc-order: 5.0
 ---
+
 Policies are building blocks of functionality within Express Gateway. Policies can be thought of as wrappers around Express middleware that add dynamic evaluation and executional behavior through:
 - a condition
 - an action

@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Configuration
+layout: doc-section
 doc-order: 3.0
 ---
 

@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: policies
+layout: doc-section
 doc-order: 3.1
 list-order: 0.6
 ---

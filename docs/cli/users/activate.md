@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg users activate
+layout: doc-section
 ---
 
 ### Description

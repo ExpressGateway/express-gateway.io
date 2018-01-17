@@ -1,12 +1,13 @@
 ---
 title: Express Gateway Release 1.5.0 with JWT support
-layout: post
-date: 2017-12-20 00:00:00 +0000
-author: Al Tsang
+date: 2017-12-20 00:00:00 Z
 categories:
 - announcements
 - technology
+layout: post
+author: Al Tsang
 ---
+
 You asked - we listened. That's what open source projects should be all about. In the latest release of Express Gateway 1.5.0, we've included support for  JSON Web Tokens (JWT). Let's go! <!--excerpt-->
 
 ## What is a JSON Web Token?

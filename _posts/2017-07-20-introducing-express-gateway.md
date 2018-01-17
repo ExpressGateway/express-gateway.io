@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Introducing Express Gateway
-date: 2017-07-20 04:00:00 +0000
+date: 2017-07-20 04:00:00 Z
+categories:
+- announcements
+layout: post
 author: Al Tsang
-categories: announcements
 ---
+
 This project is a culmination of listening to countless accounts from community folks with all types of different backgrounds - from startups to large enterprises and everything in between - and acting on it.
 <!--excerpt-->
 #### Today has been a long, long time coming!

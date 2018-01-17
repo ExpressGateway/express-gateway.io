@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg plugin install <name>
+layout: doc-section
 ---
 
 ### Description

@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Scopes
+layout: doc-section
 doc-order: 10.4
 ---
 

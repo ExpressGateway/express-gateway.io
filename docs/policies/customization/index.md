@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Customization
+layout: doc-section
 doc-order: 5.1
 ---
 

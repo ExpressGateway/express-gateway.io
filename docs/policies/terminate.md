@@ -1,8 +1,9 @@
 ---
-layout: doc-section
 title: Terminate
+layout: doc-section
 doc-order: 5.8
 ---
+
 ### Description
 
 The Terminate policy skips all the successive policies in a pipeline and responds to the current request with a specified

@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Apps
+layout: doc-section
 doc-order: 10.2
 ---
 

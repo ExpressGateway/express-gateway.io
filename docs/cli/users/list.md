@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg users list
+layout: doc-section
 ---
 
 ### Description

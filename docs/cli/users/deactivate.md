@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: eg users deactivate
+layout: doc-section
 ---
 
 ### Description

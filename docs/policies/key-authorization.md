@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Key Authorization
+layout: doc-section
 doc-order: 5.3
 ---
 

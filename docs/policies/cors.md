@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: CORS
+layout: doc-section
 doc-order: 5.5
 ---
 

@@ -1,54 +1,48 @@
-# Welcome to Jekyll!
-#
-# bundle exec jekyll serve
-#
-# bundle exec jekyll build
-#
-
+---
 title: Express Gateway
+timezone: UTC
+collections:
+  archives-month:
+    title: Archives Month
+    output: true
+    permalink: "/blog/:path/"
+  archives-year:
+    title: Archives Year
+    output: true
+    permalink: "/blog/:path/"
+  categories:
+    title: Categories
+    output: true
+    permalink: "/blog/:path/"
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 email: info@express-gateway.io
 description: A Microservices API Gateway Built on Express.JS
-url: "https://www.express-gateway.io"
+url: https://www.express-gateway.io
 twitter_username: express_gateway
 encoding: UTF-8
-
-# Build settings
 markdown: kramdown
 theme: minima
 gems:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-gist
-  - jekyll-sitemap
-
+- jekyll-feed
+- jekyll-paginate
+- jekyll-gist
+- jekyll-sitemap
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - vendor
-
-#syntax-highlighting
+- Gemfile
+- Gemfile.lock
+- vendor
 kramdown:
   input: GFM
   syntax_highlighter_opts:
-    disable : true
-
+    disable: true
 paginate: 5
 paginate_path: "/blog/page-:num/"
-
 excerpt_separator: "<!--excerpt-->"
-
-permalink: /:title
-
-collections:
-  archives-month:
-    output: true
-    permalink: /blog/:path/
-  archives-year:
-    output: true
-    permalink: /blog/:path/
-  categories:
-    output: true
-    permalink: /blog/:path/
-
-#Site specific config
-include: ["_pages"]
+permalink: "/:title"
+include:
+- _pages

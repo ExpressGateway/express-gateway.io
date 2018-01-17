@@ -1,6 +1,6 @@
 ---
-layout: doc-section
 title: Rewrite
+layout: doc-section
 doc-order: 5.6
 ---
 

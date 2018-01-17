@@ -1,9 +1,8 @@
 ---
-layout: doc-section
 title: Condition Development
+layout: doc-section
 doc-order: 25.4
 ---
-
 
 ### Declaring Condition
 Approach is quite similar to Policy

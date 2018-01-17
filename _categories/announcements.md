@@ -1,6 +1,8 @@
 ---
-layout: category
 title: Announcements
-categories: announcements
-date: 2017-11-14 20:25:51 +0000
+date: 2017-11-14 20:25:51 Z
+categories:
+- announcements
+layout: category
 ---
+
