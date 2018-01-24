@@ -6,11 +6,11 @@ doc-order: 10.0
 
 ### Overview
 
-The Express Gateway Admin API is an HTTP interface to manage internal entities such as Users, Applications, Credenitials,
-Scopes, OAuth2 tokens and the relationships among such entities.
+The Express Gateway Admin API is an HTTP interface for administration purposes.
 
-Note: in the future the Admin API will also allow configuration of gateway entities such as pipeline and policy
-configuration dynamically.
+This API is designed for internal use and provides a certain degree of control over Express-Gateway, so its public
+exposure is not usually a great idea. If you really have to,  make sure it is properly secured. You can
+find one way later in this document.
 
 The Express Gateway [CLI][cli] utilizes the Admin API.
 
