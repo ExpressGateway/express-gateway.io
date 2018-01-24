@@ -42,7 +42,7 @@ pipelines:
 
 * `message`:
   - string specifiying the message to log
-  - can include placeholders using the JavaScript [ES6 template literal syntax][es6-template-literal-sytnax]
+  - can include placeholders using the JavaScript [ES6 template literal syntax][es6-template-literal-syntax]
 
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
