@@ -27,7 +27,7 @@ pipelines:
       -
         headers:
           - action:
-              headerPrefix: 'eg-',
+              headersPrefix: 'eg-',
               forwardHeaders:
                 id: 'consumer.id'
                 consumer-name: 'consumer.name'
@@ -38,7 +38,7 @@ pipelines:
 ```
 
 ### Options Reference
-* `headerPrefix`: String with prefix to be added for each header. Defaults to empty string `''`
+* `headersPrefix`: String with prefix to be added for each header. Defaults to empty string `''`
 * `forwardHeaders`: Object with header name and an [expression][expression] that's catching the value
 
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
