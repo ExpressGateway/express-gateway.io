@@ -68,16 +68,17 @@ The code is wrapped in plugin declaration for demonstration purpose.
 
 ```js
 // excerpt from manifest.js file in potential OAuth2 plugin
-pluginContext.registerGatewayRoute(app=>{
+pluginContext.registerGatewayRoute(app => {
   app.set('view engine', 'ejs');
 
-  let middlewares = [
+  const middlewares = [
     bodyParser.urlencoded({ extended: true }),
     bodyParser.json(),
     session(config.systemConfig.session),
     passport.initialize(),
     passport.session()
   ];
+
   app.get('/login', site.loginForm); // render login page
   app.post('/login', middlewares, site.login); // parse form to get credentials
   app.get('/logout', site.logout); // logout page
@@ -86,11 +87,12 @@ pluginContext.registerGatewayRoute(app=>{
   app.get('/oauth2/authorize', oauth2Server.authorization); // oauth2 server specific handlers
   app.post('/oauth2/authorize/decision', oauth2Server.decision);
   app.post('/oauth2/token', oauth2Server.token);
-})
+});
 
 ```
 ###### Best Practices Notes:
-- Plugin in most of the cases should NOT register per app middleware like `app.use(middleware)`. Most likely this is
+
+- Plugin in most of the cases should **NOT** register per app middleware like `app.use(middleware)`. Most likely this is
 functionality for [Policy][policy] or it is per path segment registration like `app.use('/oauth2', middlewares);`.
 In the example above the Gateway should not do form parsing and should not have session support. It is only OAuth2
 server requirements.
