@@ -140,6 +140,23 @@ module.exports = {
 - `schema` - _optional_ - JSON schema for plugin options. It will be used for prompting during CLI execution and
 data validation when loading the plugin.
 
+### JSON Schema support
+
+Plugins, policies and conditions parameters can optionally be validated through a JSON Schema that can be provided
+using the `schema` property of the relative part. We suggest to provide such one as it provides a declarative way to
+validate the parameters, so you do not have to care about that in your code and can assume everything is ready to be
+used.
+
+If not provided, the extension will still be loaded, although a `warn` will be raised.
+
+**Note:** the JSON Schema `$id` property is mandatory, or the Gateway will refuse to load the extension. You can choose
+whatever name suits you; however we suggest to use the same convention we have in the gateway, which is:
+
+`http://express-gateway.io/schemas/{extension_type}/{extension_name}.json`
+
+* `extension_type`: Should be `plugin`, `policy` or `condition`
+* `extension_name`: It should usually match the extension `name` property.
+
 ### Events
 
 Express Gateway exposes several events that plugins can subscribe to to cooordinate loading.
