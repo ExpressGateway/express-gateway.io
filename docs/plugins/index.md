@@ -86,7 +86,7 @@ And if you want to write only custom policy this is [Policy Developing Guide]({{
 
 [cli]: {{ site.baseurl }}{% link docs/cli/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/policies/index.md %}
-[conditions]: {{ site.baseurl }}{% link docs/policies/index.md %}
+[conditions]: {{ site.baseurl }}{% link docs/policies/customization/conditions.md %}
 [system-config-yml]: {{ site.baseurl }}{% link docs/configuration/system.config.yml/index.md %}
 [plugins-section]: {{ site.basurl }}{% link docs/configuration/system.config.yml/plugins.md %}
 [plugin-install]: {{ site.baseurl }}{% link docs/cli/plugins/install.md %}
