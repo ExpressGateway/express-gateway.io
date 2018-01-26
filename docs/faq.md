@@ -33,6 +33,11 @@ Express Gateway currently supports Redis as both its primary and distributed dat
 
 Express Gateway config files are easy to modify and maintain as flat files in the `/config` directory.
 
+### Can I use environment variables in config files?
+
+Yes, you can! We have borrowed the same syntax that `docker-compose.yml` files are using. Check out the relative
+[documentation section][config-env-variables] for further informations.
+
 ### How can I add authentication to a microservice/API?
 
 Express Gateway has many authentication and authorization policies:
@@ -70,3 +75,5 @@ the port first, and then hard code it into the `gateway.config.yml` file.
 
 Express Gateway is a community driven and supported project. Check out the resources section of the website for more
 information on how to engage.
+
+[config-env-variables]: {{ site.baseurl }}{% link docs/configuration/index.md %}#environment-variables-in-configuration-files
