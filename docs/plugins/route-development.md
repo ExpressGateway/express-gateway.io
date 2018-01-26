@@ -96,7 +96,6 @@ pluginContext.registerGatewayRoute(app => {
 functionality for [Policy][policy] or it is per path segment registration like `app.use('/oauth2', middlewares);`.
 In the example above the Gateway should not do form parsing and should not have session support. It is only OAuth2
 server requirements.
-
 - It could be that those routes are a separate application. In OAuth2 example it is absolutely possible that `server`
 part is out of gateway. And Express Gateway will just proxy requests to it, this is something pipeline functionality
 will cover perfectly.
