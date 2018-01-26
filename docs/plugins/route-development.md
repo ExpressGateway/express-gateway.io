@@ -62,14 +62,14 @@ Tokens and credentials validation is a clear use case for the Policy.
 See [Policy Development guide][policy]
 
 ##### Part 2
-You will need custom routes for OAuth2 server implementation. 
-Here is routes and middlewares that Express Gateway core internally uses in current version to run OAuth2. 
+You will need custom routes for OAuth2 server implementation.
+Here is routes and middlewares that Express Gateway core internally uses in current version to run OAuth2.
 The code is wrapped in plugin declaration for demonstration purpose.
 
 ```js
-// excerpt from manifest.js file in potential OAuth2 plugin 
+// excerpt from manifest.js file in potential OAuth2 plugin
 pluginContext.registerGatewayRoute(app=>{
-  app.set('view engine', 'ejs'); 
+  app.set('view engine', 'ejs');
 
   let middlewares = [
     bodyParser.urlencoded({ extended: true }),
@@ -83,16 +83,21 @@ pluginContext.registerGatewayRoute(app=>{
   app.get('/logout', site.logout); // logout page
 
   app.use('/oauth2', middlewares); // middlewares mounted specifically for "/oauth2" routes
-  app.get('/oauth2/authorize', oauth2Server.authorization); // oauth2 server specific handlers 
+  app.get('/oauth2/authorize', oauth2Server.authorization); // oauth2 server specific handlers
   app.post('/oauth2/authorize/decision', oauth2Server.decision);
   app.post('/oauth2/token', oauth2Server.token);
 })
 
 ```
 ###### Best Practices Notes:
-- Plugin in most of the cases should NOT register per app middleware like `app.use(middleware)`. Most likely this is functionality for [Policy][policy] or it is per path segment registration like `app.use('/oauth2', middlewares);` In the example above the Gateway should not do form parsing and should not have session support. It is only OAuth2 server requirements. 
+- Plugin in most of the cases should NOT register per app middleware like `app.use(middleware)`. Most likely this is
+functionality for [Policy][policy] or it is per path segment registration like `app.use('/oauth2', middlewares);`.
+In the example above the Gateway should not do form parsing and should not have session support. It is only OAuth2
+server requirements.
 
-- It could be that those routes are a separate application. In OAuth2 example it is absolutely possible that `server` part is out of gateway. And Express Gateway will just proxy requests to it, this is something pipeline functionality will cover perfectly.
+- It could be that those routes are a separate application. In OAuth2 example it is absolutely possible that `server`
+part is out of gateway. And Express Gateway will just proxy requests to it, this is something pipeline functionality
+will cover perfectly.
 
 [oauth2]: {{ site.baseurl}} {% link docs/policies/oauth2.md %}
 [policy]: {{ site.baseurl}} {% link docs/plugins/policy-development.md %}
