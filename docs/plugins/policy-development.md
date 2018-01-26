@@ -12,6 +12,17 @@ The policy is a wrapper around ExpressJS middleware
 // content of ./policies/example-policy.js file
 module.exports = {
   name: 'example',
+  schema: {
+    $id: 'http://express-gateway.io/schemas/policies/example-policy.json',
+    type: object,
+    properties: {
+      baseUrl: {
+        type: 'string',
+        format: 'url',
+        default: 'https://example.com'
+      }
+    }
+  },
   policy: (actionParams) => {
     return (req, res, next) => {
       console.log('executing policy-from-example-plugin with params', actionParams);
@@ -22,8 +33,9 @@ module.exports = {
 };
 ```
 
-- name - Name of the policy, this is how it can be referenced in pipeline
-- policy - Function that returns ExpressJS middleware. The function accepts actionParams. And actionParams is all configuration options in the pipeline for this policy
+- `name` - Name of the policy, this is how it can be referenced in pipeline
+- `schema` - JSON Schema that will be used for validation when the policy gets executed.
+- `policy` - Function that returns ExpressJS middleware. The function accepts actionParams. And actionParams is all configuration options in the pipeline for this policy
 
 #### Action Params
 Let say you have pipeline defined as:
@@ -38,14 +50,18 @@ pipelines:
               baseUrl: 'https://example.com'
 ```
 In this case when pipeline will be constructed your policy will have `actionParams` as
-```
+
+```json
 {
-    baseUrl:'https://example.com'
+  "baseUrl":"https://example.com"
 }
 ```
+
 #### Exporting Policy with plugin
+
 Now it is time to register the policy during plugin initialization:
 This is done in manifest.js `init` function
+
 ```js
 module.exports = {
   version: '1.2.0',
@@ -77,11 +93,12 @@ The main difference is when these parts are executed:
 
 ### Use cases
 
-#### Rewrite Policy 
-Let say you want to change urls that will be proxied to downstream services. 
+#### Rewrite Policy
+Let say you want to change urls that will be proxied to downstream services.
 
 Incoming: `/api/users`
 Result: `/api/v2/users`
+
 ```js
 // content of potential ./policies/rewrite-policy.js file
 module.exports = {
@@ -94,7 +111,8 @@ module.exports = {
   }
 };
 ```
-It is reasonable to make those magic strings configurable 
+It is reasonable to make those magic strings configurable
+
 ```js
 module.exports = {
   name: 'rewrite',
@@ -107,16 +125,17 @@ module.exports = {
 };
 ```
 Now in the pipeline configuration:
+
 ```yml
 apiPipeline:
   policies:
     - rewrite:   # this is policy declaration
-        - action:   # policy can have multiple steps (condition/action pairs) 
+        - action:   # policy can have multiple steps (condition/action pairs)
             search: /api/   # goes as "actionParams.search"
             replace: /api/v2/ # becomes "actionParams.replace"
-        - action:   # step 2 
+        - action:   # step 2
             search: /old-api/
-            replace: /api/v1/ 
+            replace: /api/v1/
     - proxy:
         - action:
               serviceEndpoint: backend

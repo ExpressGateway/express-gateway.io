@@ -12,7 +12,7 @@ especially the concept of [Middleware][express-middleware] will help with unders
 development.
 
 To understand how different entities within a plugin are registered and loaded checkout the
- [Express Gateway Boot Sequence]({{ site.baseurl}} {% link docs/runtime/boot-sequence.md %}).
+[Express Gateway Boot Sequence]({{ site.baseurl}} {% link docs/runtime/boot-sequence.md %}).
 
 Plugins extend Express Gateway entities as points of extension. These extension points and the plugin framework
 development plan are specified within the
@@ -34,7 +34,7 @@ of the mechanics, this section walks through what is normally automated.
 
 run the CLI command `eg gateway create` to create Express Gateway instance
 
-```
+```bash
 > eg gateway create
 ? What's the name of your Express Gateway? example-gateway
 ? Where would you like to install your Express Gateway? example-gateway
@@ -45,7 +45,7 @@ run the CLI command `eg gateway create` to create Express Gateway instance
 - npm install the example package
 - edit the `./config/system.config.yml` file and enable the plugin
 
-```
+```bash
 cd example-gateway
 npm i --save express-gateway-plugin-example
 ```
@@ -81,13 +81,13 @@ If your configuration is specified in JSON, the equivalent JSON configuration wo
 
 Run Express Gateway with debugging turned on
 
-```
+```bash
 LOG_LEVEL=debug npm start
 ```
 
 The output provided by the debugging flag should somethig like the following:
 
-```
+```bash
 Loading plugins. Plugin engine version: 1.2.0
 ...
 Loaded plugin express-gateway-plugin-example using from package express-gateway-plugin-example
@@ -104,8 +104,8 @@ registering condition url-match
 The `express-gateway-plugin-example` plugin is an npm package.
 
 Its Main components are:
-- manifest.js file - contains and exports plugin definition
-- package.json - contains plugin name and dependencies
+- `manifest.js` file - contains and exports plugin definition
+- `package.json` - contains plugin name and dependencies
 
 All the rest is completely optional. Still, some structure may help. That is why the example plugin contains individual
 folders for each extension type
@@ -123,11 +123,11 @@ module.exports = {
     // pluginContext.registerX calls
   },
   policies: ['example'],
-  options: {
+  schema: {
     param1: {
       type: 'string',
-      required: true
-    }
+    },
+    required: ['param1']
   }
 }
 ```
@@ -137,9 +137,8 @@ module.exports = {
 - `version` - _optional_ - Hint for the Plugin System how to process plugin, '1.2.0' only at this point
 - `init` - _mandatory_ - Function that will be called right after Express Gateway will `require` the plugin package
 - `policies` - _optional_ - list of policies to be added to the whitelist (requires confirmation from user)
-- `options` - _optional_ - JSON schema for support plugin options. Will be used for prompting during CLI execution.
-  Note: at this point only simple types: `boolean`, `string` and `number` are supported. Full featured JSON Schema
-  validation is planned for future releases
+- `schema` - _optional_ - JSON schema for plugin options. It will be used for prompting during CLI execution and
+data validation when loading the plugin.
 
 ### Events
 
@@ -157,6 +156,7 @@ module.exports = {
       // newConfig - is newly loaded configuration of ExpressGateway
       console.log('hot-reload', type, newConfig);
     });
+
     pluginContext.eventBus.on('http-ready', function ({ httpServer }) {
       console.log('http server is ready', httpServer.address());
 
@@ -168,13 +168,16 @@ module.exports = {
           port: 9015
         }
       });
+
       httpServer.on('upgrade', (req, socket, head) => {
         proxy.ws(req, socket, head);
       });
     });
+
     pluginContext.eventBus.on('https-ready', function ({ httpsServer }) {
       console.log('https server is ready', httpsServer.address());
     });
+
     pluginContext.eventBus.on('admin-ready', function ({ adminServer }) {
       console.log('admin server is ready', adminServer.address());
     });
