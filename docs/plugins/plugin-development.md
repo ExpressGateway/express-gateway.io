@@ -66,7 +66,9 @@ plugins:
     express-gateway-plugin-example:
         param1: 'param from system.config'
 ```
+
 If your configuration is specified in JSON, the equivalent JSON configuration would look like the following:
+
 ```json
 "plugins": {
     "express-gateway-plugin-example": {
@@ -78,6 +80,7 @@ If your configuration is specified in JSON, the equivalent JSON configuration wo
 #### Running the Example plugin
 
 Run Express Gateway with debugging turned on
+
 ```
 LOG_LEVEL=debug npm start
 ```
@@ -119,8 +122,8 @@ module.exports = {
   init: function (pluginContext) {
     // pluginContext.registerX calls
   },
-  policies:['example'],
-  options:{
+  policies: ['example'],
+  options: {
     param1: {
       type: 'string',
       required: true
@@ -156,7 +159,7 @@ module.exports = {
     });
     pluginContext.eventBus.on('http-ready', function ({ httpServer }) {
       console.log('http server is ready', httpServer.address());
-      
+
       // Proxy websockets to localhost:9015
       const httpProxy = require('http-proxy')
       var proxy = new httpProxy.createProxyServer({
@@ -180,6 +183,7 @@ module.exports = {
 ```
 
 ### Typescript support
+
 Express Gateway is shipped with plugin typings. Therefore, if you're using Typescript to author your plugin or even
 Javascript with an appropriate IDE such as [VSCode](https://code.visualstudio.com), you can use those to have type check
 as well as intellisense during your development.
