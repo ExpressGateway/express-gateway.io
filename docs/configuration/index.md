@@ -6,7 +6,7 @@ doc-order: 3.0
 
 One key feature of Express Gateway is that configuration is completely separate from the static code used to run the gateway.
 
-All configuration is centralized and can be found in the `/config` directory of the main Express Gateway folder.
+All configuration is centralized and can be found in the `/config` directory of the main Express Gateway directory.
 
 Configuration is divided into different levels:
 
@@ -18,12 +18,48 @@ Configuration is divided into different levels:
 
 The levels allow you to configure and manage Express Gateway without having to concern yourself with details that may not be relevant to you as a user, operator, administrator or developer. The lower the level, the higher the complexity.
 
+## Environment variables in configuration files
+
+You can use environment variables in configuration files; they follow the same syntax of `docker-compose.yml` files.
+
+This is particularly useful when you want to keep secrets decoupled from the configuration files so you can safely
+check these in your source control management system; or also when some providers are dictacting the HTTP port to listen
+through an environment variable, such as **Heroku** or **Glitch**
+
+### Syntax
+
+`${ENV_VARIABLE_NAME:-DEFAULT_VALUE}`
+
+* `ENV_VARIABLE_NAME`: environment variable whose value will be put in the config file.
+* `DEFAULT_VALUE`: fallback value, in case the environment variable is not defined.
+
+### Example
+
+```yml
+http:
+  port: ${HTTP_PORT:-8080}
+apiEndpoints:
+  customers:
+    host: customers.company.com
+  orders:
+    host: orders.company.com
+```
+
+Before the gateway gets loaded and before the configuration files are validated with their JSON Schema, the system will
+check for an environment variable called `HTTP_PORT`.
+
+If found, its value will be replaced in the configuration file; if not, the specified default value (`8080`) will be
+used. Default values aren't mandatory.
+
+If the specified env variable does not exist and a default value hasn't been provided, then a `warning` will be emitted
+and the system will assume `null` as value.
+
 ## Yaml references
 
 The gateway is shipped with `yml` files. However, given that [JSON is YAML][json-is-yaml], you can also provide JSON
 files. The gateway will be working correctly.
 
-Also — there are some handy features in yaml that might be handy when managing complex gateway files. One of these
+Also — there are some handy features in yaml that might be useful when managing complex gateway files. One of these
 is definitely the [references support][references]
 
 ### Examples
