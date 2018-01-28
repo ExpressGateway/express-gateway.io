@@ -12,7 +12,7 @@ especially the concept of [Middleware][express-middleware] will help with unders
 development.
 
 To understand how different entities within a plugin are registered and loaded checkout the
- [Express Gateway Boot Sequence]({{ site.baseurl}} {% link docs/runtime/boot-sequence.md %}).
+[Express Gateway Boot Sequence]({{ site.baseurl}} {% link docs/runtime/boot-sequence.md %}).
 
 Plugins extend Express Gateway entities as points of extension. These extension points and the plugin framework
 development plan are specified within the
@@ -34,7 +34,7 @@ of the mechanics, this section walks through what is normally automated.
 
 run the CLI command `eg gateway create` to create Express Gateway instance
 
-```
+```bash
 > eg gateway create
 ? What's the name of your Express Gateway? example-gateway
 ? Where would you like to install your Express Gateway? example-gateway
@@ -45,7 +45,7 @@ run the CLI command `eg gateway create` to create Express Gateway instance
 - npm install the example package
 - edit the `./config/system.config.yml` file and enable the plugin
 
-```
+```bash
 cd example-gateway
 npm i --save express-gateway-plugin-example
 ```
@@ -66,7 +66,9 @@ plugins:
     express-gateway-plugin-example:
         param1: 'param from system.config'
 ```
+
 If your configuration is specified in JSON, the equivalent JSON configuration would look like the following:
+
 ```json
 "plugins": {
     "express-gateway-plugin-example": {
@@ -78,13 +80,14 @@ If your configuration is specified in JSON, the equivalent JSON configuration wo
 #### Running the Example plugin
 
 Run Express Gateway with debugging turned on
-```
+
+```bash
 LOG_LEVEL=debug npm start
 ```
 
 The output provided by the debugging flag should somethig like the following:
 
-```
+```bash
 Loading plugins. Plugin engine version: 1.2.0
 ...
 Loaded plugin express-gateway-plugin-example using from package express-gateway-plugin-example
@@ -101,8 +104,8 @@ registering condition url-match
 The `express-gateway-plugin-example` plugin is an npm package.
 
 Its Main components are:
-- manifest.js file - contains and exports plugin definition
-- package.json - contains plugin name and dependencies
+- `manifest.js` file - contains and exports plugin definition
+- `package.json` - contains plugin name and dependencies
 
 All the rest is completely optional. Still, some structure may help. That is why the example plugin contains individual
 folders for each extension type
@@ -119,12 +122,12 @@ module.exports = {
   init: function (pluginContext) {
     // pluginContext.registerX calls
   },
-  policies:['example'],
-  options:{
+  policies: ['example'],
+  schema: {
     param1: {
       type: 'string',
-      required: true
-    }
+    },
+    required: ['param1']
   }
 }
 ```
@@ -134,9 +137,25 @@ module.exports = {
 - `version` - _optional_ - Hint for the Plugin System how to process plugin, '1.2.0' only at this point
 - `init` - _mandatory_ - Function that will be called right after Express Gateway will `require` the plugin package
 - `policies` - _optional_ - list of policies to be added to the whitelist (requires confirmation from user)
-- `options` - _optional_ - JSON schema for support plugin options. Will be used for prompting during CLI execution.
-  Note: at this point only simple types: `boolean`, `string` and `number` are supported. Full featured JSON Schema
-  validation is planned for future releases
+- `schema` - _optional_ - JSON schema for plugin options. It will be used for prompting during CLI execution and
+data validation when loading the plugin.
+
+### JSON Schema support
+
+Plugins, policies and conditions parameters can optionally be validated through a JSON Schema that can be provided
+using the `schema` property of the relative part. We suggest to provide such one as it provides a declarative way to
+validate the parameters, so you do not have to care about that in your code and can assume everything is ready to be
+used.
+
+If not provided, the extension will still be loaded, although a `warn` will be raised.
+
+**Note:** the JSON Schema `$id` property is mandatory, or the Gateway will refuse to load the extension. You can choose
+whatever name suits you; however we suggest to use the same convention we have in the gateway, which is:
+
+`http://express-gateway.io/schemas/{extension_type}/{extension_name}.json`
+
+* `extension_type`: Should be `plugin`, `policy` or `condition`
+* `extension_name`: It should usually match the extension `name` property.
 
 ### Events
 
@@ -154,9 +173,10 @@ module.exports = {
       // newConfig - is newly loaded configuration of ExpressGateway
       console.log('hot-reload', type, newConfig);
     });
+
     pluginContext.eventBus.on('http-ready', function ({ httpServer }) {
       console.log('http server is ready', httpServer.address());
-      
+
       // Proxy websockets to localhost:9015
       const httpProxy = require('http-proxy')
       var proxy = new httpProxy.createProxyServer({
@@ -165,13 +185,16 @@ module.exports = {
           port: 9015
         }
       });
+
       httpServer.on('upgrade', (req, socket, head) => {
         proxy.ws(req, socket, head);
       });
     });
+
     pluginContext.eventBus.on('https-ready', function ({ httpsServer }) {
       console.log('https server is ready', httpsServer.address());
     });
+
     pluginContext.eventBus.on('admin-ready', function ({ adminServer }) {
       console.log('admin server is ready', adminServer.address());
     });
@@ -180,6 +203,7 @@ module.exports = {
 ```
 
 ### Typescript support
+
 Express Gateway is shipped with plugin typings. Therefore, if you're using Typescript to author your plugin or even
 Javascript with an appropriate IDE such as [VSCode](https://code.visualstudio.com), you can use those to have type check
 as well as intellisense during your development.
