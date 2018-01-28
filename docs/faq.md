@@ -35,8 +35,8 @@ Express Gateway config files are easy to modify and maintain as flat files in th
 
 ### Can I use environment variables in config files?
 
-Yes, you can! We have borrowed the same syntax that `docker-compose.yml` files are using. Check out the relative
-[documentation section][config-env-variables] for further informations.
+Yes, you can! We have borrowed the same syntax that [Docker Compose YAML][docker-compose-yaml] files are using.
+Check out the relative [documentation section][config-env-variables] for further informations.
 
 ### How can I add authentication to a microservice/API?
 
@@ -77,3 +77,4 @@ Express Gateway is a community driven and supported project. Check out the resou
 information on how to engage.
 
 [config-env-variables]: {{ site.baseurl }}{% link docs/configuration/index.md %}#environment-variables-in-configuration-files
+[docker-compose-yaml]: https://docs.docker.com/compose/environment-variables/

@@ -20,7 +20,8 @@ The levels allow you to configure and manage Express Gateway without having to c
 
 ## Environment variables in configuration files
 
-You can use environment variables in configuration files; they follow the same syntax of `docker-compose.yml` files.
+You can use environment variables in configuration files; they follow the same syntax of [Docker Compose YAML][docker-compose-yaml]
+files.
 
 This is particularly useful when you want to keep secrets decoupled from the configuration files so you can safely
 check these in your source control management system; or also when some providers are dictacting the HTTP port to listen
@@ -161,3 +162,4 @@ policies:
 [references]: https://camel.readthedocs.io/en/latest/yamlref.html
 [jwt]: {{ site.baseurl }}{% link docs/policies/jwt.md %}
 [rate-limit]: {{ site.baseurl }}{% link docs/policies/rate-limiter.md %}
+[docker-compose-yaml]: https://docs.docker.com/compose/environment-variables/
