@@ -45,13 +45,20 @@ ${ENV_VARIABLE_NAME:-DEFAULT_VALUE}`
 In order to help you get started, we’ve put together a quick example and getting started sequence so you can understand more about working with environment variable support with Express Gateway.
  
 Example:
-`http:
-  port: ${HTTP_PORT:-8080}
-apiEndpoints:
-  customers:
-    `host: customers.company.com
-  orders:`
-    `host: orders.company.com``
+
+`http:`
+
+  `port: ${HTTP_PORT:-8080}`
+
+`apiEndpoints:`
+
+`  customers:`
+
+    `host: customers.company.com`
+
+ ` orders:`
+
+    `host: orders.company.com`
 
 
 First the system will check for an environment variable called `HTTP_PORT` before it loads the gateway and the configuration files are validated with their JSON Schema. In [our last release (1.6.0)](https://www.express-gateway.io/express-gateway-1.6.0-playback-time) we shared some great information about the new JSON Schema support.
