@@ -36,8 +36,9 @@ So, those are just a few factors to consider. Additionally, you can safely check
 ## Syntax Overview
 
 Here is a quick overview of the syntax for reference.
-`
-${ENV_VARIABLE_NAME:-DEFAULT_VALUE}`
+
+`${ENV_VARIABLE_NAME:-DEFAULT_VALUE}`
+
 * `ENV_VARIABLE_NAME`: environment variable which you want the value tol be put in the config file.
 * `DEFAULT_VALUE`: use this one in case the environment variable is not defined.
 
@@ -46,7 +47,8 @@ In order to help you get started, we’ve put together a quick example and getti
  
 Example:
 
-```http:
+```yml
+http:
   port: ${HTTP_PORT:-8080}
 apiEndpoints:
 customers:
