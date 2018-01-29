@@ -46,7 +46,7 @@ In order to help you get started, we’ve put together a quick example and getti
  
 Example:
 
-`http:
+```http:
   port: ${HTTP_PORT:-8080}
 apiEndpoints:
 customers:
