@@ -8,6 +8,7 @@ tags:
 - JSON
 - JSON Schema Support
 - Node 9
+layout: post
 ---
 
 After all the holidays, it's all about that New Year's resolution, hitting the gym for the brief 2 weeks before you rediscover fast food and, if you're like us, breaking open the laptop and committing that open source code.
