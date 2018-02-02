@@ -46,7 +46,7 @@ Request Transformation| x | **No Built in Solution. Need AWS Lambda**
 
 When built-in plugins are not enough, both Amazon API Gateway and Express Gateway have a mechanism for extending your gateway with custom functionality. Amazon API Gateway's mechanism relies primarily on [AWS Lambda](https://aws.amazon.com/lambda/). In addition to being able to use API Gateway to proxy requests to AWS Lambda, you can also use [custom authorizers](https://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html) to call AWS Lambda functions.
 
-<center><img src="https://s3.amazonaws.com/awscomputeblogmedia/1_custom-authorizers-flow.png"></center>
+![](https://s3.amazonaws.com/awscomputeblogmedia/1_custom-authorizers-flow.png)
 
 By virtue of AWS Lambda, you can build custom logic for Amazon API Gateway in [JavaScript, Python, Java, or C#](https://aws.amazon.com/lambda/faqs). AWS Lambda uses Node.js as its JavaScript runtime,so, like Express Gateway, you can easily leverage [npm packages](https://www.npmjs.com/) in your API gateway.
 
@@ -69,7 +69,7 @@ or [the AWS console GUI](https://docs.aws.amazon.com/apigateway/latest/developer
 
 You can also manage Amazon API Gateway separately by maintaining a [Swagger configuration in JSON](https://swagger.io/) and [importing the configuration](https://docs.aws.amazon.com/apigateway/latest/developerguide/stages.html) into Amazon API Gateway every time you make a change. This would enable you to track your API gateway configuration in a version control system like git.
 
-Express Gateway's high-level configuration is defined in a [YAML file](https://www.express-gateway.io/docs/configuration/)  that you can track in GitHub. There is also a [CLI](https://www.express-gateway.io/docs/cli/) and [admin RESTful API](https://www.express-gateway.io/docs/admin/) for managing users and credentials, but unfortunately there is no officially supported GUI for the admin API. However, unless you need to create users and credentials, you can configure Express Gateway entirely using a [YAML](https://www.yaml.org/start.html) file. This means tracking your API gateway configuration in a version control system like git is trivial.
+Express Gateway's high-level configuration is defined in a [YAML file](https://www.express-gateway.io/docs/configuration/)  that you can track in GitHub. There is also a [CLI](https://www.express-gateway.io/docs/cli/) and [admin API](https://www.express-gateway.io/docs/admin/) for managing users and credentials, but unfortunately there is no officially supported GUI for the admin API. However, unless you need to create users and credentials, you can configure Express Gateway entirely using a [YAML](https://www.yaml.org/start.html) file. This means tracking your API gateway configuration in a version control system like git is trivial.
 
 Another limitation of Amazon API Gateway is that your gateway has a separate configuration for [each resource](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html#api-gateway-overview-developer-experience-managing-api). There is no way to configure your gateway to handle requests differently based on the request hostname or the IP address of the incoming request and there's no way to share logic between resources, unless you write your own code in AWS Lambda. With Express Gateway, you can turn on features like rate-limiting by hostname or by IP address [with a single line in your config file](https://www.express-gateway.io/docs/policies/rate-limiter#example-specific-api-host), and [policies](https://www.express-gateway.io/docs/policies/) enable you to reuse logic in different [pipelines](https://www.express-gateway.io/docs/core-concepts#pipelines).
 
@@ -84,11 +84,7 @@ On the other hand, Amazon API Gateway's documentation is quite cumbersome. A gre
 ## Additional Resources
 
 Like more of this content?
- - Have Questions? Head over to [our Gitter channel](https://gitter.im/ExpressGateway/express-gateway) and hit us
-   up! We love feedback!
 
- - Find us on twitter: [@express_gateway](https://twitter.com/express_gateway) for questions
-   comments or feedback.
-
- - [Sign up for our monthly newsletter](https://eepurl.com/cVOqd5) to get the latest updates, news
-   and features.
+* Have Questions? Head over to [our Gitter channel](https://gitter.im/ExpressGateway/express*gateway) and hit us up! We love feedback!
+* Find us on twitter: [@express_gateway](https://twitter.com/express_gateway) for questions comments or feedback.
+* Sign up for our [monthly newsletter](https://eepurl.com/cVOqd5) to get the latest updates, news and features.
