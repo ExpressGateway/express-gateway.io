@@ -4,7 +4,7 @@ date: 2018-02-02 00:00:00 Z
 categories:
 - comparision
 layout: post
-author: Val Kilmer
+author: Valeri Karpov
 ---
 
 [Express Gateway](https://www.express-gateway.io/) and [Amazon API Gateway](https://aws.amazon.com/api-gateway/) are two different products for configuring middleware servers that provide services like rate limiting, authentication, and proxying. As a developer, I want to share the major trade-offs between using Amazon API Gateway and Express Gateway across several important dimensions.
