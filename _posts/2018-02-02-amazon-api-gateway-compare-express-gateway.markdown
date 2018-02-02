@@ -85,6 +85,6 @@ On the other hand, Amazon API Gateway's documentation is quite cumbersome. A gre
 
 Like more of this content?
 
-* Have Questions? Head over to [our Gitter channel](https://gitter.im/ExpressGateway/express*gateway) and hit us up! We love feedback!
+* Have Questions? Head over to [our Gitter channel](https://gitter.im/ExpressGateway/express-gateway) and hit us up! We love feedback!
 * Find us on twitter: [@express_gateway](https://twitter.com/express_gateway) for questions comments or feedback.
 * Sign up for our [monthly newsletter](https://eepurl.com/cVOqd5) to get the latest updates, news and features.
