@@ -3,6 +3,7 @@ title: Test Post
 date: 2018-02-14 01:38:00 Z
 categories:
 - tutorials
+layout: post
 ---
 
 #h1
