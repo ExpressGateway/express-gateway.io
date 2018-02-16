@@ -6,7 +6,7 @@ The main branch for this repository is `dev`.
 
 The live site is published off `gh-pages`.
 
-Please note: we use [forestry.io](https://forestry.io) as a CMS around this jekyll based site, changes that are committed to `dev` may be published automatically through content pushes through [forestry.io](https://forestry.io).
+Please note: we use [siteleaf.com](https://siteleaf.com) as a CMS around this jekyll based site, changes that are committed to `dev` may be published automatically through content pushes through [siteleaf.com](https://siteleaft.com) to the `gh-pages` branch.
 
 ## Local Setup
 
