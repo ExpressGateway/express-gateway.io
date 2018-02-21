@@ -27,7 +27,7 @@ For Express Gateway this is not important, but it’s good to understand basic c
 
 ## Environment Variables & Express Gateway
 
-Express Gateway is driven by a YAML file which now accepts variables for things like hostnames, ports paths or practically anything. This is important because can dynamically set those variable values in your environment. It can also be scripted so that you send those variables to the /YAML and they will be filled in dynamically.
+Express Gateway is driven by a YAML file which now accepts variables for things like hostnames, ports paths or practically anything. This is important because can dynamically set those variable values in your environment. It can also be scripted so that you send those variables to the `/YAML` and they will be filled in dynamically.
 
 Let’s face it - *hard coding config variables is a pain.*
 
@@ -37,7 +37,7 @@ Dynamically configuring variables is much more useful. For example, when you are
 
 Environment Variables can be employed in the configuration files of Express Gateway. A key feature of the configuration file is that it is completely separate from the static code that you use to run the API Gateway. So in order to get started with Environment Variables, we should take a look at the configuration files and understand more about how they’re set up.
 
-You can find all of the necessary configuration centralized in the /config directory of the main Express Gateway directory. Additionally, configuration is divided into the following levels:
+You can find all of the necessary configuration centralized in the `/config` directory of the main Express Gateway directory. Additionally, configuration is divided into the following levels:
 
 | Level   | Name    | File/Directory               |
 |---------|:---------:|:------------------------------:|
