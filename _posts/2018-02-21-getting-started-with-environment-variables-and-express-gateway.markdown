@@ -40,7 +40,7 @@ Environment Variables can be employed in the configuration files of Express Gate
 You can find all of the necessary configuration centralized in the /config directory of the main Express Gateway directory. Additionally, configuration is divided into the following levels:
 
 | Level   | Name    | File/Directory               |
-|---------|---------|------------------------------|
+|---------|:---------:|:------------------------------:|
 | 1 (top) | gateway |  /config/gateway.config.yml  |
 | 2       | system  |  /config/system.config.yml   |
 | 3       | data    |  /config/models              |
