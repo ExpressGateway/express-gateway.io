@@ -53,7 +53,7 @@ So, now that we’ve covered the configuration piece, it’s worth reviewing the
 
 ## Two Things Are Certain: Death and Syntax
 
-When we thought about it long and hard, we realized that we needed to make environment variables easy to use and that means using a well recognized syntax. So, we chose the Docker Compose YAML files.
+When we thought about it long and hard, we realized that we needed to make environment variables easy to use and that means using a well recognized syntax. So, we chose the [Docker Compose YAML files](https://docs.docker.com/engine/reference/builder/#environment-replacement).
 
 What’s covered:
 Substituting environment variables
@@ -62,11 +62,10 @@ Passing environment variables through
 Setting default values in the “.env” file
 
 Syntax sample:
-\${ENV_VARIABLE_NAME:-DEFAULT_VALUE}
-ENV_VARIABLE_NAME: environment variable whose value will be put in the
+`${ENV_VARIABLE_NAME:-DEFAULT_VALUE}`
+`ENV_VARIABLE_NAME`: environment variable whose value will be put in the
 config file.
-DEFAULT_VALUE: fallback value, in case the environment variable is not
-defined.
+`DEFAULT_VALUE`: fallback value, in case the environment variable is not defined.
 
 If you’re ready to get started with Environment Variables in Express Gateway with this easy-to-follow How-To Video:
 
