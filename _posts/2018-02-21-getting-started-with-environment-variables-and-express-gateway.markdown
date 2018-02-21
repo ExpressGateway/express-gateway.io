@@ -1,6 +1,9 @@
 ---
 title: Getting Started with Environment Variables and Express Gateway
 date: 2018-02-21 07:02:00 Z
+categories:
+- Guides
+layout: post
 ---
 
 There are a lot of resources out there when it comes to exploring the ins-n-outs of environment variables. Recently, we added support for environment variables in Express Gateway as a response to request we received from developers who are using Express Gateway in production right now. So, we’d like to take a moment and go into more depth on how you can get started with Environment Variables and Express Gateway.
