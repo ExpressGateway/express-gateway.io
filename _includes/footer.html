@@ -41,9 +41,13 @@
 docsearch({
   apiKey: '96f095bd1aa8ffbf7e0bd45d566f6d67',
   indexName: 'express-gateway',
-  inputSelector: '.search-text-box',
-  debug: true
+  inputSelector: '.search-text-box'
 });
+
+((window.gitter = {}).chat = {}).options = {
+  room: 'expressgateway/express-gateway'
+};
+
 </script>
 
 {% include insert-to-body-end.html %}
