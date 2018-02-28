@@ -8,7 +8,7 @@ The following depiction provides a high level overview of the initializaiton and
 
 Note: the plugin framework described here is coming in the `1.2.0` release
 
-<img src="../../assets/img/boot-sequence-eg-diagram.png" />
+![boot-sequence][boot-sequence]
 
 ## Initial phase
 #### Config Loading
@@ -55,3 +55,4 @@ Admin ExpressJS application is now exposed by node.js servers and start listenin
 - `admin-ready` - emitted once Admin API server starts listening on the port
 
 [plugins]: {{ site.baseurl }}{% link docs/plugins/index.md %}
+[boot-sequence]: {{ site.baseurl }}{% link assets/img/boot-sequence-eg-diagram.png %}

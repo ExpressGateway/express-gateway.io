@@ -24,7 +24,7 @@ eg users update <user_id|user_name> [options]
 
 The properties associated with a user are specified in the model config.
 See detailed description here:
-[Consumer Management](../../consumer-management) 
+[Consumer Management][consumer-management]
 
 ### Examples
 
@@ -52,3 +52,5 @@ $ eg users update ksmith -p 'firstname=Karen' -p 'email=ksmith1@example.com'
 $ eg users update ksmith -p 'firstname=Karen' -p 'email=ksmith1@example.com' -q
 010566fb-6cf5-4bce-a7b1-1be85fb0969a
 ```
+
+[consumer-management]: {{ site.baseurl }}{% link docs/consumer-management.md %}
