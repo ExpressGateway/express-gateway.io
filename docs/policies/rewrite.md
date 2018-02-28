@@ -13,13 +13,18 @@ This type of policy should generally be placed first in the policies list within
 
 ### Usage
 
-To enable the Rewrite policy, add `rewrite` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
+The Rewrite policy is not built in Express-Gateway.
+
+To enable it, you need to install its plugin fist:
+
+`eg plugins install express-gateway-plugin-rewrite`
+
+Then add `rewrite` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
 
 ```yaml
 
 policies:
   - rewrite
-
 ```
 
 ### Example
