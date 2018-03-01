@@ -17,7 +17,9 @@ The egContext contains the following properties that can be used:
 * `res`: [ExpressJS Response Object](https://expressjs.com/en/4x/api.html#res)
 * `apiEndpoint`: Configuration or API Endpoint that is executing.
 For example, `apiEndpoint.scopes` will provide all configured scopes for endpoint
-* `user`: Information about authenticated and authorized user
+* `consumer`: Information about about the current consumer (can be an `app` or an `user`)
+* `requestID`: uuid v4 (base62 encoded) identifier of the current request, useful for tracking purposes. If needed, you
+can propagate this value down as an header using the [headers][headers] policy.
 
 ### Example
 
@@ -30,6 +32,4 @@ pipelines:
           - action:    # array of condition/actions objects
               jscode: 'req.url = "/new/url"; ' #  code to execute against EG Context
 ```
-
-[gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
-[policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
+[headers]: {{ site.baseurl }}{% link docs/policies/headers.md %}

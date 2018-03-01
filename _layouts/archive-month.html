@@ -13,6 +13,8 @@ layout: page
 {% for post in site.posts %}
     {% capture post_month %}{{ post.date | date: '%m' }}{% endcapture %}
     {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% assign post_year = post_year | plus: 0 %}
+    {% assign post_month = post_month | plus: 0 %}
     {% if post_month == page.month and post_year == page.year %}
             <li>
               <div class="post-excerpt">

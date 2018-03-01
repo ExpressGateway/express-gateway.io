@@ -24,7 +24,7 @@ eg apps update <app_id|app_name> [options]
 
 The properties associated with an app are specified in the model config.
 See detailed description here:
-[Consumer Management](../../consumer-management)
+[Consumer Management][consumer-management]
 
 ### Examples
 
@@ -50,3 +50,5 @@ $ eg apps update cb6864b8-66e1-4bab-a8ea-c8e6ca606c08 -p 'name=appy2'
 $ eg apps update cb6864b8-66e1-4bab-a8ea-c8e6ca606c08 -p 'name=appy2' -q
 cb6864b8-66e1-4bab-a8ea-c8e6ca606c08
 ```
+
+[consumer-management]: {{ site.baseurl }}{% link docs/consumer-management.md %}

@@ -25,7 +25,7 @@ eg users create [options]
 
 The properties associated with a user are specified in the model config.
 See detailed description here:
-[Consumer Management](../../consumer-management) 
+[Consumer Management][consumer-management]
 
 ### Examples
 
@@ -44,17 +44,17 @@ $ eg users create
 #### Create a user with properties
 
 ```shell
-$ eg users create -p 'username=ksmith' -p 'firstname=Kate' -p 'lastname=Smith'    
+$ eg users create -p 'username=ksmith' -p 'firstname=Kate' -p 'lastname=Smith'
 ✔ Created ksmithshell
 ```
 
 #### Import users with newline-delimited JSON
 
 ```shell
-$ cat ./users.jsonl                           
+$ cat ./users.jsonl
 { "username": "ksmith", "firstname": "Kate", "lastname": "Smith" }
 { "username": "jdoe", "firstname": "Jane", "lastname": "Doe" }
-$ cat ./users.jsonl | eg users create --stdin 
+$ cat ./users.jsonl | eg users create --stdin
 ✔ Created ksmith
 ✔ Created jdoe
 ```
@@ -65,3 +65,5 @@ $ cat ./users.jsonl | eg users create --stdin
 $ eg users create -p 'username=ksmith' -p 'firstname=Kate' -p 'lastname=Smith' -q
 fa56250a-ede5-4002-9889-57df92b1e407
 ```
+
+[consumer-management]: {{ site.baseurl }}{% link docs/consumer-management.md %}

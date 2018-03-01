@@ -82,5 +82,5 @@ So many new changes, if you have not already checked it out, now’s the time to
 **Additional Resources**
 * Have Questions? Head over to  [our Gitter channel](https://gitter.im/ExpressGateway/express-gateway) and hit us up!
 * We love feedback! Find us on twitter: [@express_gateway](https://twitter.com/express_gateway) for questions comments or feedback.
-* [Sign up for our monthly newsletter](http://eepurl.com/cVOqd5) to get the latest updates, news and features.
+* [Sign up for our monthly newsletter](https://eepurl.com/cVOqd5) to get the latest updates, news and features.
 
