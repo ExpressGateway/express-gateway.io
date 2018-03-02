@@ -15,7 +15,8 @@ layout: page
     {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
     {% assign post_year = post_year | plus: 0 %}
     {% assign post_month = post_month | plus: 0 %}
-    {% if post_month == page.month and post_year == page.year %}
+    {% assign page_month = page.month | plus: 0 %}
+    {% if post_month == page_month and post_year == page.year %}
             <li>
               <div class="post-excerpt">
                 <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
