@@ -2,7 +2,7 @@
 title: Getting Started with Environment Variables and Express Gateway
 date: 2018-02-21 07:02:00 Z
 categories:
-- Guides
+- guides
 layout: post
 ---
 
