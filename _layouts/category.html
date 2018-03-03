@@ -12,7 +12,6 @@ layout: page
 <ul>
 {% for post in site.posts %}
     {% assign post_cats = post.categories | join:'|' | append:'|' %}
-    <li>{{post_cat}}</li>
     {% if post_cat == page.category %}
             <li>
               <div class="post-excerpt">
