@@ -1,11 +1,7 @@
 <!-- category test -->
-{% comment%}
-Here we generate all the categories.
-{% endcomment%}
-
 {% assign rawcats = "" %}
 {% for post in site.posts %}
-{% assign tcats = post.category | join:'|' | append:'|' %}
+{% assign tcats = post.categories | join:'|' | append:'|' %}
 {% assign rawcats = rawcats | append:tcats %}
 {% endfor %}
 

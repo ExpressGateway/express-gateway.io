@@ -11,7 +11,7 @@ layout: page
 <div class="article-list">
 <ul>
 {% for post in site.posts %}
-    {% capture post_cat %}{{ post.category }}{% endcapture %}
+    {% assign post_cats = post.categories | join:'|' | append:'|' %}
     {% if post_cat == page.category %}
             <li>
               <div class="post-excerpt">

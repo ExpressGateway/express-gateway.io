@@ -59,7 +59,7 @@ It’s primary tasks are:
 
 ### PluginContext Example
 
-```
+```javascript
 module.exports = {
   version: '1.2.0',
   init: function (pluginContext) {
@@ -119,7 +119,7 @@ If the plugin contains a policy, the policy is also declared within the `policie
 
 #### Plugin Installation Example
 
-```
+```bash
 ➜ eg plugin install express-gateway-plugin-example
 ? Set value for baseUrl: http://example.com
 ? Set value for maxRequestsPerSecond: 100
@@ -129,7 +129,7 @@ Plugin installed!
 ```
 inside the [system.config.yml][system-config-yml], a plugin entry with parameters will be written
 
-```
+```yaml
 plugins:
   example:
     package: express-gateway-plugin-example
@@ -139,7 +139,7 @@ plugins:
 
 the Express Gateway plugin example comes with an example policy that is also entered within the [gateway.config.yml][gateway-config-yml]
 
-```
+```yaml
 policies:
   - cors
   - log

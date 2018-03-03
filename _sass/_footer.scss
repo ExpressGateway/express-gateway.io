@@ -8,10 +8,6 @@
   font-size: $font-size-18;
   color: $color-background;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c6c7b', endColorstr='#37aedc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-
-
-
   .wrapper {
     display: flex;
     flex-direction: row;
@@ -94,5 +90,14 @@
       text-align: center;
       width: 100%
     }
+  }
+}
+
+.gitter-open-chat-button {
+  color: white;
+  background-color: #34a8c4;
+
+  &:hover {
+    background-color: lighten($color: (#34a8c4), $amount: 10);
   }
 }
