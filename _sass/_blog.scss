@@ -121,6 +121,8 @@
         font-weight: 200;
         line-height: $font-lineheight-base;
         padding-bottom: 1.75rem;
+        display: inline-block;
+
         img {
           max-width: 125%;
         }
@@ -128,7 +130,6 @@
 
       a {
         color: $color-primary;
-        display: inline-block;
 
         &:hover {
           color: $color-navigation;
@@ -395,7 +396,6 @@
       // background: url(../img/icon-arrow.svg) 0 0 no-repeat;
        background-color: $color-gray;
        -webkit-mask: url(../img/icon-arrow.svg) no-repeat;
-       mask: url(../img/icon-arrow.svg) no-repeat;
        -webkit-transform: rotate(180deg);
        transform: rotate(180deg);
     }
@@ -414,7 +414,6 @@
        //background: url(../img/icon-arrow.svg) 0 0 no-repeat;
        background-color: $color-gray;
         -webkit-mask: url(../img/icon-arrow.svg) no-repeat;
-        mask: url(../img/icon-arrow.svg) no-repeat;
       //  -webkit-transform: rotate(30deg);
       //  transform: rotate(30deg);
     }
