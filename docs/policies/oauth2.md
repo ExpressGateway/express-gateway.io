@@ -107,6 +107,9 @@ pipelines:
 
 ##### Options Reference
 
+* `jwt`
+  - JWT signin parameters. For a complete reference, see the [jwt policy][jwt]
+  - default value: `undefined`
 * `passThrough`:
   - determines whether the gateway should execute the successive policy in case the auth process fails. If set to false,
     the gateway will return an `Unauthorized` response.
