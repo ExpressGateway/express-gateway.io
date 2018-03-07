@@ -140,6 +140,10 @@ The JWT scheme and header are not standardized, therefore they can be overriden 
 * `checkCredentialExistence`:
   - determines whether the gateway should check for the credential existence in the system, looking at the `sub` claim.
   - default value: `true`
+* `passThrough`:
+  - determines whether the gateway should execute the successive policy in case the auth process fails. If set to false,
+    the gateway will return an `Unauthorized` response.
+  - default value: `false`
 
 
 [rfc-jwt]: https://tools.ietf.org/html/rfc7519

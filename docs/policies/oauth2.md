@@ -95,15 +95,22 @@ policies:
 ```yaml
 
 pipelines:
- pipeline1:
-  apiEndpoints:
-   - authorizedEndpoint
-  policies:
-   - oauth2:
-   proxy:
-     action:
-      serviceEndpoint: backend
+  pipeline1:
+    apiEndpoints:
+      - authorizedEndpoint
+    policies:
+      - oauth2:
+      - proxy:
+          - action:
+              serviceEndpoint: backend
 ```
+
+##### Options Reference
+
+* `passThrough`:
+  - determines whether the gateway should execute the successive policy in case the auth process fails. If set to false,
+    the gateway will return an `Unauthorized` response.
+  - default value: `false`
 
 ### JWT support
 

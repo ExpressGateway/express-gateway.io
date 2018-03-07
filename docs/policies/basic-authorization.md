@@ -45,6 +45,13 @@ pipelines:
 
 ```
 
+##### Options Reference
+
+* `passThrough`:
+  - determines whether the gateway should execute the successive policy in case the auth process fails. If set to false,
+    the gateway will return an `Unauthorized` response.
+  - default value: `false`
+
 [rfc-7617-standard]: https://tools.ietf.org/html/rfc7617
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}

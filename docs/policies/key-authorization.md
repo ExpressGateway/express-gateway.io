@@ -113,6 +113,10 @@ Keys may also be passed as a query parameter. Using a query parameter to specify
 * `disableQueryParam`:
   - default value: `false`
   - set to true to disable api key lookup in query string
+* `passThrough`:
+  - determines whether the gateway should execute the successive policy in case the auth process fails. If set to false,
+    the gateway will return an `Unauthorized` response.
+  - default value: `false`
 
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
