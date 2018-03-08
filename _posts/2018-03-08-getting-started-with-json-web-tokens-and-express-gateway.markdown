@@ -18,7 +18,7 @@ In case you missed the important news - we released an update to Express Gateway
 
 <!--excerpt-->
 
-\##Intro: API Gateways are at the heart of microservices
+\## Intro: API Gateways are at the heart of microservices
 
 You’re probably wondering what is an API Gateway and why does it matter.
 
