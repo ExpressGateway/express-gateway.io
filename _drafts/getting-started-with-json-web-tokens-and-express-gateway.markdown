@@ -1,6 +1,16 @@
 ---
 title: Getting Started with JSON Web Tokens and Express Gateway
 date: 2018-03-08 04:27:00 Z
+categories:
+- guides
+- technology
+tags:
+- JSON Web Tokens
+- Express.js
+- API Gateway
+- Microservices
+- What is an API Gateway
+- What is JSON Web Token
 ---
 
 In case you missed the important news - we released an update to Express Gateway with support for JSON Web Tokens (JWT). Now, we’d like to take a moment and go into more depth on how you can get started with JWT and Express Gateway.
