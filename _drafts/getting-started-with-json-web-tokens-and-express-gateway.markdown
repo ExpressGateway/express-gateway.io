@@ -5,6 +5,8 @@ date: 2018-03-08 04:27:00 Z
 
 In case you missed the important news - we released an update to Express Gateway with support for JSON Web Tokens (JWT). Now, we’d like to take a moment and go into more depth on how you can get started with JWT and Express Gateway.
 
+<!--excerpt-->
+
 \##Intro: API Gateways are at the heart of microservices
 
 You’re probably wondering what is an API Gateway and why does it matter.
@@ -53,7 +55,7 @@ Also, it’s worth noting that reading the OAuth2 spec is...hard. Which also mea
 
 It's why there's an entire product segment around this.
 
-No, seriously. There is an entire set of products and companies that will knock this out of the park for you such as [Ping Identity](https://www.pingidentity.com/), [Okta](www.okta.com/‎
+No, seriously. There is an entire set of products and companies that will knock this out of the park for you such as [Ping Identity](https://www.pingidentity.com/), \[Okta\](www.okta.com/‎
 www.okta.com/‎
 www.okta.com), and (our favorite) [Auth0](https://auth0.com/). [Learn more about Auth0 and Express Gateway.](https://auth0.com/blog/apigateway-microservices-superglue/)
 
