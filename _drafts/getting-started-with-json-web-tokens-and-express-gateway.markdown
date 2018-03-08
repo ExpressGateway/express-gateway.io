@@ -55,14 +55,14 @@ Also, it’s worth noting that reading the OAuth2 spec is...hard. Which also mea
 
 It's why there's an entire product segment around this.
 
-No, seriously. There is an entire set of products and companies that will knock this out of the park for you such as [Ping Identity](https://www.pingidentity.com/), \[Okta\](www.okta.com/‎
-www.okta.com/‎
-www.okta.com), and (our favorite) [Auth0](https://auth0.com/). [Learn more about Auth0 and Express Gateway.](https://auth0.com/blog/apigateway-microservices-superglue/)
+No, seriously. There is an entire set of products and companies that will knock this out of the park for you such as [Ping Identity](https://www.pingidentity.com/), [Okta](www.okta.com), and (our favorite) [Auth0](https://auth0.com/). [Learn more about Auth0 and Express Gateway.](https://auth0.com/blog/apigateway-microservices-superglue/)
 
 *Still not feeling it?*
 
 We’ve had those in-between moments of realization where you just need to get it done. That's where the internal support for JSON Web Tokens (JWT) will can come in handy. To help get you started, we’ve put together a video tutorial on setting up JSON Web Tokens initiated by other identity servers, like Auth0, and when you actually initiate and manage the JWTs through an Identity Server.
 
 Get started with JSON Web Token Support in Express Gateway with this easy-to-follow How-To Video:
+
+<iframe width="420" height="315" src="//vimeo.com/manage/259108554/embed" frameborder="0" allowfullscreen></iframe>
 
 OR: You can also check out the more [technical getting started guide](https://www.express-gateway.io/express-gateway-release-1-5-0-with-jwt-support/) in the release post detailing the latest updates.
