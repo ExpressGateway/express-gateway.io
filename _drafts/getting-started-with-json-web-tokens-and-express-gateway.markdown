@@ -63,6 +63,6 @@ We’ve had those in-between moments of realization where you just need to get i
 
 Get started with JSON Web Token Support in Express Gateway with this easy-to-follow How-To Video:
 
-<iframe width="420" height="315" src="//vimeo.com/manage/259108554/embed" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="https://vimeo.com/manage/259108554/embed" frameborder="0" allowfullscreen></iframe>
 
 OR: You can also check out the more [technical getting started guide](https://www.express-gateway.io/express-gateway-release-1-5-0-with-jwt-support/) in the release post detailing the latest updates.
