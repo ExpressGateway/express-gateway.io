@@ -66,7 +66,7 @@ Also, it’s worth noting that reading the OAuth2 spec is...hard. Which also mea
 
 It's why there's an entire product segment around this.
 
-No, seriously. There is an entire set of products and companies that will knock this out of the park for you such as [Ping Identity](https://www.pingidentity.com/), [Okta](www.okta.com), and (our favorite) [Auth0](https://auth0.com/). [Learn more about Auth0 and Express Gateway.](https://auth0.com/blog/apigateway-microservices-superglue/)
+No, seriously. There is an entire set of products and companies that will knock this out of the park for you such as [Ping Identity](https://www.pingidentity.com/), [Okta](https://www.okta.com), and (our favorite) [Auth0](https://auth0.com/). [Learn more about Auth0 and Express Gateway.](https://auth0.com/blog/apigateway-microservices-superglue/)
 
 *Still not feeling it?*
 
