@@ -36,13 +36,15 @@ We've already announced support for JSON Schema, but we've been working hard on 
 
 Also, we improved JSON Schema for the `serviceEndpoint` with respect to `urls.` Specifically, we replaced some run time checks into the JSON Schema, specified using the right logger (`policy` instead of `logger`). In addition, we rearranged parameters so that the created `balancer` is constant (hopefully immutable).
 
-If that's not enough, we also focused on other aspects of  the Proxy Policy such as removing unused parameters in `prepareHeaders` , deleting foreign parameters in `…File `parameters and making sure the balancer strategies do not modify the current object (*as this was breaking  **All The Things***).
+If that's not enough, we also focused on other aspects of  the Proxy Policy such as: removing unused parameters in `prepareHeaders` , deleting foreign parameters in `…File `parameters and using the right logger (`policy` instead of `logger`). 
+
+We can't wait to get your feedback on the changes from this release and if you have questions - you can join us  on **[our Gitter channel.](https://gitter.im/ExpressGateway/express-gateway)**
 
 ## [Check out more updates in the official release notes.](https://github.com/ExpressGateway/express-gateway/releases/tag/v1.7.3)
 
 ### Reminder: In Production Yet?
 
-If you're currently using Express Gateway in production - [hit us up](mailto:info@express-gateway.io)! We'd love to understand more about your use case, project and see where we could help out.
+If you're currently using Express Gateway in production - [hit us up](mailto:info@express-gateway.io)! We'd love to understand more about your use case or project and see where we could help out.
 
 ## More Resources
 
