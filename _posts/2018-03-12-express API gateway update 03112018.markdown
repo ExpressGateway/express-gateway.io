@@ -50,6 +50,6 @@ If you're currently using Express Gateway in production - [hit us up](mailto:inf
 
 * Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
 
-* **[Follow along on](https://twitter.com/express_gateway)** **Twitter**
+* **[Follow along on](https://twitter.com/express_gateway)** Twitter
 
 * Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!
