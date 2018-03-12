@@ -34,9 +34,7 @@ So, to round out the updates to JWT - you can specify the `algorithm` parameter 
 
 We've already announced support for JSON Schema, but we've been working hard on a few updates. For instance, we've enabled the coercing option for Express Gateway's schema validator (`ajv`). So, this means that the Gateway will  convert your data to the correct type. Additionally, this update was required in order to fully support environment variables in JSON configuration files.
 
-Also, we improved JSON Schema for the `serviceEndpoint` with respect to `urls.` Specifically, we replaced some run time checks into the JSON Schema, specified using the right logger (`policy` instead of `logger`). In addition, we rearranged parameters so that the created `balancer` is constant (hopefully immutable).
-
-If that's not enough, we also focused on other aspects of  the Proxy Policy such as: removing unused parameters in `prepareHeaders` , deleting foreign parameters in `…File `parameters and using the right logger (`policy` instead of `logger`). 
+Also, we improved JSON Schema for the `serviceEndpoint` with respect to `urls.` Specifically, we replaced some run time checks into the JSON Schema. In addition, we rearranged parameters such as: removing unused parameters in `prepareHeaders` , deleting foreign parameters in `…File `parameters. Additionally, we also focused on other aspects of  the Proxy Policy like using the right logger (`policy` instead of `logger`) and creating most of the proxy options upfront.
 
 We can't wait to get your feedback on the changes from this release and if you have questions - you can join us  on **[our Gitter channel.](https://gitter.im/ExpressGateway/express-gateway)**
 
