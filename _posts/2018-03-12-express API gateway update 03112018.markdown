@@ -22,13 +22,13 @@ Please welcome Express Gateway 1.7.3 where we have collected some edge cases and
 
 ## JSON Web Tokens (JWT) got an upgrade
 
-Last week we posted all about getting started with JSON Web Tokens, so this release has some extra special love for JSON Web Tokens (JWT). 
+Last week we posted all about getting started with JSON Web Tokens, so this release has some extra special love for JSON Web Tokens (JWT).
 
-Now, when you validate an external JWT and `checkCredentialExistence` flag is `false`, the gateway will set the received JWT as the current user object. This makes it easy to directly extract the information you care about instead of creating an anonymous user. 
+Now, when you validate an external JWT and `checkCredentialExistence` flag is `false`, the gateway will set the received JWT as the current user object. This makes it easy to directly extract the information you care about instead of creating an anonymous user.
 
 *Information. You. Care. About.*
 
-So, to round out the updates to JWT - you can specify the `algorithm` parameter that the `oAuth2` policy will use to sign the JWT token.  
+So, to round out the updates to JWT - you can specify the `algorithm` parameter that the `oAuth2` policy will use to sign the JWT token.
 
 ## JSON Schema support still in full swing
 
@@ -44,7 +44,7 @@ In addition to all of the new changes with JWT and JSON schema support, we've ad
 
 Additionally, we've reorganized the [Proxy Policy](https://www.express-gateway.io/docs/policies/proxy/) so it's easier to read and understand. This is an important policy to consider when using Express Gateway because it forwards requests to service endpoints.
 
-[Check out more updates in the official release notes.](https://github.com/ExpressGateway/express-gateway/releases/tag/untagged-bd5bfb1ce5d0a55a81df)
+[Check out more updates in the official release notes.](https://github.com/ExpressGateway/express-gateway/releases/tag/v1.7.3)
 
 ### Reminder: In Production Yet?
 
