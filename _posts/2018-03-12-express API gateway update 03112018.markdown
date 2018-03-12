@@ -36,9 +36,9 @@ We've already announced support for JSON Schema, but we've been working hard on 
 
 Also, we improved JSON Schema for the `serviceEndpoint` with respect to `urls.` Specifically, we replaced some run time checks into the JSON Schema, specified using the right logger (`policy` instead of `logger`). In addition, we rearranged parameters so that the created `balancer` is constant (hopefully immutable).
 
-If that's not enough, we also removed unused parameters in `prepareHeaders` and deleted foreign parameters in `…File `parameters. We're also excited to announce that the balancer strategies do not modify the current object as this was breaking ** All The Things(tm).**
+If that's not enough, we also removed unused parameters in `prepareHeaders` and deleted foreign parameters in `…File`parameters. We're also excited to announce that the balancer strategies do not modify the current object as this was breaking  **All The Things**(tm).
 
-[Check out more updates in the official release notes.](https://github.com/ExpressGateway/express-gateway/releases/tag/v1.7.3)
+## [Check out more updates in the official release notes.](https://github.com/ExpressGateway/express-gateway/releases/tag/v1.7.3)
 
 ### Reminder: In Production Yet?
 
@@ -50,4 +50,6 @@ If you're currently using Express Gateway in production - [hit us up](mailto:inf
 
 * Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
 
-* [Follow along on](https://twitter.com/express_gateway) **Twitter**
+* **[Follow along on](https://twitter.com/express_gateway)** **Twitter**
+
+* Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!
