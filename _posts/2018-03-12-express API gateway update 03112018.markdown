@@ -36,7 +36,7 @@ We've already announced support for JSON Schema, but we've been working hard on 
 
 Also, we improved JSON Schema for the `serviceEndpoint` with respect to `urls.` Specifically, we replaced some run time checks into the JSON Schema, specified using the right logger (`policy` instead of `logger`). In addition, we rearranged parameters so that the created `balancer` is constant (hopefully immutable).
 
-If that's not enough, we also removed unused parameters in `prepareHeaders` and deleted foreign parameters in `…File `parameters. We're also excited to announce that the balancer strategies do not modify the current object as this was breaking** #allthethings.**
+If that's not enough, we also removed unused parameters in `prepareHeaders` and deleted foreign parameters in `…File `parameters. We're also excited to announce that the balancer strategies do not modify the current object as this was breaking ** All The Things(tm).**
 
 ## How We're Making Your Dev Life Easier
 
