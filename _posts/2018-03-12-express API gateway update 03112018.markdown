@@ -1,6 +1,16 @@
 ---
 title: Ship, Ship - Hooray! 1.7.3 is here.
 date: 2018-03-12 05:31:00 Z
+categories:
+- announcements
+- technology
+tags:
+- JSON Schema Support
+- JSON
+- environment variables
+- JSON Web Tokens
+- API Gateway
+- Redis
 layout: post
 ---
 
