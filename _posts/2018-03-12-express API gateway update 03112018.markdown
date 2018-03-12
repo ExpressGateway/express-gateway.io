@@ -38,12 +38,6 @@ Also, we improved JSON Schema for the `serviceEndpoint` with respect to `urls.` 
 
 If that's not enough, we also removed unused parameters in `prepareHeaders` and deleted foreign parameters in `…File `parameters. We're also excited to announce that the balancer strategies do not modify the current object as this was breaking ** All The Things(tm).**
 
-## How We're Making Your Dev Life Easier
-
-In addition to all of the new changes with JWT and JSON schema support, we've added error messages when a policy cannot be loaded. This is to help developers understand what's going on in a faster, more effective way. For instance, when a plugin's JSON schema is wrong or if there are issues while registering it on Express-Gateway, you'll still get the original error message.
-
-Additionally, we've reorganized the [Proxy Policy](https://www.express-gateway.io/docs/policies/proxy/) so it's easier to read and understand. This is an important policy to consider when using Express Gateway because it forwards requests to service endpoints.
-
 [Check out more updates in the official release notes.](https://github.com/ExpressGateway/express-gateway/releases/tag/v1.7.3)
 
 ### Reminder: In Production Yet?
