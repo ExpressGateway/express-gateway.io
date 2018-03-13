@@ -89,7 +89,8 @@ For instance, in our example, it's pretty clear that the [Admin API](https://www
 
 With these two requirements in mind, we can write something like this:
 
-`module.exports = {
+```
+module.exports = {
   version: '1.0.0',
   policies: ['metrics'],
   schema: {
@@ -124,7 +125,9 @@ With these two requirements in mind, we can write something like this:
       }
     });
   }
-};`
+};
+
+```
 
 Thanks to this small addition, the Gateway will validate the provided parameters against the JSON Schema and will refuse to load the plugin if the validation does not pass.
 
