@@ -34,7 +34,8 @@ Hence, we can install the plugin directly by simply typing:
 
 Now let's modify our [gateway.config](https://www.express-gateway.io/docs/configuration/gateway.config.yml/) and configure a policy that will take advantage of this policy:
 
-`http:
+```
+http:
   port: 8080
 admin:
   port: 9876
@@ -56,7 +57,9 @@ pipelines:
       - proxy:
           - action:
               serviceEndpoint: httpbin
-              changeOrigin: true`
+              changeOrigin: true
+```
+
 
 ## It's alive. Now, let's test it!
 
@@ -66,11 +69,13 @@ Let's spin up the gateway and throw some requests to it:
 
 Once the command is terminated, we can now query our metrics endpoint to see what happened with the requests:
 
-`$ curl http://localhost:9876/metrics
+```
+$ curl http://localhost:9876/metrics
 # HELP status_codes status_code_counter
 # TYPE status_codes counter
 status_codes{type="FAILED",status_code="502",consumer="anonymous",apiendpoint="api"} 15
-status_codes{type="SUCCESS",status_code="200",consumer="anonymous",apiendpoint="api"} 5`
+status_codes{type="SUCCESS",status_code="200",consumer="anonymous",apiendpoint="api"} 5
+```
 
 So now, you can see we received the Prometheus metrics with all of the data we collected.
 
