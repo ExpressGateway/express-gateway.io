@@ -45,7 +45,7 @@ We're going to leverage this framework in order to build a plugin that hooks our
 
 A plugin is nothing more than a Javascript object that you export. It's shape is described in detail [here.](https://www.express-gateway.io/docs/plugins/plugin-development/)
 
-```javascript
+```
 module.exports = {
   init: function (pluginContext) {
   
