@@ -221,7 +221,7 @@ Express Gateway relies on JSON Schemas to make sure all the configurations that 
 
 You can leverage the same mechanism to specify the required parameters, good defaults and validation rules for your plugin.
 
-In our case, for instance, it's pretty clear that the [Admin API](https://www.express-gateway.io/docs/admin/#markdown) path where the metrics will be exposed is mandatory; also we might want to configure the header where the consumer id information is stored.
+For instance, in our example, it's pretty clear that the [Admin API](https://www.express-gateway.io/docs/admin/#markdown) path where the metrics will be exposed is mandatory. So, we might want to configure the header where the consumer id information is stored.
 
 With these two requirements in mind, we can write something like this:
 
