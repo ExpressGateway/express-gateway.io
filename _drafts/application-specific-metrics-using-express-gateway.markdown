@@ -121,21 +121,29 @@ module.exports = {
 
 Let's go through the code and see the relevant parts:
 
-`const statusCodeCounter = new metrics.Counter({ name: 'status_codes', help: 'status_code_counter', labelNames: ['type', 'status_code', 'consumer', 'apiendpoint'] });`
+```
+const statusCodeCounter = new metrics.Counter({
+  name: 'status_codes',
+  help: 'status_code_counter',
+  labelNames: ['type', 'status_code', 'consumer', 'apiendpoint']
+});
+```
 
-Here we're declaring a new Prometheus Counter called `status_code` that will track all the responses and categorize them based on the declared labels:`['type', 'status_code', 'consumer', 'apiendpoint']`
+Here we're declaring a new Prometheus Counter called `status_code` that will track all the responses and categorize
+them based on the declared labels: `['type', 'status_code', 'consumer', 'apiendpoint']`
 
-\`pluginContext.registerAdminRoute((app) => {
-app.get(pluginContext.settings.endpointName, (req, res) => {
-if (req.accepts(metrics.register.contentType)) {
-res.contentType(metrics.register.contentType);
-return res.send(metrics.register.metrics());
-}
+```javascript
+pluginContext.registerAdminRoute((app) => {
+  app.get(pluginContext.settings.endpointName, (req, res) => {
+    if (req.accepts(metrics.register.contentType)) {
+      res.contentType(metrics.register.contentType);
+      return res.send(metrics.register.metrics());
+    }
 
     return res.json(metrics.register.getMetricsAsJSON());
-
+  });
 });
-});\`
+```
 
 In part of code, it is registering a new [route](https://www.express-gateway.io/docs/plugins/route-development/#exporting-admin-routes-to-plugin) that will expose all the collected metrics. According to the `Accept` header, we're either returning the data in Prometheus format as JSON or in Text format. The external tool collecting the data (such as InfluxDB or a Prometheus server) will query this endpoint periodically to grab the latest updates.
 
