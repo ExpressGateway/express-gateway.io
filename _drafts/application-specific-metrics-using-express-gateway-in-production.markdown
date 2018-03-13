@@ -3,11 +3,13 @@ title: Application Specific Metrics Using Express Gateway in Production
 date: 2018-03-13 01:57:00 Z
 ---
 
-As a follow up to our last post on how you can get started with application specific metrics using Express Gateway, we'd love to show you a real time example that you can use. By the end of this post, you'll have everything you need to start building your own plugins and getting metrics on information you care about.
+As a follow up to [our last post on how you can get started](https://www.express-gateway.io/application-specific-metrics-using-express-gateway/) with application specific metrics using Express Gateway, we'd love to show you a real time example that you can use. By the end of this post, you'll have everything you need to start building your own plugins and getting metrics on information you care about.
+
+<!--excerpt-->
 
 **Put your Plugin into Production**
 
-We have our plugin ready to be used. Now we have to install it in the Gateway and enabled it.
+By now, if you've been following along you have created your plugin and it's ready to be used. So, we have to install it in the Gateway and enabled it.
 
 Express Gateway plugins are nothing more than NPM packages, so we can simply publish our package to the registry and then install it using the command line.
 
