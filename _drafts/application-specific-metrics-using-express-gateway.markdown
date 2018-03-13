@@ -25,7 +25,7 @@ Unless you're building a proof of concept or an application that's not aiming to
 
 ## Express Gateway to Rescue
 
-Express Gateway is an API Gateway that sits at the heart of any microservices architecture. Regardless of what language or platform you're using, it **secures** different microservices and exposes them through **APIs** by using [Node.js](https://nodejs.org/), [ExpressJS](https://expressjs.com/), and [Express.js middleware](https://expressjs.com/en/guide/writing-middleware.html).
+Express Gateway is an API Gateway that sits at the heart of any microservices architecture. Regardless of what language or platform you're using, it **secures** different microservices and exposes them through **APIs** using [Node.js](https://nodejs.org/), [ExpressJS](https://expressjs.com/), and [Express.js middleware](https://expressjs.com/en/guide/writing-middleware.html).
 
 ![Express_Gateway_Request_routing.png](/uploads/Express_Gateway_Request_routing.png)
 
@@ -33,7 +33,7 @@ Express Gateway centralizes all the application configuration for the API use ca
 
 Express Gateway entities, like *policies*, *pipelines*, *conditions*, and *actions*, wrap around Express.js middleware to make it **dynamic**. Therefore, any Express.js middleware can be plugged into Express Gateway to take advantage of its dynamic capabilities. It also features a hot-reload mechanism so you can change its configuration without having to restart the Gateway.
 
-## **Writing a Plugin for Express Gateway**
+## Writing a Plugin for Express Gateway
 
 Express Gateway comes with a plugin framework used to extend the Express Gateway core.
 
@@ -41,7 +41,7 @@ The plugin framework enables anyone to take Express.js middleware and integrate 
 
 We're going to leverage this framework in order to build a plugin that hooks our HTTP responses and then collects the information we need.
 
-## **Scaffolding a Plugin**
+## Scaffolding a Plugin
 
 A plugin is nothing more than a Javascript object that you export. It's shape is described in detail [here.](https://www.express-gateway.io/docs/plugins/plugin-development/)
 
