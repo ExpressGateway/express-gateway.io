@@ -57,7 +57,7 @@ In our example, the plugin will:
 
 2. Extend the [Admin API](https://www.express-gateway.io/docs/admin/#markdown) to expose an additional endpoint which serves the collected information.
 
-## **What metrics are we going to collect?**
+## What metrics are we going to collect?
 
 There are a lot of ways to slice and dice metrics. They may vary according to your needs.
 
@@ -77,7 +77,7 @@ In order to leverage the existing tooling around, we will expose the collected m
 
 `const metrics = require('prom-client');
 
-const statusCodeCounter = new metrics.Counter({
+`const statusCodeCounter = new metrics.Counter({
   name: 'status_codes',
   help: 'status_code_counter',
   labelNames: ['type', 'status_code', 'consumer', 'apiendpoint']
