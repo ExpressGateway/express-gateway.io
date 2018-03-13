@@ -71,7 +71,7 @@ In this example, we will label all the responses that are on the way to the clie
 
 * The [API Endpoint](https://www.express-gateway.io/docs/configuration/gateway.config.yml/apiEndpoints/#markdown) that triggered the Gateway
 
-## **What format do we expose the metrics?**
+## What format do we expose the metrics?
 
 In order to leverage the existing tooling around, we will expose the collected metrics in the Prometheus Text Based Wire Format. In this way, we can leverage the tools that are already on the space to push and visualize the informations, such as [Grafana.](https://grafana.com/plugins?type=datasource)
 
@@ -159,7 +159,7 @@ Then we export a new policy which will register an event handler once the respon
 
 *Note:* [egContext](https://www.express-gateway.io/docs/policies/customization/eg-context/) is an Express Gateway specific object that contains additional information on a request that's being handled.
 
-## **Moving On**
+## Moving On
 
 Metrics are hard. In a microservices context, it's even harder. In our next post, we'll put it all together in production with a real-time example and sample data so stay tuned!
 
