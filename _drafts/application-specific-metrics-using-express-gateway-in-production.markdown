@@ -64,9 +64,9 @@ pipelines:
 ## It's alive. Now, let's test it!
 
 Let's spin up the gateway and throw some requests to it:
-
+```
     $ ab -n 20 http://localhost:8080/
-
+```
 Once the command is terminated, we can now query our metrics endpoint to see what happened with the requests:
 
 ```
