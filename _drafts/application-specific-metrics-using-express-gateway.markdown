@@ -22,39 +22,39 @@ Unless you're building a proof of concept or an application that's not aiming to
 
 <!--excerpt-->
 
-## **Express Gateway to rescue**
+## **Express Gateway to Rescue**
 
-Express Gateway is an API Gateway that sits at the heart of any microservices architecture (regardless of what language or platform you're using), **securing** the different pieces and exposing them through **APIs**. All these magic works by using [Node.js](https://nodejs.org/), [ExpressJS](https://expressjs.com/), and [Express middleware](https://expressjs.com/en/guide/writing-middleware.html).
+Express Gateway is an API Gateway that sits at the heart of any microservices architecture. Regardless of what language or platform you're using, it **secures** different microservices and exposes them through **APIs** by using [Node.js](https://nodejs.org/), [ExpressJS](https://expressjs.com/), and [Express.js middleware](https://expressjs.com/en/guide/writing-middleware.html).
 
 ![Express_Gateway_Request_routing.png](/uploads/Express_Gateway_Request_routing.png)
 
 Express Gateway centralizes all the application configuration for the API use case into one YAML (or JSON) file. Within the YAML file there is an easy to understand description of how and what is configured.
 
-Express Gateway entities, like *policies*, *pipelines*, *conditions*, and *actions*, wrap around Express middleware to make it **dynamic**. Any Express middleware can be plugged into Express Gateway to take advantage of its dynamic capabilities. It also features an hot-reload mechanism so you can change its configuration without having to restart the gateway at all.
+Express Gateway entities, like *policies*, *pipelines*, *conditions*, and *actions*, wrap around Express.js middleware to make it **dynamic**. Therefore, any Express.js middleware can be plugged into Express Gateway to take advantage of its dynamic capabilities. It also features a hot-reload mechanism so you can change its configuration without having to restart the Gateway.
 
 **Writing a Plugin for Express Gateway**
 
 Express Gateway comes with a plugin framework used to extend the Express Gateway core.
 
-The plugin framework enables anyone to take Express middleware and integrate them into Express Gateway as plugins. Express Gateway provides a declarative way to take advantage of Express middleware to be driven centrally and executed dynamically.
+The plugin framework enables anyone to take Express.js middleware and integrate it into Express Gateway as a plugin. Express Gateway provides a declarative way to take advantage of Express.js middleware to be driven centrally and executed dynamically.
 
-We're going to leverage such framework in order to build a plugin that'll hook in our HTTP responses and collect the informations we need.
+We're going to leverage this framework in order to build a plugin that hooks our HTTP responses and then collects the information we need.
 
-### **Scaffold a plugin**
+### **Scaffolding a Plugin**
 
 A plugin is nothing more than a Javascript object that you export. It's shape is described in detail [here.](https://www.express-gateway.io/docs/plugins/plugin-development/)
 
-\`module.exports = {
-init: function (pluginContext) {
+`module.exports = {
+  init: function (pluginContext) {
+  
+  },
+}`
 
-},
-}\`
+In our case, the plugin will:
 
-In our case, we will create a plugin that:
+1. Expose a policy that hooks in the [response](http://expressjs.com/en/4x/api.html#res), collecting information in [Prometheus format](https://github.com/prometheus/docs/blob/master/content/docs/instrumenting/exposition_formats.md).
 
-1. Exposes a policy that will hook in the [response](http://expressjs.com/en/4x/api.html#res), collecting informations in [Prometheus format](https://github.com/prometheus/docs/blob/master/content/docs/instrumenting/exposition_formats.md).
-
-2. Extend the [Admin API](https://www.express-gateway.io/docs/admin/#markdown) to expose an additional endpoint that will serve all the collected informations.
+2. Extend the [Admin API](https://www.express-gateway.io/docs/admin/#markdown) to expose an additional endpoint which serves the collected information.
 
 #### **What metrics are we going to collect?**
 
@@ -74,29 +74,29 @@ In this example, we will label all the responses that are on the way to the clie
 
 In order to leverage the existing tooling around, we will expose the collected metrics in the \[Prometheus Text Based Wire Format\]. In this way, we can leverage the tools that are already on the space to push and visualize the informations, such as [Grafana.](https://grafana.com/plugins?type=datasource)
 
-\`const metrics = require('prom-client');
+`const metrics = require('prom-client');
 
 const statusCodeCounter = new metrics.Counter({
-name: 'status_codes',
-help: 'status_code_counter',
-labelNames: \['type', 'status_code', 'consumer', 'apiendpoint'\]
+  name: 'status_codes',
+  help: 'status_code_counter',
+  labelNames: ['type', 'status_code', 'consumer', 'apiendpoint']
 });
 
 module.exports = {
-version: '1.0.0',
-policies: \['metrics'\],
-init: function (pluginContext) {
-pluginContext.registerAdminRoute((app) => {
-app.get(pluginContext.settings.endpointName, (req, res) => {
-if (req.accepts(metrics.register.contentType)) {
-res.contentType(metrics.register.contentType);
-return res.send(metrics.register.metrics());
-}
+  version: '1.0.0',
+  policies: ['metrics'],
+  init: function (pluginContext) {
+    pluginContext.registerAdminRoute((app) => {
+      app.get(pluginContext.settings.endpointName, (req, res) => {
+        if (req.accepts(metrics.register.contentType)) {
+          res.contentType(metrics.register.contentType);
+          return res.send(metrics.register.metrics());
+        }
 
         return res.json(metrics.register.getMetricsAsJSON());
       });
     });
-    
+
     pluginContext.registerPolicy({
       name: 'metrics',
       policy: ({ consumerIdHeaderName }) => (req, res, next) => {
@@ -107,17 +107,20 @@ return res.send(metrics.register.metrics());
           const responseType = res.statusCode >= 200 && res.statusCode < 300 ? 'SUCCESS' : 'FAILED';
           statusCodeCounter.labels(responseType, statusCode, consumerHeader, apiEndpoint).inc();
         });
-    
+
         next();
       }
     });
-
-}
-};\`
+  }
+};`
 
 Let's go through the code and see the relevant parts:
 
-`const statusCodeCounter = new metrics.Counter({ name: 'status_codes', help: 'status_code_counter', labelNames: ['type', 'status_code', 'consumer', 'apiendpoint'] });`
+`const statusCodeCounter = new metrics.Counter({
+  name: 'status_codes',
+  help: 'status_code_counter',
+  labelNames: ['type', 'status_code', 'consumer', 'apiendpoint']
+});`
 
 Here we're declaring a new Prometheus Counter called `status_code`that will track all the responses and categorize them based on the declared labels:`['type', 'status_code', 'consumer', 'apiendpoint']`
 
@@ -229,7 +232,7 @@ Express Gateway relies on JSON Schemas to make sure all the configurations that 
 
 You can leverage the same mechanism to specify the required parameters, good defaults and validation rules for your plugin.
 
-In our case, for instance, it's pretty clear that the Admin API path where the metrics will be exposed is mandatory; also we might want to configure the header where the consumer id information is stored.
+In our case, for instance, it's pretty clear that the [Admin API](https://www.express-gateway.io/docs/admin/#markdown) path where the metrics will be exposed is mandatory; also we might want to configure the header where the consumer id information is stored.
 
 With these two requirements in mind, we can write something like this:
 
