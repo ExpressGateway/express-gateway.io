@@ -161,7 +161,7 @@ Then we export a new policy which will register an event handler once the respon
 
 ## **Moving On**
 
-Metrics are hard. In a microservices context, it's even harder. We discovered how to leverage shared middleware (our API Gateway) to collect data without having to modify the services' code. Additionally, we  have a centralized way to push and display the data.
+Metrics are hard. In a microservices context, it's even harder. In our next post, we'll put it all together in production with a real-time example so stay tuned!
 
 ## More Resources
 
