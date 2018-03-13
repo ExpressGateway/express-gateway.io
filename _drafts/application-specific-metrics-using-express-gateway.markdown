@@ -117,7 +117,6 @@ module.exports = {
     });
   }
 };
-
 ```
 
 Let's go through the code and see the relevant parts:
