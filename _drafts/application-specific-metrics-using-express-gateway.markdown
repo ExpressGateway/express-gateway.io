@@ -23,7 +23,7 @@ Unless you're building a proof of concept or an application that's not aiming to
 
 <!--excerpt-->
 
-## **Express Gateway to Rescue**
+## Express Gateway to Rescue
 
 Express Gateway is an API Gateway that sits at the heart of any microservices architecture. Regardless of what language or platform you're using, it **secures** different microservices and exposes them through **APIs** by using [Node.js](https://nodejs.org/), [ExpressJS](https://expressjs.com/), and [Express.js middleware](https://expressjs.com/en/guide/writing-middleware.html).
 
