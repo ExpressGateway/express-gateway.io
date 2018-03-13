@@ -33,7 +33,7 @@ Express Gateway centralizes all the application configuration for the API use ca
 
 Express Gateway entities, like *policies*, *pipelines*, *conditions*, and *actions*, wrap around Express.js middleware to make it **dynamic**. Therefore, any Express.js middleware can be plugged into Express Gateway to take advantage of its dynamic capabilities. It also features a hot-reload mechanism so you can change its configuration without having to restart the Gateway.
 
-**Writing a Plugin for Express Gateway**
+## **Writing a Plugin for Express Gateway**
 
 Express Gateway comes with a plugin framework used to extend the Express Gateway core.
 
@@ -41,7 +41,7 @@ The plugin framework enables anyone to take Express.js middleware and integrate 
 
 We're going to leverage this framework in order to build a plugin that hooks our HTTP responses and then collects the information we need.
 
-### **Scaffolding a Plugin**
+## **Scaffolding a Plugin**
 
 A plugin is nothing more than a Javascript object that you export. It's shape is described in detail [here.](https://www.express-gateway.io/docs/plugins/plugin-development/)
 
@@ -57,7 +57,7 @@ In our example, the plugin will:
 
 2. Extend the [Admin API](https://www.express-gateway.io/docs/admin/#markdown) to expose an additional endpoint which serves the collected information.
 
-#### **What metrics are we going to collect?**
+## **What metrics are we going to collect?**
 
 There are a lot of ways to slice and dice metrics. They may vary according to your needs.
 
@@ -71,7 +71,7 @@ In this example, we will label all the responses that are on the way to the clie
 
 * The [API Endpoint](https://www.express-gateway.io/docs/configuration/gateway.config.yml/apiEndpoints/#markdown) that triggered the Gateway
 
-#### **What format do we expose the metrics?**
+## **What format do we expose the metrics?**
 
 In order to leverage the existing tooling around, we will expose the collected metrics in the Prometheus Text Based Wire Format. In this way, we can leverage the tools that are already on the space to push and visualize the informations, such as [Grafana.](https://grafana.com/plugins?type=datasource)
 
