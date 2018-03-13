@@ -139,7 +139,6 @@ pluginContext.registerAdminRoute((app) => {
       res.contentType(metrics.register.contentType);
       return res.send(metrics.register.metrics());
     }
-
     return res.json(metrics.register.getMetricsAsJSON());
   });
 });
