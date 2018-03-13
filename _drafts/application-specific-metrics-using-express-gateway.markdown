@@ -15,6 +15,7 @@ tags:
 - Express Middleware
 - How to build microservices
 - How to orchestrate external services
+- What is Prometheus Text Based Wire Format
 layout: post
 ---
 
@@ -50,7 +51,7 @@ A plugin is nothing more than a Javascript object that you export. It's shape is
   },
 }`
 
-In our case, the plugin will:
+In our example, the plugin will:
 
 1. Expose a policy that hooks in the [response](http://expressjs.com/en/4x/api.html#res), collecting information in [Prometheus format](https://github.com/prometheus/docs/blob/master/content/docs/instrumenting/exposition_formats.md).
 
@@ -72,7 +73,7 @@ In this example, we will label all the responses that are on the way to the clie
 
 #### **What format do we expose the metrics?**
 
-In order to leverage the existing tooling around, we will expose the collected metrics in the \[Prometheus Text Based Wire Format\]. In this way, we can leverage the tools that are already on the space to push and visualize the informations, such as [Grafana.](https://grafana.com/plugins?type=datasource)
+In order to leverage the existing tooling around, we will expose the collected metrics in the Prometheus Text Based Wire Format. In this way, we can leverage the tools that are already on the space to push and visualize the informations, such as [Grafana.](https://grafana.com/plugins?type=datasource)
 
 `const metrics = require('prom-client');
 
@@ -124,37 +125,35 @@ Let's go through the code and see the relevant parts:
 
 Here we're declaring a new Prometheus Counter called `status_code`that will track all the responses and categorize them based on the declared labels:`['type', 'status_code', 'consumer', 'apiendpoint']`
 
-\`pluginContext.registerAdminRoute((app) => {
-app.get(pluginContext.settings.endpointName, (req, res) => {
-if (req.accepts(metrics.register.contentType)) {
-res.contentType(metrics.register.contentType);
-return res.send(metrics.register.metrics());
-}
+`pluginContext.registerAdminRoute((app) => {
+  app.get(pluginContext.settings.endpointName, (req, res) => {
+    if (req.accepts(metrics.register.contentType)) {
+      res.contentType(metrics.register.contentType);
+      return res.send(metrics.register.metrics());
+    }
 
     return res.json(metrics.register.getMetricsAsJSON());
-
-});
-});\`
+  });
+});`
 
 In part of code, it is registering a new [route](https://www.express-gateway.io/docs/plugins/route-development/#exporting-admin-routes-to-plugin) that will expose all the collected metrics. According to the `Accept` header, we're either returning the data in Prometheus format as JSON or in Text format. The external tool collecting the data (such as InfluxDB or a Prometheus server) will query this endpoint periodically to grab the latest updates.
 
 *Note:* Prometheus also supports [data pushing](https://prometheus.io/docs/instrumenting/pushing/) instead of pulling it periodically. This allows you to avoid exposing an endpoint at all. Based on your requirements (i.e. security) you may opt for this option.
 
-\`pluginContext.registerPolicy({
-name: 'metrics',
-policy: ({ consumerIdHeaderName }) => (req, res, next) => {
-res.once('finish', () => {
-const apiEndpoint = req.egContext.apiEndpoint.apiEndpointName;
-const consumerHeader = req.header(consumerIdHeaderName) || 'anonymous';
-const statusCode = res.statusCode.toString();
-const responseType = res.statusCode >= 200 && res.statusCode < 300 ? 'SUCCESS' : 'FAILED';
-statusCodeCounter.labels(responseType, statusCode, consumerHeader, apiEndpoint).inc();
-});
+`pluginContext.registerPolicy({
+  name: 'metrics',
+  policy: ({ consumerIdHeaderName }) => (req, res, next) => {
+    res.once('finish', () => {
+      const apiEndpoint = req.egContext.apiEndpoint.apiEndpointName;
+      const consumerHeader = req.header(consumerIdHeaderName) || 'anonymous';
+      const statusCode = res.statusCode.toString();
+      const responseType = res.statusCode >= 200 && res.statusCode < 300 ? 'SUCCESS' : 'FAILED';
+      statusCodeCounter.labels(responseType, statusCode, consumerHeader, apiEndpoint).inc();
+    });
 
     next();
-
-}
-});\`
+  }
+});`
 
 Then we export a new policy which will register an event handler once the response is terminated. So, now we can inspect all the response as well as request details that will populate our labels.
 
