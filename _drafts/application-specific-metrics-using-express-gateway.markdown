@@ -123,7 +123,7 @@ Let's go through the code and see the relevant parts:
   labelNames: ['type', 'status_code', 'consumer', 'apiendpoint']
 });`
 
-Here we're declaring a new Prometheus Counter called `status_code`that will track all the responses and categorize them based on the declared labels:`['type', 'status_code', 'consumer', 'apiendpoint']`
+Here we're declaring a new Prometheus Counter called `status_code` that will track all the responses and categorize them based on the declared labels:`['type', 'status_code', 'consumer', 'apiendpoint']`
 
 `pluginContext.registerAdminRoute((app) => {
   app.get(pluginContext.settings.endpointName, (req, res) => {
@@ -161,7 +161,7 @@ Then we export a new policy which will register an event handler once the respon
 
 **Put It In Production**
 
-We have our plugin ready to be used. Now we have to install it in our Gateway and enabled it.
+We have our plugin ready to be used. Now we have to install it in the Gateway and enabled it.
 
 Express Gateway plugins are nothing more than NPM packages, so we can simply publish our package to the registry and then install it using the command line.
 
@@ -175,38 +175,31 @@ Hence, we can install the plugin directly by simply typing:
 
 Now let's modify our [gateway.config](https://www.express-gateway.io/docs/configuration/gateway.config.yml/) and configure a policy that will take advantage of this policy:
 
-\`http:
-port: 8080
+`http:
+  port: 8080
 admin:
-port: 9876
+  port: 9876
 apiEndpoints:
-api:
-host: '\*'
+  api:
+    host: '*'
 serviceEndpoints:
-httpbin:
-url: 'http://httpbin.org'
+  httpbin:
+    url: 'http://httpbin.org'
 policies:
-
-* proxy
-
-* metrics
-  pipelines:
-
-* name: basic
-  apiEndpoints:
-
-  * api
+  - proxy
+  - metrics
+pipelines:
+  - name: basic
+    apiEndpoints:
+      - api
     policies:
+      - metrics:
+      - proxy:
+          - action:
+              serviceEndpoint: httpbin
+              changeOrigin: true`
 
-  * metrics:
-
-  * proxy:
-
-    * action:
-      serviceEndpoint: httpbin
-      changeOrigin: true\`
-
-\*\*It's alive! \*\*
+## It's alive! 
 
 Let's spin up the gateway and throw some requests to it:
 
@@ -214,16 +207,13 @@ Let's spin up the gateway and throw some requests to it:
 
 Once the command is terminated, we can now query our metrics endpoint to see what happened with the requests:
 
-\`$ curl http://localhost:9876/metrics
-
+`$ curl http://localhost:9876/metrics
 # HELP status_codes status_code_counter
-
 # TYPE status_codes counter
-
 status_codes{type="FAILED",status_code="502",consumer="anonymous",apiendpoint="api"} 15
-status_codes{type="SUCCESS",status_code="200",consumer="anonymous",apiendpoint="api"} 5\`
+status_codes{type="SUCCESS",status_code="200",consumer="anonymous",apiendpoint="api"} 5`
 
-So now, you can see we received the Prometheus metrics with all the data we collected.
+So now, you can see we received the Prometheus metrics with all of the data we collected.
 
 **There's more! Use JSON Schema to Validate Your Parameters**
 
@@ -235,23 +225,23 @@ In our case, for instance, it's pretty clear that the [Admin API](https://www.ex
 
 With these two requirements in mind, we can write something like this:
 
-\`module.exports = {
-version: '1.0.0',
-policies: \['metrics'\],
-schema: {
-\$id: 'http://express-gateway.io/plugins/metrics.json',
-type: 'object',
-properties: {
-endpointName: {
-type: 'string',
-default: '/metrics'
-}
-}, required: \['endpointName'\]
-},
-init: function (pluginContext) {
-pluginContext.registerAdminRoute((app) => {
-// admin route code
-});
+`module.exports = {
+  version: '1.0.0',
+  policies: ['metrics'],
+  schema: {
+    $id: 'http://express-gateway.io/plugins/metrics.json',
+    type: 'object',
+    properties: {
+      endpointName: {
+        type: 'string',
+        default: '/metrics'
+      }
+    }, required: ['endpointName']
+  },
+  init: function (pluginContext) {
+    pluginContext.registerAdminRoute((app) => {
+      // admin route code
+    });
 
     pluginContext.registerPolicy({
       name: 'metrics',
@@ -269,9 +259,8 @@ pluginContext.registerAdminRoute((app) => {
         // policy code
       }
     });
-
-}
-};\`
+  }
+};`
 
 Thanks to this small addition, the Gateway will validate the provided parameters against the JSON Schema and will refuse to load the plugin if the validation does not pass.
 
