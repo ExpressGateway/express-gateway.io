@@ -1,5 +1,5 @@
 ---
-title: Application specific metrics using Express Gateway.
+title: Application specific metrics using Express Gateway
 date: 2018-03-13 00:09:00 Z
 categories:
 - technology
