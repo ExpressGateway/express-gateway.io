@@ -77,29 +77,30 @@ In this example, we will label all the responses that are on the way to the clie
 
 In order to leverage the existing tooling around, we will expose the collected metrics in the Prometheus Text Based Wire Format. In this way, we can leverage the tools that are already on the space to push and visualize the informations, such as [Grafana.](https://grafana.com/plugins?type=datasource)
 
-``const metrics = require('prom-client');
+```javascript
+const metrics = require('prom-client');
 
 const statusCodeCounter = new metrics.Counter({
-name: 'status_codes',
-help: 'status_code_counter',
-labelNames: \['type', 'status_code', 'consumer', 'apiendpoint'\]
+  name: 'status_codes',
+  help: 'status_code_counter',
+  labelNames: ['type', 'status_code', 'consumer', 'apiendpoint']
 });
 
 module.exports = {
-version: '1.0.0',
-policies: \['metrics'\],
-init: function (pluginContext) {
-pluginContext.registerAdminRoute((app) => {
-app.get(pluginContext.settings.endpointName, (req, res) => {
-if (req.accepts(metrics.register.contentType)) {
-res.contentType(metrics.register.contentType);
-return res.send(metrics.register.metrics());
-}
+  version: '1.0.0',
+  policies: ['metrics'],
+  init: function (pluginContext) {
+    pluginContext.registerAdminRoute((app) => {
+      app.get(pluginContext.settings.endpointName, (req, res) => {
+        if (req.accepts(metrics.register.contentType)) {
+          res.contentType(metrics.register.contentType);
+          return res.send(metrics.register.metrics());
+        }
 
         return res.json(metrics.register.getMetricsAsJSON());
       });
     });
-    
+
     pluginContext.registerPolicy({
       name: 'metrics',
       policy: ({ consumerIdHeaderName }) => (req, res, next) => {
@@ -110,13 +111,14 @@ return res.send(metrics.register.metrics());
           const responseType = res.statusCode >= 200 && res.statusCode < 300 ? 'SUCCESS' : 'FAILED';
           statusCodeCounter.labels(responseType, statusCode, consumerHeader, apiEndpoint).inc();
         });
-    
+
         next();
       }
     });
+  }
+};
 
-}
-};``
+```
 
 Let's go through the code and see the relevant parts:
 
