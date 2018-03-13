@@ -1,6 +1,17 @@
 ---
 title: Application Specific Metrics Using Express Gateway in Production
 date: 2018-03-13 01:57:00 Z
+categories:
+- guides
+- announcements
+tags:
+- how to create a Plugin for Express Gateway
+- Express.js
+- Express Middleware
+- Express.js middleware
+- JSON Schema
+- Admin API
+layout: post
 ---
 
 As a follow up to [our last post on how you can get started](https://www.express-gateway.io/application-specific-metrics-using-express-gateway/) with application specific metrics using Express Gateway, we'd love to show you a real time example that you can use. By the end of this post, you'll have everything you need to start building your own plugins and getting metrics on information you care about.
