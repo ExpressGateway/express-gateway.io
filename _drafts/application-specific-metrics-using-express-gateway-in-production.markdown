@@ -3,6 +3,8 @@ title: Application Specific Metrics Using Express Gateway in Production
 date: 2018-03-13 01:57:00 Z
 ---
 
+In 
+
 **Put It In Production**
 
 We have our plugin ready to be used. Now we have to install it in the Gateway and enabled it.
@@ -19,31 +21,38 @@ Hence, we can install the plugin directly by simply typing:
 
 Now let's modify our [gateway.config](https://www.express-gateway.io/docs/configuration/gateway.config.yml/) and configure a policy that will take advantage of this policy:
 
-`http:
-  port: 8080
+\`http:
+port: 8080
 admin:
-  port: 9876
+port: 9876
 apiEndpoints:
-  api:
-    host: '*'
+api:
+host: '\*'
 serviceEndpoints:
-  httpbin:
-    url: 'http://httpbin.org'
+httpbin:
+url: 'http://httpbin.org'
 policies:
-  - proxy
-  - metrics
-pipelines:
-  - name: basic
-    apiEndpoints:
-      - api
-    policies:
-      - metrics:
-      - proxy:
-          - action:
-              serviceEndpoint: httpbin
-              changeOrigin: true`
 
-## It's alive! 
+* proxy
+
+* metrics
+  pipelines:
+
+* name: basic
+  apiEndpoints:
+
+  * api
+    policies:
+
+  * metrics:
+
+  * proxy:
+
+    * action:
+      serviceEndpoint: httpbin
+      changeOrigin: true\`
+
+## It's alive!
 
 Let's spin up the gateway and throw some requests to it:
 
@@ -51,11 +60,14 @@ Let's spin up the gateway and throw some requests to it:
 
 Once the command is terminated, we can now query our metrics endpoint to see what happened with the requests:
 
-`$ curl http://localhost:9876/metrics
+\`$ curl http://localhost:9876/metrics
+
 # HELP status_codes status_code_counter
+
 # TYPE status_codes counter
+
 status_codes{type="FAILED",status_code="502",consumer="anonymous",apiendpoint="api"} 15
-status_codes{type="SUCCESS",status_code="200",consumer="anonymous",apiendpoint="api"} 5`
+status_codes{type="SUCCESS",status_code="200",consumer="anonymous",apiendpoint="api"} 5\`
 
 So now, you can see we received the Prometheus metrics with all of the data we collected.
 
@@ -69,23 +81,23 @@ For instance, in our example, it's pretty clear that the [Admin API](https://www
 
 With these two requirements in mind, we can write something like this:
 
-`module.exports = {
-  version: '1.0.0',
-  policies: ['metrics'],
-  schema: {
-    $id: 'http://express-gateway.io/plugins/metrics.json',
-    type: 'object',
-    properties: {
-      endpointName: {
-        type: 'string',
-        default: '/metrics'
-      }
-    }, required: ['endpointName']
-  },
-  init: function (pluginContext) {
-    pluginContext.registerAdminRoute((app) => {
-      // admin route code
-    });
+\`module.exports = {
+version: '1.0.0',
+policies: \['metrics'\],
+schema: {
+\$id: 'http://express-gateway.io/plugins/metrics.json',
+type: 'object',
+properties: {
+endpointName: {
+type: 'string',
+default: '/metrics'
+}
+}, required: \['endpointName'\]
+},
+init: function (pluginContext) {
+pluginContext.registerAdminRoute((app) => {
+// admin route code
+});
 
     pluginContext.registerPolicy({
       name: 'metrics',
@@ -103,7 +115,18 @@ With these two requirements in mind, we can write something like this:
         // policy code
       }
     });
-  }
-};`
+
+}
+};\`
 
 Thanks to this small addition, the Gateway will validate the provided parameters against the JSON Schema and will refuse to load the plugin if the validation does not pass.
+
+## More Resources
+
+* Learn more about upcoming features and releases by checking out the **[Express Gateway Roadmap](https://github.com/ExpressGateway/express-gateway/milestones)**
+
+* Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
+
+* **[Follow along on](https://twitter.com/express_gateway)** Twitter
+
+* Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!
