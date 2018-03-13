@@ -132,7 +132,7 @@ const statusCodeCounter = new metrics.Counter({
 Here we're declaring a new Prometheus Counter called `status_code` that will track all the responses and categorize
 them based on the declared labels: `['type', 'status_code', 'consumer', 'apiendpoint']`
 
-```javascript
+```
 pluginContext.registerAdminRoute((app) => {
   app.get(pluginContext.settings.endpointName, (req, res) => {
     if (req.accepts(metrics.register.contentType)) {
@@ -149,21 +149,22 @@ In part of code, it is registering a new [route](https://www.express-gateway.io/
 
 *Note:* Prometheus also supports [data pushing](https://prometheus.io/docs/instrumenting/pushing/) instead of pulling it periodically. This allows you to avoid exposing an endpoint at all. Based on your requirements (i.e. security) you may opt for this option.
 
-\`pluginContext.registerPolicy({
-name: 'metrics',
-policy: ({ consumerIdHeaderName }) => (req, res, next) => {
-res.once('finish', () => {
-const apiEndpoint = req.egContext.apiEndpoint.apiEndpointName;
-const consumerHeader = req.header(consumerIdHeaderName) || 'anonymous';
-const statusCode = res.statusCode.toString();
-const responseType = res.statusCode >= 200 && res.statusCode < 300 ? 'SUCCESS' : 'FAILED';
-statusCodeCounter.labels(responseType, statusCode, consumerHeader, apiEndpoint).inc();
-});
+```
+pluginContext.registerPolicy({
+  name: 'metrics',
+  policy: ({ consumerIdHeaderName }) => (req, res, next) => {
+    res.once('finish', () => {
+      const apiEndpoint = req.egContext.apiEndpoint.apiEndpointName;
+      const consumerHeader = req.header(consumerIdHeaderName) || 'anonymous';
+      const statusCode = res.statusCode.toString();
+      const responseType = res.statusCode >= 200 && res.statusCode < 300 ? 'SUCCESS' : 'FAILED';
+      statusCodeCounter.labels(responseType, statusCode, consumerHeader, apiEndpoint).inc();
+    });
 
     next();
-
-}
-});\`
+  }
+});
+```
 
 Then we export a new policy which will register an event handler once the response is terminated. So, now we can inspect all the response as well as request details that will populate our labels.
 
