@@ -131,7 +131,6 @@ const statusCodeCounter = new metrics.Counter({
 
 Here we're declaring a new Prometheus Counter called `status_code` that will track all the responses and categorize
 them based on the declared labels: `['type', 'status_code', 'consumer', 'apiendpoint']`
-
 ```
 pluginContext.registerAdminRoute((app) => {
   app.get(pluginContext.settings.endpointName, (req, res) => {
