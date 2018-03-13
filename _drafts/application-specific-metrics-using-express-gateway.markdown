@@ -77,7 +77,7 @@ In this example, we will label all the responses that are on the way to the clie
 
 In order to leverage the existing tooling around, we will expose the collected metrics in the Prometheus Text Based Wire Format. In this way, we can leverage the tools that are already on the space to push and visualize the informations, such as [Grafana.](https://grafana.com/plugins?type=datasource)
 
-```javascript
+```
 const metrics = require('prom-client');
 
 const statusCodeCounter = new metrics.Counter({
