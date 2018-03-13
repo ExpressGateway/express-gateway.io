@@ -3,9 +3,9 @@ title: Application Specific Metrics Using Express Gateway in Production
 date: 2018-03-13 01:57:00 Z
 ---
 
-In 
+As a follow up to our last post on how you can get started with application specific metrics using Express Gateway, we'd love to show you a real time example that you can use. By the end of this post, you'll have everything you need to start building your own plugins and getting metrics on information you care about.
 
-**Put It In Production**
+**Put your Plugin into Production**
 
 We have our plugin ready to be used. Now we have to install it in the Gateway and enabled it.
 
@@ -21,38 +21,31 @@ Hence, we can install the plugin directly by simply typing:
 
 Now let's modify our [gateway.config](https://www.express-gateway.io/docs/configuration/gateway.config.yml/) and configure a policy that will take advantage of this policy:
 
-\`http:
-port: 8080
+`http:
+  port: 8080
 admin:
-port: 9876
+  port: 9876
 apiEndpoints:
-api:
-host: '\*'
+  api:
+    host: '*'
 serviceEndpoints:
-httpbin:
-url: 'http://httpbin.org'
+  httpbin:
+    url: 'http://httpbin.org'
 policies:
-
-* proxy
-
-* metrics
-  pipelines:
-
-* name: basic
-  apiEndpoints:
-
-  * api
+  - proxy
+  - metrics
+pipelines:
+  - name: basic
+    apiEndpoints:
+      - api
     policies:
+      - metrics:
+      - proxy:
+          - action:
+              serviceEndpoint: httpbin
+              changeOrigin: true`
 
-  * metrics:
-
-  * proxy:
-
-    * action:
-      serviceEndpoint: httpbin
-      changeOrigin: true\`
-
-## It's alive!
+## It's alive. Now, let's test it!
 
 Let's spin up the gateway and throw some requests to it:
 
@@ -60,14 +53,11 @@ Let's spin up the gateway and throw some requests to it:
 
 Once the command is terminated, we can now query our metrics endpoint to see what happened with the requests:
 
-\`$ curl http://localhost:9876/metrics
-
+`$ curl http://localhost:9876/metrics
 # HELP status_codes status_code_counter
-
 # TYPE status_codes counter
-
 status_codes{type="FAILED",status_code="502",consumer="anonymous",apiendpoint="api"} 15
-status_codes{type="SUCCESS",status_code="200",consumer="anonymous",apiendpoint="api"} 5\`
+status_codes{type="SUCCESS",status_code="200",consumer="anonymous",apiendpoint="api"} 5`
 
 So now, you can see we received the Prometheus metrics with all of the data we collected.
 
@@ -81,23 +71,23 @@ For instance, in our example, it's pretty clear that the [Admin API](https://www
 
 With these two requirements in mind, we can write something like this:
 
-\`module.exports = {
-version: '1.0.0',
-policies: \['metrics'\],
-schema: {
-\$id: 'http://express-gateway.io/plugins/metrics.json',
-type: 'object',
-properties: {
-endpointName: {
-type: 'string',
-default: '/metrics'
-}
-}, required: \['endpointName'\]
-},
-init: function (pluginContext) {
-pluginContext.registerAdminRoute((app) => {
-// admin route code
-});
+`module.exports = {
+  version: '1.0.0',
+  policies: ['metrics'],
+  schema: {
+    $id: 'http://express-gateway.io/plugins/metrics.json',
+    type: 'object',
+    properties: {
+      endpointName: {
+        type: 'string',
+        default: '/metrics'
+      }
+    }, required: ['endpointName']
+  },
+  init: function (pluginContext) {
+    pluginContext.registerAdminRoute((app) => {
+      // admin route code
+    });
 
     pluginContext.registerPolicy({
       name: 'metrics',
@@ -115,11 +105,14 @@ pluginContext.registerAdminRoute((app) => {
         // policy code
       }
     });
-
-}
-};\`
+  }
+};`
 
 Thanks to this small addition, the Gateway will validate the provided parameters against the JSON Schema and will refuse to load the plugin if the validation does not pass.
+
+## Moving On
+
+Now that you've gotten a first hand look at getting application specific metrics using Express Gateway with a easy-to-follow example, it's time to go build it! 
 
 ## More Resources
 
