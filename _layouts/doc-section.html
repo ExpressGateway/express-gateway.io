@@ -30,13 +30,13 @@
         <section class="doc-wrapper">
           {% for cycledPage in site.pages %}
             {% if cycledPage.url == parent_parent_parent_url %}
-              <p class="lv0">{{ cycledPage.title }}</p>
+              <p class="algoliaLv0">{{ cycledPage.title }}</p>
             {% endif %}
             {% if cycledPage.url == parent_parent_url %}
-              <p class="lv1">{{ cycledPage.title }}</p>
+              <p class="algoliaLv1">{{ cycledPage.title }}</p>
             {% endif %}
             {% if cycledPage.url == parent_url %}
-              <p class="lv2">{{ cycledPage.title }}</p>
+              <p class="algoliaLv2">{{ cycledPage.title }}</p>
             {% endif %}
           {% endfor %}
          <h1>{{ page.title }}</h1>

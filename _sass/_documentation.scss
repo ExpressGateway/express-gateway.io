@@ -20,7 +20,6 @@
     font-family: 'Inconsolata', monospace;
   }
 
-
   .wrapper {
     display: flex;
     flex-direction: row;
@@ -329,7 +328,13 @@
       }
     }
   }
+
+  .algoliaLv0, .algoliaLv1, .algoliaLv2 {
+    display: none;
+  }
 }
+
+
 
 main.markdown > .doc-wrapper > table {
   width: 100%;
