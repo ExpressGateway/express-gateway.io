@@ -1,5 +1,24 @@
 {% include head.html %}
 
+{% assign pageurl_array = page.url | split: "/" %}
+{% assign base = pageurl_array[0] %}
+{% assign path = pageurl_array[1] %}
+{% assign section = pageurl_array[2] %}
+{% assign subsection = pageurl_array[3] %}
+{% assign subsubsection = pageurl_array[4] %}
+
+{% if subsubsection %}
+  {% capture parent_url %}{{base}}/{{ path }}/{{ section }}/{{ subsection }}/{% endcapture %}
+  {% capture parent_parent_url %}{{base}}/{{ path }}/{{ section }}/{% endcapture %}
+  {% capture parent_parent_parent_url %}{{base}}/{{ path }}/{% endcapture %}
+{% elsif subsection %}
+  {% capture parent_parent_url %}{{base}}/{{ path }}/{{ section }}/{% endcapture %}
+  {% capture parent_parent_parent_url %}{{base}}/{{ path }}/{% endcapture %}
+{% else %}
+  {% capture parent_parent_parent_url %}{{base}}/{{ path }}/{% endcapture %}
+{% endif %}
+
+
 <body class="sticky">
   {% include header.html %}
   <div class="container page documentation sticky-flex {{ page.class }}">
@@ -9,7 +28,18 @@
       </aside>
       <main class="markdown" id="markdown">
         <section class="doc-wrapper">
-         <h2>{{ page.title }}</h2>
+          {% for cycledPage in site.pages %}
+            {% if cycledPage.url == parent_parent_parent_url %}
+              <p class="lv0">{{ cycledPage.title }}</p>
+            {% endif %}
+            {% if cycledPage.url == parent_parent_url %}
+              <p class="lv1">{{ cycledPage.title }}</p>
+            {% endif %}
+            {% if cycledPage.url == parent_url %}
+              <p class="lv2">{{ cycledPage.title }}</p>
+            {% endif %}
+          {% endfor %}
+         <h1>{{ page.title }}</h1>
           {{ content }}
         </section>
       </main>
