@@ -20,7 +20,7 @@ Thanks to the hard work and dedicated developer community we have experienced so
 
 ## Built by Devs for Devs on Express.js
 
-Let's start with an important announcement you might have missed. Express Gateway was recently added to the [official Express.js list of frameworks built on Express.js](http://expressjs.com/en/resources/frameworks.html). Express.js is a minimalistic framework for Node.js. We chose Express.js for it's vast ecosystem of middleware, adoption and we're huge fans of just keeping it simple. 
+Let's start with an important announcement! Express Gateway was recently added to the [official Express.js list of frameworks built on Express.js](http://expressjs.com/en/resources/frameworks.html). Express.js is a minimalistic framework for Node.js. We chose Express.js for it's vast ecosystem of middleware, adoption and we're huge fans of just keeping it simple. 
 
 Now it's time for a round up of the in-depth technical How-tos.
 
