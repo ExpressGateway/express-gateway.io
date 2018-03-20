@@ -129,8 +129,8 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
 
           ```shell
           $ eg users create
-          ? Enter firstname [required]: Smith
-          ? Enter lastname [required]: Bob
+          ? Enter firstname [required]: Bob
+          ? Enter lastname [required]: Smith
           ? Enter username [required]: bob
           ? Enter email:
           ? Enter redirectUri:
