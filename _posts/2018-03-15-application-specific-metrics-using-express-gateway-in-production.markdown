@@ -18,7 +18,7 @@ As a follow up to [our last post on how you can get started](https://www.express
 
 <!--excerpt-->
 
-**Plugging in to Production**
+## Plugging in to Production
 
 By now, if you've been following along you have created your plugin and it's ready to be used. So, we have to install it in the Gateway and enabled it.
 
