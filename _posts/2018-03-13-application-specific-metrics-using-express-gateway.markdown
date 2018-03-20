@@ -19,7 +19,7 @@ tags:
 layout: post
 ---
 
-Unless you're building a proof of concept or an application that's not aiming to reach the production, you definitely want to add monitoring and metrics to your system. In this installment we're going to look how Express-Gateway can help you to add application specific metrics and expose them through an HTTP endpoint that can be queired by an external service, such as Prometheus.
+Unless you're building a proof of concept or an application that's not aiming to reach the production, you definitely want to add monitoring and metrics to your system. In this installment we're going to look how Express-Gateway can help you to add application specific metrics and expose them through an HTTP endpoint that can be queried by an external service, such as Prometheus.
 
 <!--excerpt-->
 
