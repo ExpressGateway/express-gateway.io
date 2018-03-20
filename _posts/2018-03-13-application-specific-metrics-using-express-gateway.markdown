@@ -55,7 +55,7 @@ module.exports = {
 
 In our example, the plugin will:
 
-1. Expose a policy that hooks in the [response](http://expressjs.com/en/4x/api.html#res), collecting information in [Prometheus format](https://github.com/prometheus/docs/blob/master/content/docs/instrumenting/exposition_formats.md).
+1. Expose a policy that hooks in the [response](https://expressjs.com/en/4x/api.html#res), collecting information in [Prometheus format](https://github.com/prometheus/docs/blob/master/content/docs/instrumenting/exposition_formats.md).
 
 2. Extend the [Admin API](https://www.express-gateway.io/docs/admin/#markdown) to expose an additional endpoint which serves the collected information.
 
