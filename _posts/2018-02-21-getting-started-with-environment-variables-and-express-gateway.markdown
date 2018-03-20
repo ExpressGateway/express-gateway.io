@@ -76,4 +76,4 @@ config file.
 If you’re ready to get started with Environment Variables in Express Gateway with this easy-to-follow How-To Video:
 
 <iframe src="https://player.vimeo.com/video/256160092" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/256160092">How To Use Environment Variables In Express Gateway</a> from from Vincenzo Chianese on <a href="https://vimeo.com/altsang">Vimeo</a>.</p>
+<p><a href="https://vimeo.com/256160092">How To Use Environment Variables In Express Gateway</a> with Vincenzo Chianese on <a href="https://vimeo.com/altsang">Vimeo</a>.</p>
