@@ -11,6 +11,7 @@ tags:
 - how to create a Plugin for Express Gateway
 - Express.js
 - Framework built on Express.js
+layout: post
 ---
 
 Thanks to the hard work and dedicated developer community we have experienced some of the biggest milestones to date. Now it's time to share a quick round up of the most popular posts, How-Tos and videos in case you may have missed all of the action. Also, get a sneak peek at what's in store for the next release!
