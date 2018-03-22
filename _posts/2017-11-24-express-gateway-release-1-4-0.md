@@ -14,7 +14,7 @@ Always be shipping code! Open source projects are no exception. In the latest 1.
 
 ### Less time on errands and more time on code!
 
-In this release, we wanted to focus on making Express Gateway and automating our deployment pipeline. Now, every time a new tag is pushed on Github, our lovely Continuous Integration system will publish the package on[npm](https://npmjs.org/packages/express-gateway) as well as update all of the [Express Gateway Docker images](https://www.lunchbadger.com/official-docker-images-for-express-gateway/).
+In this release, we wanted to focus on making Express Gateway and automating our deployment pipeline. Now, every time a new tag is pushed on Github, our lovely Continuous Integration system will publish the package on[npm](https://npmjs.org/package/express-gateway) as well as update all of the [Express Gateway Docker images](https://www.lunchbadger.com/official-docker-images-for-express-gateway/).
 
 ### New Migration Framework
 
