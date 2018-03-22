@@ -129,12 +129,21 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
 
           ```shell
           $ eg users create
-          ? Enter username [required]: bob
           ? Enter firstname [required]: Bob
           ? Enter lastname [required]: Smith
+          ? Enter username [required]: bob
           ? Enter email:
           ? Enter redirectUri:
-          ✔ Created bob
+          ✔ Created a7adfaf4-94b6-4af9-ba0f-09af2bb19c06
+          {
+            "firstname": "Bob",
+            "lastname": "Smith",
+            "username": "bob",
+            "isActive": true,
+            "id": "a7adfaf4-94b6-4af9-ba0f-09af2bb19c06",
+            "createdAt": "Tue Mar 20 2018 16:10:33 GMT+0200 (EET)",
+            "updatedAt": "Tue Mar 20 2018 16:10:33 GMT+0200 (EET)"
+          }
           ```
 
 3. ##### Secure the API with Key Authorization
@@ -174,7 +183,7 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
 
           ```shell
           $ curl http://localhost:8080/ip
-            Forbidden
+            Unauthorized
           ```
 
     - ###### Step 4
