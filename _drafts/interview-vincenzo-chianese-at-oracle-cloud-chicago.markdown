@@ -24,17 +24,16 @@ As part of our conference participation, we shared the spotlight with one of our
 
 Before giving a workshop, we got the chance to take part in a live interview, livestreamed on Periscope. Thanks, for taking time out for the interview with Vincenzo! Below we have shared a few interesting excerpts from the interview.  
 
-**Q:**
-**Vincenzo:**
+**Q:** "How do [challenges in Microservices] differ from similar or parallel challenges in conventional service oriented architecture?"
+ 
+**Vincenzo:** .."The new challenges I see is that when you go with Microservices you want to use the network as an application bus. Unfortunately, the network is unreliable and is not meant to be an application bus. From there, you find a lot more challenges. For example, when you have a particular transaction that is happening on multiple microservices - what do you do if one of the services is failing?"
 
-**Q:**
-**Vincenzo:**
+**Q:** "How does using RESTful architecture and an API Gateway help to overcome those challenges?"
 
-**Q:**
-**Vincenzo:**
+**Vincenzo:** "The API Gateway is particularly useful because it's acting as an integration layer for your microservices.."
 
-Check out the entire interview:
-https://www.pscp.tv/w/1MnxneykAXYJO
+Check out the entire interview
+https://www.pscp.tv/OracleDevs/1MnxneykAXYJO
 
 
 Thanks,again, for the ongoing support with this exciting open source project. We're excited to share our expertise, and learn more about what you're building. As co-sponsors of Express Gateway, we work closely with the developer community to help shape this project. So if you've been hard at work building, hit us up on **[our Gitter channel.](https://gitter.im/ExpressGateway/express-gateway)**
