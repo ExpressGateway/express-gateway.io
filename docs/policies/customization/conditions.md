@@ -216,6 +216,15 @@ condition:
   name: anonymous
 ```
 
+##### clientAuthorized
+
+Matches if the current request came with a valid client certificate
+
+```yml
+condition:
+  name: clientAuthorized
+```
+
 #### Best Practice Note
 While it is possible to build quite complicated condition tree, huge trees could greatly affect readability of your EG configuration. In such cases it could be better to have multiple api endpoints and pipelines
 
