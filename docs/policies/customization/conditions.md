@@ -216,13 +216,13 @@ condition:
   name: anonymous
 ```
 
-##### clientAuthorized
+##### tlsClientAuthenticated
 
 Matches if the current request came with a valid client certificate
 
 ```yml
 condition:
-  name: clientAuthorized
+  name: tlsClientAuthenticated
 ```
 
 #### Best Practice Note
