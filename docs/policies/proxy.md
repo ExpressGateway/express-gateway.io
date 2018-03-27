@@ -98,7 +98,7 @@ Request flow will look like this:
 
 Request -> Express Gateway with Proxy policy -> Corporate proxy -> Target Service Endpoint
 
-This can be done done using `http_proxy` env variable.
+This can be done done using `http_proxy` or `HTTP_PROXY` env variable.
 
 `http_proxy=http://corporate.proxy:3128 npm start`
 
