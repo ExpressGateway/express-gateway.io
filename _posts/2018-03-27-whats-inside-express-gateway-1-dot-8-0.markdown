@@ -1,5 +1,6 @@
 ---
 title: What's inside Express Gateway 1.8.0
+date: 2018-03-27 07:56:00 Z
 categories:
 - announcements
 tags:
