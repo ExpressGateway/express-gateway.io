@@ -32,8 +32,8 @@ Before giving a workshop, we got the chance to take part in a live interview, li
 
 **Vincenzo:** "The API Gateway is particularly useful because it's acting as an integration layer for your microservices.."
 
-Check out the entire interview
-https://www.pscp.tv/OracleDevs/1MnxneykAXYJO
+## [Check out the entire interview](https://www.pscp.tv/OracleDevs/1MnxneykAXYJO)
+
 
 
 Thanks,again, for the ongoing support with this exciting open source project. We're excited to share our expertise, and learn more about what you're building. As co-sponsors of Express Gateway, we work closely with the developer community to help shape this project. So if you've been hard at work building, hit us up on **[our Gitter channel.](https://gitter.im/ExpressGateway/express-gateway)**
