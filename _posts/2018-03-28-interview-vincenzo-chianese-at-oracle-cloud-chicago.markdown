@@ -32,7 +32,7 @@ Before giving a workshop, we got the chance to take part in a live interview, li
 
 **Vincenzo:** "The API Gateway is particularly useful because it's acting as an integration layer for your microservices.."
 
-## [Check out the entire interview](https://www.pscp.tv/OracleDevs/1MnxneykAXYJO)
+## [**Check Out The Entire Interview Here**](https://www.pscp.tv/OracleDevs/1MnxneykAXYJO)
 
 
 
