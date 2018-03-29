@@ -14,7 +14,7 @@ tags:
 layout: post
 ---
 
-We've come a long way! With over 13,000 downloads and almost 800 stars on Github, Express Gateway is becoming more popular every single day thanks to our amazing community of developers, gazers and contributors. 
+We've come a long way! Express Gateway is becoming more popular every single day thanks to our amazing community of developers, gazers and contributors. 
 
 In this release, we're bringing two new features and crushing a few pesky bugs. Also, based on community feedback, we've done a little code reorganization. If you're interested in contributing, we'd love to connect. In the meantime, learn more about what's inside Express Gateway 1.8.0!
 <!--excerpt-->
