@@ -1,5 +1,5 @@
 ---
-title: 'Interview Pt.2:'
+title: 'Interview Pt.2: Vincenzo Chianese at Oracle Cloud Conference, Chicago'
 date: 2018-03-29 16:41:00 Z
 categories:
 - announcements
