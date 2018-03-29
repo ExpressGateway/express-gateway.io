@@ -20,7 +20,7 @@ We joined thousands of developers, architects and technical executives for Oracl
 ## Auth0 & LunchBadger
 As part of our conference participation, we shared the spotlight with one of our favorite community partners, Auth0. Previously, we collaborated on a [popular blog post about the important role of API Gateways and Microservices](https://auth0.com/blog/apigateway-microservices-superglue/). When the opportunity came up to share this with a live audience, we packed up our bags and headed to Chicago. Thanks, again, to Auth0 and keep a lookout because we'll share the slides and video!
 
-## Interview with
+## Interview + Excerpts
 
 Before giving a workshop, we got the chance to take part in a live interview, livestreamed on Periscope. Thanks, for taking time out for the interview with Vincenzo! Below we have shared a few interesting excerpts from the interview.  
 
