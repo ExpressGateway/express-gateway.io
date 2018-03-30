@@ -17,7 +17,7 @@ tags:
 We get asked a lot - How can I contribute? What is Express Gateway all about? Well, here's your chance to check out what other developers are talking about and prioritizing when it comes to what they'd like to see in the next generation API Gateway. If you're looking to make an impact on a popular open source project, read on, upvote or just share your feedback. Let's go!
 <!--excerpt-->
 
-## Built by Devs for Devs on Express.js
+## But first: Docker Images and 1.8.0
 
 Let's start with the important stuff. This week we [released 1.8.0 with some eagerly awaited features](https://www.express-gateway.io/whats-inside-express-gateway-1-dot-8-0/), including a brand new consolidated Docker Image. This is important for everyone out there who has implemented or used Docker so check out the updates on that. 
 
