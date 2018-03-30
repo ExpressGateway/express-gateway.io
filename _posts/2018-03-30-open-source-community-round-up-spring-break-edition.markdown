@@ -38,6 +38,7 @@ You can also [check out the entire interview right over here](https://www.pscp.t
 ## Our ongoing collab with Auth0
 It's true, when you find a good partner - you gotta keep em'! It makes sense, if you're talking about securing your microservices and apis, that Auth0 and Express Gateway make a good pair. We've been cooking up some great content in [this latest installment](https://auth0.com/blog/application-metrics-with-express-gateway/), discussing how you can use Express Gateway to get the metrics you care about. 
 
+We would like to recommend their [Ambassador program](https://auth0.com/ambassador-program). ICYMI, Vincenzo Chianese was Ambassador of the month for January and it's been great to share the open source love while provided important value for developers who are building microservices and APIs.
 
 ## Moving On
 
