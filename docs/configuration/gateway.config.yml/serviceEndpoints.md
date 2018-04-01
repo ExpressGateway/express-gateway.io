@@ -24,11 +24,14 @@ serviceEndpoints:             # downstream microservices
 
 ### Options
 
-| Name    | Description                                    |
-|---      |---                                             |
-| `url`   | the protocol and hostname to proxy requests to |
-| `urls`  | an array of URLs, used with load balancing     |
+| Name           | Description                                                                                 |
+|----------------|---------------------------------------------------------------------------------------------|
+| `url`          | the protocol and hostname to proxy requests to                                              |
+| `urls`         | an array of URLs, used with load balancing                                                  |
+| `proxyOptions` | options to be used when calling the [proxy policy](proxy_policy) with this service endpoint |
 
 ### Description
 
 A `serviceEndpoint` must have either a `url` property with a single string or a `urls` property with an array of strings.
+
+[proxy_policy]: {{ site.baseurl }}{% link docs/policies/proxy.md %}
