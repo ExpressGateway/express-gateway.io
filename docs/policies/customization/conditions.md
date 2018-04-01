@@ -7,11 +7,12 @@ list-order: 0.2
 
 Express Gateway comes with a core set of conditions. These conditions can be used throughout all policies in Express Gateway.  Additional conditions may also be added through Express Gateway plugins.
 
-#### Action Conditions
+## Action Conditions
+
 Each Policy Action in a pipeline can be gated with a condition specification. Each
 condition specification is in the format:
 
-##### Usage
+### Usage
 
 ```yaml
   condition:
@@ -19,7 +20,7 @@ condition specification is in the format:
     some-param-1: p1 # if condition requires parameters they are listed here
     some-param-2: p1 #
 ```
-##### Full Example
+### Full Example
 ```yml
 pipelines:
   default:
@@ -49,8 +50,8 @@ pipelines:
             action:
               serviceEndpoint: example
 ```
-### Conditions Reference
-##### pathExact
+## Conditions Reference
+### pathExact
 Matches if the request's path is equal to `path` parameter.
 ```yaml
   condition:
@@ -58,7 +59,7 @@ Matches if the request's path is equal to `path` parameter.
     path: "/foo/bar"
 ```
 
-##### pathMatch
+### pathMatch
 Matches if the request's path matches the given regular expression parameter.
 ```yml
   condition:
@@ -66,7 +67,7 @@ Matches if the request's path matches the given regular expression parameter.
     path: "/foo(/bar)?"
 ```
 
-##### method
+### method
 Matches if the request's method matches the `methods` parameter.
 The parameter can be either a string (e.g. 'GET') or an array of such strings.
 ```yml
@@ -82,7 +83,7 @@ The parameter can be either a string (e.g. 'GET') or an array of such strings.
       - POST
 ```
 
-##### hostMatch
+### hostMatch
 Matches if the `Host` header passed with the request matches the parameter.
 Parameter `pattern` should be a wildcard\string expression.
 ```yml
@@ -91,7 +92,7 @@ Parameter `pattern` should be a wildcard\string expression.
     pattern: '*.example.com'
 ```
 
-##### expression
+### expression
 Matches execution result of JS code provided in `expression` property.
 Code is executed in limited space that has access only to egContext.
 
@@ -110,7 +111,7 @@ In addition, several Conditions are provided that allow you to create logical
 combinations of conditions. The parameters to these conditions should be other
 condition statements:
 
-##### allOf
+### allOf
 Matches only if all of its parameters match.
 
 ```json
@@ -147,7 +148,7 @@ condition:
 The above will match only if the exact request path is "/foo/bar" and the
 request is *not* a POST or HEAD.
 
-##### oneOf
+### oneOf
 Matches if at least one of its parameters matches.
 
 ```json
@@ -184,7 +185,7 @@ condition:
 The above will match  if the exact request path is "/foo/bar" or the
 request is *not* a POST or HEAD.
 
-##### not
+### not
 Invert condition result
 
 ```yml
@@ -198,7 +199,7 @@ condition:
 ```
 Will match only if method is other than POST and HEAD
 
-##### authenticated
+### authenticated
 
 Matches if the current request is authenticated.
 
@@ -207,7 +208,7 @@ condition:
   name: authenticated
 ```
 
-##### anonymous
+### anonymous
 
 Matches if the current request is **not** authenticated.
 
@@ -216,7 +217,7 @@ condition:
   name: anonymous
 ```
 
-##### tlsClientAuthenticated
+### tlsClientAuthenticated
 
 Matches if the current request came with a valid client certificate
 
@@ -225,12 +226,12 @@ condition:
   name: tlsClientAuthenticated
 ```
 
-#### Best Practice Note
+## Best Practice Note
 While it is possible to build quite complicated condition tree, huge trees could greatly affect readability of your EG configuration. In such cases it could be better to have multiple api endpoints and pipelines
 
 The following two configs are equivalent, however we believe variant B is easier to read.
 
-##### Conditions Based Config - Variant A
+### Conditions Based Config - Variant A
 
 ```yaml
 serviceEndpoints:
@@ -267,7 +268,7 @@ pipelines:
               serviceEndpoint: staff # see declaration above
 ```
 
-##### Conditions Based Config - Variant B
+### Conditions Based Config - Variant B
 
 ```yaml
 serviceEndpoints:
