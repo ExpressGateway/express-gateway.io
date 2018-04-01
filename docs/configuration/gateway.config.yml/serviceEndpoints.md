@@ -28,7 +28,7 @@ serviceEndpoints:             # downstream microservices
 |----------------|---------------------------------------------------------------------------------------------|
 | `url`          | the protocol and hostname to proxy requests to                                              |
 | `urls`         | an array of URLs, used with load balancing                                                  |
-| `proxyOptions` | options to be used when calling the [proxy policy](proxy_policy) with this service endpoint |
+| `proxyOptions` | options to be used when calling the [proxy policy][proxy_policy] with this service endpoint |
 
 ### Description
 
