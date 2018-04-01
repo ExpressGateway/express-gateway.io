@@ -16,17 +16,17 @@ layout: post
 
 In partnership with Auth0, we joined thousands of developers, architects and technical executives for Oracle Cloud conference in Chicago. They say that the Oracle Community is built by developers for developers. That is definitely something we can appreciate. Vincenzo Chianese, engineer for LunchBadger (co-sponsor of Express Gateway), shared an expert workshop in partnership with Auth0 and had the chance for a live interview. Here are more excerpts from that interview.
 <!--excerpt-->
- 
+
 ## Interview: Vincenzo Chianese & Bob Rhubart
 
-Before giving a workshop, we got the chance to take part in a live interview with Bob Rhubart,OTN Architect community manager. He is also the editor and producer of  [Archbeat Podcast](http://feeds2.feedburner.com/OtnArch2Arch). Thanks, Bob and Vincenzo for taking time out for the interview! Below we have shared a few more interesting excerpts from the interview.  
+Before giving a workshop, we got the chance to take part in a live interview with Bob Rhubart,OTN Architect community manager. He is also the editor and producer of  [Archbeat Podcast](https://feeds2.feedburner.com/OtnArch2Arch). Thanks, Bob and Vincenzo for taking time out for the interview! Below we have shared a few more interesting excerpts from the interview.
 
 **Bob:** "At the end of your session, you spent time, you spent time answering questions. What were some of those questions?"
 
 **Vincenzo:** "We already have a solution to this problem,like GraphQl can be an alternative to the hypermedia API...and it is true, but maybe it is forcing you to have a particular mental model.The good thing about architectural style is that you choose the constraints that you want to apply to your system to get some advantages..Whereas with GraphQL its all or nothing..Maybe, and especially with legacy systems, you cannot afford to make a complete switch. "
 
 **Bob:** "What can you tell me about the Express Gateway project?"
- 
+
 **Vincenzo:** ..."We decided to build an API Gateway in Javascript..Javascript is way more [popular] and developers, especially front end developers are more willing to dig into the source code. Using Express.js as a baseline let us leverage the entire ecosystem."
 
 ## [**Check Out The Entire Interview Here**](https://www.pscp.tv/OracleDevs/1MnxneykAXYJO)
