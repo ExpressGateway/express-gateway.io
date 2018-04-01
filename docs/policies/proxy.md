@@ -89,6 +89,23 @@ pipelines:
 
 Note: more complex proxy rules will be introduced to do wilcard based matching similar to Express routing rules
 
+### Service Endpoints options
+
+There might be cases where a set of Proxy options is valid for an entire service endpoint. If you have, for example,
+a service endpoint on an `host` and then multiple pipelines based on a `path` — you might end up setting the same
+options per each pipeline. In that case, you can either use [yaml references](yaml_references), or set the `proxyOptions`
+parameter on the `serviceEndpoint` directly.
+
+```yaml
+serviceEndpoints:             # downstream microservices
+  cats:                       # name, used as a reference in pipeline
+    url: "http://cats1.example.com"
+    proxyOptions:
+      changeOrigin: false
+      xfwd: true
+```
+
+The `proxyOptions` object will be forwarded to the [node-http-proxy](https://github.com/nodejitsu/node-http-proxy) middleware.
 
 ### Service Enpoints behind intermediate proxy
 Some corporation allow access to internet only through proxy.
@@ -117,3 +134,4 @@ pipelines:
 
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
+[yaml_references]: {{ site.baseurl }}{% link docs/configuration/index.md%}#yaml-references
