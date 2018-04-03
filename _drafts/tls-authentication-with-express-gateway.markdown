@@ -77,7 +77,6 @@ In our `gateway.config.yml`, let's remove the `http` port and replace it with th
 This configuration snippet will make sure Express Gateway will listen for HTTPS connections using the provided certificates. It will also require clients to supply a certificate, and reject the ones that are not authorized.
 
 We can now see that any request done using curl will be refused by the server, because we're not providing any client certificate:
-
 ```bash
 $ curl https://localhost:4444/users -k
 curl: (35) error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure
