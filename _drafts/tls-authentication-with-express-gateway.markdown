@@ -117,9 +117,7 @@ Normally, TLS authentication must happen at the edge of your server and — it's
 
 However, if this is only a single case scenario, then you can move the TLS check on the HTTP level by making few modifications to your Express Gateway configuration:
 
-
-```diff
-"https": {
+`"https": {
     "port": 4444,
     "tls": {
       "default": {
@@ -133,8 +131,7 @@ However, if this is only a single case scenario, then you can move the TLS check
 -      "rejectUnauthorized": true
 +      "rejectUnauthorized": false
     }
-  },
-```
+  },`
 
 We have modified our HTTPS server configuration so that the server will ask for a client certificate, but it will let the connection happen even if no certificate has been provided. Let’s move the client certificate. 
 
