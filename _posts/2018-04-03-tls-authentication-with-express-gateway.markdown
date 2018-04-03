@@ -1,5 +1,5 @@
 ---
-title: TLS authentication with Express Gateway
+title: TLS Authentication with Express Gateway
 date: 2018-04-03 12:57:00 Z
 categories:
 - technology
