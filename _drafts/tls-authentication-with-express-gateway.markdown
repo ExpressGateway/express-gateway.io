@@ -33,21 +33,21 @@ In our second example, we’ll use a mobile banking app where the bank wants to 
 In order to set up TLS client authentication with Express Gateway,make sure it's listening on a secure connection rather than the usual `http`. 
 To do that, let's generate a set of certificates:
 
-1. Generate a new CA certificate, that'll be the authority signing our client certificates:
+* Generate a new CA certificate, that'll be the authority signing our client certificates:
 
 ```bash
 $ openssl genrsa -out rootCA.key 2048
 $ openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 1024 -out rootCA.pem
 ```
 
-2. Generate a new server certificate, that'll be used to run Express Gateway on SSL
+* Generate a new server certificate, that'll be used to run Express Gateway on SSL
 
 ```bash
 $ openssl req -nodes -newkey rsa:2048 -keyout server.key -out server.csr
 $ openssl x509 -req -days 365 -in server.csr -CA rootCA.pem -CAkey rootCA.key -set_serial 01 -out server.crt
 ```
 
-3. Generate a client certificate for a device
+* Generate a client certificate for a device
 
 ```bash
 $ openssl req -nodes -newkey rsa:2048 -keyout client.key -out client.csr
