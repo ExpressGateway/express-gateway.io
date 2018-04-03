@@ -58,7 +58,7 @@ $ openssl x509 -req -days 365 -in client.csr -CA rootCA.pem -CAkey rootCA.key -s
 
 In our `gateway.config.yml`, let's remove the `http` port and replace it with this snippet:
 
-```bash
+```
 "https": {
     "port": 4444,
     "tls": {
