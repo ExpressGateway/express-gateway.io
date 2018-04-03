@@ -129,7 +129,8 @@ However, if this is only a single case scenario, then you can move the TLS check
     },
     "options": {
       "requestCert": true,
-      "rejectUnauthorized": true
+-      "rejectUnauthorized": true
++      "rejectUnauthorized": false
     }
   },
 ```
