@@ -12,7 +12,9 @@ tags:
 layout: post
 ---
 
-Express Gateway supports various client authentication methods such as [key auth](https://www.express-gateway.io/docs/policies/key-authorization/),[basic auth](https://www.express-gateway.io/docs/policies/basic-authorization/),[jwt](https://www.express-gateway.io/docs/policies/jwt/). Based on developer community feedback, we’ve included support to Transport Layer Security (TLS) Client Authentication in the latest 1.8.0 release. So, we can code up some new and interesting scenarios. Let's dig in!
+Express Gateway supports various client authentication methods such as [key auth](https://www.express-gateway.io/docs/policies/key-authorization/),[basic auth](https://www.express-gateway.io/docs/policies/basic-authorization/),[jwt](https://www.express-gateway.io/docs/policies/jwt/). Based on developer community feedback, we’ve included support to Transport Layer Security (TLS) Client Authentication in the latest 1.8.0 release. 
+
+So, we can code up some new and interesting scenarios. Let's dig in!
 
 <!--excerpt-->
 
