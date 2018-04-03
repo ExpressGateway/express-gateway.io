@@ -58,9 +58,7 @@ $ openssl x509 -req -days 365 -in client.csr -CA rootCA.pem -CAkey rootCA.key -s
 
 In our `gateway.config.yml`, let's remove the `http` port and replace it with this snippet:
 
-```
-yaml
-"https": {
+`"https": {
     "port": 4444,
     "tls": {
       "default": {
@@ -73,8 +71,7 @@ yaml
       "requestCert": true,
       "rejectUnauthorized": true
     }
-  },
-```
+  },`
 
 
 This configuration snippet will make sure Express Gateway will listen for HTTPS connections using the provided certificates. It will also require clients to supply a certificate, and reject the ones that are not authorized.
