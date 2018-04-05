@@ -52,7 +52,7 @@ However, if this is only a single case scenario, then you can move the TLS check
 We have modified our HTTPS server configuration so that the server will ask for a client certificate, but it will let the connection happen even if no certificate has been provided. Let’s move the client certificate. 
 
 Check on the pipeline level using an [adhoc condition](https://www.express-gateway.io/docs/policies/customization/conditions/#tlsclientauthenticated)
-`
+```
 pipelines:
   default:
     apiEndpoints:
@@ -67,7 +67,8 @@ pipelines:
             statusCode: 403
       - proxy:
         - action:
-            serviceEndpoint: backend`
+            serviceEndpoint: backend
+```
 
 In the case when `tlsClientAuthenticated` is not true—that is, the client didn't provide a certificate or the provided one is invalid—the request will be terminated with `403`. 
 
