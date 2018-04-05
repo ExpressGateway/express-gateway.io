@@ -10,6 +10,7 @@ tags:
 - Security
 - JWT
 - Key Auth
+layout: post
 ---
 
 We're back with more about how you can use Transport Layer Security (TLS) Client Authentication from the latest 1.8.0 release. We'll cover how to revoke a client certificate and special use cases if you want to use TLS Authentication for a specific path. 
