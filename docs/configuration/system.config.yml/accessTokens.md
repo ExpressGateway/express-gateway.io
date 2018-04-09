@@ -24,8 +24,9 @@ accessTokens:
 
 * `timeToExpiry`: Expiration time for the token
 * `tokenType`: Token type to be issued. It can be `opaque` or `jwt`
-* `issuer`: Ignored when tokenType is `jwt`. Defines the issuer to be sent in the token
-* `audience`: Ignored when tokenType is `jwt`. Defines the audience to be sent in the token
+* `issuer`: Ignored when tokenType isnt `jwt`. Defines the issuer to be sent in the token
+* `audience`: Ignored when tokenType isnt `jwt`. Defines the audience to be sent in the token
+* `subject`: Ignored when tokenType isnt `jwt`. Defines the subject to be sent in the token
 * `secretOrPrivateKey`: Ignored when tokenType is `jwt`. Defines the secret or private key used to sign the token
 * `secretOrPrivateKeyFile`: Ignored when tokenType is `jwt`. Defines the file where the secret or private key used to
 sign the token is stored
