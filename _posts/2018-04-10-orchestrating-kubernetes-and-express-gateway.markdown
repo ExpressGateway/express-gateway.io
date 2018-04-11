@@ -105,11 +105,9 @@ Ultimately, we can define what we want to do when one of these actions are happe
       currentActions[deploymentName] = JSON.parse(JSON.stringify(avaiableActions[deploymentName]));
     }
   }
-}
-```
+}```
 Where currentActions is an object where we keep track of the possible actions
-```
-const avaiableActions = {
+```const availableActions = {
   customers: [
     { url: 'http://customers.apitest.lan/', value: 'listCustomer' },
     { url: 'http://customers.apitest.lan/', value: 'createCustomer' },
