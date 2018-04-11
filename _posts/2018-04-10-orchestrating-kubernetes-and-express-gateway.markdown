@@ -103,7 +103,7 @@ Ultimately, we can define what we want to do when one of these actions are happe
       console.log(`The service ${deploymentName} seems to be up. Adding affordances.`)
       currentActions[deploymentName] = JSON.parse(JSON.stringify(avaiableActions[deploymentName]));
     }
-  }
+ }
 }`
 
 
