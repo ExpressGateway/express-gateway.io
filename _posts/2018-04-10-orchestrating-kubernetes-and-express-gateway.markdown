@@ -93,9 +93,9 @@ Ultimately, we can define what we want to do when one of these actions are happe
 `function onStreamData(deploymentInfo) {
   if (deploymentInfo.type === 'MODIFIED') {
     const availableReplicas = deploymentInfo.object.status.availableReplicas;
-    const deploymentName = deploymentInfo.object.metadata.name;
+    const deploymentName = deploymentInfo.object.metadata.name;`
 
-    if (!!!availableReplicas || availableReplicas === 0) {
+    `if (!!!availableReplicas || availableReplicas === 0) {
       console.log(`The service ${deploymentName} seems to be down. Removing affordances.`)
       currentActions[deploymentName] = [];
     }
