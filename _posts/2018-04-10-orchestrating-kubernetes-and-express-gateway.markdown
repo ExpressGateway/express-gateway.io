@@ -77,13 +77,14 @@ This example has been written with the API Version 1.9. However, Kubernetes and 
 **Note:** You can also use `config.fromKubeConfig()`; that'll read your `kubectl` configuration file. This allows you to test your integration on a local installation such as `minikube` or any other Kubernetes cluster while making the development locally on your computer.
 
 Now that we have a client, let's set it up to notify us when something is happening [to our deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/):
- `const namespace = client.apis.apps.v1.watch.namespaces('default'); // Change this with your target namespace
+
+`const namespace = client.apis.apps.v1.watch.namespaces('default'); // Change this with your target namespace
   const customers = namespace.deployments('customers');
   const invoices = namespace.deployments('invoices');
 
-  const streams = [customers.getStream().pipe(JSONStream.parse()), invoices.getStream().pipe(JSONStream.parse())]
+const streams = [customers.getStream().pipe(JSONStream.parse()), invoices.getStream().pipe(JSONStream.parse())]
 
-  streams.forEach((stream) => stream.on('data', onStreamData));`
+streams.forEach((stream) => stream.on('data', onStreamData));`
 
 **Note** we had to use JSONStream library to parse the stream returned by the watch endpoint to a JavaScript Object.
 
