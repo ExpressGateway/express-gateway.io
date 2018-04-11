@@ -20,7 +20,7 @@ Express Gateway is [cloud native software](https://pivotal.io/cloud-native), mea
 Let’s explore an interesting use case where you can use Express Gateway with Kubernetes to provide a graceful degradation for clients in case some of its managed services are down.
 <!--excerpt-->
 
-The scenario
+## The scenario
 For our example, let's suppose we have two services in JavaScript and running on Node.js — one handling `Customers` and another one handling `Invoices`. Also, we have a command line client that uses these APIs to service the user experience.
 
 **Uh oh! Our `Customer` service has crashed.**
