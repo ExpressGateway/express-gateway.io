@@ -19,7 +19,13 @@ Express Gateway can also verify on some of the registered claims of RFC 7519 (su
 
 ### Usage
 
-In order to use the JWT policy, consumers must have a `jwt` credential associated with them.
+There are two modalities the JWT policy can verify your token: the **Controlled** or **Uncontrolled**. The
+modality is driven by the value of `checkCredentialExistence` value; `true` for the former, `false` for the
+latter.
+
+##### Controlled modality
+
+In order to use the JWT policy in controlled modality, consumers must have a `jwt` credential associated with them.
 
 To create consumers (user and apps): use the [CLI][cli] and [create user][users-create] or [create app][apps-create]
 command.
@@ -30,11 +36,23 @@ command with type `jwt`. You can also use the [Admin API][admin_api] to do the s
 Once you create a token, you will get a key pair: `keyId` and `keySecret`.
 
 `keyId` **must** be placed in the `sub` field of your JWT. Otherwise, the Gateway will not be able to verify
-the consumer bound to it, and it will refuse the request. You can skip this check setting (although we do not recommend it)
-the `checkCredentialExistence` to `false`.
+the consumer bound to it, and it will refuse the request, regardless of the token validity.
 
 `keySecret` is a suggested password you can use to sign your tokens — so you should put this one in your policy
 configuration. Anyway, you're free to select your own `secret`, if required.
+
+**Note:** you can bind scopes to a JWT credential.
+
+##### Uncontrolled modality
+
+The uncontrolled modality might be useful in case you want to bypass Express Gateway Identity services. In such case
+you don't need to create any credential in the system.
+
+The gateway will still verify the token validity and the standard claims, but won't do any further checks and simply
+set its decoded content as the current user.
+
+**Note:** As there's no standardized way to express scopes in JWT, these won't be checked on the token. You can easily
+do that using a custom plugin to put after this policy. For an example, see this [repository][jwtz]
 
 #### Using RS256
 
@@ -154,3 +172,4 @@ The JWT scheme and header are not standardized, therefore they can be overriden 
 [users-create]: {{ site.baseurl }}{% link docs/cli/users/create.md %}
 [apps-create]: {{ site.baseurl }}{% link docs/cli/apps/create.md %}
 [credentials-create]: {{ site.baseurl }}{% link docs/cli/credentials/create.md %}
+[jwtz]: https://github.com/XVincentX/apigateway-playground/blob/microservice-gateway-hypermedia-kubernetes/gateway/jwtScopes.js
