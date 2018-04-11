@@ -91,25 +91,25 @@ Now that we have a client, let's set it up to notify us when something is happen
 
 Ultimately, we can define what we want to do when one of these actions are happening:
 ```
-function onStreamData(deploymentInfo) {
+ function onStreamData(deploymentInfo) {
   if (deploymentInfo.type === 'MODIFIED') {
     const availableReplicas = deploymentInfo.object.status.availableReplicas;
     const deploymentName = deploymentInfo.object.metadata.name;
-```  
-  if (!!!availableReplicas || availableReplicas === 0) {
-      console.log(`The service ${deploymentName} seems to be down. Removing affordances.)
+
+    if (!!!availableReplicas || availableReplicas === 0) {
+      console.log(`The service ${deploymentName} seems to be down. Removing affordances.`)
       currentActions[deploymentName] = [];
     }
     else {
       console.log(`The service ${deploymentName} seems to be up. Adding affordances.`)
       currentActions[deploymentName] = JSON.parse(JSON.stringify(avaiableActions[deploymentName]));
     }
- }
+  }
 }
 ```
 Where currentActions is an object where we keep track of the possible actions
 ```
-const avaliableActions = {
+const avaiableActions = {
   customers: [
     { url: 'http://customers.apitest.lan/', value: 'listCustomer' },
     { url: 'http://customers.apitest.lan/', value: 'createCustomer' },
@@ -120,7 +120,6 @@ const avaliableActions = {
   ]
 };
 ```
-
 That gets then returned when the client is doing the first request to the `/apiroot` endpoint of our service:
 ```
 app.get('/apiroot', (req, res) => res.json({
