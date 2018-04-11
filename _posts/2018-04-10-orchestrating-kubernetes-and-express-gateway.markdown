@@ -125,7 +125,7 @@ app.get('/apiroot', (req, res) => res.json({
   actions: [...currentActions.customers,...currentActions.invoices]
 }));
 
-Moving On
+## Moving On
 The end goal of our experiment is to make Express Gateway listen for specific changes we're interested in and modify the Gateway configuration accordingly. In case you're interested the final result would look like, you can [see it in action here](https://youtu.be/004Uhxo0xd4). Additionally, the [source code is available on Github if you’d like to give it a try](https://github.com/XVincentX/apigateway-playground/tree/microservice-gateway-hypermedia-kubernetes). 
 
 ## More Resources
