@@ -77,7 +77,6 @@ This example has been written with the API Version 1.9. However, Kubernetes and 
 **Note:** You can also use `config.fromKubeConfig()`; that'll read your `kubectl` configuration file. This allows you to test your integration on a local installation such as `minikube` or any other Kubernetes cluster while making the development locally on your computer.
 
 Now that we have a client, let's set it up to notify us when something is happening [to our deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/):
-
 ```
   const namespace = client.apis.apps.v1.watch.namespaces('default'); // Change this with your target namespace
   const customers = namespace.deployments('customers');
@@ -91,7 +90,6 @@ Now that we have a client, let's set it up to notify us when something is happen
 **Note** we had to use JSONStream library to parse the stream returned by the watch endpoint to a JavaScript Object.
 
 Ultimately, we can define what we want to do when one of these actions are happening:
-
 ```
 function onStreamData(deploymentInfo) {
   if (deploymentInfo.type === 'MODIFIED') {
@@ -109,11 +107,10 @@ function onStreamData(deploymentInfo) {
  }
 }
 ```
-
-
 Where currentActions is an object where we keep track of the possible actions
 
-`const avaiableActions = {
+```
+const avaiableActions = {
   customers: [
     { url: 'http://customers.apitest.lan/', value: 'listCustomer' },
     { url: 'http://customers.apitest.lan/', value: 'createCustomer' },
@@ -122,15 +119,17 @@ Where currentActions is an object where we keep track of the possible actions
     { url: 'http://invoices.apitest.lan/{customerId}/invoices/', value: 'listInvoice' },
     { url: 'http://invoices.apitest.lan/{customerId}/invoices/', value: 'createInvoice' },
   ]
-};`
+};
+```
 
 That gets then returned when the client is doing the first request to the `/apiroot` endpoint of our service:
-
-`app.get('/apiroot', (req, res) => res.json({
+```
+app.get('/apiroot', (req, res) => res.json({
    url: '/',
    actions[
 ...currentActions.customers,...currentActions.invoices]
-}));`
+}));
+```
 
 ## Moving On
 The end goal of our experiment is to make Express Gateway listen for specific changes we're interested in and modify the Gateway configuration accordingly. In case you're interested the final result would look like, you can [see it in action here](https://youtu.be/004Uhxo0xd4). Additionally, the [source code is available on Github if you’d like to give it a try](https://github.com/XVincentX/apigateway-playground/tree/microservice-gateway-hypermedia-kubernetes). 
