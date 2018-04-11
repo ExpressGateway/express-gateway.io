@@ -78,7 +78,7 @@ This example has been written with the API Version 1.9. However, Kubernetes and 
 
 Now that we have a client, let's set it up to notify us when something is happening [to our deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/):
 
-```javascript
+```
   const namespace = client.apis.apps.v1.watch.namespaces('default'); // Change this with your target namespace
   const customers = namespace.deployments('customers');
   const invoices = namespace.deployments('invoices');
@@ -92,13 +92,14 @@ Now that we have a client, let's set it up to notify us when something is happen
 
 Ultimately, we can define what we want to do when one of these actions are happening:
 
-`function onStreamData(deploymentInfo) {
+```
+function onStreamData(deploymentInfo) {
   if (deploymentInfo.type === 'MODIFIED') {
     const availableReplicas = deploymentInfo.object.status.availableReplicas;
-    const deploymentName = deploymentInfo.object.metadata.name;`
+    const deploymentName = deploymentInfo.object.metadata.name;
 
-    `if (!!!availableReplicas || availableReplicas === 0) {
-      console.log(`The service ${deploymentName} seems to be down. Removing affordances.`)
+    if (!!!availableReplicas || availableReplicas === 0) {
+      console.log(`The service ${deploymentName} seems to be down. Removing affordances.)
       currentActions[deploymentName] = [];
     }
     else {
@@ -106,7 +107,8 @@ Ultimately, we can define what we want to do when one of these actions are happe
       currentActions[deploymentName] = JSON.parse(JSON.stringify(avaiableActions[deploymentName]));
     }
  }
-}`
+}
+```
 
 
 Where currentActions is an object where we keep track of the possible actions
