@@ -108,9 +108,8 @@ function onStreamData(deploymentInfo) {
 }
 ```
 Where currentActions is an object where we keep track of the possible actions
-
 ```
-const avaiableActions = {
+const avaliableActions = {
   customers: [
     { url: 'http://customers.apitest.lan/', value: 'listCustomer' },
     { url: 'http://customers.apitest.lan/', value: 'createCustomer' },
