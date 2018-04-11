@@ -12,6 +12,7 @@ tags:
 - JSONstream Library
 - Open Source API Gateway and Kubernetes
 - How to orchestrate Kubernetes
+layout: post
 ---
 
 Express Gateway is [cloud native software](https://pivotal.io/cloud-native), meaning that it integrates easily with Kubernetes or any other container orchestration solution.
