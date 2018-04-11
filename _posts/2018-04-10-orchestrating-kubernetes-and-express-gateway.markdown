@@ -57,7 +57,8 @@ The end goal of our experiment is to make Express Gateway listen for specific ch
 
 In case you're not familiar with hypermedia APIs, [check out Glenn Block’s excellent talk.](https://www.youtube.com/watch?v=vp-Na5wKlig)
 
-Hands on code
+## Putting Express Gateway and Kubernetes to work
+
 Express Gateway does not offer a Kubernetes specific feature out of the box. However, we can extend it [using its plugin system](https://www.express-gateway.io/docs/plugins/plugin-development/). Now — we've already treated this topic in previous articles, so I'm not going to go a lot into details into [how to write a plugin](https://www.express-gateway.io/docs/plugins/plugin-development/).
 
 Let's start by [scaffolding a new plugin](https://www.express-gateway.io/docs/plugins/plugin-development/) and install a Kubernetes client for JavaScript. 
@@ -73,7 +74,7 @@ version: '1.9' });`
 
 This example has been written with the API Version 1.9. However, Kubernetes and the API are evolving rapidly.
 
-Note: You can also use `config.fromKubeConfig()`; that'll read your `kubectl` configuration file. This allows you to test your integration on a local installation such as `minikube` or any other Kubernetes cluster while making the development locally on your computer.
+**Note:** You can also use `config.fromKubeConfig()`; that'll read your `kubectl` configuration file. This allows you to test your integration on a local installation such as `minikube` or any other Kubernetes cluster while making the development locally on your computer.
 
 Now that we have a client, let's set it up to notify us when something is happening [to our deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/):
  `const namespace = client.apis.apps.v1.watch.namespaces('default'); // Change this with your target namespace
@@ -84,7 +85,7 @@ Now that we have a client, let's set it up to notify us when something is happen
 
   streams.forEach((stream) => stream.on('data', onStreamData));`
 
-Note we had to use JSONStream library to parse the stream returned by the watch endpoint to a JavaScript Object.
+**Note** we had to use JSONStream library to parse the stream returned by the watch endpoint to a JavaScript Object.
 
 Ultimately, we can define what we want to do when one of these actions are happening:
 
@@ -118,7 +119,7 @@ Where currentActions is an object where we keep track of the possible actions
   ]
 };`
 
-That gets then returned when the client is doing the first request to the /apiroot endpoint of our service:
+That gets then returned when the client is doing the first request to the `/apiroot` endpoint of our service:
 
 `app.get('/apiroot', (req, res) => res.json({
    url: '/',
