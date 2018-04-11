@@ -121,8 +121,9 @@ Where currentActions is an object where we keep track of the possible actions
 That gets then returned when the client is doing the first request to the /apiroot endpoint of our service:
 
 `app.get('/apiroot', (req, res) => res.json({
-  url: '/',
-  actions: [...currentActions.customers, ...currentActions.invoices]
+   url: '/',
+   actions[
+...currentActions.customers,...currentActions.invoices]
 }));`
 
 ## Moving On
