@@ -122,7 +122,7 @@ That gets then returned when the client is doing the first request to the /apiro
 
 `app.get('/apiroot', (req, res) => res.json({
   url: '/',
-  actions: [...currentActions.customers, ...currentActions.invoices]
+  actions: [...currentActions.customers,...currentActions.invoices]
 }));`
 
 Moving On
