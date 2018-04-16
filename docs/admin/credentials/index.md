@@ -130,7 +130,7 @@ Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` 
 ```
 
 ### Activate/Deactivate Credential
-##### Request: `PUT /credential/{type}/{credentialId}/status`
+##### Request: `PUT /credentials/{type}/{credentialId}/status`
 ```json
 {
   "status": true  // use false to deactivate
