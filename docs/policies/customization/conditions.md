@@ -64,7 +64,7 @@ Matches if the request's path matches the given regular expression parameter.
 ```yml
   condition:
     name: pathMatch
-    path: "/foo(/bar)?"
+    pattern: "/foo(/bar)?"
 ```
 
 ### method
