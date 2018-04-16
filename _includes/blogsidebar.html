@@ -23,30 +23,30 @@
 {% endfor %}
 <!-- year tests -->
 <aside class="blog-sidebar">
+  <div class="section-container">
+    <section>
+      <h5>Posts by Category</h5>
+      <ul class="category-list">
+        {% for ct in cats %}
+        <li><a href="{{ site.baseurl}}/blog/{{ ct | slugify }}" class="sidebarnav" > {{ ct }} </a></li>
+        {% endfor %}
+      </ul>
+    </section>
 
-  <section>
-    <h5>Posts by Category</h5>
-    <ul class="category-list">
-      {% for ct in cats %}
-      <li><a href="{{ site.baseurl}}/blog/{{ ct | slugify }}" class="sidebarnav" > {{ ct }} </a></li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section>
-    <h5>Posts by date</h5>
-    <ul>
-      {% assign counter = 0 %}
-{% for post in site.posts %}
-{% assign thisyear = post.date | date: "%B %Y" %}
-{% assign prevyear = post.previous.date | date: "%B %Y" %}
-{% assign counter = counter | plus: 1 %}
-{% if thisyear != prevyear %}
-  <li><a href="{{ site.baseurl }}/blog/{{ post.date | date:"%Y/%m" }}" class="sidebarnav">{{ thisyear }} ({{ counter }})</a></li>
-  {% assign counter = 0 %}
-{% endif %}
-{% endfor %}
-    </ul>
-  </section>
-
+    <section>
+      <h5>Posts by date</h5>
+      <ul>
+        {% assign counter = 0 %}
+  {% for post in site.posts %}
+  {% assign thisyear = post.date | date: "%B %Y" %}
+  {% assign prevyear = post.previous.date | date: "%B %Y" %}
+  {% assign counter = counter | plus: 1 %}
+  {% if thisyear != prevyear %}
+    <li><a href="{{ site.baseurl }}/blog/{{ post.date | date:"%Y/%m" }}" class="sidebarnav">{{ thisyear }} ({{ counter }})</a></li>
+    {% assign counter = 0 %}
+  {% endif %}
+  {% endfor %}
+      </ul>
+    </section>
+  </div>
 </aside>
