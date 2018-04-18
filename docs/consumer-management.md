@@ -97,13 +97,13 @@ in order to handle the new credential. You can modify the existing properties, t
 
 We are working on this in order to plug your own credential type.
 
-#### Accessing consumer information from a service enpoint
+#### Accessing consumer information from a service endpoint
 
 Express Gateway will add the `eg-consumer-id` header to the proxied requests based on the authenticated user. In case
 there's none, its value will be `anonymous`. Using that ID, your service can query the [Admin API][admin] to retrieve
-more informations.
+more information.
 
-In case you want to downstream more informations, you can put a [headers][headers] policy just after the authentication
+In case you want to downstream more information, you can put a [headers][headers] policy just after the authentication
 steps of your pipeline.
 
 #### Customizing the models
