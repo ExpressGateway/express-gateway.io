@@ -97,6 +97,15 @@ in order to handle the new credential. You can modify the existing properties, t
 
 We are working on this in order to plug your own credential type.
 
+#### Accessing consumer information from a service endpoint
+
+Express Gateway will add the `eg-consumer-id` header to the proxied requests based on the authenticated user. In case
+there's none, its value will be `anonymous`. Using that ID, your service can query the [Admin API][admin] to retrieve
+more information.
+
+In case you want to downstream more information, you can put a [headers][headers] policy just after the authentication
+steps of your pipeline.
+
 #### Customizing the models
 
 Model properties can be introduced or removed. The full [JSON Schema][json-schema] specification is supported, so you
@@ -123,6 +132,7 @@ References:
 
 [cli]: {{ site.baseurl }}{% link docs/cli/index.md %}
 [admin]: {{ site.baseurl }}{% link docs/admin/index.md %}
+[headers]: {{ site.baseurl }}{% link docs/policies/headers.md %}
 [json-schema]: http://json-schema.org/
 [dependencies]: http://json-schema.org/latest/json-schema-validation.html#rfc.section.6.5.7
 [required]: http://json-schema.org/latest/json-schema-validation.html#rfc.section.6.5.3
