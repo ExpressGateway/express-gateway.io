@@ -5,10 +5,15 @@ layout: page
 <section class="blog wrapper">
   <!-- This loops through the paginated posts -->
   <div class="article-list">
+    <p class="algoliaLv0">Blog</p>
     <article class="post">
-      <h1>{{ page.title }}</h1>
+      <h1 class="algoliaLv1">{{ page.title }}</h1>
       <section class="post-meta">
-        <p>Posted by <span>{{ page.author }}</span> on <span> {{ page.date | date: "%B %-d, %Y" }}</span> in <span>{{ page.categories | array_to_sentence_string }}</span></p>
+        <p>Posted by
+          <span>{{ page.author }}</span> on
+          <span> {{ page.date | date: "%B %-d, %Y" }}</span> in
+          <span>{{ page.categories | array_to_sentence_string }}</span>
+        </p>
       </section>
       {{ content }}
     </article>
