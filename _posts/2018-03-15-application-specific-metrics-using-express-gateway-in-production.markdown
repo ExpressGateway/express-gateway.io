@@ -12,6 +12,7 @@ tags:
 - JSON Schema
 - Admin API
 layout: post
+author: Vincenzo Chianese
 ---
 
 As a follow up to [our last post on how you can get started](https://www.express-gateway.io/application-specific-metrics-using-express-gateway/) with application specific metrics using Express Gateway, we'd love to show you a real time example that you can use. By the end of this post, you'll have everything you need to start building your own plugins and getting metrics on information you care about.
@@ -119,7 +120,7 @@ module.exports = {
             default: 'eg-consumer-id'
           }
         }, required: ['consumerIdHeaderName']
-      },      
+      },
       policy: ({ consumerIdHeaderName }) => (req, res, next) => {
         // policy code
       }
@@ -133,7 +134,7 @@ Thanks to this small addition, the Gateway will validate the provided parameters
 
 ## Moving On
 
-Now that you've gotten a first hand look at getting application specific metrics using Express Gateway with a easy-to-follow example, it's time to go build it! 
+Now that you've gotten a first hand look at getting application specific metrics using Express Gateway with a easy-to-follow example, it's time to go build it!
 
 ## More Resources
 

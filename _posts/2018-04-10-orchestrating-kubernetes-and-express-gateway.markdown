@@ -13,6 +13,7 @@ tags:
 - Express.js
 - JavaScript Object
 layout: post
+author: Vincenzo Chianese
 ---
 
 Express Gateway is [cloud native software](https://pivotal.io/cloud-native), meaning that it integrates easily with Kubernetes or any other container orchestration solution.
@@ -33,7 +34,7 @@ The general accepted solution is to **handle the errors accordingly** and show *
 
 However, there's another approach that might be worth exploring:
 * container orchestrator notifies a subscriber that a particular service is down
-* any subscriber to such information could then react to this news by modifying the way the API is offered to the clients 
+* any subscriber to such information could then react to this news by modifying the way the API is offered to the clients
 
 In this proactive scenario, the client would be smart enough to understand the availability of API services on which it depends.
 
@@ -61,7 +62,7 @@ In case you're not familiar with hypermedia APIs, [check out Glenn Block’s exc
 
 Express Gateway does not offer a Kubernetes specific feature out of the box. However, we can extend it [using its plugin system](https://www.express-gateway.io/docs/plugins/plugin-development/). Now — we've already treated this topic in previous articles, so I'm not going to go a lot into details into [how to write a plugin](https://www.express-gateway.io/docs/plugins/plugin-development/).
 
-Let's start by [scaffolding a new plugin](https://www.express-gateway.io/docs/plugins/plugin-development/) and install a Kubernetes client for JavaScript. 
+Let's start by [scaffolding a new plugin](https://www.express-gateway.io/docs/plugins/plugin-development/) and install a Kubernetes client for JavaScript.
 
 There are so many choices on how to get this done. So, today we're going to go with the one provided by [the GoDaddy team](https://github.com/godaddy/kubernetes-client).
 
@@ -69,7 +70,7 @@ There are so many choices on how to get this done. So, today we're going to go w
 
 Connecting to the Kubernetes API from a pod is easy. Kubernetes mounts the necessary certificates in the container in well-known directories and injects the API Url/Port as environment variables. Additionally, the client we just installed is able to grab this data and use it to create a working client with a single line:
 
-`const client = new Client({ config: config.getInCluster(), 
+`const client = new Client({ config: config.getInCluster(),
 version: '1.9' });`
 
 This example has been written with the API Version 1.9. However, Kubernetes and the API are evolving rapidly.
@@ -128,7 +129,7 @@ app.get('/apiroot', (req, res) => res.json({
 ```
 
 ## Moving On
-The end goal of our experiment is to make Express Gateway listen for specific changes we're interested in and modify the Gateway configuration accordingly. In case you're interested the final result would look like, you can [see it in action here](https://youtu.be/004Uhxo0xd4). Additionally, the [source code is available on Github if you’d like to give it a try](https://github.com/XVincentX/apigateway-playground/tree/microservice-gateway-hypermedia-kubernetes). 
+The end goal of our experiment is to make Express Gateway listen for specific changes we're interested in and modify the Gateway configuration accordingly. In case you're interested the final result would look like, you can [see it in action here](https://youtu.be/004Uhxo0xd4). Additionally, the [source code is available on Github if you’d like to give it a try](https://github.com/XVincentX/apigateway-playground/tree/microservice-gateway-hypermedia-kubernetes).
 
 ## More Resources
 

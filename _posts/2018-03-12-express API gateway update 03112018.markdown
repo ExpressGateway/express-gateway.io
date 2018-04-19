@@ -12,6 +12,7 @@ tags:
 - API Gateway
 - Redis
 layout: post
+author: Dellaena Maliwzesky
 ---
 
 It's true, we've slowed down on Express Gateway. Why? We've been pretty busy supporting developers deploying instances of Express Gateway on production environments. We are thrilled at this opportunity, but like any other open source project we've found a few edge cases. So, where to go from here?

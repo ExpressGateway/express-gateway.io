@@ -10,9 +10,10 @@ tags:
 - TLS authentication and IoT
 - TLS authentication and Mobile banking
 layout: post
+author: Vincenzo Chianese
 ---
 
-Express Gateway supports various client authentication methods such as [key auth](https://www.express-gateway.io/docs/policies/key-authorization/),[basic auth](https://www.express-gateway.io/docs/policies/basic-authorization/),[jwt](https://www.express-gateway.io/docs/policies/jwt/). Based on developer community feedback, we’ve included support to Transport Layer Security (TLS) Client Authentication in the latest 1.8.0 release. 
+Express Gateway supports various client authentication methods such as [key auth](https://www.express-gateway.io/docs/policies/key-authorization/),[basic auth](https://www.express-gateway.io/docs/policies/basic-authorization/),[jwt](https://www.express-gateway.io/docs/policies/jwt/). Based on developer community feedback, we’ve included support to Transport Layer Security (TLS) Client Authentication in the latest 1.8.0 release.
 
 So, we can code up some new and interesting scenarios. Let's dig in!
 
@@ -32,7 +33,7 @@ In our second example, we’ll use a mobile banking app where the bank wants to 
 
 ## Getting Started with TLS authentication and Express Gateway
 
-In order to set up TLS client authentication with Express Gateway,make sure it's listening on a secure connection rather than the usual `http`. 
+In order to set up TLS client authentication with Express Gateway,make sure it's listening on a secure connection rather than the usual `http`.
 To do that, let's generate a set of certificates:
 
 * Generate a new CA certificate, that'll be the authority signing our client certificates:
@@ -108,9 +109,9 @@ connection: close
 
 ## Moving On
 
-In this article we have discovered TLS Authentication as an alternative method to authenticate a client that’s trying to connect to our system. 
+In this article we have discovered TLS Authentication as an alternative method to authenticate a client that’s trying to connect to our system.
 
-You may be thinking - don’t we have API keys for that? 
+You may be thinking - don’t we have API keys for that?
 
 Client certificates offer a layer of security that API keys cannot provide. If an API key gets compromised mid-connection, it can be reused to fire its own valid, trusted requests to the backend infrastructure. However; the private key of the client certificate is used to create a digital signature in every TLS connection. So even if the certificate is sniffed mid-connection, new requests can’t be instantiated with it. This might be an important requirement for banking applications and IoT devices.
 
