@@ -17,6 +17,7 @@ tags:
 - How to orchestrate external services
 - What is Prometheus Text Based Wire Format
 layout: post
+author: Vincenzo Chianese
 ---
 
 Unless you're building a proof of concept or an application that's not aiming to reach the production, you definitely want to add monitoring and metrics to your system. In this installment we're going to look how Express-Gateway can help you to add application specific metrics and expose them through an HTTP endpoint that can be queried by an external service, such as Prometheus.
@@ -48,7 +49,7 @@ A plugin is nothing more than a Javascript object that you export. It's shape is
 ```
 module.exports = {
   init: function (pluginContext) {
-  
+
   },
 }
 ```
@@ -171,13 +172,3 @@ Then we export a new policy which will register an event handler once the respon
 ## Moving On
 
 Metrics are hard. In a microservices context, it's even harder. In our next post, we'll put it all together in production with a real-time example and sample data so stay tuned!
-
-## More Resources
-
-* Learn more about upcoming features and releases by checking out the **[Express Gateway Roadmap](https://github.com/ExpressGateway/express-gateway/milestones)**
-
-* Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
-
-* **[Follow along on](https://twitter.com/express_gateway)** Twitter
-
-* Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!

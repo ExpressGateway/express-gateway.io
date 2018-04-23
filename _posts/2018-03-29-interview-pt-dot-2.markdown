@@ -12,6 +12,7 @@ tags:
 - Bob Rhubart
 - Archbeat Podcast
 layout: post
+author: Dellaena Maliwzesky
 ---
 
 In partnership with Auth0, we joined thousands of developers, architects and technical executives for Oracle Cloud conference in Chicago. They say that the Oracle Community is built by developers for developers. That is definitely something we can appreciate. Vincenzo Chianese, engineer for LunchBadger (co-sponsor of Express Gateway), shared an expert workshop in partnership with Auth0 and had the chance for a live interview. Here are more excerpts from that interview.
@@ -35,14 +36,3 @@ Before giving a workshop, we got the chance to take part in a live interview wit
 As part of our conference participation, we shared the spotlight with one of our favorite community partners, Auth0. We also collaborated on a [popular blog post about the important role of API Gateways and Microservices](https://auth0.com/blog/apigateway-microservices-superglue/). Please show some love for the amazing Auth0 team and their commitment to giving back to the developer community.
 
 That's a wrap! Big thanks to the developer community for the ongoing support with this open source project. Share our expertise, learnings and growth is in our blood. If you're currently using Express Gateway, we'd love to learn more about it. if you have questions or would like to join the community of other developers like you, hit us up on **[our Gitter channel.](https://gitter.im/ExpressGateway/express-gateway)**
-
-
-## More Resources
-
-* Learn more about upcoming features and releases by checking out the **[Express Gateway Roadmap](https://github.com/ExpressGateway/express-gateway/milestones)**
-
-* Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
-
-* **[Follow along on](https://twitter.com/express_gateway)** Twitter
-
-* Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!

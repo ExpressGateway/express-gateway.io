@@ -12,6 +12,7 @@ tags:
 - API Gateway
 - Redis
 layout: post
+author: Dellaena Maliwzesky
 ---
 
 It's true, we've slowed down on Express Gateway. Why? We've been pretty busy supporting developers deploying instances of Express Gateway on production environments. We are thrilled at this opportunity, but like any other open source project we've found a few edge cases. So, where to go from here?
@@ -43,13 +44,3 @@ We can't wait to get your feedback on the changes from this release and if you h
 ### Reminder: In Production Yet?
 
 If you're currently using Express Gateway in production - [hit us up](mailto:info@express-gateway.io)! We'd love to understand more about your use case or project and see where we could help out.
-
-## More Resources
-
-* Check out the **[Express Gateway roadmap](https://github.com/ExpressGateway/express-gateway/milestones)**
-
-* Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
-
-* **[Follow along on](https://twitter.com/express_gateway)** Twitter
-
-* Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!
