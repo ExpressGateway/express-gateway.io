@@ -1,6 +1,8 @@
 ---
-layout: page
+  layout: page
 ---
+
+{% capture more_resources %}{% include more_resources.md %}{% endcapture %}
 
 <section class="blog wrapper">
   <!-- This loops through the paginated posts -->
@@ -15,7 +17,7 @@ layout: page
           <span>{{ page.categories | array_to_sentence_string }}</span>
         </p>
       </section>
-      {{ content }}
+      {{ content }} {{ more_resources | markdownify }}
     </article>
   </div>
   {% include blogsidebar.html %}
