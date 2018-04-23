@@ -12,7 +12,7 @@ tags:
 - Docker
 - Docker images
 layout: post
-author: Dellaena Maliwzesky
+author: Al Tsang
 ---
 
 We've come a long way! Express Gateway is becoming more popular every single day thanks to our amazing community of developers, gazers and contributors.

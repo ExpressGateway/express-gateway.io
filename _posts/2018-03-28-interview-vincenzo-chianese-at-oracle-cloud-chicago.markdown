@@ -12,7 +12,7 @@ tags:
 - Auth0
 - API Gateway
 layout: post
-author: Dellaena Maliwzesky
+author: Al Tsang
 ---
 
 We joined thousands of developers, architects and technical executives for Oracle Cloud conference in Chicago. During the trip, Vincenzo Chianese, engineer for LunchBadger (co-sponsor of Express Gateway), shared an expert workshop in partnership with Auth0 and had the chance for a live interview.

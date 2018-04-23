@@ -6,7 +6,7 @@ tags:
 - Docker Yaml
 - Docker
 layout: post
-author: Dellaena Maliwzesky
+author: Al Tsang
 ---
 
 We love open source and we especially love feedback from our community. It’s not even February yet, and we’ve been busy jamming out the features developers, like you, have been requesting including Node.js 9, JSON Schemas and more. If you’ve tried out Express Gateway, you’re in the right place because this next feature in Express Gateway 1.7.0 is small, but mighty. Join us in exploring environment variables in both configuration stacks.

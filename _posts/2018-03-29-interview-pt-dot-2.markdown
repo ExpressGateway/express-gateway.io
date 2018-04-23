@@ -12,7 +12,7 @@ tags:
 - Bob Rhubart
 - Archbeat Podcast
 layout: post
-author: Dellaena Maliwzesky
+author: Al Tsang
 ---
 
 In partnership with Auth0, we joined thousands of developers, architects and technical executives for Oracle Cloud conference in Chicago. They say that the Oracle Community is built by developers for developers. That is definitely something we can appreciate. Vincenzo Chianese, engineer for LunchBadger (co-sponsor of Express Gateway), shared an expert workshop in partnership with Auth0 and had the chance for a live interview. Here are more excerpts from that interview.
