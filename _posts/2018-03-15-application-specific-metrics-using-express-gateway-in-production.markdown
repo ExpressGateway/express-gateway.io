@@ -135,13 +135,3 @@ Thanks to this small addition, the Gateway will validate the provided parameters
 ## Moving On
 
 Now that you've gotten a first hand look at getting application specific metrics using Express Gateway with a easy-to-follow example, it's time to go build it!
-
-## More Resources
-
-* Learn more about upcoming features and releases by checking out the **[Express Gateway Roadmap](https://github.com/ExpressGateway/express-gateway/milestones)**
-
-* Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
-
-* **[Follow along on](https://twitter.com/express_gateway)** Twitter
-
-* Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!

@@ -38,14 +38,3 @@ Before giving a workshop, we got the chance to take part in a live interview, li
 
 
 Thanks,again, for the ongoing support with this exciting open source project. We're excited to share our expertise, and learn more about what you're building. As co-sponsors of Express Gateway, we work closely with the developer community to help shape this project. So if you've been hard at work building, hit us up on **[our Gitter channel.](https://gitter.im/ExpressGateway/express-gateway)**
-
-
-## More Resources
-
-* Learn more about upcoming features and releases by checking out the **[Express Gateway Roadmap](https://github.com/ExpressGateway/express-gateway/milestones)**
-
-* Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
-
-* **[Follow along on](https://twitter.com/express_gateway)** Twitter
-
-* Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!

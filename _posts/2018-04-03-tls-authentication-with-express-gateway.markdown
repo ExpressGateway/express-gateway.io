@@ -114,13 +114,3 @@ In this article we have discovered TLS Authentication as an alternative method t
 You may be thinking - don’t we have API keys for that?
 
 Client certificates offer a layer of security that API keys cannot provide. If an API key gets compromised mid-connection, it can be reused to fire its own valid, trusted requests to the backend infrastructure. However; the private key of the client certificate is used to create a digital signature in every TLS connection. So even if the certificate is sniffed mid-connection, new requests can’t be instantiated with it. This might be an important requirement for banking applications and IoT devices.
-
-## More Resources
-
-* Learn more about upcoming features and releases by checking out the **[Express Gateway Roadmap](https://github.com/ExpressGateway/express-gateway/milestones)**
-
-* Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
-
-* **[Follow along on](https://twitter.com/express_gateway)** Twitter
-
-* Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!

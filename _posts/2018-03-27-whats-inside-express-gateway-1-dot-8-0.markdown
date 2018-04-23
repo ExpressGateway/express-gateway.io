@@ -45,13 +45,3 @@ We wanted to get a jump on spring cleaning, which means a little bit of updating
 One of the last items on our to-do list was actually pretty important. We've fixed the internal error you receive when a JSON Schema registration fails in the system. Now it's correctly propagated back to the user so it's easier to understand what it happening. In addition to this fix, we're excited to learn that more community members are [joining out Gitter channel](https://gitter.im/ExpressGateway/express-gateway), engaging and building production environments with Express Gateway.
 
 In addition to all of the other [amazing pieces of this open source project](https://www.express-gateway.io/blog/), we rely on your feedback to help set the roadmap.[ So, even if you're not ready to contribute - upvote your favorite features!](https://feathub.com/ExpressGateway/express-gateway)
-
-## More Resources
-
-* Learn more about upcoming features and releases by checking out the **[Express Gateway Roadmap](https://github.com/ExpressGateway/express-gateway/milestones)**
-
-* Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
-
-* **[Follow along on](https://twitter.com/express_gateway)** Twitter
-
-* Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!

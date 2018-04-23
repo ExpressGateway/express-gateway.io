@@ -130,13 +130,3 @@ app.get('/apiroot', (req, res) => res.json({
 
 ## Moving On
 The end goal of our experiment is to make Express Gateway listen for specific changes we're interested in and modify the Gateway configuration accordingly. In case you're interested the final result would look like, you can [see it in action here](https://youtu.be/004Uhxo0xd4). Additionally, the [source code is available on Github if you’d like to give it a try](https://github.com/XVincentX/apigateway-playground/tree/microservice-gateway-hypermedia-kubernetes).
-
-## More Resources
-
-* Learn more about upcoming features and releases by checking out the **[Express Gateway Roadmap](https://github.com/ExpressGateway/express-gateway/milestones)**
-
-* Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
-
-* **[Follow along on](https://twitter.com/express_gateway)** Twitter
-
-* Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!

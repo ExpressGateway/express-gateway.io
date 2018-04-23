@@ -82,13 +82,3 @@ TLS Authentication is an alternative method to authenticate a client that’s tr
 Aren't API keys enough?
 
 Client certificates offer a layer of security that API keys cannot provide. If an API key gets compromised mid-connection, it can be reused to fire its own valid, trusted requests to the backend infrastructure. Have questions? If you're building the next awesome IoT or mobile banking app with TLS Authentication, we'd love to  learn more. Join us on the [Developer Community Gitter Channel](https://gitter.im/ExpressGateway/express-gateway) and share what you're building.
-
-## More Resources
-
-* Learn more about upcoming features and releases by checking out the **[Express Gateway Roadmap](https://github.com/ExpressGateway/express-gateway/milestones)**
-
-* Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
-
-* **[Follow along on](https://twitter.com/express_gateway)** Twitter
-
-* Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!

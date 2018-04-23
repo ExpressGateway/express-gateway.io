@@ -172,13 +172,3 @@ Then we export a new policy which will register an event handler once the respon
 ## Moving On
 
 Metrics are hard. In a microservices context, it's even harder. In our next post, we'll put it all together in production with a real-time example and sample data so stay tuned!
-
-## More Resources
-
-* Learn more about upcoming features and releases by checking out the **[Express Gateway Roadmap](https://github.com/ExpressGateway/express-gateway/milestones)**
-
-* Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
-
-* **[Follow along on](https://twitter.com/express_gateway)** Twitter
-
-* Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!

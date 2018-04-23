@@ -44,13 +44,3 @@ We would like to recommend their [Ambassador program](https://auth0.com/ambassad
 ## Moving On
 
 Conversations start with great communities and we're excited by the global network of developers who have stepped up to support this project. It's time to go build something great! We'd love to know more about how you're putting this open source, API Gateway to work. So if you've been hard at work building, hit us up on **[our Gitter channel.](https://gitter.im/ExpressGateway/express-gateway)**
-
-## More Resources
-
-* Learn more about upcoming features and releases by checking out the **[Express Gateway Roadmap](https://github.com/ExpressGateway/express-gateway/milestones)**
-
-* Join the **[Express Gateway Newsletter](https://eepurl.com/cVOqd5)** update list
-
-* **[Follow along on](https://twitter.com/express_gateway)** Twitter
-
-* Have Questions? Head over to **[our Gitter channel](https://gitter.im/ExpressGateway/express-gateway)** and hit us up!
