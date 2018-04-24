@@ -85,7 +85,7 @@ There are a number of solutions out there on the web. Worth mentioning are [Isti
 
 They all provide a set of common and unique features, but they all share the basic implementation principle.
 
-The service mesh is typically implemented as an array of lightweight network proxies that are deployed alongside application code, without the application needing to be aware. This proxy is then responsible of routing the request to the right service instance, making sure to retry the request for a number of times if it fails, but also ensuring limited timeouts, enablig circuit breaker when it makes sense and so on.
+The service mesh is typically implemented as an array of lightweight network proxies that are deployed alongside application code, without the application needing to be aware. This proxy is then responsible for routing the request to the right service instance, making sure to retry the request for a number of times if it fails. It also ensures limited timeouts, enabling circuit breaker when it makes sense and so on.
 
 ## What about Kubernetes?
 
@@ -95,7 +95,7 @@ It turns out every node in a Kubernetes cluster runs a `kube-proxy`. `kube-proxy
 
 Moreover, a Kubernetes service has as well an associated array of endpoints, representing all the pods associated with that service.
 
-Basically Kubernetes is offering the right primitives to implement a service mesh solution and basic service discovery mechanism — but we still need an high level solution to handle all the use cases accordingly.
+Basically Kubernetes is offering the right primitives to implement a service mesh solution and basic service discovery mechanism — but we still need a higher level solution to handle all the use cases accordingly.
 
 [Istio](https://github.com/istio/istio), for example, is leveraging low level primitives to offer a service mesh solution in your cluster.
 
