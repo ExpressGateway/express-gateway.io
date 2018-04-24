@@ -103,4 +103,11 @@ Basically Kubernetes is offering the right primitives to implement a service mes
 
 We've seen in previous articles how to put Express Gateway as a `DaemonSet` in Kubernetes in order to put an edge gate in the cluster.
 
-However, Express Gateway as a lightweight solution can also be deployed per each service using a sidecar container (this pattern is usually called microgateway) so you can handle different concerns at HTTP level rather than TCP/UPD level.
+Express Gateway can also be deployed per each service using a sidecar container (this pattern is usually called microgateway) so you can handle different concerns at HTTP level rather than TCP/UPD level.  
+
+As you may already know, API gateways protect, enrich, and control access to API services. Developers can use API Gateways to architect applications in a way that provides clear separation between the business and security logic. 
+
+So, think of it this way: while API Gateways expose API/Edge services, a service mesh serves an inter-service communication infrastructure with no real business notion of your solution. 
+
+API Gateways like Express Gateway can serve to provide management of your APIs with inter-service communication capabilities of an API Gateway or developers can also use an API Gateway to can call downstream services via service mesh by sending application network functions to service mesh. 
+
