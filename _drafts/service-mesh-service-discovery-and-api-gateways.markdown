@@ -105,9 +105,13 @@ We've seen in previous articles how to put Express Gateway as a `DaemonSet` in K
 
 Express Gateway can also be deployed per each service using a sidecar container (this pattern is usually called microgateway) so you can handle different concerns at HTTP level rather than TCP/UPD level.  
 
+**What does this actually mean?**
+
 As you may already know, API gateways protect, enrich, and control access to API services. Developers can use API Gateways to architect applications in a way that provides clear separation between the business and security logic. 
 
 So, think of it this way: while API Gateways expose API/Edge services, a service mesh serves an inter-service communication infrastructure with no real business notion of your solution. 
 
-API Gateways like Express Gateway can serve to provide management of your APIs with inter-service communication capabilities of an API Gateway or developers can also use an API Gateway to can call downstream services via service mesh by sending application network functions to service mesh. 
+There are some overlapping capabilities. However; the real important thing to remember is that API Gateways, like Express Gateway, can serve to provide management of your APIs with inter-service communication of an API Gateway or it's also possible to use an API Gateway to can call downstream services via service mesh by sending application network functions to service mesh. 
 
+## Moving On
+If you're already working with service mesh solutions and have questions about how you can put an API Gateway to work, [hit us up on our Gitter channel](https://gitter.im/ExpressGateway/express-gateway). We are always very interested to learn more about use cases for open source API Gateways. 
