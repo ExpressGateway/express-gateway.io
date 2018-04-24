@@ -61,11 +61,13 @@ If before all you needed was a single line of code to resolve hostnames, now you
 
 ## A solution: client libraries
 
-The first organisations building systems based on microservices decided to handle all this added complexity directly in the service's code. This means that the responsibility of dealing with the requirements listed above was left to the engineer writing the services.
+The first organizations building systems based on microservices decided to handle all this added complexity directly in the service's code. This means that the responsibility of dealing with the requirements listed above was left to the engineer writing the services.
 
 The following step was to tear out this code into a shared client library that could be used across multiple services.
 
-While this can solve the problem, it is very easy to mess it up. Think about making sure that all the services have the latest client version installed: this requires a new deployment of each single service. Think also to the fact you might need to write the same client multiple times, because your stack has multiple programming languages.
+While this can solve the problem, it is **very easy to mess it up**. 
+
+Think about making sure that all the services have the latest client version installed: this requires a new deployment of each single service. Think also to the fact you might need to write the same client multiple times, because your stack has multiple programming languages.
 
 It would be highly desirable to extract the microservices features required by massively distributed services into an underlying platform we don't have to care about.
 
