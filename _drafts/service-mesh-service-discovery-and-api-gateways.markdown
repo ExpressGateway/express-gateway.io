@@ -77,13 +77,13 @@ Similarly to what we saw in the networking stack, it would be highly desirable t
 
 ## What is a Service Mesh solution?
 
-A service mesh solution is a dedicated infrastructure layer for handling service-to-service communication, responsible for the reliable delivery of requests through the complex topology of services that comprise a cloud application.
+A service mesh solution is a dedicated infrastructure layer for handling service-to-service communication and is responsible for the reliable delivery of requests through the complex topology of services that comprise a cloud application.
 
-A service mesh solution typically dynamic service discovery, load balancing, TLS termination, HTTP/2 & gRPC proxying, circuit breakers, health checks, staged rollouts with %-based traffic split, fault injection, and rich metrics.
+A service mesh solution is typically comprised of: dynamic service discovery, load balancing, TLS termination, HTTP/2 & gRPC proxying, circuit breakers, health checks, staged rollouts with %-based traffic split, fault injection, and rich metrics.
 
 There are a number of solutions out there on the web. Worth mentioning are [Istio](https://istio.io), [Conduit](https://conduit.io/) and [Linkerd](https://linkerd.io/)
 
-They all provide a set of common and unique features, but they all share the basic implementation principle.
+They all provide a set of common and unique features, but **they all share the basic implementation principle**.
 
 The service mesh is typically implemented as an array of lightweight network proxies that are deployed alongside application code, without the application needing to be aware. This proxy is then responsible for routing the request to the right service instance, making sure to retry the request for a number of times if it fails. It also ensures limited timeouts, enabling circuit breaker when it makes sense and so on.
 
