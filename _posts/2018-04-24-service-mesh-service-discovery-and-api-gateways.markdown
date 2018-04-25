@@ -61,7 +61,7 @@ If before all you needed was a single line of code to resolve hostnames, now you
 
 ## A solution: client libraries
 
-The first organizations building systems based on microservices decided to handle all this added complexity directly in the service's code. This means that the responsibility of dealing with the requirements listed above was left to the engineer writing the services.
+Some of the first organizations that built systems based on microservices decided to handle all this added complexity directly in the service's code. This means that the responsibility of dealing with the requirements listed above was left to the engineer writing the services.
 
 The following step was to tear out this code into a shared client library that could be used across multiple services.
 
