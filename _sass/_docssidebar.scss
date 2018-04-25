@@ -100,6 +100,18 @@ overflow-y: scroll;
       width: 78%;
       pointer-events: all;
     }
+    input {
+      font-size: $font-size-18;
+      border: 1px solid #dadada;
+      height: 30px;
+      border-radius: 6px;
+      padding-left: 10px;
+      background-image: url('../img/mag-glass.svg');
+      background-repeat: no-repeat;
+      background-size: 32px 22px;
+      background-position-y: center;
+      background-position-x: right;
+    }
     a {
       text-decoration: none;
       font-size: $font-size-18;
