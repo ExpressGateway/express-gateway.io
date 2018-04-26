@@ -46,15 +46,6 @@
       height: $header-main-height;
       font-weight: 200;
 
-      .search-button-wrapper {
-        position: relative;
-
-        .algolia-autocomplete {
-          position: absolute !important;
-          top: 40px;
-        }
-      }
-
       .search-icon {
         cursor: pointer;
         user-select: none;
@@ -63,28 +54,20 @@
         background-image: url('../img/mag-glass.svg');
       }
 
-      #search-check-box {
-        display: none;
-      }
-
       .search-text-box {
-        display: none;
+        font-size: 16px;
         border-radius: 10px;
         border: 1px solid #0E8696;
-        width: 220px;
+        width: 95%;
         height: 20px;
         padding: 5px 10px;
         user-select: none;
-      }
-
-      input[type=checkbox]:checked + span > .search-text-box {
-        display: initial;
+        display: none;
       }
 
       .nav-element {
         display: flex;
         align-items: center;
-        position: relative;
         font-size: $font-size-16;
 
         a {
@@ -102,6 +85,12 @@
           @include size(smalltomedium) {
             margin-left: 10px;
           }
+        }
+
+        &.search-text-wrapper {
+          position: relative;
+          flex-grow: 7;
+          display: none;
         }
 
         &.search-button {
@@ -141,11 +130,7 @@
 }
 
 .hero {
-  background: #32a5c1; /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #32a5c1 0%, #0f8696 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #32a5c1 0%,#0f8696 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #32a5c1 0%,#0f8696 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32a5c1', endColorstr='#0f8696',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: linear-gradient(135deg, #32a5c1 0%,#0f8696 100%);
   text-align: center;
 
   h1 {
