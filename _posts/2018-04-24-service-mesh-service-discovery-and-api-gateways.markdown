@@ -12,6 +12,7 @@ tags:
 - service to service communication
 - What is an API Gateway
 layout: post
+author: Vincenzo Chianese
 ---
 
 We have seen through multiple articles how an API Gateway can help you in the difficult task of providing an uniform API regardless of the underlying set of microservices. However, we haven't been exploring another set of problems that arise in case you want to go with such architecture.
@@ -23,7 +24,7 @@ We have seen through multiple articles how an API Gateway can help you in the di
 
 Even in a monolithic application, you probably have some _service_ concepts, such as `User` service, `Invoicing` service and so on; they are basically isolated classes/libraries that live in the same codebase.
 
-Now — the way you make multiple services communicate is most likely through a *function call*. 
+Now — the way you make multiple services communicate is most likely through a *function call*.
 
 Suppose you receive a request to get all the invoices for a particular user: you have an API Gateway checking the authentication/authorization as well as routing the request to your application. The request then gets routed by your framework where the **Invoice** service will probably need to call the **User** service in order to get the user related informations. All this happened within your monolith boundary.
 
@@ -65,7 +66,7 @@ Some of the first organizations that built systems based on microservices decide
 
 The following step was to tear out this code into a shared client library that could be used across multiple services.
 
-While this can solve the problem, it is **very easy to mess it up**. 
+While this can solve the problem, it is **very easy to mess it up**.
 
 Think about making sure that all the services have the latest client version installed: this requires a new deployment of each single service. Think also to the fact you might need to write the same client multiple times, because your stack has multiple programming languages.
 
@@ -105,15 +106,15 @@ Basically Kubernetes is offering the right primitives to implement a service mes
 
 We've seen in previous articles how to put Express Gateway as a `DaemonSet` in Kubernetes in order to put an edge gate in the cluster.
 
-Express Gateway can also be deployed per each service using a sidecar container (this pattern is usually called microgateway) so you can handle different concerns at HTTP level rather than TCP/UPD level.  
+Express Gateway can also be deployed per each service using a sidecar container (this pattern is usually called microgateway) so you can handle different concerns at HTTP level rather than TCP/UPD level.
 
 **What does this actually mean?**
 
-As you may already know, API gateways protect, enrich, and control access to API services. Developers can use API Gateways to architect applications in a way that provides clear separation between the business and security logic. 
+As you may already know, API gateways protect, enrich, and control access to API services. Developers can use API Gateways to architect applications in a way that provides clear separation between the business and security logic.
 
-So, think of it this way: while API Gateways expose API/Edge services, a service mesh serves an inter-service communication infrastructure with no real business notion of your solution. 
+So, think of it this way: while API Gateways expose API/Edge services, a service mesh serves an inter-service communication infrastructure with no real business notion of your solution.
 
-There are some overlapping capabilities. However; the real important thing to remember is that API Gateways, like Express Gateway, can serve to provide management of your APIs with inter-service communication of an API Gateway or it's also possible to use an API Gateway to can call downstream services via service mesh by sending application network functions to service mesh. 
+There are some overlapping capabilities. However; the real important thing to remember is that API Gateways, like Express Gateway, can serve to provide management of your APIs with inter-service communication of an API Gateway or it's also possible to use an API Gateway to can call downstream services via service mesh by sending application network functions to service mesh.
 
 ## Moving On
-If you're already working with service mesh solutions and have questions about how you can put an API Gateway to work, [hit us up on our Gitter channel](https://gitter.im/ExpressGateway/express-gateway). We are always very interested to learn more about use cases for open source API Gateways. 
+If you're already working with service mesh solutions and have questions about how you can put an API Gateway to work, [hit us up on our Gitter channel](https://gitter.im/ExpressGateway/express-gateway). We are always very interested to learn more about use cases for open source API Gateways.
