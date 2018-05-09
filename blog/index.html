@@ -11,6 +11,7 @@ layout: page
       <li class="post-excerpt">
         <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
         <p class="author">
+          <span>by </span> <span>{{ post.author }}</span> <span> on</span>
           <span class="date">{{ post.date | date: '%A %B %d, %Y' }}</span>
         </p>
         <div class="content">
@@ -50,5 +51,5 @@ layout: page
 
   </div>
   {% include blogsidebar.html %}
-  
+
 </section>
