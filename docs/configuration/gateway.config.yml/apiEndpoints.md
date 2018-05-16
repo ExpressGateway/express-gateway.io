@@ -29,6 +29,17 @@ apiEndpoints:
     host: 'example.com'
     paths: /v2/*        # string or array of strings
 
+  example2:              # It is possible to provide an array of matching conditions in the same apiEndpoint
+    - host: 'example2.com'
+      paths: /v2/*
+      methods: ["GET", "OPTIONS"]
+      scopes: ["example2:read"]
+
+    - host: 'example2.com'
+      paths: /v2/*
+      methods: ["PUT", "POST", "PATCH", "DELETE"]
+      scopes: ["example2:write"]
+
 ```
 
 ### Options
