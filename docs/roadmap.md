@@ -6,7 +6,7 @@ doc-order: 31.0
 
 
 The Express Gateway roadmap consists of three parts:
-1. features request and feedback in [Express Gateway Feathub](http://feathub.com/ExpressGateway/express-gateway)
+1. features request and feedback in [Express Gateway Feathub](https://feathub.com/ExpressGateway/express-gateway)
 2. this document that captures all features under considered at the epic level
 3. the [Waffle.io task board](https://waffle.io/ExpressGateway/express-gateway) that the Express Gateway contributors use to prioritize feature for the next release
 
