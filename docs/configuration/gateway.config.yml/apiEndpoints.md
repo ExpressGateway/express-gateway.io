@@ -33,11 +33,12 @@ apiEndpoints:
 
 ### Options
 
-| Name     | Description                                         |
-|----------|-----------------------------------------------------|
-| `host`   | the hostname to accept requests on                  |
-| `paths`  | an array of paths                                   |
-| `scopes` | an array of scopes required to access such resource |
+| Name      | Description                                         |
+|-----------|-----------------------------------------------------|
+| `host`    | the hostname to accept requests on                  |
+| `paths`   | an array of paths                                   |
+| `methods` | an array of methods required to accept requests on  |
+| `scopes`  | an array of scopes required to access such resource |
 
 
 #### Host
@@ -46,6 +47,7 @@ The `host` value is a string that will be matched against the 'HOST' header of t
 ##### Examples:
 
 Any Domain and Path
+
 ```yaml
 apiEndpoints:
   help:
@@ -53,10 +55,11 @@ apiEndpoints:
     paths: /help
 ```
 
-Match: cdn.test.example.com/help, example.com/help, no HOST header
-404: cdn.test.example.com, example.com/admin
+Match: `cdn.test.example.com/help`, `example.com/help`, no `HOST` header
+404: `cdn.test.example.com`, `example.com/admin`
 
 One Domain with No Subdomains and Path
+
 ```yaml
 apiEndpoints:
   help:
@@ -64,10 +67,11 @@ apiEndpoints:
     paths: /help
 ```
 
-Match: example.com/help
-404: test.example.com/help, example.com
+Match: `example.com/help`
+404: `test.example.com/help`, `example.com`
 
 Any 1st Level Subdomain of One Domain and Path
+
 ```yaml
 apiEndpoints:
   help:
@@ -85,8 +89,8 @@ Exact String Match
 paths: /admin
 ```
 
-- match: /admin only
-- 404: /admin/bob; /admin/charlie/1; /staff
+- match: `/admin` only
+- 404: `/admin/bob`; `/admin/charlie/1`; `/staff`
 
 ---
 
@@ -95,8 +99,8 @@ Deep Level Match without Parent
 paths: /admin/*
 ```
 
-- match: /admin/bob; /admin/charlie/1
-- 404: /admin
+- match: `/admin/bob`; `/admin/charlie/1`
+- 404: `/admin`
 
 ---
 
@@ -105,8 +109,8 @@ Deep Level Match with Parent
 paths: ['/admin','/admin/*']
 ```
 
-- match: /admin; /admin/bob; /admin/charlie/1
-- 404: /staff
+- match: `/admin`; `/admin/bob`; `/admin/charlie/1`
+- 404: `/staff`
 
 ---
 
@@ -115,9 +119,9 @@ One Level Match without Parent with Variable Assignment
 paths: '/admin/:id'
 ```
 
-- match: /admin/bob; /admin/charlie
-- id: bob; charlie
-- 404: /admin; /staff
+- match: `/admin/bob`; `/admin/charlie`
+- id: `bob`; `charlie`
+- 404: `/admin`; `/staff`
 
 ---
 
@@ -137,13 +141,13 @@ Multi Multiple Level Sub Dir Match without Parent
 paths: ['/student/*', '/teacher/*','/admin/*']
 ```
 - match:
-      - /admin/... multi-level
-      - /student/... multi-level
-      - /teacher/... multi-level
+      - `/admin/…` multi-level
+      - `/student/…` multi-level
+      - `/teacher/…` multi-level
 - 404:
-      - /
-      - /admin; /teacher; /student
-      - /staff
+      - `/`
+      - `/admin`; `/teacher`; `/student`
+      - `/staff`
 
 ---
 
