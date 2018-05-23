@@ -501,12 +501,12 @@ h2.description {
   .avatar {
     width: 100px;
     height: 100px;
-    margin: 15px 0 60px;
     overflow: hidden;
 
     &.rounded {
       border-radius: 50px;
       border: 3px solid $color-secondary-dark;
+      margin: 15px 0 60px;
 
       img {
         margin-left: -5px;
