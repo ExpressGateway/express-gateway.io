@@ -507,11 +507,14 @@ h2.description {
     &.rounded {
       border-radius: 50px;
       border: 3px solid $color-secondary-dark;
+
+      img {
+        margin-left: -5px;
+      }
     }
     img {
       width: 100px;
       height: 100px;
-      margin-left: -5px;
     }
   }
 }
