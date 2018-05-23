@@ -32,6 +32,7 @@ main {
 .flex-column {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 
@@ -461,6 +462,23 @@ h2.description {
       align-items: center;
       justify-content: center;
     }
+    .test {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      &:before, &:after {
+        content: '';
+        flex-grow: 1;
+        border: 1px solid #E0E1E2;
+        height: 0;
+      }
+      &:after {
+        margin-left: .75rem;
+      }
+      &:before {
+        margin-right: .75rem;
+      }
+    }
 
     .testimonial {
       display: flex;
@@ -774,8 +792,6 @@ h2.description {
 
       .flex-column {
         width: 100%;
-
-
       }
     }
 
