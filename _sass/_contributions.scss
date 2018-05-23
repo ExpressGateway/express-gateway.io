@@ -487,4 +487,35 @@
       }
     }
   }
+
+  .lbcta {
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    align-items: center;
+
+    p {
+      text-align: justify;
+    }
+
+    a {
+      margin-right: 50px;
+    }
+
+    @include size(smalltomedium) {
+      flex-direction: column;
+      margin-top: 0;
+
+      a {
+        margin-right: 0;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
 }
