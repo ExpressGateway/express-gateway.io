@@ -11,6 +11,11 @@
 .blackandwhite {
  -webkit-filter: grayscale(100%);
  filter: grayscale(100%);
+ transition: 0.5s;
+
+ &:hover {
+    filter: none;
+  }
 }
 
 .bwconvert {
