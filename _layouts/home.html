@@ -18,20 +18,17 @@
               <p class="subtitle">Fast, Flexible, and Community Driven</p>
               <a href="{{ site.baseurl }}/getting-started" class="button-large">Quick Start</a>
             </div>
-            <!-- <img class="marchitecture" src="assets/img/marchitecture.png" /> -->
             <div class="marchitecture">{% include Home_marchitecturediagram.svg %}</div>
           </div>
         </div>
       </section>
+      {% include company-logos.html %}
       <section class="announcement flex-column flex-center type-center">
-        <h3>Express Gateway 1.9.0 has been released!</h3>
+        <h3>Express Gateway 1.9.1 has been released!</h3>
         <section class="emailform flex-center">
           {% include mailchimp.html %}
-
         </section>
-
       </section>
-
         <ul class="cards">
           <li>
               {% include simple.svg %}
@@ -57,7 +54,7 @@
               <h5>Organic</h5>
               <ul class="type-base">
                 <li>Built on Express Middleware and Node</li>
-                <li>Pre-bundled with the most proven andpopular modules</li>
+                <li>Pre-bundled with the most proven and popular modules</li>
                 <li>Extend with any Express Middleware</li>
               </ul>
           </li>
@@ -85,27 +82,7 @@
         {% include wave-video-bg.svg %}
         {% include wave-video-single-bg.svg %}
       </section>
-
-      <section class="quote">
-        {% include blackandwhite.svg %}
-        <div class="wrapper">
-          <section class="testimonial flex-column">
-              <span class="avatar"><img class="blackandwhite" src="assets/img/Doug.jpg" /></span>
-              <blockquote>"Building upon Node.js + Express.js brings together the strengths, community and flexibility for a world-class API gateway."</blockquote>
-              <p><span>&mdash; Doug Wilson</span> Maintainer of Express.js</p>
-          </section>
-          <section class="testimonial flex-column">
-              <span class="avatar"><img class="blackandwhite" src="assets/img/james.png" /></span>
-              <blockquote>"An API gateway built around ExpressJS is long overdue and the perfect use case for the minimalist strengths of what Express is all about!"</blockquote>
-              <p><span>&mdash; James Young</span> CTO of VidRoll</p>
-          </section>
-          <section class="testimonial flex-column">
-              <span class="avatar"><img class="blackandwhite" src="assets/img/amar.jpg" /></span>
-              <blockquote>"Simple, powerful and flexible without getting in your way - a core building block that elegantly leverages ExpressJS and unlocks it from the technical/developer side of the business."</blockquote>
-              <p><span>&mdash; Amar Singh Rathor</span> Head of Standard Chartered Studios</p>
-          </section>
-        </div>
-      </section>
+     {% include user-quotes.html %}
     </main>
   </div>
   {% include footer.html %}

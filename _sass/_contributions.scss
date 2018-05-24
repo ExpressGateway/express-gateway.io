@@ -4,7 +4,6 @@
   h2 {
 
     display: block;
-    //margin-bottom: 1.5rem;
     span {
       display: block;
     }
@@ -86,9 +85,6 @@
       counter-reset: installation;
       padding-left: 55px;
 
-      // @include size(smalltomedium){
-      //   padding-left: 0;
-      // }
 
       & > li {
         position: relative;
@@ -99,9 +95,6 @@
         display: flex;
         flex-direction: column;
 
-        // @include size(smalltomedium){
-        //   margin-top: 5rem;
-        // }
 
         &:before {
 
@@ -116,11 +109,6 @@
           top: -5px;
           background: url(../img/list-bg.svg) no-repeat;
 
-          // @include size(smalltomedium){
-          //   left: 50%;
-          //   margin-left: -45px;
-          //   top: -3rem;
-          // }
         }
 
         ul {
@@ -128,9 +116,7 @@
         }
 
         ul li {
-          // padding: .5rem 0 0;
           line-height: 1.5rem;
-          //margin-bottom: 2rem;
 
           img {
             width: 100%;
@@ -156,7 +142,6 @@
             margin-bottom: 1.25rem;
             font-family: 'Inconsolata', monospace;
             border-radius: 5px;
-            // line-height: 1rem;
 
             + .codeHighlight {
               margin-top: .75rem;
@@ -375,24 +360,13 @@
       height: 200px;
       margin-top: -150px;
       display: block;
-      // visibility: visible;
       position: relative;
-      vertical-align: top;
     }
   }
 
   .pseudo-wrapper {
     width: 100%;
     padding: 0 15.5% 50px;
-    // position: relative;
-    // &:before {
-    //   content: "";
-    //   width: 12.5%;
-    // }
-    // &:after {
-    //   content: "";
-    //   width: 12.5%;
-    // }
 
     @include size(smalltomedium){
       width: 85%;
@@ -425,9 +399,6 @@
       @include size(smalltomedium){width: 100%;}
       > li {
 
-        &:before {
-          // @include size(smalltomedium){margin-left: -25px;}
-        }
         > h5 {
           font-size: 1.5rem;
           font-weight: 200;
@@ -472,7 +443,6 @@
           padding: 0 1rem 0 0;
           color: $color-primary;
           position: absolute;
-          //top: 6px;
           line-height: 1.5rem;
           left: -1rem;
           font-size: $font-size-14;
@@ -517,4 +487,35 @@
       }
     }
   }
+
+  .lbcta {
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    align-items: center;
+
+    p {
+      text-align: justify;
+    }
+
+    a {
+      margin-right: 50px;
+    }
+
+    @include size(smalltomedium) {
+      flex-direction: column;
+      margin-top: 0;
+
+      a {
+        margin-right: 0;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
 }

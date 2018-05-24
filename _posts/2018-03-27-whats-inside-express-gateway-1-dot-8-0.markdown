@@ -24,7 +24,7 @@ In this release, we're bringing two new features and crushing a few pesky bugs. 
 We added a new condition called `tlsClientAuthenticated` which is useful when you'd like to get down to a policy level to check whether or not the client provided a valid client certificate. So, this means you can react faster now that it's more transparent. For more information, we've put together some additional [documentation in the official release notes](https://github.com/ExpressGateway/express-gateway/releases/tag/v1.8.0). Stay tuned because we're putting together a great use case of this new feature and can't wait to share it with you.
 
 ## New Gateway + Gitter = FTW
-In addition to the new condition, we also added a handy new little feature. When you create a new gateway, you'll notice that a new URL pointing you to our Community driven Gitter channel. This provides easier access to our community level support where you can ask tough questions, gain valuable insight and discuss this project or similar topics like API Gateways with other developers who have implemented Express Gateway. If you're looking for [paid commercial level support](mailto: info@express-gateway.io), hit us up!
+In addition to the new condition, we also added a handy new little feature. When you create a new gateway, you'll notice that a new URL pointing you to our Community driven Gitter channel. This provides easier access to our community level support where you can ask tough questions, gain valuable insight and discuss this project or similar topics like API Gateways with other developers who have implemented Express Gateway. If you're looking for [paid commercial level support](https://goo.gl/s8eGKz), hit us up!
 
 
 ## Proxy Policy Refactor

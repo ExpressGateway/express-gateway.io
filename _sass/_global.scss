@@ -11,10 +11,11 @@
 .blackandwhite {
  -webkit-filter: grayscale(100%);
  filter: grayscale(100%);
-}
+ transition: 0.5s;
 
-.bwconvert {
-  height: 0;
+ &:hover {
+    filter: none;
+  }
 }
 
 a.red {

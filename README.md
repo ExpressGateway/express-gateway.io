@@ -67,5 +67,4 @@ apiEndpoints:
 ## Algolia Index
 
 [Docsearch](https://community.algolia.com/docsearch/) is crawling our website every day in order to generate our
-search index. When doing changes, especially to the HTML structure, remind to verify whether you're not breaking
-the [used xpaths](https://github.com/algolia/docsearch-configs/blob/master/configs/express-gateway.json#L11)
+search index.

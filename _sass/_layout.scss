@@ -32,6 +32,7 @@ main {
 .flex-column {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 
@@ -461,6 +462,23 @@ h2.description {
       align-items: center;
       justify-content: center;
     }
+    .test {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      &:before, &:after {
+        content: '';
+        flex-grow: 1;
+        border: 1px solid #E0E1E2;
+        height: 0;
+      }
+      &:after {
+        margin-left: .75rem;
+      }
+      &:before {
+        margin-right: .75rem;
+      }
+    }
 
     .testimonial {
       display: flex;
@@ -501,14 +519,20 @@ h2.description {
   .avatar {
     width: 100px;
     height: 100px;
-    border-radius: 50px;
-    border: 3px solid $color-secondary-dark;
-    margin: 15px 0 60px;
     overflow: hidden;
+
+    &.rounded {
+      border-radius: 50px;
+      border: 3px solid $color-secondary-dark;
+      margin: 15px 0 60px;
+
+      img.doug, img.james {
+        margin-left: -5px;
+      }
+    }
     img {
       width: 100px;
       height: 100px;
-      margin-left: -5px;
     }
   }
 }
@@ -768,8 +792,6 @@ h2.description {
 
       .flex-column {
         width: 100%;
-
-
       }
     }
 
