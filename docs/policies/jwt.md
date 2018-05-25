@@ -95,7 +95,6 @@ policies:
 #### Example
 
 ```yaml
-
 http:
   port: 8790
 serviceEndpoints:
@@ -111,12 +110,11 @@ pipelines:
     apiEndpoints:   # process all request matching "api" apiEndpoint
       - api
     policies:
-      jwt: # secure API with key auth
+      - jwt: # secure API with key auth
         - action:
-      proxy: # name of the policy
+      - proxy: # name of the policy
         - action:
             serviceEndpoint: example # reference to serviceEndpoints Section
-
 ```
 
 Express Gateway supports several ways to locate your Json Web Token in your request.
