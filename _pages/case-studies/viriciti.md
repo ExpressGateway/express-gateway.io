@@ -1,10 +1,8 @@
 ---
-title: Viriciti
+title: "Case Study: ViriCiti Goes Global With Express Gateway in Production"
 permalink: /case-studies/viriciti/
 layout: case-study
 ---
-
-## Case Study: ViriCiti Goes Global With Express Gateway in Production
 
 [ViriCiti][viriciti] develops cloud-based energy management software to improve the operation of electric buses and
 trucks for EV operators and OEMs. With up to millisecond level accuracy, ViriCiti online energy management represents a
