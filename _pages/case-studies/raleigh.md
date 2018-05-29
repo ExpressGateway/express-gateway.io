@@ -2,6 +2,7 @@
 title: "Case Study: City of Raleigh protects its services with Express Gateway"
 permalink: /case-studies/CORaleigh/
 layout: case-study
+logo: raleigh
 ---
 
 [Raleigh][raleigh] is the capital of the state of North Carolina and the seat of Wake County in the United States. Raleigh is the second-largest city in the state of North Carolina, known as the "City of Oaks" for its many oak trees, which line the streets in the heart of the city.
