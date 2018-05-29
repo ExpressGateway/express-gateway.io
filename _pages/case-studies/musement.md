@@ -1,11 +1,8 @@
 ---
 title: Musement
 permalink: /case-studies/musement/
-layout: page
+layout: case-study
 ---
-
-<div class="wrapper-flex full-width contributions about documentation">
-  <div class="doc-wrapper" markdown="1" style="width:auto;">
 
 ## Case Study: Musement creates a unified API with Express Gateway
 
@@ -53,6 +50,3 @@ By using Express Gateway, Musement saved time and developer resources.
 [musement]: https://musement.com
 [triposo-acquisition]: https://www.musement.com/us/musement-acquires-triposo-in-move-to-create-an-all-inclusive-in-destination-experiences-platform-p/
 [expressjs]: https://expressjs.com
-
-</div>
-</div>
