@@ -5,7 +5,7 @@ layout: page
 ---
 
 
-<div class="wrapper-flex">
+<div class="wrapper-flex full-width contributions about">
   <div class="wrapper">
     <div class="flex-column" markdown="1">
 
