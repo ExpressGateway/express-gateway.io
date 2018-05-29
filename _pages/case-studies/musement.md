@@ -2,6 +2,7 @@
 title: "Case Study: Musement creates a unified API with Express Gateway"
 permalink: /case-studies/musement/
 layout: case-study
+logo: musement
 ---
 
 Launched in Milan in 2013, [Musement][musement] is a travel discovery and booking service that allows users to get the best from their travel destinations. With tickets to tours and top attractions, its offering has grown to cover over 1000 destinations in 70 different countries – making it a **leading** platform for booking travel activities around the world.
