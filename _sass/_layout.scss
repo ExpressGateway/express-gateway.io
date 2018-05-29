@@ -422,6 +422,39 @@ h2.description {
   }
 }
 
+.testimonial-text {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  &:before, &:after {
+    content: '';
+    flex-grow: 1;
+    border: 1px solid #E0E1E2;
+    height: 0;
+  }
+  &:after {
+    margin-left: .75rem;
+  }
+  &:before {
+    margin-right: .75rem;
+  }
+}
+
+.testimonial {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  flex: 1;
+  p {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    span {
+      display: block;
+    }
+  }
+}
+
 .quote {
   padding: 2.5rem;
   text-align: center;
@@ -441,38 +474,7 @@ h2.description {
       align-items: center;
       justify-content: center;
     }
-    .testimonial-container {
-      display: flex;
-      align-items: center;
-      text-transform: uppercase;
-      &:before, &:after {
-        content: '';
-        flex-grow: 1;
-        border: 1px solid #E0E1E2;
-        height: 0;
-      }
-      &:after {
-        margin-left: .75rem;
-      }
-      &:before {
-        margin-right: .75rem;
-      }
-    }
 
-    .testimonial {
-      display: flex;
-      padding: 1rem;
-      align-items: center;
-      flex: 1;
-      p {
-        font-size: 0.75rem;
-        font-weight: 500;
-        line-height: 1.25rem;
-        span {
-          display: block;
-        }
-      }
-    }
   }
 
   div {
