@@ -20,7 +20,7 @@ main {
   &.full-width {
     width: 100%;
   }
-  @include size(smalltomedium){
+  @include size(smalltomedium) {
     width: 94%;
   }
 }
@@ -45,7 +45,7 @@ main {
       width: 85%;
     }
   }
-  @include size(medium){
+  @include size(medium) {
     .flex-column {
       width: 60%;
       margin-left: 10%;
@@ -62,7 +62,7 @@ main {
   display: flex;
   flex-direction: row-reverse;
     &.with-graphics {
-      @include size(small){
+      @include size(small) {
         svg {
           width: 100%;
           margin: 0 auto;
@@ -135,7 +135,7 @@ main {
   min-width: 0;
   min-height: 0;
 
-  @include size(medium){
+  @include size(medium) {
     width: 90%;
     margin: 3rem auto 4rem;
     flex-direction: row;
@@ -143,7 +143,7 @@ main {
 
   }
 
-  @include size(small){
+  @include size(small) {
     width: 90%;
     margin: 3rem auto 4rem;
     flex-direction: column;
@@ -159,40 +159,28 @@ main {
 
     &:nth-child(even) {
       padding-top: 5.25rem;
-      @include size(medium){
+      @include size(medium) {
         padding-top: 2%;
       }
     }
 
     svg {
       width: 30%;
-      @include size(medium){
+      @include size(medium) {
         min-height: 100px;
       }
     }
 
-    &:nth-child(3){
+    &:nth-child(3) {
       svg {
         width: 50%;
         margin-left: -23%;
       }
     }
 
-    @include size(medium){
+    @include size(medium) {
       flex-basis: 48%;
     }
-    @include size(smalltomedium){
-      // padding: 4rem 2% 0;
-    }
-    @include size(small){
-      // padding: 4rem 2% 0;
-    }
-    // h3 {
-    //   text-align: center;
-    //   color: $color-primary;
-    //   font-size: $font-size-36;
-    //   padding: 2rem 0 1rem;
-    // }
 
     h5 {
       font-size: $font-size-26;
@@ -207,20 +195,11 @@ main {
       line-height: 1.5rem;
 
       li {
-        // padding-left: 1rem;
-        // text-indent: -.5rem;
         font-size: $font-size-16;
         line-height: $font-lineheight-list;
         padding-bottom: .75rem;
         margin-bottom: .75rem;
         text-align: center;
-        // &::before {
-        //   content: "•";
-        //   color: $color-highlight;
-        //   position: relative;
-        //   right: .5rem;
-        //   font-size: 1rem;
-        // }
         position: relative;
         &:after {
           content: "";
@@ -290,7 +269,7 @@ main {
     margin-top: -120px;
     z-index: 6;
     pointer-events: none;
-    @include size(smalltomedium){
+    @include size(smalltomedium) {
         margin-top: -8%;
     }
     &.zindexflat {
@@ -312,7 +291,7 @@ main {
     position: relative;
     margin: 0 auto;
 
-    @include size(smalltomedium){
+    @include size(smalltomedium) {
         width: 85%;
     }
   }
@@ -391,7 +370,7 @@ h2.description {
 .introduction {
   .flex-center {
     align-items: flex-start;
-    @include size(smalltomedium){
+    @include size(smalltomedium) {
       flex-direction: column-reverse;
       align-items: center;
 
@@ -412,14 +391,14 @@ h2.description {
       margin-bottom: 3rem;
       padding-left: 10px;
 
-      @include size(medium){
+      @include size(medium) {
           width: 70%;
           padding: 0;
           margin: 0 auto 0;
           text-align: center;
       }
 
-      @include size(small){
+      @include size(small) {
           width: 100%;
           padding: 0;
           margin: 0 auto 0;
@@ -456,13 +435,13 @@ h2.description {
     align-items: flex-start;
     width: 960px;
 
-    @include size(smalltomedium){
+    @include size(smalltomedium) {
       width: 100%;
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-    .test {
+    .testimonial-container {
       display: flex;
       align-items: center;
       text-transform: uppercase;
@@ -486,10 +465,10 @@ h2.description {
       align-items: center;
       flex: 1;
       p {
-        font-size: 0.75rem;//12
+        font-size: 0.75rem;
         font-weight: 500;
         line-height: 1.25rem;
-        span{
+        span {
           display: block;
         }
       }
@@ -509,7 +488,7 @@ h2.description {
     line-height: $font-lineheight-base;
     min-height: 8.5rem;
     padding-bottom: 1rem;
-    @include size(medium){
+    @include size(medium) {
       min-height: 0;
       width: 60%;
       margin: -50px auto 0;
@@ -632,7 +611,7 @@ h2.description {
           font-weight: 300;
           font-family: $font-family;
           font-size: $font-size-18;
-          @include size(smalltomedium){
+          @include size(smalltomedium) {
             font-size: $font-size-18;
             line-height: 1.25rem;
           }
@@ -646,7 +625,7 @@ h2.description {
         width: 60%;
         height: 2.5rem;
         letter-spacing: normal;
-        @include size(smalltomedium){
+        @include size(smalltomedium) {
           width: 90%
         }
         #mce-EMAIL {
@@ -827,40 +806,20 @@ h2.description {
     align-items: center;
     justify-content: space-between;
     display: flex;
-    //
-    // p {
-    //
-    //   margin-bottom: 2rem;
-    //   flex: 3;
-    //   display: flex;
-    //   flex-flow: row nowrap;
-    //   align-items: center;
-    //
-    //   img {
-    //     max-width: 100%;
-    //     max-height: auto;
-    //     text-align: center;
-    //     margin: 0 auto;
-    //
-    //   }
-    // }
 
     svg {
-      // max-width: 100%;
-      // max-height: auto;
       text-align: center;
       margin: 0 auto;
       width: auto;
       height: 300px;
-      //max-width: 45%;
       padding-right: 5%;
       flex: 6.5;
 
-      @include size(smalltomedium){
+      @include size(smalltomedium) {
         max-width: 100%;
         height: auto;
       }
-      @include size(small){
+      @include size(small) {
         max-width: 100%;
         width: 100%;
       }
@@ -868,9 +827,8 @@ h2.description {
     }
 
     ol {
-      // width: 40%;
       flex: 3;
-      @include size(medium){
+      @include size(medium) {
         flex: none;
         width: 40%;
         margin-bottom: 2rem;
@@ -885,7 +843,7 @@ h2.description {
       }
     }
 
-    @include size(smalltomedium){
+    @include size(smalltomedium) {
       margin: 0;
       width: 100%;
 
@@ -927,11 +885,6 @@ p code, table td code, li > code {
   font-family: 'Inconsolata', monospace;
   font-size: $font-size-14;
 }
-
-// li code:only-child {
-//   margin: 1.25rem 0;
-//   display: inline-block;
-// }
 
 .noscroll {
   overflow: hidden;
