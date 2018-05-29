@@ -4,9 +4,8 @@ permalink: /case-studies/musement/
 layout: page
 ---
 
-<div class="wrapper-flex full-width contributions about">
-  <div class="wrapper">
-    <div class="flex-column" markdown="1">
+<div class="wrapper-flex full-width contributions about documentation">
+  <div class="doc-wrapper" markdown="1" style="width:auto;">
 
 ## Case Study: Musement creates a unified API with Express Gateway
 
@@ -21,10 +20,10 @@ Moreover, since the acquisition, the team noticed a growing API usage pattern th
 
 Such solution was a perfect fit to Musement because:
 
-1. Easy to maintain
-2. Easy to document
-3. Development workflow integration
-4. Ready for all developers (JS)
+- Easy to maintain
+- Easy to document
+- Development workflow integration
+- Ready for all developers (JS)
 
 The team started with the Apigee Gateway solution but they found difficult to debug and maintain endpoints. In particular, Apigee's solution was lacking of SCM integration for custom scripts, preventing the team from sharing and synchronizing the custom logic with other teams and deployment resources, as well as difficulties during the integration into their actual development workflow. Caching strategies, also, weren't so easy to manage.
 
@@ -38,9 +37,9 @@ During the process of building their own in-house middleware, the Musement team 
 The simple fact that Express Gateway is built on [Express.js][expressjs] meant a lot because the team is familiar with this technology. Also, the ability to easily inspect the source code in case they were struggling with something was a key
 factor for their decision. In particular, the team appreciated a lot the following unique features of Express Gateway:
 
-1. Leverage Express Middlewares: easily plug in any express middleware as a [policy][policy] in any pipeline
-2. Pipelines: A super flexible selector engine that goes down to `METHOD` level
-3. Declarative and dynamic: The gateway configuration is versionable.
+- Leverage Express Middlewares: easily plug in any express middleware as a [policy][policy] in any pipeline
+- Pipelines: A super flexible selector engine that goes down to `METHOD` level
+- Declarative and dynamic: The gateway configuration is versionable.
 
 Impact: Musement was attracted to Express Gateway for their API proxy project use case because of the broad range of clients they handle (website, mobile apps, partners integrations etc.)  Each client can have its own format and logic for request and response.
 
@@ -55,6 +54,5 @@ By using Express Gateway, Musement saved time and developer resources.
 [triposo-acquisition]: https://www.musement.com/us/musement-acquires-triposo-in-move-to-create-an-all-inclusive-in-destination-experiences-platform-p/
 [expressjs]: https://expressjs.com
 
-</div>
 </div>
 </div>

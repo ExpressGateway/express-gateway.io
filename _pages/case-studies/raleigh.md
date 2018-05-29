@@ -5,9 +5,8 @@ layout: page
 ---
 
 
-<div class="wrapper-flex full-width contributions about">
-  <div class="wrapper">
-    <div class="flex-column" markdown="1">
+<div class="wrapper-flex full-width contributions about documentation">
+    <div class="doc-wrapper" markdown="1" style="width:auto;">
 
 
 ## Case Study: City of Raleigh protects its services with Express Gateway
@@ -27,4 +26,4 @@ The team was really satisfied with both the quality of the result and more impor
 [raleigh]: https://www.raleighnc.gov/
 [key-auth]: {{ site.baseurl }}{% link docs/policies/key-authorization.md %}
 
-</div></div></div>
+</div></div>
