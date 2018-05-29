@@ -26,7 +26,7 @@
     padding-top: $header-main-height;
     min-height: calc(100vh);
 
-    @include size(smalltomedium){
+    @include size(smalltomedium) {
       flex-direction: column;
     }
   }
@@ -148,7 +148,7 @@
          }
       }
 
-      .inlinecode{
+      .inlinecode {
         background-color: $color-gray-light;
         color: $color-text;
         padding: .5rem .75rem;

@@ -4,9 +4,8 @@ permalink: /case-studies/viriciti/
 layout: page
 ---
 
-<div class="wrapper-flex full-width contributions about">
-  <div class="wrapper">
-    <div class="flex-column" markdown="1">
+<div class="wrapper-flex full-width contributions about documentation">
+<div class="doc-wrapper" markdown="1" style="width:auto;">
 
 ## Case Study: ViriCiti Goes Global With Express Gateway in Production
 
@@ -52,4 +51,4 @@ to include as part of the tech stack that could scale with their ever growing co
 [prometheus]: https://prometheus.io/
 [kubernetes]: https://kubernetes.io/
 
-</div></div></div>
+</div></div>
