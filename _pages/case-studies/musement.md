@@ -4,7 +4,7 @@ permalink: /case-studies/musement/
 layout: page
 ---
 
-<div class="wrapper-flex">
+<div class="wrapper-flex full-width">
   <div class="wrapper">
     <div class="flex-column" markdown="1">
 
@@ -20,6 +20,7 @@ including having a single documentation that's easier to access.
 Moreover, since the acquisition, the team noticed a growing API usage pattern that led the team to put efforts in an API monetization strategy project. In this perspective, they decided to give their API more importance and after an internal research, the team come out with the result that they need an API Gateway.
 
 Such solution was a perfect fit to Musement because:
+
 1. Easy to maintain
 2. Easy to document
 3. Development workflow integration
@@ -37,9 +38,9 @@ During the process of building their own in-house middleware, the Musement team 
 The simple fact that Express Gateway is built on [Express.js][expressjs] meant a lot because the team is familiar with this technology. Also, the ability to easily inspect the source code in case they were struggling with something was a key
 factor for their decision. In particular, the team appreciated a lot the following unique features of Express Gateway:
 
-- Leverage Express Middlewares: easily plug in any express middleware as a [policy][policy] in any pipeline
-- Pipelines: A super flexible selector engine that goes down to `METHOD` level
-- Declarative and dynamic: The gateway configuration is versionable.
+1. Leverage Express Middlewares: easily plug in any express middleware as a [policy][policy] in any pipeline
+2. Pipelines: A super flexible selector engine that goes down to `METHOD` level
+3. Declarative and dynamic: The gateway configuration is versionable.
 
 Impact: Musement was attracted to Express Gateway for their API proxy project use case because of the broad range of clients they handle (website, mobile apps, partners integrations etc.)  Each client can have its own format and logic for request and response.
 
