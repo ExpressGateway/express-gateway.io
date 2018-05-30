@@ -33,8 +33,10 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
+  &.joyent {
+    align-self: center;
+  }
 }
-
 
 .flex-row {
   display: flex;
@@ -498,11 +500,11 @@ h2.description {
   }
 
   .avatar {
-    width: 100px;
-    height: 100px;
     overflow: hidden;
 
     &.rounded {
+      width: 100px;
+      height: 100px;
       border-radius: 50px;
       border: 3px solid $color-secondary-dark;
       margin: 15px 0 60px;
@@ -512,8 +514,13 @@ h2.description {
       }
     }
     img {
-      width: 100px;
-      height: 100px;
+      max-width: 150px;
+      max-height: 150px;
+
+      &.joyent {
+        max-width: 250px;
+        max-height: 250px;
+      }
     }
   }
 }
