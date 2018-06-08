@@ -1,5 +1,5 @@
 ---
-title: "Case Study: City of Raleigh protects its services with Express Gateway"
+title: "City of Raleigh protects its services with Express Gateway"
 permalink: /case-studies/CORaleigh/
 layout: case-study
 logo: raleigh
