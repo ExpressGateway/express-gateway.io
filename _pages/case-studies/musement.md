@@ -5,7 +5,11 @@ layout: case-study
 logo: musement
 ---
 
+### Background
+
 Launched in Milan in 2013, [Musement][musement] is a travel discovery and booking service that allows users to get the best from their travel destinations. With tickets to tours and top attractions, its offering has grown to cover over 1000 destinations in 70 different countries – making it a **leading** platform for booking travel activities around the world.
+
+### The Challenge
 
 As part of this expansion, [Musement acquired Triposo][triposo-acquisition] to open up new lines of revenue and create all inclusive offerings for their users.
 
@@ -20,6 +24,8 @@ Such solution was a perfect fit to Musement because:
 - Easy to document
 - Development workflow integration
 - Ready for all developers (JS)
+
+### The solution
 
 The team started with the Apigee Gateway solution but they found difficult to debug and maintain endpoints. In particular, Apigee's solution was lacking of SCM integration for custom scripts, preventing the team from sharing and synchronizing the custom logic with other teams and deployment resources, as well as difficulties during the integration into their actual development workflow. Caching strategies, also, weren't so easy to manage.
 
@@ -37,7 +43,9 @@ factor for their decision. In particular, the team appreciated a lot the followi
 - Pipelines: A super flexible selector engine that goes down to `METHOD` level
 - Declarative and dynamic: The gateway configuration is versionable.
 
-Impact: Musement was attracted to Express Gateway for their API proxy project use case because of the broad range of clients they handle (website, mobile apps, partners integrations etc.)  Each client can have its own format and logic for request and response.
+### The impact
+
+Musement was attracted to Express Gateway for their API proxy project use case because of the broad range of clients they handle (website, mobile apps, partners integrations etc.)  Each client can have its own format and logic for request and response.
 
 Therefore, a middleware handler for their API Gateway became a key use case for Express Gateway. By using Express Gateway the team was able to save time, without having  to devote engineering time to building this important piece of their tech stack while simultaneously mitigating the risk to their users.
 
