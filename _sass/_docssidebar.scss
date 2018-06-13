@@ -59,7 +59,6 @@ overflow-y: scroll;
       position: relative;
       top: 8px;
       display: block;
-      // margin-top: -7.5px;
 
     }
   }
@@ -251,10 +250,7 @@ overflow-y: scroll;
       }
       &.haschildren {
         position: relative;
-        // display: flex;
-        // flex-direction: row;
         > a {
-          //display: inline-block;
           width: 100%;
 
         }
@@ -284,15 +280,11 @@ overflow-y: scroll;
         > label {
           width: 17px;
           height: 17px;
-          //display: inline-block;
           transition: all .25s;
           right: 10px;
           position: absolute;
           top: 13px;
 
-          // &.menuicon-submenu {
-          //   right: 37.5%
-          // }
 
           svg {
             width: 5px;
