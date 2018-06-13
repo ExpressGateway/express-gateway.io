@@ -12,13 +12,11 @@ overflow-y: scroll;
   flex-basis: 225px;
   align-self: stretch;
   position: relative;
-  //height: calc(100vh - (#{$header-top-height} + #{$header-main-height} + #{$footer-height}));
   &.toc-wrapper-height {
     height: auto;
   }
   @include size(smalltomedium){
     position: fixed;
-    /* margin-left: -3%; */
     padding: 0;
     flex: none;
     width: 100%;
@@ -75,8 +73,6 @@ overflow-y: scroll;
   right: 0;
   padding: 2rem 0 1rem 0;
   width: 225px;
-  //height: calc(100vh - (#{$header-main-height} + #{$footer-height}));
-  // height: calc(100vh - (#{$header-top-height} + #{$header-main-height}));
   @include size(smalltomedium){
     position: static;
     top: auto;
