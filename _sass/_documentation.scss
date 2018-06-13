@@ -80,13 +80,6 @@
         font-weight: 200;
         line-height: 2.75rem;
         color: $color-text;
-        &:before {
-          content: "";
-          height: $header-main-height + 100;
-          display: block;
-          margin-top: -($header-main-height + 100);
-
-        }
       }
 
       h4 {
