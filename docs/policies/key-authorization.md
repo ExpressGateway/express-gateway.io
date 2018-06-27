@@ -1,7 +1,7 @@
 ---
 title: Key Authorization
 layout: doc-section
-doc-order: 5.3
+doc-order: 5.2
 ---
 
 ### Description

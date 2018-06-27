@@ -1,7 +1,7 @@
 ---
 title: Customization
 layout: doc-section
-doc-order: 5.1
+doc-order: 5.12
 ---
 
 The dynamic capabilities of Express Gateway stem from a rich set of customization capabilities that utilize Express.js middleware in combination with expressions and logic that can be specified using plain JavaScript.
