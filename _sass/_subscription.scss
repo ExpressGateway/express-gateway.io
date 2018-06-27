@@ -2,8 +2,6 @@
   width: 75%;
   margin: 0 auto;
   font-size: 34px;
-  // position: absolute;
-  // top: 100%;
   padding: .5rem;
   font-size: $font-size-18;
   &.subscribe-error {
@@ -24,8 +22,4 @@
     color: $color-background;
     padding: 1.5rem 0;
   }
-}
-
-#mc_embed_signup {
-
 }
