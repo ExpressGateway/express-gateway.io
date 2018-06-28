@@ -937,3 +937,30 @@ p code, table td code, li > code {
     }
   }
 }
+
+.about.documentation.documentation.case-study {
+
+  img {
+    width: 285px;
+    border: 1px solid black;
+    padding: 67.5px;
+    border-radius: 10000px;
+  }
+
+  blockquote p {
+    color: #0e8696;
+    font-style: normal;
+    font-weight: 400;
+  }
+  h3 {
+    padding: 15px 0px;
+    color: #34a7c2;
+    font-size: 36px;
+    text-align: center;
+
+    &:not(:first-of-type) {
+      border-top: 3px solid #e0f0f5;
+    }
+  }
+}
+
