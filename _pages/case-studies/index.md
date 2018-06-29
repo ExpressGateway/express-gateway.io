@@ -11,6 +11,8 @@ and craft a story to be published here.
 
 {% for page in site.pages %}
   {% if page.path contains 'case-studies' %}
-{% include case-study-link.html logo=page.logo url=page.url %}
+    {% unless page.path contains 'index' %}
+{% include case-study-link.html addLink='true' %}
+    {% endunless %}
   {% endif %}
 {% endfor  %}

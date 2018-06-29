@@ -7,9 +7,7 @@ layout: page
     <h2>Case study</h2>
       <section class="flex-column">
         {% if page.logo %}
-          <img srcset="../../assets/img/{{page.logo}}.png, ../../assets/img/{{page.logo}}@2x.png 2x"
-                src="../../assets/img/{{page.logo}}.png">
-          </img>
+          {% include case-study-link.html logo=page.logo %}
         {% endif %}
         {% if page.title %}
         <h3>{{ page.title }}</h3>

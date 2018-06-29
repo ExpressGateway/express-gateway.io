@@ -939,13 +939,31 @@ p code, table td code, li > code {
 }
 
 .about.documentation.documentation.case-study {
-
-  img {
-    width: 285px;
-    border: 1px solid white;
-    padding: 67.5px;
-    border-radius: 10000px;
+  .circle {
     background: white;
+    border-radius: 9999px;
+    border: 1px solid black;
+
+    width: 250px;
+    height: 250px;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .writing {
+    color: #0e8696;
+    text-decoration: none;
+    background: rgba(52,168,196,0.15);
+    text-align: center;
   }
 
   blockquote p {

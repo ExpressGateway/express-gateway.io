@@ -1,4 +1,6 @@
-<div class="img">
-<img srcset="../../assets/img/{{page.logo}}.png, ../../assets/img/{{page.logo}}@2x.png 2x" src="../../assets/img/{{page.logo}}.png"/>
-<a href="{{ site.baseurl }}{{page.url}}">Read the full story ></a>
+<div class="circle">
+  <img class="image" srcset="../../assets/img/{{page.logo}}.png, ../../assets/img/{{page.logo}}@2x.png 2x" src="../../assets/img/{{page.logo}}.png"/>
+  {% if include.addLink %}
+    <a class="writing" href="{{ site.baseurl }}{{page.url}}">Read the full story ></a>
+  {% endif %}
 </div>
