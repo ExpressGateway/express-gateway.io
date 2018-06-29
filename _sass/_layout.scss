@@ -942,7 +942,7 @@ p code, table td code, li > code {
 
   img {
     width: 285px;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 67.5px;
     border-radius: 10000px;
   }
@@ -952,6 +952,16 @@ p code, table td code, li > code {
     font-style: normal;
     font-weight: 400;
   }
+
+  .flex-column {
+    align-items: center;
+
+    h3 {
+      color:black;
+      max-width: 65%;
+    }
+  }
+
   h3 {
     padding: 15px 0px;
     color: #34a7c2;
