@@ -20,6 +20,8 @@ For example, `apiEndpoint.scopes` will provide all configured scopes for endpoin
 * `consumer`: Information about about the current consumer (can be an `app` or an `user`)
 * `requestID`: uuid v4 (base62 encoded) identifier of the current request, useful for tracking purposes. If needed, you
 can propagate this value down as an header using the [headers][headers] policy.
+* `requestStream`: If set, this [stream][stream] will be piped in the proxyed request body instead of the original request
+body. This can enable interesting scenarios.
 
 ### Example
 
@@ -33,3 +35,4 @@ pipelines:
               jscode: 'req.url = "/new/url"; ' #  code to execute against EG Context
 ```
 [headers]: {{ site.baseurl }}{% link docs/policies/headers.md %}
+[stream]: https://nodejs.org/api/stream.html
