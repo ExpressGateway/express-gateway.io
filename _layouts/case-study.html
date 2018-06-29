@@ -6,10 +6,14 @@ layout: page
   <div class="doc-wrapper" markdown="1" style="width:auto;">
     <h2>Case study</h2>
       <section class="flex-column">
-        <img srcset="../../assets/img/{{page.logo}}.png, ../../assets/img/{{page.logo}}@2x.png 2x"
-              src="../../assets/img/{{page.logo}}.png">
-        </img>
+        {% if page.logo %}
+          <img srcset="../../assets/img/{{page.logo}}.png, ../../assets/img/{{page.logo}}@2x.png 2x"
+                src="../../assets/img/{{page.logo}}.png">
+          </img>
+        {% endif %}
+        {% if page.title %}
         <h3>{{ page.title }}</h3>
+        {% endif %}
       </section>
     {{ content }}
   </div>
