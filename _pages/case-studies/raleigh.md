@@ -23,7 +23,7 @@ They're using the [key auth policy][key-auth] in the header of all requests and 
 
 The team was really satisfied with both the quality of the result and more importantly the time to go in production.
 
-> Anytime we need to expose something to the outside we will use this technique again going forward.
+> "Anytime we need to expose something to the outside we will use this technique again going forward."
 
 [raleigh]: https://www.raleighnc.gov/
 [key-auth]: {{ site.baseurl }}{% link docs/policies/key-authorization.md %}

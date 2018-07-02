@@ -938,11 +938,11 @@ p code, table td code, li > code {
   }
 }
 
-.about.documentation.documentation.case-study {
+
+.about.documentation.case-study {
   .circle {
     background: white;
     border-radius: 9999px;
-    border: 1px solid black;
 
     width: 250px;
     height: 250px;
@@ -965,6 +965,7 @@ p code, table td code, li > code {
     background: rgba(52,168,196,0.15);
     text-align: center;
   }
+  background: white;
 
   blockquote p {
     color: #0e8696;
@@ -972,12 +973,11 @@ p code, table td code, li > code {
     font-weight: 400;
   }
 
-  .flex-column {
-    align-items: center;
-
+  .page-section-blue {
     h3 {
       color:black;
-      max-width: 65%;
+      max-width: 40%;
+      margin: 30px 0px;
     }
   }
 

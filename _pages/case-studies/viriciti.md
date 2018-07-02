@@ -40,8 +40,8 @@ significant resources into building multiple custom plugins to handle everything
 with [Prometheus][prometheus] and they needed a solution that could make them more agile without the headache of
 starting over.
 
-> One of the most important qualities about Express Gateway was that it is fully customizable. We built custom plugins
-and didn’t want to start over. Express Gateway gave us the flexibility we needed.
+> "One of the most important qualities about Express Gateway was that it is fully customizable. We built custom plugins
+and didn’t want to start over. Express Gateway gave us the flexibility we needed."
 
 The cherry on the top was the ability of easily deploy Express Gateway in any cloud environment. The team decided to
 deploy Express Gateway as a Docker containers, using [Kubernetes][kubernetes] as orchestrator.

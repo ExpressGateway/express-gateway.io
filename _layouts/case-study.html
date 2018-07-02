@@ -1,18 +1,24 @@
 ---
 layout: page
 ---
-
-<div class="wrapper-flex full-width contributions about documentation case-study">
-  <div class="doc-wrapper" markdown="1" style="width:auto;">
-    <h2>Case study</h2>
-      <section class="flex-column">
-        {% if page.logo %}
-          {% include case-study-link.html logo=page.logo %}
-        {% endif %}
-        {% if page.title %}
+<div class="about documentation case-study">
+  <div class="page-section-blue">
+    <section class="wrapper-flex">
+      <h2>Case study</h2>
+    </section>
+    <div class="flex-column flex-center">
+      {% if page.logo %}
+        {% include case-study-link.html logo=page.logo %}
+      {% endif %}
+      {% if page.title %}
         <h3>{{ page.title }}</h3>
-        {% endif %}
-      </section>
-    {{ content }}
+      {% endif %}
+    </div>
+  </div>
+  <div class="svg-fix wave-2">{% include wave-2.svg %}</div>
+  <div class="wrapper-flex full-width contributions">
+    <div class="doc-wrapper" markdown="1" style="width:auto;">
+      {{ content }}
+    </div>
   </div>
 </div>
