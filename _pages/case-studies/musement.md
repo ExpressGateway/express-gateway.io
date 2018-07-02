@@ -1,7 +1,7 @@
 ---
 title: "Musement creates a Unified API with Express Gateway"
 permalink: /case-studies/musement/
-layout: case-study
+layout: case-study-detail
 logo: musement
 ---
 

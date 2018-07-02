@@ -940,21 +940,35 @@ p code, table td code, li > code {
 
 
 .about.documentation.case-study {
+  background: white;
+
+  .case-study-links {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .circle {
     background: white;
     border-radius: 9999px;
 
-    width: 250px;
-    height: 250px;
+    width: 260px;
+    height: 260px;
 
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
+    overflow: hidden;
 
   }
 
   .image {
+    &.with-text {
+      margin: 40px 0 auto 0;
+    }
+    margin: auto;
     width: 150px;
     height: 150px;
   }
@@ -962,10 +976,13 @@ p code, table td code, li > code {
   .writing {
     color: #0e8696;
     text-decoration: none;
-    background: rgba(52,168,196,0.15);
+    background: #eaf6f9;
     text-align: center;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 60px;
+    width: 250px;
   }
-  background: white;
 
   blockquote p {
     color: #0e8696;

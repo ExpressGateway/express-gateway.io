@@ -1,6 +1,6 @@
 ---
 permalink: /case-studies/
-layout: case-study
+layout: case-studies
 ---
 
 Read successful stories of companies using Express Gateway in production. Do you want to tell us your story and get
@@ -9,6 +9,7 @@ and craft a story to be published here.
 
 [egMail]: mailto:vincenzo@express-gateway.io
 
+<div class="case-study-links">
 {% for page in site.pages %}
   {% if page.path contains 'case-studies' %}
     {% unless page.path contains 'index' %}
@@ -16,3 +17,4 @@ and craft a story to be published here.
     {% endunless %}
   {% endif %}
 {% endfor  %}
+</div>

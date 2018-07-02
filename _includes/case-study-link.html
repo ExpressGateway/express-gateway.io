@@ -1,5 +1,8 @@
+{% if include.addLink %}
+  {% assign cssClass = 'with-text' %}
+{% endif %}
 <div class="circle">
-  <img class="image" srcset="../../assets/img/{{page.logo}}.png, ../../assets/img/{{page.logo}}@2x.png 2x" src="../../assets/img/{{page.logo}}.png"/>
+  <img class="image {{cssClass}}" srcset="../../assets/img/{{page.logo}}.png, ../../assets/img/{{page.logo}}@2x.png 2x" src="../../assets/img/{{page.logo}}.png"/>
   {% if include.addLink %}
     <a class="writing" href="{{ site.baseurl }}{{page.url}}">Read the full story ></a>
   {% endif %}

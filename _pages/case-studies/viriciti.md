@@ -1,7 +1,7 @@
 ---
 title: "ViriCiti Goes Global With Express Gateway in Production"
 permalink: /case-studies/viriciti/
-layout: case-study
+layout: case-study-detail
 logo: viriciti
 ---
 
