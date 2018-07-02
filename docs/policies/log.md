@@ -1,7 +1,7 @@
 ---
 title: Log
 layout: doc-section
-doc-order: 5.7
+doc-order: 5.9
 ---
 
 ### Description
