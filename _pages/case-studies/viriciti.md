@@ -1,6 +1,6 @@
 ---
-title: "Case Study: ViriCiti Goes Global With Express Gateway in Production"
-permalink: /case-studies/viriciti/
+title: 'Case Study: ViriCiti Goes Global With Express Gateway in Production'
+permalink: "/case-studies/viriciti/"
 layout: case-study
 logo: viriciti
 ---

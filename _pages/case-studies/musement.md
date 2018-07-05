@@ -1,6 +1,6 @@
 ---
-title: "Case Study: Musement creates a unified API with Express Gateway"
-permalink: /case-studies/musement/
+title: 'Case Study: Musement creates a unified API with Express Gateway'
+permalink: "/case-studies/musement/"
 layout: case-study
 logo: musement
 ---
