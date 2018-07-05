@@ -1,7 +1,7 @@
 // docs sidebar toggle and url check
 var urlcheck = document.getElementsByClassName('expanded')
-for(var i = 0, length = urlcheck.length; i < length; i++) {
-          urlcheck[i].checked = "true"
+for (var i = 0, length = urlcheck.length; i < length; i++) {
+  urlcheck[i].checked = "true"
 }
 
 $(document).ready(function () {
@@ -22,42 +22,42 @@ $(document).ready(function () {
   }
 
   //opens main navigation sidebar
-  $('.header-menu-icon').click(function(e){
-			e.preventDefault();
-			$('body').toggleClass('with-sidebar');
-      sidebarpadding()
-		});
+  $('.header-menu-icon').click(function (e) {
+    e.preventDefault();
+    $('body').toggleClass('with-sidebar');
+    sidebarpadding()
+  });
 
   // site click back
-  $('#site-cache').click(function(e){
+  $('#site-cache').click(function (e) {
     $('body').removeClass('with-sidebar');
   });
 
   // toc menu
-  $('.toc-responsive-menu-icon').click(function(e){
-			$('.toc-wrapper').toggleClass('toc-wrapper-height');
-      $('body').toggleClass('noscroll');
-		});
+  $('.toc-responsive-menu-icon').click(function (e) {
+    $('.toc-wrapper').toggleClass('toc-wrapper-height');
+    $('body').toggleClass('noscroll');
+  });
 
-  $(window).on('resize',sidebarpadding);
+  $(window).on('resize', sidebarpadding);
 
-  function sidebarpadding(){
+  function sidebarpadding() {
     //fix off canvas menu on scroll
-     var screenheight = parseInt($(document).height());
-     var windowWidth = $( window ).width();
-     var scrolledpx = parseInt($("body").scrollTop());
-     var sum = screenheight-scrolledpx;
-     if(windowWidth <= 960){
-       $(".with-sidebar nav.menu").css({
-         "margin-top":scrolledpx,
-         "height:":screenheight
-       });
-     } else {
-       $("nav.menu").css({
-         "margin-top":"0px",
-         "height:":"71px"
-       });
-     }
+    var screenheight = parseInt($(document).height());
+    var windowWidth = $(window).width();
+    var scrolledpx = parseInt($(document).scrollTop());
+    var sum = screenheight - scrolledpx;
+    if (windowWidth <= 960) {
+      $(".with-sidebar nav.menu").css({
+        "margin-top": scrolledpx,
+        "height:": screenheight
+      });
+    } else {
+      $("nav.menu").css({
+        "margin-top": "0px",
+        "height:": "71px"
+      });
+    }
   }
 })
 //email capture form details
