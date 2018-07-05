@@ -43,6 +43,8 @@ GEM
     jekyll-gist (1.4.1)
       octokit (~> 4.2)
     jekyll-paginate (1.1.0)
+    jekyll-redirect-from (0.14.0)
+      jekyll (~> 3.3)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
     jekyll-sitemap (1.1.1)
@@ -93,12 +95,13 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-gist
   jekyll-paginate
+  jekyll-redirect-from
   jekyll-sitemap
   minima (~> 2.0)
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.4.1p111
+   ruby 2.2.4p230
 
 BUNDLED WITH
-   1.16.0
+   1.16.2
