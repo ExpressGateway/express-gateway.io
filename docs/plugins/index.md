@@ -7,7 +7,7 @@ doc-order: 25.0
 Express Gateway v1.2.0+ comes with a plugin framework used to extend the Express Gateway core.
 The plugin framework enables anyone to take Express middleware and integrate them into Express Gateway as plugins. Express Gateway provides a declarative way to take advantage of Express middleware to be driven centrally and executed dynamically.
 
-Note: Existing policies within the Express Gateway core will be evntually refactored out of the core into Express Gateway plugins using this framework.
+Note: Existing policies within the Express Gateway core will be eventually refactored out of the core into Express Gateway plugins using this framework.
 
 ### Plugin Structure
 
