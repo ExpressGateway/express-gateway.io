@@ -4,7 +4,6 @@ layout: page
 ---
 
 <section class="blog wrapper">
-  <!-- This loops through the paginated posts -->
   <div class="article-list">
     <ul>
       {% for post in paginator.posts %}
@@ -22,7 +21,6 @@ layout: page
       {% endfor %}
     </ul>
 
-    <!-- This creates the pagination navigation elements -->
       {% if paginator.total_pages > 1 %}
       <nav class="pagination">
         {% if paginator.previous_page %}

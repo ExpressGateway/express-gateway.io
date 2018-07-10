@@ -12,13 +12,11 @@ overflow-y: scroll;
   flex-basis: 225px;
   align-self: stretch;
   position: relative;
-  //height: calc(100vh - (#{$header-top-height} + #{$header-main-height} + #{$footer-height}));
   &.toc-wrapper-height {
     height: auto;
   }
   @include size(smalltomedium){
     position: fixed;
-    /* margin-left: -3%; */
     padding: 0;
     flex: none;
     width: 100%;
@@ -61,7 +59,6 @@ overflow-y: scroll;
       position: relative;
       top: 8px;
       display: block;
-      // margin-top: -7.5px;
 
     }
   }
@@ -75,8 +72,6 @@ overflow-y: scroll;
   right: 0;
   padding: 2rem 0 1rem 0;
   width: 225px;
-  //height: calc(100vh - (#{$header-main-height} + #{$footer-height}));
-  // height: calc(100vh - (#{$header-top-height} + #{$header-main-height}));
   @include size(smalltomedium){
     position: static;
     top: auto;
@@ -104,7 +99,6 @@ overflow-y: scroll;
       text-decoration: none;
       font-size: $font-size-18;
       color: #373f3f;
-      // font-weight: bold;
 
       @include size(smalltomedium){
         color: #373f3f;
@@ -256,10 +250,7 @@ overflow-y: scroll;
       }
       &.haschildren {
         position: relative;
-        // display: flex;
-        // flex-direction: row;
         > a {
-          //display: inline-block;
           width: 100%;
 
         }
@@ -289,15 +280,11 @@ overflow-y: scroll;
         > label {
           width: 17px;
           height: 17px;
-          //display: inline-block;
           transition: all .25s;
           right: 10px;
           position: absolute;
           top: 13px;
 
-          // &.menuicon-submenu {
-          //   right: 37.5%
-          // }
 
           svg {
             width: 5px;

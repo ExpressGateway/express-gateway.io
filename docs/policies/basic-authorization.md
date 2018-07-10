@@ -36,10 +36,8 @@ pipelines:
   apiEndpoints:
     - authorizedEndpoint
   policies:
-    -
-      basic-auth:
-    -
-      proxy:
+    - basic-auth:
+    - proxy:
         action:
           serviceEndpoint: backend
 

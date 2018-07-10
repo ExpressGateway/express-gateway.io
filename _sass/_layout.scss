@@ -937,3 +937,76 @@ p code, table td code, li > code {
     }
   }
 }
+
+
+.about.documentation.case-study {
+  background: white;
+
+  .case-study-links {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .circle {
+    background: white;
+    border-radius: 9999px;
+
+    width: 260px;
+    height: 260px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+  }
+
+  .image {
+    &.with-text {
+      margin: 40px 0 auto 0;
+    }
+    margin: auto;
+    width: 150px;
+    height: 150px;
+  }
+
+  .writing {
+    color: #0e8696;
+    text-decoration: none;
+    background: #eaf6f9;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 60px;
+    width: 250px;
+  }
+
+  blockquote p {
+    color: #0e8696;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .page-section-blue {
+    h3 {
+      color:black;
+      max-width: 40%;
+      margin: 30px 0px;
+    }
+  }
+
+  h3 {
+    padding: 15px 0px;
+    color: #34a7c2;
+    font-size: 36px;
+    text-align: center;
+
+    &:not(:first-of-type) {
+      border-top: 3px solid #e0f0f5;
+    }
+  }
+}
+
