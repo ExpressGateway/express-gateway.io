@@ -9,18 +9,13 @@ list-order: 0.6
 
 The policies section is a whitelist of enabled policies. Policies that are intended to be used by Express Gateway must be declared here. For all policies supported by Express Gateway please see the [Policy Reference][policy-reference]
 
-<aside class="notice" markdown="1">
-<b>Coming Soon</b>:
-<p>auto install policies specified in this section through the plugin system</p>
-</aside>
-
 ### Usage
 
 ```yaml
 policies:
   - name: 'cors'
   - name: 'rate-limiter'
-  - name: 'simple-logger'
+  - name: 'log'
   - name: 'proxy'
   - name: 'oauth2'
   - name: 'key-auth'
