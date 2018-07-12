@@ -33,7 +33,7 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  &.joyent {
+  &.rectangular {
     align-self: center;
   }
 }
@@ -517,7 +517,7 @@ h2.description {
       max-width: 150px;
       max-height: 150px;
 
-      &.joyent {
+      &.rectangular {
         max-width: 250px;
         max-height: 250px;
       }
