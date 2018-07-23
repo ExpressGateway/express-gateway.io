@@ -26,7 +26,7 @@ The timeframes for consideration to implement new features
 * OpenAPI Support
   - ingest OpenAPI spec and scaffold EG configuration
   - federate OpenAPI over EG instances
-  - create spec
+  - create [spec](https://docs.google.com/document/d/12OsuoxjrFqJeNQbxkCeSLLrIR6PG6QMyHHrIkAHk1fc/edit?usp=sharing)
   - spike
   - story prefix "OpenAPI:" in Waffle.io task board
 * OpenID 1.0 Policy
