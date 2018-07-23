@@ -26,7 +26,7 @@ Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` 
   "type": "basic-auth" // or key-auth or oauth2
 }
 ```
-##### Response 
+##### Response
 ```json
  {
   "isActive": true,
@@ -47,10 +47,10 @@ Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` 
     ]
   },
   "consumerId": "steve",
-  "type": "key-auth" 
+  "type": "key-auth"
 }
 ```
-##### Response 
+##### Response
 ```json
  {
   "isActive": true,
@@ -73,10 +73,10 @@ Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` 
     ]
   },
   "consumerId": "steve",
-  "type": "oauth2" 
+  "type": "oauth2"
 }
 ```
-##### Response 
+##### Response
 ```json
  {
   "isActive": true,
@@ -95,7 +95,7 @@ Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` 
 {
   "credentials": [
     {
-      "keyId": "55tEGsilJkhKoWMS3kkipH", // only for key-auth 
+      "keyId": "55tEGsilJkhKoWMS3kkipH", // only for key-auth
       "keySecret": "5BNegGCfqW4rhqqCz3A3sM", // only for key-auth
       "consumerId": "47bc9fa2-f245-4b47-9cb4-29b8ccb49728",
       "password": "47bc9fa2-f245-4b47-9cb4-29b8ccb49728", // for basic-auth
@@ -110,13 +110,13 @@ Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` 
 }
 ```
 
-### Get Credential info 
+### Get Credential info
 ##### Request: `GET /credentials/{type}/{credentialId}`
 
 ##### Response:
 ```json
 {
-    "keyId": "55tEGsilJkhKoWMS3kkipH", // only for key-auth 
+    "keyId": "55tEGsilJkhKoWMS3kkipH", // only for key-auth
     "keySecret": "5BNegGCfqW4rhqqCz3A3sM", // only for key-auth
     "consumerId": "47bc9fa2-f245-4b47-9cb4-29b8ccb49728",
     "password": "47bc9fa2-f245-4b47-9cb4-29b8ccb49728", // for basic-auth
@@ -125,16 +125,16 @@ Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` 
     "isActive": true,
     "createdAt": "Tue Jul 18 2017 17:04:06 GMT+0300 (EEST)",
     "updatedAt": "Tue Jul 18 2017 17:04:06 GMT+0300 (EEST)"
-    
+
 }
 ```
 
 ### Activate/Deactivate Credential
-##### Request: `PUT /credential/{type}/{credentialId}/status`
+##### Request: `PUT /credentials/{type}/{credentialId}/status`
 ```json
 {
   "status": true  // use false to deactivate
-}  
+}
 ```
 
 ##### Response:
@@ -145,24 +145,24 @@ Any API Consumer (Users/Apps) can have only one credential of type `basic-auth` 
 ```
 
 
-### Set scopes for Credential 
+### Set scopes for Credential
 ##### Request: `PUT /credentials/{type}/{credentialId}/scopes`
 ```json
 {
   "scopes": [
     "admin"
-  ] 
+  ]
 }
 ```
 ##### Response: 204
 
-### Add scope to Credential scopes 
+### Add scope to Credential scopes
 ##### Request: `PUT /credentials/{type}/{credentialId}/scopes/{scope}`
 ##### Response: 204
 
-### Remove scope from Credential scopes 
+### Remove scope from Credential scopes
 ##### Request: `DELETE /credentials/{type}/{credentialId}/scopes/{scope}`
 ##### Response: 204
 
-### Note: 
+### Note:
 `credentialId` for `basic-auth` and `oauth2` is `consumerId` and for `key-auth` it is `keyId`
