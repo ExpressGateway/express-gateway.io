@@ -89,7 +89,7 @@ We do support the following credential types:
             recognised using `basic-auth`
 - `jwt`: A _KeyID_ and _KeySecret_ that are used to identify a JWT Issuer
 
-If you're interested to lear more about these, check out their respective pages in the *Policies* documentation section.
+If you're interested to learn more about these, check out their respective pages in the *Policies* documentation section.
 
 Credentials are also defined with a JSON Schema, but there are not customization options for that. In other word,
 modifying the schema and add a new credential type or even a property won't work, as the gateway would need to be changed
