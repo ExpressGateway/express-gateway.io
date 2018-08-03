@@ -43,6 +43,10 @@ pipelines:
 
 ```
 
+You can use cURL to test that the policy is working correctly:
+
+`curl -H "Authorization: Basic base64encoded(username:password)" https://gatewayurl/api/testEndpoint`
+
 ##### Options Reference
 
 * `passThrough`:
