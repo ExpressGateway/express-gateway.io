@@ -61,6 +61,10 @@ pipelines:
 
 Express Gateway supports several ways to authenticate with API keys. By default, Express Gateway will look for API keys in both the HTTP headers and query parameters.
 
+You can use cURL to test that the policy is working correctly:
+
+`curl -H "Authorization: apiKey keyID:keySecret" https://gatewayurl/api/testEndpoint`
+
 #### Using header (recommended)
 By default the `Authorization` header is used with an enforced authorization scheme - `apiKey`
 
