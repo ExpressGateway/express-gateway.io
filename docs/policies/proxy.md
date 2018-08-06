@@ -156,7 +156,7 @@ serviceEndpoints:             # downstream microservices
 
 The `proxyOptions` object will be forwarded to the [node-http-proxy](https://github.com/nodejitsu/node-http-proxy) middleware.
 
-### Service Enpoints behind intermediate proxy
+### Service Endpoints behind intermediate proxy
 Some corporation allow access to internet only through proxy.
 In this case you need to specifically tell Express-Gateway to use proxy to forward requests
 
