@@ -61,14 +61,6 @@ pipelines:
   - Assigns a load-balancing strategy for `serviceEndpoint` declarations that have more than one URL, defaults to `round-robin`.
 * `proxyUrl`:
   - Address of the intermediate proxy. Example: `http://corporate.proxy:3128`. See more details below.
-* `target`:
-  - url string to be parsed with the url module
-* `forward`:
-  - url string to be parsed with the url module
-* `agent`:
-  - object to be passed to http(s).request (see Node's [https agent](https://nodejs.org/api/https.html#https_class_https_agent) and [http agent](https://nodejs.org/api/http.html#http_class_http_agent) objects)
-* `ssl`:
-  - object to be passed to https.createServer()
 * `ws`:
   - true/false, if you want to proxy websockets
 * `xfwd`:
@@ -78,9 +70,11 @@ pipelines:
 * `toProxy`:
   - true/false, passes the absolute URL as the `path` (useful for proxying to proxies)
 * `prependPath`:
-  - true/false, Default: true - specify whether you want to prepend the target's path to the proxy path
+  - true/false, Default: true - specify whether you want to prepend the target's path to the proxy path. See more details below.
 * `ignorePath`:
-  - true/false, Default: false - specify whether you want to ignore the proxy path of the incoming request (note: you will have to append / manually if required).
+  - true/false, Default: false - specify whether you want to ignore the proxy path of the incoming request. See more details below.
+* `stripPath`
+  - true/false, Default: false — specify whether you want to strip the `apiEndpoint` path from the final URL. See more details below.
 * `localAddress`:
   - Local interface string to bind for outgoing connections
 * `changeOrigin`:
@@ -134,6 +128,73 @@ pipelines:
             serviceEndpoint: backend
 ```
 
+### Path management
+
+You probably noticed there are 3 options that concern the **path**: `prependPath`, `ignorePath` and `stripPath`. They
+might be a little bit confusing so here's a breakdown on how they work with the most common cases.
+
+Let's assume we have an Express Gateway instance listening on port `80` and exposed on an IP that has a CNAME of
+`https://myCompanyName.io`
+
+With:
+
+1. An **apiEndpoint** `/public/api/billing*`
+2. A **serviceEndpoint** `http://internalBillingMicroservice/anything`
+
+and launching
+
+`curl https://myCompanyName.io/public/api/billing/byName?name=Clark`
+
+According to the options you will get different results:
+
+```yml
+prependPath:  false
+ignorePath:   false
+stripPath:    false
+```
+
+Resulting upstream service path: `/public/api/billing/byName?name=Clark`
+
+---
+
+```yml
+prependPath:  true
+ignorePath:   false
+stripPath:    false
+```
+
+Resulting upstream service path: `/anything/public/api/billing/byName?name=Clark`
+
+---
+
+```yml
+prependPath:  true
+ignorePath:   true
+stripPath:    false
+```
+
+Resulting upstream service path: `/anything`
+
+---
+
+```yml
+prependPath:  false
+ignorePath:   true
+stripPath:    false
+```
+
+Resulting proxied URL: `/`
+
+---
+
+```yml
+prependPath:  true
+ignorePath:   false
+stripPath:    true
+```
+
+Resulting proxied URL: `/anything/byName?name=Clark`
+
 ### Service Endpoints options
 
 There might be cases where a set of Proxy options is valid for an entire service endpoint. If you have, for example,
@@ -165,6 +226,7 @@ This can be done done using `http_proxy` or `HTTP_PROXY` env variable.
 `http_proxy=http://corporate.proxy:3128 npm start`
 
 Another way is to set `proxyUrl` in the proxy policy itself
+
 ```yaml
 pipelines:
   example-pipeline:
