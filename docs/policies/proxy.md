@@ -134,10 +134,6 @@ pipelines:
             serviceEndpoint: backend
 ```
 
-*More strategies may be implemented in the future.*
-
-Note: more complex proxy rules will be introduced to do wilcard based matching similar to Express routing rules
-
 ### Service Endpoints options
 
 There might be cases where a set of Proxy options is valid for an entire service endpoint. If you have, for example,
