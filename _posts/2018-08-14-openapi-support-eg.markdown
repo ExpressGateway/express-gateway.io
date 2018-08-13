@@ -23,7 +23,7 @@ we want your feedback on that.
 
 [OpenAPI][openapi] is a specification defining a standard, programming language-agnostic interface description for REST APIs.
 
-Such document contains important informations about your API. In particular:
+Such document contains important information about your API. In particular:
 
 - Generic information about the API (version, support contact, license)
 - Connectivity information to a target server
@@ -35,9 +35,9 @@ Such document contains important informations about your API. In particular:
 We've been exploring the OpenAPI spec for a while and we've been trying to understand what Express Gateway could do
 when such file is provided by the user. In particular, we have identified different touching points
 
-#### Connectivity informations
+#### Connectivity information
 
-We can use the connectivity informations for server target to configure the host of all the [apiEndpoints][apiEndpoints]. In this way we can make sure Express Gateway will receive connections exclusively when received on the specified host.
+We can use the connectivity information for server target to configure the host of all the [apiEndpoints][apiEndpoints]. In this way we can make sure Express Gateway will receive connections exclusively when received on the specified host.
 
 #### Paths
 
