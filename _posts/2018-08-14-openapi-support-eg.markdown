@@ -66,7 +66,7 @@ In case you're interested the complete specs we're building as well as the opene
 having on the feature are live on on our [living document][google-doc-spec]. You're more than welcomed to add your
 comments and/or suggestions.
 
-[roadmap]: ({{ site.baseurl}} {% link docs/roadmap.md %})
+[roadmap]: {{ site.baseurl}}{% link docs/roadmap.md %}
 [openapi]: https://www.openapis.org/
 [google-doc-spec]: https://docs.google.com/document/d/12OsuoxjrFqJeNQbxkCeSLLrIR6PG6QMyHHrIkAHk1fc/edit?usp=sharing
 [apiEndpoints]: ({{ site.baseurl}} {% link docs/configuration/gateway.config.yml/apiEndpoints.md %})
