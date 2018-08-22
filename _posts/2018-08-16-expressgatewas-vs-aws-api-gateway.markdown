@@ -13,11 +13,11 @@ author: Vincenzo Chianese
 
 If you’re curious about how your API Gateway stacks up, now’s the time to listen up because we’re breaking down the differences (and similarities) of the most popular projects for the API Gateway use case.
 
-<!-- excerpt -->
+<!--excerpt-->
 
 First up, we’ve got Amazon API Gateway and we’re going to compare it to Express Gateway, an open source API Gateway built entirely on Express.js.
 
-_TLDR: You can skip ahead to the deep dive._
+_TLDR: You can skip ahead to the [deep dive][deep_dive]_
 
 
 For the rest of you, here’s a quick hype-free run down. If you’re like us and sick of the buzzword salad, then take a look at the real deal and let us know what you think.
@@ -36,12 +36,12 @@ So while we won’t cover those aspects in the comparison between Amazon (AWS) A
 
 ### Factors to consider when comparing API Gateways
 
-- Elevator Pitches – What’s the short and sweet?
-- Features and Architecture – How does that backend look?
-- Getting Started, Deployment and Configuration – What does it take to get up and running?
-- Administration and Maintenance – How much effort is it on a daily basis?
-- Features Comparison – Side by Side showdown of popular features you are already using (or should be)
-- Custom Extensions – What does the extension ecosystem look like?
+* Elevator Pitches – What’s the short and sweet?
+* Features and Architecture – How does that backend look?
+* Getting Started, Deployment and Configuration – What does it take to get up and running?
+* Administration and Maintenance – How much effort is it on a daily basis?
+* Features Comparison – Side by Side showdown of popular features you are already using (or should be)
+* Custom Extensions – What does the extension ecosystem look like?
 
 ### Why are we talking API Gateways?
 
@@ -51,6 +51,6 @@ In our analysis, we’ll compare the Amazon (AWS) API Gateway and Express Gatewa
 
 ### Moving On
 
-Disclaimer: No actual HoneyBadgers were hurt during this comparison. Additionally, if you’re interested in more of these topics, join the live discussion on twitter [@lunchbadger](https://twitter.com/lunchbadger) or [@express_gateway](https://twitter.com/express_gateway).
+**Disclaimer:** No actual HoneyBadgers were hurt during this comparison. Additionally, if you’re interested in more of these topics, join the live discussion on Twitter [@lunchbadger](https://twitter.com/lunchbadger) or [@express_gateway](https://twitter.com/express_gateway).
 
-[deep_dive]: https://www.google.it
+[deep_dive]: {{ site.baseurl }}{% link _pages/eg-aws-deep-dive.md %}
