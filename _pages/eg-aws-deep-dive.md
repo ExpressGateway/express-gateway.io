@@ -4,15 +4,16 @@ permalink: "/eg-vs-amazon-aws-api-gateway/"
 layout: page
 ---
 
-<section class="about documentation case-study">
-<main class="markdown">
-<div class="doc-wrapper" markdown="1" style="margin: auto; width: 100%;">
+<section class="page-section-normal">
+<div class="wrapper-flex">
+<div class="wrapper">
+<div class="flex-column" markdown="1">
 
 ## API Gateway: Express Gateway vs Amazon API Gateway
 
 We’ve created this comparison page to make it easy to understand the major differences (and similarities) between two popular projects for the API Gateway use case. In this review we’ll be comparing **Express Gateway** and **Amazon API Gateway** across multiple dimensions, “at-a-glance.”
 
-![](https://www.lunchbadger.com/wp-content/uploads/2018/01/Multi-Cloud-Kubernetes-and-Our-New-Partnership-with-Joyent-24.png)
+![][api-gw-role]
 
 ## What is an API Gateway?
 
@@ -20,12 +21,25 @@ An API Gateway is “middleware” that makes available backend services to mobi
 
 Further reading: [microservices.io](https://microservices.io)
 
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section-white">
+<div class="wrapper-flex">
+<div class="wrapper">
+<div class="flex-column" markdown="1">
+
 ## Elevator Pitches
 
+</div>
+</div>
+</div>
+</section>
 
-<div class="flex-row">
-
-<div markdown="1" class="sticky-flex">
+<div class="wrapper border-top-blue flex-row flex-center whatiseg with-graphics with-graphics" markdown="1">
+<div class="flex-column" markdown="1">
 
 ### Express Gateway
 
@@ -34,7 +48,7 @@ Express Gateway is an API Gateway that can sit at the heart of any microservices
 [Learn more about Express Gateway](https://docs.express-gateway.io)
 
 </div>
-<div markdown="1" class="sticky-flex">
+<div class="flex-column" markdown="1">
 
 ### Amazon API Gateway
 
@@ -45,15 +59,21 @@ Amazon’s API Gateway is a fully managed service that makes it easy for develop
 </div>
 </div>
 
+<section class="page-section-white">
+<div class="wrapper-flex">
+<div class="wrapper">
+<div class="flex-column" markdown="1">
+
 ## Features & Architecture
 
-<div class="flex-row">
-
-<div markdown="1" class="sticky-flex">
-{% include quickstart/egcore.svg %}
 </div>
+</div>
+</div>
+</section>
 
-<div markdown="1" class="sticky-flex">
+<div class="wrapper border-top-blue flex-row flex-center whatiseg with-graphics with-graphics" markdown="1">
+<div class="svg-fix svg-about-1 svg-diagram">{% include quickstart/egcore.svg %}</div>
+<div class="flex-column" markdown="1">
 
 ### Express Gateway Architecture
 
@@ -74,13 +94,19 @@ Express Gateway is an open source API Gateway written in Node.js and built on to
 * Plugs directly into existing DevOps tooling and pipelines
 * Further reading: Express Gateway GitHub repository
 
+
 </div>
 </div>
 
 
-<div class="flex-row">
+<div class="wrapper border-top-blue flex-row flex-center whatiseg with-graphics with-graphics" markdown="1">
+<div class="flex-column" markdown="1">
 
-<div markdown="1" class="sticky-flex">
+<img src="{{ site.baseurl }}{% link assets/img/aws-architecture.png %}" style="width:100%"/>
+
+</div>
+
+<div class="flex-column" markdown="1">
 
 ### Amazon API Gateway Architecture
 
@@ -97,11 +123,12 @@ Features include:
 * API keys for third-party developers
 
 </div>
+</div>
 
-<div markdown="1" class="sticky-flex">
-![](https://www.lunchbadger.com/wp-content/uploads/2018/01/AWS_Architecture.png)
-</div>
-</div>
+<section class="page-section-white">
+<div class="wrapper-flex">
+<div class="wrapper">
+<div class="flex-column" markdown="1">
 
 It should be noted that with Amazon API Gateway there is no way to separate out hosting costs from the cost of the software. Amazon charges you per million API calls, per GB of data transfer, and optionally for caching. You can find pricing information here. Amazon API Gateway does have a free tier, so you will pay nothing for your first 12 months as long as you are under 1 million API calls per month.
 
@@ -179,12 +206,34 @@ Express Gateway plugins are written in JavaScript using the Express.js framework
 
 By combining Amazon API Gateway with AWS Lambda, you can build custom logic  in JavaScript, Python, Java, or C#. AWS Lambda uses Node.js as its JavaScript runtime, so, like Express Gateway, you can easily leverage npm packages in your API gateway. However, this requires a substantial investment in coding and configuration to get comparable functionality to just a few commands and configuration parameters when extending Express Gateway.
 
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section-white">
+<div class="wrapper-flex">
+<div class="wrapper">
+<div class="flex-column" markdown="1">
+
 ### Quick Reference Links
 
-<div class="flex-row">
+</div>
+</div>
+</div>
+</section>
 
-<div markdown="1" class="sticky-flex">
+<div class="wrapper border-top-blue flex-row flex-center whatiseg with-graphics with-graphics" markdown="1">
+<div class="flex-column" markdown="1">
 
+#### Amazon API Gateway
+
+- [Documentation](https://www.google.it)
+- [Installation and Getting Started](https://www.google.it)
+- [Commercial Support](https://www.google.it)
+
+</div>
+<div class="flex-column" markdown="1">
 
 #### Express Gateway
 
@@ -195,16 +244,12 @@ By combining Amazon API Gateway with AWS Lambda, you can build custom logic  in 
 - [Commercial Support](https://www.google.it)
 
 </div>
-<div markdown="1" class="sticky-flex">
-
-#### Amazon API Gateway
-
-- [Documentation](https://www.google.it)
-- [Installation and Getting Started](https://www.google.it)
-- [Commercial Support](https://www.google.it)
-
 </div>
-</div>
+
+<section class="page-section-white">
+<div class="wrapper-flex">
+<div class="wrapper">
+<div class="flex-column" markdown="1">
 
 ## Summary
 
@@ -214,5 +259,8 @@ By combining Amazon API Gateway with AWS Lambda, you can build custom logic  in 
 On the other hand, Amazon API Gateway’s documentation is quite cumbersome. A great deal of their documentation goes into excruciating detail on tangential topics without actually telling you how to use the functionality, like their guide to rate limiting. Setting up rudimentary API gateway tasks like OAuth2 or key authorization, require plugging in additional AWS services, like Lambda and IAM users, so it is unlikely you’ll be able to use Amazon API Gateway independent of the rest of AWS. Express Gateway has more concise documentation, greater ease-of-use, built-in functionality that just works “out-of-the-box”, and an active blog with detailed overviews of use cases. If all else fails, you can just read the source code because Express Gateway is open source and available on GitHub.
 
 </div>
-</main>
+</div>
+</div>
 </section>
+
+[api-gw-role]: {{ site.baseurl }}{% link assets/img/api-gw-role.png %}
