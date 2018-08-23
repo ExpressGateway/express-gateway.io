@@ -3,7 +3,7 @@ title: Express Gateway VS AWS API Gateway
 permalink: "/eg-vs-amazon-aws-api-gateway/"
 layout: page
 ---
-
+<div class="generic-page">
 <section class="page-section-normal">
 <div class="wrapper-flex">
 <div class="wrapper">
@@ -223,7 +223,9 @@ By combining Amazon API Gateway with AWS Lambda, you can build custom logic  in 
 </div>
 </section>
 
-<div class="wrapper border-top-blue flex-row flex-center whatiseg with-graphics with-graphics" markdown="1">
+<section class="page-section-white">
+<div class="wrapper-flex">
+<div class="wrapper">
 <div class="flex-column" markdown="1">
 
 #### Amazon API Gateway
@@ -245,6 +247,8 @@ By combining Amazon API Gateway with AWS Lambda, you can build custom logic  in 
 
 </div>
 </div>
+</div>
+</section>
 
 <section class="page-section-white">
 <div class="wrapper-flex">
@@ -262,5 +266,5 @@ On the other hand, Amazon API Gateway’s documentation is quite cumbersome. A g
 </div>
 </div>
 </section>
-
+</div>
 [api-gw-role]: {{ site.baseurl }}{% link assets/img/api-gw-role.png %}

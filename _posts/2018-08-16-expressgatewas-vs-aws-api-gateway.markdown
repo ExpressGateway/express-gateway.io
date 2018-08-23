@@ -1,9 +1,9 @@
 ---
 title: Amazon API Gateway VS. Express Gateway
-date: 2018-08-16 07:04:00 Z
+date: 2018-08-23 07:04:00 Z
 categories:
 - technology
-- comparison
+- comparisons
 tags:
 - api gateway
 - aws

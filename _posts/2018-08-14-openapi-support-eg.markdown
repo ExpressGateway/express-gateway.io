@@ -69,7 +69,7 @@ comments and/or suggestions.
 [roadmap]: {{ site.baseurl}}{% link docs/roadmap.md %}
 [openapi]: https://www.openapis.org/
 [google-doc-spec]: https://docs.google.com/document/d/12OsuoxjrFqJeNQbxkCeSLLrIR6PG6QMyHHrIkAHk1fc/edit?usp=sharing
-[apiEndpoints]: ({{ site.baseurl}} {% link docs/configuration/gateway.config.yml/apiEndpoints.md %})
+[apiEndpoints]: {{ site.baseurl}}{% link docs/configuration/gateway.config.yml/apiEndpoints.md %}
 [components]: https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#componentsObject
 [requestBody]: https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#requestBodyObject
 [responses]: https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#responseObject
