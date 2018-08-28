@@ -945,6 +945,7 @@ p code, table td code, li > code {
   .case-study-links {
     margin: 40px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -961,6 +962,8 @@ p code, table td code, li > code {
     justify-content: space-between;
 
     overflow: hidden;
+
+    margin: 10px 0;
 
   }
 
