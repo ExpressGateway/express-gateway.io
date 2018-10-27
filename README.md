@@ -36,7 +36,7 @@ $ bundle exec jekyll serve
 
 5. You'll need to override `_config.yml` with the `baseUrl` set to "/"
 
-6. Load [http://localhost:4000/](https://localhost:4000/) on your browser.
+6. Load [http://localhost:4000/](http://localhost:4000/) on your browser.
 
 ## Auto Regeneration
 
