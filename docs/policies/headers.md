@@ -27,7 +27,7 @@ pipelines:
       -
         headers:
           - action:
-              headersPrefix: 'eg-',
+              headersPrefix: 'eg-'
               forwardHeaders:
                 id: 'consumer.id'
                 consumer-name: 'consumer.name'
