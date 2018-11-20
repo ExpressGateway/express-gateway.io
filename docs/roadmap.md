@@ -39,7 +39,9 @@ The timeframes for consideration to implement new features
   - [spec](https://docs.google.com/document/d/12OsuoxjrFqJeNQbxkCeSLLrIR6PG6QMyHHrIkAHk1fc/edit?usp=sharing)
   - spike
   - story prefix "OpenAPI:" in Waffle.io task board
-* High Availability through Clustering
+* Enhanced Clustering Capabilities
+  - cross cluster global counters
+  - other shared data among EG instances
   - create spec
   - spike
   - story prefix "Clustering:" in Waffle.io task board
