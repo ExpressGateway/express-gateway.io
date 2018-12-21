@@ -23,5 +23,4 @@ http:
 | Name   | Description           |
 |---     |---                    |
 | `port` | the port to listen on |
-
-
+| `hostname` | the hostname to listen on |
