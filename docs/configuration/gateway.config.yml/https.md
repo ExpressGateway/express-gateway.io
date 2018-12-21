@@ -15,6 +15,7 @@ The https section is used to configure HTTPS. Express Gateway will listen on the
 
 https:
   port: 9443
+  hostname: localhost
   tls:
     "*.demo.io":
         key: example/keys/demo.io.key.pem
@@ -33,6 +34,7 @@ https:
 | Name   | Description                |
 |---     |---                         |
 | `port` | the port to listen on      |
+| `hostname` | the hostname to listen on |
 | `tls`  | keys and certificate pairs |
 
 Express Gateway supports TLS, including SNI (domain specific TLS certificates). Each `tls` key can have a host domain specified.  Wildcards are supported for host domain matching. Paths to the TLS keys and certificates are specified in the `key` and `cert` keys as pairs.
