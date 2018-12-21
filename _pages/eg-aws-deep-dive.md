@@ -3,6 +3,7 @@ title: Express Gateway VS AWS API Gateway
 permalink: "/eg-vs-amazon-aws-api-gateway/"
 layout: page
 ---
+
 <div class="generic-page">
 <section class="page-section-normal">
 <div class="wrapper-flex">
