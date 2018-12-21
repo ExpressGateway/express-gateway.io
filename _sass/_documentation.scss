@@ -326,7 +326,7 @@
 
 
 
-main.markdown > .doc-wrapper > table {
+table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 2rem;
@@ -355,5 +355,57 @@ main.markdown > .doc-wrapper > table {
   td {
     color: $color-primary;
 
+  }
+}
+
+.generic-page {
+  ol {
+    list-style: decimal;
+    li {
+      &::before {
+        content: normal !important;
+      }
+    }
+  }
+  ul, ol {
+      padding-top: 1rem;
+
+    li {
+      padding-left: 1rem;
+      text-indent: -.5rem;
+      font-size: $font-size-16;
+      line-height: $font-lineheight-list;
+      padding-bottom: .75rem;
+      &::before {
+        content: "•";
+        color: $color-highlight;
+        position: relative;
+        right: .5rem;
+        font-size: 1rem;
+      }
+
+      li {
+        list-style: none;
+        &::before {
+          content: "\00b0";
+          color: $color-gray;
+          position: relative;
+          right: .5rem;
+          font-size: 1rem;
+          top: 3px;
+        }
+        li {
+          list-style: none;
+          &::before {
+            content: "•";
+            color: $color-gray;
+            position: relative;
+            right: .5rem;
+            font-size: .5rem;
+            top: -3px;
+          }
+        }
+      }
+    }
   }
 }

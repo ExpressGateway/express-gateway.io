@@ -47,7 +47,3 @@ Scopes must be declared within Express Gateway before they are used by credentia
 ##### Request: `DELETE /scopes/{scope}`
 
 ##### Response: 204
-
-### Create a Scope
-##### Request: `POST /scopes/{scope}`
-##### Response: 201

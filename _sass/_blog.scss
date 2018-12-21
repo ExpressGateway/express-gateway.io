@@ -394,10 +394,9 @@
        height: 1.25rem;
        left: -75%;
        top: -1px;
-      // background: url(../img/icon-arrow.svg) 0 0 no-repeat;
        background-color: $color-gray;
-       -webkit-mask: url(../img/icon-arrow.svg) no-repeat;
-       -webkit-transform: rotate(180deg);
+       mask: url(../img/icon-arrow.svg) no-repeat;
+       transform: rotate(180deg);
        transform: rotate(180deg);
     }
   }
@@ -414,9 +413,7 @@
        top: -1px;
        //background: url(../img/icon-arrow.svg) 0 0 no-repeat;
        background-color: $color-gray;
-        -webkit-mask: url(../img/icon-arrow.svg) no-repeat;
-      //  -webkit-transform: rotate(30deg);
-      //  transform: rotate(30deg);
+        mask: url(../img/icon-arrow.svg) no-repeat;
     }
   }
 
