@@ -170,4 +170,4 @@ The JWT scheme and header are not standardized, therefore they can be overriden 
 [users-create]: {{ site.baseurl }}{% link docs/cli/users/create.md %}
 [apps-create]: {{ site.baseurl }}{% link docs/cli/apps/create.md %}
 [credentials-create]: {{ site.baseurl }}{% link docs/cli/credentials/create.md %}
-[jwtz]: https://github.com/XVincentX/apigateway-playground/blob/microservice-gateway-hypermedia-kubernetes/gateway/jwtScopes.js
+[jwtz]: https://github.com/XVincentX/apigateway-playground/blob/microservice-gateway-hypermedia-kubernetes/gateway/app/jwtScopes.js
