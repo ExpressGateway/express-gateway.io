@@ -158,7 +158,7 @@ policies:
         serviceEndpoint: orders
 ```
 
-[json-is-yaml]: http://yaml.org/spec/1.2/spec.html#id2759572
+[json-is-yaml]: https://yaml.org/spec/1.2/spec.html#id2759572
 [references]: https://camel.readthedocs.io/en/latest/yamlref.html
 [jwt]: {{ site.baseurl }}{% link docs/policies/jwt.md %}
 [rate-limit]: {{ site.baseurl }}{% link docs/policies/rate-limiter.md %}

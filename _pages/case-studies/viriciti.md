@@ -53,6 +53,9 @@ Express Gateway and Tyk had unique benefits, but ViriCiti’s current framework 
 built in Node.js. Because Express Gateway is built on Express.js, a minimalistic framework for Node.js, it was easier
 to include as part of the tech stack that could scale with their ever growing company.
 
+Viriciti's story with **Express Gateway** has been featured on [NodeJS Official Blog][node-blog-news]
+
 [viriciti]: https://viriciti.com
 [prometheus]: https://prometheus.io/
 [kubernetes]: https://kubernetes.io/
+[node-blog-news]: https://medium.com/@nodejs/node-js-is-viricitis-go-to-dev-framework-for-real-time-electric-vehicle-fleet-monitoring-74c5b9fed99d
