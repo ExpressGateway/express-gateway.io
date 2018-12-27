@@ -18,7 +18,7 @@ Microservices and APIs is an architectural style that’s grabbing a lot of atte
 
 Express Gateway is a microservices API Gateway built on Express.js.
 
-For a deeper look at microservices and the role of the API Gateway check out [Martin Fowler’s breakdown](https://martinfowler.com/articles/serverless.html) in and the [API gateway pattern](http://microservices.io/patterns/apigateway.html) described on Chris Richardson's site.
+For a deeper look at microservices and the role of the API Gateway check out [Martin Fowler’s breakdown](https://martinfowler.com/articles/serverless.html) in and the [API gateway pattern](https://microservices.io/patterns/apigateway.html) described on Chris Richardson's site.
 </div>
 </div>
 </div>
