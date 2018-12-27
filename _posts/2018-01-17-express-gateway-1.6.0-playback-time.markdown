@@ -74,6 +74,6 @@ BOOM! Done!
 
 Whichever way you decide to venture, once the migration is over and you verified that the gateway is starting correctly, you can safely delete the old `.js` files.
 
-For more information about JSON Schema, [check out their website](http://json-schema.org/).
+For more information about JSON Schema, [check out their website](https://json-schema.org/).
 
 In case you encounter **any issues during the migration process** or you're in doubt, [feel free to ask for questions in our Gitter channel](https://gitter.im/ExpressGateway/express-gateway).
