@@ -1,7 +1,7 @@
 ---
 title: Service Endpoints
 layout: doc-section
-doc-order: 10.10
+doc-order: 10.90
 ---
 
 ### Overview Service Endpoints

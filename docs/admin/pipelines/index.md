@@ -1,7 +1,7 @@
 ---
 title: Pipelines
 layout: doc-section
-doc-order: 10.12
+doc-order: 10.92
 ---
 
 ### Overview Pipelines
