@@ -22,7 +22,7 @@ We're back with more about how you can use Transport Layer Security (TLS) Client
 
 In case the client certification is tampered with or you just do not trust the owner anymore, it is possible to revoke a client certificate. Just like with other policies like  `JWT`, `key-auth`, it is possible to revoke a credential.
 
-There are multiple ways to revoke a client certificate depending on the configuration of your CA. When choosing your client certificate revocation strategy, you should also think about is whether or not you have [transitioned from CRL to OCSP.](https://www.maikel.pro/blog/current-state-certificate-revocation-crls-ocsp/)
+There are multiple ways to revoke a client certificate depending on the configuration of your CA. When choosing your client certificate revocation strategy, you should also think about is whether or not you have [transitioned from CRL to OCSP.](https://www.fir3net.com/Security/Concepts-and-Terminology/certificate-revocation.html)
 
 ## Require a client certificate just for a specific path?
 

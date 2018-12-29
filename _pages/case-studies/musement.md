@@ -25,7 +25,7 @@ Such solution was a perfect fit to Musement because:
 - Development workflow integration
 - Ready for all developers (JS)
 
-### The solution
+### The Solution
 
 The team started with the Apigee Gateway solution but they found difficult to debug and maintain endpoints. In particular, Apigee's solution was lacking of SCM integration for custom scripts, preventing the team from sharing and synchronizing the custom logic with other teams and deployment resources, as well as difficulties during the integration into their actual development workflow. Caching strategies, also, weren't so easy to manage.
 
@@ -43,7 +43,7 @@ factor for their decision. In particular, the team appreciated a lot the followi
 - Pipelines: A super flexible selector engine that goes down to `METHOD` level
 - Declarative and dynamic: The gateway configuration is versionable.
 
-### The impact
+### The Impact
 
 Musement was attracted to Express Gateway for their API proxy project use case because of the broad range of clients they handle (website, mobile apps, partners integrations etc.)  Each client can have its own format and logic for request and response.
 

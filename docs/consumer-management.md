@@ -133,6 +133,6 @@ References:
 [cli]: {{ site.baseurl }}{% link docs/cli/index.md %}
 [admin]: {{ site.baseurl }}{% link docs/admin/index.md %}
 [headers]: {{ site.baseurl }}{% link docs/policies/headers.md %}
-[json-schema]: http://json-schema.org/
-[dependencies]: http://json-schema.org/latest/json-schema-validation.html#rfc.section.6.5.7
-[required]: http://json-schema.org/latest/json-schema-validation.html#rfc.section.6.5.3
+[json-schema]: https://json-schema.org/
+[dependencies]: https://json-schema.org/latest/json-schema-validation.html#rfc.section.6.5.7
+[required]: https://json-schema.org/latest/json-schema-validation.html#rfc.section.6.5.3

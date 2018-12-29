@@ -33,7 +33,7 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  &.joyent {
+  &.rectangular {
     align-self: center;
   }
 }
@@ -446,6 +446,8 @@ h2.description {
   display: flex;
   padding: 1rem;
   align-items: center;
+  justify-content: center;
+  height: auto;
   flex: 1;
   p {
     font-size: 0.75rem;
@@ -517,7 +519,7 @@ h2.description {
       max-width: 150px;
       max-height: 150px;
 
-      &.joyent {
+      &.rectangular {
         max-width: 250px;
         max-height: 250px;
       }
@@ -945,6 +947,7 @@ p code, table td code, li > code {
   .case-study-links {
     margin: 40px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -962,6 +965,8 @@ p code, table td code, li > code {
 
     overflow: hidden;
 
+    margin: 10px 0;
+
   }
 
   .image {
@@ -970,7 +975,7 @@ p code, table td code, li > code {
     }
     margin: auto;
     width: 150px;
-    height: 150px;
+    height: auto;
   }
 
   .writing {
