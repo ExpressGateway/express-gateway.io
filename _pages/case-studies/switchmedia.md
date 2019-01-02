@@ -2,7 +2,7 @@
 title: Switch Media Fulfills Complex Requirements through Express Gateway
 permalink: "/case-studies/switchmedia/"
 layout: case-study-detail
-logo: switch
+logo: switchmedia
 ---
 
 ### Background
