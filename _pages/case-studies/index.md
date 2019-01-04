@@ -7,7 +7,7 @@ Read successful stories of companies using Express Gateway in production. Do you
 featured on this page? Get in touch with [us][egMail]. We'll be more than happy to work with you on your use case
 and craft a story to be published here.
 
-[egMail]: mailto:vincenzo@express-gateway.io
+[egMail]: mailto:info@express-gateway.io
 
 <div class="case-study-links">
 {% for page in site.pages %}
