@@ -17,8 +17,6 @@ We knew that Express Gateway's key strength was its flexibility and true non-bla
 
 <!--excerpt-->
 
-We knew that Express Gateway's key strength was its flexibility and true non-black box approach to extensibility when it comes to customizing and building on its core.  Switch Media took that bet back with version 1.12.0 and won big time.
-
 When we asked their lead engineer Szalbocs if they would provide their story as a case study, he gladly obliged.
 
 Come read about [Switch Media's Express Gateway success story][switchmedia].
