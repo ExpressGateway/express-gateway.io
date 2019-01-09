@@ -18,9 +18,14 @@ layout: page
 <li>{% include res-basic.svg %}<h3>Basic Auth</h3><p>Username and Password</p></li>
 <li>{% include res-key.svg %}<h3>Key Auth</h3><p>API keys for users and applications</p></li>
 <li>{% include res-oauth.svg %}<h3>OAuth2</h3><p>Authentications and Authorization Flows</p></li>
-<li>{% include res-jwt.svg %}<h3>JWT</h3><p>JSON Web Token validation and issuing</p></li>
+<li>{% include res-jwt.svg %}<h3>JWT</h3><p>JSON Web Token issuing and validation</p></li>
 </ul>
 
+#### Customization
+<ul class="icon-list">
+<li>{% include res-expression.svg %}<h3>Expression</h3><p>Set any header to the response message</p></li>
+<li>{% include res-headers.svg %}<h3>Headers</h3><p>Set any header in the response message</p></li>
+</ul>
 
 #### Security
 <ul class="icon-list">
@@ -29,11 +34,9 @@ layout: page
 </ul>
 
 #### Utilities
-
 <ul class="icon-list">
 <li>{% include res-rewrite.svg %}<h3>Rewrite</h3><p>Rewrite URL or Redirect Requests</p></li>
-<li>{% include res-terminate.svg %}<h3>Terminate</h3><p>Terminate the request with a status code and message</p></li>
-<li>{% include res-headers.svg %}<h3>Headers</h3><p>Set any header to the response message</p></li>
+<li>{% include res-terminate.svg %}<h3>Terminate</h3><p>Terminate a request with a status code and message</p></li>
 </ul>
 
 #### Quality of Service
@@ -56,9 +59,9 @@ layout: page
 ###### Get involved and join our community of developers, practitioners and technologists.
 <div class="flex-row">
 <ul class="logo-cloud">
-<li><a href="https://groups.google.com/a/express-gateway.io/forum/#!forum/discuss" target="_blank"><img src="../assets/img/logo-googlegroups.png" /></a></li>
 <li><a href="https://gitter.im/ExpressGateway/express-gateway" target="_blank"><img src="../assets/img/logo-gitter.png" /></a></li>
 <li><a href="https://stackoverflow.com/questions/tagged/express-gateway" target="_blank">{% include logo-stackoverflow.svg %}</a></li>
+<li><a href="https://groups.google.com/a/express-gateway.io/forum/#!forum/discuss" target="_blank"><img src="../assets/img/logo-googlegroups.png" /></a></li>
 </ul>
 <div class="bug-block">
 <div class="bug-block-content" markdown="1">
