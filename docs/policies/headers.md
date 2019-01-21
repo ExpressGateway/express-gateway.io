@@ -4,6 +4,8 @@ layout: doc-section
 doc-order: 5.11
 ---
 
+**Note:** This policy has been superseded by the [Request Transformer][req-tran] and might be removed in a future version of Express Gateway.
+
 ### Description
 
 The Headers policy allows you to forward arbitrary values from the gateway as headers in the responseo object.
@@ -44,3 +46,4 @@ pipelines:
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [expression]: {{ site.baseurl }}{% link docs/policies/expression.md %}
 [policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
+[req-tran]: {{ site.baseurl }}{% link docs/policies/request-transformer.md %}
