@@ -1,5 +1,5 @@
 ---
-title: Coozy Innovates with Microservices Using Express Gateway
+title: Coozzy Innovates with Microservices Using Express Gateway
 permalink: "/case-studies/coozzy/"
 layout: case-study-detail
 logo: coozzy
