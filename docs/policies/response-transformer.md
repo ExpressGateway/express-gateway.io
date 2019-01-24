@@ -1,24 +1,24 @@
 ---
-title: Request Transformer
+title: Response Transformer
 layout: doc-section
 doc-order: 5.9
 ---
 
 ### Description
 
-The Request Transformer policy allows to modify the request sent by a client on the fly on Express Gateway, before hitting the upstream server.
+The Request Transformer policy allows to modify the response sent by the server on the fly on Express Gateway, before returning it back to the client
 
-It can currently **add/remove** HTTP headers to the current request and **add/remove** properties to the request body, as long it's JSON or URL Encoded. It will skip the body modification in case the parsing operation does not succeed, sending the request to the upstream server untouched.
+It can currently **add/remove** HTTP headers to the current response and **add/remove** properties to the response body, as long it's JSON. It will skip the body modification in case the parsing operation does not succeed, sending the response to the client server untouched.
 
 ### Usage
 
-To enable the Request Transformer policy, add `request-transformer` in [gateway.config.yml][gateway.config.yml] in the [policies][policies]
+To enable the Response Transformer policy, add `response-transformer` in [gateway.config.yml][gateway.config.yml] in the [policies][policies]
 section.
 
 ```yaml
 
 policies:
-  - request-transformer
+  - response-transformer
 ```
 
 ### Example
@@ -29,7 +29,7 @@ pipelines:
     apiEndpoints:
       - sampleEndpoint
     policies:
-      - request-transformer:
+      - response-transformer:
         - action:
             body:
               add:
@@ -50,7 +50,7 @@ pipelines:
     apiEndpoints:
       - sampleEndpoint
     policies:
-      - request-transformer:
+      - response-transformer:
         - action:
             body:
               add:
