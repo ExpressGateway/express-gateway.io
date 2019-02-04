@@ -63,6 +63,7 @@ pipelines:
               serviceEndpoint: backend
 ```
 
+**Note:** Mind the difference between an _expression_ and a _constant string value_. A constant string value must be quoted, so for example `"'world'"` is a constant string value. An expression doesn't need that: `req.consumerId` is an expression.
 
 ##### Options Reference
 
