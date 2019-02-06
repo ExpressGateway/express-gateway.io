@@ -42,7 +42,7 @@ pipelines:
               serviceEndpoint: backend
 ```
 
-The value of the properties can also be a Javascript expression which will be run in the same context of the [expression policy][expression] so all its limitations apply. An example could be:
+The value of the properties can also be a JavaScript expression which will be run in the same context of the [expression policy][expression] so all its limitations apply. An example could be:
 
 ```yaml
 pipelines:

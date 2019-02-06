@@ -6,9 +6,9 @@ doc-order: 5.9
 
 ### Description
 
-The Request Transformer policy allows to modify the request sent by a client on the fly on Express Gateway, before hitting the upstream server.
+The Request Transformer policy allows to modify the request sent by a client on the fly on Express Gateway, before hitting the downstream server.
 
-It can currently **add/remove** HTTP headers to the current request and **add/remove** properties to the request body, as long it's JSON or URL Encoded. It will skip the body modification in case the parsing operation does not succeed, sending the request to the upstream server untouched.
+It can currently **add/remove** HTTP headers to the current request and **add/remove** properties to the request body, as long it's JSON or URL Encoded. It will skip the body modification in case the parsing operation does not succeed, sending the request to the downstream server untouched.
 
 ### Usage
 
@@ -42,7 +42,7 @@ pipelines:
               serviceEndpoint: backend
 ```
 
-The value of the properties can also be a Javascript expression which will be run in the same context of the [expression policy][expression] so all its limitations apply. An example could be:
+The value of the properties can also be a JavaScript expression which will be run in the same context of the [expression policy][expression] so all its limitations apply. An example could be:
 
 ```yaml
 pipelines:
