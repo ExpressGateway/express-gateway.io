@@ -8,7 +8,7 @@ addons:
 cache: bundler
 script:
   - bundle exec jekyll build
-  - bundle exec htmlproofer _site/ --alt-ignore '/.*/' --assume-extension --allow-hash-href --enforce-https --url-ignore /vimeo\.com/
+  - bundle exec htmlproofer _site/ --alt-ignore '/.*/' --assume-extension --allow-hash-href --enforce-https --url-ignore /vimeo\.com/,/feathub\.com/
 rvm:
  - 2.5.3
 
