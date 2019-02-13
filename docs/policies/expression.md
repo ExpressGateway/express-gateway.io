@@ -1,7 +1,7 @@
 ---
 title: Expression
 layout: doc-section
-doc-order: 5.12
+doc-order: 5.15
 ---
 
 ### Description

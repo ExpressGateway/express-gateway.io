@@ -1,7 +1,7 @@
 ---
-title: Headers
+title: Headers (deprecated)
 layout: doc-section
-doc-order: 5.11
+doc-order: 5.16
 ---
 
 **Note:** This policy has been superseded by the [Request Transformer][req-tran] and might be removed in a future version of Express Gateway.
