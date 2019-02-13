@@ -8,11 +8,11 @@ doc-order: 5.11
 
 ### Description
 
-The Headers policy allows you to forward arbitrary values from the gateway as headers in the responseo object.
+The Headers policy allows you to forward arbitrary values from the gateway as headers in the response object.
 
 ### Usage
 
-To enable the Expression policy, add `headers` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
+To enable the Headers policy, add `headers` in [gateway.config.yml][gateway.config.yml] in the [policies][policies] section.
 
 ```yaml
 policies:
