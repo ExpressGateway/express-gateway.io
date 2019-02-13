@@ -23,8 +23,9 @@ layout: page
 
 #### Customization
 <ul class="icon-list">
-<li>{% include res-expression.svg %}<h3>Expression</h3><p>Set any header to the response message</p></li>
-<li>{% include res-headers.svg %}<h3>Headers</h3><p>Set any header in the response message</p></li>
+<li>{% include res-expression.svg %}<h3>Expression</h3><p>Execute JavaScript within the egContext object</p></li>
+<li>{% include res-req-transformer.svg %}<h3>Request Transformer</h3><p>Modify header or body in the request message</p></li>
+<li>{% include res-res-transformer.svg %}<h3>Response Transformer</h3><p>Modify header or body in the response message</p></li>
 </ul>
 
 #### Security
