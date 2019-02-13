@@ -1,7 +1,7 @@
 ---
 title: OAuth 2.0 Introspection
 layout: doc-section
-doc-order: 5.5
+doc-order: 5.40
 ---
 
 ### Description

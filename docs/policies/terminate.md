@@ -1,7 +1,7 @@
 ---
 title: Terminate
 layout: doc-section
-doc-order: 5.8
+doc-order: 5.70
 ---
 
 ### Description

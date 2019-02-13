@@ -1,7 +1,7 @@
 ---
 title: Response Transformer
 layout: doc-section
-doc-order: 5.9
+doc-order: 5.60
 ---
 
 ### Description

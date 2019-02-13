@@ -1,7 +1,7 @@
 ---
 title: Rate Limiter
 layout: doc-section
-doc-order: 5.7
+doc-order: 5.50
 ---
 
 ### Description

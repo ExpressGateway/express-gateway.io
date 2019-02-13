@@ -1,7 +1,7 @@
 ---
 title: JWT Verification
 layout: doc-section
-doc-order: 5.3
+doc-order: 5.20
 ---
 
 ### Description

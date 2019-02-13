@@ -1,7 +1,7 @@
 ---
 title: Basic Authorization
 layout: doc-section
-doc-order: 5.1
+doc-order: 5.05
 ---
 
 ### Description
