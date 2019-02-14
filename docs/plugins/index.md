@@ -54,6 +54,16 @@ Plugins can also be installed manually by following the steps outlined below:
 4. add your plugin name under it
 5. provide global plugin parameters (if applicable)
 
+### Plugins not located on NPM
+In the rare case when a plugin is not on NPM (this might happen in case you have a private code repository), you can specify the exact entrypoint using the `package` property of the specific plugin section:
+
+```yml
+plugins:
+   example: # "express-gateway-plugin-example"
+      param1: 'global per plugin param1'
+      package: '../manifest.js'
+```
+
 ### Plugin Naming Convention
 Express Gateway will load pugins by convention using the prefix `express-gateway-plugin-` within the npm package module name. Plugins that do not follow this convention can still be loaded by specifying the package name within the `package` property.
 
