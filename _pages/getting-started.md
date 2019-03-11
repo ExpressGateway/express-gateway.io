@@ -217,5 +217,5 @@ Note: Express Gateway comes with an in-memory database.  All config file changes
 </section>
 </article>
 
-[pipeline]: {{ site.baseurl }}{% link docs/policies/index.md %}
-[policies]: {{ site.baseurl }}{% link docs/core-concepts.md %}#pipelines
+[policies]: {{ site.baseurl }}{% link docs/policies/index.md %}
+[pipeline]: {{ site.baseurl }}{% link docs/core-concepts.md %}#pipelines
