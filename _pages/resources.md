@@ -24,6 +24,7 @@ layout: page
 #### Customization
 <ul class="icon-list">
 <li>{% include res-expression.svg %}<h3>Expression</h3><p>Execute JavaScript within the egContext object</p></li>
+<li>{% include res-lambda.svg %}<h3>Lambda</h3><p>Proxy to AWS Lambda Functions</p></li>
 <li>{% include res-req-transformer.svg %}<h3>Request Transformer</h3><p>Modify header or body in the request message</p></li>
 <li>{% include res-res-transformer.svg %}<h3>Response Transformer</h3><p>Modify header or body in the response message</p></li>
 </ul>
