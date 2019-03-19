@@ -1,1 +1,26 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><title>Artboard 1</title><path d="M53.56,34.48V29.33a8.22,8.22,0,0,0-8.2-8.19H21.28a8.22,8.22,0,0,0-8.2,8.19V53.41a8.22,8.22,0,0,0,8.2,8.2H44.22" style="fill:none;stroke:#56a5c0;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.49113516425134px"/><line x1="31.31" y1="39.16" x2="26.25" y2="44.22" style="fill:none;stroke:#f7c542;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.6340000000000001px"/><path d="M23.34,47.13l0,0-1.68,1.68a1.27,1.27,0,0,0,0,1.8l2.52,2.52a1.27,1.27,0,0,0,1.8,0l9.78-9.77" style="fill:none;stroke:#f7c542;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.6340000000000001px"/><path d="M35.74,43.39a7.28,7.28,0,0,0,9.63-6.9,7.21,7.21,0,0,0-.86-3.43l-5.6,5.6-3.13-3.13L41.33,30a7.2,7.2,0,0,0-3.24-.77,7.28,7.28,0,0,0-7.28,7.28,7.41,7.41,0,0,0,.5,2.67" style="fill:none;stroke:#f7c542;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.6340000000000001px"/><path d="M73.73,69.14a.78.78,0,0,0-.79-.78c-4,0-21.79-1.06-25.11-19.9a2.46,2.46,0,0,0-.14,1C49.15,71.92,69,73.12,73.26,73.12a.77.77,0,0,1,.47.17Z" style="fill:#d7e8ed"/><path d="M88.53,68l-2.46-1.87L75,74.54a.77.77,0,0,1-.94,0v4.14a.78.78,0,0,0,1.25.62L88.53,69.23A.79.79,0,0,0,88.53,68Z" style="fill:#d7e8ed"/><path d="M88.08,63.42,74.85,53.35a.78.78,0,0,0-1.26.62v4.71a.77.77,0,0,1-.78.78c-3.06,0-14.13-1.18-16.3-15.07A2.55,2.55,0,0,0,54,42.19H49.78a2.55,2.55,0,0,0-2.55,2.69C48.7,67.36,68.58,68.56,72.81,68.56a.78.78,0,0,1,.78.78v4.78a.79.79,0,0,0,1.26.62L88.08,64.67A.79.79,0,0,0,88.08,63.42Z" style="fill:none;stroke:#56a5c0;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.49113516425134px"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<path style="fill:none;stroke:#56A5C0;stroke-width:2.4911;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+	M53.5,30.3v-6.4c0-5.6-4.6-10.2-10.2-10.2H13.1c-5.6,0-10.2,4.6-10.2,10.2v30.1c0,5.6,4.6,10.2,10.2,10.2h28.7"/>
+<g>
+	
+		<line style="fill:none;stroke:#F7C542;stroke-width:1.634;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="25.7" y1="36.1" x2="19.4" y2="42.4"/>
+	<path style="fill:none;stroke:#F7C542;stroke-width:1.634;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+		M15.7,46.1L15.7,46.1l-2.1,2.1c-0.6,0.6-0.6,1.6,0,2.3l3.2,3.2c0.6,0.6,1.6,0.6,2.3,0l12.2-12.2"/>
+	<path style="fill:none;stroke:#F7C542;stroke-width:1.634;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+		M31.2,41.4c0.9,0.3,1.9,0.5,2.9,0.5c5,0,9.1-4.1,9.1-9.1c0-1.6-0.4-3-1.1-4.3l-7,7l-3.9-3.9l6.9-6.9c-1.2-0.6-2.6-1-4-1
+		c-5,0-9.1,4.1-9.1,9.1c0,1.2,0.2,2.3,0.6,3.3"/>
+</g>
+<g>
+	<path style="fill:#D7E8ED;" d="M78.7,73.6c0-0.5-0.4-1-1-1c-5,0-27.2-1.3-31.4-24.9c-0.1,0.4-0.2,0.8-0.2,1.2
+		C48,77,72.8,78.5,78.1,78.5c0.2,0,0.4,0.1,0.6,0.2V73.6z"/>
+	<path style="fill:#D7E8ED;" d="M97.2,72.1l-3.1-2.3L80.3,80.3c-0.4,0.3-0.8,0.2-1.2,0v5.2c0,0.8,0.9,1.3,1.6,0.8l16.5-12.6
+		C97.7,73.3,97.7,72.5,97.2,72.1z"/>
+</g>
+<path style="fill:none;stroke:#56A5C0;stroke-width:2.4911;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+	M96.6,66.4L80.1,53.8c-0.6-0.5-1.6,0-1.6,0.8v5.9c0,0.5-0.4,1-1,1c-3.8-0.1-17.7-1.5-20.4-18.8c-0.2-1.6-1.6-2.8-3.2-2.8
+	c-1.6,0-3.6,0-5.3,0c-1.8,0-3.3,1.5-3.2,3.4c1.8,28.1,26.7,29.6,32,29.6c0.5,0,1,0.4,1,1v6c0,0.8,0.9,1.3,1.6,0.8L96.6,68
+	C97.1,67.6,97.1,66.8,96.6,66.4z"/>
+</svg>

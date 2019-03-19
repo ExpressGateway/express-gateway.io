@@ -15,7 +15,7 @@ This type of policy should generally be placed first in the policies list within
 
 The Rewrite policy was the first policy to be built utilizing the plugin framework and not included as part of EG core.
 
-To enable it, you need to install its plugin fist:
+To enable it, you need to install its plugin first:
 
 `eg plugins install express-gateway-plugin-rewrite`
 
