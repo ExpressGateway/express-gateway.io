@@ -226,6 +226,51 @@ condition:
   name: tlsClientAuthenticated
 ```
 
+### json-schema
+
+Matches if the current request body came with a payload that passes the specified schema validation
+
+```yml
+condition:
+  name: json-schema
+  schema:
+    type: object
+    properties:
+      name:
+        type: string
+      age:
+        type: number
+    required:
+      - name
+      - age
+```
+
+In the example shown above, the request's body must have a `name` and `age` properties, respectively a `string` and a `number` and they're both required.
+
+You can put any valid JSON Schema in it, but it can't currently resolve references.
+
+Since any JSON is a valid YAML, you can also put a JSON Schema that's coming from another source:
+
+```yml
+condition:
+  name: json-schema
+  schema: {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "age": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "name",
+      "age"
+    ]
+  }
+```
+
 ## Best Practice Note
 While it is possible to build quite complicated condition tree, huge trees could greatly affect readability of your EG configuration. In such cases it could be better to have multiple api endpoints and pipelines
 
