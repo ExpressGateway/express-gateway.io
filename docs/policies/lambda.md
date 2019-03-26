@@ -19,28 +19,29 @@ Then add `lambda` in [gateway.config.yml][gateway.config.yml] in the [policies][
 ```yaml
 
 policies:
-  - lambda
+  - lambda-proxy
 ```
 
 ### Example
 
 ```yaml
 
-policies:
-  -
-    lambda:
-      -
-        condition:
-          name: pathExact
-          match: /foo/bar # Express Path
-        action:
-          functionName: process-list
-      -
-        condition:
-          name: regexpmatch
-          match: ^/js/(.*)$
-        action:
-          functionName: send-file
+pipelines:
+  default:
+    policies:
+      - lambda-proxy:
+          -
+            condition:
+              name: pathExact
+              match: /foo/bar # Express Path
+            action:
+              functionName: process-list
+          -
+            condition:
+              name: regexpmatch
+              match: ^/js/(.*)$
+            action:
+              functionName: send-file
 ```
 
 ### Reference
