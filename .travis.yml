@@ -14,5 +14,3 @@ rvm:
 branches:
   only:
   - gh-pages
-  - /.*/
-
