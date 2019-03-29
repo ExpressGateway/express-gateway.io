@@ -5,26 +5,6 @@
   padding: 15px;
   align-items: center;
   justify-content: center;
-  color: $color-background;
-  background: #0c6c7b; /* Old browsers */
-  background: -moz-linear-gradient(
-    170deg,
-    #0c6c7b 0%,
-    #0c6c7b 45%,
-    #37aedc 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    170deg,
-    #0c6c7b 0%,
-    #0c6c7b 45%,
-    #37aedc 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    170deg,
-    #0c6c7b 0%,
-    #0c6c7b 45%,
-    #37aedc 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
   p {
     text-align: center;
@@ -39,11 +19,16 @@
     a {
       align-self: center;
       max-width: 50px;
+      &:hover {
+        svg {
+          fill: #0e8696;
+        }
+      }
       svg {
         display: block;
         width: 50%;
-        opacity: 0.8;
         margin: 0 25% 0 25%;
+        fill: #34a8c4;
       }
     }
   }
