@@ -3,15 +3,15 @@
   <nav>
     <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | uri_escape}}&title={{ page.title | default:"" | uri_escape }}"
       target="_blank">
-      {% include social-facebook.svg %}
+      {% include social-facebook-blue.svg %}
     </a>
     <a href="https://twitter.com/intent/tweet?via=express_gateway&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | uri_escape}}&text={{ page.title | default:"" | uri_escape}}"
       target="_blank">
-      {% include social-twitter.svg %}
+      {% include social-twitter-blue.svg %}
     </a>
     <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | uri_escape}}&title={{ page.title | default:"" | uri_escape}}"
       target="_blank">
-      {% include social-linkedin.svg %}
+      {% include social-linkedin-blue.svg %}
     </a>
   </nav>
 </div>
