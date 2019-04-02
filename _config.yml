@@ -27,7 +27,7 @@ twitter_username: express_gateway
 encoding: UTF-8
 markdown: kramdown
 theme: minima
-gems:
+plugins:
 - jekyll-feed
 - jekyll-gist
 - jekyll-paginate
