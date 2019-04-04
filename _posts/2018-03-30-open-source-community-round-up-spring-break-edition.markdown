@@ -24,7 +24,7 @@ Let's start with the important stuff. This week we [released 1.8.0 with some eag
 
 Also, on that same note - we are actively working towards joining the [official Docker images program](https://docs.docker.com/docker-hub/official_repos/). So keep an eye out.
 
-There are still a lot of opportunities to contribute, maintain or just provide general community support. If you're interested, we're [growing the roadmap](https://github.com/ExpressGateway/express-gateway/milestones).
+There are still a lot of opportunities to contribute, maintain or just provide general community support. If you're interested, we're [growing the roadmap]({% link docs/roadmap.md %}).
 
 ## Interview with Bob Rhubart & Vincenzo Chianese
 

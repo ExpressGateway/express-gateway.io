@@ -7,7 +7,7 @@ doc-order: 31.0
 The Express Gateway roadmap consists of three parts:
 1. features request and feedback in [Express Gateway Feathub](https://feathub.com/ExpressGateway/express-gateway)
 2. this document that captures all features under considered at the epic level
-3. the [Waffle.io task board](https://waffle.io/ExpressGateway/express-gateway) that the Express Gateway contributors use to prioritize feature for the next release
+3. the [GitHub project](https://github.com/orgs/ExpressGateway/projects/1) that the Express Gateway contributors use to prioritize feature for the next release
 
 ## Timeframes
 The timeframes for consideration to implement new features
@@ -27,34 +27,34 @@ The timeframes for consideration to implement new features
   - ability to invoke AWS Lambda functions
   - [spec](https://drive.google.com/drive/folders/0Bwxx-TAdSozIeDhsWmdrLWlybzA)
   - spike
-  - story prefix "AWS Lambda" in Waffle.io task board
+  - story prefix "AWS Lambda" in GitHub project
 * Request and Response Transformer Policies
   - a consistent experience in manipulating `req` and `res` objects for both header and body modifications
   - builds off the work completed and field tested in the [body-modifier](https://github.com/XVincentX/express-gateway-plugin-body-modifier)
   - [headers policy](https://www.express-gateway.io/docs/policies/headers/) intended to be marked for deprecation
-  - story prefix "Req/Res Transformer:" in Waffle.io task board
+  - story prefix "Req/Res Transformer:" in GitHub project
 * OpenAPI Support
   - ingest OpenAPI spec and scaffold EG configuration
   - federate OpenAPI over EG instances
   - [spec](https://docs.google.com/document/d/12OsuoxjrFqJeNQbxkCeSLLrIR6PG6QMyHHrIkAHk1fc/edit?usp=sharing)
   - spike
-  - story prefix "OpenAPI:" in Waffle.io task board
+  - story prefix "OpenAPI:" in GitHub project
 * Enhanced Clustering Capabilities
   - cross cluster global counters
   - other shared data among EG instances
   - create spec
   - spike
-  - story prefix "Clustering:" in Waffle.io task board
+  - story prefix "Clustering:" in GitHub project
 * GraphQL
   - integrate GraphQL capabilities within Express Gateway using leading express friendly GraphQL module
   - create spec
   - spike
-  - story prefix "GraphQL:" in Waffle.io task board
+  - story prefix "GraphQL:" in GitHub project
 * Ingress Controller
   - Express Gateway acting as a Kubernetes ingress controller
   - [spec](https://docs.google.com/document/d/1wkpcVGAnI2rQzetMJ6QVHUrE9TBXf0YvxqYAWUsCerY/edit#heading=h.g4cmjsccbpnm)
   - spike
-  - story prefix "Ingress Controller:" in Waffle.io task board
+  - story prefix "Ingress Controller:" in GitHub project
 * Plugin Framework - Iteration 2
   - [spec](https://docs.google.com/document/d/1jSDul2n_xbeKNtnek69M79-geur6aTWShAcBZ9evD0E/edit)
   - [development plan](https://docs.google.com/document/d/1nVQIL4A_oJ1wy1XdXBSX7uX27A5tDD62n_4GvpuWCk8/edit)
@@ -63,11 +63,11 @@ The timeframes for consideration to implement new features
   - new models
   - CLI (additional Yeoman generators)
   - decouple CLI from config files (use Admin API only)
-  - story prefix "Plugin Framework:" in Waffle.io task board
+  - story prefix "Plugin Framework:" in GitHub project
 * Microservice/Service discovery and orchestration
   - [spec](https://docs.google.com/document/d/1wkpcVGAnI2rQzetMJ6QVHUrE9TBXf0YvxqYAWUsCerY/edit)
   - spike
-  - story prefix "Service Discovery:" in Waffle.io task board
+  - story prefix "Service Discovery:" in GitHub project
 
 ### Short Term (Several Minors Out)
 * OpenID 1.0 Policy

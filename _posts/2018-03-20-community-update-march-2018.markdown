@@ -47,7 +47,7 @@ Exploring the ins-n-outs of environment variables? We [added support for environ
 
 After [releasing the latest 1.7.3](https://www.express-gateway.io/express-API-gateway-update-03112018/), we've gotten a great response and also quite a few questions about what's next. Given that this project is being put to work by developers in production environments, this is a very important question.
 
-So, you can always learn more about upcoming features and releases by checking out the **[Express Gateway Roadmap.](https://github.com/ExpressGateway/express-gateway/milestones)** Something you may not see in there is for 1.7.4 - we're going to be making some noise about Docker. With the latest major updates, it's going to be a big one and we'll share more details as the updated Docker images.
+So, you can always learn more about upcoming features and releases by checking out the **[Express Gateway Roadmap.]({% link docs/roadmap.md %})** Something you may not see in there is for 1.7.4 - we're going to be making some noise about Docker. With the latest major updates, it's going to be a big one and we'll share more details as the updated Docker images.
 
 
 ## What Else? A little something special.
