@@ -45,6 +45,6 @@ We would [love your support in making it happen](https://github.com/ExpressGate
 
 **_Not quite ready? That’s ok!_**
 
-* [**Upvote features on Feathub**](https://feathub.com/ExpressGateway/express-gateway). Then, we roll up the most popular or interesting features ([Docker images \*nudge\*nudge\*](https://www.lunchbadger.com/official-docker-images-for-express-gateway/)) will then make it over to the [**Express Gateway roadmap**](https://github.com/ExpressGateway/express-gateway/milestones).
+* [**Upvote features on Feathub**](https://feathub.com/ExpressGateway/express-gateway). Then, we roll up the most popular or interesting features ([Docker images \*nudge\*nudge\*](https://www.lunchbadger.com/official-docker-images-for-express-gateway/)) will then make it over to the [**Express Gateway roadmap**]({% link docs/roadmap.md %}).
 * Join the [**Express Gateway Newsletter**](https://eepurl.com/cVOqd5 ) update list
 * [Follow along on **Twitter**](https://twitter.com/express_gateway)

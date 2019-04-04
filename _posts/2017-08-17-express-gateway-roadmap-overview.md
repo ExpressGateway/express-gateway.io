@@ -26,9 +26,9 @@ The closer something is to you - the more detail. As things get father out - the
 The answer is simple - based on commmunity driven _need_ and ongoing feedback.
 
 ### Roadmap and Express Gateway Development -  How it Works
-The Express Roadmap is outlined on the [Github repository wiki page](https://github.com/ExpressGateway/express-gateway/wiki/Express-Gateway-Roadmap). We've done our best to articulate important features shared with us by the community. This is a living document and if you're interested in taking a lead role, we're looking for maintainers right now.
+The Express Roadmap is outlined on the [Roadmap page]({% link docs/roadmap.md %}). We've done our best to articulate important features shared with us by the community. This is a living document and if you're interested in taking a lead role, we're looking for maintainers right now.
 
-Next, it's time to get to work! So, larger feature sets for the next release are taken from the roadmap put into the "Backlog" column on the [Waffle taskboard](https://waffle.io/ExpressGateway/express-gateway). Then, contributors build out epics to describe the feature with multiple user stories that can be work on in iterative chunks. Additionally, epics are prefixed with a descriptor at the beginning of their title, for example - _"Clustering:"_.  This makes it easy to filter the Waffle board while not having to create a Github label for every epic being worked on. Also, it frees up the Github milestone to be able to group user stories into a Release.
+Next, it's time to get to work! So, larger feature sets for the next release are taken from the roadmap put into the "Backlog" column on the [GitHub project](https://github.com/orgs/ExpressGateway/projects/1). Then, contributors build out epics to describe the feature with multiple user stories that can be work on in iterative chunks. Additionally, epics are prefixed with a descriptor at the beginning of their title, for example - _"Clustering:"_.  This makes it easy to filter the GitHub project while not having to create a Github label for every epic being worked on. Also, it frees up the Github milestone to be able to group user stories into a Release.
 
 Once the epic is articulated, prioritized items in the "Backlog" move on over into the "In Progress" column. Then, the magic happens!
 
@@ -39,4 +39,4 @@ _So what is it?_
 
 FeatHub is a  feature voting platform consolidated to a simple interface to make it easier to upvote your favorites. You can now enter in features and enhnacements on the [Express Gateway Feathub](https://feathub.com/ExpressGateway/express-gateway).
 
-Using Feathub, we can listen more closely to develoeprs, like you, and be more inclusive of everyone in the Developer Community. The best and brightest features will get added to the [Express Gateway Roadmap](https://github.com/ExpressGateway/express-gateway/wiki/Express-Gateway-Roadmap). Check it out!
+Using Feathub, we can listen more closely to develoeprs, like you, and be more inclusive of everyone in the Developer Community. The best and brightest features will get added to the [Express Gateway Roadmap]({% link docs/roadmap.md %}). Check it out!
