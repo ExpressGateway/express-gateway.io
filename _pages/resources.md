@@ -24,7 +24,6 @@ layout: page
 #### Customization
 <ul class="icon-list">
 <li>{% include res-expression.svg %}<h3>Expression</h3><p>Execute JavaScript within the egContext object</p></li>
-<li>{% include res-lambda.svg %}<h3>Lambda</h3><p>Proxy to AWS Lambda Functions</p></li>
 <li>{% include res-req-transformer.svg %}<h3>Request Transformer</h3><p>Modify header or body in the request message</p></li>
 <li>{% include res-res-transformer.svg %}<h3>Response Transformer</h3><p>Modify header or body in the response message</p></li>
 </ul>
@@ -35,17 +34,22 @@ layout: page
 <li>{% include res-cors.svg %}<h3>CORS</h3><p>Cross Origin Resource Sharing</p></li>
 </ul>
 
-#### Utilities
+#### Serverless
 <ul class="icon-list">
-<li>{% include res-rewrite.svg %}<h3>Rewrite</h3><p>Rewrite URL or Redirect Requests</p></li>
-<li>{% include res-terminate.svg %}<h3>Terminate</h3><p>Terminate a request with a status code and message</p></li>
+<li>{% include res-lambda.svg %}<h3>Lambda</h3><p>Proxy to AWS Lambda Functions</p></li>
 </ul>
 
 #### Quality of Service
-<ul class="icon-list no-border">
+<ul class="icon-list">
 <li>{% include res-simplelogger.svg %}<h3>Simple Logger</h3><p>Logging Format and Output</p></li>
 <li>{% include res-lbproxy.svg %}<h3>Load Balancer Proxy</h3><p>Load Balance and Proxy to Services</p></li>
 <li>{% include res-rate.svg %}<h3>Rate Limiter</h3><p>Throttle API Requests</p></li>
+</ul>
+
+#### Utilities
+<ul class="icon-list no-border">
+<li>{% include res-rewrite.svg %}<h3>Rewrite</h3><p>Rewrite URL or Redirect Requests</p></li>
+<li>{% include res-terminate.svg %}<h3>Terminate</h3><p>Terminate a request with a status code and message</p></li>
 </ul>
 </div>
 </div>
