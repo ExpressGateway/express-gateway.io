@@ -1,5 +1,6 @@
 ---
 title: How To Get Application Specific Metrics Using Express Gateway
+description: How Express Gateway can help you to add application specific metrics and expose them through an HTTP endpoint that can be queried by Prometheus.
 date: 2018-03-13 06:09:00 Z
 categories:
 - technology

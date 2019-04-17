@@ -1,5 +1,6 @@
 ---
 title: Express Gateway Roadmap Overview
+description: An overview of the features and key milestones of Express Gateway, the open source API Gateway built on Express.js.
 date: 2017-08-17 16:00:00 Z
 categories:
 - announcements

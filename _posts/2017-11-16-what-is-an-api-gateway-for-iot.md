@@ -1,6 +1,6 @@
 ---
 title: What Is an API Gateway for IoT?
-date: 2017-11-16 00:00:00 Z
+description: Learn more about how an API Gateway can help you sustainably build a backend to your IoT applications. Covers the basic components of an IoT backend and API Gateways.
 categories:
 - technology
 layout: post

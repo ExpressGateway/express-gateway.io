@@ -1,5 +1,6 @@
 ---
 title: Getting Started with OAuth2
+description: Learn how to implement OAuth2 in Express Gateway, the API Gateway built around NodeJ + Express.JS
 date: 2017-08-31 16:00:00 Z
 categories:
 - guides

@@ -1,5 +1,6 @@
 ---
 title: Getting Started with the Expression Policy
+description: Express Gateway expression policy lets you execute arbitrary Javascript to modify the request and response. View sample use cases.
 date: 2017-09-14 16:00:00 Z
 categories:
 - guides

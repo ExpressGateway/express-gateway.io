@@ -1,5 +1,6 @@
 ---
 title: How to Use Scopes to Secure Your API
+description: See an example of using scopes and then dive into a more realistic example of using scopes to protect access to an external API.
 date: 2017-10-04 16:00:00 Z
 categories:
 - guides

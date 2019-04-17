@@ -1,5 +1,6 @@
 ---
 title: Now Presenting Express Gateway Release 1.4.0!
+description: Express Gateway, the microservices and serverless API gateway built on Express.js, version 1.4.0 is now released.
 date: 2017-11-24 00:00:00 Z
 categories:
 - announcements
@@ -82,4 +83,4 @@ We would [love your support in making it happen](https://github.com/ExpressGate
 
 **_Not quite ready? That’s ok!_**
 
-You can [**upvote features on Feathub**](https://feathub.com/ExpressGateway/express-gateway). Then, we roll up the most popular or interesting features ([Docker images \*nudge\*nudge\*](https://www.lunchbadger.com/official-docker-images-for-express-gateway/)) will then make it over to the [**Express Gateway roadmap**]({% link docs/roadmap.md %}). So even if you don’t have the time or bandwidth to be a contributor or maintainer, you can still make your voice heard. Loudly.
+You can [**upvote features on Feathub**](https://feathub.com/ExpressGateway/express-gateway). Then, we roll up the most popular or interesting features ([Docker images \*nudge\*nudge\*](https://www.lunchbadger.com/official-docker-images-for-express-gateway/)) will then make it over to the [**Express Gateway roadmap**](https://github.com/ExpressGateway/express-gateway/milestones). So even if you don’t have the time or bandwidth to be a contributor or maintainer, you can still make your voice heard. Loudly.

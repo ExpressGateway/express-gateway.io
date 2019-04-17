@@ -1,5 +1,6 @@
 ---
 title: Getting Started with Environment Variables and Express Gateway
+description: Learn more and get started with environment variables in Express Gateway, the API gateway built on Express.JS
 date: 2018-02-21 07:02:00 Z
 categories:
 - guides

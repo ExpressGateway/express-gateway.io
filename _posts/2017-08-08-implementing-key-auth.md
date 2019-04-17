@@ -1,5 +1,6 @@
 ---
 title: Implementing Key Authentication in Express Gateway
+description: API Gateway key authentication - how to implement in Express Gateway.
 date: 2017-08-08 16:00:00 Z
 categories:
 - guides

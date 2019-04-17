@@ -1,5 +1,6 @@
 ---
 title: Express Gateway 1.7.0 - Lucky 7
+description: Express Gateway, the microservices and serverless API gateway built on Express.js, version 1.7.0 is now released. New features including Node.js 9, JSON Schemas and more.
 date: 2018-01-29 16:50:00 Z
 tags:
 - environment variables

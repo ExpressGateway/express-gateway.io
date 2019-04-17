@@ -1,5 +1,6 @@
 ---
 title: Plan OpenAPI 3.0 support in Express Gateway
+description: Express Gateway OpenAPI 3.0 support and feedback needed.
 date: 2018-08-14 07:04:00 Z
 categories:
 - technology
