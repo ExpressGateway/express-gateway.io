@@ -1,5 +1,6 @@
 ---
 title: Introducing Express Gateway
+description: Introducing Express Gateway, a microservice and services open source API gateway built on Express JS.
 date: 2017-07-20 04:00:00 Z
 categories:
 - announcements

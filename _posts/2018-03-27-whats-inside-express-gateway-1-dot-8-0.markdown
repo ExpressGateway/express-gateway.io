@@ -1,5 +1,6 @@
 ---
 title: What's inside Express Gateway 1.8.0
+description: Express Gateway, the micorservices and serverless API Gateway built on Express.JS, version 1.8.0 released withh new features and conditions.
 date: 2018-03-27 07:56:00 Z
 categories:
 - technology

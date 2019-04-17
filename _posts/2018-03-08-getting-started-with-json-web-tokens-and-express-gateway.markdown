@@ -1,5 +1,6 @@
 ---
 title: Getting Started with JSON Web Tokens and Express Gateway
+description: Jwt tutorials and examples for Express Gateway, the microservices and serverless API gateway built on Express.JS
 date: 2018-03-08 04:27:00 Z
 categories:
 - guides

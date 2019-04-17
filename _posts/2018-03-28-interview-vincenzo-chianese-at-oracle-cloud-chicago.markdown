@@ -1,5 +1,6 @@
 ---
-title: 'Interview: Vincenzo Chianese at Oracle Cloud, Chicago'
+title: Interview - Vincenzo Chianese at Oracle Cloud, Chicago
+description: Vincenzo Chianese, engineer for LunchBadger (co-sponsor of Express Gateway), shared an expert workshop at Oracle Cloud Conference in partnership with Auth0 and had the chance for a live interview - part 1.
 date: 2018-03-28 05:54:00 Z
 categories:
 - announcements

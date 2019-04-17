@@ -1,5 +1,6 @@
 ---
 title: Express Gateway 1.6.0 - It’s Payback Time!
+description: Express Gateway, the microservices and serverless API gateway built on Express.js, version 1.6.0 is now released.
 date: 2018-01-17 07:09:00 Z
 categories:
 - technology

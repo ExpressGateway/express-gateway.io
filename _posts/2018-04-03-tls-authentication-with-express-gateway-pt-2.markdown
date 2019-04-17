@@ -1,5 +1,6 @@
 ---
 title: TLS Authentication with Express Gateway Pt. 2
+description: How-to TLS authentication by Express Gateway, the microservices and serverless API gateway built on Express.JS - Part 2.
 date: 2018-04-03 13:16:00 Z
 categories:
 - technology

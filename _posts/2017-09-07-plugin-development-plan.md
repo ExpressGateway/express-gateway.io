@@ -1,5 +1,6 @@
 ---
 title: Plugin Framework Overview and Plan
+description: Express Gateway plugins extend Express Gateway and allow ANY Express middleware to be taken and rolled into Express Gateway.
 date: 2017-09-07 16:00:00 Z
 categories:
 - announcements

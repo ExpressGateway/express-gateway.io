@@ -1,5 +1,6 @@
 ---
 title: Ship, Ship - Hooray! 1.7.3 is here.
+description: Express Gateway, the microservices and serverless API gateway built on Express.js, version 1.7.3 is now released.
 date: 2018-03-12 05:31:00 Z
 categories:
 - announcements

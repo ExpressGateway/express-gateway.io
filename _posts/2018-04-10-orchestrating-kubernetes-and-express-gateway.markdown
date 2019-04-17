@@ -1,5 +1,6 @@
 ---
 title: Orchestrating Kubernetes and Express Gateway
+description: How to use Express Gateway with Kubernetes and why it is the recommended API Gateway for Kubernetes.
 date: 2018-04-10 18:00:00 Z
 categories:
 - technology

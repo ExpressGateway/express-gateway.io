@@ -1,5 +1,6 @@
 ---
 title: Express Gateway Release 1.5.0 with JWT support
+description: Express Gateway, the microservices and serverless API gateway built on Express.js, version 1.5.0 is now released. Now comes with JWT feature as requested.
 date: 2017-12-20 00:00:00 Z
 categories:
 - announcements
@@ -89,6 +90,6 @@ We would [**love your support in making it happen**](https://github.com/Express
 
 **_Not quite ready? That’s ok!_**
 
-* [**Upvote features on Feathub**](https://feathub.com/ExpressGateway/express-gateway). Then, we roll up the most popular or interesting features ([Docker images](https://www.lunchbadger.com/official-docker-images-for-express-gateway/)) will then make it over to the  [**Express Gateway roadmap**]({% link docs/roadmap.md %}).
+* [**Upvote features on Feathub**](https://feathub.com/ExpressGateway/express-gateway). Then, we roll up the most popular or interesting features ([Docker images](https://www.lunchbadger.com/official-docker-images-for-express-gateway/)) will then make it over to the  [**Express Gateway roadmap**](https://github.com/ExpressGateway/express-gateway/milestones).
 * Join the  [**Express Gateway Newsletter**](https://eepurl.com/cVOqd5) update list
 * [Follow along on **Twitter**](https://twitter.com/express_gateway)

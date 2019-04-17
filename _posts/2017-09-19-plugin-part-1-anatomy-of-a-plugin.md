@@ -1,5 +1,6 @@
 ---
-title: 'Part1: Anatomy of a Plugin'
+title: Part 1 - Anatomy of a Plugin
+description: First part of the series on Express Gateway plugins and the plugin framework.
 date: 2017-09-19 16:00:00 Z
 categories:
 - guides

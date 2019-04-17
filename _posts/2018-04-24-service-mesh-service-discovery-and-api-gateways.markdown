@@ -1,5 +1,6 @@
 ---
 title: Service Mesh, Service Discovery and API Gateways
+description: What is service discovery, a service mesh solution and where does the API gateway fit in.
 date: 2018-04-24 07:04:00 Z
 categories:
 - technology

@@ -1,5 +1,6 @@
 ---
-title: 'Developer Spotlight: Compare Amazon API Gateway vs Express Gateway'
+title: Developer Spotlight - Compare Amazon API Gateway vs Express Gateway
+description: AWS API Gateway comparison on features, pricing and more versus Express Gateway, the microservices and serverless API gateway built on Express.js
 date: 2018-02-02 00:00:00 Z
 categories:
 - comparisons

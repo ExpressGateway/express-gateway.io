@@ -1,5 +1,6 @@
 ---
-title: 'Open Source Community Round up: Spring Break Edition'
+title: Open Source Community Round up - Spring Break Edition
+description: What is Express Gateway all about and how to contribute if you're a developer.
 date: 2018-03-30 09:30:00 Z
 categories:
 - announcements
@@ -24,7 +25,7 @@ Let's start with the important stuff. This week we [released 1.8.0 with some eag
 
 Also, on that same note - we are actively working towards joining the [official Docker images program](https://docs.docker.com/docker-hub/official_repos/). So keep an eye out.
 
-There are still a lot of opportunities to contribute, maintain or just provide general community support. If you're interested, we're [growing the roadmap]({% link docs/roadmap.md %}).
+There are still a lot of opportunities to contribute, maintain or just provide general community support. If you're interested, we're [growing the roadmap](https://github.com/ExpressGateway/express-gateway/milestones).
 
 ## Interview with Bob Rhubart & Vincenzo Chianese
 

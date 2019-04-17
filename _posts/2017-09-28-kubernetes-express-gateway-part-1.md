@@ -1,5 +1,6 @@
 ---
-title: 'Express Gateway and Kubernetes: Part 1'
+title: Express Gateway and Kubernetes - Part 1
+description: Express Gateway provides scalability and elasticity by coupling with Kubernetes, thus giving you a powerful combination of open source tooling and proving to be one of the better API gateways running on Kubernetes.
 date: 2017-09-28 16:00:00 Z
 categories:
 - announcements

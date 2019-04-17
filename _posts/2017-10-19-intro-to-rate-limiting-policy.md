@@ -1,5 +1,6 @@
 ---
 title: Intro to the Rate Limiting Policy
+description: Learn more about Express Gateway's rate limiting policy, which throttles requests to one or more end point.
 date: 2017-10-19 16:00:00 Z
 categories:
 - guides

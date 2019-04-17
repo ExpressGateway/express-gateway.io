@@ -1,5 +1,7 @@
 ---
-title: Case Study&#58; Switch Media Conquers API Requirements with Express Gateway
+title: Case Study - Switch Media Conquers API Requirements with Express Gateway
+description: Switch Media utilizes Express Gateway for complex API Requirements
+image: /assets/img/switchmedia.png
 date: 2019-01-07 00:01:00 Z
 categories:
 - technology
