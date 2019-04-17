@@ -1,5 +1,6 @@
 ---
 title: Configuration
+description: Express Gateway configuration instructions.
 layout: doc-section
 doc-order: 3.0
 ---

@@ -1,5 +1,6 @@
 ---
 title: Core Concepts
+description: Express Gateway core concepts including endpoint, policies, pipelines and more.
 layout: doc-section
 doc-order: 2.0
 ---

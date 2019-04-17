@@ -1,5 +1,6 @@
 ---
 title: Credential Management
+description: Express Gateway credential management.
 layout: doc-section
 doc-order: 7.0
 ---

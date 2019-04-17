@@ -25,6 +25,7 @@ group :jekyll_plugins do
    gem 'jekyll-gist'
    gem 'jekyll-sitemap'
    gem 'jekyll-redirect-from'
+   gem 'jekyll-seo-tag'
 end
 
 gem "html-proofer", ">=3.10.2"

@@ -1,5 +1,6 @@
 ---
 title: Admin API Reference
+description: Admin API reference for Express Gateway.
 layout: doc-section
 doc-order: 10.0
 ---

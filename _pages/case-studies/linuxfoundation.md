@@ -1,5 +1,7 @@
 ---
 title: Linux Foundation Rolls Out New Digital Services Leveraging Express Gateway
+description: The Linux Foundation evaluated Kong, Amazon API Gateway and Express Gateway when they needed to build a complex identity and authorization system. Guess who won?
+image: /assets/img/linux-foundation.png
 permalink: "/case-studies/linuxfoundation/"
 layout: case-study-detail
 logo: linux-foundation

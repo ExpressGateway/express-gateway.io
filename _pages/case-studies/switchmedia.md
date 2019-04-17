@@ -1,5 +1,7 @@
 ---
 title: Switch Media Fulfills Complex Requirements through Express Gateway
+description: Switch Media chose Express Gateway when they needed an API Gateway to provide multi-tenanted services in a consumer-agnostic way.
+image: /assets/img/switchmedia.png
 permalink: "/case-studies/switchmedia/"
 layout: case-study-detail
 logo: switchmedia

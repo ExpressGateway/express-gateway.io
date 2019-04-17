@@ -1,5 +1,6 @@
 ---
 title: Installation
+description: Installation instructions for Express Gateway
 layout: doc-section
 doc-order: 1.0
 ---

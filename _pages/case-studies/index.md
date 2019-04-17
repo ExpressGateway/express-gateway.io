@@ -1,4 +1,6 @@
 ---
+title: Case Studies
+description: Successfull stories and detailed use cases from companies using Express Gateway in production.
 permalink: "/case-studies/"
 layout: case-studies
 ---

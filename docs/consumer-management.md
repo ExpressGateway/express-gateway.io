@@ -1,5 +1,6 @@
 ---
 title: Consumer Management
+description: Express Gateway consumer management.
 layout: doc-section
 doc-order: 6.0
 ---

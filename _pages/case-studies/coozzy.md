@@ -1,5 +1,7 @@
 ---
 title: Coozzy Innovates with Microservices Using Express Gateway
+description: When Coozzy needed a solution that can route traffic and perform common gateway functionalities like authentication, they chose Express Gateway over Kong and Traefik. Read on to find out why.
+image: /assets/img/coozzy.png
 permalink: "/case-studies/coozzy/"
 layout: case-study-detail
 logo: coozzy

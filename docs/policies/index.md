@@ -1,5 +1,6 @@
 ---
 title: Policies Reference
+description: Policies reference for Express Gateway
 layout: doc-section
 doc-order: 5.0
 ---
