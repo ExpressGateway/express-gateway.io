@@ -1,5 +1,6 @@
 ---
 title: About
+description: An introduction to Express Gateway, why we chose Node.js and Express.js, how Express Gateway works and the architecture in detail.
 permalink: "/about/"
 layout: page
 ---

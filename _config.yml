@@ -21,9 +21,10 @@ collections:
     title: Uploads
     output: true
 email: info@express-gateway.io
-description: A Microservices API Gateway Built on Express.JS
+description: A Microservices and Serverless API Gateway Built on Express.JS
 url: https://www.express-gateway.io
 twitter_username: express_gateway
+logo: https://www.express-gateway.io/assets/img/ExpressGatewayLogo.png
 encoding: UTF-8
 markdown: kramdown
 theme: minima
@@ -33,6 +34,7 @@ plugins:
 - jekyll-paginate
 - jekyll-redirect-from
 - jekyll-sitemap
+- jekyll-seo-tag
 exclude:
 - Gemfile
 - Gemfile.lock

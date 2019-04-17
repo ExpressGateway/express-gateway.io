@@ -1,5 +1,6 @@
 ---
 title: FAQ
+description: Frequently asked questions on Express Gateway.
 layout: doc-section
 doc-order: 30.0
 ---

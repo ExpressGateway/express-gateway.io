@@ -1,5 +1,6 @@
 ---
 title: Resources
+description: Details on Express Gateway plugins from authentication to serverless, get in touch and join our community, and learn how you can contribute to Express Gateway's success.
 permalink: "/resources/"
 layout: page
 ---
@@ -91,7 +92,7 @@ layout: page
 <ul class="contribute">
     <li>Address an open issue in the project</li>
     <li>Provide feedback on features and enhancements on the <a href="https://feathub.com/ExpressGateway/express-gateway" target="_blank">Express Gateway Feathub</a></li>
-  <li>Implement a feature on the <a href="{% link docs/roadmap.md %}" target="_blank">roadmap</a> or help with what's currently being worked on in <a href="https://github.com/orgs/ExpressGateway/projects/1" target="_blank">task board</a> for the next release</li>
+  <li>Implement a feature on the <a href="https://github.com/ExpressGateway/express-gateway/wiki/Express-Gateway-Roadmap" target="_blank">roadmap</a> or help with what's currently being worked on in <a href="https://waffle.io/ExpressGateway/express-gateway" target="_blank">task board</a> for the next release</li>
     <li>Help answer questions with your expertise</li>
     <li>Add examples and documentation so others can get onboard easier</li>
 </ul>

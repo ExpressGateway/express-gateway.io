@@ -1,5 +1,7 @@
 ---
 title: City of Raleigh protects its services with Express Gateway
+description: Express Gateway was a simple to use and production ready solution for the City of Raleigh team to quickly allow public traffic to access their internal (behind the firewall) API’s.
+image: /assets/img/raleigh.png
 permalink: "/case-studies/CORaleigh/"
 layout: case-study-detail
 logo: raleigh

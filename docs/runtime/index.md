@@ -1,5 +1,6 @@
 ---
 title: Runtime
+description: Express Gateway runtime.
 layout: doc-section
 doc-order: 20.0
 ---

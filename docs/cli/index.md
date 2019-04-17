@@ -1,5 +1,6 @@
 ---
 title: CLI Reference
+description: Command line interface reference for Express Gateway.
 layout: doc-section
 doc-order: 4.0
 ---

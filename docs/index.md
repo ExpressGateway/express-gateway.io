@@ -1,5 +1,6 @@
 ---
-title: Express Gateway Documentation
+title: Documentation
+description: Express Gateway documentation, consumer management, CLI references, comparisons, roadmaps and more.
 layout: doc-section
 ---
 
@@ -9,7 +10,8 @@ Welcome to Express Gateway! Documentation for Express Gateway is written in Mark
 
 * [Get started with Express Gateway][get-started]
 * [Comparison with Kong API Gateway](https://www.lunchbadger.com/compare-kong-api-gateway-express-features/)
-* [Comparision with Tyk API Gateway](https://www.lunchbadger.com/compare-tyk-api-gateway-express-features/)
+* [Comparison with Tyk API Gateway](https://www.lunchbadger.com/compare-tyk-api-gateway-express-features/)
+* [Comparison with Amazon API Gateway](https://www.lunchbadger.com/blog/compare-amazon-aws-api-gateway-express-features/)
 * [Set up Key Authentication with Express Gateway](https://www.lunchbadger.com/implement-key-authentication-express-gateway/)
 * [Set up oAuth2 with Express Gateway](https://www.lunchbadger.com/how-to-implement-oauth-in-express-gateway/)
 * [Introduction to ExpressJS Routing](https://www.lunchbadger.com/a-reintroduction-to-express-js-routing/)

@@ -1,5 +1,6 @@
 ---
 title: Project Roadmap
+description: Express Gateway project roadmap, feature request, feedback and more.
 layout: doc-section
 doc-order: 31.0
 ---

@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+description: Install and get started with Express Gateway, the world class API gateway harnessing the power of NodeJS and Express JS. View Express Gateway examples, tutorials and more.
 permalink: "/getting-started/"
 layout: page
 class: getting-started

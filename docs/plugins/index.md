@@ -1,5 +1,6 @@
 ---
 title: Plugins
+description: Express Gateway plugin framework.
 layout: doc-section
 doc-order: 25.0
 ---
