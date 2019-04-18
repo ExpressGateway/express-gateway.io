@@ -1,7 +1,7 @@
 ---
 title: ViriCiti Goes Global With Express Gateway in Production
 description: ViriCiti compared what it takes to implement popular open source API Gateways like Express Gateway, Kong and Tyk. And they decided on Express Gateway.
-image: /assets/img/viriciti.png
+image: /assets/img/viriciti@2x.png
 permalink: "/case-studies/viriciti/"
 layout: case-study-detail
 logo: viriciti

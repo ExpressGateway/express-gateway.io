@@ -1,7 +1,7 @@
 ---
 title: Musement creates a Unified API with Express Gateway
 description: When Musement needed an alternative to Apigee Gateway(which was difficult to debug and maintain), they chose Express Gateway as the best API Gateway for their needs.
-image: /assets/img/musement.png
+image: /assets/img/musement@2x.png
 permalink: "/case-studies/musement/"
 layout: case-study-detail
 logo: musement
