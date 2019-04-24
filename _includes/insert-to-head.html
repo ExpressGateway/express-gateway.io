@@ -27,3 +27,10 @@ src="https://www.facebook.com/tr?id=1414006978680368&ev=PageView&noscript=1"
 <!-- SEO Metadata -->
 {% seo %}
 <!-- End SEO Metadata -->
+<!-- Default image for pages without page image -->
+{% if page.header-img %}
+    <meta property="og:image" content="{{ site.url }}/{{ page.header-img }}" />
+{% else %}
+    <meta property="og:image" content="{{ site.baseurl }}/assets/img/ExpressGateway_metaimage.png"/>
+{% endif %}
+<!-- End Default image for pages without page image -->

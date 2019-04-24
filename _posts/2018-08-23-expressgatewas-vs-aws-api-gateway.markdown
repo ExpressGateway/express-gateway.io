@@ -1,7 +1,7 @@
 ---
 title: Amazon API Gateway VS. Express Gateway
 description: API Gateway Comparison between Amazon API Gateway and Express Gateway on features, pricing and more.
-image: /assets/img/Express Gateway vs Amazon API Gateway.png
+image: /assets/img/ExpressGateway_vs_AmazonAPIGateway.png
 date: 2018-08-23 07:04:00 Z
 categories:
 - technology
