@@ -1,12 +1,12 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/37751ea7-14bf-4d3c-bb35-eedc825f3fb6/deploy-status)](https://app.netlify.com/sites/lucid-ritchie-abc60a/deploys)
+
 # express-gateway.io
 
 This is the repository of the website [express-gateway.io](https://express-gateway.io). It is hosted directly from the repository as a [GitHub Pages](https://pages.github.com/) website.
 
-The main branch for this repository is `dev`.
+The main branch for this repository is `gh-pages`.
 
 The live site is published off `gh-pages`.
-
-Please note: we use [siteleaf.com](https://siteleaf.com) as a CMS around this jekyll based site, changes that are committed to `dev` may be published automatically through content pushes through [siteleaf.com](https://siteleaft.com) to the `gh-pages` branch.
 
 ## Local Setup
 
