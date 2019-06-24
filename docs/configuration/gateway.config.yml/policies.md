@@ -13,13 +13,13 @@ The policies section is a whitelist of enabled policies. Policies that are inten
 
 ```yaml
 policies:
-  - name: 'cors'
-  - name: 'rate-limiter'
-  - name: 'log'
-  - name: 'proxy'
-  - name: 'oauth2'
-  - name: 'key-auth'
-  - name: 'basic-auth'
+  - cors
+  - rate-limiter
+  - log
+  - proxy
+  - oauth2
+  - key-auth
+  - basic-auth
 ```
 
 ### Options:
