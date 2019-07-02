@@ -14,7 +14,7 @@ module.exports = {
   name: 'example',
   schema: {
     $id: 'http://express-gateway.io/schemas/policies/example-policy.json',
-    type: object,
+    type: 'object',
     properties: {
       baseUrl: {
         type: 'string',
