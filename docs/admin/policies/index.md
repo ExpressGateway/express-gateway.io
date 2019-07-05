@@ -41,7 +41,7 @@ Express Gateway's Admin API supports querying, enabling and disabling available 
 }
 ```
 
-### Get enabled policies
+### Disables a policy
 
 ##### Request: `DELETE /policies/:policy`
 
