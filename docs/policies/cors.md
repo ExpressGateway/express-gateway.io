@@ -22,14 +22,12 @@ policies:
 ### Example: excerpt
 
 ```yml
-...
 policies:
   - cors:
       -
         action:
           origin: http://www.example.com
           credentials: true
-}
 ```
 
 ### Example: full
