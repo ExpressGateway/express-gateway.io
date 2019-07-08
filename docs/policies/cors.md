@@ -69,7 +69,7 @@ policies:
   - configures the `Access-Control-Allow-Origin` CORS header
   - Boolean: set origin to `true` to reflect the request origin as defined by req.header('Origin'), or set to `false` to disable CORS
   - String: set origin to a specific origin.  example: `http://foobar.com` will allow only requests from "http://foobar.com"
-  - Array: set origin to an array of valid origins. Each origin can be a String or RegExp.  example: `[http://foobar1.com", /\.foobar2.com$]` will accept any request from "http://foobar1.com" or from any subdomain of "foobar2.com"
+  - Array: set origin to an array of valid origins. Each origin can be a String or RegExp.  example: `[http://foobar1.com", !!js/regexp /\.foobar2.com$]` will accept any request from "http://foobar1.com" or from any subdomain of "foobar2.com"
 * `methods`:
   - configures the `Access-Control-Allow-Methods` CORS header.
   - expects a comma-delimited string (ex: `'GET,PUT,POST'`) or an array (ex: `['GET', 'PUT', 'POST']`).
