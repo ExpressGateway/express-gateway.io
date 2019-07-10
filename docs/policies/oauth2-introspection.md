@@ -7,7 +7,7 @@ doc-order: 5.40
 ### Description
 
 The OAuth 2.0 Introspection policy implements a client leveraging the Introspection extension for the oAuth 2.0
-authorization protocol as defined in the [RFC-6772 standard][rfc-6772-standard].
+authorization protocol as defined in the [RFC-7662 standard][rfc-7662-standard].
 
 Express Gateway plays the role of a resource server, which can be configured to query the defined **introspection**
 endpoint and based on its response, let the request continue its flow or stop it if required.
@@ -67,7 +67,7 @@ pipelines:
     the gateway will return an `Unauthorized` response.
   - default value: `false`
 
-[rfc-6772-standard]: https://tools.ietf.org/html/rfc7662
+[rfc-7662-standard]: https://tools.ietf.org/html/rfc7662
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
 [rewrite]:{{ site.baseurl }}{% link docs/policies/rewrite.md %}
