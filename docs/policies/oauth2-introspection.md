@@ -17,7 +17,7 @@ the request before proxying it to the downstream service, so that you can identi
 your service.
 
 Moreover, the decrypted token response will be placed as the current `req.user`. In case you need to pass some additional
-values to your downstream services (such as a custom property in the `user` object) you can use the [headers][headers] policy.
+values to your downstream services (such as a custom property in the `user` object) you can use the [rewrite][rewrite] policy.
 
 ### Usage
 
@@ -70,4 +70,4 @@ pipelines:
 [rfc-6772-standard]: https://tools.ietf.org/html/rfc7662
 [gateway.config.yml]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/index.md %}
 [policies]: {{ site.baseurl }}{% link docs/configuration/gateway.config.yml/policies.md %}
-[headers]:{{ site.baseurl }}{% link docs/policies/headers.md %}
+[rewrite]:{{ site.baseurl }}{% link docs/policies/rewrite.md %}
