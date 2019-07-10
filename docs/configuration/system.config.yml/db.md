@@ -23,6 +23,7 @@ Two ways possible for now: In Memory and Redis.
 db:
   redis:
     emulate: true
+    namespace: EG
 ```
 
 ### Redis database:
