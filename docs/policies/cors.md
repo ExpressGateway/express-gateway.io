@@ -61,6 +61,13 @@ policies:
 
 ```
 
+### Note on security
+
+In case the pipeline you're putting the `cors` policy has a security check such as OAuth, Key or Basic you should:
+
+* Put the `cors` policy always on the top of the pipeline **before** the security check; otherwise the `OPTIONS` call will likley fail with a `401`, while the browser expects a `204` to proceed with the real call
+* Make sure all the subsequent policies have a condition to make sure they do not try to handle the `OPTIONS` method
+
 ##### Options Reference
 
 * `origin`:
