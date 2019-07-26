@@ -15,7 +15,7 @@ The http section is used to configure HTTP. Express Gateway will listen on  the 
 
 http:
     port: 9080            # EG will listen for http requests on port 9080
-    host: localhost
+    hostname: localhost
 ```
 
 ### Options:

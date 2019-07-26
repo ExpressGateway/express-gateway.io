@@ -62,24 +62,7 @@
       }
     }
   }
-  .sponsors {
-
-    a {
-      display: block;
-      margin-top: 1rem;
-      width: 80%;
-
-      &:last-child {
-        width: 50%
-
-      }
-
-      @include size(smalltomedium){
-        max-width: 200px;
-      }
-    }
-
-  }
+  
   .copyright {
     width: 960px;
     margin: 0 auto;
