@@ -69,7 +69,6 @@ layout: page
 <ul class="logo-cloud">
 <li><a href="https://gitter.im/ExpressGateway/express-gateway" target="_blank"><img src="../assets/img/logo-gitter.png" /></a></li>
 <li><a href="https://stackoverflow.com/questions/tagged/express-gateway" target="_blank">{% include logo-stackoverflow.svg %}</a></li>
-<li><a href="https://groups.google.com/a/express-gateway.io/forum/#!forum/discuss" target="_blank"><img src="../assets/img/logo-googlegroups.png" /></a></li>
 </ul>
 <div class="bug-block">
 <div class="bug-block-content" markdown="1">
