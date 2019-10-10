@@ -7,7 +7,7 @@ list-order: 0.5
 
 ### Description
 
-Express Gateway receive API requests on apiEndpoints, process them and then proxy them to downstream microservices. The serviceEndpoints section specifies the URLs of these proxied microservices.
+Express Gateway receives API requests on apiEndpoints, processes them, and then proxies them to downstream microservices. The serviceEndpoints section specifies the URLs of these proxied microservices.
 
 ### Usage
 
