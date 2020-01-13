@@ -23,7 +23,7 @@ module.exports = {
     },
     required: ['expected']
   },
-  handler: conditionConfig => req => conditionConfig.expected === req.url)
+  handler: conditionConfig => req => conditionConfig.expected === req.url
 };
 ```
 
