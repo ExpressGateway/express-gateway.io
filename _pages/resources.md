@@ -92,7 +92,7 @@ layout: page
 <ul class="contribute">
     <li>Address an open issue in the project</li>
     <li>Provide feedback on features and enhancements on the <a href="https://feathub.com/ExpressGateway/express-gateway" target="_blank">Express Gateway Feathub</a></li>
-  <li>Implement a feature on the <a href="https://github.com/ExpressGateway/express-gateway/wiki/Express-Gateway-Roadmap" target="_blank">roadmap</a> or help with what's currently being worked on for the next release</li>
+  <li>Implement a feature on the <a href="https://www.express-gateway.io/docs/roadmap/" target="_blank">roadmap</a> or help with what's currently being worked on for the next release</li>
     <li>Help answer questions with your expertise</li>
     <li>Add examples and documentation so others can get onboard easier</li>
 </ul>
