@@ -104,7 +104,7 @@ pipelines:
       ```
 * `headers`:
   - object with extra headers to be added to target requests.
-* `proxyTimeout`:
+* `timeout`:
   - timeout (in millis) when proxy receives no response from target
 
 #### Load balancing strategies
