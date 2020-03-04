@@ -56,7 +56,7 @@ pipelines:
 * `serviceEndpoint`:
   - the name of the service endpoint to forward to
   - the path of the API endpoint is appended to the path of the serviceEndpoint host and path automatically
-  - example: API endpoint - "http://api.foobar.com/api" proxied to a service endpoint defined as "http://internal.api.lan:8080/" will have "/api" appended to it to become "http://internal/api/lan:8080/api"
+  - example: API endpoint - "http://api.foobar.com/api" proxied to a service endpoint defined as "http://internal.api.lan:8080/" will have "/api" appended to it to become "http://internal.api.lan:8080/api"
 * `strategy`:
   - Assigns a load-balancing strategy for `serviceEndpoint` declarations that have more than one URL, defaults to `round-robin`.
 * `proxyUrl`:
