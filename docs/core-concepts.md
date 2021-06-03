@@ -25,7 +25,7 @@ Endpoints are URLs. Express Gateway has two different types of endpoints:
 * API endpoints
 * Service endpoints
 
-Express Gateway expose APIs through API endpoints. As a gateway, it proxies API requests from API endpoints to microservices referenced in service endpoints.
+Express Gateway exposes APIs through API endpoints. As a gateway, it proxies API requests from API endpoints to microservices referenced in service endpoints.
 
 ### policies
 A policy is a set of conditions, action and parameters that are evaluated and act on the API request and response flow within Express Gateway. Policies within Express Gateway utilize [Express middleware](https://expressjs.com/en/guide/using-middleware.html).
