@@ -6,7 +6,7 @@ doc-order: 5.20
 
 ### Description
 
-The JWT policy can verify requests containing HS256 or RS256 signed JSON Web Tokens (as specified in
+The JWT policy can verify requests containing HS256, HS384, HS512, RS256, RS384, or RS512 signed JSON Web Tokens (as specified in
 [RFC 7519][rfc-jwt])
 
 Each of your Consumers will have JWT credentials (public and secret keys) which must be used to sign their JWTs.
@@ -160,6 +160,9 @@ The JWT scheme and header are not standardized, therefore they can be overriden 
   - determines whether the gateway should execute the successive policy in case the auth process fails. If set to false,
     the gateway will return an `Unauthorized` response.
   - default value: `false`
+* `algorithms`:
+  - If defined, will limit valid JWT's to only those signed with specified algorithms. 
+  - If undefined policy will decode JWT and use algorithm in header to verify.
 
 
 [rfc-jwt]: https://tools.ietf.org/html/rfc7519
